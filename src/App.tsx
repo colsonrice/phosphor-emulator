@@ -66,12 +66,6 @@ const romHackCount = catalogProjects.filter((project) => project.kind === "rom-h
 const modCount = catalogProjects.filter((project) => project.kind === "mod").length;
 const gen2Count = catalogProjects.filter((project) => project.kind === "mod" && project.compatibility.includes("gen2recomp")).length;
 
-const reviewLabels: Record<ReviewStatus, string> = {
-  "permission-needed": "Permission needed",
-  "permission-queued": "Outreach queued",
-  "archive-review": "Archive review",
-};
-
 const filters: Array<{ value: "all" | Category; label: string; short: string }> = [
   { value: "all", label: "Everything", short: "All" },
   { value: "rom-hack", label: "ROM hacks", short: "Patches" },
@@ -296,8 +290,6 @@ export function LibraryApp() {
                             <span>{project.compatibility.map(categoryLabel).join(" + ")}</span>
                             {verified ? (
                               <a href={project.permissionEvidenceUrl}>✓ {project.license} verified ↗</a>
-                            ) : project.reviewStatus !== "permission-needed" ? (
-                              <span className={`review-badge ${project.reviewStatus}`}>{reviewLabels[project.reviewStatus]}</span>
                             ) : null}
                           </div>
                           <h3>{project.title}</h3>
