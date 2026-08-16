@@ -1,0 +1,129 @@
+name: Review catalog submission
+
+on:
+  issues:
+    types: [opened]
+  issue_comment:
+    types: [created]
+
+permissions:
+  actions: write
+  contents: write
+  issues: write
+
+concurrency:
+  group: catalog-review
+  cancel-in-progress: false
+
+jobs:
+  notify-reviewer:
+    if: github.event_name == 'issues' && startsWith(github.event.issue.title, '[Release]')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Assign the repository owner
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          REPOSITORY_OWNER: ${{ github.repository_owner }}
+        run: gh issue edit "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --add-assignee "$REPOSITORY_OWNER" || true
+      - name: Confirm receipt
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: >-
+          gh issue comment "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY"
+          --body "Submission received. The repository owner has been notified. After review, they can reply here—or reply to the GitHub notification email—with \`/approve\` or \`/deny reason\`."
+
+  review-command:
+    if: >-
+      github.event_name == 'issue_comment' &&
+      !github.event.issue.pull_request &&
+      startsWith(github.event.issue.title, '[Release]') &&
+      contains(fromJSON('["OWNER", "MEMBER", "COLLABORATOR"]'), github.event.comment.author_association)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Read review command
+        id: command
+        env:
+          COMMENT_BODY: ${{ github.event.comment.body }}
+        shell: bash
+        run: |
+          first_line="$(printf '%s\n' "$COMMENT_BODY" | head -n 1 | tr -d '\r' | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
+          if [[ "$first_line" == "/approve" ]]; then
+            echo "action=approve" >> "$GITHUB_OUTPUT"
+          elif [[ "$first_line" == /deny* ]]; then
+            echo "action=deny" >> "$GITHUB_OUTPUT"
+            reason="${first_line#/deny}"
+            reason="${reason# }"
+            if [[ -z "$reason" ]]; then reason="The submission did not pass review."; fi
+            echo "reason=$reason" >> "$GITHUB_OUTPUT"
+          else
+            echo "action=ignore" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Check out the default branch
+        if: steps.command.outputs.action == 'approve'
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - name: Set up Node.js
+        if: steps.command.outputs.action == 'approve'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        if: steps.command.outputs.action == 'approve'
+        run: npm ci
+      - name: Verify and add the submission
+        if: steps.command.outputs.action == 'approve'
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
+        run: node scripts/approve-submission.mjs
+      - name: Test the catalog and site
+        if: steps.command.outputs.action == 'approve'
+        run: npm test && npm run build
+      - name: Publish the catalog record
+        if: steps.command.outputs.action == 'approve'
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          git config user.name "phosphor-index-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/releases.json
+          git commit -m "catalog: approve submission #${ISSUE_NUMBER}"
+          git push origin "HEAD:${DEFAULT_BRANCH}"
+      - name: Start the Pages deployment
+        if: steps.command.outputs.action == 'approve'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: gh workflow run pages.yml --repo "$GITHUB_REPOSITORY" --ref "$DEFAULT_BRANCH"
+      - name: Notify requester of approval
+        if: steps.command.outputs.action == 'approve'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          gh issue comment "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --body "Approved. The release passed the license, ROM-content, checksum, catalog, and build checks. The updated site is deploying now."
+          gh issue close "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --reason completed
+      - name: Report an approval failure
+        if: failure() && steps.command.outputs.action == 'approve'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          RUN_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: >-
+          gh issue comment "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY"
+          --body "Approval could not be published because an automated verification failed. The submission remains open for correction. Review: ${RUN_URL}"
+      - name: Notify requester of denial
+        if: steps.command.outputs.action == 'deny'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          DENIAL_REASON: ${{ steps.command.outputs.reason }}
+        run: |
+          gh issue comment "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --body "Not approved: ${DENIAL_REASON}"
+          gh issue close "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --reason "not planned"

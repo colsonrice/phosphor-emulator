@@ -1,0 +1,145 @@
+name: Submit a release
+description: Propose a ROM-hack patch or recomp mod with redistribution evidence.
+title: "[Release] "
+labels: ["release-submission", "needs-permission-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping grow Phosphor Index. Do not attach a commercial ROM.
+        A submission stays unpublished until redistribution permission and the exact file are verified.
+  - type: input
+    id: project
+    attributes:
+      label: Project title
+      placeholder: Project Name
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      placeholder: 1.0.0
+    validations:
+      required: true
+  - type: input
+    id: release_date
+    attributes:
+      label: Release date
+      description: Use YYYY-MM-DD.
+      placeholder: 2026-08-15
+    validations:
+      required: true
+  - type: input
+    id: creator
+    attributes:
+      label: Creator or team
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Primary category
+      options:
+        - ROM-hack patch
+        - Gen 1 recomp mod
+        - Gen 2 recomp mod
+    validations:
+      required: true
+  - type: dropdown
+    id: compatibility
+    attributes:
+      label: Compatible catalog channels
+      description: Select every channel where this exact release works.
+      multiple: true
+      options:
+        - ROM-hack patch
+        - Gen 1 recomp mod
+        - Gen 2 recomp mod
+    validations:
+      required: true
+  - type: input
+    id: target
+    attributes:
+      label: Target game or recomp runtime
+      placeholder: Gen1Recomp · Red/Blue/Yellow
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Release summary
+      description: One or two factual sentences describing what the release changes.
+    validations:
+      required: true
+  - type: input
+    id: homepage
+    attributes:
+      label: Canonical project page
+      placeholder: https://
+    validations:
+      required: true
+  - type: input
+    id: file
+    attributes:
+      label: Exact release-file URL
+      description: Automated approval currently accepts ZIP mod archives. ROM-hack patches require manual review.
+      placeholder: https://
+    validations:
+      required: true
+  - type: dropdown
+    id: permission_type
+    attributes:
+      label: Permission type
+      options:
+        - Open license included in the archive
+        - Explicit author approval to redistribute this exact file
+    validations:
+      required: true
+  - type: input
+    id: license_name
+    attributes:
+      label: License or approval name
+      description: For example, MIT or Explicit author approval.
+    validations:
+      required: true
+  - type: input
+    id: permission
+    attributes:
+      label: Public redistribution-permission URL
+      description: Link the license or an explicit public statement covering redistribution of this exact file.
+      placeholder: https://
+    validations:
+      required: true
+  - type: textarea
+    id: permission_scope
+    attributes:
+      label: What the permission covers
+      description: Briefly explain why the linked permission allows Phosphor Index to mirror this exact release.
+    validations:
+      required: true
+  - type: input
+    id: sha256
+    attributes:
+      label: SHA-256
+      placeholder: 64-character hexadecimal checksum
+    validations:
+      required: true
+  - type: checkboxes
+    id: declarations
+    attributes:
+      label: Required declarations
+      options:
+        - label: The submitted file contains no commercial game ROM.
+          required: true
+        - label: The permission evidence covers redistribution, not merely downloading or linking.
+          required: true
+        - label: An open-source license is included inside the archive when open-license permission is selected.
+          required: true
+        - label: I have not included an image without its source and permission information.
+          required: true
+  - type: textarea
+    id: images
+    attributes:
+      label: Optional image provenance
+      description: For later use, include the image source, creator, and permission URL. Images are not yet published.
