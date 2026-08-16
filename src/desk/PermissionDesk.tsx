@@ -118,7 +118,7 @@ May Phosphor Index and the Phosphor app mirror and freely redistribute the unmod
 ${source}
 
 We would:
-• host only the patch or mod archive — never a commercial game ROM;
+• host only the patch or mod archive, never a commercial game ROM;
 • make the exact, unmodified download available free on the site and inside the Phosphor app;
 • credit you and link to ${projectLink};
 • publish a checksum and keep your permission response as our record; and
@@ -364,7 +364,7 @@ function assessReply(reply: string): Assessment {
 }
 
 function formatDate(value: string) {
-  if (!value) return "—";
+  if (!value) return "Not yet";
   return new Intl.DateTimeFormat(undefined, { month: "short", day: "numeric", year: "numeric" }).format(new Date(value));
 }
 
@@ -450,8 +450,8 @@ function PermissionDesk() {
     updateActive({ status: "sent", sentAt: active.sentAt || new Date().toISOString() });
     setNotice(
       active.contactType === "discord"
-        ? "Official Discord opened and the complete request was copied — paste it into the appropriate project channel"
-        : `Prepared ${contactTypeLabels[active.contactType].toLowerCase()} opened — confirm the final send there`,
+        ? "Official Discord opened and the complete request was copied. Paste it into the appropriate project channel."
+        : `Prepared ${contactTypeLabels[active.contactType].toLowerCase()} opened. Confirm the final send there.`,
     );
   }
 
@@ -467,17 +467,17 @@ function PermissionDesk() {
     updateActive({ assessment, repliedAt: active.repliedAt || new Date().toISOString() });
     setNotice(
       assessment === "likely-granted"
-        ? "Looks promising — verify the exact sharing scope before confirming"
+        ? "Looks promising. Verify the exact sharing scope before confirming."
         : assessment === "likely-denied"
-          ? "Likely denied — do not publish unless the creator clarifies"
-          : "No explicit permission found — ask for clarification",
+          ? "Likely denied. Do not publish unless the creator clarifies."
+          : "No explicit permission found. Ask for clarification.",
     );
   }
 
   function setDecision(status: "granted" | "denied" | "unclear") {
     if (!active) return;
     updateActive({ status, repliedAt: active.repliedAt || new Date().toISOString() });
-    setNotice(status === "granted" ? "Decision recorded — confirm both sharing checkboxes" : "Decision recorded");
+    setNotice(status === "granted" ? "Decision recorded. Confirm both sharing checkboxes." : "Decision recorded");
   }
 
   function exportBackup() {
@@ -488,7 +488,7 @@ function PermissionDesk() {
     anchor.download = `phosphor-permissions-${new Date().toISOString().slice(0, 10)}.json`;
     anchor.click();
     URL.revokeObjectURL(url);
-    setNotice("Encrypted storage is not enabled — keep this backup private");
+    setNotice("Encrypted storage is not enabled. Keep this backup private.");
   }
 
   async function importBackup(file: File) {

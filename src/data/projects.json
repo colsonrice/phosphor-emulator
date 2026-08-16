@@ -91,7 +91,7 @@
     "category": "rom-hack",
     "compatibility": ["rom-hack"],
     "target": "Pokémon Crystal",
-    "summary": "An original Game Boy Color–style region and story now being ported onto the Polished Crystal engine.",
+    "summary": "An original Game Boy Color-style region and story now being ported onto the Polished Crystal engine.",
     "homepageUrl": "https://github.com/pkmncoraldev/polishedcoral",
     "reviewStatus": "permission-needed"
   },
@@ -187,7 +187,7 @@
     "category": "gen1recomp",
     "compatibility": ["gen1recomp"],
     "target": "Gen1Recomp",
-    "summary": "Adds a Pokémon Green–inspired Super Game Boy palette treatment.",
+    "summary": "Adds a Pokémon Green-inspired Super Game Boy palette treatment.",
     "homepageUrl": "https://github.com/harryw4444/green_sgb_palette_gen1recomp",
     "reviewStatus": "permission-queued"
   },

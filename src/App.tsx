@@ -130,26 +130,26 @@ export function LibraryApp() {
     {
       kind: "rom-hack" as const,
       title: "ROM hack patches",
-      description: "Official projects tracked while exact patch-file redistribution permission is reviewed.",
+      description: "ROM hacks worth knowing. Open the official project page or grab a cleared patch.",
       projects: visibleProjects.filter((project) => project.kind === "rom-hack"),
     },
     {
       kind: "mod" as const,
       title: "Recomp mods",
-      description: "Gen1Recomp and Gen2Recomp mods, with downloads enabled only after license and archive checks.",
+      description: "Mods for Gen1Recomp and Gen2Recomp. Cleared files are ready to download.",
       projects: visibleProjects.filter((project) => project.kind === "mod"),
     },
   ].filter((group) => group.projects.length > 0), [visibleProjects]);
 
   const activeFilter = filters.find((filter) => filter.value === category);
   const emptyHeading = query
-    ? "No matching signal found."
+    ? "Nothing matched that search."
     : category !== "all"
       ? `No tracked ${activeFilter?.label.toLowerCase()} found.`
-      : "The library is powered on.";
+      : "Nothing here yet.";
   const emptyDescription = query
-    ? "Try another title or category, or help add the project you were looking for."
-    : "No project in this channel has entered the discovery or verified-download index yet.";
+    ? "Try a different title or category. You can also add the project you had in mind."
+    : "When something lands in this category, it will show up here.";
 
   function searchCatalog(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -185,10 +185,10 @@ export function LibraryApp() {
               <span><i /> ON&nbsp;&nbsp;·&nbsp;&nbsp;CH 01</span>
               <span>SIG ▮▮▮▯&nbsp;&nbsp; SCAN ON</span>
             </div>
-            <p className="eyebrow">Cathode · Ray · Archive</p>
+            <p className="eyebrow">ROM HACKS · RECOMP MODS · NO ROMS</p>
             <h1 id="hero-title"><span>phosphor</span><i>_</i><small>index</small></h1>
             <p className="hero-intro">
-              A permission-first index tracking Pokémon ROM-hack patches and Gen 1/Gen 2 recomp mods. Browse every official project signal; downloads activate only after creator approval, provenance, and file-integrity checks.
+              Browse ROM hacks and Gen 1 or Gen 2 recomp mods in one place. Cleared files download here. Everything else sends you straight to the creator.
             </p>
             <form className="search-box" onSubmit={searchCatalog} role="search">
               <span aria-hidden="true">⌕</span>
@@ -197,14 +197,14 @@ export function LibraryApp() {
                 id="hero-search"
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
-                placeholder="search library..."
+                placeholder="Find a project..."
               />
-              <button type="submit">Scan</button>
+              <button type="submit">Search</button>
             </form>
             <div className="hero-notes" aria-label="Archive principles">
-              <span><b>15</b> ROM hacks tracked</span>
-              <span><b>30</b> Recomp mods tracked</span>
-              <span><b>07</b> Gen 2 signals</span>
+              <span><b>15</b> ROM hacks</span>
+              <span><b>30</b> Recomp mods</span>
+              <span><b>07</b> Made for Gen 2</span>
             </div>
           </div>
 
@@ -225,13 +225,13 @@ export function LibraryApp() {
               ))}
             </div>
             <div className="display-readout">
-              <p>INDEX STATUS · {catalogProjects.length} SIGNALS</p>
+              <p>LIBRARY STATUS · {catalogProjects.length} PROJECTS</p>
               <strong>{String(romHackCount).padStart(2, "0")} PATCHES<br />{String(modCount).padStart(2, "0")} MODS<span>_</span></strong>
             </div>
             <div className="display-path">
-              <span><b>1</b> Permission</span><i />
-              <span><b>2</b> Hash</span><i />
-              <span><b>3</b> Live</span>
+              <span><b>1</b> Source</span><i />
+              <span><b>2</b> File check</span><i />
+              <span><b>3</b> Download</span>
             </div>
           </div>
         </section>
@@ -240,16 +240,16 @@ export function LibraryApp() {
           <div className="section-heading">
             <div>
               <p className="section-kicker">{"// Library"}</p>
-              <h2 id="catalog-title">project signals<span>_</span></h2>
+              <h2 id="catalog-title">browse the library<span>_</span></h2>
             </div>
-            <p>{catalogProjects.length} tracked · {releases.length} downloads cleared</p>
+            <p>{catalogProjects.length} projects · {releases.length} direct downloads</p>
           </div>
 
           <div className="catalog-counts" aria-label="Catalog totals">
-            <div><span>ROM HACKS</span><strong>{String(romHackCount).padStart(2, "0")}</strong><small>official projects</small></div>
+            <div><span>ROM HACKS</span><strong>{String(romHackCount).padStart(2, "0")}</strong><small>projects to explore</small></div>
             <div><span>RECOMP MODS</span><strong>{String(modCount).padStart(2, "0")}</strong><small>across Gen 1 + Gen 2</small></div>
-            <div className="count-gen2"><span>GEN 2</span><strong>{String(gen2Count).padStart(2, "0")}</strong><small>compatible signals</small></div>
-            <div className="count-cleared"><span>CLEARED</span><strong>{String(releases.length).padStart(2, "0")}</strong><small>verified downloads</small></div>
+            <div className="count-gen2"><span>GEN 2</span><strong>{String(gen2Count).padStart(2, "0")}</strong><small>compatible mods</small></div>
+            <div className="count-cleared"><span>DOWNLOADS</span><strong>{String(releases.length).padStart(2, "0")}</strong><small>checked and ready</small></div>
           </div>
 
           <div className="catalog-tools">
@@ -304,14 +304,14 @@ export function LibraryApp() {
                               </>
                             ) : (
                               <>
-                                <div><dt>Listing</dt><dd>Official source</dd></div>
-                                <div><dt>Mirror</dt><dd>Not enabled</dd></div>
+                                <div><dt>Source</dt><dd>Official project</dd></div>
+                                <div><dt>Download</dt><dd>From creator</dd></div>
                               </>
                             )}
                           </dl>
                           <div className="release-actions">
-                            {verified ? <a href={project.fileUrl}>Download file <span aria-hidden="true">↓</span></a> : <span>REVIEW IN PROGRESS</span>}
-                            <a href={project.homepageUrl}>Official project <span aria-hidden="true">↗</span></a>
+                            {verified ? <a href={project.fileUrl}>Download <span aria-hidden="true">↓</span></a> : <span>AVAILABLE FROM CREATOR</span>}
+                            <a href={project.homepageUrl}>Open project <span aria-hidden="true">↗</span></a>
                           </div>
                         </article>
                       );
@@ -333,24 +333,24 @@ export function LibraryApp() {
 
         <section className="standards-section" id="standards" aria-labelledby="standards-title">
           <div className="standards-lead">
-              <p className="section-kicker">{"// Protocol"}</p>
-              <h2 id="standards-title">clear provenance<span>_</span></h2>
-            <p>Discovery and distribution are separate signals. Every project may be indexed from its official page, but a file becomes downloadable only after permission and integrity review.</p>
+              <p className="section-kicker">{"// Good to know"}</p>
+              <h2 id="standards-title">downloads, explained<span>_</span></h2>
+            <p>If you can download a file here, the creator allows sharing and the file matches the official release. Otherwise, we link you to the project.</p>
           </div>
           <div className="standard-list">
             <article>
               <span className="standard-number">01</span>
-              <div><h3>Downloads have a paper trail</h3><p>Green verified cards link to an open license or public creator statement that covers redistribution. Pending cards link out only.</p></div>
+              <div><h3>Shared with permission</h3><p>Every direct download links to an open license or a public note from the creator. Everything else stays on the official project page.</p></div>
               <span className="standard-mark" aria-hidden="true">◎</span>
             </article>
             <article>
               <span className="standard-number">02</span>
-              <div><h3>No commercial ROMs</h3><p>ROM hacks are distributed as patch files. Recomp uploads contain only approved mod files—not base-game data.</p></div>
+              <div><h3>No game files</h3><p>ROM hacks come as patches. Recomp downloads contain mod files, not base-game data.</p></div>
               <span className="standard-mark" aria-hidden="true">◇</span>
             </article>
             <article>
               <span className="standard-number">03</span>
-              <div><h3>Every file is fingerprinted</h3><p>Versioned releases include a SHA-256 checksum, exact file size, target, and canonical source page.</p></div>
+              <div><h3>Checked and traceable</h3><p>Every download includes its version, file size, SHA-256 checksum, target, and official source.</p></div>
               <span className="standard-mark" aria-hidden="true">⌁</span>
             </article>
           </div>
@@ -358,28 +358,28 @@ export function LibraryApp() {
 
         <section className="submit-section" id="submit" aria-labelledby="submit-title">
           <div className="submit-copy">
-            <p className="section-kicker">{"// Uplink"}</p>
-            <h2 id="submit-title">send a new signal<span>_</span></h2>
-            <p>Submit through GitHub with the exact release and permission evidence. You’ll receive status updates on the issue while the archive owner reviews it.</p>
+            <p className="section-kicker">{"// Add a project"}</p>
+            <h2 id="submit-title">know a good one<span>?</span></h2>
+            <p>Send us the official project page and current release. GitHub will keep you posted while we check it.</p>
             <div className="submission-actions">
               {submissionUrl ? <a className="form-button" href={submissionUrl}>Open submission form ↗</a> : <span className="form-pending">Form activates when the site is connected to GitHub.</span>}
               <button className="copy-button" onClick={copyTemplate} type="button">
-                {copied ? "Template copied ✓" : "Copy submission template"}
+                {copied ? "Copied ✓" : "Copy the template"}
               </button>
             </div>
           </div>
           <ol className="submit-steps">
-            <li><span>1</span><div><b>Requester opens the form</b><p>GitHub records the file, checksum, license, target, and public permission evidence.</p></div></li>
-            <li><span>2</span><div><b>You receive an email</b><p>The new issue is assigned to the repository owner so GitHub sends its normal notification.</p></div></li>
-            <li><span>3</span><div><b>Reply with a decision</b><p>Reply to the email or issue with <code>/approve</code> or <code>/deny reason</code>.</p></div></li>
-            <li><span>4</span><div><b>Publish or respond</b><p>Approval verifies the archive and deploys it. Either decision posts back to the requester.</p></div></li>
+            <li><span>1</span><div><b>Open the form</b><p>Tell us what the project is and where it lives.</p></div></li>
+            <li><span>2</span><div><b>Add the details</b><p>Share the release, checksum, target, and permission link if you have them.</p></div></li>
+            <li><span>3</span><div><b>We check the file</b><p>We confirm the source, sharing terms, and contents before a download goes live.</p></div></li>
+            <li><span>4</span><div><b>Everyone gets the update</b><p>GitHub posts the decision on the issue and lets the requester know.</p></div></li>
           </ol>
         </section>
       </main>
 
       <footer>
         <a className="brand footer-brand" href="./"><span className="brand-glyph" aria-hidden="true">P<span>_</span></span><span className="brand-name">phosphor<span>_</span></span></a>
-        <p>A community archive for patches and mods with verifiable redistribution permission. Not affiliated with Nintendo, The Pokémon Company, or project creators.</p>
+        <p>A clean home for ROM hack patches and recomp mods that are okay to share. Not affiliated with Nintendo, The Pokémon Company, or project creators.</p>
         <div><a href="#standards">Catalog policy</a><a href="#submit">Contribute</a><a href="#top">Back to top ↑</a></div>
       </footer>
     </div>

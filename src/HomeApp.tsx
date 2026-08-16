@@ -4,37 +4,37 @@ const featureCards = [
   {
     number: "01",
     kicker: "TIME CONTROL",
-    title: "Rewind the miss. Skip the grind.",
-    copy: "Roll gameplay back in real time, create save states anywhere, or push through slow sections at up to 15× speed.",
+    title: "Missed it? Run it back.",
+    copy: "Rewind as you play, drop a save state anywhere, or jump past the slow stuff at up to 15× speed.",
     mark: "↤",
   },
   {
     number: "02",
-    kicker: "CRT ENGINE",
-    title: "A screen with a pulse.",
-    copy: "Live scanlines, phosphor bloom, dot-grid texture, vignette, deep contrast, and a rack of color-driven controller skins.",
+    kicker: "CRT LOOK",
+    title: "The glow is part of the game.",
+    copy: "Tune the scanlines, bloom, dot grid, vignette, contrast, and controller colors until the screen feels right.",
     mark: "▥",
   },
   {
     number: "03",
-    kicker: "PLAY ANYWHERE",
-    title: "Phone. Tablet. Mac. Wrist.",
-    copy: "A universal Apple experience with iCloud battery saves, quick resume, external controllers, and Apple Watch play.",
+    kicker: "ONE APP",
+    title: "Pick up on any screen.",
+    copy: "Play on iPhone, iPad, Mac, or Apple Watch. Your battery saves stay in sync with iCloud. Controllers work too.",
     mark: "⌁",
   },
   {
     number: "04",
-    kicker: "YOUR COLLECTION",
-    title: "Private by default.",
-    copy: "Import legally obtained GB, GBC, and GBA files through Files, iCloud Drive, or AirDrop. No ads, accounts, or tracking.",
+    kicker: "YOUR GAMES",
+    title: "Your library stays yours.",
+    copy: "Bring legally obtained GB, GBC, and GBA files through Files, iCloud Drive, or AirDrop. No ads. No account. No tracking.",
     mark: "◎",
   },
 ];
 
 const screenshots = [
-  { src: "assets/phosphor/screenshot-1.png", label: "Library", detail: "Your collection, ready to resume." },
-  { src: "assets/phosphor/screenshot-3.png", label: "Game mode", detail: "A screen-first handheld layout." },
-  { src: "assets/phosphor/screenshot-4.png", label: "Skins", detail: "18 controller treatments and CRT moods." },
+  { src: "assets/phosphor/screenshot-1.png", label: "Library", detail: "Every game, right where you left it." },
+  { src: "assets/phosphor/screenshot-3.png", label: "Game mode", detail: "The game gets the whole screen." },
+  { src: "assets/phosphor/screenshot-4.png", label: "Skins", detail: "18 ways to change the mood." },
   { src: "assets/phosphor/screenshot-5.png", label: "Trade", detail: "Move data between your own saves." },
   { src: "assets/phosphor/screenshot-6.png", label: "Link cable", detail: "Host or join a nearby player." },
 ];
@@ -71,13 +71,13 @@ function HomeApp() {
           </div>
 
           <div className="home-hero-copy">
-            <p className="home-eyebrow">PREMIUM GB · GBC · GBA EMULATOR</p>
+            <p className="home-eyebrow">GB · GBC · GBA ON APPLE</p>
             <h1 id="home-title">
-              Your games.<br />
-              <span className="power-line">Powered on<span className="power-cursor" aria-hidden="true">_</span></span>
+              Classic games.<br />
+              <span className="power-line">Dialed in<span className="power-cursor" aria-hidden="true">_</span></span>
             </h1>
             <p className="home-deck">
-              A retro handheld for Apple devices with a live CRT soul. Rewind time, sync saves, install supported mods, and make every cartridge feel new again.
+              Game Boy, Game Boy Color, and Game Boy Advance on iPhone, iPad, Mac, and Apple Watch. Rewind a bad jump, speed through the grind, sync your saves, and make the screen glow.
             </p>
             <div className="hero-actions">
               <a className="primary-action" href={appStoreUrl} target="_blank" rel="noreferrer">
@@ -88,9 +88,9 @@ function HomeApp() {
               <a className="secondary-action" href="library.html">Explore mod library <span aria-hidden="true">→</span></a>
             </div>
             <div className="hero-badges" aria-label="Highlights">
-              <span><b>FREE</b> NO SUBSCRIPTION</span>
-              <span><b>PRIVATE</b> NO TRACKING</span>
-              <span><b>NATIVE</b> APPLE DEVICES</span>
+              <span><b>FREE</b> FOREVER</span>
+              <span><b>PRIVATE</b> BY DEFAULT</span>
+              <span><b>NATIVE</b> ON APPLE</span>
             </div>
           </div>
 
@@ -123,9 +123,9 @@ function HomeApp() {
         <section className="manifesto section-shell" id="features">
           <div className="section-label"><span>01</span> WHY PHOSPHOR</div>
           <div className="manifesto-grid">
-            <h2>Most emulators feel like utilities.<br /><span>Phosphor feels like a device.</span></h2>
+            <h2>It plays like an emulator.<br /><span>It feels like hardware.</span></h2>
             <p>
-              From the deep black screen well to the glow around every control, Phosphor is designed around the feeling of switching on a classic handheld—then rebuilt for the way you play now.
+              Every control and screen effect is tuned to let the app disappear and the game take over. Familiar where it matters. Faster where it helps.
             </p>
           </div>
           <div className="feature-grid">
@@ -153,15 +153,15 @@ function HomeApp() {
             <div className="console-foot"><span>15 ROM HACKS</span><span>30 RECOMP MODS</span><span>PERMISSION FIRST</span></div>
           </div>
           <div className="mods-copy">
-            <div className="section-label"><span>02</span> MODS, BUILT IN</div>
-            <h2 id="mods-title">A living library for the games you love.</h2>
+            <div className="section-label"><span>02</span> MOD LIBRARY</div>
+            <h2 id="mods-title">Mods, right where you play.</h2>
             <p>
-              Phosphor now supports Gen 1 and Gen 2 recomp mods. Our companion library tracks ROM-hack patches and recomp projects, with direct downloads enabled only when creator permission and file provenance are verified.
+              Browse compatible Gen 1 and Gen 2 recomp mods in the Phosphor Library. Downloads show up when the creator allows sharing and the file passes our checks.
             </p>
             <ul>
-              <li><span>✓</span> Gen 1 and Gen 2 recomp channels</li>
-              <li><span>✓</span> No commercial ROM files</li>
-              <li><span>✓</span> Permission evidence and checksums</li>
+              <li><span>✓</span> Made for Gen 1 and Gen 2 recomp</li>
+              <li><span>✓</span> Patches and mods only. Never ROMs.</li>
+              <li><span>✓</span> Checked files with clear credits</li>
             </ul>
             <a className="text-action" href="library.html">Browse the Phosphor Library <Arrow /></a>
           </div>
@@ -171,9 +171,9 @@ function HomeApp() {
           <div className="screens-heading section-shell">
             <div>
               <div className="section-label"><span>03</span> INSIDE THE CABINET</div>
-              <h2 id="screens-title">Built to be played.<br /><span>Designed to be seen.</span></h2>
+              <h2 id="screens-title">See it in action.<br /><span>Glow and all.</span></h2>
             </div>
-            <p>Real Phosphor screens, captured in-app. Swipe the rail on mobile.</p>
+            <p>Real screens from the app. Swipe through them on mobile.</p>
           </div>
           <div className="screenshot-rail" role="list" aria-label="Phosphor app screenshots">
             {screenshots.map((shot, index) => (
@@ -188,21 +188,21 @@ function HomeApp() {
         <section className="how-section section-shell" id="how-it-works" aria-labelledby="how-title">
           <div className="how-copy">
             <div className="section-label"><span>04</span> THREE STEPS</div>
-            <h2 id="how-title">Bring your games.<br />Phosphor does the rest.</h2>
-            <p>Phosphor includes no games or copyrighted content. Start with compatible files from your own legally obtained collection.</p>
+            <h2 id="how-title">Three steps.<br />Then game on.</h2>
+            <p>Phosphor does not include games. Start with compatible files from your own legally obtained collection.</p>
           </div>
           <ol className="how-steps">
-            <li><span>01</span><div><strong>Download Phosphor</strong><p>Get the universal app for iPhone, iPad, Mac, and Apple Watch.</p></div></li>
-            <li><span>02</span><div><strong>Import your files</strong><p>Add compatible .gb, .gbc, or .gba files with Files, iCloud Drive, or AirDrop.</p></div></li>
-            <li><span>03</span><div><strong>Switch on and play</strong><p>Build your library, resume instantly, sync saves, and discover supported mods.</p></div></li>
+            <li><span>01</span><div><strong>Get Phosphor</strong><p>One app for iPhone, iPad, Mac, and Apple Watch.</p></div></li>
+            <li><span>02</span><div><strong>Add your games</strong><p>Import compatible .gb, .gbc, or .gba files with Files, iCloud Drive, or AirDrop.</p></div></li>
+            <li><span>03</span><div><strong>Press start</strong><p>Pick a game, sync your saves, and make it yours.</p></div></li>
           </ol>
         </section>
 
         <section className="final-cta section-shell" aria-labelledby="cta-title">
           <img src="assets/phosphor/app-icon.png" alt="Phosphor Emulator app icon" />
           <div>
-            <p className="home-eyebrow">PHOSPHOR EMULATOR · FREE ON THE APP STORE</p>
-            <h2 id="cta-title">The screen you remember.<br /><span>The emulator you didn’t know you wanted.</span></h2>
+            <p className="home-eyebrow">FREE ON THE APP STORE</p>
+            <h2 id="cta-title">Your old favorites<br /><span>look good in this light.</span></h2>
           </div>
           <a className="primary-action" href={appStoreUrl} target="_blank" rel="noreferrer">
             <span><small>DOWNLOAD ON THE</small>App Store</span><Arrow />
@@ -213,7 +213,7 @@ function HomeApp() {
       <footer className="home-footer section-shell">
         <div className="home-footer-top">
           <a className="home-brand" href="#top"><img src="assets/phosphor/app-icon.png" alt="" /><span>phosphor<i>_</i></span></a>
-          <p>Premium retro play for modern Apple devices.</p>
+          <p>Game Boy on Apple, with better controls and just enough glow.</p>
           <div><a href={appStoreUrl}>App Store</a><a href="library.html">Mod library</a><a href="https://www.squatchcraft.com/phosphor.html">SquatchCraft</a></div>
         </div>
         <div className="home-footer-bottom">
