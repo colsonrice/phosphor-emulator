@@ -6,7 +6,9 @@
     "version": "1.0.0",
     "releaseDate": "2026-08-15",
     "category": "gen1recomp",
-    "compatibility": ["gen1recomp"],
+    "compatibility": [
+      "gen1recomp"
+    ],
     "target": "Gen1Recomp · Yellow",
     "summary": "Adds selectable 1.5×, 2×, 3×, and scaled experience modes while retaining an off switch for vanilla behavior.",
     "fileUrl": "https://github.com/RadekHM/xp_multiplier_gen1recomp/releases/download/v1.0.0/EXP_MULTIPLIER-1.0.0.zip",
@@ -19,7 +21,10 @@
     "licenseIncluded": true,
     "permissionEvidenceUrl": "https://github.com/RadekHM/xp_multiplier_gen1recomp/blob/main/LICENSE",
     "containsRom": false,
-    "images": []
+    "images": [],
+    "modId": "EXP_MULTIPLIER",
+    "fileSizeBytes": 6483,
+    "topic": "QOL"
   },
   {
     "id": "battle-info-hud",
@@ -28,7 +33,9 @@
     "version": "0.8.5",
     "releaseDate": "2026-08-14",
     "category": "gen1recomp",
-    "compatibility": ["gen1recomp"],
+    "compatibility": [
+      "gen1recomp"
+    ],
     "target": "Gen1Recomp · R/B/Y",
     "summary": "Adds native HUD colors, slim experience progress, caught markers, and compact status and level labels.",
     "fileUrl": "https://github.com/piftee/gen1recomp-battle-info-hud/releases/download/v0.8.5/Battle-Info-HUD-0.8.5.zip",
@@ -41,7 +48,10 @@
     "licenseIncluded": true,
     "permissionEvidenceUrl": "https://github.com/piftee/gen1recomp-battle-info-hud/blob/main/LICENSE",
     "containsRom": false,
-    "images": []
+    "images": [],
+    "modId": "battle_info_hud",
+    "fileSizeBytes": 16998,
+    "topic": "UI"
   },
   {
     "id": "stadium-battle-fx",
@@ -50,7 +60,9 @@
     "version": "2.1.7",
     "releaseDate": "2026-08-15",
     "category": "gen1recomp",
-    "compatibility": ["gen1recomp"],
+    "compatibility": [
+      "gen1recomp"
+    ],
     "target": "Gen1Recomp · R/B/Y",
     "summary": "Adds Stadium-inspired battle effects, portraits, and appearances while importing required source data from the player's own cartridge dump.",
     "fileUrl": "https://github.com/anxiousintrovert/StadiumBattleFX/releases/download/v2.1.7/STADIUM_BATTLE_FX-2.1.7.zip",
@@ -63,7 +75,10 @@
     "licenseIncluded": true,
     "permissionEvidenceUrl": "https://github.com/anxiousintrovert/StadiumBattleFX/blob/main/LICENSE",
     "containsRom": false,
-    "images": []
+    "images": [],
+    "modId": "STADIUM_BATTLE_FX",
+    "fileSizeBytes": 359093,
+    "topic": "ART"
   },
   {
     "id": "pokeball-colors",
@@ -72,7 +87,10 @@
     "version": "0.1.27",
     "releaseDate": "2026-08-13",
     "category": "gen2recomp",
-    "compatibility": ["gen1recomp", "gen2recomp"],
+    "compatibility": [
+      "gen1recomp",
+      "gen2recomp"
+    ],
     "target": "Gen1Recomp + Gen2Recomp",
     "summary": "Adds per-ball colors to battle tosses and the Pokémon Center healing machine in Red, Blue, Yellow, and Gold.",
     "fileUrl": "https://github.com/mistermiracle3036/Pokeball-Colors/releases/download/v0.1.27/pokeball_colors-0.1.27.zip",
@@ -85,7 +103,10 @@
     "licenseIncluded": true,
     "permissionEvidenceUrl": "https://github.com/mistermiracle3036/Pokeball-Colors/blob/main/LICENSE",
     "containsRom": false,
-    "images": []
+    "images": [],
+    "modId": "pokeball_colors",
+    "fileSizeBytes": 33407,
+    "topic": "ART"
   },
   {
     "id": "indigo-plateau-conference",
@@ -94,7 +115,9 @@
     "version": "1.0.2",
     "releaseDate": "2026-08-14",
     "category": "gen2recomp",
-    "compatibility": ["gen2recomp"],
+    "compatibility": [
+      "gen2recomp"
+    ],
     "target": "Gen2Recomp · Gold",
     "summary": "Turns five Pokémon Center battle rooms into a repeatable four-round tournament circuit with 39 challengers.",
     "fileUrl": "https://github.com/mistermiracle3036/Indigo-Plateau-Conference/releases/download/v1.0.2/indigo_conference-1.0.2.zip",
@@ -107,7 +130,10 @@
     "licenseIncluded": true,
     "permissionEvidenceUrl": "https://github.com/mistermiracle3036/Indigo-Plateau-Conference/blob/main/LICENSE",
     "containsRom": false,
-    "images": []
+    "images": [],
+    "modId": "indigo_conference",
+    "fileSizeBytes": 56357,
+    "topic": "CONTENT"
   },
   {
     "id": "gen1recomp-plus-randomizer-nuzlocke",
@@ -116,7 +142,9 @@
     "version": "0.28.1",
     "releaseDate": "2026-08-15",
     "category": "gen2recomp",
-    "compatibility": ["gen2recomp"],
+    "compatibility": [
+      "gen2recomp"
+    ],
     "target": "Gen2Recomp · Gold",
     "summary": "An all-in-one Gold randomizer with strictly enforced Nuzlocke encounters, level caps, permadeath, and run-ending wipes.",
     "fileUrl": "https://github.com/Sqtls/gen1recomp-plus-randomizer-nuzlocke/releases/download/v0.28.1/gen1recomp-plus-randomizer-nuzlocke-0.28.1.zip",
@@ -129,6 +157,9 @@
     "licenseIncluded": true,
     "permissionEvidenceUrl": "https://github.com/Sqtls/gen1recomp-plus-randomizer-nuzlocke/blob/main/LICENSE",
     "containsRom": false,
-    "images": []
+    "images": [],
+    "modId": "gen1recomp_plus_randomizer_nuzlocke",
+    "fileSizeBytes": 116341,
+    "topic": "GAMEPLAY"
   }
 ]

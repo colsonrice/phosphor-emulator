@@ -2,6 +2,7 @@ import { readFile } from "node:fs/promises";
 
 export const allowedCategories = new Set(["rom-hack", "gen1recomp", "gen2recomp"]);
 export const allowedPermissions = new Set(["open-license", "author-approved"]);
+export const allowedTopics = new Set(["GAMEPLAY", "QOL", "UI", "ART", "CONTENT"]);
 export const allowedReviewStatuses = new Set(["permission-needed", "permission-queued", "archive-review"]);
 export const allowedExtensions = [".ips", ".ups", ".bps", ".xdelta", ".vcdiff", ".zip", ".tar.gz"];
 export const forbiddenExtensions = [".gb", ".gbc", ".gba", ".nds", ".3ds", ".cia"];
@@ -12,6 +13,8 @@ export function validateRelease(release, index) {
   const requiredStrings = [
     "id", "title", "creator", "version", "releaseDate", "target", "summary",
     "fileUrl", "fileName", "fileSize", "sha256", "homepageUrl", "permissionEvidenceUrl", "license",
+    // Consumed by scripts/build-manifest.mjs: `topic` picks the app's shelf.
+    "topic",
   ];
 
   for (const field of requiredStrings) {
@@ -39,6 +42,19 @@ export function validateRelease(release, index) {
   if (forbiddenExtensions.some((extension) => lowerName.endsWith(extension))) errors.push(`${label}: commercial ROM file types are forbidden`);
   if (!allowedExtensions.some((extension) => lowerName.endsWith(extension))) errors.push(`${label}: unsupported patch or mod archive type`);
   if (!Array.isArray(release?.images)) errors.push(`${label}: images must be an array (it may be empty)`);
+  // `fileSize` is a display string ("6.3 KB"); the app needs exact bytes,
+  // because it uses the value as a ceiling on the download.
+  if (!Number.isInteger(release?.fileSizeBytes) || release.fileSizeBytes <= 0) {
+    errors.push(`${label}: fileSizeBytes must be a positive integer`);
+  }
+  if (release?.topic && !allowedTopics.has(release.topic)) errors.push(`${label}: unsupported topic`);
+  // Only an engine mod has one: it is the id inside the archive's own
+  // manifest, which the app hands to its installer so a mod cannot land in
+  // another mod's directory. A ROM patch has no such id.
+  const isEngineMod = (release?.compatibility ?? []).some((channel) => channel !== "rom-hack");
+  if (isEngineMod && (typeof release?.modId !== "string" || !release.modId.trim())) {
+    errors.push(`${label}: modId is required for an engine mod`);
+  }
 
   return errors;
 }

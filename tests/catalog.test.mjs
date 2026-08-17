@@ -23,6 +23,8 @@ const validRelease = {
   permissionEvidenceUrl: "https://example.com/permission",
   containsRom: false,
   images: [],
+  fileSizeBytes: 1024,
+  topic: "GAMEPLAY",
 };
 
 test("the checked-in catalog satisfies policy", async () => {
