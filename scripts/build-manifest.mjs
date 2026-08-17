@@ -54,7 +54,10 @@ const CATEGORIES = [
   // Everything indexed lands here. Assigning invented topics to listings
   // nobody can install yet would be curation of things that are not on offer;
   // an entry moves to a real shelf the moment it has a topic and a file.
-  { id: "PENDING", title: "Permission pending", subtitle: "Indexed while redistribution is cleared", order: 5 },
+  // Named for where the download is, not for what Phosphor has not finished.
+  // The id stays PENDING because entries reference it; only the words a player
+  // reads have changed.
+  { id: "PENDING", title: "From their creators", subtitle: "Download straight from the source", order: 5 },
 ].filter((category) => category.id !== "PENDING" || PUBLISH_INDEXED);
 
 const ALL_SECTIONS = [
