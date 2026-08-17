@@ -27,10 +27,12 @@ test("every installable entry carries what the app needs to verify it", async ()
   }
 });
 
-test("indexed entries offer a link and never a download", async () => {
+// Indexed listings are switched off for now (PUBLISH_INDEXED), so this asserts
+// the rule rather than their presence: it has to keep holding whenever they are
+// switched back on.
+test("any indexed entry offers a link and never a download", async () => {
   const { entries } = await buildManifest();
   const indexed = entries.filter((entry) => entry.project);
-  assert.ok(indexed.length > 0, "expected indexed entries");
 
   for (const entry of indexed) {
     assert.equal(entry.download, undefined, `${entry.id}: must not be mirrored while pending`);
@@ -70,6 +72,29 @@ test("every entry lands in a declared section and category", async () => {
     for (const category of entry.categories) {
       assert.ok(ids.has(category), `${entry.id}: category ${category} is not declared`);
     }
+  }
+});
+
+// The deliberate scope of this week's ship. If ROM hacks or indexed listings
+// come back, this test is the one that should fail and be updated on purpose,
+// rather than the change going out unnoticed.
+test("the published catalog is installable mods only", async () => {
+  const { entries, sections, categories } = await buildManifest();
+
+  assert.deepEqual(sections.map((section) => section.id), ["luaMods"]);
+  assert.equal(entries.filter((entry) => entry.kind === "romPatch").length, 0);
+  assert.equal(entries.filter((entry) => entry.project).length, 0);
+  assert.ok(entries.every((entry) => entry.download), "every listing must be installable");
+  assert.equal(categories.filter((category) => category.id === "PENDING").length, 0,
+    "no Permission pending shelf when nothing is indexed");
+});
+
+test("every open-license mod carries its licence somewhere", async () => {
+  const releases = JSON.parse(await readFile(new URL("../src/data/releases.json", import.meta.url), "utf8"));
+  for (const release of releases.filter((r) => r.permission === "open-license")) {
+    const carried = release.licenseIncluded === true
+      || (typeof release.licenseText === "string" && release.licenseText.trim().length > 0);
+    assert.ok(carried, `${release.id}: MIT text travels with neither the archive nor the catalog`);
   }
 });
 

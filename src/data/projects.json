@@ -5,7 +5,9 @@
     "creator": "Rangi",
     "kind": "rom-hack",
     "category": "rom-hack",
-    "compatibility": ["rom-hack"],
+    "compatibility": [
+      "rom-hack"
+    ],
     "target": "Pokémon Crystal",
     "summary": "A comprehensive Crystal upgrade with modernized mechanics, restored content, new areas, and an expanded postgame.",
     "homepageUrl": "https://github.com/Rangi42/polishedcrystal",
@@ -17,7 +19,9 @@
     "creator": "Vortyne",
     "kind": "rom-hack",
     "category": "rom-hack",
-    "compatibility": ["rom-hack"],
+    "compatibility": [
+      "rom-hack"
+    ],
     "target": "Pokémon Red / Blue / Green",
     "summary": "A purist enhancement focused on making the original 151 more obtainable, balanced, and replayable.",
     "homepageUrl": "https://github.com/Vortyne/pureRGB",
@@ -29,7 +33,9 @@
     "creator": "Derek Andersen / Dechrissen",
     "kind": "rom-hack",
     "category": "rom-hack",
-    "compatibility": ["rom-hack"],
+    "compatibility": [
+      "rom-hack"
+    ],
     "target": "Pokémon Red / Blue",
     "summary": "A faithful near-vanilla solo experience with trade evolutions and version-exclusive barriers removed.",
     "homepageUrl": "https://github.com/Dechrissen/poke-solus-rgb",
@@ -41,7 +47,9 @@
     "creator": "Heart & Soul Development",
     "kind": "rom-hack",
     "category": "rom-hack",
-    "compatibility": ["rom-hack"],
+    "compatibility": [
+      "rom-hack"
+    ],
     "target": "Pokémon Emerald",
     "summary": "A completed GBA recreation of the Johto adventure, built as an Emerald decomp project.",
     "homepageUrl": "https://github.com/PokemonHnS-Development/pokemonHnS",
@@ -53,7 +61,9 @@
     "creator": "Crossroads Dev Team",
     "kind": "rom-hack",
     "category": "rom-hack",
-    "compatibility": ["rom-hack"],
+    "compatibility": [
+      "rom-hack"
+    ],
     "target": "Pokémon Emerald",
     "summary": "An ambitious Emerald project designed to connect Kanto, Johto, and Hoenn in one adventure.",
     "homepageUrl": "https://github.com/eonlynx/pokecrossroads",
@@ -65,7 +75,9 @@
     "creator": "Shin Pokémon Project",
     "kind": "rom-hack",
     "category": "rom-hack",
-    "compatibility": ["rom-hack"],
+    "compatibility": [
+      "rom-hack"
+    ],
     "target": "Pokémon Red / Blue",
     "summary": "A mostly-vanilla community enhancement centered on bug fixes, stronger trainer AI, and quality-of-life changes.",
     "homepageUrl": "https://github.com/jojobear13/shinpokered",
@@ -77,7 +89,9 @@
     "creator": "PiaCarrot and contributors",
     "kind": "rom-hack",
     "category": "rom-hack",
-    "compatibility": ["rom-hack"],
+    "compatibility": [
+      "rom-hack"
+    ],
     "target": "Pokémon Crystal",
     "summary": "A Crystal-based Orange Archipelago adventure inspired by the anime's Orange Islands arc.",
     "homepageUrl": "https://github.com/PiaCarrot/pokeorange",
@@ -89,7 +103,9 @@
     "creator": "Coral Development Team",
     "kind": "rom-hack",
     "category": "rom-hack",
-    "compatibility": ["rom-hack"],
+    "compatibility": [
+      "rom-hack"
+    ],
     "target": "Pokémon Crystal",
     "summary": "An original Game Boy Color-style region and story now being ported onto the Polished Crystal engine.",
     "homepageUrl": "https://github.com/pkmncoraldev/polishedcoral",
@@ -101,7 +117,9 @@
     "creator": "TheSmithPlays / cRz Shadows",
     "kind": "rom-hack",
     "category": "rom-hack",
-    "compatibility": ["rom-hack"],
+    "compatibility": [
+      "rom-hack"
+    ],
     "target": "Pokémon Crystal",
     "summary": "A faithful rebalance of Crystal's encounters, teams, story beats, level curve, and postgame.",
     "homepageUrl": "https://github.com/cRz-Shadows/Pokemon_Crystal_Legacy",
@@ -113,7 +131,9 @@
     "creator": "TheSmithPlays / cRz Shadows",
     "kind": "rom-hack",
     "category": "rom-hack",
-    "compatibility": ["rom-hack"],
+    "compatibility": [
+      "rom-hack"
+    ],
     "target": "Pokémon Yellow",
     "summary": "A balance and quality-of-life revision that preserves Yellow's anime-influenced identity.",
     "homepageUrl": "https://github.com/cRz-Shadows/Pokemon_Yellow_Legacy",
@@ -125,7 +145,9 @@
     "creator": "MementoMartha and contributors",
     "kind": "rom-hack",
     "category": "rom-hack",
-    "compatibility": ["rom-hack"],
+    "compatibility": [
+      "rom-hack"
+    ],
     "target": "Pokémon Red / Blue",
     "summary": "Expands Kanto with prototype and region-related Pokémon, new locations, and modern conveniences.",
     "homepageUrl": "https://github.com/MementoMartha/kep-hack",
@@ -137,7 +159,9 @@
     "creator": "MementoMartha and contributors",
     "kind": "rom-hack",
     "category": "rom-hack",
-    "compatibility": ["rom-hack"],
+    "compatibility": [
+      "rom-hack"
+    ],
     "target": "Pokémon Crystal",
     "summary": "An experimental Crystal expansion that carries the Kanto Expansion Pak philosophy into Johto.",
     "homepageUrl": "https://github.com/MementoMartha/jep-hack",
@@ -149,7 +173,9 @@
     "creator": "Rangi",
     "kind": "rom-hack",
     "category": "rom-hack",
-    "compatibility": ["rom-hack"],
+    "compatibility": [
+      "rom-hack"
+    ],
     "target": "Pokémon Red / Blue",
     "summary": "Upgrades Red and Blue with graphics and features inspired by the 1997 Gold and Silver prototype.",
     "homepageUrl": "https://github.com/Rangi42/redstarbluestar",
@@ -161,7 +187,9 @@
     "creator": "CreamElDudJafar and contributors",
     "kind": "rom-hack",
     "category": "rom-hack",
-    "compatibility": ["rom-hack"],
+    "compatibility": [
+      "rom-hack"
+    ],
     "target": "Pokémon Yellow",
     "summary": "A demanding Yellow remaster inspired by Blue Kaizo, with additional balance and quality-of-life work.",
     "homepageUrl": "https://github.com/CreamElDudJafar/Yellow-Kaizo",
@@ -173,7 +201,9 @@
     "creator": "CreamElDudJafar and contributors",
     "kind": "rom-hack",
     "category": "rom-hack",
-    "compatibility": ["rom-hack"],
+    "compatibility": [
+      "rom-hack"
+    ],
     "target": "Pokémon Yellow",
     "summary": "A Yellow enhancement with second-generation graphics, balance changes, and quality-of-life options.",
     "homepageUrl": "https://github.com/CreamElDudJafar/StaticYellow",
@@ -185,7 +215,9 @@
     "creator": "Harry",
     "kind": "mod",
     "category": "gen1recomp",
-    "compatibility": ["gen1recomp"],
+    "compatibility": [
+      "gen1recomp"
+    ],
     "target": "Gen1Recomp",
     "summary": "Adds a Pokémon Green-inspired Super Game Boy palette treatment.",
     "homepageUrl": "https://github.com/harryw4444/green_sgb_palette_gen1recomp",
@@ -197,7 +229,9 @@
     "creator": "Harry",
     "kind": "mod",
     "category": "gen1recomp",
-    "compatibility": ["gen1recomp"],
+    "compatibility": [
+      "gen1recomp"
+    ],
     "target": "Gen1Recomp",
     "summary": "Provides a quieter play option by suppressing the repeating low-health alarm.",
     "homepageUrl": "https://github.com/harryw4444/mute_low_HP_alarm_gen1recomp",
@@ -209,7 +243,9 @@
     "creator": "Harry",
     "kind": "mod",
     "category": "gen1recomp",
-    "compatibility": ["gen1recomp"],
+    "compatibility": [
+      "gen1recomp"
+    ],
     "target": "Gen1Recomp",
     "summary": "Corrects visual fade overlays during scene and interface transitions.",
     "homepageUrl": "https://github.com/harryw4444/fade_overlay_fix_gen1recomp",
@@ -221,7 +257,9 @@
     "creator": "Harry",
     "kind": "mod",
     "category": "gen1recomp",
-    "compatibility": ["gen1recomp"],
+    "compatibility": [
+      "gen1recomp"
+    ],
     "target": "Gen1Recomp",
     "summary": "Surfaces current bag quantities while browsing shops and inventory screens.",
     "homepageUrl": "https://github.com/harryw4444/bag_stock_preview_gen1recomp",
@@ -233,7 +271,9 @@
     "creator": "Harry",
     "kind": "mod",
     "category": "gen1recomp",
-    "compatibility": ["gen1recomp"],
+    "compatibility": [
+      "gen1recomp"
+    ],
     "target": "Gen1Recomp",
     "summary": "Turns fishing into a more interactive timing-based activity.",
     "homepageUrl": "https://github.com/harryw4444/fishing_mini_game_gen1recomp",
@@ -245,7 +285,9 @@
     "creator": "José Maceiras",
     "kind": "mod",
     "category": "gen1recomp",
-    "compatibility": ["gen1recomp"],
+    "compatibility": [
+      "gen1recomp"
+    ],
     "target": "Gen1Recomp",
     "summary": "Makes the celebrated Mew encounter glitch available as a native recomp mod.",
     "homepageUrl": "https://github.com/Chari69/mewmod",
@@ -257,7 +299,9 @@
     "creator": "Yukita Mayako",
     "kind": "mod",
     "category": "gen1recomp",
-    "compatibility": ["gen1recomp"],
+    "compatibility": [
+      "gen1recomp"
+    ],
     "target": "Gen1Recomp",
     "summary": "Shortens Professor Oak's opening sequence for faster repeat playthroughs.",
     "homepageUrl": "https://github.com/Yukitty/gen1mod_oak_brief",
@@ -269,7 +313,9 @@
     "creator": "Roxas2712",
     "kind": "mod",
     "category": "gen1recomp",
-    "compatibility": ["gen1recomp"],
+    "compatibility": [
+      "gen1recomp"
+    ],
     "target": "Gen1Recomp",
     "summary": "Renames the trainer and party Pokémon at any point, with automatic German localization.",
     "homepageUrl": "https://github.com/Roxas2712/pokemon-gen1-recomp-mod-anytime-rename",
@@ -281,142 +327,12 @@
     "creator": "AverageConsumer",
     "kind": "mod",
     "category": "gen1recomp",
-    "compatibility": ["gen1recomp"],
+    "compatibility": [
+      "gen1recomp"
+    ],
     "target": "Gen1Recomp · Android handhelds",
     "summary": "A dual-screen companion interface designed for Android gaming handhelds.",
     "homepageUrl": "https://github.com/AverageConsumer/kanto-gear",
-    "reviewStatus": "archive-review"
-  },
-  {
-    "id": "pokemon-red-ptbr",
-    "title": "Pokémon Red PT-BR",
-    "creator": "Gabriel Sojo",
-    "kind": "mod",
-    "category": "gen1recomp",
-    "compatibility": ["gen1recomp"],
-    "target": "Gen1Recomp · Red",
-    "summary": "A complete Brazilian Portuguese translation with accented text and 3D-mod support.",
-    "homepageUrl": "https://github.com/bielsojo/red-ptbr-gen1recomp",
-    "reviewStatus": "archive-review"
-  },
-  {
-    "id": "button-shortcuts",
-    "title": "Button Shortcuts",
-    "creator": "keberos",
-    "kind": "mod",
-    "category": "gen1recomp",
-    "compatibility": ["gen1recomp"],
-    "target": "Gen1Recomp",
-    "summary": "Adds configurable controller shortcuts for frequently used actions.",
-    "homepageUrl": "https://github.com/keberos/button-shortcuts",
-    "reviewStatus": "archive-review"
-  },
-  {
-    "id": "quick-map",
-    "title": "Quick Map",
-    "creator": "keberos",
-    "kind": "mod",
-    "category": "gen1recomp",
-    "compatibility": ["gen1recomp"],
-    "target": "Gen1Recomp",
-    "summary": "Provides faster access to a compact map view while exploring Kanto.",
-    "homepageUrl": "https://github.com/keberos/quickmap",
-    "reviewStatus": "archive-review"
-  },
-  {
-    "id": "rename-character",
-    "title": "Rename Character",
-    "creator": "keberos",
-    "kind": "mod",
-    "category": "gen1recomp",
-    "compatibility": ["gen1recomp"],
-    "target": "Gen1Recomp",
-    "summary": "Adds an in-game path for changing the player character's name.",
-    "homepageUrl": "https://github.com/keberos/rename-character",
-    "reviewStatus": "archive-review"
-  },
-  {
-    "id": "too-many-balls",
-    "title": "Too Many Balls",
-    "creator": "Mister Miracle",
-    "kind": "mod",
-    "category": "gen1recomp",
-    "compatibility": ["gen1recomp"],
-    "target": "Gen1Recomp",
-    "summary": "Expands the available Poké Ball selection and related catching options.",
-    "homepageUrl": "https://github.com/mistermiracle3036/Too-Many-Balls",
-    "reviewStatus": "archive-review"
-  },
-  {
-    "id": "bottomless-bag",
-    "title": "Bottomless Bag",
-    "creator": "erereck",
-    "kind": "mod",
-    "category": "gen1recomp",
-    "compatibility": ["gen1recomp"],
-    "target": "Gen1Recomp",
-    "summary": "Expands the item bag to support up to 255 distinct item slots through the public mod API.",
-    "homepageUrl": "https://github.com/erereck/gen1recomp-bottomless-bag",
-    "reviewStatus": "archive-review"
-  },
-  {
-    "id": "shiny-pokemon",
-    "title": "Shiny Pokémon",
-    "creator": "masterwebx",
-    "kind": "mod",
-    "category": "gen1recomp",
-    "compatibility": ["gen1recomp"],
-    "target": "Gen1Recomp",
-    "summary": "Introduces shiny Pokémon encounters and their alternate visual treatment.",
-    "homepageUrl": "https://github.com/masterwebx/gen1recomp-shiny-pokemon",
-    "reviewStatus": "archive-review"
-  },
-  {
-    "id": "all-pokemon-catchable",
-    "title": "All Pokémon Catchable 151",
-    "creator": "wowabox",
-    "kind": "mod",
-    "category": "gen1recomp",
-    "compatibility": ["gen1recomp"],
-    "target": "Gen1Recomp",
-    "summary": "Expands Kanto encounters so all 151 original Pokémon can be obtained without trading.",
-    "homepageUrl": "https://github.com/wowabox/All_Pokemon_Catchable_151_Mod",
-    "reviewStatus": "archive-review"
-  },
-  {
-    "id": "typed-move-colors",
-    "title": "Typed Move Colors",
-    "creator": "ishhodaszi / piftee",
-    "kind": "mod",
-    "category": "gen1recomp",
-    "compatibility": ["gen1recomp"],
-    "target": "Gen1Recomp",
-    "summary": "Adds responsive type-colored move buttons across battle and menu interfaces.",
-    "homepageUrl": "https://github.com/piftee/gen1recomp-typed-move-colors",
-    "reviewStatus": "archive-review"
-  },
-  {
-    "id": "modern-party-ui",
-    "title": "Modern Party UI",
-    "creator": "ishhodaszi / piftee",
-    "kind": "mod",
-    "category": "gen1recomp",
-    "compatibility": ["gen1recomp"],
-    "target": "Gen1Recomp",
-    "summary": "Rebuilds the party screen with a responsive modern layout and clearer information hierarchy.",
-    "homepageUrl": "https://github.com/piftee/gen1recomp-modern-party-ui",
-    "reviewStatus": "archive-review"
-  },
-  {
-    "id": "dex-radar",
-    "title": "Dex Radar",
-    "creator": "Zetto22",
-    "kind": "mod",
-    "category": "gen1recomp",
-    "compatibility": ["gen1recomp"],
-    "target": "Gen1Recomp",
-    "summary": "Lists the wild Pokémon available on the current map across grass, water, and fishing encounters.",
-    "homepageUrl": "https://github.com/Zetto22/dex_radar",
     "reviewStatus": "archive-review"
   },
   {
@@ -425,23 +341,13 @@
     "creator": "UNDERdecodedHD",
     "kind": "mod",
     "category": "gen2recomp",
-    "compatibility": ["gen2recomp"],
+    "compatibility": [
+      "gen2recomp"
+    ],
     "target": "Gen2Recomped · Gold / Silver",
     "summary": "Adapts the Dramatic Shapes voxel-style presentation for the Gen2Recomped engine.",
     "homepageUrl": "https://github.com/UNDERdecoded/Gen2Recomped-DramaticShapes",
     "reviewStatus": "permission-needed"
-  },
-  {
-    "id": "gen2-online",
-    "title": "Gen2Recomp Online",
-    "creator": "UNDERdecodedHD",
-    "kind": "mod",
-    "category": "gen2recomp",
-    "compatibility": ["gen2recomp"],
-    "target": "Gen2Recomped",
-    "summary": "Explores online connectivity for the Gen2Recomped runtime.",
-    "homepageUrl": "https://github.com/UNDERdecoded/Gen2Recomp---Online",
-    "reviewStatus": "archive-review"
   },
   {
     "id": "gen2-perfect-start",
@@ -449,7 +355,9 @@
     "creator": "Windwrecker",
     "kind": "mod",
     "category": "gen2recomp",
-    "compatibility": ["gen2recomp"],
+    "compatibility": [
+      "gen2recomp"
+    ],
     "target": "Gen2Recomp · Gold",
     "summary": "Awards Chikorita, Cyndaquil, and Totodile after the player's initial starter choice.",
     "homepageUrl": "https://github.com/Windwrecker/Gen1recomp-Perfect-Start",
@@ -461,7 +369,9 @@
     "creator": "randyadr",
     "kind": "mod",
     "category": "gen2recomp",
-    "compatibility": ["gen2recomp"],
+    "compatibility": [
+      "gen2recomp"
+    ],
     "target": "Gen2Recomped",
     "summary": "Brings voxel and 3D-styled Pokémon sprite presentation to the Gen 2 runtime.",
     "homepageUrl": "https://github.com/randyadr/Gen2-3D-Sprites",

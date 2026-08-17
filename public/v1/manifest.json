@@ -8,13 +8,6 @@
       "subtitle": "Reviewed community mods",
       "kind": "luaMod",
       "order": 0
-    },
-    {
-      "id": "romHacks",
-      "title": "ROM Hacks",
-      "subtitle": "Patches applied to a game you already own",
-      "kind": "romPatch",
-      "order": 1
     }
   ],
   "categories": [
@@ -47,12 +40,6 @@
       "title": "New Content",
       "subtitle": "Places, events and challenges",
       "order": 4
-    },
-    {
-      "id": "PENDING",
-      "title": "Permission pending",
-      "subtitle": "Indexed while redistribution is cleared",
-      "order": 5
     }
   ],
   "entries": [
@@ -260,462 +247,6 @@
       "modID": "gen1recomp_plus_randomizer_nuzlocke"
     },
     {
-      "id": "pokemon-polished-crystal",
-      "kind": "romPatch",
-      "name": "Pokémon Polished Crystal",
-      "tagline": "A comprehensive Crystal upgrade with modernized mechanics, restored content, new areas, and an expanded postgame.",
-      "author": {
-        "name": "Rangi",
-        "url": "https://github.com/Rangi42/polishedcrystal"
-      },
-      "categories": [
-        "PENDING"
-      ],
-      "target": "Pokémon Crystal",
-      "screenshots": [],
-      "project": {
-        "url": "https://github.com/Rangi42/polishedcrystal",
-        "status": "permission-queued"
-      }
-    },
-    {
-      "id": "pokemon-pure-rgb",
-      "kind": "romPatch",
-      "name": "Pokémon PureRGB",
-      "tagline": "A purist enhancement focused on making the original 151 more obtainable, balanced, and replayable.",
-      "author": {
-        "name": "Vortyne",
-        "url": "https://github.com/Vortyne/pureRGB"
-      },
-      "categories": [
-        "PENDING"
-      ],
-      "target": "Pokémon Red / Blue / Green",
-      "screenshots": [],
-      "project": {
-        "url": "https://github.com/Vortyne/pureRGB",
-        "status": "permission-queued"
-      }
-    },
-    {
-      "id": "pokemon-solus-rgb",
-      "kind": "romPatch",
-      "name": "Pokémon Solus RGB",
-      "tagline": "A faithful near-vanilla solo experience with trade evolutions and version-exclusive barriers removed.",
-      "author": {
-        "name": "Derek Andersen / Dechrissen",
-        "url": "https://github.com/Dechrissen/poke-solus-rgb"
-      },
-      "categories": [
-        "PENDING"
-      ],
-      "target": "Pokémon Red / Blue",
-      "screenshots": [],
-      "project": {
-        "url": "https://github.com/Dechrissen/poke-solus-rgb",
-        "status": "permission-queued"
-      }
-    },
-    {
-      "id": "pokemon-heart-and-soul",
-      "kind": "romPatch",
-      "name": "Pokémon Heart & Soul",
-      "tagline": "A completed GBA recreation of the Johto adventure, built as an Emerald decomp project.",
-      "author": {
-        "name": "Heart & Soul Development",
-        "url": "https://github.com/PokemonHnS-Development/pokemonHnS"
-      },
-      "categories": [
-        "PENDING"
-      ],
-      "target": "Pokémon Emerald",
-      "screenshots": [],
-      "project": {
-        "url": "https://github.com/PokemonHnS-Development/pokemonHnS",
-        "status": "permission-queued"
-      }
-    },
-    {
-      "id": "pokemon-crossroads",
-      "kind": "romPatch",
-      "name": "Pokémon Crossroads",
-      "tagline": "An ambitious Emerald project designed to connect Kanto, Johto, and Hoenn in one adventure.",
-      "author": {
-        "name": "Crossroads Dev Team",
-        "url": "https://github.com/eonlynx/pokecrossroads"
-      },
-      "categories": [
-        "PENDING"
-      ],
-      "target": "Pokémon Emerald",
-      "screenshots": [],
-      "project": {
-        "url": "https://github.com/eonlynx/pokecrossroads",
-        "status": "permission-queued"
-      }
-    },
-    {
-      "id": "shin-pokemon",
-      "kind": "romPatch",
-      "name": "Shin Pokémon Red / Blue / Green",
-      "tagline": "A mostly-vanilla community enhancement centered on bug fixes, stronger trainer AI, and quality-of-life changes.",
-      "author": {
-        "name": "Shin Pokémon Project",
-        "url": "https://github.com/jojobear13/shinpokered"
-      },
-      "categories": [
-        "PENDING"
-      ],
-      "target": "Pokémon Red / Blue",
-      "screenshots": [],
-      "project": {
-        "url": "https://github.com/jojobear13/shinpokered",
-        "status": "permission-needed"
-      }
-    },
-    {
-      "id": "pokemon-orange",
-      "kind": "romPatch",
-      "name": "Pokémon Orange",
-      "tagline": "A Crystal-based Orange Archipelago adventure inspired by the anime's Orange Islands arc.",
-      "author": {
-        "name": "PiaCarrot and contributors",
-        "url": "https://github.com/PiaCarrot/pokeorange"
-      },
-      "categories": [
-        "PENDING"
-      ],
-      "target": "Pokémon Crystal",
-      "screenshots": [],
-      "project": {
-        "url": "https://github.com/PiaCarrot/pokeorange",
-        "status": "permission-needed"
-      }
-    },
-    {
-      "id": "pokemon-coral",
-      "kind": "romPatch",
-      "name": "Pokémon Coral",
-      "tagline": "An original Game Boy Color-style region and story now being ported onto the Polished Crystal engine.",
-      "author": {
-        "name": "Coral Development Team",
-        "url": "https://github.com/pkmncoraldev/polishedcoral"
-      },
-      "categories": [
-        "PENDING"
-      ],
-      "target": "Pokémon Crystal",
-      "screenshots": [],
-      "project": {
-        "url": "https://github.com/pkmncoraldev/polishedcoral",
-        "status": "permission-needed"
-      }
-    },
-    {
-      "id": "pokemon-crystal-legacy",
-      "kind": "romPatch",
-      "name": "Pokémon Crystal Legacy",
-      "tagline": "A faithful rebalance of Crystal's encounters, teams, story beats, level curve, and postgame.",
-      "author": {
-        "name": "TheSmithPlays / cRz Shadows",
-        "url": "https://github.com/cRz-Shadows/Pokemon_Crystal_Legacy"
-      },
-      "categories": [
-        "PENDING"
-      ],
-      "target": "Pokémon Crystal",
-      "screenshots": [],
-      "project": {
-        "url": "https://github.com/cRz-Shadows/Pokemon_Crystal_Legacy",
-        "status": "permission-needed"
-      }
-    },
-    {
-      "id": "pokemon-yellow-legacy",
-      "kind": "romPatch",
-      "name": "Pokémon Yellow Legacy",
-      "tagline": "A balance and quality-of-life revision that preserves Yellow's anime-influenced identity.",
-      "author": {
-        "name": "TheSmithPlays / cRz Shadows",
-        "url": "https://github.com/cRz-Shadows/Pokemon_Yellow_Legacy"
-      },
-      "categories": [
-        "PENDING"
-      ],
-      "target": "Pokémon Yellow",
-      "screenshots": [],
-      "project": {
-        "url": "https://github.com/cRz-Shadows/Pokemon_Yellow_Legacy",
-        "status": "permission-needed"
-      }
-    },
-    {
-      "id": "kanto-expansion-pak",
-      "kind": "romPatch",
-      "name": "Kanto Expansion Pak",
-      "tagline": "Expands Kanto with prototype and region-related Pokémon, new locations, and modern conveniences.",
-      "author": {
-        "name": "MementoMartha and contributors",
-        "url": "https://github.com/MementoMartha/kep-hack"
-      },
-      "categories": [
-        "PENDING"
-      ],
-      "target": "Pokémon Red / Blue",
-      "screenshots": [],
-      "project": {
-        "url": "https://github.com/MementoMartha/kep-hack",
-        "status": "permission-needed"
-      }
-    },
-    {
-      "id": "johto-expansion-pak",
-      "kind": "romPatch",
-      "name": "Johto Expansion Pak",
-      "tagline": "An experimental Crystal expansion that carries the Kanto Expansion Pak philosophy into Johto.",
-      "author": {
-        "name": "MementoMartha and contributors",
-        "url": "https://github.com/MementoMartha/jep-hack"
-      },
-      "categories": [
-        "PENDING"
-      ],
-      "target": "Pokémon Crystal",
-      "screenshots": [],
-      "project": {
-        "url": "https://github.com/MementoMartha/jep-hack",
-        "status": "permission-needed"
-      }
-    },
-    {
-      "id": "pokemon-redstar-bluestar",
-      "kind": "romPatch",
-      "name": "Pokémon Redstar & Bluestar",
-      "tagline": "Upgrades Red and Blue with graphics and features inspired by the 1997 Gold and Silver prototype.",
-      "author": {
-        "name": "Rangi",
-        "url": "https://github.com/Rangi42/redstarbluestar"
-      },
-      "categories": [
-        "PENDING"
-      ],
-      "target": "Pokémon Red / Blue",
-      "screenshots": [],
-      "project": {
-        "url": "https://github.com/Rangi42/redstarbluestar",
-        "status": "permission-needed"
-      }
-    },
-    {
-      "id": "pokemon-yellow-kaizo",
-      "kind": "romPatch",
-      "name": "Pokémon Yellow Kaizo",
-      "tagline": "A demanding Yellow remaster inspired by Blue Kaizo, with additional balance and quality-of-life work.",
-      "author": {
-        "name": "CreamElDudJafar and contributors",
-        "url": "https://github.com/CreamElDudJafar/Yellow-Kaizo"
-      },
-      "categories": [
-        "PENDING"
-      ],
-      "target": "Pokémon Yellow",
-      "screenshots": [],
-      "project": {
-        "url": "https://github.com/CreamElDudJafar/Yellow-Kaizo",
-        "status": "permission-needed"
-      }
-    },
-    {
-      "id": "static-yellow",
-      "kind": "romPatch",
-      "name": "Static Yellow",
-      "tagline": "A Yellow enhancement with second-generation graphics, balance changes, and quality-of-life options.",
-      "author": {
-        "name": "CreamElDudJafar and contributors",
-        "url": "https://github.com/CreamElDudJafar/StaticYellow"
-      },
-      "categories": [
-        "PENDING"
-      ],
-      "target": "Pokémon Yellow",
-      "screenshots": [],
-      "project": {
-        "url": "https://github.com/CreamElDudJafar/StaticYellow",
-        "status": "permission-needed"
-      }
-    },
-    {
-      "id": "green-sgb-palette",
-      "kind": "luaMod",
-      "name": "Green SGB Palette",
-      "tagline": "Adds a Pokémon Green-inspired Super Game Boy palette treatment.",
-      "author": {
-        "name": "Harry",
-        "url": "https://github.com/harryw4444/green_sgb_palette_gen1recomp"
-      },
-      "categories": [
-        "PENDING"
-      ],
-      "target": "Gen1Recomp",
-      "screenshots": [],
-      "project": {
-        "url": "https://github.com/harryw4444/green_sgb_palette_gen1recomp",
-        "status": "permission-queued"
-      }
-    },
-    {
-      "id": "mute-low-hp-alarm",
-      "kind": "luaMod",
-      "name": "Mute Low HP Alarm",
-      "tagline": "Provides a quieter play option by suppressing the repeating low-health alarm.",
-      "author": {
-        "name": "Harry",
-        "url": "https://github.com/harryw4444/mute_low_HP_alarm_gen1recomp"
-      },
-      "categories": [
-        "PENDING"
-      ],
-      "target": "Gen1Recomp",
-      "screenshots": [],
-      "project": {
-        "url": "https://github.com/harryw4444/mute_low_HP_alarm_gen1recomp",
-        "status": "permission-queued"
-      }
-    },
-    {
-      "id": "fade-overlay-fix",
-      "kind": "luaMod",
-      "name": "Fade Overlay Fix",
-      "tagline": "Corrects visual fade overlays during scene and interface transitions.",
-      "author": {
-        "name": "Harry",
-        "url": "https://github.com/harryw4444/fade_overlay_fix_gen1recomp"
-      },
-      "categories": [
-        "PENDING"
-      ],
-      "target": "Gen1Recomp",
-      "screenshots": [],
-      "project": {
-        "url": "https://github.com/harryw4444/fade_overlay_fix_gen1recomp",
-        "status": "permission-queued"
-      }
-    },
-    {
-      "id": "bag-stock-preview",
-      "kind": "luaMod",
-      "name": "Bag Stock Preview",
-      "tagline": "Surfaces current bag quantities while browsing shops and inventory screens.",
-      "author": {
-        "name": "Harry",
-        "url": "https://github.com/harryw4444/bag_stock_preview_gen1recomp"
-      },
-      "categories": [
-        "PENDING"
-      ],
-      "target": "Gen1Recomp",
-      "screenshots": [],
-      "project": {
-        "url": "https://github.com/harryw4444/bag_stock_preview_gen1recomp",
-        "status": "permission-queued"
-      }
-    },
-    {
-      "id": "fishing-mini-game",
-      "kind": "luaMod",
-      "name": "Fishing Mini Game",
-      "tagline": "Turns fishing into a more interactive timing-based activity.",
-      "author": {
-        "name": "Harry",
-        "url": "https://github.com/harryw4444/fishing_mini_game_gen1recomp"
-      },
-      "categories": [
-        "PENDING"
-      ],
-      "target": "Gen1Recomp",
-      "screenshots": [],
-      "project": {
-        "url": "https://github.com/harryw4444/fishing_mini_game_gen1recomp",
-        "status": "permission-queued"
-      }
-    },
-    {
-      "id": "mew-glitch-mod",
-      "kind": "luaMod",
-      "name": "Mew Glitch Mod",
-      "tagline": "Makes the celebrated Mew encounter glitch available as a native recomp mod.",
-      "author": {
-        "name": "José Maceiras",
-        "url": "https://github.com/Chari69/mewmod"
-      },
-      "categories": [
-        "PENDING"
-      ],
-      "target": "Gen1Recomp",
-      "screenshots": [],
-      "project": {
-        "url": "https://github.com/Chari69/mewmod",
-        "status": "permission-queued"
-      }
-    },
-    {
-      "id": "oak-brief",
-      "kind": "luaMod",
-      "name": "Oak Brief",
-      "tagline": "Shortens Professor Oak's opening sequence for faster repeat playthroughs.",
-      "author": {
-        "name": "Yukita Mayako",
-        "url": "https://github.com/Yukitty/gen1mod_oak_brief"
-      },
-      "categories": [
-        "PENDING"
-      ],
-      "target": "Gen1Recomp",
-      "screenshots": [],
-      "project": {
-        "url": "https://github.com/Yukitty/gen1mod_oak_brief",
-        "status": "permission-queued"
-      }
-    },
-    {
-      "id": "anytime-rename",
-      "kind": "luaMod",
-      "name": "Anytime Rename",
-      "tagline": "Renames the trainer and party Pokémon at any point, with automatic German localization.",
-      "author": {
-        "name": "Roxas2712",
-        "url": "https://github.com/Roxas2712/pokemon-gen1-recomp-mod-anytime-rename"
-      },
-      "categories": [
-        "PENDING"
-      ],
-      "target": "Gen1Recomp",
-      "screenshots": [],
-      "project": {
-        "url": "https://github.com/Roxas2712/pokemon-gen1-recomp-mod-anytime-rename",
-        "status": "permission-queued"
-      }
-    },
-    {
-      "id": "kanto-gear",
-      "kind": "luaMod",
-      "name": "Kanto Gear",
-      "tagline": "A dual-screen companion interface designed for Android gaming handhelds.",
-      "author": {
-        "name": "AverageConsumer",
-        "url": "https://github.com/AverageConsumer/kanto-gear"
-      },
-      "categories": [
-        "PENDING"
-      ],
-      "target": "Gen1Recomp · Android handhelds",
-      "screenshots": [],
-      "project": {
-        "url": "https://github.com/AverageConsumer/kanto-gear",
-        "status": "archive-review"
-      }
-    },
-    {
       "id": "pokemon-red-ptbr",
       "kind": "luaMod",
       "name": "Pokémon Red PT-BR",
@@ -724,15 +255,26 @@
         "name": "Gabriel Sojo",
         "url": "https://github.com/bielsojo/red-ptbr-gen1recomp"
       },
+      "version": "1.0.0",
+      "releasedAt": "2026-08-03",
+      "license": {
+        "spdx": "MIT",
+        "text": "MIT License\n\nCopyright (c) 2026 Sojo & Equipe Gen1PT (Tradução baseada no patch IPS de Hyd~Traduções)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+      },
       "categories": [
-        "PENDING"
+        "UI"
       ],
       "target": "Gen1Recomp · Red",
       "screenshots": [],
-      "project": {
-        "url": "https://github.com/bielsojo/red-ptbr-gen1recomp",
-        "status": "archive-review"
-      }
+      "download": {
+        "url": "https://github.com/bielsojo/red-ptbr-gen1recomp/releases/download/v1.0.0/red_ptbr_golpes_ingles.zip",
+        "sizeBytes": 113530,
+        "sha256": "0190739126d33bf53e752b3efd10a1e10a46df42bc7d4c73813bd1cdec5c35c0"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "red_ptbr_golpes_ingles"
     },
     {
       "id": "button-shortcuts",
@@ -743,15 +285,25 @@
         "name": "keberos",
         "url": "https://github.com/keberos/button-shortcuts"
       },
+      "version": "1.0.0",
+      "releasedAt": "2026-08-13",
+      "license": {
+        "spdx": "MIT"
+      },
       "categories": [
-        "PENDING"
+        "QOL"
       ],
       "target": "Gen1Recomp",
       "screenshots": [],
-      "project": {
-        "url": "https://github.com/keberos/button-shortcuts",
-        "status": "archive-review"
-      }
+      "download": {
+        "url": "https://github.com/keberos/button-shortcuts/releases/download/v1.0.0/button-shortcuts-1.0.0.zip",
+        "sizeBytes": 13426,
+        "sha256": "0ae505c5edff7a22b098941b3a68683fb5b8cbbbcbd81e597d75d3cdfdcad20b"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "button-shortcuts"
     },
     {
       "id": "quick-map",
@@ -762,15 +314,25 @@
         "name": "keberos",
         "url": "https://github.com/keberos/quickmap"
       },
+      "version": "1.0.1",
+      "releasedAt": "2026-08-08",
+      "license": {
+        "spdx": "MIT"
+      },
       "categories": [
-        "PENDING"
+        "QOL"
       ],
       "target": "Gen1Recomp",
       "screenshots": [],
-      "project": {
-        "url": "https://github.com/keberos/quickmap",
-        "status": "archive-review"
-      }
+      "download": {
+        "url": "https://github.com/keberos/quickmap/releases/download/v1.0.1/quickmap-1.0.1.zip",
+        "sizeBytes": 7730,
+        "sha256": "32d1ec3cf901fff1445c673c6af82bfbfa045bc3e6a575a76e657713638a601f"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "quickmap"
     },
     {
       "id": "rename-character",
@@ -781,15 +343,25 @@
         "name": "keberos",
         "url": "https://github.com/keberos/rename-character"
       },
+      "version": "1.0.0",
+      "releasedAt": "2026-08-13",
+      "license": {
+        "spdx": "MIT"
+      },
       "categories": [
-        "PENDING"
+        "QOL"
       ],
       "target": "Gen1Recomp",
       "screenshots": [],
-      "project": {
-        "url": "https://github.com/keberos/rename-character",
-        "status": "archive-review"
-      }
+      "download": {
+        "url": "https://github.com/keberos/rename-character/releases/download/v1.0.0/rename-character-1.0.0.zip",
+        "sizeBytes": 3921,
+        "sha256": "592120ca033c974d2ba8515204b8c0b10876b13ed6f88a1733c51f1204185ee8"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "rename-character"
     },
     {
       "id": "too-many-balls",
@@ -800,15 +372,26 @@
         "name": "Mister Miracle",
         "url": "https://github.com/mistermiracle3036/Too-Many-Balls"
       },
+      "version": "0.6.1",
+      "releasedAt": "2026-08-14",
+      "license": {
+        "spdx": "MIT",
+        "text": "MIT License\n\nCopyright (c) 2026 Mister Miracle\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+      },
       "categories": [
-        "PENDING"
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "screenshots": [],
-      "project": {
-        "url": "https://github.com/mistermiracle3036/Too-Many-Balls",
-        "status": "archive-review"
-      }
+      "download": {
+        "url": "https://github.com/mistermiracle3036/Too-Many-Balls/releases/download/v0.6.1/kanto_balls-0.6.1.zip",
+        "sizeBytes": 67047,
+        "sha256": "597ce5702c8128688034f221bc5e80c293fb060f0ee6f05825b43c7e5eab8acd"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "kanto_balls"
     },
     {
       "id": "bottomless-bag",
@@ -819,15 +402,25 @@
         "name": "erereck",
         "url": "https://github.com/erereck/gen1recomp-bottomless-bag"
       },
+      "version": "1.1.0",
+      "releasedAt": "2026-08-01",
+      "license": {
+        "spdx": "MIT"
+      },
       "categories": [
-        "PENDING"
+        "QOL"
       ],
       "target": "Gen1Recomp",
       "screenshots": [],
-      "project": {
-        "url": "https://github.com/erereck/gen1recomp-bottomless-bag",
-        "status": "archive-review"
-      }
+      "download": {
+        "url": "https://github.com/erereck/gen1recomp-bottomless-bag/releases/download/v1.1.0/erilab_bottomless_bag.zip",
+        "sizeBytes": 3750,
+        "sha256": "2c1c8cb45c95de75c050591ee87062170db8ee2d9456d3479757da2b5bd0ebc3"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "erilab_bottomless_bag"
     },
     {
       "id": "shiny-pokemon",
@@ -838,15 +431,25 @@
         "name": "masterwebx",
         "url": "https://github.com/masterwebx/gen1recomp-shiny-pokemon"
       },
+      "version": "1.0.1",
+      "releasedAt": "2026-08-02",
+      "license": {
+        "spdx": "MIT"
+      },
       "categories": [
-        "PENDING"
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "screenshots": [],
-      "project": {
-        "url": "https://github.com/masterwebx/gen1recomp-shiny-pokemon",
-        "status": "archive-review"
-      }
+      "download": {
+        "url": "https://github.com/masterwebx/gen1recomp-shiny-pokemon/releases/download/v1.0.1/SHINY_POKEMON-1.0.1.zip",
+        "sizeBytes": 23768,
+        "sha256": "90d2be6fcec1383bb9beec5df9038308b68fa903eb179840b344c7b6e48ccb59"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "SHINY_POKEMON"
     },
     {
       "id": "all-pokemon-catchable",
@@ -857,15 +460,25 @@
         "name": "wowabox",
         "url": "https://github.com/wowabox/All_Pokemon_Catchable_151_Mod"
       },
+      "version": "0.3.3",
+      "releasedAt": "2026-08-03",
+      "license": {
+        "spdx": "MIT"
+      },
       "categories": [
-        "PENDING"
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "screenshots": [],
-      "project": {
-        "url": "https://github.com/wowabox/All_Pokemon_Catchable_151_Mod",
-        "status": "archive-review"
-      }
+      "download": {
+        "url": "https://github.com/wowabox/All_Pokemon_Catchable_151_Mod/releases/download/v0.3.3/All_Pokemon_Catchable_151_Mod_V0.3.3.zip",
+        "sizeBytes": 107675,
+        "sha256": "4239ab5b3e6867d86fbd257eec716b817eb67c2c39ae9286b79a7acd1402223d"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "all_pokemon_catchable_151_mod"
     },
     {
       "id": "typed-move-colors",
@@ -876,15 +489,25 @@
         "name": "ishhodaszi / piftee",
         "url": "https://github.com/piftee/gen1recomp-typed-move-colors"
       },
+      "version": "0.3.8",
+      "releasedAt": "2026-08-14",
+      "license": {
+        "spdx": "MIT"
+      },
       "categories": [
-        "PENDING"
+        "UI"
       ],
       "target": "Gen1Recomp",
       "screenshots": [],
-      "project": {
-        "url": "https://github.com/piftee/gen1recomp-typed-move-colors",
-        "status": "archive-review"
-      }
+      "download": {
+        "url": "https://github.com/piftee/gen1recomp-typed-move-colors/releases/download/v0.3.8/Typed-Move-Colors-0.3.8.zip",
+        "sizeBytes": 29476,
+        "sha256": "443f27d37692fbe07ecb6a3b8e7b7fc4f710629ed0daafa567dadb3cd052069b"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "typed_move_colors"
     },
     {
       "id": "modern-party-ui",
@@ -895,15 +518,25 @@
         "name": "ishhodaszi / piftee",
         "url": "https://github.com/piftee/gen1recomp-modern-party-ui"
       },
+      "version": "0.3.8",
+      "releasedAt": "2026-08-12",
+      "license": {
+        "spdx": "MIT"
+      },
       "categories": [
-        "PENDING"
+        "UI"
       ],
       "target": "Gen1Recomp",
       "screenshots": [],
-      "project": {
-        "url": "https://github.com/piftee/gen1recomp-modern-party-ui",
-        "status": "archive-review"
-      }
+      "download": {
+        "url": "https://github.com/piftee/gen1recomp-modern-party-ui/releases/download/v0.3.8/Modern-Party-UI-0.3.8.zip",
+        "sizeBytes": 39812,
+        "sha256": "f5a547581f85ba6083bc5d66486d513520859c7c62ba5654b7da2420b09c0a98"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "modern_party_ui"
     },
     {
       "id": "dex-radar",
@@ -914,34 +547,25 @@
         "name": "Zetto22",
         "url": "https://github.com/Zetto22/dex_radar"
       },
+      "version": "1.2.0",
+      "releasedAt": "2026-08-14",
+      "license": {
+        "spdx": "MIT"
+      },
       "categories": [
-        "PENDING"
+        "UI"
       ],
       "target": "Gen1Recomp",
       "screenshots": [],
-      "project": {
-        "url": "https://github.com/Zetto22/dex_radar",
-        "status": "archive-review"
-      }
-    },
-    {
-      "id": "gen2-dramatic-shapes",
-      "kind": "luaMod",
-      "name": "Dramatic Shapes for Gen2",
-      "tagline": "Adapts the Dramatic Shapes voxel-style presentation for the Gen2Recomped engine.",
-      "author": {
-        "name": "UNDERdecodedHD",
-        "url": "https://github.com/UNDERdecoded/Gen2Recomped-DramaticShapes"
+      "download": {
+        "url": "https://github.com/Zetto22/dex_radar/releases/download/v1.2.0/dex_radar-1.2.0.zip",
+        "sizeBytes": 22511,
+        "sha256": "5997da255fa8fbab87850e2dc9ebaabe6e209cbfad570192f0da5a1317d12028"
       },
-      "categories": [
-        "PENDING"
-      ],
-      "target": "Gen2Recomped · Gold / Silver",
-      "screenshots": [],
-      "project": {
-        "url": "https://github.com/UNDERdecoded/Gen2Recomped-DramaticShapes",
-        "status": "permission-needed"
-      }
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "dex_radar"
     },
     {
       "id": "gen2-online",
@@ -952,53 +576,25 @@
         "name": "UNDERdecodedHD",
         "url": "https://github.com/UNDERdecoded/Gen2Recomp---Online"
       },
+      "version": "0.6.5",
+      "releasedAt": "2026-08-12",
+      "license": {
+        "spdx": "MIT"
+      },
       "categories": [
-        "PENDING"
+        "GAMEPLAY"
       ],
       "target": "Gen2Recomped",
       "screenshots": [],
-      "project": {
-        "url": "https://github.com/UNDERdecoded/Gen2Recomp---Online",
-        "status": "archive-review"
-      }
-    },
-    {
-      "id": "gen2-perfect-start",
-      "kind": "luaMod",
-      "name": "Gen 2 Perfect Start",
-      "tagline": "Awards Chikorita, Cyndaquil, and Totodile after the player's initial starter choice.",
-      "author": {
-        "name": "Windwrecker",
-        "url": "https://github.com/Windwrecker/Gen1recomp-Perfect-Start"
+      "download": {
+        "url": "https://github.com/UNDERdecoded/Gen2Recomp---Online/releases/download/Beta0.6.5Hotfix/gen2recomped-online.zip",
+        "sizeBytes": 231573,
+        "sha256": "d89c0bd1379a60e910d2cc5eb243f9ed0663998386d3fd82c086a5e7d6a75cde"
       },
-      "categories": [
-        "PENDING"
-      ],
-      "target": "Gen2Recomp · Gold",
-      "screenshots": [],
-      "project": {
-        "url": "https://github.com/Windwrecker/Gen1recomp-Perfect-Start",
-        "status": "permission-needed"
-      }
-    },
-    {
-      "id": "gen2-3d-sprites",
-      "kind": "luaMod",
-      "name": "Gen 2 3D Sprites",
-      "tagline": "Brings voxel and 3D-styled Pokémon sprite presentation to the Gen 2 runtime.",
-      "author": {
-        "name": "randyadr",
-        "url": "https://github.com/randyadr/Gen2-3D-Sprites"
+      "engine": {
+        "id": "gen2recomped"
       },
-      "categories": [
-        "PENDING"
-      ],
-      "target": "Gen2Recomped",
-      "screenshots": [],
-      "project": {
-        "url": "https://github.com/randyadr/Gen2-3D-Sprites",
-        "status": "permission-needed"
-      }
+      "modID": "gen2online"
     }
   ]
 }

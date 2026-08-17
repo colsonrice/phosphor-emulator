@@ -31,7 +31,15 @@ export function validateRelease(release, index) {
     if (!release.compatibility.includes(release.category)) errors.push(`${label}: compatibility must include the primary category`);
   }
   if (!allowedPermissions.has(release?.permission)) errors.push(`${label}: permission must be verifiable`);
-  if (release?.permission === "open-license" && release?.licenseIncluded !== true) errors.push(`${label}: open-license archives must include their license`);
+  // An open licence like MIT requires its text to travel with the
+  // distribution. Most archives carry it; where one does not, the catalog
+  // carries `licenseText` and the app renders it, which satisfies the same
+  // requirement. One or the other, never neither.
+  if (release?.permission === "open-license"
+      && release?.licenseIncluded !== true
+      && !(typeof release?.licenseText === "string" && release.licenseText.trim())) {
+    errors.push(`${label}: an open-license mod must either include its license in the archive or carry licenseText`);
+  }
   if (release?.containsRom !== false) errors.push(`${label}: containsRom must be false`);
   if (!/^[a-f\d]{64}$/i.test(release?.sha256 ?? "")) errors.push(`${label}: sha256 must contain 64 hexadecimal characters`);
   if (!/^https:\/\//.test(release?.permissionEvidenceUrl ?? "")) errors.push(`${label}: permissionEvidenceUrl must use HTTPS`);

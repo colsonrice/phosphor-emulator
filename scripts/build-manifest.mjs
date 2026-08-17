@@ -26,6 +26,23 @@ const OUTPUT = new URL("../public/v1/manifest.json", import.meta.url);
 /// app as a mod that simply refuses to install with no explanation.
 const ENGINE_IDS = { gen1recomp: "gen1recomp", gen2recomp: "gen2recomped" };
 
+/// ROM hacks are not published yet.
+///
+/// The pieces the app needs are all there, but a hack needs the SHA-1 identity
+/// of an exact base cartridge and a patch in a format ROMPatcher implements,
+/// and almost nothing in the wild is distributed that way: the hacks surveyed
+/// for this catalog ship either a complete ROM or nothing at all. Flip this to
+/// true, add the patch metadata, and the section reappears — the app hides a
+/// single-section tab bar on its own, so nothing there needs changing.
+const PUBLISH_ROM_HACKS = false;
+
+/// Listings with no downloadable file, shown with a link to the creator instead
+/// of an install button. Off while the catalog is small: the creator's page for
+/// a decomp mod is a source repository whose most obvious download button gives
+/// you an assembly tree, so an indexed listing is a trap more often than a
+/// discovery. The app supports them either way.
+const PUBLISH_INDEXED = false;
+
 const TOPICS = ["GAMEPLAY", "QOL", "UI", "ART", "CONTENT"];
 
 const CATEGORIES = [
@@ -38,12 +55,16 @@ const CATEGORIES = [
   // nobody can install yet would be curation of things that are not on offer;
   // an entry moves to a real shelf the moment it has a topic and a file.
   { id: "PENDING", title: "Permission pending", subtitle: "Indexed while redistribution is cleared", order: 5 },
-];
+].filter((category) => category.id !== "PENDING" || PUBLISH_INDEXED);
 
-const SECTIONS = [
+const ALL_SECTIONS = [
   { id: "luaMods", title: "Mods", subtitle: "Reviewed community mods", kind: "luaMod", order: 0 },
   { id: "romHacks", title: "ROM Hacks", subtitle: "Patches applied to a game you already own", kind: "romPatch", order: 1 },
 ];
+
+const SECTIONS = PUBLISH_ROM_HACKS
+  ? ALL_SECTIONS
+  : ALL_SECTIONS.filter((section) => section.kind !== "romPatch");
 
 function fail(errors) {
   console.error("Refusing to build the manifest:\n");
@@ -111,7 +132,9 @@ function entriesForRelease(release, errors) {
       author: { name: release.creator, url: release.homepageUrl },
       version: release.version,
       releasedAt: release.releaseDate,
-      license: { spdx: release.license },
+      license: release.licenseText
+        ? { spdx: release.license, text: release.licenseText }
+        : { spdx: release.license },
       categories: [release.topic],
       target: release.target,
       screenshots: [],
@@ -161,10 +184,15 @@ export async function buildManifest() {
   const projects = JSON.parse(await readFile(PROJECTS, "utf8"));
   const errors = [];
 
+  const publishedKinds = new Set(SECTIONS.map((section) => section.kind));
+
   const entries = [
     ...releases.flatMap((release) => entriesForRelease(release, errors)),
-    ...projects.map((project) => entryForProject(project, errors)).filter(Boolean),
-  ];
+    ...(PUBLISH_INDEXED
+      ? projects.map((project) => entryForProject(project, errors)).filter(Boolean)
+      : []),
+  // An entry whose kind has no section would be fetched and then never shown.
+  ].filter((entry) => publishedKinds.has(entry.kind));
 
   const ids = entries.map((entry) => entry.id);
   for (const id of new Set(ids.filter((id, i) => ids.indexOf(id) !== i))) {
