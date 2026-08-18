@@ -196,12 +196,24 @@ async function inspect(path) {
   const roms = rows.filter((row) =>
     ROM_EXTENSIONS.some((ext) => row.name.toLowerCase().endsWith(ext)));
 
-  // The manifest may sit at the root or under one top-level directory, the
-  // same two shapes the installer accepts.
-  const manifestRow = rows.find((row) => {
-    const parts = row.name.split("/").filter(Boolean);
-    return parts.at(-1) === "manifest.json" && parts.length <= 2;
-  });
+  // The shallowest manifest.json anywhere in the archive.
+  //
+  // This used to insist on the root or one directory down, which is stricter
+  // than the installer and therefore wrong in the direction that loses mods.
+  // A release built by `git archive` nests everything under
+  // `<name>-<version>/`, and a repo that keeps its mod in `mods/<id>/` then
+  // sits three deep; the installer strips the common prefix and skips entries
+  // outside the mod root, so it finds those. Reading them as "not a recomp
+  // mod" hid a whole packaging convention, and the one that surfaced it was a
+  // Chinese translation.
+  //
+  // Shallowest rather than first, because an archive can contain more than one
+  // (a device pak carries the engine's own and a bundled mod's), and the
+  // outermost is the one describing the thing being installed.
+  const manifestRow = rows
+    .filter((row) => (row.name.split("/").filter(Boolean).at(-1)) === "manifest.json")
+    .sort((a, b) => a.name.split("/").length - b.name.split("/").length
+                 || a.name.length - b.name.length)[0];
 
   let manifest = null;
   if (manifestRow) {
