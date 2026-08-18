@@ -5,7 +5,7 @@
     {
       "id": "luaMods",
       "title": "Mods",
-      "subtitle": "Reviewed community mods",
+      "subtitle": "Made by the community",
       "kind": "luaMod",
       "order": 0
     }

@@ -71,7 +71,10 @@ const CATEGORIES = [
 ].filter((category) => category.id !== "PENDING" || PUBLISH_INDEXED);
 
 const ALL_SECTIONS = [
-  { id: "luaMods", title: "Mods", subtitle: "Reviewed community mods", kind: "luaMod", order: 0 },
+  // Not "Reviewed community mods" any more: most of this tab is now
+  // link-outs to mods whose creators have agreed to nothing, and calling
+  // those reviewed claims a relationship that does not exist.
+  { id: "luaMods", title: "Mods", subtitle: "Made by the community", kind: "luaMod", order: 0 },
   { id: "romHacks", title: "ROM Hacks", subtitle: "Patches applied to a game you already own", kind: "romPatch", order: 1 },
 ];
 
