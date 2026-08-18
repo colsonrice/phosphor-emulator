@@ -26,6 +26,11 @@ const CACHE = new URL("../survey/cache/", import.meta.url);
 
 const FILL = process.argv.includes("--fill");
 
+/// Mirrors RecompModLibrary. An archive that outgrew either ceiling installs
+/// nowhere, and the catalog would be offering it anyway.
+const MAX_ENTRY_COUNT = 50_000;
+const MAX_TOTAL_UNCOMPRESSED = 512 * 1024 * 1024;
+
 /// The shallowest manifest.json in the archive, and how deep it sits.
 ///
 /// Separators are normalised first: a Windows-made archive stores "MOD\x5c..."
@@ -42,8 +47,49 @@ async function manifestIn(path) {
     .filter((name) => name.split("/").filter(Boolean).at(-1) === "manifest.json")
     .sort((a, b) => a.split("/").length - b.split("/").length || a.length - b.length);
 
+  const sizes = stdout.split("\n")
+    .map((line) => line.match(/^\s*(\d+)\s/))
+    .filter(Boolean)
+    .map((m) => Number(m[1]));
+
   if (!manifests.length) return null;
-  return { path: manifests[0], depth: manifests[0].split("/").filter(Boolean).length - 1 };
+  return {
+    path: manifests[0],
+    depth: manifests[0].split("/").filter(Boolean).length - 1,
+    entryCount: names.length,
+    totalUncompressed: sizes.reduce((sum, n) => sum + n, 0),
+  };
+}
+
+/// The id the archive declares for itself.
+///
+/// The catalog's `modId` is handed to `install(expectingID:)`, so a row that
+/// names the wrong one fails on a player's phone at update time and nowhere
+/// earlier. Read from the archive rather than trusted, because the row is
+/// typed by a human and the archive is not.
+async function declaredID(path, manifestPath, rawNames) {
+  // `unzip` reads its argument as a match pattern where a backslash escapes
+  // the next character, so a Windows-made entry has to be escaped to be asked
+  // for by name at all.
+  const raw = rawNames.get(manifestPath) ?? manifestPath;
+  const pattern = raw.replace(/\\/g, "\\\\");
+  try {
+    const { stdout } = await run("unzip", ["-p", path, pattern], { maxBuffer: 16 * 1024 * 1024 });
+    return JSON.parse(stdout).id ?? null;
+  } catch {
+    return null;
+  }
+}
+
+/// Entry names as stored, keyed by their normalised form.
+async function entryNames(path) {
+  const { stdout } = await run("unzip", ["-l", path], { maxBuffer: 64 * 1024 * 1024 });
+  const map = new Map();
+  for (const line of stdout.split("\n")) {
+    const m = line.match(/^\s*\d+\s+\S+\s+\S+\s+(.+)$/);
+    if (m) map.set(m[1].replace(/\\/g, "/"), m[1]);
+  }
+  return map;
 }
 
 async function main() {
@@ -89,6 +135,22 @@ async function main() {
     if (FILL && !release.manifestPath) {
       release.manifestPath = manifest.path;
       filled += 1;
+    }
+
+    if (manifest.entryCount > MAX_ENTRY_COUNT) {
+      problems.push(`${release.id}: ${manifest.entryCount} entries, over the installer's ${MAX_ENTRY_COUNT}`);
+    }
+    if (manifest.totalUncompressed > MAX_TOTAL_UNCOMPRESSED) {
+      problems.push(`${release.id}: expands to ${(manifest.totalUncompressed / 1024 / 1024).toFixed(0)} MB, over the installer's ceiling`);
+    }
+
+    // Engine mods only: a ROM patch has no manifest and no id.
+    if (release.modId) {
+      const names = await entryNames(file.pathname);
+      const declared = await declaredID(file.pathname, manifest.path, names);
+      if (declared !== release.modId) {
+        problems.push(`${release.id}: the catalog says modId ${release.modId}, the archive declares ${declared ?? "nothing"} — install(expectingID:) would refuse the update`);
+      }
     }
   }
 
