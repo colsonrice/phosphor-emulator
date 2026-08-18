@@ -4009,6 +4009,709 @@
         "url": "https://github.com/ShaneMcGovernIE/yellow_legacy_changes/releases",
         "status": "permission-needed"
       }
+    },
+    {
+      "id": "dramaless-shape",
+      "kind": "luaMod",
+      "name": "Dramaless Shape Voxel Mod",
+      "tagline": "Forked version with my edits based on the now-defunct Dramatic Shape mod for gen1recomp.",
+      "author": {
+        "name": "artyrambles",
+        "url": "https://github.com/artyrambles/DRAMALESS_SHAPE"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/artyrambles/DRAMALESS_SHAPE/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "gen-3-inspired-ui-overhaul-for-gen1recomp",
+      "kind": "luaMod",
+      "name": "Gen 3 Inspired UI Overhaul",
+      "tagline": "Gen 3 inspired UI overhaul for Gen1Recomp. Download .zip and install into gen1recomp launcher.",
+      "author": {
+        "name": "HighDrexler",
+        "url": "https://github.com/HighDrexler/Gen-3-inspired-UI-overhaul-for-Gen1Recomp"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/HighDrexler/Gen-3-inspired-UI-overhaul-for-Gen1Recomp/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "gameshark",
+      "kind": "luaMod",
+      "name": "GameShark Compatibility",
+      "tagline": "Gameshark mod for bryanthaboi's gen1recomp",
+      "author": {
+        "name": "goofwear",
+        "url": "https://github.com/goofwear/gameshark"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/goofwear/gameshark/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "pokemon-bank",
+      "kind": "luaMod",
+      "name": "Pokémon Bank",
+      "tagline": "A gen1recomp cross-save storage system mod.",
+      "author": {
+        "name": "VRM97",
+        "url": "https://github.com/VRM97/pokemon-bank"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/VRM97/pokemon-bank/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "gen1recomp-allgen-kaizo",
+      "kind": "luaMod",
+      "name": "Gen1 Recomp Allgen Kaizo",
+      "tagline": "Gen1 Recomp Allgen Kaizo: every generation inside Gen 1 - 900+ species on the modern type chart, region-select starters, legendary dens, mega evolution, themed six-mon trainer parties, competitive movesets and AI",
+      "author": {
+        "name": "AyeBathingApe",
+        "url": "https://github.com/AyeBathingApe/gen1recomp-allgen-kaizo"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/AyeBathingApe/gen1recomp-allgen-kaizo/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "gen1recompmegaevolution",
+      "kind": "luaMod",
+      "name": "Fairy, Dark & Steel Types",
+      "tagline": "Adds to mega evolution to Gen1Recomp",
+      "author": {
+        "name": "you",
+        "url": "https://github.com/magatsu64/Gen1RecompMegaEvolution"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/magatsu64/Gen1RecompMegaEvolution/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "airivials",
+      "kind": "luaMod",
+      "name": "AI Rivals",
+      "tagline": "AI Rivials for gen1recomp",
+      "author": {
+        "name": "MrKrisSatan",
+        "url": "https://github.com/MrKrisSatan/AIRivials"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/MrKrisSatan/AIRivials/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "crystal-animated-sprites-with-shiny-visuals",
+      "kind": "luaMod",
+      "name": "Crystal Animated Sprites with Shiny Visuals",
+      "tagline": "Crystal Animated Sprites with Shiny Visuals A combined visual and audio mod for Gen1Recomp v0.1.33+. It adds Pokémon Crystal-style animated battle sprites, automatic normal/shiny artwork selection, and a Gen 2-inspired shiny entrance sequence with sparkle sound followed by the Pokémon's cry.",
+      "author": {
+        "name": "distilledorion-sketch",
+        "url": "https://github.com/distilledorion-sketch/crystal_animated_sprites_with_shiny_visuals"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/distilledorion-sketch/crystal_animated_sprites_with_shiny_visuals/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "more-text-speed-options-gen1recomp",
+      "kind": "luaMod",
+      "name": "More Text Speed Options",
+      "tagline": "Instant Text Speed mod for Gen1Recomp",
+      "author": {
+        "name": "DaniKH1",
+        "url": "https://github.com/DaniKH1/More-Text-Speed-Options-Gen1Recomp"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/DaniKH1/More-Text-Speed-Options-Gen1Recomp/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "gen1recomp-screen-effects",
+      "kind": "luaMod",
+      "name": "Screen Effects",
+      "tagline": "Adds a CRT/film-grain look (scanlines, a corner vignette, mild edge chromatic aberration and animated grain).",
+      "author": {
+        "name": "thorkdev",
+        "url": "https://github.com/thorkdev/gen1recomp-screen-effects"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/thorkdev/gen1recomp-screen-effects/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "thorkdev-gen1recomp-running-shoes",
+      "kind": "luaMod",
+      "name": "Running Shoes",
+      "tagline": "A mod to get running shoes from your Mom!",
+      "author": {
+        "name": "thorkdev",
+        "url": "https://github.com/thorkdev/gen1recomp-running-shoes"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/thorkdev/gen1recomp-running-shoes/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "gen-3-inspired-ui-overhaul-for-gen1recomp-v1-1-w-updater",
+      "kind": "luaMod",
+      "name": "Gen 3 Inspired UI Overhaul",
+      "tagline": "This is the same Gen 3 inspired UI overhaul for Gen1Recomp, with major bug fixes and also an updater within the gen1recomp launcher (accessible by clicking on the mod in the mod menu) any future updates should be accesible from this build.",
+      "author": {
+        "name": "Community test build",
+        "url": "https://github.com/HighDrexler/Gen-3-inspired-UI-overhaul-for-Gen1Recomp-V1.1-w-updater"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/HighDrexler/Gen-3-inspired-UI-overhaul-for-Gen1Recomp-V1.1-w-updater/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "gen1recomp-radio",
+      "kind": "luaMod",
+      "name": "Radio",
+      "tagline": "Adds a RADIO to the START menu!",
+      "author": {
+        "name": "thorkdev",
+        "url": "https://github.com/thorkdev/gen1recomp-radio"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/thorkdev/gen1recomp-radio/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "tloz-recomp-mania",
+      "kind": "luaMod",
+      "name": "TLoZ: Recomp Mania",
+      "tagline": "TLoZ: Recomp Mania mod for gen1recomp",
+      "author": {
+        "name": "castdrian",
+        "url": "https://github.com/castdrian/tloz-recomp-mania"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/castdrian/tloz-recomp-mania/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "gen1recomp-battle-dex",
+      "kind": "luaMod",
+      "name": "Battle Dex",
+      "tagline": "In-battle Pokedex access for gen1recomp: SELECT reads the opponent, a DEX row in the PKMN menu reads your own.",
+      "author": {
+        "name": "ddagent",
+        "url": "https://github.com/ddagent/gen1recomp-battle-dex"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/ddagent/gen1recomp-battle-dex/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "gen1recomp-national-dex",
+      "kind": "luaMod",
+      "name": "National Dex",
+      "tagline": "National Dex mod for Gen1Recomp - registers the full 1025-species dex with modern typing, abilities and dex entries, on Red/Blue/Yellow and Gold.",
+      "author": {
+        "name": "sanjinpepic",
+        "url": "https://github.com/sanjinpepic/gen1recomp-national-dex"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/sanjinpepic/gen1recomp-national-dex/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "mods-gen1recomp",
+      "kind": "luaMod",
+      "name": "Pokemon Trad Fr",
+      "tagline": "Mods pour Gen1Recomp",
+      "author": {
+        "name": "audris42",
+        "url": "https://github.com/audris42/Mods-Gen1Recomp"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/audris42/Mods-Gen1Recomp/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "gen1recomp-mods",
+      "kind": "luaMod",
+      "name": "Town Lottery",
+      "tagline": "My list of custom mods for gen1recomp and gen1recomp++",
+      "author": {
+        "name": "chrispanella",
+        "url": "https://github.com/chrispanella/gen1recomp-mods"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/chrispanella/gen1recomp-mods/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "choose-your-hero-mod-gen1recomp",
+      "kind": "luaMod",
+      "name": "Choose Your Hero",
+      "tagline": "Mod to replace protagonist/rival sprites with female counterparts",
+      "author": {
+        "name": "TranswarpTechnologies",
+        "url": "https://github.com/TranswarpTechnologies/choose-your-hero-mod-gen1recomp"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/TranswarpTechnologies/choose-your-hero-mod-gen1recomp/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "gen1-cheat-menu",
+      "kind": "luaMod",
+      "name": "Gen1 Cheat Menu",
+      "tagline": "Gen1Recomp Cheat Menu",
+      "author": {
+        "name": "randyadr",
+        "url": "https://github.com/randyadr/Gen1-Cheat-Menu"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/randyadr/Gen1-Cheat-Menu/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "gen1recomp",
+      "kind": "luaMod",
+      "name": "FurretGen1",
+      "tagline": "my recomp mods",
+      "author": {
+        "name": "NikoKatsu575",
+        "url": "https://github.com/NikoKatsu575/Gen1Recomp"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/NikoKatsu575/Gen1Recomp/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "gen1recomp-polish",
+      "kind": "luaMod",
+      "name": "POKéMON Edycja Czerwona PL",
+      "tagline": "Polish translation for gen1recomp",
+      "author": {
+        "name": "Czajo",
+        "url": "https://github.com/Czajo/gen1recomp-polish"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/Czajo/gen1recomp-polish/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "gen1recomp-translation-jp-mod",
+      "kind": "luaMod",
+      "name": "Japanese translation",
+      "tagline": "Gen1Recomp translation jp mod",
+      "author": {
+        "name": "yyoossk",
+        "url": "https://github.com/yyoossk/Gen1Recomp-translation-jp-mod"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/yyoossk/Gen1Recomp-translation-jp-mod/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "pkmn-g1r-gender-mod",
+      "kind": "luaMod",
+      "name": "Gender Mod",
+      "tagline": "Pokemon Gen1Recomp - Gender Mod",
+      "author": {
+        "name": "WizzStar",
+        "url": "https://github.com/WizzStar/PKMN-G1R-Gender-Mod"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/WizzStar/PKMN-G1R-Gender-Mod/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "dynamax-4-recomp",
+      "kind": "luaMod",
+      "name": "Dynamax",
+      "tagline": "A dynamax mod for gen1recomp",
+      "author": {
+        "name": "tectorifter",
+        "url": "https://github.com/tectorifter/Dynamax_4_Recomp"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/tectorifter/Dynamax_4_Recomp/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "autofire",
+      "kind": "luaMod",
+      "name": "Autofire AB",
+      "tagline": "Gen1Recomp Autofire A/B Mod",
+      "author": {
+        "name": "ZyranCZ",
+        "url": "https://github.com/ZyranCZ/autofire"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/ZyranCZ/autofire/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "battle-spees-mod",
+      "kind": "luaMod",
+      "name": "Battle Speed",
+      "tagline": "Battle Speed modifier isolated from normal game speed setting of gen1recomp project.",
+      "author": {
+        "name": "tectorifter",
+        "url": "https://github.com/tectorifter/Battle_Spees_Mod"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/tectorifter/Battle_Spees_Mod/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "wide-menus",
+      "kind": "luaMod",
+      "name": "Wide Menus",
+      "tagline": "A UI mod for gen1recomp.",
+      "author": {
+        "name": "juancdominici",
+        "url": "https://github.com/juancdominici/wide-menus"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/juancdominici/wide-menus/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "more-gymz",
+      "kind": "luaMod",
+      "name": "More Gymz",
+      "tagline": "A mod for Pokemon Gen1Recomp",
+      "author": {
+        "name": "leftshoe18",
+        "url": "https://github.com/leftshoe18/more_gymz"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/leftshoe18/more_gymz/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "gen1recomp-finnish-mod",
+      "kind": "luaMod",
+      "name": "Suomi",
+      "tagline": "Finnish translation mod for Gen1Recomp project",
+      "author": {
+        "name": "eioo",
+        "url": "https://github.com/eioo/gen1recomp-finnish-mod"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/eioo/gen1recomp-finnish-mod/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "gen1recomp-italian",
+      "kind": "luaMod",
+      "name": "Italian translation",
+      "tagline": "Traduzione italiana fan-made per Gen1Recomp — Red, Blue e Yellow. Feedback benvenuti!",
+      "author": {
+        "name": "klokkett90",
+        "url": "https://github.com/klokkett90/gen1recomp-italian"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/klokkett90/gen1recomp-italian/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "evolve-in-battle",
+      "kind": "luaMod",
+      "name": "Evolve in Battle",
+      "tagline": "A small mod for Gen1Recomp that allows Pokémon to evolve directly during battle for a more anime-like experience.",
+      "author": {
+        "name": "ZyranCZ",
+        "url": "https://github.com/ZyranCZ/Evolve-in-Battle"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/ZyranCZ/Evolve-in-Battle/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "versaocristal-ptbr",
+      "kind": "luaMod",
+      "name": "Versao Cristal",
+      "tagline": "Pokemon Crystal em portugues brasileiro para o Gen2Recomped. Traducao propria, escrita do ingles original.",
+      "author": {
+        "name": "LordSangreal",
+        "url": "https://github.com/LordSangreal/versaocristal-ptbr"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/LordSangreal/versaocristal-ptbr/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "musicreplacementmod",
+      "kind": "luaMod",
+      "name": "SFXMusicReplacementMod",
+      "tagline": "This is a mod for the Pokemon gen1 recomp that replaces most if not all music and fanfare with music from Pokémon: Let's Go, Pikachu! & Let's Go, Eevee and FireRed / LeafGreen",
+      "author": {
+        "name": "AlucardTheFirstHunter",
+        "url": "https://github.com/AlucardTheFirstHunter/MusicReplacementMod"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/AlucardTheFirstHunter/MusicReplacementMod/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "cryreplacementmod",
+      "kind": "luaMod",
+      "name": "CryReplacementMod",
+      "tagline": "This is a mod for the Pokemon gen1 recomp that replaces all 151 pokemon cries to be ones from the anime and from Fire Red/ leaf green, they can be toggled on the fly in the options menu.",
+      "author": {
+        "name": "AlucardTheFirstHunter",
+        "url": "https://github.com/AlucardTheFirstHunter/CryReplacementMod"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/AlucardTheFirstHunter/CryReplacementMod/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "textkerninggen1recomp",
+      "kind": "luaMod",
+      "name": "Variable-Width Kerning",
+      "tagline": "This is a mod that changes the text kerning for bryanthaboi's Gen 1 Pokemon Recomp.",
+      "author": {
+        "name": "SliferDaG",
+        "url": "https://github.com/SliferDaG/TextKerningGen1Recomp"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/SliferDaG/TextKerningGen1Recomp/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "dvcolors-2-1-0-pkmn-gen1-recomp",
+      "kind": "luaMod",
+      "name": "DV Colors",
+      "tagline": "DVColors2.1.0, a mod for Pokemon Gen 1 Recomp for Android. Changes color palette slightly, or wildly (based on your preference) based on a Pokemon's DVs (IVs in later games). Pokemon Stadium on N64 did something similar with palette swaps for nicknames, so I figured it'd add some fun variance to your playthrough.",
+      "author": {
+        "name": "oldtriplesix",
+        "url": "https://github.com/oldtriplesix/DVColors-2.1.0-PKMN-Gen1-ReComp-"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/oldtriplesix/DVColors-2.1.0-PKMN-Gen1-ReComp-/releases",
+        "status": "permission-needed"
+      }
     }
   ]
 }

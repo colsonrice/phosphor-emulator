@@ -598,11 +598,27 @@ function draftRows(results) {
 /// there is one. A decomp mod's front page offers a source tree, and its most
 /// obvious download button hands over an assembly tree rather than the mod, so
 /// an unqualified repository link sends players somewhere useless.
-function draftProjects(results, alreadyListed) {
+function draftProjects(results, alreadyListed, takenIds) {
   const rows = [];
   for (const r of results) {
-    if (r.verdict !== "link-out") continue;
-    if (!r.inOfficialIndex) continue;
+    if (r.verdict !== "link-out" && r.verdict !== "skip") continue;
+    // Two ways to earn a link-out.
+    //
+    // Membership of the official index is somebody else's judgement that a mod
+    // is real. Better, where we have it, is our own: the archive was
+    // downloaded and opened, it declares a mod id, and nothing about it would
+    // stop it running here. That is a stronger signal than curation, and it
+    // reaches the mods the gen1 index has never heard of — every Gen 2 mod,
+    // and most of the translations, which is a language's worth of players
+    // each.
+    //
+    // `blocking` empty is the load-bearing half: it means the archive carries
+    // no ROM, sits inside the installer's ceilings, keeps its manifest where
+    // the installer looks, does not write to the love table, and does not rule
+    // out the engine we ship. A link-out to something that cannot work here
+    // would be a dead end dressed as a discovery.
+    const verifiedRealMod = Boolean(r.contents?.modId) && r.blocking.length === 0;
+    if (!r.inOfficialIndex && !verifiedRealMod) continue;
     if (alreadyListed.has(r.repo.toLowerCase())) continue;
     if (EXCLUDED[r.repo]) continue;
 
@@ -611,8 +627,18 @@ function draftProjects(results, alreadyListed) {
     const summary = (r.indexEntry?.summary ?? r.description ?? "").trim();
     if (!summary) continue;
 
+    // Two people really do name their repositories the same thing: a link-out
+    // to thorkdev/gen1recomp-running-shoes collided with the published
+    // MadeinTaly mod of that name, which are different mods. The owner
+    // disambiguates, and only where it has to, so existing ids stay stable.
+    const slug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+    const [owner, name] = r.repo.split("/");
+    let id = slug(name);
+    if (takenIds.has(id)) id = `${slug(owner)}-${slug(name)}`;
+    takenIds.add(id);
+
     rows.push({
-      id: r.repo.split("/")[1].toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""),
+      id,
       title: r.indexEntry?.title ?? manifest.name ?? r.repo.split("/")[1],
       creator: r.indexEntry?.author ?? manifest.author ?? r.repo.split("/")[0],
       kind: "mod",
@@ -681,7 +707,15 @@ async function main() {
   }
   for (const row of rows) listed.add(row.homepageUrl.replace("https://github.com/", "").toLowerCase());
 
-  const projects = draftProjects(results, listed);
+  // Every id already spoken for, so a new listing cannot quietly take one.
+  const takenIds = new Set();
+  for (const file of ["../src/data/releases.json", "../src/data/projects.json"]) {
+    const existing = JSON.parse(await readFile(new URL(file, import.meta.url), "utf8"));
+    for (const row of existing) if (row.id) takenIds.add(row.id);
+  }
+  for (const row of rows) takenIds.add(row.id);
+
+  const projects = draftProjects(results, listed, takenIds);
   await writeFile(new URL("../survey/draft-projects.json", import.meta.url),
                   JSON.stringify(projects, null, 2) + "\n");
   console.log(`  ${projects.length} link-outs drafted to survey/draft-projects.json`);
