@@ -51,6 +51,8 @@ const PERMISSIVE = new Set([
 /// exactly that. The swiftc install harness is the authority; this is the cheap
 /// filter that runs first.
 const MAX_ENTRY_COUNT = 50_000;
+/// Mirrors RecompModLibrary.maxManifestDepth. See the note at its use.
+const MAX_MANIFEST_DEPTH = 1;
 const MAX_TOTAL_UNCOMPRESSED = 512 * 1024 * 1024;
 
 /// A ROM inside a mod archive is the one thing that can never be published,
@@ -215,8 +217,27 @@ async function inspect(path) {
     .sort((a, b) => a.name.split("/").length - b.name.split("/").length
                  || a.name.length - b.name.length)[0];
 
+  // ...but no deeper than the installer will look.
+  //
+  // Mirrors RecompModLibrary.maxManifestDepth. Unbounded depth is not the
+  // generous choice it looks like: it reaches inside a device package and
+  // finds the mod somebody else bundled there, so a player who picked a pak
+  // installs a mod they have never heard of under its author's name.
+  //
+  // The bound is drawn from this corpus rather than chosen: of 200 archives,
+  // 165 keep the manifest at the root, 25 one directory down (what `git
+  // archive` produces), NONE at depth 2, and the only two deeper are the pak
+  // and a source tree. An empty band at 2 is the data drawing the line.
+  //
+  // **Keep this equal to the app's constant.** Looser here publishes listings
+  // the installer refuses; stricter loses mods that install perfectly well.
+  const manifestDepth = manifestRow
+    ? manifestRow.name.split("/").filter(Boolean).length - 1
+    : 0;
+  const buriedManifest = manifestRow && manifestDepth > MAX_MANIFEST_DEPTH;
+
   let manifest = null;
-  if (manifestRow) {
+  if (manifestRow && !buriedManifest) {
     try {
       // `unzip` reads its argument as a match pattern, in which a backslash
       // escapes the next character — so the literal name of a Windows-made
@@ -248,7 +269,8 @@ async function inspect(path) {
 
   return { entryCount: rows.length, totalUncompressed: total,
            romEntries: roms.map((r) => r.name), manifest, licenseInArchive,
-           loveAssignments };
+           loveAssignments, buriedManifest: Boolean(buriedManifest),
+           manifestPath: manifestRow?.name ?? null };
 }
 
 /// Everything that would stop this being offered as a one-tap install.
@@ -258,7 +280,9 @@ function refusals({ release, asset, contents }) {
   else if (!asset) out.push("no .zip in the latest release");
   if (!contents) return out.length ? out : ["archive could not be fetched"];
   if (contents.error) out.push(contents.error);
-  if (!contents.manifest) out.push("no manifest.json — not an installable mod");
+  if (contents.buriedManifest) {
+    out.push(`its manifest sits at ${contents.manifestPath} — a larger package with a mod inside it, not a mod`);
+  } else if (!contents.manifest) out.push("no manifest.json — not an installable mod");
   else if (contents.manifest.unreadable) out.push("manifest.json is not valid JSON");
   else if (!contents.manifest.id) out.push("manifest.json declares no id");
   if (contents.romEntries?.length) out.push(`contains a ROM (${contents.romEntries[0]})`);
@@ -331,6 +355,12 @@ async function surveyRepo(name, hint) {
           manifest: contents.manifest,
           licenseInArchive: contents.licenseInArchive,
           loveAssignments: contents.loveAssignments ?? [],
+          // Carried so the depth bound stays checkable from the report alone.
+          // It is the evidence for RecompModLibrary.maxManifestDepth, and a
+          // constant justified by a measurement nobody can re-take is a
+          // constant justified by a memory of one.
+          manifestPath: contents.manifestPath ?? null,
+          buriedManifest: contents.buriedManifest ?? false,
           entryCount: contents.entryCount,
           totalUncompressed: contents.totalUncompressed }
       : null,
