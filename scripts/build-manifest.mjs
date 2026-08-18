@@ -162,6 +162,11 @@ function entriesForRelease(release, errors) {
         url: release.fileUrl,
         sizeBytes: release.fileSizeBytes,
         sha256: release.sha256,
+        // Where the mod's manifest sits inside the archive. Published so the
+        // app can assert against the catalog itself that nothing offered is
+        // deeper than its own installer will look, rather than comparing a
+        // constant here against a constant there across two repositories.
+        manifestPath: release.manifestPath,
       },
       engine: { id: engineId },
       modID: release.modId,

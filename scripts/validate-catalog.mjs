@@ -7,6 +7,12 @@ export const allowedPermissions = new Set(["open-license", "author-approved"]);
 // for a soundtrack would never think to look.
 export const allowedTopics = new Set(["GAMEPLAY", "QOL", "UI", "ART", "CONTENT", "AUDIO"]);
 export const allowedReviewStatuses = new Set(["permission-needed", "permission-queued", "archive-review"]);
+/// Mirrors RecompModLibrary.maxManifestDepth in the app. Keep them equal: a
+/// larger value here publishes listings the installer refuses, a smaller one
+/// refuses mods that install perfectly well. The published manifest carries
+/// manifestPath so the app can assert the same thing against real bytes.
+export const maxManifestDepth = 1;
+
 export const allowedExtensions = [".ips", ".ups", ".bps", ".xdelta", ".vcdiff", ".zip", ".tar.gz"];
 export const forbiddenExtensions = [".gb", ".gbc", ".gba", ".nds", ".3ds", ".cia"];
 
@@ -65,6 +71,31 @@ export function validateRelease(release, index) {
   const isEngineMod = (release?.compatibility ?? []).some((channel) => channel !== "rom-hack");
   if (isEngineMod && (typeof release?.modId !== "string" || !release.modId.trim())) {
     errors.push(`${label}: modId is required for an engine mod`);
+  }
+
+  // Where the mod's manifest.json sits inside its archive, and how deep.
+  //
+  // Engine mods only: a ROM patch is a .bps or .ips file, so there is no
+  // archive to look inside and no manifest to find. Requiring it of everything
+  // was wrong, and the policy fixture for a patch record is what said so.
+  //
+  // The app's installer only searches so far down
+  // (RecompModLibrary.maxManifestDepth), because reaching deeper finds the mod
+  // bundled inside a device package and installs it under its author's name. A
+  // row past that would publish a listing the app refuses, so it is refused
+  // here instead, where a person can still read why.
+  if (isEngineMod) {
+    const path = release?.manifestPath;
+    if (typeof path !== "string" || !path.trim()) {
+      errors.push(`${label}: manifestPath is required for an engine mod (run scripts/verify-releases.mjs --fill)`);
+    } else if (!path.endsWith("manifest.json")) {
+      errors.push(`${label}: manifestPath must name a manifest.json`);
+    } else {
+      const depth = path.split("/").filter(Boolean).length - 1;
+      if (depth > maxManifestDepth) {
+        errors.push(`${label}: its manifest sits ${depth} directories down, deeper than the installer looks (${maxManifestDepth}) — this is a larger package with a mod inside it, not a mod`);
+      }
+    }
   }
 
   return errors;

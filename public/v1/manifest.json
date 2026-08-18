@@ -78,7 +78,8 @@
       "download": {
         "url": "https://github.com/RadekHM/xp_multiplier_gen1recomp/releases/download/v1.0.0/EXP_MULTIPLIER-1.0.0.zip",
         "sizeBytes": 6483,
-        "sha256": "5517040727862f2d01a9eb0c1a9a70a6428a1f11321dc0eaa7d5858bd097239d"
+        "sha256": "5517040727862f2d01a9eb0c1a9a70a6428a1f11321dc0eaa7d5858bd097239d",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -108,7 +109,8 @@
       "download": {
         "url": "https://github.com/piftee/gen1recomp-battle-info-hud/releases/download/v0.8.5/Battle-Info-HUD-0.8.5.zip",
         "sizeBytes": 16998,
-        "sha256": "21de6c91010c9a3972ef4d6241f162b785b5916744299947dd0e6875a995d3d1"
+        "sha256": "21de6c91010c9a3972ef4d6241f162b785b5916744299947dd0e6875a995d3d1",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -138,7 +140,8 @@
       "download": {
         "url": "https://github.com/anxiousintrovert/StadiumBattleFX/releases/download/v2.1.7/STADIUM_BATTLE_FX-2.1.7.zip",
         "sizeBytes": 359093,
-        "sha256": "14476f075127dd69aa7b361fea6d6b7a9f467160bd11e82f05c4830f99e832b6"
+        "sha256": "14476f075127dd69aa7b361fea6d6b7a9f467160bd11e82f05c4830f99e832b6",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -168,7 +171,8 @@
       "download": {
         "url": "https://github.com/mistermiracle3036/Pokeball-Colors/releases/download/v0.1.27/pokeball_colors-0.1.27.zip",
         "sizeBytes": 33407,
-        "sha256": "21861eccf80a6f00a50dba1e207b5ac49ed4c3de524636fcacfdf077dfcd08c0"
+        "sha256": "21861eccf80a6f00a50dba1e207b5ac49ed4c3de524636fcacfdf077dfcd08c0",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -198,7 +202,8 @@
       "download": {
         "url": "https://github.com/mistermiracle3036/Pokeball-Colors/releases/download/v0.1.27/pokeball_colors-0.1.27.zip",
         "sizeBytes": 33407,
-        "sha256": "21861eccf80a6f00a50dba1e207b5ac49ed4c3de524636fcacfdf077dfcd08c0"
+        "sha256": "21861eccf80a6f00a50dba1e207b5ac49ed4c3de524636fcacfdf077dfcd08c0",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen2recomped"
@@ -228,7 +233,8 @@
       "download": {
         "url": "https://github.com/mistermiracle3036/Indigo-Plateau-Conference/releases/download/v1.0.2/indigo_conference-1.0.2.zip",
         "sizeBytes": 56357,
-        "sha256": "bd8379400db57418c84dad72bf7e03df49fb203e0782f6a238e6b56ab2af288a"
+        "sha256": "bd8379400db57418c84dad72bf7e03df49fb203e0782f6a238e6b56ab2af288a",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen2recomped"
@@ -258,7 +264,8 @@
       "download": {
         "url": "https://github.com/Sqtls/gen1recomp-plus-randomizer-nuzlocke/releases/download/v0.28.1/gen1recomp-plus-randomizer-nuzlocke-0.28.1.zip",
         "sizeBytes": 116341,
-        "sha256": "ab6d7907e710c54ee4816ca390cbeab742cb796fb37185c67fe0cfc3b2c28fef"
+        "sha256": "ab6d7907e710c54ee4816ca390cbeab742cb796fb37185c67fe0cfc3b2c28fef",
+        "manifestPath": "gen1recomp-plus-randomizer-nuzlocke-0.28.1/manifest.json"
       },
       "engine": {
         "id": "gen2recomped"
@@ -289,7 +296,8 @@
       "download": {
         "url": "https://github.com/bielsojo/red-ptbr-gen1recomp/releases/download/v1.0.0/red_ptbr_golpes_ingles.zip",
         "sizeBytes": 113530,
-        "sha256": "0190739126d33bf53e752b3efd10a1e10a46df42bc7d4c73813bd1cdec5c35c0"
+        "sha256": "0190739126d33bf53e752b3efd10a1e10a46df42bc7d4c73813bd1cdec5c35c0",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -319,7 +327,8 @@
       "download": {
         "url": "https://github.com/keberos/button-shortcuts/releases/download/v1.0.0/button-shortcuts-1.0.0.zip",
         "sizeBytes": 13426,
-        "sha256": "0ae505c5edff7a22b098941b3a68683fb5b8cbbbcbd81e597d75d3cdfdcad20b"
+        "sha256": "0ae505c5edff7a22b098941b3a68683fb5b8cbbbcbd81e597d75d3cdfdcad20b",
+        "manifestPath": "button-shortcuts/manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -349,7 +358,8 @@
       "download": {
         "url": "https://github.com/keberos/quickmap/releases/download/v1.0.1/quickmap-1.0.1.zip",
         "sizeBytes": 7730,
-        "sha256": "32d1ec3cf901fff1445c673c6af82bfbfa045bc3e6a575a76e657713638a601f"
+        "sha256": "32d1ec3cf901fff1445c673c6af82bfbfa045bc3e6a575a76e657713638a601f",
+        "manifestPath": "quickmap/manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -379,7 +389,8 @@
       "download": {
         "url": "https://github.com/keberos/rename-character/releases/download/v1.0.0/rename-character-1.0.0.zip",
         "sizeBytes": 3921,
-        "sha256": "592120ca033c974d2ba8515204b8c0b10876b13ed6f88a1733c51f1204185ee8"
+        "sha256": "592120ca033c974d2ba8515204b8c0b10876b13ed6f88a1733c51f1204185ee8",
+        "manifestPath": "rename-character/manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -410,7 +421,8 @@
       "download": {
         "url": "https://github.com/mistermiracle3036/Too-Many-Balls/releases/download/v0.6.1/kanto_balls-0.6.1.zip",
         "sizeBytes": 67047,
-        "sha256": "597ce5702c8128688034f221bc5e80c293fb060f0ee6f05825b43c7e5eab8acd"
+        "sha256": "597ce5702c8128688034f221bc5e80c293fb060f0ee6f05825b43c7e5eab8acd",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -440,7 +452,8 @@
       "download": {
         "url": "https://github.com/erereck/gen1recomp-bottomless-bag/releases/download/v1.1.0/erilab_bottomless_bag.zip",
         "sizeBytes": 3750,
-        "sha256": "2c1c8cb45c95de75c050591ee87062170db8ee2d9456d3479757da2b5bd0ebc3"
+        "sha256": "2c1c8cb45c95de75c050591ee87062170db8ee2d9456d3479757da2b5bd0ebc3",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -470,7 +483,8 @@
       "download": {
         "url": "https://github.com/masterwebx/gen1recomp-shiny-pokemon/releases/download/v1.0.1/SHINY_POKEMON-1.0.1.zip",
         "sizeBytes": 23768,
-        "sha256": "90d2be6fcec1383bb9beec5df9038308b68fa903eb179840b344c7b6e48ccb59"
+        "sha256": "90d2be6fcec1383bb9beec5df9038308b68fa903eb179840b344c7b6e48ccb59",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -500,7 +514,8 @@
       "download": {
         "url": "https://github.com/wowabox/All_Pokemon_Catchable_151_Mod/releases/download/v0.3.3/All_Pokemon_Catchable_151_Mod_V0.3.3.zip",
         "sizeBytes": 107675,
-        "sha256": "4239ab5b3e6867d86fbd257eec716b817eb67c2c39ae9286b79a7acd1402223d"
+        "sha256": "4239ab5b3e6867d86fbd257eec716b817eb67c2c39ae9286b79a7acd1402223d",
+        "manifestPath": "All_Pokemon_Catchable_151_Mod/manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -530,7 +545,8 @@
       "download": {
         "url": "https://github.com/piftee/gen1recomp-typed-move-colors/releases/download/v0.3.8/Typed-Move-Colors-0.3.8.zip",
         "sizeBytes": 29476,
-        "sha256": "443f27d37692fbe07ecb6a3b8e7b7fc4f710629ed0daafa567dadb3cd052069b"
+        "sha256": "443f27d37692fbe07ecb6a3b8e7b7fc4f710629ed0daafa567dadb3cd052069b",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -560,7 +576,8 @@
       "download": {
         "url": "https://github.com/piftee/gen1recomp-modern-party-ui/releases/download/v0.3.8/Modern-Party-UI-0.3.8.zip",
         "sizeBytes": 39812,
-        "sha256": "f5a547581f85ba6083bc5d66486d513520859c7c62ba5654b7da2420b09c0a98"
+        "sha256": "f5a547581f85ba6083bc5d66486d513520859c7c62ba5654b7da2420b09c0a98",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -590,7 +607,8 @@
       "download": {
         "url": "https://github.com/Zetto22/dex_radar/releases/download/v1.2.0/dex_radar-1.2.0.zip",
         "sizeBytes": 22511,
-        "sha256": "5997da255fa8fbab87850e2dc9ebaabe6e209cbfad570192f0da5a1317d12028"
+        "sha256": "5997da255fa8fbab87850e2dc9ebaabe6e209cbfad570192f0da5a1317d12028",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -620,7 +638,8 @@
       "download": {
         "url": "https://github.com/UNDERdecoded/Gen2Recomp---Online/releases/download/Beta0.6.5Hotfix/gen2recomped-online.zip",
         "sizeBytes": 231573,
-        "sha256": "d89c0bd1379a60e910d2cc5eb243f9ed0663998386d3fd82c086a5e7d6a75cde"
+        "sha256": "d89c0bd1379a60e910d2cc5eb243f9ed0663998386d3fd82c086a5e7d6a75cde",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen2recomped"
@@ -650,7 +669,8 @@
       "download": {
         "url": "https://github.com/1iminal/gen1recomp-no-exp-challenge/releases/download/v1.0.1/no_exp_challenge-1.0.1.zip",
         "sizeBytes": 2103,
-        "sha256": "0adfc6fb4587013d722ba6a2f7e29f1e8ded8716860e6c25c453b7cbad9403b7"
+        "sha256": "0adfc6fb4587013d722ba6a2f7e29f1e8ded8716860e6c25c453b7cbad9403b7",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -680,7 +700,8 @@
       "download": {
         "url": "https://github.com/masterwebx/gen1recomp-access-pc-anywhere/releases/download/v1.0.1/ACCESS_PC_ANYWHERE-1.0.1.zip",
         "sizeBytes": 3584,
-        "sha256": "3fc05864bebecccd63be56b1653d8c2efc44d0307f85e9980ca6bf29f64e7c40"
+        "sha256": "3fc05864bebecccd63be56b1653d8c2efc44d0307f85e9980ca6bf29f64e7c40",
+        "manifestPath": "ACCESS_PC_ANYWHERE/manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -711,7 +732,8 @@
       "download": {
         "url": "https://github.com/eduardocalafell/gen1recomp-auto-battle/releases/download/v0.1.9/auto_battle-0.1.9.zip",
         "sizeBytes": 13412,
-        "sha256": "1b1ebfd68007f4f16a3ace125584b7b9fcdf730dbe2888dd7579c6ef23699b0e"
+        "sha256": "1b1ebfd68007f4f16a3ace125584b7b9fcdf730dbe2888dd7579c6ef23699b0e",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -742,7 +764,8 @@
       "download": {
         "url": "https://github.com/eduardocalafell/gen1recomp-bag-sort/releases/download/v0.1.0/bag_sort-0.1.0.zip",
         "sizeBytes": 3761,
-        "sha256": "116966a8857f3865f50f3d115bdbe0cd95c206a95c2b3b471e28b4d38e81e28f"
+        "sha256": "116966a8857f3865f50f3d115bdbe0cd95c206a95c2b3b471e28b4d38e81e28f",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -772,7 +795,8 @@
       "download": {
         "url": "https://github.com/masterwebx/gen1recomp-battle-move-info/releases/download/v1.0.7/MOVE_MATCHUP-1.0.7.zip",
         "sizeBytes": 9728,
-        "sha256": "99824daa20c7a06d792b73bb2aa0e8a4cce22bfaa46bde63be7f2a4a385c77c8"
+        "sha256": "99824daa20c7a06d792b73bb2aa0e8a4cce22bfaa46bde63be7f2a4a385c77c8",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -803,7 +827,8 @@
       "download": {
         "url": "https://github.com/eduardocalafell/gen1recomp-better-battle-ui/releases/download/v0.2.1/better_battle_ui-0.2.1.zip",
         "sizeBytes": 10101,
-        "sha256": "5743b3511be2acabfb2e134cf53653e4d2b0e282fc456ac7385bc7247e1e8ebb"
+        "sha256": "5743b3511be2acabfb2e134cf53653e4d2b0e282fc456ac7385bc7247e1e8ebb",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -834,7 +859,8 @@
       "download": {
         "url": "https://github.com/eduardocalafell/gen1recomp-bike-anywhere/releases/download/v0.1.1/bike_anywhere-0.1.1.zip",
         "sizeBytes": 7705,
-        "sha256": "216357017e794562f41ed53f291b41a48aaac2f589948813c72ea184b8ddf12d"
+        "sha256": "216357017e794562f41ed53f291b41a48aaac2f589948813c72ea184b8ddf12d",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -864,7 +890,8 @@
       "download": {
         "url": "https://github.com/martin2844/gen1recomp-blackjack-corner/releases/download/v0.7.4/blackjack_corner-0.7.4.zip",
         "sizeBytes": 179724,
-        "sha256": "43c0625712cb4bfcb291dbc979516dcbbc9c4affdc1575edc41592d9a8df0cb7"
+        "sha256": "43c0625712cb4bfcb291dbc979516dcbbc9c4affdc1575edc41592d9a8df0cb7",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -894,7 +921,8 @@
       "download": {
         "url": "https://github.com/MadeinTaly/gen1recomp-childhood-myths-are-real/releases/download/v0.2.0/childhood_myths_are_real-0.2.0.zip",
         "sizeBytes": 15532,
-        "sha256": "0739946ac73b28bd147c03b6d2262863df9b744ef9aaf2520d73f8524d8ec53e"
+        "sha256": "0739946ac73b28bd147c03b6d2262863df9b744ef9aaf2520d73f8524d8ec53e",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -924,7 +952,8 @@
       "download": {
         "url": "https://github.com/masterwebx/gen1recomp-controller-rumble/releases/download/v1.0.3/CONTROLLER_RUMBLE-1.0.3.zip",
         "sizeBytes": 15893,
-        "sha256": "6450f5e0d6e36fc3f3d9bd048415feb9f94f047a4309cc37d9998202bd9e7334"
+        "sha256": "6450f5e0d6e36fc3f3d9bd048415feb9f94f047a4309cc37d9998202bd9e7334",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -955,7 +984,8 @@
       "download": {
         "url": "https://github.com/eduardocalafell/gen1recomp-damage-numbers/releases/download/v0.4.0/damage_numbers-0.4.0.zip",
         "sizeBytes": 6306,
-        "sha256": "9dedaf11810e9699abe84b7307f3ce3b136ae19267f8629103ae8712dbd7837a"
+        "sha256": "9dedaf11810e9699abe84b7307f3ce3b136ae19267f8629103ae8712dbd7837a",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -985,7 +1015,8 @@
       "download": {
         "url": "https://github.com/illanrego/wills-mod/releases/download/v1.0.1/wills_mod-1.0.1.zip",
         "sizeBytes": 13492,
-        "sha256": "ccbdaa086ee8c383bfa8ccbe736e2ebcc465a476131935fe04cbb7d1b4a1beca"
+        "sha256": "ccbdaa086ee8c383bfa8ccbe736e2ebcc465a476131935fe04cbb7d1b4a1beca",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -1016,7 +1047,8 @@
       "download": {
         "url": "https://github.com/eduardocalafell/gen1recomp-fakemons/releases/download/v0.1.1/fakemons-0.1.1.zip",
         "sizeBytes": 18702,
-        "sha256": "52bd5eaae3cc4871f5fb3b0178ea677e7c4499a1aaa6636c0712809762f32982"
+        "sha256": "52bd5eaae3cc4871f5fb3b0178ea677e7c4499a1aaa6636c0712809762f32982",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -1046,7 +1078,8 @@
       "download": {
         "url": "https://github.com/MadeinTaly/gen1recomp-gen3-boxes/releases/download/v1.8.0/gen3_box-1.8.0.zip",
         "sizeBytes": 45910,
-        "sha256": "3ca1fcd891c523dacb449222503584fd97659f8ff3515e0193d438c63a499039"
+        "sha256": "3ca1fcd891c523dacb449222503584fd97659f8ff3515e0193d438c63a499039",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -1076,7 +1109,8 @@
       "download": {
         "url": "https://github.com/MadeinTaly/gen1recomp-gen3-boxes/releases/download/v1.8.0/gen3_box-1.8.0.zip",
         "sizeBytes": 45910,
-        "sha256": "3ca1fcd891c523dacb449222503584fd97659f8ff3515e0193d438c63a499039"
+        "sha256": "3ca1fcd891c523dacb449222503584fd97659f8ff3515e0193d438c63a499039",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen2recomped"
@@ -1106,7 +1140,8 @@
       "download": {
         "url": "https://github.com/MadeinTaly/gen1recomp-gen3-dex/releases/download/v0.5.0/gen3_dex-0.5.0.zip",
         "sizeBytes": 25092,
-        "sha256": "8f3ca00b261d99f9c700e41ea9d184a4cacb0afc4c6a784137b34414c4c207ab"
+        "sha256": "8f3ca00b261d99f9c700e41ea9d184a4cacb0afc4c6a784137b34414c4c207ab",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -1136,7 +1171,8 @@
       "download": {
         "url": "https://github.com/MadeinTaly/gen1recomp-gen3-dex/releases/download/v0.5.0/gen3_dex-0.5.0.zip",
         "sizeBytes": 25092,
-        "sha256": "8f3ca00b261d99f9c700e41ea9d184a4cacb0afc4c6a784137b34414c4c207ab"
+        "sha256": "8f3ca00b261d99f9c700e41ea9d184a4cacb0afc4c6a784137b34414c4c207ab",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen2recomped"
@@ -1166,7 +1202,8 @@
       "download": {
         "url": "https://github.com/MadeinTaly/gen1recomp-groovy-palette-frames/releases/download/v0.7.0/groovy_palette-0.7.0.zip",
         "sizeBytes": 34674,
-        "sha256": "5df758904c00f053dcb32abb88126b399c9754f8128bc247f0c67e72267c0320"
+        "sha256": "5df758904c00f053dcb32abb88126b399c9754f8128bc247f0c67e72267c0320",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -1196,7 +1233,8 @@
       "download": {
         "url": "https://github.com/MadeinTaly/gen1recomp-groovy-palette-frames/releases/download/v0.7.0/groovy_palette-0.7.0.zip",
         "sizeBytes": 34674,
-        "sha256": "5df758904c00f053dcb32abb88126b399c9754f8128bc247f0c67e72267c0320"
+        "sha256": "5df758904c00f053dcb32abb88126b399c9754f8128bc247f0c67e72267c0320",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen2recomped"
@@ -1226,7 +1264,8 @@
       "download": {
         "url": "https://github.com/masterwebx/gen1recomp-heal-anywhere/releases/download/v1.0.0/HEAL_ANYWHERE-1.0.0.zip",
         "sizeBytes": 6296,
-        "sha256": "b75495e00311e7b4dcfe16aa050aa5731e0f4759f45b27d253a06a92f5b86dc3"
+        "sha256": "b75495e00311e7b4dcfe16aa050aa5731e0f4759f45b27d253a06a92f5b86dc3",
+        "manifestPath": "HEAL_ANYWHERE/manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -1257,7 +1296,8 @@
       "download": {
         "url": "https://github.com/AverageConsumer/kanto-gear/releases/download/v2.2.0/kanto_gear-2.2.0.zip",
         "sizeBytes": 51466,
-        "sha256": "9a8f14dcf895ff620e09745a4c258b9a013e9fa2f7a01ce7d12557ea86bf82d0"
+        "sha256": "9a8f14dcf895ff620e09745a4c258b9a013e9fa2f7a01ce7d12557ea86bf82d0",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -1288,7 +1328,8 @@
       "download": {
         "url": "https://github.com/AverageConsumer/kanto-gear/releases/download/v2.2.0/kanto_gear-2.2.0.zip",
         "sizeBytes": 51466,
-        "sha256": "9a8f14dcf895ff620e09745a4c258b9a013e9fa2f7a01ce7d12557ea86bf82d0"
+        "sha256": "9a8f14dcf895ff620e09745a4c258b9a013e9fa2f7a01ce7d12557ea86bf82d0",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen2recomped"
@@ -1318,7 +1359,8 @@
       "download": {
         "url": "https://github.com/Maaggel/mew-under-the-truck/releases/download/v0.8.3/mew_under_the_truck-0.8.3.zip",
         "sizeBytes": 239963,
-        "sha256": "57ce772f903888370a752107f738f615449d260b2100ac2abf54fea25927f0ef"
+        "sha256": "57ce772f903888370a752107f738f615449d260b2100ac2abf54fea25927f0ef",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -1349,7 +1391,8 @@
       "download": {
         "url": "https://github.com/eduardocalafell/gen1recomp-minimap/releases/download/v0.1.0/minimap-0.1.0.zip",
         "sizeBytes": 4441,
-        "sha256": "2ea50dc5a9eb5b61eadd044bc7fc74f258e8f70eda96e8240fbe1fee2dc9473f"
+        "sha256": "2ea50dc5a9eb5b61eadd044bc7fc74f258e8f70eda96e8240fbe1fee2dc9473f",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -1380,7 +1423,8 @@
       "download": {
         "url": "https://github.com/eduardocalafell/gen1recomp-modern-dialog/releases/download/v0.4.1/modern_dialog-0.4.1.zip",
         "sizeBytes": 7754,
-        "sha256": "715a4a7346dbafab29e1ecf5b90f5ca4771a9fa99cb6c94c9703f2a3179a17b5"
+        "sha256": "715a4a7346dbafab29e1ecf5b90f5ca4771a9fa99cb6c94c9703f2a3179a17b5",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -1410,7 +1454,8 @@
       "download": {
         "url": "https://github.com/MadeinTaly/gen1recomp-modern-johto/releases/download/v0.2.0/modern_johto-0.2.0.zip",
         "sizeBytes": 17153,
-        "sha256": "1db28278956ce7200ba39075343f08c3d8009b6cbd77da7d5004b46156558731"
+        "sha256": "1db28278956ce7200ba39075343f08c3d8009b6cbd77da7d5004b46156558731",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen2recomped"
@@ -1440,7 +1485,8 @@
       "download": {
         "url": "https://github.com/MadeinTaly/gen1recomp-modern-kanto/releases/download/v0.3.0/modern_kanto-0.3.0.zip",
         "sizeBytes": 18663,
-        "sha256": "7477413273854283bcc563f212a758edf91378a963cc674a8dfd952526840b2c"
+        "sha256": "7477413273854283bcc563f212a758edf91378a963cc674a8dfd952526840b2c",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -1470,7 +1516,8 @@
       "download": {
         "url": "https://github.com/Maaggel/move-descriptions/releases/download/0.5.1/move_descriptions-0.5.1.zip",
         "sizeBytes": 9258,
-        "sha256": "98bd769a86d91cbabbf077f9d3a37c81ed30a8dcbdae63f3221bcce22f34f1c2"
+        "sha256": "98bd769a86d91cbabbf077f9d3a37c81ed30a8dcbdae63f3221bcce22f34f1c2",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -1500,7 +1547,8 @@
       "download": {
         "url": "https://github.com/masterwebx/gen1recomp-multi-save-slots/releases/download/v1.0.0/MULTI_SAVE_SLOTS-1.0.0.zip",
         "sizeBytes": 4910,
-        "sha256": "9f364b0618041cb7abe8bda6f7c3e3d1170282d8dbf3acd20eddadbde053cdcb"
+        "sha256": "9f364b0618041cb7abe8bda6f7c3e3d1170282d8dbf3acd20eddadbde053cdcb",
+        "manifestPath": "MULTI_SAVE_SLOTS/manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -1530,7 +1578,8 @@
       "download": {
         "url": "https://github.com/masterwebx/gen1recomp-music-player/releases/download/v1.2.5/MUSIC_PLAYER-1.2.5.zip",
         "sizeBytes": 6508,
-        "sha256": "579eda895100584d161425bb7a967b1e279b262fddd8c3e08d46771cb84e4029"
+        "sha256": "579eda895100584d161425bb7a967b1e279b262fddd8c3e08d46771cb84e4029",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -1560,7 +1609,8 @@
       "download": {
         "url": "https://github.com/mistermiracle3036/Pokemon-Snag/releases/download/v0.15.9/snag_quest-0.15.9.zip",
         "sizeBytes": 108040,
-        "sha256": "46bbb3a58e7945dc2e7daa54de76b70279efdb0c85a6fe48b0acb4aad7b401f4"
+        "sha256": "46bbb3a58e7945dc2e7daa54de76b70279efdb0c85a6fe48b0acb4aad7b401f4",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -1590,7 +1640,8 @@
       "download": {
         "url": "https://github.com/mistermiracle3036/Pokemon-Snag/releases/download/v0.15.9/snag_quest-0.15.9.zip",
         "sizeBytes": 108040,
-        "sha256": "46bbb3a58e7945dc2e7daa54de76b70279efdb0c85a6fe48b0acb4aad7b401f4"
+        "sha256": "46bbb3a58e7945dc2e7daa54de76b70279efdb0c85a6fe48b0acb4aad7b401f4",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen2recomped"
@@ -1621,7 +1672,8 @@
       "download": {
         "url": "https://github.com/TanukiTooks/Quest-Menu/releases/download/v1.1.0/QuestMenu-1.1.0.zip",
         "sizeBytes": 18620,
-        "sha256": "5323bd60cd30dabe4b7c9f9a0659f517a465261b9c006b705df1f10cec966386"
+        "sha256": "5323bd60cd30dabe4b7c9f9a0659f517a465261b9c006b705df1f10cec966386",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -1652,7 +1704,8 @@
       "download": {
         "url": "https://github.com/TanukiTooks/Quest-Menu/releases/download/v1.1.0/QuestMenu-1.1.0.zip",
         "sizeBytes": 18620,
-        "sha256": "5323bd60cd30dabe4b7c9f9a0659f517a465261b9c006b705df1f10cec966386"
+        "sha256": "5323bd60cd30dabe4b7c9f9a0659f517a465261b9c006b705df1f10cec966386",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen2recomped"
@@ -1682,7 +1735,8 @@
       "download": {
         "url": "https://github.com/masterwebx/gen1recomp-run-mode/releases/download/v1.2.0/RUN_MODE-1.2.0.zip",
         "sizeBytes": 5876,
-        "sha256": "e9fa3da4de2ab0dc0c9e0818364ec73f3c8f607f3aad1bd0000ea63c3a570276"
+        "sha256": "e9fa3da4de2ab0dc0c9e0818364ec73f3c8f607f3aad1bd0000ea63c3a570276",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -1712,7 +1766,8 @@
       "download": {
         "url": "https://github.com/MadeinTaly/gen1recomp-running-shoes/releases/download/v1.7.0/running_shoes-1.7.0.zip",
         "sizeBytes": 43680,
-        "sha256": "de617710b60dcf4347a3c41e00283856d397222a3eb0547515a5b2c4371a6929"
+        "sha256": "de617710b60dcf4347a3c41e00283856d397222a3eb0547515a5b2c4371a6929",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -1742,7 +1797,8 @@
       "download": {
         "url": "https://github.com/MadeinTaly/gen1recomp-running-shoes/releases/download/v1.7.0/running_shoes-1.7.0.zip",
         "sizeBytes": 43680,
-        "sha256": "de617710b60dcf4347a3c41e00283856d397222a3eb0547515a5b2c4371a6929"
+        "sha256": "de617710b60dcf4347a3c41e00283856d397222a3eb0547515a5b2c4371a6929",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen2recomped"
@@ -1772,7 +1828,8 @@
       "download": {
         "url": "https://github.com/MaxTomahawk/gen1recomp-savestates/releases/download/v0.1.0/savestates-0.1.0.zip",
         "sizeBytes": 68534,
-        "sha256": "205e339d16cad76dc04c5f95aa5541fa248fca3dc97375fbbdecc4b46b7b3131"
+        "sha256": "205e339d16cad76dc04c5f95aa5541fa248fca3dc97375fbbdecc4b46b7b3131",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -1802,7 +1859,8 @@
       "download": {
         "url": "https://github.com/Satori7Kensho/gen1recomp-shiny-starters-gifts/releases/download/v1.1.0/shiny_starters_gifts.zip",
         "sizeBytes": 3652,
-        "sha256": "a2ef09cba0ec657ce870a8e5d563b51fad1401b4c9ee3fa1d20c5c7e4f5f1739"
+        "sha256": "a2ef09cba0ec657ce870a8e5d563b51fad1401b4c9ee3fa1d20c5c7e4f5f1739",
+        "manifestPath": "shiny_starters_gifts/manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -1832,7 +1890,8 @@
       "download": {
         "url": "https://github.com/allanrmartins/gen1recomp-switch-advisor/releases/download/v1.0.0/SWITCH_ADVISOR-1.0.0.zip",
         "sizeBytes": 18696,
-        "sha256": "8f7f18df1d8a6bb3fb1200b5d63f60163710a8d2e297af668664355261c04187"
+        "sha256": "8f7f18df1d8a6bb3fb1200b5d63f60163710a8d2e297af668664355261c04187",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -1863,7 +1922,8 @@
       "download": {
         "url": "https://github.com/mresnick67/Gen1ReComp-ButtonMash/releases/download/v0.2.0/mash-catch-0.2.0.zip",
         "sizeBytes": 15709,
-        "sha256": "351d028658b1001d150b8ecd56d126138c0c310e5d6e362684f0784b0294384f"
+        "sha256": "351d028658b1001d150b8ecd56d126138c0c310e5d6e362684f0784b0294384f",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -1893,7 +1953,8 @@
       "download": {
         "url": "https://github.com/Roxas2712/voxel-ascendant/releases/download/v0.1.1/voxel-ascendant-0.1.1-direct-install.zip",
         "sizeBytes": 474982,
-        "sha256": "bfc79f04aace1c6f9e12f2145737635b35cca5ef3a8c63fe5a531dd87c1a4141"
+        "sha256": "bfc79f04aace1c6f9e12f2145737635b35cca5ef3a8c63fe5a531dd87c1a4141",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -1923,7 +1984,8 @@
       "download": {
         "url": "https://github.com/erereck/gen1recomp-bag-wrap/releases/download/v1.0.0/erilab_bag_wrap.zip",
         "sizeBytes": 3252,
-        "sha256": "b04f58044e096a2359a194692d644f74a292ef78b0b486fb8e3a6ebf44b621aa"
+        "sha256": "b04f58044e096a2359a194692d644f74a292ef78b0b486fb8e3a6ebf44b621aa",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -1953,7 +2015,8 @@
       "download": {
         "url": "https://github.com/silvershadowkat/gen1recomp-minimal-cheats/releases/download/v2.1.6/silvershadow-mods-v2.1.6.zip",
         "sizeBytes": 111641,
-        "sha256": "9551dac827db91d8be200da45ae9a03a25b72ba7952d7fe59fa617868e35e6f2"
+        "sha256": "9551dac827db91d8be200da45ae9a03a25b72ba7952d7fe59fa617868e35e6f2",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -1983,7 +2046,8 @@
       "download": {
         "url": "https://github.com/dburton95/non-binary-mode/releases/download/2.0.2/non-binary-mode-2.0.2.zip",
         "sizeBytes": 5294,
-        "sha256": "4f44a9fb0e1a80ebb8384a83fac00610d94dff8d7816151c68f0476b84db4410"
+        "sha256": "4f44a9fb0e1a80ebb8384a83fac00610d94dff8d7816151c68f0476b84db4410",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -2014,7 +2078,8 @@
       "download": {
         "url": "https://github.com/EnterPlayerOne/Battle-Cinematics-Stadium-Camera/releases/download/V1.0.7/Battle_Cinematics-v1.0.7.zip",
         "sizeBytes": 119988,
-        "sha256": "2c894ff53016765263679a66a1a6ce45c4c6b2f4b785c43d4f649374ee58a21b"
+        "sha256": "2c894ff53016765263679a66a1a6ce45c4c6b2f4b785c43d4f649374ee58a21b",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -2045,7 +2110,8 @@
       "download": {
         "url": "https://github.com/EnterPlayerOne/Battle-Cinematics-Stadium-Camera/releases/download/V1.0.7/Battle_Cinematics-v1.0.7.zip",
         "sizeBytes": 119988,
-        "sha256": "2c894ff53016765263679a66a1a6ce45c4c6b2f4b785c43d4f649374ee58a21b"
+        "sha256": "2c894ff53016765263679a66a1a6ce45c4c6b2f4b785c43d4f649374ee58a21b",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen2recomped"
@@ -2075,7 +2141,8 @@
       "download": {
         "url": "https://github.com/dburton95/girl-mode/releases/download/2.0.3/girl-mode-2.0.3.zip",
         "sizeBytes": 5292,
-        "sha256": "dc92536ac11285c2a96bc6f1b435a6bbd30ba45eaaeed1446fa34559bb1a5c88"
+        "sha256": "dc92536ac11285c2a96bc6f1b435a6bbd30ba45eaaeed1446fa34559bb1a5c88",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -2106,7 +2173,8 @@
       "download": {
         "url": "https://github.com/yedidiapery/gen1recomp-infinite-repel/releases/download/v1.1.0/infinite_repel-1.1.0.zip",
         "sizeBytes": 1129,
-        "sha256": "859faa66f0821edd5323834fa3fa79214f7fd31ba3b026276069f5f1d8d5b3b0"
+        "sha256": "859faa66f0821edd5323834fa3fa79214f7fd31ba3b026276069f5f1d8d5b3b0",
+        "manifestPath": "infinite_repel/manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -2136,7 +2204,8 @@
       "download": {
         "url": "https://github.com/madramdesign/gen1recomp-battle-exp-bar/releases/download/v1.0.1/battle_exp_bar-1.0.1.zip",
         "sizeBytes": 4521,
-        "sha256": "4d64ef7352d72260ca6c9d0d370f9652d0bddf14932cb5dc451eb722d08fd627"
+        "sha256": "4d64ef7352d72260ca6c9d0d370f9652d0bddf14932cb5dc451eb722d08fd627",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -2166,7 +2235,8 @@
       "download": {
         "url": "https://github.com/piftee/gen1recomp-modern-bag-ui/releases/download/v0.2.0/modern_bag_ui-0.2.0.zip",
         "sizeBytes": 17422,
-        "sha256": "d6253261f8c19ba5211bb31f09f5d4780ceb2d38151b37c3710a7a454c8dd03c"
+        "sha256": "d6253261f8c19ba5211bb31f09f5d4780ceb2d38151b37c3710a7a454c8dd03c",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -2196,7 +2266,8 @@
       "download": {
         "url": "https://github.com/madramdesign/gen1recomp-settings-hotkeys/releases/download/v1.0.0/settings_hotkeys-1.0.0.zip",
         "sizeBytes": 5147,
-        "sha256": "fcb11d0eeef39da4f251a06d49e36e5355ec62e192f3bb207c5ac583ff6af296"
+        "sha256": "fcb11d0eeef39da4f251a06d49e36e5355ec62e192f3bb207c5ac583ff6af296",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -2226,7 +2297,8 @@
       "download": {
         "url": "https://github.com/madramdesign/gen1recomp-professor-oak-challenge/releases/download/v0.3.1/professor_oak_challenge-0.3.1.zip",
         "sizeBytes": 16944,
-        "sha256": "45ac201e230a4a146b607e47efae29518ab59b4d2cc73c965f2c22d2a01041b9"
+        "sha256": "45ac201e230a4a146b607e47efae29518ab59b4d2cc73c965f2c22d2a01041b9",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -2256,7 +2328,8 @@
       "download": {
         "url": "https://github.com/dburton95/its-clefairy/releases/download/1.0.0/its-clefairy-1.0.0.zip",
         "sizeBytes": 77843,
-        "sha256": "01ee887331e356e0d4b3fc72102b6f574bad29a3382693d60b2ed771022088d3"
+        "sha256": "01ee887331e356e0d4b3fc72102b6f574bad29a3382693d60b2ed771022088d3",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -2286,7 +2359,8 @@
       "download": {
         "url": "https://github.com/dburton95/its-clefairy/releases/download/1.0.0/its-clefairy-1.0.0.zip",
         "sizeBytes": 77843,
-        "sha256": "01ee887331e356e0d4b3fc72102b6f574bad29a3382693d60b2ed771022088d3"
+        "sha256": "01ee887331e356e0d4b3fc72102b6f574bad29a3382693d60b2ed771022088d3",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen2recomped"
@@ -2316,7 +2390,8 @@
       "download": {
         "url": "https://github.com/Ryan1731/gen1recomp-terrain-minimap/releases/download/v1.0.5/terrain_minimap-1.0.5.zip",
         "sizeBytes": 1091206,
-        "sha256": "bd32ebd06b77f0909a04e201699ab7675ca941a9ad64a38cc174b0f43b379370"
+        "sha256": "bd32ebd06b77f0909a04e201699ab7675ca941a9ad64a38cc174b0f43b379370",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -2347,7 +2422,8 @@
       "download": {
         "url": "https://github.com/miguelcjalmeida/HiddenStats/releases/download/v3.0.1/hidden_stats.zip",
         "sizeBytes": 3613,
-        "sha256": "d80d9c38be89bb14088d9798b01e2bf2bcdb317bcb58127bb1987f7c65288597"
+        "sha256": "d80d9c38be89bb14088d9798b01e2bf2bcdb317bcb58127bb1987f7c65288597",
+        "manifestPath": "hidden_stats/manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -2377,7 +2453,8 @@
       "download": {
         "url": "https://github.com/ScottExplores/gen1recomp-trainer-forfeit/releases/download/v0.3.0/trainer_forfeit-0.3.0.zip",
         "sizeBytes": 16035,
-        "sha256": "05883414cb8e5ba7b7abe3304049210d7fa5f4a8650cb7c7402477dcf2819c7c"
+        "sha256": "05883414cb8e5ba7b7abe3304049210d7fa5f4a8650cb7c7402477dcf2819c7c",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -2407,7 +2484,8 @@
       "download": {
         "url": "https://github.com/Dileppy/CareerCard/releases/download/v1.0.1/career_card-1.0.1.zip",
         "sizeBytes": 25133,
-        "sha256": "a4e510e3984d7ed38d413241f7bd93df58511f647662d074142419d04e04ba25"
+        "sha256": "a4e510e3984d7ed38d413241f7bd93df58511f647662d074142419d04e04ba25",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -2437,7 +2515,8 @@
       "download": {
         "url": "https://github.com/ScottExplores/gen1recomp-lets-go-catch-throw/releases/download/v0.2.2/LETS_GO_CATCH_THROW-0.2.2.zip",
         "sizeBytes": 95889,
-        "sha256": "e6f35c6d1fbaba9356a6dda28ca5fb2a2c85a860956654eee8a532dd1e13465f"
+        "sha256": "e6f35c6d1fbaba9356a6dda28ca5fb2a2c85a860956654eee8a532dd1e13465f",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -2467,7 +2546,8 @@
       "download": {
         "url": "https://github.com/ScottExplores/gen1recomp-oaks-spare-starter/releases/download/v0.1.1/oak_spare_starter-0.1.1.zip",
         "sizeBytes": 6707,
-        "sha256": "1aae91329ac8079d1dcef5e3f83216a760350be30e461822fb54e2edc956c9f5"
+        "sha256": "1aae91329ac8079d1dcef5e3f83216a760350be30e461822fb54e2edc956c9f5",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"
@@ -2497,7 +2577,8 @@
       "download": {
         "url": "https://github.com/ScottExplores/gen1recomp-voxel-run-bridge/releases/download/v0.7.0/SCOTTS_TWEAKS-0.7.0.zip",
         "sizeBytes": 72523,
-        "sha256": "7cb58c55ffac0469e01cf554ae43157d583140a58e086db2e8340543f4196e42"
+        "sha256": "7cb58c55ffac0469e01cf554ae43157d583140a58e086db2e8340543f4196e42",
+        "manifestPath": "manifest.json"
       },
       "engine": {
         "id": "gen1recomp"

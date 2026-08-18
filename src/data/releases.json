@@ -9,8 +9,8 @@
     "compatibility": [
       "gen1recomp"
     ],
-    "target": "Gen1Recomp \u00b7 Yellow",
-    "summary": "Adds selectable 1.5\u00d7, 2\u00d7, 3\u00d7, and scaled experience modes while retaining an off switch for vanilla behavior.",
+    "target": "Gen1Recomp · Yellow",
+    "summary": "Adds selectable 1.5×, 2×, 3×, and scaled experience modes while retaining an off switch for vanilla behavior.",
     "fileUrl": "https://github.com/RadekHM/xp_multiplier_gen1recomp/releases/download/v1.0.0/EXP_MULTIPLIER-1.0.0.zip",
     "fileName": "EXP_MULTIPLIER-1.0.0.zip",
     "fileSize": "6.3 KB",
@@ -24,7 +24,8 @@
     "images": [],
     "modId": "EXP_MULTIPLIER",
     "fileSizeBytes": 6483,
-    "topic": "QOL"
+    "topic": "QOL",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "battle-info-hud",
@@ -36,7 +37,7 @@
     "compatibility": [
       "gen1recomp"
     ],
-    "target": "Gen1Recomp \u00b7 R/B/Y",
+    "target": "Gen1Recomp · R/B/Y",
     "summary": "Adds native HUD colors, slim experience progress, caught markers, and compact status and level labels.",
     "fileUrl": "https://github.com/piftee/gen1recomp-battle-info-hud/releases/download/v0.8.5/Battle-Info-HUD-0.8.5.zip",
     "fileName": "Battle-Info-HUD-0.8.5.zip",
@@ -51,7 +52,8 @@
     "images": [],
     "modId": "battle_info_hud",
     "fileSizeBytes": 16998,
-    "topic": "UI"
+    "topic": "UI",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "stadium-battle-fx",
@@ -63,7 +65,7 @@
     "compatibility": [
       "gen1recomp"
     ],
-    "target": "Gen1Recomp \u00b7 R/B/Y",
+    "target": "Gen1Recomp · R/B/Y",
     "summary": "Adds Stadium-inspired battle effects, portraits, and appearances while importing required source data from the player's own cartridge dump.",
     "fileUrl": "https://github.com/anxiousintrovert/StadiumBattleFX/releases/download/v2.1.7/STADIUM_BATTLE_FX-2.1.7.zip",
     "fileName": "STADIUM_BATTLE_FX-2.1.7.zip",
@@ -78,7 +80,8 @@
     "images": [],
     "modId": "STADIUM_BATTLE_FX",
     "fileSizeBytes": 359093,
-    "topic": "ART"
+    "topic": "ART",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "pokeball-colors",
@@ -92,7 +95,7 @@
       "gen2recomp"
     ],
     "target": "Gen1Recomp + Gen2Recomp",
-    "summary": "Adds per-ball colors to battle tosses and the Pok\u00e9mon Center healing machine in Red, Blue, Yellow, and Gold.",
+    "summary": "Adds per-ball colors to battle tosses and the Pokémon Center healing machine in Red, Blue, Yellow, and Gold.",
     "fileUrl": "https://github.com/mistermiracle3036/Pokeball-Colors/releases/download/v0.1.27/pokeball_colors-0.1.27.zip",
     "fileName": "pokeball_colors-0.1.27.zip",
     "fileSize": "32.6 KB",
@@ -106,7 +109,8 @@
     "images": [],
     "modId": "pokeball_colors",
     "fileSizeBytes": 33407,
-    "topic": "ART"
+    "topic": "ART",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "indigo-plateau-conference",
@@ -118,8 +122,8 @@
     "compatibility": [
       "gen2recomp"
     ],
-    "target": "Gen2Recomp \u00b7 Gold",
-    "summary": "Turns five Pok\u00e9mon Center battle rooms into a repeatable four-round tournament circuit with 39 challengers.",
+    "target": "Gen2Recomp · Gold",
+    "summary": "Turns five Pokémon Center battle rooms into a repeatable four-round tournament circuit with 39 challengers.",
     "fileUrl": "https://github.com/mistermiracle3036/Indigo-Plateau-Conference/releases/download/v1.0.2/indigo_conference-1.0.2.zip",
     "fileName": "indigo_conference-1.0.2.zip",
     "fileSize": "55.0 KB",
@@ -133,7 +137,8 @@
     "images": [],
     "modId": "indigo_conference",
     "fileSizeBytes": 56357,
-    "topic": "CONTENT"
+    "topic": "CONTENT",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-plus-randomizer-nuzlocke",
@@ -145,7 +150,7 @@
     "compatibility": [
       "gen2recomp"
     ],
-    "target": "Gen2Recomp \u00b7 Gold",
+    "target": "Gen2Recomp · Gold",
     "summary": "An all-in-one Gold randomizer with strictly enforced Nuzlocke encounters, level caps, permadeath, and run-ending wipes.",
     "fileUrl": "https://github.com/Sqtls/gen1recomp-plus-randomizer-nuzlocke/releases/download/v0.28.1/gen1recomp-plus-randomizer-nuzlocke-0.28.1.zip",
     "fileName": "gen1recomp-plus-randomizer-nuzlocke-0.28.1.zip",
@@ -160,11 +165,12 @@
     "images": [],
     "modId": "gen1recomp_plus_randomizer_nuzlocke",
     "fileSizeBytes": 116341,
-    "topic": "GAMEPLAY"
+    "topic": "GAMEPLAY",
+    "manifestPath": "gen1recomp-plus-randomizer-nuzlocke-0.28.1/manifest.json"
   },
   {
     "id": "pokemon-red-ptbr",
-    "title": "Pok\u00e9mon Red PT-BR",
+    "title": "Pokémon Red PT-BR",
     "creator": "Gabriel Sojo",
     "version": "1.0.0",
     "releaseDate": "2026-08-03",
@@ -172,7 +178,7 @@
     "compatibility": [
       "gen1recomp"
     ],
-    "target": "Gen1Recomp \u00b7 Red",
+    "target": "Gen1Recomp · Red",
     "summary": "A complete Brazilian Portuguese translation with accented text and 3D-mod support.",
     "fileUrl": "https://github.com/bielsojo/red-ptbr-gen1recomp/releases/download/v1.0.0/red_ptbr_golpes_ingles.zip",
     "fileName": "red_ptbr_golpes_ingles.zip",
@@ -188,7 +194,8 @@
     "images": [],
     "modId": "red_ptbr_golpes_ingles",
     "topic": "UI",
-    "licenseText": "MIT License\n\nCopyright (c) 2026 Sojo & Equipe Gen1PT (Tradu\u00e7\u00e3o baseada no patch IPS de Hyd~Tradu\u00e7\u00f5es)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+    "licenseText": "MIT License\n\nCopyright (c) 2026 Sojo & Equipe Gen1PT (Tradução baseada no patch IPS de Hyd~Traduções)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "button-shortcuts",
@@ -215,7 +222,8 @@
     "containsRom": false,
     "images": [],
     "modId": "button-shortcuts",
-    "topic": "QOL"
+    "topic": "QOL",
+    "manifestPath": "button-shortcuts/manifest.json"
   },
   {
     "id": "quick-map",
@@ -242,7 +250,8 @@
     "containsRom": false,
     "images": [],
     "modId": "quickmap",
-    "topic": "QOL"
+    "topic": "QOL",
+    "manifestPath": "quickmap/manifest.json"
   },
   {
     "id": "rename-character",
@@ -269,7 +278,8 @@
     "containsRom": false,
     "images": [],
     "modId": "rename-character",
-    "topic": "QOL"
+    "topic": "QOL",
+    "manifestPath": "rename-character/manifest.json"
   },
   {
     "id": "too-many-balls",
@@ -282,7 +292,7 @@
       "gen1recomp"
     ],
     "target": "Gen1Recomp",
-    "summary": "Expands the available Pok\u00e9 Ball selection and related catching options.",
+    "summary": "Expands the available Poké Ball selection and related catching options.",
     "fileUrl": "https://github.com/mistermiracle3036/Too-Many-Balls/releases/download/v0.6.1/kanto_balls-0.6.1.zip",
     "fileName": "kanto_balls-0.6.1.zip",
     "fileSize": "65.5 KB",
@@ -297,7 +307,8 @@
     "images": [],
     "modId": "kanto_balls",
     "topic": "GAMEPLAY",
-    "licenseText": "MIT License\n\nCopyright (c) 2026 Mister Miracle\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+    "licenseText": "MIT License\n\nCopyright (c) 2026 Mister Miracle\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "bottomless-bag",
@@ -324,11 +335,12 @@
     "containsRom": false,
     "images": [],
     "modId": "erilab_bottomless_bag",
-    "topic": "QOL"
+    "topic": "QOL",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "shiny-pokemon",
-    "title": "Shiny Pok\u00e9mon",
+    "title": "Shiny Pokémon",
     "creator": "masterwebx",
     "version": "1.0.1",
     "releaseDate": "2026-08-02",
@@ -337,7 +349,7 @@
       "gen1recomp"
     ],
     "target": "Gen1Recomp",
-    "summary": "Introduces shiny Pok\u00e9mon encounters and their alternate visual treatment.",
+    "summary": "Introduces shiny Pokémon encounters and their alternate visual treatment.",
     "fileUrl": "https://github.com/masterwebx/gen1recomp-shiny-pokemon/releases/download/v1.0.1/SHINY_POKEMON-1.0.1.zip",
     "fileName": "SHINY_POKEMON-1.0.1.zip",
     "fileSize": "23.2 KB",
@@ -351,11 +363,12 @@
     "containsRom": false,
     "images": [],
     "modId": "SHINY_POKEMON",
-    "topic": "GAMEPLAY"
+    "topic": "GAMEPLAY",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "all-pokemon-catchable",
-    "title": "All Pok\u00e9mon Catchable 151",
+    "title": "All Pokémon Catchable 151",
     "creator": "wowabox",
     "version": "0.3.3",
     "releaseDate": "2026-08-03",
@@ -364,7 +377,7 @@
       "gen1recomp"
     ],
     "target": "Gen1Recomp",
-    "summary": "Expands Kanto encounters so all 151 original Pok\u00e9mon can be obtained without trading.",
+    "summary": "Expands Kanto encounters so all 151 original Pokémon can be obtained without trading.",
     "fileUrl": "https://github.com/wowabox/All_Pokemon_Catchable_151_Mod/releases/download/v0.3.3/All_Pokemon_Catchable_151_Mod_V0.3.3.zip",
     "fileName": "All_Pokemon_Catchable_151_Mod_V0.3.3.zip",
     "fileSize": "105.2 KB",
@@ -378,7 +391,8 @@
     "containsRom": false,
     "images": [],
     "modId": "all_pokemon_catchable_151_mod",
-    "topic": "GAMEPLAY"
+    "topic": "GAMEPLAY",
+    "manifestPath": "All_Pokemon_Catchable_151_Mod/manifest.json"
   },
   {
     "id": "typed-move-colors",
@@ -405,7 +419,8 @@
     "containsRom": false,
     "images": [],
     "modId": "typed_move_colors",
-    "topic": "UI"
+    "topic": "UI",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "modern-party-ui",
@@ -432,7 +447,8 @@
     "containsRom": false,
     "images": [],
     "modId": "modern_party_ui",
-    "topic": "UI"
+    "topic": "UI",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "dex-radar",
@@ -445,7 +461,7 @@
       "gen1recomp"
     ],
     "target": "Gen1Recomp",
-    "summary": "Lists the wild Pok\u00e9mon available on the current map across grass, water, and fishing encounters.",
+    "summary": "Lists the wild Pokémon available on the current map across grass, water, and fishing encounters.",
     "fileUrl": "https://github.com/Zetto22/dex_radar/releases/download/v1.2.0/dex_radar-1.2.0.zip",
     "fileName": "dex_radar-1.2.0.zip",
     "fileSize": "22.0 KB",
@@ -459,7 +475,8 @@
     "containsRom": false,
     "images": [],
     "modId": "dex_radar",
-    "topic": "UI"
+    "topic": "UI",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen2-online",
@@ -486,7 +503,8 @@
     "containsRom": false,
     "images": [],
     "modId": "gen2online",
-    "topic": "GAMEPLAY"
+    "topic": "GAMEPLAY",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-no-exp-challenge",
@@ -514,7 +532,8 @@
     "modId": "no_exp_challenge",
     "fileSizeBytes": 2103,
     "topic": "GAMEPLAY",
-    "description": "Disables battle EXP gain."
+    "description": "Disables battle EXP gain.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-access-pc-anywhere",
@@ -542,7 +561,8 @@
     "modId": "ACCESS_PC_ANYWHERE",
     "fileSizeBytes": 3584,
     "topic": "GAMEPLAY",
-    "description": "Start menu PC. OVERWORLD ONLY (default ON) hides PC inside buildings."
+    "description": "Start menu PC. OVERWORLD ONLY (default ON) hides PC inside buildings.",
+    "manifestPath": "ACCESS_PC_ANYWHERE/manifest.json"
   },
   {
     "id": "gen1recomp-auto-battle",
@@ -571,7 +591,8 @@
     "fileSizeBytes": 13412,
     "topic": "GAMEPLAY",
     "description": "Auto-picks your move each battle turn: the most type-effective damaging move, falling back to the NPC AI when there's no good hit. Shows an AUTO badge since the FIGHT menu no longer opens. Tap the D-pad during the short window to take manual control for that turn.",
-    "licenseText": "MIT License\n\nCopyright (c) 2026 eduardocalafell\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+    "licenseText": "MIT License\n\nCopyright (c) 2026 eduardocalafell\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-bag-sort",
@@ -600,7 +621,8 @@
     "fileSizeBytes": 3761,
     "topic": "QOL",
     "description": "Sort your bag by name, quantity, type, or how recently you got each item. Press START in the bag.",
-    "licenseText": "MIT License\n\nCopyright (c) 2026 Eduardo Calafell (eduardocalafell)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+    "licenseText": "MIT License\n\nCopyright (c) 2026 Eduardo Calafell (eduardocalafell)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-battle-move-info",
@@ -628,7 +650,8 @@
     "modId": "MOVE_MATCHUP",
     "fileSizeBytes": 9728,
     "topic": "GAMEPLAY",
-    "description": "Type matchup markers on move select. Left/Right for power."
+    "description": "Type matchup markers on move select. Left/Right for power.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-better-battle-ui",
@@ -656,8 +679,9 @@
     "modId": "better_battle_ui",
     "fileSizeBytes": 10101,
     "topic": "UI",
-    "description": "A battle UI revamp: shows the enemy's hidden HP and type(s), a move-effectiveness hint, stat-stage changes and a catch-chance estimate \u2014 with frosted panels and colored accents that also look right in the Dramatic Shape voxel battle.",
-    "licenseText": "MIT License\n\nCopyright (c) 2026 Eduardo Calafell\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+    "description": "A battle UI revamp: shows the enemy's hidden HP and type(s), a move-effectiveness hint, stat-stage changes and a catch-chance estimate — with frosted panels and colored accents that also look right in the Dramatic Shape voxel battle.",
+    "licenseText": "MIT License\n\nCopyright (c) 2026 Eduardo Calafell\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-bike-anywhere",
@@ -686,7 +710,8 @@
     "fileSizeBytes": 7705,
     "topic": "QOL",
     "description": "Ride the BICYCLE on any map (no more \"No cycling allowed here\") and press B on the keyboard to hop on or off the bike instantly, without opening the bag.",
-    "licenseText": "MIT License\n\nCopyright (c) 2026 eduardocalafell\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+    "licenseText": "MIT License\n\nCopyright (c) 2026 eduardocalafell\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-blackjack-corner",
@@ -714,7 +739,8 @@
     "modId": "blackjack_corner",
     "fileSizeBytes": 179724,
     "topic": "GAMEPLAY",
-    "description": "Adds Gamble Mode, a casino in every Kanto city, two-way coin exchange, local prize counters, High Roller progression, Rocket credit, an underground battle arena, eight games, random starters, themed gym cases, CASE ACE battles, pawning, shinies, and rare prizes."
+    "description": "Adds Gamble Mode, a casino in every Kanto city, two-way coin exchange, local prize counters, High Roller progression, Rocket credit, an underground battle arena, eight games, random starters, themed gym cases, CASE ACE battles, pawning, shinies, and rare prizes.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-childhood-myths-are-real",
@@ -742,7 +768,8 @@
     "modId": "childhood_myths_are_real",
     "fileSizeBytes": 15532,
     "topic": "GAMEPLAY",
-    "description": "The playground legends, made true: Mew under the truck, a ghost in the tower that can be caught, a garden behind Bill's house, and an S.S. Anne that comes back. Nothing announces itself -- the conditions are the ones the rumour gave."
+    "description": "The playground legends, made true: Mew under the truck, a ghost in the tower that can be caught, a garden behind Bill's house, and an S.S. Anne that comes back. Nothing announces itself -- the conditions are the ones the rumour gave.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-controller-rumble",
@@ -770,7 +797,8 @@
     "modId": "CONTROLLER_RUMBLE",
     "fileSizeBytes": 15893,
     "topic": "GAMEPLAY",
-    "description": "Controller rumble for battles, menus, and story beats."
+    "description": "Controller rumble for battles, menus, and story beats.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-damage-numbers",
@@ -799,7 +827,8 @@
     "fileSizeBytes": 6306,
     "topic": "UI",
     "description": "RPG-style floating damage numbers over the Pokemon that got hit. Reads the actual HP removed from each move.",
-    "licenseText": "MIT License\n\nCopyright (c) 2026 Eduardo Calafell (eduardocalafell)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+    "licenseText": "MIT License\n\nCopyright (c) 2026 Eduardo Calafell (eduardocalafell)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "wills-mod",
@@ -827,11 +856,12 @@
     "modId": "wills_mod",
     "fileSizeBytes": 13492,
     "topic": "QOL",
-    "description": "A map-first wild-encounter guide (PKMN MAP) with a walking HUD and exact encounter tables."
+    "description": "A map-first wild-encounter guide (PKMN MAP) with a walking HUD and exact encounter tables.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-fakemons",
-    "title": "Fak\u00e9mons",
+    "title": "Fakémons",
     "creator": "eduardocalafell",
     "version": "0.1.1",
     "releaseDate": "2026-08-08",
@@ -855,8 +885,9 @@
     "modId": "fakemons",
     "fileSizeBytes": 18702,
     "topic": "CONTENT",
-    "description": "Adds original fan-made Pok\u00e9mon (Fak\u00e9mons) as real catchable species \u2014 full stats, moves, learnsets, dex entries and art \u2014 spawning in themed habitats. Currently: Cindrake (#152, Fire/Dragon).",
-    "licenseText": "MIT License\n\nCopyright (c) 2026 eduardocalafell\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+    "description": "Adds original fan-made Pokémon (Fakémons) as real catchable species — full stats, moves, learnsets, dex entries and art — spawning in themed habitats. Currently: Cindrake (#152, Fire/Dragon).",
+    "licenseText": "MIT License\n\nCopyright (c) 2026 eduardocalafell\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-gen3-boxes",
@@ -885,7 +916,8 @@
     "modId": "gen3_box",
     "fileSizeBytes": 45910,
     "topic": "UI",
-    "description": "A Ruby/Sapphire-style storage screen over Gen 1's twelve boxes of twenty: a visible 5x4 grid drawn from the per-species battle pics, a cursor that picks a Pokemon up and puts it down, swapping on an occupied slot, and SELECT to cross between the box and the party. Search every box by species, type, or mark with FIND; sort by dex, level, name, or type with UNDO; mark Pokemon with the four Gen 3 symbols; give each box a custom name up to eight glyphs and pick a wallpaper from six patterns; and hear a cry every time a Pokemon lands. BOX HEALS rests everything in storage when you close the screen. GRID BIG doubles the surface to 320x288, showing battle pics at full size and giving each Pokemon its own species palette. OW SPRITES (on by default) draws Wilds of Kanto's overworld sprites in the CLASSIC grid when that mod is installed. It runs on Gold as well as on Red, Blue and Yellow: Gen 2's fourteen boxes, its split Special, its own summary screen and its MAIL rules are all honoured."
+    "description": "A Ruby/Sapphire-style storage screen over Gen 1's twelve boxes of twenty: a visible 5x4 grid drawn from the per-species battle pics, a cursor that picks a Pokemon up and puts it down, swapping on an occupied slot, and SELECT to cross between the box and the party. Search every box by species, type, or mark with FIND; sort by dex, level, name, or type with UNDO; mark Pokemon with the four Gen 3 symbols; give each box a custom name up to eight glyphs and pick a wallpaper from six patterns; and hear a cry every time a Pokemon lands. BOX HEALS rests everything in storage when you close the screen. GRID BIG doubles the surface to 320x288, showing battle pics at full size and giving each Pokemon its own species palette. OW SPRITES (on by default) draws Wilds of Kanto's overworld sprites in the CLASSIC grid when that mod is installed. It runs on Gold as well as on Red, Blue and Yellow: Gen 2's fourteen boxes, its split Special, its own summary screen and its MAIL rules are all honoured.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-gen3-dex",
@@ -914,7 +946,8 @@
     "modId": "gen3_dex",
     "fileSizeBytes": 25092,
     "topic": "UI",
-    "description": "The Pokedex as a grid of pictures instead of a list of names. Owned species wear their own palette -- twenty-one colours at once where the Game Boy could show four -- seen-but-uncaught are dimmed, and the rest are blanks. SELECT filters to OWNED, MISSING or SEEN ONLY. A offers DATA / CRY / AREA like the vanilla list -- AREA is the engine's own nest map, which blinks every place the species lives. DATA goes to the engine's own species page, so Useful Dex's extra pages still work. Runs on Gold too: fourteen rows of Johto instead of stopping at Mew, the caught half of the dex read where Gold keeps it, DATA/AREA routed to Gold's own dex entry, and GRID BIG now draws its full 320x288 grid there as well, through Gold's own widescreen contract -- without the per-species palette zones, which stay a Super Game Boy trick Gold has no use for."
+    "description": "The Pokedex as a grid of pictures instead of a list of names. Owned species wear their own palette -- twenty-one colours at once where the Game Boy could show four -- seen-but-uncaught are dimmed, and the rest are blanks. SELECT filters to OWNED, MISSING or SEEN ONLY. A offers DATA / CRY / AREA like the vanilla list -- AREA is the engine's own nest map, which blinks every place the species lives. DATA goes to the engine's own species page, so Useful Dex's extra pages still work. Runs on Gold too: fourteen rows of Johto instead of stopping at Mew, the caught half of the dex read where Gold keeps it, DATA/AREA routed to Gold's own dex entry, and GRID BIG now draws its full 320x288 grid there as well, through Gold's own widescreen contract -- without the per-species palette zones, which stay a Super Game Boy trick Gold has no use for.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-groovy-palette-frames",
@@ -943,7 +976,8 @@
     "modId": "groovy_palette",
     "fileSizeBytes": 34674,
     "topic": "ART",
-    "description": "Thirty more entries on the COLORS row -- Amiga Workbench, the C64 boot screen, a Virtual Boy, rainbow, fuchsia, vaporwave -- plus eight new borders for every text box and menu. Press A on OPTION -> COLORS (or, on Gold, OPTION -> COLOR) and the menu lifts off the game: the palette name and nothing else, left and right to walk the list, previewed on the running game. USE ADVANCED rides the engine's own per-tile colorization instead of replacing it -- the pokered-gbc pack on Red/Blue/Yellow, Gold's own GBC palettes on Gold -- so a palette recolours dozens of colours on screen rather than four. The FRAME half works identically on both generations, through the same Font.drawBox both draw their boxes with; the palette half now does too, riding Gold's own GbcPalette.resolve the same way it rides PaletteFX.effectiveColors on Gen 1. The one gap: Gold's title screen and Gold/Silver boot cinema keep their own pre-rendered art (the same boundary its DMG and CLASSIC color modes already live with) and pick up the scheme from the first menu or map onward."
+    "description": "Thirty more entries on the COLORS row -- Amiga Workbench, the C64 boot screen, a Virtual Boy, rainbow, fuchsia, vaporwave -- plus eight new borders for every text box and menu. Press A on OPTION -> COLORS (or, on Gold, OPTION -> COLOR) and the menu lifts off the game: the palette name and nothing else, left and right to walk the list, previewed on the running game. USE ADVANCED rides the engine's own per-tile colorization instead of replacing it -- the pokered-gbc pack on Red/Blue/Yellow, Gold's own GBC palettes on Gold -- so a palette recolours dozens of colours on screen rather than four. The FRAME half works identically on both generations, through the same Font.drawBox both draw their boxes with; the palette half now does too, riding Gold's own GbcPalette.resolve the same way it rides PaletteFX.effectiveColors on Gen 1. The one gap: Gold's title screen and Gold/Silver boot cinema keep their own pre-rendered art (the same boundary its DMG and CLASSIC color modes already live with) and pick up the scheme from the first menu or map onward.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-heal-anywhere",
@@ -971,7 +1005,8 @@
     "modId": "HEAL_ANYWHERE",
     "fileSizeBytes": 6296,
     "topic": "GAMEPLAY",
-    "description": "Start menu heal; cost scales with badges and uses. Nurse resets. Spawns a Center machine in front of you."
+    "description": "Start menu heal; cost scales with badges and uses. Nurse resets. Spawns a Center machine in front of you.",
+    "manifestPath": "HEAL_ANYWHERE/manifest.json"
   },
   {
     "id": "kanto-gear",
@@ -1001,7 +1036,8 @@
     "fileSizeBytes": 51466,
     "topic": "UI",
     "description": "Flexible companion UI for Gen 1 and Pokemon Gold on single- and dual-screen Gen1Recomp hosts.",
-    "licenseText": "MIT License\n\nCopyright (c) 2026 AverageConsumer\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+    "licenseText": "MIT License\n\nCopyright (c) 2026 AverageConsumer\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "mew-under-the-truck",
@@ -1029,7 +1065,8 @@
     "modId": "mew_under_the_truck",
     "fileSizeBytes": 239963,
     "topic": "CONTENT",
-    "description": "The schoolyard rumour, made real. Get back to the dock after the S.S. Anne sails, use STRENGTH on the truck, and something stirs underneath."
+    "description": "The schoolyard rumour, made real. Get back to the dock after the S.S. Anne sails, use STRENGTH on the truck, and something stirs underneath.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-minimap",
@@ -1058,7 +1095,8 @@
     "fileSizeBytes": 4441,
     "topic": "UI",
     "description": "A toggleable minimap of the map you're on, opened with the M key: walls, paths, water, grass and exits, with your position and the map's name (e.g. ROUTE 1).",
-    "licenseText": "MIT License\n\nCopyright (c) 2026 eduardocalafell\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+    "licenseText": "MIT License\n\nCopyright (c) 2026 eduardocalafell\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-modern-dialog",
@@ -1087,7 +1125,8 @@
     "fileSizeBytes": 7754,
     "topic": "UI",
     "description": "Modern rounded dialogue boxes with a soft shadow, optional translucency, size presets, and a speaker-name header. Restyles menus too.",
-    "licenseText": "MIT License\n\nCopyright (c) 2026 Eduardo Calafell (eduardocalafell)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+    "licenseText": "MIT License\n\nCopyright (c) 2026 Eduardo Calafell (eduardocalafell)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-modern-johto",
@@ -1115,7 +1154,8 @@
     "modId": "modern_johto",
     "fileSizeBytes": 17153,
     "topic": "GAMEPLAY",
-    "description": "The Gen 4 physical/special split for Pokemon Gold, decided per move instead of per type -- so Crunch comes off Attack, Shadow Ball off Special Attack, and Gyarados finally throws Hydro Pump off the stat it was never meant to use. Gold already splits Special into two stats, which is what makes the per-move category the real Gen 4 change here rather than the half-measure it is on a game with one Special. Now also an AI toggle: a trainer class that never carries the TYPES bit reads type effectiveness anyway, through a second ai_classes layer that steps aside for any class Gold already made type-aware. Both toggles off by default, because both change the balance. The Gen 2 counterpart of Modern Kanto, which stays where it is: five of that mod's six pieces have nothing to fix on Gold."
+    "description": "The Gen 4 physical/special split for Pokemon Gold, decided per move instead of per type -- so Crunch comes off Attack, Shadow Ball off Special Attack, and Gyarados finally throws Hydro Pump off the stat it was never meant to use. Gold already splits Special into two stats, which is what makes the per-move category the real Gen 4 change here rather than the half-measure it is on a game with one Special. Now also an AI toggle: a trainer class that never carries the TYPES bit reads type effectiveness anyway, through a second ai_classes layer that steps aside for any class Gold already made type-aware. Both toggles off by default, because both change the balance. The Gen 2 counterpart of Modern Kanto, which stays where it is: five of that mod's six pieces have nothing to fix on Gold.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-modern-kanto",
@@ -1143,7 +1183,8 @@
     "modId": "modern_kanto",
     "fileSizeBytes": 18663,
     "topic": "GAMEPLAY",
-    "description": "BETA. Six changes that each answer the same complaint about Gen 1: the Gen 4 physical/special split as per-move data, the four type-chart rows Gen 2 corrected (including the Ghost-does-nothing-to-Psychic bug), a ruleset that fixes five battle rules Gen 1 got wrong by accident (the 1/256 miss, Focus Energy quartering crits, crits ignoring stat stages, the enemy's free PP, Hyper Beam's missing recharge), the player-only badge stat boost as a switch, an AI type pass that multiplies dual types out instead of reading one row, and an Atlas screen for what lives where and what you still need. Every piece is separately switchable; the balance-changing ones are off by default."
+    "description": "BETA. Six changes that each answer the same complaint about Gen 1: the Gen 4 physical/special split as per-move data, the four type-chart rows Gen 2 corrected (including the Ghost-does-nothing-to-Psychic bug), a ruleset that fixes five battle rules Gen 1 got wrong by accident (the 1/256 miss, Focus Energy quartering crits, crits ignoring stat stages, the enemy's free PP, Hyper Beam's missing recharge), the player-only badge stat boost as a switch, an AI type pass that multiplies dual types out instead of reading one row, and an Atlas screen for what lives where and what you still need. Every piece is separately switchable; the balance-changing ones are off by default.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "move-descriptions",
@@ -1171,7 +1212,8 @@
     "modId": "move_descriptions",
     "fileSizeBytes": 9258,
     "topic": "UI",
-    "description": "Press START on a move to see what it does. Gen 1 never told you; Gen 2 did. Battle, status, learning, TMs and HMs."
+    "description": "Press START on a move to see what it does. Gen 1 never told you; Gen 2 did. Battle, status, learning, TMs and HMs.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-multi-save-slots",
@@ -1199,7 +1241,8 @@
     "modId": "MULTI_SAVE_SLOTS",
     "fileSizeBytes": 4910,
     "topic": "GAMEPLAY",
-    "description": "CONTINUE and SAVE pick a slot. NEW SAVE writes immediately. Delete removes the slot."
+    "description": "CONTINUE and SAVE pick a slot. NEW SAVE writes immediately. Delete removes the slot.",
+    "manifestPath": "MULTI_SAVE_SLOTS/manifest.json"
   },
   {
     "id": "gen1recomp-music-player",
@@ -1227,7 +1270,8 @@
     "modId": "MUSIC_PLAYER",
     "fileSizeBytes": 6508,
     "topic": "AUDIO",
-    "description": "SELECT+A opens the player. START favorites; SELECT+START plays the queue."
+    "description": "SELECT+A opens the player. START favorites; SELECT+START plays the queue.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "pokemon-snag",
@@ -1256,7 +1300,8 @@
     "modId": "snag_quest",
     "fileSizeBytes": 108040,
     "topic": "GAMEPLAY",
-    "description": "Steal Pokemon from other trainers with the SNAG BALL. It works in trainer battles, so any Pokemon an opponent sends out is one you can take. On Red, beat the TEAM ROCKET recruiter at Nugget Bridge to earn your first, then fence stolen Pokemon to black-market buyers across Kanto. On Gold, a sailor in Cherrygrove City starts you off and brokers in Goldenrod and Ecruteak hand out contracts. Quest System optional, for a journal entry."
+    "description": "Steal Pokemon from other trainers with the SNAG BALL. It works in trainer battles, so any Pokemon an opponent sends out is one you can take. On Red, beat the TEAM ROCKET recruiter at Nugget Bridge to earn your first, then fence stolen Pokemon to black-market buyers across Kanto. On Gold, a sailor in Cherrygrove City starts you off and brokers in Goldenrod and Ecruteak hand out contracts. Quest System optional, for a journal entry.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "quest-menu",
@@ -1286,7 +1331,8 @@
     "fileSizeBytes": 18620,
     "topic": "UI",
     "description": "A side-quest journal and immersive NPC trade tracker for Red, Blue, Yellow and Gold.",
-    "licenseText": "MIT License\n\nCopyright (c) 2026 TanukiTooks\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+    "licenseText": "MIT License\n\nCopyright (c) 2026 TanukiTooks\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-run-mode",
@@ -1314,7 +1360,8 @@
     "modId": "RUN_MODE",
     "fileSizeBytes": 5876,
     "topic": "QOL",
-    "description": "Hold or toggle B to run on the overworld. Open RUN MODE in OPTIONS."
+    "description": "Hold or toggle B to run on the overworld. Open RUN MODE in OPTIONS.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-running-shoes",
@@ -1343,7 +1390,8 @@
     "modId": "running_shoes",
     "fileSizeBytes": 43680,
     "topic": "QOL",
-    "description": "Hold B to walk faster, at a speed you pick: x1.5, x2, x3 or x4. Rides the engine's own movement.speed hook, whose comment names running shoes as the reason it exists. A run can leave a trail off your heels -- smoke, flames or lightning -- reaching about three and a half cells back; it can CUT the tall grass you run across, one clod at a time, the way the CUT move cuts it, so that grass has no Pokemon left in it; and it can carry you through tall grass without ever starting a wild battle. Every one of those has an off switch, the last two ship off, and with all three left alone nothing but the duration of a step changes. Optional boosts for the bicycle and for surfing too. Runs on Pokemon Gold too, and as of 1.6.0 every row works there: RUN SPEED, BOOST BIKE, BOOST SURF, SAFE GRASS, CUT GRASS and RUN FX all cross over. 1.7.0 adds the Dramatic Shape voxel mod's first- and third-person cameras, which replace the grid walk with a continuous one and used to leave every row of this mod silent; the speed, CUT GRASS and SAFE GRASS all work inside them now. RUN FX still cannot: a 2D overlay cannot follow a 3D camera."
+    "description": "Hold B to walk faster, at a speed you pick: x1.5, x2, x3 or x4. Rides the engine's own movement.speed hook, whose comment names running shoes as the reason it exists. A run can leave a trail off your heels -- smoke, flames or lightning -- reaching about three and a half cells back; it can CUT the tall grass you run across, one clod at a time, the way the CUT move cuts it, so that grass has no Pokemon left in it; and it can carry you through tall grass without ever starting a wild battle. Every one of those has an off switch, the last two ship off, and with all three left alone nothing but the duration of a step changes. Optional boosts for the bicycle and for surfing too. Runs on Pokemon Gold too, and as of 1.6.0 every row works there: RUN SPEED, BOOST BIKE, BOOST SURF, SAFE GRASS, CUT GRASS and RUN FX all cross over. 1.7.0 adds the Dramatic Shape voxel mod's first- and third-person cameras, which replace the grid walk with a continuous one and used to leave every row of this mod silent; the speed, CUT GRASS and SAFE GRASS all work inside them now. RUN FX still cannot: a 2D overlay cannot follow a 3D camera.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-savestates",
@@ -1371,7 +1419,8 @@
     "modId": "savestates",
     "fileSizeBytes": 68534,
     "topic": "QOL",
-    "description": "Native rolling quicksaves, autosaves, permanent slots, and recovery checkpoints."
+    "description": "Native rolling quicksaves, autosaves, permanent slots, and recovery checkpoints.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-shiny-starters-gifts",
@@ -1399,7 +1448,8 @@
     "modId": "shiny_starters_gifts",
     "fileSizeBytes": 3652,
     "topic": "ART",
-    "description": "Force your starter (and optionally all story gifts) to be shiny."
+    "description": "Force your starter (and optionally all story gifts) to be shiny.",
+    "manifestPath": "shiny_starters_gifts/manifest.json"
   },
   {
     "id": "gen1recomp-switch-advisor",
@@ -1427,7 +1477,8 @@
     "modId": "SWITCH_ADVISOR",
     "fileSizeBytes": 18696,
     "topic": "QOL",
-    "description": "Grades every party mon against the foe on the battle switch screen, and sends caught POKeMON straight to the party with no nickname prompt."
+    "description": "Grades every party mon against the foe on the battle switch screen, and sends caught POKeMON straight to the party with no nickname prompt.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-buttonmash",
@@ -1456,7 +1507,8 @@
     "fileSizeBytes": 15709,
     "topic": "GAMEPLAY",
     "description": "The playground legend, made real: working your technique while the ball wobbles can flip a break-free into a catch. Pick your ritual -- mash A+B, hold Down and mash B, hold Up+A, tap A on the beat, hold B and rock the d-pad, or build your own. Vanilla odds are untouched -- it only ever redeems a throw that already gripped and shook.",
-    "licenseText": "MIT License\n\nCopyright (c) 2026 Myles Resnick\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+    "licenseText": "MIT License\n\nCopyright (c) 2026 Myles Resnick\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "voxel-ascendant",
@@ -1484,7 +1536,8 @@
     "modId": "VOXEL_ASCENDANT",
     "fileSizeBytes": 474982,
     "topic": "ART",
-    "description": "A sandbox-safe voxel overworld and native-card 3D battle renderer for Gen1Recomp 0.1.90."
+    "description": "A sandbox-safe voxel overworld and native-card 3D battle renderer for Gen1Recomp 0.1.90.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-bag-wrap",
@@ -1512,7 +1565,8 @@
     "modId": "erilab_bag_wrap",
     "fileSizeBytes": 3252,
     "topic": "UI",
-    "description": "Adds circular cursor navigation to the item bag."
+    "description": "Adds circular cursor navigation to the item bag.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-minimal-cheats",
@@ -1540,7 +1594,8 @@
     "modId": "minimal_cheats",
     "fileSizeBytes": 111641,
     "topic": "GAMEPLAY",
-    "description": "A modular single-player overhaul with cheats, all 151 encounters, storage, field tools, Free Fly, movement, display, and optional travel-aware followers. Gameplay changes are disabled during online/link PvP."
+    "description": "A modular single-player overhaul with cheats, all 151 encounters, storage, field tools, Free Fly, movement, display, and optional travel-aware followers. Gameplay changes are disabled during online/link PvP.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "non-binary-mode",
@@ -1568,7 +1623,8 @@
     "modId": "non-binary-mode",
     "fileSizeBytes": 5294,
     "topic": "CONTENT",
-    "description": "A simple text mod that re-genders any dialogue that portrays the MC as male."
+    "description": "A simple text mod that re-genders any dialogue that portrays the MC as male.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "battle-cinematics-stadium-camera",
@@ -1597,8 +1653,9 @@
     "modId": "BATTLE_CINEMATICS",
     "fileSizeBytes": 119988,
     "topic": "ART",
-    "description": "Battle Cinematics v1.0.7 \u2014 full current backend support. Adds PotatoVoxel and Voxel Ascendant live 3D camera-host compatibility while retaining v1.0.6 Actor Presentation Bounds, one-time Intro migrations, and Gold/Randy integration.",
-    "licenseText": "MIT License\n\nCopyright (c) 2026 EnterPlayerOne\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+    "description": "Battle Cinematics v1.0.7 — full current backend support. Adds PotatoVoxel and Voxel Ascendant live 3D camera-host compatibility while retaining v1.0.6 Actor Presentation Bounds, one-time Intro migrations, and Gold/Randy integration.",
+    "licenseText": "MIT License\n\nCopyright (c) 2026 EnterPlayerOne\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "girl-mode",
@@ -1626,7 +1683,8 @@
     "modId": "girl-mode",
     "fileSizeBytes": 5292,
     "topic": "CONTENT",
-    "description": "A simple text mod that re-genders any dialogue that portrays the MC as male."
+    "description": "A simple text mod that re-genders any dialogue that portrays the MC as male.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-infinite-repel",
@@ -1655,7 +1713,8 @@
     "fileSizeBytes": 1129,
     "topic": "QOL",
     "description": "When enabled, wild encounters are blocked until you turn the option off. Compatible with DramaticShapeVoxelMod and other encounter mods.",
-    "licenseText": "MIT License\n\nCopyright (c) 2026 yedidiapery\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+    "licenseText": "MIT License\n\nCopyright (c) 2026 yedidiapery\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+    "manifestPath": "infinite_repel/manifest.json"
   },
   {
     "id": "gen1recomp-battle-exp-bar",
@@ -1683,7 +1742,8 @@
     "modId": "battle_exp_bar",
     "fileSizeBytes": 4521,
     "topic": "UI",
-    "description": "Shows a Gen 3+ style experience bar under the player's battle HP bar."
+    "description": "Shows a Gen 3+ style experience bar under the player's battle HP bar.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-modern-bag-ui",
@@ -1711,7 +1771,8 @@
     "modId": "modern_bag_ui",
     "fileSizeBytes": 17422,
     "topic": "UI",
-    "description": "A responsive, pocket-based Bag with item details and Gen 1 styling."
+    "description": "A responsive, pocket-based Bag with item details and Gen 1 styling.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-settings-hotkeys",
@@ -1739,7 +1800,8 @@
     "modId": "settings_hotkeys",
     "fileSizeBytes": 5147,
     "topic": "UI",
-    "description": "Shows settings hotkeys (1\u20135, F10, \u00b1) on the title screen, with live values and a HOTKEYS menu row."
+    "description": "Shows settings hotkeys (1–5, F10, ±) on the title screen, with live values and a HOTKEYS menu row.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-professor-oak-challenge",
@@ -1767,7 +1829,8 @@
     "modId": "professor_oak_challenge",
     "fileSizeBytes": 16944,
     "topic": "GAMEPLAY",
-    "description": "Oak Challenge (Mewlax RB): area catch HUD + Brock\u2192Misty\u2192Koga\u2192Erika gates. Compatible with current engageTrainer arity."
+    "description": "Oak Challenge (Mewlax RB): area catch HUD + Brock→Misty→Koga→Erika gates. Compatible with current engageTrainer arity.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "its-clefairy",
@@ -1796,7 +1859,8 @@
     "modId": "its-clefairy",
     "fileSizeBytes": 77843,
     "topic": "GAMEPLAY",
-    "description": "Give Pikachu a Moon Stone"
+    "description": "Give Pikachu a Moon Stone",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-terrain-minimap",
@@ -1824,7 +1888,8 @@
     "modId": "terrain_minimap",
     "fileSizeBytes": 1091206,
     "topic": "UI",
-    "description": "A clean, live terrain minimap with facility footprints, field item markers, an area-name caption, and Auto/Always HUD display control."
+    "description": "A clean, live terrain minimap with facility footprints, field item markers, an area-name caption, and Auto/Always HUD display control.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "hiddenstats",
@@ -1853,7 +1918,8 @@
     "fileSizeBytes": 3613,
     "topic": "UI",
     "description": "Reveals each Pokemon's hidden stats on its Summary screen: IVs (converted from DVs, 0-31) and EVs (converted from Stat Exp, 0-255). Works standalone on the native Summary screen, adds a matching page to Gen1 Modern UI when installed, and (once its compatibility hook lands) integrates with Kanto Reforged.",
-    "licenseText": "MIT License\n\nCopyright (c) 2026 VidereJP\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+    "licenseText": "MIT License\n\nCopyright (c) 2026 VidereJP\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+    "manifestPath": "hidden_stats/manifest.json"
   },
   {
     "id": "gen1recomp-trainer-forfeit",
@@ -1881,7 +1947,8 @@
     "modId": "trainer_forfeit",
     "fileSizeBytes": 16035,
     "topic": "GAMEPLAY",
-    "description": "Pay \u00a5200 to forfeit ordinary trainer battles, then safely rematch defeated trainers and all eight Gym Leaders with offline journey-aware dialogue."
+    "description": "Pay ¥200 to forfeit ordinary trainer battles, then safely rematch defeated trainers and all eight Gym Leaders with offline journey-aware dialogue.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "careercard",
@@ -1909,7 +1976,8 @@
     "modId": "career_card",
     "fileSizeBytes": 25133,
     "topic": "GAMEPLAY",
-    "description": "Your mom believes in you, so she sends you money. Earn badges, fill the POKeDEX and meet enough wild POKeMON to get promoted through six sponsors."
+    "description": "Your mom believes in you, so she sends you money. Earn badges, fill the POKeDEX and meet enough wild POKeMON to get promoted through six sponsors.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-lets-go-catch-throw",
@@ -1937,7 +2005,8 @@
     "modId": "LETS_GO_CATCH_THROW",
     "fileSizeBytes": 95889,
     "topic": "GAMEPLAY",
-    "description": "Interactive Let's Go-style wild-battle catching plus R2/L2 overworld throws for Dramaless, Kanto First Person, and optional Wilds integration."
+    "description": "Interactive Let's Go-style wild-battle catching plus R2/L2 overworld throws for Dramaless, Kanto First Person, and optional Wilds integration.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-oaks-spare-starter",
@@ -1965,7 +2034,8 @@
     "modId": "oak_spare_starter",
     "fileSizeBytes": 6707,
     "topic": "GAMEPLAY",
-    "description": "Lets you claim Professor Oak's unchosen level-5 starter after the lab rival battle, provided your party has room."
+    "description": "Lets you claim Professor Oak's unchosen level-5 starter after the lab rival battle, provided your party has room.",
+    "manifestPath": "manifest.json"
   },
   {
     "id": "gen1recomp-voxel-run-bridge",
@@ -1993,6 +2063,7 @@
     "modId": "voxel_run_bridge",
     "fileSizeBytes": 72523,
     "topic": "GAMEPLAY",
-    "description": "Scott's organized gameplay menu: built-in Pack/Pokegear navigation, bag pockets, EXP modes, Trade Stone, trainer forfeits and rematches, Oak's spare starter, B-button running with light head bob, badge-free field moves, gapped land, and physical-Thor dual-screen control."
+    "description": "Scott's organized gameplay menu: built-in Pack/Pokegear navigation, bag pockets, EXP modes, Trade Stone, trainer forfeits and rematches, Oak's spare starter, B-button running with light head bob, badge-free field moves, gapped land, and physical-Thor dual-screen control.",
+    "manifestPath": "manifest.json"
   }
 ]

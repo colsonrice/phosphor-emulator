@@ -36,6 +36,28 @@ test("a complete patch record passes", () => {
   assert.deepEqual(validateRelease(validRelease, 0), []);
 });
 
+test("a mod buried inside a larger package is refused", () => {
+  const mod = {
+    ...validRelease, id: "buried", category: "gen1recomp",
+    compatibility: ["gen1recomp"], fileName: "pak.zip",
+    fileUrl: "https://example.com/pak.zip", modId: "SOMEONE_ELSES_MOD",
+    // The shape that prompted this: a device package carrying an engine, a
+    // game, and a mod somebody else wrote.
+    manifestPath: "game/mods/SOMEONE_ELSES_MOD/manifest.json",
+  };
+  const errors = validateRelease(mod, 0);
+  assert.ok(errors.some((error) => error.includes("directories down")),
+            `expected a depth refusal, got ${JSON.stringify(errors)}`);
+
+  // What `git archive` produces is fine, and is most of the corpus.
+  const nested = { ...mod, manifestPath: "the-mod-1.2.0/manifest.json" };
+  assert.deepEqual(validateRelease(nested, 0), []);
+});
+
+test("a ROM patch needs no manifest path, having no archive to look inside", () => {
+  assert.deepEqual(validateRelease(validRelease, 0), []);
+});
+
 test("ROM images and missing permission are rejected", () => {
   const errors = validateRelease({ ...validRelease, fileName: "game.gbc", permissionEvidenceUrl: "" }, 0);
   assert.ok(errors.some((error) => error.includes("commercial ROM")));
