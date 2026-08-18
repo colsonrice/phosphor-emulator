@@ -75,18 +75,38 @@ test("every entry lands in a declared section and category", async () => {
   }
 });
 
-// The deliberate scope of this week's ship. If ROM hacks or indexed listings
-// come back, this test is the one that should fail and be updated on purpose,
-// rather than the change going out unnoticed.
-test("the published catalog is installable mods only", async () => {
+// The deliberate scope of the ship. If ROM hacks come back, or an indexed
+// listing ever acquires a download, this test is the one that should fail and
+// be updated on purpose, rather than the change going out unnoticed.
+test("the published catalog is mods, installable or linked, and never a ROM hack", async () => {
   const { entries, sections, categories } = await buildManifest();
 
   assert.deepEqual(sections.map((section) => section.id), ["luaMods"]);
   assert.equal(entries.filter((entry) => entry.kind === "romPatch").length, 0);
-  assert.equal(entries.filter((entry) => entry.project).length, 0);
-  assert.ok(entries.every((entry) => entry.download), "every listing must be installable");
-  assert.equal(categories.filter((category) => category.id === "PENDING").length, 0,
-    "no Permission pending shelf when nothing is indexed");
+
+  // Every entry is one thing or the other, never both and never neither. The
+  // app's decoder splits on exactly this, and an entry carrying a download AND
+  // a project would be an install site reached through a link-out card.
+  for (const entry of entries) {
+    const installable = Boolean(entry.download);
+    const indexed = Boolean(entry.project);
+    assert.ok(installable !== indexed,
+      `${entry.id}: must be installable or indexed, not ${installable ? "both" : "neither"}`);
+  }
+
+  const indexed = entries.filter((entry) => entry.project);
+  assert.ok(indexed.length > 0, "the link-out shelf is published");
+  assert.equal(categories.filter((category) => category.id === "PENDING").length, 1,
+    "indexed listings need the shelf they file under");
+
+  // An indexed listing must carry no trace of a file. CATALOG_POLICY draws the
+  // line at redistribution, and a version or a hash on a row nobody can install
+  // is the beginning of pretending otherwise.
+  for (const entry of indexed) {
+    assert.ok(/^https:\/\//.test(entry.project.url), `${entry.id}: link must be HTTPS`);
+    assert.equal(entry.version, undefined, `${entry.id}: an indexed listing has no version`);
+    assert.equal(entry.license, undefined, `${entry.id}: an indexed listing claims no licence`);
+  }
 });
 
 test("every open-license mod carries its licence somewhere", async () => {

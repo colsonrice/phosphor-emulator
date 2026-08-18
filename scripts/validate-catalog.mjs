@@ -2,7 +2,10 @@ import { readFile } from "node:fs/promises";
 
 export const allowedCategories = new Set(["rom-hack", "gen1recomp", "gen2recomp"]);
 export const allowedPermissions = new Set(["open-license", "author-approved"]);
-export const allowedTopics = new Set(["GAMEPLAY", "QOL", "UI", "ART", "CONTENT"]);
+// AUDIO joined when the survey found music mods with nowhere to file: under
+// the old five they landed in "Art & Effects", which is where a player looking
+// for a soundtrack would never think to look.
+export const allowedTopics = new Set(["GAMEPLAY", "QOL", "UI", "ART", "CONTENT", "AUDIO"]);
 export const allowedReviewStatuses = new Set(["permission-needed", "permission-queued", "archive-review"]);
 export const allowedExtensions = [".ips", ".ups", ".bps", ".xdelta", ".vcdiff", ".zip", ".tar.gz"];
 export const forbiddenExtensions = [".gb", ".gbc", ".gba", ".nds", ".3ds", ".cia"];

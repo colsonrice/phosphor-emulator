@@ -37,13 +37,22 @@ const ENGINE_IDS = { gen1recomp: "gen1recomp", gen2recomp: "gen2recomped" };
 const PUBLISH_ROM_HACKS = false;
 
 /// Listings with no downloadable file, shown with a link to the creator instead
-/// of an install button. Off while the catalog is small: the creator's page for
-/// a decomp mod is a source repository whose most obvious download button gives
-/// you an assembly tree, so an indexed listing is a trap more often than a
-/// discovery. The app supports them either way.
-const PUBLISH_INDEXED = false;
+/// of an install button.
+///
+/// This was off while the catalog was small, for a good reason: the creator's
+/// page for a decomp mod is a source repository whose most obvious download
+/// button gives you an assembly tree, so an unqualified link is a trap more
+/// often than a discovery. What answers that is `releasesUrl` — an indexed row
+/// now links to the release page where the download actually is, and only the
+/// handful with no release at all fall back to the repository root.
+///
+/// The other half of the argument was that these are mods nobody can install.
+/// True, and still the wrong reason to hide them: the ecosystem is mostly
+/// unlicensed, so hiding it leaves the catalog looking like the twenty mods
+/// that happen to carry a LICENSE file rather than the field it is indexing.
+const PUBLISH_INDEXED = true;
 
-const TOPICS = ["GAMEPLAY", "QOL", "UI", "ART", "CONTENT"];
+const TOPICS = ["GAMEPLAY", "QOL", "UI", "ART", "CONTENT", "AUDIO"];
 
 const CATEGORIES = [
   { id: "GAMEPLAY", title: "Gameplay", subtitle: "New systems and rules", order: 0 },
@@ -51,13 +60,14 @@ const CATEGORIES = [
   { id: "UI", title: "Interface", subtitle: "Menus, HUD and readouts", order: 2 },
   { id: "ART", title: "Art & Effects", subtitle: "How the game looks", order: 3 },
   { id: "CONTENT", title: "New Content", subtitle: "Places, events and challenges", order: 4 },
+  { id: "AUDIO", title: "Sound", subtitle: "Music and what you hear", order: 5 },
   // Everything indexed lands here. Assigning invented topics to listings
   // nobody can install yet would be curation of things that are not on offer;
   // an entry moves to a real shelf the moment it has a topic and a file.
   // Named for where the download is, not for what Phosphor has not finished.
   // The id stays PENDING because entries reference it; only the words a player
   // reads have changed.
-  { id: "PENDING", title: "From their creators", subtitle: "Download straight from the source", order: 5 },
+  { id: "PENDING", title: "From their creators", subtitle: "Download straight from the source", order: 6 },
 ].filter((category) => category.id !== "PENDING" || PUBLISH_INDEXED);
 
 const ALL_SECTIONS = [
@@ -132,6 +142,10 @@ function entriesForRelease(release, errors) {
       kind: "luaMod",
       name: release.title,
       tagline: release.summary,
+      // The prose the detail screen renders under the name. Without it every
+      // detail page is a single line of tagline and nothing else, which is
+      // most of why the catalog read as thin.
+      description: release.description || release.summary,
       author: { name: release.creator, url: release.homepageUrl },
       version: release.version,
       releasedAt: release.releaseDate,
@@ -174,11 +188,13 @@ function entryForProject(project, errors) {
     kind: project.kind === "rom-hack" ? "romPatch" : "luaMod",
     name: project.title,
     tagline: project.summary,
+    // The author credit points at the project; the card's own link points at
+    // the download. They are different questions and usually different pages.
     author: { name: project.creator, url: project.homepageUrl },
     categories: ["PENDING"],
     target: project.target,
     screenshots: [],
-    project: { url: project.homepageUrl, status: project.reviewStatus },
+    project: { url: project.releasesUrl ?? project.homepageUrl, status: project.reviewStatus },
   };
 }
 

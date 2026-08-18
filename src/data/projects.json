@@ -1,140 +1,140 @@
 [
   {
     "id": "pokemon-polished-crystal",
-    "title": "Pokémon Polished Crystal",
+    "title": "Pok\u00e9mon Polished Crystal",
     "creator": "Rangi",
     "kind": "rom-hack",
     "category": "rom-hack",
     "compatibility": [
       "rom-hack"
     ],
-    "target": "Pokémon Crystal",
+    "target": "Pok\u00e9mon Crystal",
     "summary": "A comprehensive Crystal upgrade with modernized mechanics, restored content, new areas, and an expanded postgame.",
     "homepageUrl": "https://github.com/Rangi42/polishedcrystal",
     "reviewStatus": "permission-queued"
   },
   {
     "id": "pokemon-pure-rgb",
-    "title": "Pokémon PureRGB",
+    "title": "Pok\u00e9mon PureRGB",
     "creator": "Vortyne",
     "kind": "rom-hack",
     "category": "rom-hack",
     "compatibility": [
       "rom-hack"
     ],
-    "target": "Pokémon Red / Blue / Green",
+    "target": "Pok\u00e9mon Red / Blue / Green",
     "summary": "A purist enhancement focused on making the original 151 more obtainable, balanced, and replayable.",
     "homepageUrl": "https://github.com/Vortyne/pureRGB",
     "reviewStatus": "permission-queued"
   },
   {
     "id": "pokemon-solus-rgb",
-    "title": "Pokémon Solus RGB",
+    "title": "Pok\u00e9mon Solus RGB",
     "creator": "Derek Andersen / Dechrissen",
     "kind": "rom-hack",
     "category": "rom-hack",
     "compatibility": [
       "rom-hack"
     ],
-    "target": "Pokémon Red / Blue",
+    "target": "Pok\u00e9mon Red / Blue",
     "summary": "A faithful near-vanilla solo experience with trade evolutions and version-exclusive barriers removed.",
     "homepageUrl": "https://github.com/Dechrissen/poke-solus-rgb",
     "reviewStatus": "permission-queued"
   },
   {
     "id": "pokemon-heart-and-soul",
-    "title": "Pokémon Heart & Soul",
+    "title": "Pok\u00e9mon Heart & Soul",
     "creator": "Heart & Soul Development",
     "kind": "rom-hack",
     "category": "rom-hack",
     "compatibility": [
       "rom-hack"
     ],
-    "target": "Pokémon Emerald",
+    "target": "Pok\u00e9mon Emerald",
     "summary": "A completed GBA recreation of the Johto adventure, built as an Emerald decomp project.",
     "homepageUrl": "https://github.com/PokemonHnS-Development/pokemonHnS",
     "reviewStatus": "permission-queued"
   },
   {
     "id": "pokemon-crossroads",
-    "title": "Pokémon Crossroads",
+    "title": "Pok\u00e9mon Crossroads",
     "creator": "Crossroads Dev Team",
     "kind": "rom-hack",
     "category": "rom-hack",
     "compatibility": [
       "rom-hack"
     ],
-    "target": "Pokémon Emerald",
+    "target": "Pok\u00e9mon Emerald",
     "summary": "An ambitious Emerald project designed to connect Kanto, Johto, and Hoenn in one adventure.",
     "homepageUrl": "https://github.com/eonlynx/pokecrossroads",
     "reviewStatus": "permission-queued"
   },
   {
     "id": "shin-pokemon",
-    "title": "Shin Pokémon Red / Blue / Green",
-    "creator": "Shin Pokémon Project",
+    "title": "Shin Pok\u00e9mon Red / Blue / Green",
+    "creator": "Shin Pok\u00e9mon Project",
     "kind": "rom-hack",
     "category": "rom-hack",
     "compatibility": [
       "rom-hack"
     ],
-    "target": "Pokémon Red / Blue",
+    "target": "Pok\u00e9mon Red / Blue",
     "summary": "A mostly-vanilla community enhancement centered on bug fixes, stronger trainer AI, and quality-of-life changes.",
     "homepageUrl": "https://github.com/jojobear13/shinpokered",
     "reviewStatus": "permission-needed"
   },
   {
     "id": "pokemon-orange",
-    "title": "Pokémon Orange",
+    "title": "Pok\u00e9mon Orange",
     "creator": "PiaCarrot and contributors",
     "kind": "rom-hack",
     "category": "rom-hack",
     "compatibility": [
       "rom-hack"
     ],
-    "target": "Pokémon Crystal",
+    "target": "Pok\u00e9mon Crystal",
     "summary": "A Crystal-based Orange Archipelago adventure inspired by the anime's Orange Islands arc.",
     "homepageUrl": "https://github.com/PiaCarrot/pokeorange",
     "reviewStatus": "permission-needed"
   },
   {
     "id": "pokemon-coral",
-    "title": "Pokémon Coral",
+    "title": "Pok\u00e9mon Coral",
     "creator": "Coral Development Team",
     "kind": "rom-hack",
     "category": "rom-hack",
     "compatibility": [
       "rom-hack"
     ],
-    "target": "Pokémon Crystal",
+    "target": "Pok\u00e9mon Crystal",
     "summary": "An original Game Boy Color-style region and story now being ported onto the Polished Crystal engine.",
     "homepageUrl": "https://github.com/pkmncoraldev/polishedcoral",
     "reviewStatus": "permission-needed"
   },
   {
     "id": "pokemon-crystal-legacy",
-    "title": "Pokémon Crystal Legacy",
+    "title": "Pok\u00e9mon Crystal Legacy",
     "creator": "TheSmithPlays / cRz Shadows",
     "kind": "rom-hack",
     "category": "rom-hack",
     "compatibility": [
       "rom-hack"
     ],
-    "target": "Pokémon Crystal",
+    "target": "Pok\u00e9mon Crystal",
     "summary": "A faithful rebalance of Crystal's encounters, teams, story beats, level curve, and postgame.",
     "homepageUrl": "https://github.com/cRz-Shadows/Pokemon_Crystal_Legacy",
     "reviewStatus": "permission-needed"
   },
   {
     "id": "pokemon-yellow-legacy",
-    "title": "Pokémon Yellow Legacy",
+    "title": "Pok\u00e9mon Yellow Legacy",
     "creator": "TheSmithPlays / cRz Shadows",
     "kind": "rom-hack",
     "category": "rom-hack",
     "compatibility": [
       "rom-hack"
     ],
-    "target": "Pokémon Yellow",
+    "target": "Pok\u00e9mon Yellow",
     "summary": "A balance and quality-of-life revision that preserves Yellow's anime-influenced identity.",
     "homepageUrl": "https://github.com/cRz-Shadows/Pokemon_Yellow_Legacy",
     "reviewStatus": "permission-needed"
@@ -148,8 +148,8 @@
     "compatibility": [
       "rom-hack"
     ],
-    "target": "Pokémon Red / Blue",
-    "summary": "Expands Kanto with prototype and region-related Pokémon, new locations, and modern conveniences.",
+    "target": "Pok\u00e9mon Red / Blue",
+    "summary": "Expands Kanto with prototype and region-related Pok\u00e9mon, new locations, and modern conveniences.",
     "homepageUrl": "https://github.com/MementoMartha/kep-hack",
     "reviewStatus": "permission-needed"
   },
@@ -162,35 +162,35 @@
     "compatibility": [
       "rom-hack"
     ],
-    "target": "Pokémon Crystal",
+    "target": "Pok\u00e9mon Crystal",
     "summary": "An experimental Crystal expansion that carries the Kanto Expansion Pak philosophy into Johto.",
     "homepageUrl": "https://github.com/MementoMartha/jep-hack",
     "reviewStatus": "permission-needed"
   },
   {
     "id": "pokemon-redstar-bluestar",
-    "title": "Pokémon Redstar & Bluestar",
+    "title": "Pok\u00e9mon Redstar & Bluestar",
     "creator": "Rangi",
     "kind": "rom-hack",
     "category": "rom-hack",
     "compatibility": [
       "rom-hack"
     ],
-    "target": "Pokémon Red / Blue",
+    "target": "Pok\u00e9mon Red / Blue",
     "summary": "Upgrades Red and Blue with graphics and features inspired by the 1997 Gold and Silver prototype.",
     "homepageUrl": "https://github.com/Rangi42/redstarbluestar",
     "reviewStatus": "permission-needed"
   },
   {
     "id": "pokemon-yellow-kaizo",
-    "title": "Pokémon Yellow Kaizo",
+    "title": "Pok\u00e9mon Yellow Kaizo",
     "creator": "CreamElDudJafar and contributors",
     "kind": "rom-hack",
     "category": "rom-hack",
     "compatibility": [
       "rom-hack"
     ],
-    "target": "Pokémon Yellow",
+    "target": "Pok\u00e9mon Yellow",
     "summary": "A demanding Yellow remaster inspired by Blue Kaizo, with additional balance and quality-of-life work.",
     "homepageUrl": "https://github.com/CreamElDudJafar/Yellow-Kaizo",
     "reviewStatus": "permission-needed"
@@ -204,7 +204,7 @@
     "compatibility": [
       "rom-hack"
     ],
-    "target": "Pokémon Yellow",
+    "target": "Pok\u00e9mon Yellow",
     "summary": "A Yellow enhancement with second-generation graphics, balance changes, and quality-of-life options.",
     "homepageUrl": "https://github.com/CreamElDudJafar/StaticYellow",
     "reviewStatus": "permission-needed"
@@ -219,7 +219,7 @@
       "gen1recomp"
     ],
     "target": "Gen1Recomp",
-    "summary": "Adds a Pokémon Green-inspired Super Game Boy palette treatment.",
+    "summary": "Adds a Pok\u00e9mon Green-inspired Super Game Boy palette treatment.",
     "homepageUrl": "https://github.com/harryw4444/green_sgb_palette_gen1recomp",
     "reviewStatus": "permission-queued"
   },
@@ -282,7 +282,7 @@
   {
     "id": "mew-glitch-mod",
     "title": "Mew Glitch Mod",
-    "creator": "José Maceiras",
+    "creator": "Jos\u00e9 Maceiras",
     "kind": "mod",
     "category": "gen1recomp",
     "compatibility": [
@@ -317,23 +317,9 @@
       "gen1recomp"
     ],
     "target": "Gen1Recomp",
-    "summary": "Renames the trainer and party Pokémon at any point, with automatic German localization.",
+    "summary": "Renames the trainer and party Pok\u00e9mon at any point, with automatic German localization.",
     "homepageUrl": "https://github.com/Roxas2712/pokemon-gen1-recomp-mod-anytime-rename",
     "reviewStatus": "permission-queued"
-  },
-  {
-    "id": "kanto-gear",
-    "title": "Kanto Gear",
-    "creator": "AverageConsumer",
-    "kind": "mod",
-    "category": "gen1recomp",
-    "compatibility": [
-      "gen1recomp"
-    ],
-    "target": "Gen1Recomp · Android handhelds",
-    "summary": "A dual-screen companion interface designed for Android gaming handhelds.",
-    "homepageUrl": "https://github.com/AverageConsumer/kanto-gear",
-    "reviewStatus": "archive-review"
   },
   {
     "id": "gen2-dramatic-shapes",
@@ -344,7 +330,7 @@
     "compatibility": [
       "gen2recomp"
     ],
-    "target": "Gen2Recomped · Gold / Silver",
+    "target": "Gen2Recomped \u00b7 Gold / Silver",
     "summary": "Adapts the Dramatic Shapes voxel-style presentation for the Gen2Recomped engine.",
     "homepageUrl": "https://github.com/UNDERdecoded/Gen2Recomped-DramaticShapes",
     "reviewStatus": "permission-needed"
@@ -358,7 +344,7 @@
     "compatibility": [
       "gen2recomp"
     ],
-    "target": "Gen2Recomp · Gold",
+    "target": "Gen2Recomp \u00b7 Gold",
     "summary": "Awards Chikorita, Cyndaquil, and Totodile after the player's initial starter choice.",
     "homepageUrl": "https://github.com/Windwrecker/Gen1recomp-Perfect-Start",
     "reviewStatus": "permission-needed"
@@ -373,8 +359,978 @@
       "gen2recomp"
     ],
     "target": "Gen2Recomped",
-    "summary": "Brings voxel and 3D-styled Pokémon sprite presentation to the Gen 2 runtime.",
+    "summary": "Brings voxel and 3D-styled Pok\u00e9mon sprite presentation to the Gen 2 runtime.",
     "homepageUrl": "https://github.com/randyadr/Gen2-3D-Sprites",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "additional-story-healers",
+    "title": "Additional Story Healers",
+    "creator": "ty-mcdk",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Adds NPC healers throughout the story",
+    "homepageUrl": "https://github.com/ty-mcdk/additional-story-healers",
+    "releasesUrl": "https://github.com/ty-mcdk/additional-story-healers/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "dramaticshapevoxelmod",
+    "title": "Battle Art Voxel Fork",
+    "creator": "absol89",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "A fork of the Dramatic Shape voxel mod aimed at battle art: animated back sprites, selectable sprite generations, and sprite fallback for other sprite mods.",
+    "homepageUrl": "https://github.com/absol89/DramaticShapeVoxelMod",
+    "releasesUrl": "https://github.com/absol89/DramaticShapeVoxelMod/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "bookers-heaven",
+    "title": "Booker's Heaven",
+    "creator": "bryanthaboi",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Booker's Heaven, a quest mod for the Gen 1 recomp.",
+    "homepageUrl": "https://github.com/bryanthaboi/bookers_heaven",
+    "releasesUrl": "https://github.com/bryanthaboi/bookers_heaven/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "candy-jar",
+    "title": "Candy Jar",
+    "creator": "TanukiTooks",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp",
+      "gen2recomp"
+    ],
+    "target": "Gen1Recomp and Gen2Recomped",
+    "summary": "Adds a research quest and a Candy Jar that converts excess level-100 EXP into Rare Candy.",
+    "homepageUrl": "https://github.com/TanukiTooks/Candy-Jar",
+    "releasesUrl": "https://github.com/TanukiTooks/Candy-Jar/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen1recomp-mod-cheat-engine",
+    "title": "Cheat Engine",
+    "creator": "hdbreaker",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Cheat engine: heal/XP/money, evolve, give pokemon, items, no encounters, spawn, bike anywhere, surf always, always catch, god mode, OHKO, walk walls, turbo, perfect DVs, shiny, badges, TMs.",
+    "homepageUrl": "https://github.com/hdbreaker/gen1recomp-mod-cheat_engine",
+    "releasesUrl": "https://github.com/hdbreaker/gen1recomp-mod-cheat_engine/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "leaf",
+    "title": "Choose Your Avatar",
+    "creator": "MrKrisSatan",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp",
+      "gen2recomp"
+    ],
+    "target": "Gen1Recomp and Gen2Recomped",
+    "summary": "Adds a boy/girl question to Oak's intro and dresses the player in a female avatar across every sprite and COLORS mode.",
+    "homepageUrl": "https://github.com/MrKrisSatan/Leaf",
+    "releasesUrl": "https://github.com/MrKrisSatan/Leaf/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "critical-capture",
+    "title": "Critical Capture",
+    "creator": "ShaneMcGovernIE",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Gen 5's critical capture: a thrown ball can whistle, pause and shudder mid-air, then shake once with far better odds, scaled with your Pokedex completion.",
+    "homepageUrl": "https://github.com/ShaneMcGovernIE/critical_capture",
+    "releasesUrl": "https://github.com/ShaneMcGovernIE/critical_capture/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "pokemon-blau-deutsch-mod",
+    "title": "Deutsch f\u00fcr Pok\u00e9mon Blau",
+    "creator": "Roxas2712",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Deutsche \u00dcbersetzung von Pok\u00e9mon Blau: Originaltexte, Namen, Schrift und Titelgrafik der Blauen Edition f\u00fcr die importierte US-ROM.",
+    "homepageUrl": "https://github.com/Roxas2712/pokemon-blau-deutsch-mod",
+    "releasesUrl": "https://github.com/Roxas2712/pokemon-blau-deutsch-mod/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "pokemon-gelb-deutsch-mod",
+    "title": "Deutsch f\u00fcr Pok\u00e9mon Gelb",
+    "creator": "Roxas2712",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Deutsche \u00dcbersetzung von Pok\u00e9mon Gelb: Originaltexte, Namen und Schrift der Gelben Edition f\u00fcr die importierte US-ROM.",
+    "homepageUrl": "https://github.com/Roxas2712/pokemon-gelb-deutsch-mod",
+    "releasesUrl": "https://github.com/Roxas2712/pokemon-gelb-deutsch-mod/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "pokemon-rot-deutsch-mod",
+    "title": "Deutsch f\u00fcr Pok\u00e9mon Rot",
+    "creator": "Roxas2712",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Deutsche \u00dcbersetzung von Pok\u00e9mon Rot: Originaltexte, Namen, Schrift und Titelgrafik der Roten Edition f\u00fcr die importierte US-ROM.",
+    "homepageUrl": "https://github.com/Roxas2712/pokemon-rot-deutsch-mod",
+    "releasesUrl": "https://github.com/Roxas2712/pokemon-rot-deutsch-mod/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "dev-hook-inspector",
+    "title": "Dev Hook Inspector",
+    "creator": "ShaneHudson",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Developer tool: a HOOKS entry on the START menu lists every installed mod's public exports and events.",
+    "homepageUrl": "https://github.com/shanehudson-gen1recomp-mods/dev-hook-inspector",
+    "releasesUrl": "https://github.com/shanehudson-gen1recomp-mods/dev-hook-inspector/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "double-battles",
+    "title": "Double Battles",
+    "creator": "ShaneHudson",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Wild and trainer double battles: 1v2, 2v2 and trainer pairs, in classic, wide and 3D.",
+    "homepageUrl": "https://github.com/shanehudson-gen1recomp-mods/double_battles",
+    "releasesUrl": "https://github.com/shanehudson-gen1recomp-mods/double_battles/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "dramaticshapevoxelmod-latest",
+    "title": "Dramatic Shape Voxel Mod",
+    "creator": "scottcandy34",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "The overworld as a 3D voxel diorama: extruded terrain, cast shadows, tilt-shift, and battles fought on the map itself.",
+    "homepageUrl": "https://github.com/scottcandy34/DramaticShapeVoxelMod-latest",
+    "releasesUrl": "https://github.com/scottcandy34/DramaticShapeVoxelMod-latest/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "dramatic-sky-ride",
+    "title": "Dramatic Sky Ride",
+    "creator": "MFR TechConsult",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp",
+      "gen2recomp"
+    ],
+    "target": "Gen1Recomp and Gen2Recomped",
+    "summary": "Ride Gen 1 Pok\u00e9mon on land, water and in the air with Battle Art Voxel Fork, Pok\u00e9PC sprites, story-aware progression and Wild Skies integration.",
+    "homepageUrl": "https://github.com/burgerslayer7/dramatic-sky-ride",
+    "releasesUrl": "https://github.com/burgerslayer7/dramatic-sky-ride/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen1recomp-dutch-generator",
+    "title": "Dutch translation",
+    "creator": "BartInTheField",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Dutch translation for Pok\u00e9mon Red and Blue, generated from PokeCorpus.",
+    "homepageUrl": "https://github.com/BartInTheField/gen1recomp-dutch-generator",
+    "releasesUrl": "https://github.com/BartInTheField/gen1recomp-dutch-generator/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen-1-recomp-spanish",
+    "title": "Edici\u00f3n Roja",
+    "creator": "Sebarosu",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Traducci\u00f3n al espa\u00f1ol de Pok\u00e9mon Rojo/Azul. Bienvenidos al mundo de POK\u00e9MON, ahora en ESPA\u00d1OL.",
+    "homepageUrl": "https://github.com/Sebarosu/Gen-1-Recomp-Spanish",
+    "releasesUrl": "https://github.com/Sebarosu/Gen-1-Recomp-Spanish/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "exp-share",
+    "title": "Exp Share (Gen 1 / Gen 5+ styles)",
+    "creator": "ShaneMcGovernIE",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp",
+      "gen2recomp"
+    ],
+    "target": "Gen1Recomp and Gen2Recomped",
+    "summary": "Party-wide EXP from the OPTIONS menu: Gen 1 Exp. All style or Gen 5+ style, with one shared-exp line instead of a message per Pokemon.",
+    "homepageUrl": "https://github.com/ShaneMcGovernIE/exp_share",
+    "releasesUrl": "https://github.com/ShaneMcGovernIE/exp_share/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "free-fly",
+    "title": "Free Fly",
+    "creator": "ShaneHudson",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp",
+      "gen2recomp"
+    ],
+    "target": "Gen1Recomp and Gen2Recomped",
+    "summary": "Ride a FLY user around the overworld and land wherever you like.",
+    "homepageUrl": "https://github.com/shanehudson-gen1recomp-mods/free_fly",
+    "releasesUrl": "https://github.com/shanehudson-gen1recomp-mods/free_fly/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen1recomp-gen2-dex",
+    "title": "Gen 2 Dex",
+    "creator": "eduardocalafell",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "The complete Johto Pokedex (#152-251) as real, catchable species: real Gen 2 stats/types, Crystal sprites, and thematic wild placement across Kanto.",
+    "homepageUrl": "https://github.com/eduardocalafell/gen1recomp-gen2-dex",
+    "releasesUrl": "https://github.com/eduardocalafell/gen1recomp-gen2-dex/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen1-modern-ui",
+    "title": "Gen1 Modern UI",
+    "creator": "ArmstrongThomas",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Repaints the menus in full window space \u2014 responsive dialogue, Party, PC, Trainer Card, Pokedex, Bag and Shop, with themes and a minimal mode.",
+    "homepageUrl": "https://github.com/ArmstrongThomas/gen1-modern-ui",
+    "releasesUrl": "https://github.com/ArmstrongThomas/gen1-modern-ui/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen1recomp-voiceactingmod",
+    "title": "Gen1Recomp - Voice Acting Mod",
+    "creator": "Campo",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Complete voice acting overhaul with current coverage through Pewter City.",
+    "homepageUrl": "https://github.com/1-Camp0-1/Gen1recomp-VoiceActingMod",
+    "releasesUrl": "https://github.com/1-Camp0-1/Gen1recomp-VoiceActingMod/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen1recomp-mod-intro-bypass",
+    "title": "Intro Bypass",
+    "creator": "hdbreaker",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Skip Oak's intro: pick your name, starter (starters + legendaries), shiny or not, and level, then jump straight into the overworld.",
+    "homepageUrl": "https://github.com/hdbreaker/gen1recomp-mod-intro_bypass",
+    "releasesUrl": "https://github.com/hdbreaker/gen1recomp-mod-intro_bypass/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "jp-green-poketto-monsuta-midori",
+    "title": "JP GREEN - Poketto Monsut\u0101 Midori",
+    "creator": "bryanthaboi",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Japanese translation of Red and Blue, rendered through the engine's bundled Plain Pixel TTF \u2014 no glyph sheet needed.",
+    "homepageUrl": "https://github.com/bryanthaboi/JP-GREEN-Poketto-Monsuta-Midori",
+    "releasesUrl": "https://github.com/bryanthaboi/JP-GREEN-Poketto-Monsuta-Midori/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "kanto-companion-lite",
+    "title": "Kanto Companion Lite",
+    "creator": "redelpedron",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "A stripped-down fork of Kanto Companion by @matthew.me, redesigned for Android. Keyboard shortcuts have been replaced with touch controls for a mobile-friendly experience while retaining the companion",
+    "homepageUrl": "https://github.com/redelpedron/Kanto-Companion-Lite",
+    "releasesUrl": "https://github.com/redelpedron/Kanto-Companion-Lite/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "kanto-gen1-dive",
+    "title": "Kanto Dive",
+    "creator": "Mra YT",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Adds HM06 DIVE and Emerald-style underwater exploration with linked Kanto seafloor maps and Tiled-authored dive zones.",
+    "homepageUrl": "https://github.com/burgerslayer7/Kanto-gen1-dive",
+    "releasesUrl": "https://github.com/burgerslayer7/Kanto-gen1-dive/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "kanto-dynamic-weather",
+    "title": "Kanto Dynamic Weather",
+    "creator": "Campo",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Dynamic 3D weather and atmospheric effects for Dramatic Shape, including clouds, fog, rain, thunderstorms, lightning, puddles and distant scenery.",
+    "homepageUrl": "https://github.com/1-Camp0-1/Kanto-Dynamic-Weather",
+    "releasesUrl": "https://github.com/1-Camp0-1/Kanto-Dynamic-Weather/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "modern-type-framework",
+    "title": "Modern Type Framework",
+    "creator": "MaybeGreg",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Updates the type chart to modern chart. Does not edit Pok\u00e9mon or moves.",
+    "homepageUrl": "https://github.com/MaybeGreg/modern_type_framework",
+    "releasesUrl": "https://github.com/MaybeGreg/modern_type_framework/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "mods-hotkeys",
+    "title": "Mods Hotkeys",
+    "creator": "ShaneMcGovernIE",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Detects the hotkeys other installed mods listen for (and the engine's built-ins) and lets you rebind them from OPTIONS, multi-button combos included.",
+    "homepageUrl": "https://github.com/ShaneMcGovernIE/mods_hotkeys",
+    "releasesUrl": "https://github.com/ShaneMcGovernIE/mods_hotkeys/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "relearn-moves",
+    "title": "Move Relearn",
+    "creator": "ShaneMcGovernIE",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Party menu gains RELEARN (between STATS and SWITCH, field only) to relearn any level-up move the mon has reached the level for.",
+    "homepageUrl": "https://github.com/ShaneMcGovernIE/relearn_moves",
+    "releasesUrl": "https://github.com/ShaneMcGovernIE/relearn_moves/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen1recomp-musicmods",
+    "title": "Music-LGPE",
+    "creator": "DarioMelo",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Music from Let's Go Pikachu / Let's Go Eevee",
+    "homepageUrl": "https://github.com/DarioMelo/Gen1Recomp-MusicMods",
+    "releasesUrl": "https://github.com/DarioMelo/Gen1Recomp-MusicMods/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen1recomp-music2-hgss",
+    "title": "Music2-HGSS",
+    "creator": "Dar\u00edoMelo",
+    "kind": "mod",
+    "category": "gen2recomp",
+    "compatibility": [
+      "gen2recomp"
+    ],
+    "target": "Gen2Recomped",
+    "summary": "Music from HeartGold / SoulSilver",
+    "homepageUrl": "https://github.com/DarioMelo/Gen1Recomp-Music2-HGSS",
+    "releasesUrl": "https://github.com/DarioMelo/Gen1Recomp-Music2-HGSS/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen1recomp-npc-bubbles",
+    "title": "NPC Bubbles",
+    "creator": "ddagent",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Puts a bubble over the NPCs who actually do something, so the person holding a free TM does not look like the person who wants to tell you about ledges.",
+    "homepageUrl": "https://github.com/ddagent/gen1recomp-npc-bubbles",
+    "releasesUrl": "https://github.com/ddagent/gen1recomp-npc-bubbles/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "instant-heal-pc-rest",
+    "title": "Nurse Speed Heal & PC Rest",
+    "creator": "TheRhysWyrill",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Instantly heals your party when talking to Nurse Joy, auto-advances the heal dialog, turns the player around to prevent accidental re-dialogue, and automatically heals Pok\u00e9mon deposited into PC storag",
+    "homepageUrl": "https://github.com/TheRhysWyrill/instant_heal_pc_rest",
+    "releasesUrl": "https://github.com/TheRhysWyrill/instant_heal_pc_rest/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "nuzlocke",
+    "title": "Nuzlocke",
+    "creator": "bryanthaboi",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "An enforced Gen 1 Nuzlocke: one catch per area, mandatory nicknames, permanent death.",
+    "homepageUrl": "https://github.com/bryanthaboi/nuzlocke",
+    "releasesUrl": "https://github.com/bryanthaboi/nuzlocke/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen1pc-overworldencounters",
+    "title": "Overworld Wild Encounters",
+    "creator": "Gamecorner_033",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Replaces hidden random grass encounters with visible roaming overworld Pok\u00e9mon sprites!",
+    "homepageUrl": "https://github.com/gamecorner-033/Gen1PC-OverworldEncounters",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "pokepcfollowers",
+    "title": "Pok\u00e9PC Followers (W/Voxel Support)",
+    "creator": "Gamecorner_033",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "An all-species overworld follower mod for Pok\u00e9mon Red, Blue, and Yellow (Gen 1 Recomp). This mod allows every single Gen 1 Pok\u00e9mon to walk behind you in full overworld color as your companion!",
+    "homepageUrl": "https://github.com/gamecorner-033/PokePCFollowers",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "potato-voxel",
+    "title": "PotatoVoxel (Beta)",
+    "creator": "ShaneMcGovernIE",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "An unconditional Brick-mode 3D voxel overworld tuned for low-end devices, with scalable render modes, mesh caching, and prebuild support.",
+    "homepageUrl": "https://github.com/ShaneMcGovernIE/potato_voxel",
+    "releasesUrl": "https://github.com/ShaneMcGovernIE/potato_voxel/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "qol-toggles",
+    "title": "QoL Toggles",
+    "creator": "ShaneMcGovernIE",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp",
+      "gen2recomp"
+    ],
+    "target": "Gen1Recomp and Gen2Recomped",
+    "summary": "OPTIONS -> QOL TOGGLES: poison survival, full-heal catches, infinite repel, learnable field moves, badgeless moves, max DVs, double EXP, instant flee, heal on map change, quick S.S. Anne.",
+    "homepageUrl": "https://github.com/ShaneMcGovernIE/qol_toggles",
+    "releasesUrl": "https://github.com/ShaneMcGovernIE/qol_toggles/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "pokemon-gen1-recomp-mod-qol",
+    "title": "Quality of Life",
+    "creator": "unxpected-uxp",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp",
+      "gen2recomp"
+    ],
+    "target": "Gen1Recomp and Gen2Recomped",
+    "summary": "Quality of Life from later generations.",
+    "homepageUrl": "https://github.com/unxpected-uxp/pokemon-gen1-recomp-mod-qol",
+    "releasesUrl": "https://github.com/unxpected-uxp/pokemon-gen1-recomp-mod-qol/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "pokemonrecomprandomizer",
+    "title": "Randomizer",
+    "creator": "ciddmandude",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Randomize settings in game",
+    "homepageUrl": "https://github.com/ciddmandude/PokemonRecompRandomizer",
+    "releasesUrl": "https://github.com/ciddmandude/PokemonRecompRandomizer/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "flyingoverhaul",
+    "title": "Razor1993s Flying Overhaul",
+    "creator": "Razor1993",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Overhauls the FLY system while keeping it as close to the vanilla style as possible. FLY no longer opens the town map\u2014instead, ride the bird freely over Kanto and choose your own landing spot",
+    "homepageUrl": "https://github.com/Razor1993-Real/FlyingOverhaul",
+    "releasesUrl": "https://github.com/Razor1993-Real/FlyingOverhaul/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "rbymmomod",
+    "title": "RBY MMO",
+    "creator": "alamops",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp",
+      "gen2recomp"
+    ],
+    "target": "Gen1Recomp and Gen2Recomped",
+    "summary": "Play Kanto with friends: shared overworld presence, nameplates and chat, parties of two, co-op 2-on-2 battles, ranked PVP, and trade or battle requests from anywhere.",
+    "homepageUrl": "https://github.com/alamops/RBYMMOMod",
+    "releasesUrl": "https://github.com/alamops/RBYMMOMod/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "recomp-cartographer",
+    "title": "Recomp Cartographer",
+    "creator": "Sedatb23",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "This mod allows dumping of the maps into tiled.",
+    "homepageUrl": "https://github.com/Sedatb23/recomp_cartographer",
+    "releasesUrl": "https://github.com/Sedatb23/recomp_cartographer/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "recomp-rider",
+    "title": "Recomp Rider",
+    "creator": "adrian",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp",
+      "gen2recomp"
+    ],
+    "target": "Gen1Recomp and Gen2Recomped",
+    "summary": "Drive KITT across the Pok\u00e9mon world.",
+    "homepageUrl": "https://github.com/castdrian/recomp-rider",
+    "releasesUrl": "https://github.com/castdrian/recomp-rider/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "silph-scope-network",
+    "title": "Silph Scope Network",
+    "creator": "Nezara",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "online invasion mechanic with players across the world.",
+    "homepageUrl": "https://github.com/Nezara/silph-scope-network",
+    "releasesUrl": "https://github.com/Nezara/silph-scope-network/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "silphnet",
+    "title": "SilphNet",
+    "creator": "AshJam",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "See where your friends were last, in-game, with no live server or 24/7 process required.",
+    "homepageUrl": "https://github.com/AshJamB/SilphNet",
+    "releasesUrl": "https://github.com/AshJamB/SilphNet/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen1mod-simple-girl",
+    "title": "Simple Girl mod",
+    "creator": "Yukita Mayako",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Content patch replacing the main character's sprites and pronouns.",
+    "homepageUrl": "https://github.com/Yukitty/gen1mod-simple_girl",
+    "releasesUrl": "https://github.com/Yukitty/gen1mod-simple_girl/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "surround-audio",
+    "title": "Stereo & 5.1 Audio",
+    "creator": "ShaneMcGovernIE",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Pok\u00e9mon Crystal's SOUND option, ported to Red/Blue/Yellow's 8-bit music: MONO, STEREO channel split, and 5.1 surround with center-channel sound effects.",
+    "homepageUrl": "https://github.com/ShaneMcGovernIE/surround-audio",
+    "releasesUrl": "https://github.com/ShaneMcGovernIE/surround-audio/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "terrarium",
+    "title": "Terrarium",
+    "creator": "BrenoBertucci",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Independent fork of DramaticShape's 3D voxel diorama: own id, folder, pipelines and letter hotkeys; installs beside DRAMATIC_SHAPE.",
+    "homepageUrl": "https://github.com/BrenoBertucci/Terrarium",
+    "releasesUrl": "https://github.com/BrenoBertucci/Terrarium/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "traduccion-es",
+    "title": "Traducci\u00f3n Espa\u00f1ola",
+    "creator": "jherediagu",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "El juego en espa\u00f1ol desde tu propio cartucho EUR \u2014 guion oficial, sin redistribuir nada",
+    "homepageUrl": "https://github.com/jherediagu/traduccion_es",
+    "releasesUrl": "https://github.com/jherediagu/traduccion_es/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "trad-fr-extended",
+    "title": "Traduction FR \u00e9tendue",
+    "creator": "AntoniMan31",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Compl\u00e8te la traduction fran\u00e7aise de translation-fr : 151 cat\u00e9gories du Pok\u00e9dex, 109 textes moteur et 11 noms manquants. N\u00e9cessite translation-fr.",
+    "homepageUrl": "https://github.com/antoniman31/trad-fr-extended",
+    "releasesUrl": "https://github.com/antoniman31/trad-fr-extended/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "pokemon-gen1-recomp-mod-frqc",
+    "title": "Traduction Qu\u00e9b\u00e9coise",
+    "creator": "MrJoufflu",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Traduction compl\u00e8te en fran\u00e7ais qu\u00e9b\u00e9cois (joual + sacres cibl\u00e9s) pour Pok\u00e9mon Rouge, Bleu et Jaune, bas\u00e9e sur le texte fran\u00e7ais officiel.",
+    "homepageUrl": "https://github.com/git-mrjoufflu/pokemon-gen1-recomp-mod-FRQC",
+    "releasesUrl": "https://github.com/git-mrjoufflu/pokemon-gen1-recomp-mod-FRQC/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "trainer-rematch",
+    "title": "Trainer Rematch",
+    "creator": "ShaneMcGovernIE",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Talk to any trainer you have already beaten and they challenge you to a rematch, with a YES/NO prompt.",
+    "homepageUrl": "https://github.com/ShaneMcGovernIE/trainer_rematch",
+    "releasesUrl": "https://github.com/ShaneMcGovernIE/trainer_rematch/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "unique-menu-icons",
+    "title": "Unique Menu Icons",
+    "creator": "menyas",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp",
+      "gen2recomp"
+    ],
+    "target": "Gen1Recomp and Gen2Recomped",
+    "summary": "Gives every Gen 1 Pokemon its own unique party/menu icon instead of the vanilla shared body-type icons.",
+    "homepageUrl": "https://github.com/menyas/unique-menu-icons",
+    "releasesUrl": "https://github.com/menyas/unique-menu-icons/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "useful-bag",
+    "title": "Useful Bag",
+    "creator": "ShaneMcGovernIE",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "999-capacity bag auto-sorted into six pockets (Items, Medicine, Pok\u00e9 Balls, TMs / HMs, Battle Items, Key Items) cycled with Left/Right, plus TAB / R3 to sort by name or count.",
+    "homepageUrl": "https://github.com/ShaneMcGovernIE/useful-bag",
+    "releasesUrl": "https://github.com/ShaneMcGovernIE/useful-bag/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "useful-dex",
+    "title": "Useful Dex",
+    "creator": "ShaneMcGovernIE",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Press A in the Pok\u00e9dex to cycle the species page into base stats, BST, evolutions, and the full movelist.",
+    "homepageUrl": "https://github.com/ShaneMcGovernIE/useful_dex",
+    "releasesUrl": "https://github.com/ShaneMcGovernIE/useful_dex/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "useful-marts",
+    "title": "Useful Marts",
+    "creator": "ShaneMcGovernIE",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Mart lists with useful info: BUY rows show how many of each item you already have (live), SELL rows show the per-item sell price, and both lists wrap at the ends.",
+    "homepageUrl": "https://github.com/ShaneMcGovernIE/useful-marts",
+    "releasesUrl": "https://github.com/ShaneMcGovernIE/useful-marts/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "useful-move-info",
+    "title": "Useful Move Info",
+    "creator": "ShaneMcGovernIE",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "In battle, press Start (or Q) on a highlighted move to see type, power, accuracy, effect and type effectiveness; the same shortcut inspects moves when learning one.",
+    "homepageUrl": "https://github.com/ShaneMcGovernIE/useful-move-info",
+    "releasesUrl": "https://github.com/ShaneMcGovernIE/useful-move-info/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "versaovermelha",
+    "title": "Vers\u00e3oVermelha",
+    "creator": "bryanthaboi",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Portugu\u00eas brasileiro, ripped from the Hyd~Tradu\u00e7\u00f5es Vers\u00e3o Vermelha v1.3.1 IPS patch.",
+    "homepageUrl": "https://github.com/bryanthaboi/versaovermelha",
+    "releasesUrl": "https://github.com/bryanthaboi/versaovermelha/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "whos-that-trainer",
+    "title": "Who's That Trainer?",
+    "creator": "MyFriendDevBR",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Inject your own custom sprites or play as Gym Leaders, Elite 4, and Rivals.",
+    "homepageUrl": "https://github.com/MyFriendPKMN/whos-that-trainer",
+    "releasesUrl": "https://github.com/MyFriendPKMN/whos-that-trainer/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen1recomp-widescreen-battle-intro",
+    "title": "Widescreen Battle Intro",
+    "creator": "ShaneMcGovernIE",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Extends the battle-intro flash across the full window on widescreen displays, instead of a centered 160x144 square.",
+    "homepageUrl": "https://github.com/ShaneMcGovernIE/gen1recomp-widescreen-battle-intro",
+    "releasesUrl": "https://github.com/ShaneMcGovernIE/gen1recomp-widescreen-battle-intro/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "wild-skies",
+    "title": "Wild Skies",
+    "creator": "ShaneHudson",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp",
+      "gen2recomp"
+    ],
+    "target": "Gen1Recomp and Gen2Recomped",
+    "summary": "Flying Pok\u00e9mon from the encounter tables cross the overworld.",
+    "homepageUrl": "https://github.com/shanehudson-gen1recomp-mods/wild_skies",
+    "releasesUrl": "https://github.com/shanehudson-gen1recomp-mods/wild_skies/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "overworld-spawn-mod",
+    "title": "Wilds of Kanto",
+    "creator": "YoDrehDenSwagAuf",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp",
+      "gen2recomp"
+    ],
+    "target": "Gen1Recomp and Gen2Recomped",
+    "summary": "Visible and reactive wild Pokemon for the Gen 1 overworld",
+    "homepageUrl": "https://github.com/YoDrehDenSwagAuf/overworld-spawn-mod",
+    "releasesUrl": "https://github.com/YoDrehDenSwagAuf/overworld-spawn-mod/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "yellow-legacy-changes",
+    "title": "Yellow Legacy Changes",
+    "creator": "ShaneMcGovernIE",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "summary": "Applies the move and stat rebalances from Yellow Legacy by TSP: buffed/nerfed moves, new types and effects, rebalanced base stats.",
+    "homepageUrl": "https://github.com/ShaneMcGovernIE/yellow_legacy_changes",
+    "releasesUrl": "https://github.com/ShaneMcGovernIE/yellow_legacy_changes/releases",
     "reviewStatus": "permission-needed"
   }
 ]

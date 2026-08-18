@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generated": "2026-08-15",
+  "generated": "2026-08-17",
   "sections": [
     {
       "id": "luaMods",
@@ -40,6 +40,18 @@
       "title": "New Content",
       "subtitle": "Places, events and challenges",
       "order": 4
+    },
+    {
+      "id": "AUDIO",
+      "title": "Sound",
+      "subtitle": "Music and what you hear",
+      "order": 5
+    },
+    {
+      "id": "PENDING",
+      "title": "From their creators",
+      "subtitle": "Download straight from the source",
+      "order": 6
     }
   ],
   "entries": [
@@ -48,6 +60,7 @@
       "kind": "luaMod",
       "name": "Exp Multiplier",
       "tagline": "Adds selectable 1.5×, 2×, 3×, and scaled experience modes while retaining an off switch for vanilla behavior.",
+      "description": "Adds selectable 1.5×, 2×, 3×, and scaled experience modes while retaining an off switch for vanilla behavior.",
       "author": {
         "name": "Mirage (RadekHM)",
         "url": "https://github.com/RadekHM/xp_multiplier_gen1recomp"
@@ -77,6 +90,7 @@
       "kind": "luaMod",
       "name": "Battle Info HUD",
       "tagline": "Adds native HUD colors, slim experience progress, caught markers, and compact status and level labels.",
+      "description": "Adds native HUD colors, slim experience progress, caught markers, and compact status and level labels.",
       "author": {
         "name": "ishhodaszi (piftee)",
         "url": "https://github.com/piftee/gen1recomp-battle-info-hud"
@@ -106,6 +120,7 @@
       "kind": "luaMod",
       "name": "StadiumBattleFX",
       "tagline": "Adds Stadium-inspired battle effects, portraits, and appearances while importing required source data from the player's own cartridge dump.",
+      "description": "Adds Stadium-inspired battle effects, portraits, and appearances while importing required source data from the player's own cartridge dump.",
       "author": {
         "name": "StadiumBattleFX contributors",
         "url": "https://github.com/anxiousintrovert/StadiumBattleFX"
@@ -135,6 +150,7 @@
       "kind": "luaMod",
       "name": "Pokeball Colors",
       "tagline": "Adds per-ball colors to battle tosses and the Pokémon Center healing machine in Red, Blue, Yellow, and Gold.",
+      "description": "Adds per-ball colors to battle tosses and the Pokémon Center healing machine in Red, Blue, Yellow, and Gold.",
       "author": {
         "name": "Mister Miracle",
         "url": "https://github.com/mistermiracle3036/Pokeball-Colors"
@@ -164,6 +180,7 @@
       "kind": "luaMod",
       "name": "Pokeball Colors",
       "tagline": "Adds per-ball colors to battle tosses and the Pokémon Center healing machine in Red, Blue, Yellow, and Gold.",
+      "description": "Adds per-ball colors to battle tosses and the Pokémon Center healing machine in Red, Blue, Yellow, and Gold.",
       "author": {
         "name": "Mister Miracle",
         "url": "https://github.com/mistermiracle3036/Pokeball-Colors"
@@ -193,6 +210,7 @@
       "kind": "luaMod",
       "name": "Indigo Plateau Conference",
       "tagline": "Turns five Pokémon Center battle rooms into a repeatable four-round tournament circuit with 39 challengers.",
+      "description": "Turns five Pokémon Center battle rooms into a repeatable four-round tournament circuit with 39 challengers.",
       "author": {
         "name": "Mister Miracle",
         "url": "https://github.com/mistermiracle3036/Indigo-Plateau-Conference"
@@ -222,6 +240,7 @@
       "kind": "luaMod",
       "name": "Randomizer Nuzlocke",
       "tagline": "An all-in-one Gold randomizer with strictly enforced Nuzlocke encounters, level caps, permadeath, and run-ending wipes.",
+      "description": "An all-in-one Gold randomizer with strictly enforced Nuzlocke encounters, level caps, permadeath, and run-ending wipes.",
       "author": {
         "name": "Sqtls",
         "url": "https://github.com/Sqtls/gen1recomp-plus-randomizer-nuzlocke"
@@ -251,6 +270,7 @@
       "kind": "luaMod",
       "name": "Pokémon Red PT-BR",
       "tagline": "A complete Brazilian Portuguese translation with accented text and 3D-mod support.",
+      "description": "A complete Brazilian Portuguese translation with accented text and 3D-mod support.",
       "author": {
         "name": "Gabriel Sojo",
         "url": "https://github.com/bielsojo/red-ptbr-gen1recomp"
@@ -281,6 +301,7 @@
       "kind": "luaMod",
       "name": "Button Shortcuts",
       "tagline": "Adds configurable controller shortcuts for frequently used actions.",
+      "description": "Adds configurable controller shortcuts for frequently used actions.",
       "author": {
         "name": "keberos",
         "url": "https://github.com/keberos/button-shortcuts"
@@ -310,6 +331,7 @@
       "kind": "luaMod",
       "name": "Quick Map",
       "tagline": "Provides faster access to a compact map view while exploring Kanto.",
+      "description": "Provides faster access to a compact map view while exploring Kanto.",
       "author": {
         "name": "keberos",
         "url": "https://github.com/keberos/quickmap"
@@ -339,6 +361,7 @@
       "kind": "luaMod",
       "name": "Rename Character",
       "tagline": "Adds an in-game path for changing the player character's name.",
+      "description": "Adds an in-game path for changing the player character's name.",
       "author": {
         "name": "keberos",
         "url": "https://github.com/keberos/rename-character"
@@ -368,6 +391,7 @@
       "kind": "luaMod",
       "name": "Too Many Balls",
       "tagline": "Expands the available Poké Ball selection and related catching options.",
+      "description": "Expands the available Poké Ball selection and related catching options.",
       "author": {
         "name": "Mister Miracle",
         "url": "https://github.com/mistermiracle3036/Too-Many-Balls"
@@ -398,6 +422,7 @@
       "kind": "luaMod",
       "name": "Bottomless Bag",
       "tagline": "Expands the item bag to support up to 255 distinct item slots through the public mod API.",
+      "description": "Expands the item bag to support up to 255 distinct item slots through the public mod API.",
       "author": {
         "name": "erereck",
         "url": "https://github.com/erereck/gen1recomp-bottomless-bag"
@@ -427,6 +452,7 @@
       "kind": "luaMod",
       "name": "Shiny Pokémon",
       "tagline": "Introduces shiny Pokémon encounters and their alternate visual treatment.",
+      "description": "Introduces shiny Pokémon encounters and their alternate visual treatment.",
       "author": {
         "name": "masterwebx",
         "url": "https://github.com/masterwebx/gen1recomp-shiny-pokemon"
@@ -456,6 +482,7 @@
       "kind": "luaMod",
       "name": "All Pokémon Catchable 151",
       "tagline": "Expands Kanto encounters so all 151 original Pokémon can be obtained without trading.",
+      "description": "Expands Kanto encounters so all 151 original Pokémon can be obtained without trading.",
       "author": {
         "name": "wowabox",
         "url": "https://github.com/wowabox/All_Pokemon_Catchable_151_Mod"
@@ -485,6 +512,7 @@
       "kind": "luaMod",
       "name": "Typed Move Colors",
       "tagline": "Adds responsive type-colored move buttons across battle and menu interfaces.",
+      "description": "Adds responsive type-colored move buttons across battle and menu interfaces.",
       "author": {
         "name": "ishhodaszi / piftee",
         "url": "https://github.com/piftee/gen1recomp-typed-move-colors"
@@ -514,6 +542,7 @@
       "kind": "luaMod",
       "name": "Modern Party UI",
       "tagline": "Rebuilds the party screen with a responsive modern layout and clearer information hierarchy.",
+      "description": "Rebuilds the party screen with a responsive modern layout and clearer information hierarchy.",
       "author": {
         "name": "ishhodaszi / piftee",
         "url": "https://github.com/piftee/gen1recomp-modern-party-ui"
@@ -543,6 +572,7 @@
       "kind": "luaMod",
       "name": "Dex Radar",
       "tagline": "Lists the wild Pokémon available on the current map across grass, water, and fishing encounters.",
+      "description": "Lists the wild Pokémon available on the current map across grass, water, and fishing encounters.",
       "author": {
         "name": "Zetto22",
         "url": "https://github.com/Zetto22/dex_radar"
@@ -572,6 +602,7 @@
       "kind": "luaMod",
       "name": "Gen2Recomp Online",
       "tagline": "Explores online connectivity for the Gen2Recomped runtime.",
+      "description": "Explores online connectivity for the Gen2Recomped runtime.",
       "author": {
         "name": "UNDERdecodedHD",
         "url": "https://github.com/UNDERdecoded/Gen2Recomp---Online"
@@ -595,6 +626,3308 @@
         "id": "gen2recomped"
       },
       "modID": "gen2online"
+    },
+    {
+      "id": "gen1recomp-no-exp-challenge",
+      "kind": "luaMod",
+      "name": "0 EXP Challenge",
+      "tagline": "Battles award no experience at all, for a run where your team never levels.",
+      "description": "Disables battle EXP gain.",
+      "author": {
+        "name": "liminal",
+        "url": "https://github.com/1iminal/gen1recomp-no-exp-challenge"
+      },
+      "version": "1.0.1",
+      "releasedAt": "2026-08-11",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/1iminal/gen1recomp-no-exp-challenge/releases/download/v1.0.1/no_exp_challenge-1.0.1.zip",
+        "sizeBytes": 2103,
+        "sha256": "0adfc6fb4587013d722ba6a2f7e29f1e8ded8716860e6c25c453b7cbad9403b7"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "no_exp_challenge"
+    },
+    {
+      "id": "gen1recomp-access-pc-anywhere",
+      "kind": "luaMod",
+      "name": "Access PC Anywhere",
+      "tagline": "Reach your PC from the start menu, without walking back to a Center.",
+      "description": "Start menu PC. OVERWORLD ONLY (default ON) hides PC inside buildings.",
+      "author": {
+        "name": "masterwebx",
+        "url": "https://github.com/masterwebx/gen1recomp-access-pc-anywhere"
+      },
+      "version": "1.0.1",
+      "releasedAt": "2026-08-02",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/masterwebx/gen1recomp-access-pc-anywhere/releases/download/v1.0.1/ACCESS_PC_ANYWHERE-1.0.1.zip",
+        "sizeBytes": 3584,
+        "sha256": "3fc05864bebecccd63be56b1653d8c2efc44d0307f85e9980ca6bf29f64e7c40"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "ACCESS_PC_ANYWHERE"
+    },
+    {
+      "id": "gen1recomp-auto-battle",
+      "kind": "luaMod",
+      "name": "Auto Battle",
+      "tagline": "Battles pick their own moves, and a tap on the D-pad takes the turn back.",
+      "description": "Auto-picks your move each battle turn: the most type-effective damaging move, falling back to the NPC AI when there's no good hit. Shows an AUTO badge since the FIGHT menu no longer opens. Tap the D-pad during the short window to take manual control for that turn.",
+      "author": {
+        "name": "eduardocalafell",
+        "url": "https://github.com/eduardocalafell/gen1recomp-auto-battle"
+      },
+      "version": "0.1.9",
+      "releasedAt": "2026-08-07",
+      "license": {
+        "spdx": "MIT",
+        "text": "MIT License\n\nCopyright (c) 2026 eduardocalafell\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+      },
+      "categories": [
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/eduardocalafell/gen1recomp-auto-battle/releases/download/v0.1.9/auto_battle-0.1.9.zip",
+        "sizeBytes": 13412,
+        "sha256": "1b1ebfd68007f4f16a3ace125584b7b9fcdf730dbe2888dd7579c6ef23699b0e"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "auto_battle"
+    },
+    {
+      "id": "gen1recomp-bag-sort",
+      "kind": "luaMod",
+      "name": "Bag Sort",
+      "tagline": "Sort the bag by name, quantity, type, or how recently you picked something up.",
+      "description": "Sort your bag by name, quantity, type, or how recently you got each item. Press START in the bag.",
+      "author": {
+        "name": "eduardocalafell",
+        "url": "https://github.com/eduardocalafell/gen1recomp-bag-sort"
+      },
+      "version": "0.1.0",
+      "releasedAt": "2026-08-07",
+      "license": {
+        "spdx": "MIT",
+        "text": "MIT License\n\nCopyright (c) 2026 Eduardo Calafell (eduardocalafell)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+      },
+      "categories": [
+        "QOL"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/eduardocalafell/gen1recomp-bag-sort/releases/download/v0.1.0/bag_sort-0.1.0.zip",
+        "sizeBytes": 3761,
+        "sha256": "116966a8857f3865f50f3d115bdbe0cd95c206a95c2b3b471e28b4d38e81e28f"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "bag_sort"
+    },
+    {
+      "id": "gen1recomp-battle-move-info",
+      "kind": "luaMod",
+      "name": "Battle Move Info",
+      "tagline": "Type matchup markers on the move list, so you can see what lands before you commit.",
+      "description": "Type matchup markers on move select. Left/Right for power.",
+      "author": {
+        "name": "masterwebx",
+        "url": "https://github.com/masterwebx/gen1recomp-battle-move-info"
+      },
+      "version": "1.0.7",
+      "releasedAt": "2026-08-02",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/masterwebx/gen1recomp-battle-move-info/releases/download/v1.0.7/MOVE_MATCHUP-1.0.7.zip",
+        "sizeBytes": 9728,
+        "sha256": "99824daa20c7a06d792b73bb2aa0e8a4cce22bfaa46bde63be7f2a4a385c77c8"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "MOVE_MATCHUP"
+    },
+    {
+      "id": "gen1recomp-better-battle-ui",
+      "kind": "luaMod",
+      "name": "Better Battle UI",
+      "tagline": "The foe's hidden HP and types, effectiveness hints and your catch odds, during battle.",
+      "description": "A battle UI revamp: shows the enemy's hidden HP and type(s), a move-effectiveness hint, stat-stage changes and a catch-chance estimate — with frosted panels and colored accents that also look right in the Dramatic Shape voxel battle.",
+      "author": {
+        "name": "eduardocalafell",
+        "url": "https://github.com/eduardocalafell/gen1recomp-better-battle-ui"
+      },
+      "version": "0.2.1",
+      "releasedAt": "2026-08-08",
+      "license": {
+        "spdx": "MIT",
+        "text": "MIT License\n\nCopyright (c) 2026 Eduardo Calafell\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+      },
+      "categories": [
+        "UI"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/eduardocalafell/gen1recomp-better-battle-ui/releases/download/v0.2.1/better_battle_ui-0.2.1.zip",
+        "sizeBytes": 10101,
+        "sha256": "5743b3511be2acabfb2e134cf53653e4d2b0e282fc456ac7385bc7247e1e8ebb"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "better_battle_ui"
+    },
+    {
+      "id": "gen1recomp-bike-anywhere",
+      "kind": "luaMod",
+      "name": "Bike Anywhere",
+      "tagline": "Ride the bicycle on any map, and hop on or off without opening the bag.",
+      "description": "Ride the BICYCLE on any map (no more \"No cycling allowed here\") and press B on the keyboard to hop on or off the bike instantly, without opening the bag.",
+      "author": {
+        "name": "eduardocalafell",
+        "url": "https://github.com/eduardocalafell/gen1recomp-bike-anywhere"
+      },
+      "version": "0.1.1",
+      "releasedAt": "2026-08-08",
+      "license": {
+        "spdx": "MIT",
+        "text": "MIT License\n\nCopyright (c) 2026 eduardocalafell\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+      },
+      "categories": [
+        "QOL"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/eduardocalafell/gen1recomp-bike-anywhere/releases/download/v0.1.1/bike_anywhere-0.1.1.zip",
+        "sizeBytes": 7705,
+        "sha256": "216357017e794562f41ed53f291b41a48aaac2f589948813c72ea184b8ddf12d"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "bike_anywhere"
+    },
+    {
+      "id": "gen1recomp-blackjack-corner",
+      "kind": "luaMod",
+      "name": "Blackjack Corner",
+      "tagline": "A casino in every Kanto city, with eight games, prize counters and a high roller ladder.",
+      "description": "Adds Gamble Mode, a casino in every Kanto city, two-way coin exchange, local prize counters, High Roller progression, Rocket credit, an underground battle arena, eight games, random starters, themed gym cases, CASE ACE battles, pawning, shinies, and rare prizes.",
+      "author": {
+        "name": "martin2844",
+        "url": "https://github.com/martin2844/gen1recomp-blackjack-corner"
+      },
+      "version": "0.7.4",
+      "releasedAt": "2026-08-12",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/martin2844/gen1recomp-blackjack-corner/releases/download/v0.7.4/blackjack_corner-0.7.4.zip",
+        "sizeBytes": 179724,
+        "sha256": "43c0625712cb4bfcb291dbc979516dcbbc9c4affdc1575edc41592d9a8df0cb7"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "blackjack_corner"
+    },
+    {
+      "id": "gen1recomp-childhood-myths-are-real",
+      "kind": "luaMod",
+      "name": "Childhood Mythos Are Real",
+      "tagline": "The playground rumours turn out to be true, and none of them announce themselves.",
+      "description": "The playground legends, made true: Mew under the truck, a ghost in the tower that can be caught, a garden behind Bill's house, and an S.S. Anne that comes back. Nothing announces itself -- the conditions are the ones the rumour gave.",
+      "author": {
+        "name": "MadeinTaly",
+        "url": "https://github.com/MadeinTaly/gen1recomp-childhood-myths-are-real"
+      },
+      "version": "0.2.0",
+      "releasedAt": "2026-08-11",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/MadeinTaly/gen1recomp-childhood-myths-are-real/releases/download/v0.2.0/childhood_myths_are_real-0.2.0.zip",
+        "sizeBytes": 15532,
+        "sha256": "0739946ac73b28bd147c03b6d2262863df9b744ef9aaf2520d73f8524d8ec53e"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "childhood_myths_are_real"
+    },
+    {
+      "id": "gen1recomp-controller-rumble",
+      "kind": "luaMod",
+      "name": "Controller Rumble",
+      "tagline": "Your controller rumbles for hits, menus and story beats.",
+      "description": "Controller rumble for battles, menus, and story beats.",
+      "author": {
+        "name": "masterwebx",
+        "url": "https://github.com/masterwebx/gen1recomp-controller-rumble"
+      },
+      "version": "1.0.3",
+      "releasedAt": "2026-08-02",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/masterwebx/gen1recomp-controller-rumble/releases/download/v1.0.3/CONTROLLER_RUMBLE-1.0.3.zip",
+        "sizeBytes": 15893,
+        "sha256": "6450f5e0d6e36fc3f3d9bd048415feb9f94f047a4309cc37d9998202bd9e7334"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "CONTROLLER_RUMBLE"
+    },
+    {
+      "id": "gen1recomp-damage-numbers",
+      "kind": "luaMod",
+      "name": "Damage Numbers",
+      "tagline": "Floating numbers show exactly how much HP each hit took off.",
+      "description": "RPG-style floating damage numbers over the Pokemon that got hit. Reads the actual HP removed from each move.",
+      "author": {
+        "name": "eduardocalafell",
+        "url": "https://github.com/eduardocalafell/gen1recomp-damage-numbers"
+      },
+      "version": "0.4.0",
+      "releasedAt": "2026-08-06",
+      "license": {
+        "spdx": "MIT",
+        "text": "MIT License\n\nCopyright (c) 2026 Eduardo Calafell (eduardocalafell)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+      },
+      "categories": [
+        "UI"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/eduardocalafell/gen1recomp-damage-numbers/releases/download/v0.4.0/damage_numbers-0.4.0.zip",
+        "sizeBytes": 6306,
+        "sha256": "9dedaf11810e9699abe84b7307f3ce3b136ae19267f8629103ae8712dbd7837a"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "damage_numbers"
+    },
+    {
+      "id": "wills-mod",
+      "kind": "luaMod",
+      "name": "Encounters Guide",
+      "tagline": "A map-first guide to every wild encounter, with real level ranges and per step odds.",
+      "description": "A map-first wild-encounter guide (PKMN MAP) with a walking HUD and exact encounter tables.",
+      "author": {
+        "name": "Illan",
+        "url": "https://github.com/illanrego/wills-mod"
+      },
+      "version": "1.0.1",
+      "releasedAt": "2026-08-13",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "QOL"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/illanrego/wills-mod/releases/download/v1.0.1/wills_mod-1.0.1.zip",
+        "sizeBytes": 13492,
+        "sha256": "ccbdaa086ee8c383bfa8ccbe736e2ebcc465a476131935fe04cbb7d1b4a1beca"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "wills_mod"
+    },
+    {
+      "id": "gen1recomp-fakemons",
+      "kind": "luaMod",
+      "name": "Fakémons",
+      "tagline": "Fan-made species join the game as real catchable Pokemon, in habitats of their own.",
+      "description": "Adds original fan-made Pokémon (Fakémons) as real catchable species — full stats, moves, learnsets, dex entries and art — spawning in themed habitats. Currently: Cindrake (#152, Fire/Dragon).",
+      "author": {
+        "name": "eduardocalafell",
+        "url": "https://github.com/eduardocalafell/gen1recomp-fakemons"
+      },
+      "version": "0.1.1",
+      "releasedAt": "2026-08-08",
+      "license": {
+        "spdx": "MIT",
+        "text": "MIT License\n\nCopyright (c) 2026 eduardocalafell\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+      },
+      "categories": [
+        "CONTENT"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/eduardocalafell/gen1recomp-fakemons/releases/download/v0.1.1/fakemons-0.1.1.zip",
+        "sizeBytes": 18702,
+        "sha256": "52bd5eaae3cc4871f5fb3b0178ea677e7c4499a1aaa6636c0712809762f32982"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "fakemons"
+    },
+    {
+      "id": "gen1recomp-gen3-boxes@gen1recomp",
+      "kind": "luaMod",
+      "name": "Gen 3 Box",
+      "tagline": "Storage as a Ruby and Sapphire style grid you can search, sort and mark.",
+      "description": "A Ruby/Sapphire-style storage screen over Gen 1's twelve boxes of twenty: a visible 5x4 grid drawn from the per-species battle pics, a cursor that picks a Pokemon up and puts it down, swapping on an occupied slot, and SELECT to cross between the box and the party. Search every box by species, type, or mark with FIND; sort by dex, level, name, or type with UNDO; mark Pokemon with the four Gen 3 symbols; give each box a custom name up to eight glyphs and pick a wallpaper from six patterns; and hear a cry every time a Pokemon lands. BOX HEALS rests everything in storage when you close the screen. GRID BIG doubles the surface to 320x288, showing battle pics at full size and giving each Pokemon its own species palette. OW SPRITES (on by default) draws Wilds of Kanto's overworld sprites in the CLASSIC grid when that mod is installed. It runs on Gold as well as on Red, Blue and Yellow: Gen 2's fourteen boxes, its split Special, its own summary screen and its MAIL rules are all honoured.",
+      "author": {
+        "name": "MadeinTaly",
+        "url": "https://github.com/MadeinTaly/gen1recomp-gen3-boxes"
+      },
+      "version": "1.8.0",
+      "releasedAt": "2026-08-12",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "UI"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/MadeinTaly/gen1recomp-gen3-boxes/releases/download/v1.8.0/gen3_box-1.8.0.zip",
+        "sizeBytes": 45910,
+        "sha256": "3ca1fcd891c523dacb449222503584fd97659f8ff3515e0193d438c63a499039"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "gen3_box"
+    },
+    {
+      "id": "gen1recomp-gen3-boxes@gen2recomped",
+      "kind": "luaMod",
+      "name": "Gen 3 Box",
+      "tagline": "Storage as a Ruby and Sapphire style grid you can search, sort and mark.",
+      "description": "A Ruby/Sapphire-style storage screen over Gen 1's twelve boxes of twenty: a visible 5x4 grid drawn from the per-species battle pics, a cursor that picks a Pokemon up and puts it down, swapping on an occupied slot, and SELECT to cross between the box and the party. Search every box by species, type, or mark with FIND; sort by dex, level, name, or type with UNDO; mark Pokemon with the four Gen 3 symbols; give each box a custom name up to eight glyphs and pick a wallpaper from six patterns; and hear a cry every time a Pokemon lands. BOX HEALS rests everything in storage when you close the screen. GRID BIG doubles the surface to 320x288, showing battle pics at full size and giving each Pokemon its own species palette. OW SPRITES (on by default) draws Wilds of Kanto's overworld sprites in the CLASSIC grid when that mod is installed. It runs on Gold as well as on Red, Blue and Yellow: Gen 2's fourteen boxes, its split Special, its own summary screen and its MAIL rules are all honoured.",
+      "author": {
+        "name": "MadeinTaly",
+        "url": "https://github.com/MadeinTaly/gen1recomp-gen3-boxes"
+      },
+      "version": "1.8.0",
+      "releasedAt": "2026-08-12",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "UI"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/MadeinTaly/gen1recomp-gen3-boxes/releases/download/v1.8.0/gen3_box-1.8.0.zip",
+        "sizeBytes": 45910,
+        "sha256": "3ca1fcd891c523dacb449222503584fd97659f8ff3515e0193d438c63a499039"
+      },
+      "engine": {
+        "id": "gen2recomped"
+      },
+      "modID": "gen3_box"
+    },
+    {
+      "id": "gen1recomp-gen3-dex@gen1recomp",
+      "kind": "luaMod",
+      "name": "Gen 3 Dex",
+      "tagline": "The Pokedex as a grid of pictures, every owned species in its own colours.",
+      "description": "The Pokedex as a grid of pictures instead of a list of names. Owned species wear their own palette -- twenty-one colours at once where the Game Boy could show four -- seen-but-uncaught are dimmed, and the rest are blanks. SELECT filters to OWNED, MISSING or SEEN ONLY. A offers DATA / CRY / AREA like the vanilla list -- AREA is the engine's own nest map, which blinks every place the species lives. DATA goes to the engine's own species page, so Useful Dex's extra pages still work. Runs on Gold too: fourteen rows of Johto instead of stopping at Mew, the caught half of the dex read where Gold keeps it, DATA/AREA routed to Gold's own dex entry, and GRID BIG now draws its full 320x288 grid there as well, through Gold's own widescreen contract -- without the per-species palette zones, which stay a Super Game Boy trick Gold has no use for.",
+      "author": {
+        "name": "MadeinTaly",
+        "url": "https://github.com/MadeinTaly/gen1recomp-gen3-dex"
+      },
+      "version": "0.5.0",
+      "releasedAt": "2026-08-12",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "UI"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/MadeinTaly/gen1recomp-gen3-dex/releases/download/v0.5.0/gen3_dex-0.5.0.zip",
+        "sizeBytes": 25092,
+        "sha256": "8f3ca00b261d99f9c700e41ea9d184a4cacb0afc4c6a784137b34414c4c207ab"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "gen3_dex"
+    },
+    {
+      "id": "gen1recomp-gen3-dex@gen2recomped",
+      "kind": "luaMod",
+      "name": "Gen 3 Dex",
+      "tagline": "The Pokedex as a grid of pictures, every owned species in its own colours.",
+      "description": "The Pokedex as a grid of pictures instead of a list of names. Owned species wear their own palette -- twenty-one colours at once where the Game Boy could show four -- seen-but-uncaught are dimmed, and the rest are blanks. SELECT filters to OWNED, MISSING or SEEN ONLY. A offers DATA / CRY / AREA like the vanilla list -- AREA is the engine's own nest map, which blinks every place the species lives. DATA goes to the engine's own species page, so Useful Dex's extra pages still work. Runs on Gold too: fourteen rows of Johto instead of stopping at Mew, the caught half of the dex read where Gold keeps it, DATA/AREA routed to Gold's own dex entry, and GRID BIG now draws its full 320x288 grid there as well, through Gold's own widescreen contract -- without the per-species palette zones, which stay a Super Game Boy trick Gold has no use for.",
+      "author": {
+        "name": "MadeinTaly",
+        "url": "https://github.com/MadeinTaly/gen1recomp-gen3-dex"
+      },
+      "version": "0.5.0",
+      "releasedAt": "2026-08-12",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "UI"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/MadeinTaly/gen1recomp-gen3-dex/releases/download/v0.5.0/gen3_dex-0.5.0.zip",
+        "sizeBytes": 25092,
+        "sha256": "8f3ca00b261d99f9c700e41ea9d184a4cacb0afc4c6a784137b34414c4c207ab"
+      },
+      "engine": {
+        "id": "gen2recomped"
+      },
+      "modID": "gen3_dex"
+    },
+    {
+      "id": "gen1recomp-groovy-palette-frames@gen1recomp",
+      "kind": "luaMod",
+      "name": "Groovy Palette & Frames",
+      "tagline": "Thirty more colour schemes and eight text box borders, previewed on the running game.",
+      "description": "Thirty more entries on the COLORS row -- Amiga Workbench, the C64 boot screen, a Virtual Boy, rainbow, fuchsia, vaporwave -- plus eight new borders for every text box and menu. Press A on OPTION -> COLORS (or, on Gold, OPTION -> COLOR) and the menu lifts off the game: the palette name and nothing else, left and right to walk the list, previewed on the running game. USE ADVANCED rides the engine's own per-tile colorization instead of replacing it -- the pokered-gbc pack on Red/Blue/Yellow, Gold's own GBC palettes on Gold -- so a palette recolours dozens of colours on screen rather than four. The FRAME half works identically on both generations, through the same Font.drawBox both draw their boxes with; the palette half now does too, riding Gold's own GbcPalette.resolve the same way it rides PaletteFX.effectiveColors on Gen 1. The one gap: Gold's title screen and Gold/Silver boot cinema keep their own pre-rendered art (the same boundary its DMG and CLASSIC color modes already live with) and pick up the scheme from the first menu or map onward.",
+      "author": {
+        "name": "MadeinTaly",
+        "url": "https://github.com/MadeinTaly/gen1recomp-groovy-palette-frames"
+      },
+      "version": "0.7.0",
+      "releasedAt": "2026-08-12",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "ART"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/MadeinTaly/gen1recomp-groovy-palette-frames/releases/download/v0.7.0/groovy_palette-0.7.0.zip",
+        "sizeBytes": 34674,
+        "sha256": "5df758904c00f053dcb32abb88126b399c9754f8128bc247f0c67e72267c0320"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "groovy_palette"
+    },
+    {
+      "id": "gen1recomp-groovy-palette-frames@gen2recomped",
+      "kind": "luaMod",
+      "name": "Groovy Palette & Frames",
+      "tagline": "Thirty more colour schemes and eight text box borders, previewed on the running game.",
+      "description": "Thirty more entries on the COLORS row -- Amiga Workbench, the C64 boot screen, a Virtual Boy, rainbow, fuchsia, vaporwave -- plus eight new borders for every text box and menu. Press A on OPTION -> COLORS (or, on Gold, OPTION -> COLOR) and the menu lifts off the game: the palette name and nothing else, left and right to walk the list, previewed on the running game. USE ADVANCED rides the engine's own per-tile colorization instead of replacing it -- the pokered-gbc pack on Red/Blue/Yellow, Gold's own GBC palettes on Gold -- so a palette recolours dozens of colours on screen rather than four. The FRAME half works identically on both generations, through the same Font.drawBox both draw their boxes with; the palette half now does too, riding Gold's own GbcPalette.resolve the same way it rides PaletteFX.effectiveColors on Gen 1. The one gap: Gold's title screen and Gold/Silver boot cinema keep their own pre-rendered art (the same boundary its DMG and CLASSIC color modes already live with) and pick up the scheme from the first menu or map onward.",
+      "author": {
+        "name": "MadeinTaly",
+        "url": "https://github.com/MadeinTaly/gen1recomp-groovy-palette-frames"
+      },
+      "version": "0.7.0",
+      "releasedAt": "2026-08-12",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "ART"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/MadeinTaly/gen1recomp-groovy-palette-frames/releases/download/v0.7.0/groovy_palette-0.7.0.zip",
+        "sizeBytes": 34674,
+        "sha256": "5df758904c00f053dcb32abb88126b399c9754f8128bc247f0c67e72267c0320"
+      },
+      "engine": {
+        "id": "gen2recomped"
+      },
+      "modID": "groovy_palette"
+    },
+    {
+      "id": "gen1recomp-heal-anywhere",
+      "kind": "luaMod",
+      "name": "Heal Anywhere",
+      "tagline": "Heal your party from the start menu, for a fee that grows the more you lean on it.",
+      "description": "Start menu heal; cost scales with badges and uses. Nurse resets. Spawns a Center machine in front of you.",
+      "author": {
+        "name": "masterwebx",
+        "url": "https://github.com/masterwebx/gen1recomp-heal-anywhere"
+      },
+      "version": "1.0.0",
+      "releasedAt": "2026-08-02",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/masterwebx/gen1recomp-heal-anywhere/releases/download/v1.0.0/HEAL_ANYWHERE-1.0.0.zip",
+        "sizeBytes": 6296,
+        "sha256": "b75495e00311e7b4dcfe16aa050aa5731e0f4759f45b27d253a06a92f5b86dc3"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "HEAL_ANYWHERE"
+    },
+    {
+      "id": "kanto-gear@gen1recomp",
+      "kind": "luaMod",
+      "name": "Kanto Gear",
+      "tagline": "A companion panel for your party, map and bag, built for a second screen.",
+      "description": "Flexible companion UI for Gen 1 and Pokemon Gold on single- and dual-screen Gen1Recomp hosts.",
+      "author": {
+        "name": "AverageConsumer",
+        "url": "https://github.com/AverageConsumer/kanto-gear"
+      },
+      "version": "2.2.0",
+      "releasedAt": "2026-08-17",
+      "license": {
+        "spdx": "MIT",
+        "text": "MIT License\n\nCopyright (c) 2026 AverageConsumer\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+      },
+      "categories": [
+        "UI"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/AverageConsumer/kanto-gear/releases/download/v2.2.0/kanto_gear-2.2.0.zip",
+        "sizeBytes": 51466,
+        "sha256": "9a8f14dcf895ff620e09745a4c258b9a013e9fa2f7a01ce7d12557ea86bf82d0"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "kanto_gear"
+    },
+    {
+      "id": "kanto-gear@gen2recomped",
+      "kind": "luaMod",
+      "name": "Kanto Gear",
+      "tagline": "A companion panel for your party, map and bag, built for a second screen.",
+      "description": "Flexible companion UI for Gen 1 and Pokemon Gold on single- and dual-screen Gen1Recomp hosts.",
+      "author": {
+        "name": "AverageConsumer",
+        "url": "https://github.com/AverageConsumer/kanto-gear"
+      },
+      "version": "2.2.0",
+      "releasedAt": "2026-08-17",
+      "license": {
+        "spdx": "MIT",
+        "text": "MIT License\n\nCopyright (c) 2026 AverageConsumer\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+      },
+      "categories": [
+        "UI"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/AverageConsumer/kanto-gear/releases/download/v2.2.0/kanto_gear-2.2.0.zip",
+        "sizeBytes": 51466,
+        "sha256": "9a8f14dcf895ff620e09745a4c258b9a013e9fa2f7a01ce7d12557ea86bf82d0"
+      },
+      "engine": {
+        "id": "gen2recomped"
+      },
+      "modID": "kanto_gear"
+    },
+    {
+      "id": "mew-under-the-truck",
+      "kind": "luaMod",
+      "name": "Mew Under the Truck",
+      "tagline": "Use Strength on the truck by the dock, and something finally stirs underneath.",
+      "description": "The schoolyard rumour, made real. Get back to the dock after the S.S. Anne sails, use STRENGTH on the truck, and something stirs underneath.",
+      "author": {
+        "name": "Maaggel",
+        "url": "https://github.com/Maaggel/mew-under-the-truck"
+      },
+      "version": "0.8.3",
+      "releasedAt": "2026-08-13",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "CONTENT"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/Maaggel/mew-under-the-truck/releases/download/v0.8.3/mew_under_the_truck-0.8.3.zip",
+        "sizeBytes": 239963,
+        "sha256": "57ce772f903888370a752107f738f615449d260b2100ac2abf54fea25927f0ef"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "mew_under_the_truck"
+    },
+    {
+      "id": "gen1recomp-minimap",
+      "kind": "luaMod",
+      "name": "Minimap",
+      "tagline": "A small map of wherever you are, showing walls, water, grass and the exits.",
+      "description": "A toggleable minimap of the map you're on, opened with the M key: walls, paths, water, grass and exits, with your position and the map's name (e.g. ROUTE 1).",
+      "author": {
+        "name": "eduardocalafell",
+        "url": "https://github.com/eduardocalafell/gen1recomp-minimap"
+      },
+      "version": "0.1.0",
+      "releasedAt": "2026-08-08",
+      "license": {
+        "spdx": "MIT",
+        "text": "MIT License\n\nCopyright (c) 2026 eduardocalafell\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+      },
+      "categories": [
+        "UI"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/eduardocalafell/gen1recomp-minimap/releases/download/v0.1.0/minimap-0.1.0.zip",
+        "sizeBytes": 4441,
+        "sha256": "2ea50dc5a9eb5b61eadd044bc7fc74f258e8f70eda96e8240fbe1fee2dc9473f"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "minimap"
+    },
+    {
+      "id": "gen1recomp-modern-dialog",
+      "kind": "luaMod",
+      "name": "Modern Dialogue Boxes",
+      "tagline": "Rounded text boxes with a soft shadow, a speaker name, and sizes you can pick.",
+      "description": "Modern rounded dialogue boxes with a soft shadow, optional translucency, size presets, and a speaker-name header. Restyles menus too.",
+      "author": {
+        "name": "eduardocalafell",
+        "url": "https://github.com/eduardocalafell/gen1recomp-modern-dialog"
+      },
+      "version": "0.4.1",
+      "releasedAt": "2026-08-08",
+      "license": {
+        "spdx": "MIT",
+        "text": "MIT License\n\nCopyright (c) 2026 Eduardo Calafell (eduardocalafell)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+      },
+      "categories": [
+        "UI"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/eduardocalafell/gen1recomp-modern-dialog/releases/download/v0.4.1/modern_dialog-0.4.1.zip",
+        "sizeBytes": 7754,
+        "sha256": "715a4a7346dbafab29e1ecf5b90f5ca4771a9fa99cb6c94c9703f2a3179a17b5"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "modern_dialog"
+    },
+    {
+      "id": "gen1recomp-modern-johto",
+      "kind": "luaMod",
+      "name": "Modern Johto",
+      "tagline": "Gold gets the Gen 4 physical and special split, decided move by move.",
+      "description": "The Gen 4 physical/special split for Pokemon Gold, decided per move instead of per type -- so Crunch comes off Attack, Shadow Ball off Special Attack, and Gyarados finally throws Hydro Pump off the stat it was never meant to use. Gold already splits Special into two stats, which is what makes the per-move category the real Gen 4 change here rather than the half-measure it is on a game with one Special. Now also an AI toggle: a trainer class that never carries the TYPES bit reads type effectiveness anyway, through a second ai_classes layer that steps aside for any class Gold already made type-aware. Both toggles off by default, because both change the balance. The Gen 2 counterpart of Modern Kanto, which stays where it is: five of that mod's six pieces have nothing to fix on Gold.",
+      "author": {
+        "name": "MadeinTaly",
+        "url": "https://github.com/MadeinTaly/gen1recomp-modern-johto"
+      },
+      "version": "0.2.0",
+      "releasedAt": "2026-08-12",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "GAMEPLAY"
+      ],
+      "target": "Gen2Recomped",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/MadeinTaly/gen1recomp-modern-johto/releases/download/v0.2.0/modern_johto-0.2.0.zip",
+        "sizeBytes": 17153,
+        "sha256": "1db28278956ce7200ba39075343f08c3d8009b6cbd77da7d5004b46156558731"
+      },
+      "engine": {
+        "id": "gen2recomped"
+      },
+      "modID": "modern_johto"
+    },
+    {
+      "id": "gen1recomp-modern-kanto",
+      "kind": "luaMod",
+      "name": "Modern Kanto",
+      "tagline": "Six fixes for Gen 1's oldest complaints, from the type chart to the 1 in 256 miss. Still in beta.",
+      "description": "BETA. Six changes that each answer the same complaint about Gen 1: the Gen 4 physical/special split as per-move data, the four type-chart rows Gen 2 corrected (including the Ghost-does-nothing-to-Psychic bug), a ruleset that fixes five battle rules Gen 1 got wrong by accident (the 1/256 miss, Focus Energy quartering crits, crits ignoring stat stages, the enemy's free PP, Hyper Beam's missing recharge), the player-only badge stat boost as a switch, an AI type pass that multiplies dual types out instead of reading one row, and an Atlas screen for what lives where and what you still need. Every piece is separately switchable; the balance-changing ones are off by default.",
+      "author": {
+        "name": "MadeinTaly",
+        "url": "https://github.com/MadeinTaly/gen1recomp-modern-kanto"
+      },
+      "version": "0.3.0",
+      "releasedAt": "2026-08-11",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/MadeinTaly/gen1recomp-modern-kanto/releases/download/v0.3.0/modern_kanto-0.3.0.zip",
+        "sizeBytes": 18663,
+        "sha256": "7477413273854283bcc563f212a758edf91378a963cc674a8dfd952526840b2c"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "modern_kanto"
+    },
+    {
+      "id": "move-descriptions",
+      "kind": "luaMod",
+      "name": "Move Descriptions",
+      "tagline": "Press START on a move to read what it actually does. Gen 1 never told you.",
+      "description": "Press START on a move to see what it does. Gen 1 never told you; Gen 2 did. Battle, status, learning, TMs and HMs.",
+      "author": {
+        "name": "Maaggel",
+        "url": "https://github.com/Maaggel/move-descriptions"
+      },
+      "version": "0.5.1",
+      "releasedAt": "2026-08-13",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "UI"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/Maaggel/move-descriptions/releases/download/0.5.1/move_descriptions-0.5.1.zip",
+        "sizeBytes": 9258,
+        "sha256": "98bd769a86d91cbabbf077f9d3a37c81ed30a8dcbdae63f3221bcce22f34f1c2"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "move_descriptions"
+    },
+    {
+      "id": "gen1recomp-multi-save-slots",
+      "kind": "luaMod",
+      "name": "Multiple Save Slots",
+      "tagline": "Keep several playthroughs at once, and pick a slot when you save or continue.",
+      "description": "CONTINUE and SAVE pick a slot. NEW SAVE writes immediately. Delete removes the slot.",
+      "author": {
+        "name": "masterwebx",
+        "url": "https://github.com/masterwebx/gen1recomp-multi-save-slots"
+      },
+      "version": "1.0.0",
+      "releasedAt": "2026-08-02",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/masterwebx/gen1recomp-multi-save-slots/releases/download/v1.0.0/MULTI_SAVE_SLOTS-1.0.0.zip",
+        "sizeBytes": 4910,
+        "sha256": "9f364b0618041cb7abe8bda6f7c3e3d1170282d8dbf3acd20eddadbde053cdcb"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "MULTI_SAVE_SLOTS"
+    },
+    {
+      "id": "gen1recomp-music-player",
+      "kind": "luaMod",
+      "name": "Music Player",
+      "tagline": "Play any track in the game, keep favourites, and queue them up.",
+      "description": "SELECT+A opens the player. START favorites; SELECT+START plays the queue.",
+      "author": {
+        "name": "masterwebx",
+        "url": "https://github.com/masterwebx/gen1recomp-music-player"
+      },
+      "version": "1.2.5",
+      "releasedAt": "2026-08-02",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "AUDIO"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/masterwebx/gen1recomp-music-player/releases/download/v1.2.5/MUSIC_PLAYER-1.2.5.zip",
+        "sizeBytes": 6508,
+        "sha256": "579eda895100584d161425bb7a967b1e279b262fddd8c3e08d46771cb84e4029"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "MUSIC_PLAYER"
+    },
+    {
+      "id": "pokemon-snag@gen1recomp",
+      "kind": "luaMod",
+      "name": "Pokemon Snag",
+      "tagline": "Steal a Pokemon out of a trainer battle, then fence it on Kanto's black market.",
+      "description": "Steal Pokemon from other trainers with the SNAG BALL. It works in trainer battles, so any Pokemon an opponent sends out is one you can take. On Red, beat the TEAM ROCKET recruiter at Nugget Bridge to earn your first, then fence stolen Pokemon to black-market buyers across Kanto. On Gold, a sailor in Cherrygrove City starts you off and brokers in Goldenrod and Ecruteak hand out contracts. Quest System optional, for a journal entry.",
+      "author": {
+        "name": "Mister Miracle",
+        "url": "https://github.com/mistermiracle3036/Pokemon-Snag"
+      },
+      "version": "0.15.9",
+      "releasedAt": "2026-08-14",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/mistermiracle3036/Pokemon-Snag/releases/download/v0.15.9/snag_quest-0.15.9.zip",
+        "sizeBytes": 108040,
+        "sha256": "46bbb3a58e7945dc2e7daa54de76b70279efdb0c85a6fe48b0acb4aad7b401f4"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "snag_quest"
+    },
+    {
+      "id": "pokemon-snag@gen2recomped",
+      "kind": "luaMod",
+      "name": "Pokemon Snag",
+      "tagline": "Steal a Pokemon out of a trainer battle, then fence it on Kanto's black market.",
+      "description": "Steal Pokemon from other trainers with the SNAG BALL. It works in trainer battles, so any Pokemon an opponent sends out is one you can take. On Red, beat the TEAM ROCKET recruiter at Nugget Bridge to earn your first, then fence stolen Pokemon to black-market buyers across Kanto. On Gold, a sailor in Cherrygrove City starts you off and brokers in Goldenrod and Ecruteak hand out contracts. Quest System optional, for a journal entry.",
+      "author": {
+        "name": "Mister Miracle",
+        "url": "https://github.com/mistermiracle3036/Pokemon-Snag"
+      },
+      "version": "0.15.9",
+      "releasedAt": "2026-08-14",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/mistermiracle3036/Pokemon-Snag/releases/download/v0.15.9/snag_quest-0.15.9.zip",
+        "sizeBytes": 108040,
+        "sha256": "46bbb3a58e7945dc2e7daa54de76b70279efdb0c85a6fe48b0acb4aad7b401f4"
+      },
+      "engine": {
+        "id": "gen2recomped"
+      },
+      "modID": "snag_quest"
+    },
+    {
+      "id": "quest-menu@gen1recomp",
+      "kind": "luaMod",
+      "name": "Quest Menu",
+      "tagline": "A journal for side quests and the NPC trades you have taken on.",
+      "description": "A side-quest journal and immersive NPC trade tracker for Red, Blue, Yellow and Gold.",
+      "author": {
+        "name": "TanukiTooks",
+        "url": "https://github.com/TanukiTooks/Quest-Menu"
+      },
+      "version": "1.1.0",
+      "releasedAt": "2026-08-13",
+      "license": {
+        "spdx": "MIT",
+        "text": "MIT License\n\nCopyright (c) 2026 TanukiTooks\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+      },
+      "categories": [
+        "UI"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/TanukiTooks/Quest-Menu/releases/download/v1.1.0/QuestMenu-1.1.0.zip",
+        "sizeBytes": 18620,
+        "sha256": "5323bd60cd30dabe4b7c9f9a0659f517a465261b9c006b705df1f10cec966386"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "quest_menu"
+    },
+    {
+      "id": "quest-menu@gen2recomped",
+      "kind": "luaMod",
+      "name": "Quest Menu",
+      "tagline": "A journal for side quests and the NPC trades you have taken on.",
+      "description": "A side-quest journal and immersive NPC trade tracker for Red, Blue, Yellow and Gold.",
+      "author": {
+        "name": "TanukiTooks",
+        "url": "https://github.com/TanukiTooks/Quest-Menu"
+      },
+      "version": "1.1.0",
+      "releasedAt": "2026-08-13",
+      "license": {
+        "spdx": "MIT",
+        "text": "MIT License\n\nCopyright (c) 2026 TanukiTooks\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+      },
+      "categories": [
+        "UI"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/TanukiTooks/Quest-Menu/releases/download/v1.1.0/QuestMenu-1.1.0.zip",
+        "sizeBytes": 18620,
+        "sha256": "5323bd60cd30dabe4b7c9f9a0659f517a465261b9c006b705df1f10cec966386"
+      },
+      "engine": {
+        "id": "gen2recomped"
+      },
+      "modID": "quest_menu"
+    },
+    {
+      "id": "gen1recomp-run-mode",
+      "kind": "luaMod",
+      "name": "Run Mode",
+      "tagline": "Hold B to run on the overworld.",
+      "description": "Hold or toggle B to run on the overworld. Open RUN MODE in OPTIONS.",
+      "author": {
+        "name": "masterwebx",
+        "url": "https://github.com/masterwebx/gen1recomp-run-mode"
+      },
+      "version": "1.2.0",
+      "releasedAt": "2026-08-02",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "QOL"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/masterwebx/gen1recomp-run-mode/releases/download/v1.2.0/RUN_MODE-1.2.0.zip",
+        "sizeBytes": 5876,
+        "sha256": "e9fa3da4de2ab0dc0c9e0818364ec73f3c8f607f3aad1bd0000ea63c3a570276"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "RUN_MODE"
+    },
+    {
+      "id": "gen1recomp-running-shoes@gen1recomp",
+      "kind": "luaMod",
+      "name": "Running Shoes",
+      "tagline": "Hold B to move faster, at a speed you choose, with a trail off your heels.",
+      "description": "Hold B to walk faster, at a speed you pick: x1.5, x2, x3 or x4. Rides the engine's own movement.speed hook, whose comment names running shoes as the reason it exists. A run can leave a trail off your heels -- smoke, flames or lightning -- reaching about three and a half cells back; it can CUT the tall grass you run across, one clod at a time, the way the CUT move cuts it, so that grass has no Pokemon left in it; and it can carry you through tall grass without ever starting a wild battle. Every one of those has an off switch, the last two ship off, and with all three left alone nothing but the duration of a step changes. Optional boosts for the bicycle and for surfing too. Runs on Pokemon Gold too, and as of 1.6.0 every row works there: RUN SPEED, BOOST BIKE, BOOST SURF, SAFE GRASS, CUT GRASS and RUN FX all cross over. 1.7.0 adds the Dramatic Shape voxel mod's first- and third-person cameras, which replace the grid walk with a continuous one and used to leave every row of this mod silent; the speed, CUT GRASS and SAFE GRASS all work inside them now. RUN FX still cannot: a 2D overlay cannot follow a 3D camera.",
+      "author": {
+        "name": "MadeinTaly",
+        "url": "https://github.com/MadeinTaly/gen1recomp-running-shoes"
+      },
+      "version": "1.7.0",
+      "releasedAt": "2026-08-13",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "QOL"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/MadeinTaly/gen1recomp-running-shoes/releases/download/v1.7.0/running_shoes-1.7.0.zip",
+        "sizeBytes": 43680,
+        "sha256": "de617710b60dcf4347a3c41e00283856d397222a3eb0547515a5b2c4371a6929"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "running_shoes"
+    },
+    {
+      "id": "gen1recomp-running-shoes@gen2recomped",
+      "kind": "luaMod",
+      "name": "Running Shoes",
+      "tagline": "Hold B to move faster, at a speed you choose, with a trail off your heels.",
+      "description": "Hold B to walk faster, at a speed you pick: x1.5, x2, x3 or x4. Rides the engine's own movement.speed hook, whose comment names running shoes as the reason it exists. A run can leave a trail off your heels -- smoke, flames or lightning -- reaching about three and a half cells back; it can CUT the tall grass you run across, one clod at a time, the way the CUT move cuts it, so that grass has no Pokemon left in it; and it can carry you through tall grass without ever starting a wild battle. Every one of those has an off switch, the last two ship off, and with all three left alone nothing but the duration of a step changes. Optional boosts for the bicycle and for surfing too. Runs on Pokemon Gold too, and as of 1.6.0 every row works there: RUN SPEED, BOOST BIKE, BOOST SURF, SAFE GRASS, CUT GRASS and RUN FX all cross over. 1.7.0 adds the Dramatic Shape voxel mod's first- and third-person cameras, which replace the grid walk with a continuous one and used to leave every row of this mod silent; the speed, CUT GRASS and SAFE GRASS all work inside them now. RUN FX still cannot: a 2D overlay cannot follow a 3D camera.",
+      "author": {
+        "name": "MadeinTaly",
+        "url": "https://github.com/MadeinTaly/gen1recomp-running-shoes"
+      },
+      "version": "1.7.0",
+      "releasedAt": "2026-08-13",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "QOL"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/MadeinTaly/gen1recomp-running-shoes/releases/download/v1.7.0/running_shoes-1.7.0.zip",
+        "sizeBytes": 43680,
+        "sha256": "de617710b60dcf4347a3c41e00283856d397222a3eb0547515a5b2c4371a6929"
+      },
+      "engine": {
+        "id": "gen2recomped"
+      },
+      "modID": "running_shoes"
+    },
+    {
+      "id": "gen1recomp-savestates",
+      "kind": "luaMod",
+      "name": "Save States",
+      "tagline": "Rolling quicksaves, autosaves and permanent slots you can drop at any moment.",
+      "description": "Native rolling quicksaves, autosaves, permanent slots, and recovery checkpoints.",
+      "author": {
+        "name": "MaxTomahawk",
+        "url": "https://github.com/MaxTomahawk/gen1recomp-savestates"
+      },
+      "version": "0.1.0",
+      "releasedAt": "2026-08-12",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "QOL"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/MaxTomahawk/gen1recomp-savestates/releases/download/v0.1.0/savestates-0.1.0.zip",
+        "sizeBytes": 68534,
+        "sha256": "205e339d16cad76dc04c5f95aa5541fa248fca3dc97375fbbdecc4b46b7b3131"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "savestates"
+    },
+    {
+      "id": "gen1recomp-shiny-starters-gifts",
+      "kind": "luaMod",
+      "name": "Shiny Gifts & Starters",
+      "tagline": "Your starter arrives shiny, and every story gift can too.",
+      "description": "Force your starter (and optionally all story gifts) to be shiny.",
+      "author": {
+        "name": "Satori7Kensho",
+        "url": "https://github.com/Satori7Kensho/gen1recomp-shiny-starters-gifts"
+      },
+      "version": "1.1.0",
+      "releasedAt": "2026-08-04",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "ART"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/Satori7Kensho/gen1recomp-shiny-starters-gifts/releases/download/v1.1.0/shiny_starters_gifts.zip",
+        "sizeBytes": 3652,
+        "sha256": "a2ef09cba0ec657ce870a8e5d563b51fad1401b4c9ee3fa1d20c5c7e4f5f1739"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "shiny_starters_gifts"
+    },
+    {
+      "id": "gen1recomp-switch-advisor",
+      "kind": "luaMod",
+      "name": "Switch Advisor",
+      "tagline": "The switch screen grades every party member against what you are facing.",
+      "description": "Grades every party mon against the foe on the battle switch screen, and sends caught POKeMON straight to the party with no nickname prompt.",
+      "author": {
+        "name": "allanrmartins",
+        "url": "https://github.com/allanrmartins/gen1recomp-switch-advisor"
+      },
+      "version": "1.0.0",
+      "releasedAt": "2026-08-05",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "QOL"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/allanrmartins/gen1recomp-switch-advisor/releases/download/v1.0.0/SWITCH_ADVISOR-1.0.0.zip",
+        "sizeBytes": 18696,
+        "sha256": "8f7f18df1d8a6bb3fb1200b5d63f60163710a8d2e297af668664355261c04187"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "SWITCH_ADVISOR"
+    },
+    {
+      "id": "gen1recomp-buttonmash",
+      "kind": "luaMod",
+      "name": "Mash Catch",
+      "tagline": "Work the buttons while the ball wobbles to turn a near miss into a catch.",
+      "description": "The playground legend, made real: working your technique while the ball wobbles can flip a break-free into a catch. Pick your ritual -- mash A+B, hold Down and mash B, hold Up+A, tap A on the beat, hold B and rock the d-pad, or build your own. Vanilla odds are untouched -- it only ever redeems a throw that already gripped and shook.",
+      "author": {
+        "name": "mresnick67",
+        "url": "https://github.com/mresnick67/Gen1ReComp-ButtonMash"
+      },
+      "version": "0.2.0",
+      "releasedAt": "2026-08-04",
+      "license": {
+        "spdx": "MIT",
+        "text": "MIT License\n\nCopyright (c) 2026 Myles Resnick\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+      },
+      "categories": [
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/mresnick67/Gen1ReComp-ButtonMash/releases/download/v0.2.0/mash-catch-0.2.0.zip",
+        "sizeBytes": 15709,
+        "sha256": "351d028658b1001d150b8ecd56d126138c0c310e5d6e362684f0784b0294384f"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "mash-catch"
+    },
+    {
+      "id": "voxel-ascendant",
+      "kind": "luaMod",
+      "name": "Voxel Ascendant",
+      "tagline": "A voxel overworld and a 3D battle view, rendered inside the sandbox.",
+      "description": "A sandbox-safe voxel overworld and native-card 3D battle renderer for Gen1Recomp 0.1.90.",
+      "author": {
+        "name": "Roxas2712",
+        "url": "https://github.com/Roxas2712/voxel-ascendant"
+      },
+      "version": "0.1.1",
+      "releasedAt": "2026-08-15",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "ART"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/Roxas2712/voxel-ascendant/releases/download/v0.1.1/voxel-ascendant-0.1.1-direct-install.zip",
+        "sizeBytes": 474982,
+        "sha256": "bfc79f04aace1c6f9e12f2145737635b35cca5ef3a8c63fe5a531dd87c1a4141"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "VOXEL_ASCENDANT"
+    },
+    {
+      "id": "gen1recomp-bag-wrap",
+      "kind": "luaMod",
+      "name": "EriLab Bag Wrap",
+      "tagline": "The bag cursor wraps around instead of stopping at the ends.",
+      "description": "Adds circular cursor navigation to the item bag.",
+      "author": {
+        "name": "erereck",
+        "url": "https://github.com/erereck/gen1recomp-bag-wrap"
+      },
+      "version": "1.0.0",
+      "releasedAt": "2026-08-01",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "UI"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/erereck/gen1recomp-bag-wrap/releases/download/v1.0.0/erilab_bag_wrap.zip",
+        "sizeBytes": 3252,
+        "sha256": "b04f58044e096a2359a194692d644f74a292ef78b0b486fb8e3a6ebf44b621aa"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "erilab_bag_wrap"
+    },
+    {
+      "id": "gen1recomp-minimal-cheats",
+      "kind": "luaMod",
+      "name": "SilverShadow Mods",
+      "tagline": "Cheats, field tools and encounter options, each one switched on separately.",
+      "description": "A modular single-player overhaul with cheats, all 151 encounters, storage, field tools, Free Fly, movement, display, and optional travel-aware followers. Gameplay changes are disabled during online/link PvP.",
+      "author": {
+        "name": "silvershadowkat",
+        "url": "https://github.com/silvershadowkat/gen1recomp-minimal-cheats"
+      },
+      "version": "2.1.6",
+      "releasedAt": "2026-08-08",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/silvershadowkat/gen1recomp-minimal-cheats/releases/download/v2.1.6/silvershadow-mods-v2.1.6.zip",
+        "sizeBytes": 111641,
+        "sha256": "9551dac827db91d8be200da45ae9a03a25b72ba7952d7fe59fa617868e35e6f2"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "minimal_cheats"
+    },
+    {
+      "id": "non-binary-mode",
+      "kind": "luaMod",
+      "name": "Non-Binary Mode",
+      "tagline": "The story stops assuming you are a boy.",
+      "description": "A simple text mod that re-genders any dialogue that portrays the MC as male.",
+      "author": {
+        "name": "dburton95",
+        "url": "https://github.com/dburton95/non-binary-mode"
+      },
+      "version": "2.0.2",
+      "releasedAt": "2026-08-13",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "CONTENT"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/dburton95/non-binary-mode/releases/download/2.0.2/non-binary-mode-2.0.2.zip",
+        "sizeBytes": 5294,
+        "sha256": "4f44a9fb0e1a80ebb8384a83fac00610d94dff8d7816151c68f0476b84db4410"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "non-binary-mode"
+    },
+    {
+      "id": "battle-cinematics-stadium-camera@gen1recomp",
+      "kind": "luaMod",
+      "name": "Battle Cinematics",
+      "tagline": "A moving battle camera in the style of Stadium, for the 3D battle views.",
+      "description": "Battle Cinematics v1.0.7 — full current backend support. Adds PotatoVoxel and Voxel Ascendant live 3D camera-host compatibility while retaining v1.0.6 Actor Presentation Bounds, one-time Intro migrations, and Gold/Randy integration.",
+      "author": {
+        "name": "EnterPlayerOne",
+        "url": "https://github.com/EnterPlayerOne/Battle-Cinematics-Stadium-Camera"
+      },
+      "version": "1.0.7",
+      "releasedAt": "2026-08-17",
+      "license": {
+        "spdx": "MIT",
+        "text": "MIT License\n\nCopyright (c) 2026 EnterPlayerOne\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+      },
+      "categories": [
+        "ART"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/EnterPlayerOne/Battle-Cinematics-Stadium-Camera/releases/download/V1.0.7/Battle_Cinematics-v1.0.7.zip",
+        "sizeBytes": 119988,
+        "sha256": "2c894ff53016765263679a66a1a6ce45c4c6b2f4b785c43d4f649374ee58a21b"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "BATTLE_CINEMATICS"
+    },
+    {
+      "id": "battle-cinematics-stadium-camera@gen2recomped",
+      "kind": "luaMod",
+      "name": "Battle Cinematics",
+      "tagline": "A moving battle camera in the style of Stadium, for the 3D battle views.",
+      "description": "Battle Cinematics v1.0.7 — full current backend support. Adds PotatoVoxel and Voxel Ascendant live 3D camera-host compatibility while retaining v1.0.6 Actor Presentation Bounds, one-time Intro migrations, and Gold/Randy integration.",
+      "author": {
+        "name": "EnterPlayerOne",
+        "url": "https://github.com/EnterPlayerOne/Battle-Cinematics-Stadium-Camera"
+      },
+      "version": "1.0.7",
+      "releasedAt": "2026-08-17",
+      "license": {
+        "spdx": "MIT",
+        "text": "MIT License\n\nCopyright (c) 2026 EnterPlayerOne\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+      },
+      "categories": [
+        "ART"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/EnterPlayerOne/Battle-Cinematics-Stadium-Camera/releases/download/V1.0.7/Battle_Cinematics-v1.0.7.zip",
+        "sizeBytes": 119988,
+        "sha256": "2c894ff53016765263679a66a1a6ce45c4c6b2f4b785c43d4f649374ee58a21b"
+      },
+      "engine": {
+        "id": "gen2recomped"
+      },
+      "modID": "BATTLE_CINEMATICS"
+    },
+    {
+      "id": "girl-mode",
+      "kind": "luaMod",
+      "name": "Girl Mode",
+      "tagline": "The story addresses you as a girl the whole way through.",
+      "description": "A simple text mod that re-genders any dialogue that portrays the MC as male.",
+      "author": {
+        "name": "dburton95",
+        "url": "https://github.com/dburton95/girl-mode"
+      },
+      "version": "2.0.3",
+      "releasedAt": "2026-08-13",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "CONTENT"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/dburton95/girl-mode/releases/download/2.0.3/girl-mode-2.0.3.zip",
+        "sizeBytes": 5292,
+        "sha256": "dc92536ac11285c2a96bc6f1b435a6bbd30ba45eaaeed1446fa34559bb1a5c88"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "girl-mode"
+    },
+    {
+      "id": "gen1recomp-infinite-repel",
+      "kind": "luaMod",
+      "name": "Infinite / Toggleable Repel",
+      "tagline": "Switch wild encounters off entirely, and back on when you want them again.",
+      "description": "When enabled, wild encounters are blocked until you turn the option off. Compatible with DramaticShapeVoxelMod and other encounter mods.",
+      "author": {
+        "name": "community",
+        "url": "https://github.com/yedidiapery/gen1recomp-infinite-repel"
+      },
+      "version": "1.1.0",
+      "releasedAt": "2026-08-12",
+      "license": {
+        "spdx": "MIT",
+        "text": "MIT License\n\nCopyright (c) 2026 yedidiapery\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+      },
+      "categories": [
+        "QOL"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/yedidiapery/gen1recomp-infinite-repel/releases/download/v1.1.0/infinite_repel-1.1.0.zip",
+        "sizeBytes": 1129,
+        "sha256": "859faa66f0821edd5323834fa3fa79214f7fd31ba3b026276069f5f1d8d5b3b0"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "infinite_repel"
+    },
+    {
+      "id": "gen1recomp-battle-exp-bar",
+      "kind": "luaMod",
+      "name": "Battle EXP Bar",
+      "tagline": "An experience bar under your HP in battle, the way later games show it.",
+      "description": "Shows a Gen 3+ style experience bar under the player's battle HP bar.",
+      "author": {
+        "name": "madramdesign",
+        "url": "https://github.com/madramdesign/gen1recomp-battle-exp-bar"
+      },
+      "version": "1.0.1",
+      "releasedAt": "2026-08-10",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "UI"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/madramdesign/gen1recomp-battle-exp-bar/releases/download/v1.0.1/battle_exp_bar-1.0.1.zip",
+        "sizeBytes": 4521,
+        "sha256": "4d64ef7352d72260ca6c9d0d370f9652d0bddf14932cb5dc451eb722d08fd627"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "battle_exp_bar"
+    },
+    {
+      "id": "gen1recomp-modern-bag-ui",
+      "kind": "luaMod",
+      "name": "Modern Bag UI",
+      "tagline": "A bag with pockets and item details, still drawn in Gen 1's style.",
+      "description": "A responsive, pocket-based Bag with item details and Gen 1 styling.",
+      "author": {
+        "name": "piftee",
+        "url": "https://github.com/piftee/gen1recomp-modern-bag-ui"
+      },
+      "version": "0.2.0",
+      "releasedAt": "2026-08-14",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "UI"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/piftee/gen1recomp-modern-bag-ui/releases/download/v0.2.0/modern_bag_ui-0.2.0.zip",
+        "sizeBytes": 17422,
+        "sha256": "d6253261f8c19ba5211bb31f09f5d4780ceb2d38151b37c3710a7a454c8dd03c"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "modern_bag_ui"
+    },
+    {
+      "id": "gen1recomp-settings-hotkeys",
+      "kind": "luaMod",
+      "name": "Settings Hotkeys",
+      "tagline": "The title screen lists the setting hotkeys, and what each one is set to.",
+      "description": "Shows settings hotkeys (1–5, F10, ±) on the title screen, with live values and a HOTKEYS menu row.",
+      "author": {
+        "name": "madramdesign",
+        "url": "https://github.com/madramdesign/gen1recomp-settings-hotkeys"
+      },
+      "version": "1.0.0",
+      "releasedAt": "2026-08-10",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "UI"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/madramdesign/gen1recomp-settings-hotkeys/releases/download/v1.0.0/settings_hotkeys-1.0.0.zip",
+        "sizeBytes": 5147,
+        "sha256": "fcb11d0eeef39da4f251a06d49e36e5355ec62e192f3bb207c5ac583ff6af296"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "settings_hotkeys"
+    },
+    {
+      "id": "gen1recomp-professor-oak-challenge",
+      "kind": "luaMod",
+      "name": "Professor Oak Challenge",
+      "tagline": "Catch everything in an area before the next gym will open its doors.",
+      "description": "Oak Challenge (Mewlax RB): area catch HUD + Brock→Misty→Koga→Erika gates. Compatible with current engageTrainer arity.",
+      "author": {
+        "name": "madramdesign",
+        "url": "https://github.com/madramdesign/gen1recomp-professor-oak-challenge"
+      },
+      "version": "0.3.1",
+      "releasedAt": "2026-08-10",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/madramdesign/gen1recomp-professor-oak-challenge/releases/download/v0.3.1/professor_oak_challenge-0.3.1.zip",
+        "sizeBytes": 16944,
+        "sha256": "45ac201e230a4a146b607e47efae29518ab59b4d2cc73c965f2c22d2a01041b9"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "professor_oak_challenge"
+    },
+    {
+      "id": "its-clefairy@gen1recomp",
+      "kind": "luaMod",
+      "name": "Its Clefairy",
+      "tagline": "Hand Pikachu a Moon Stone and see what the rumours were about.",
+      "description": "Give Pikachu a Moon Stone",
+      "author": {
+        "name": "dburton95",
+        "url": "https://github.com/dburton95/its-clefairy"
+      },
+      "version": "1.0.0",
+      "releasedAt": "2026-08-17",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/dburton95/its-clefairy/releases/download/1.0.0/its-clefairy-1.0.0.zip",
+        "sizeBytes": 77843,
+        "sha256": "01ee887331e356e0d4b3fc72102b6f574bad29a3382693d60b2ed771022088d3"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "its-clefairy"
+    },
+    {
+      "id": "its-clefairy@gen2recomped",
+      "kind": "luaMod",
+      "name": "Its Clefairy",
+      "tagline": "Hand Pikachu a Moon Stone and see what the rumours were about.",
+      "description": "Give Pikachu a Moon Stone",
+      "author": {
+        "name": "dburton95",
+        "url": "https://github.com/dburton95/its-clefairy"
+      },
+      "version": "1.0.0",
+      "releasedAt": "2026-08-17",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/dburton95/its-clefairy/releases/download/1.0.0/its-clefairy-1.0.0.zip",
+        "sizeBytes": 77843,
+        "sha256": "01ee887331e356e0d4b3fc72102b6f574bad29a3382693d60b2ed771022088d3"
+      },
+      "engine": {
+        "id": "gen2recomped"
+      },
+      "modID": "its-clefairy"
+    },
+    {
+      "id": "gen1recomp-terrain-minimap",
+      "kind": "luaMod",
+      "name": "Terrain Minimap",
+      "tagline": "A live terrain map with building footprints, item markers and the area name.",
+      "description": "A clean, live terrain minimap with facility footprints, field item markers, an area-name caption, and Auto/Always HUD display control.",
+      "author": {
+        "name": "Ryan1731",
+        "url": "https://github.com/Ryan1731/gen1recomp-terrain-minimap"
+      },
+      "version": "1.0.5",
+      "releasedAt": "2026-08-17",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "UI"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/Ryan1731/gen1recomp-terrain-minimap/releases/download/v1.0.5/terrain_minimap-1.0.5.zip",
+        "sizeBytes": 1091206,
+        "sha256": "bd32ebd06b77f0909a04e201699ab7675ca941a9ad64a38cc174b0f43b379370"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "terrain_minimap"
+    },
+    {
+      "id": "hiddenstats",
+      "kind": "luaMod",
+      "name": "HiddenStats",
+      "tagline": "The summary screen shows the hidden numbers, as IVs and EVs.",
+      "description": "Reveals each Pokemon's hidden stats on its Summary screen: IVs (converted from DVs, 0-31) and EVs (converted from Stat Exp, 0-255). Works standalone on the native Summary screen, adds a matching page to Gen1 Modern UI when installed, and (once its compatibility hook lands) integrates with Kanto Reforged.",
+      "author": {
+        "name": "VidereJP",
+        "url": "https://github.com/miguelcjalmeida/HiddenStats"
+      },
+      "version": "3.0.1",
+      "releasedAt": "2026-08-16",
+      "license": {
+        "spdx": "MIT",
+        "text": "MIT License\n\nCopyright (c) 2026 VidereJP\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+      },
+      "categories": [
+        "UI"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/miguelcjalmeida/HiddenStats/releases/download/v3.0.1/hidden_stats.zip",
+        "sizeBytes": 3613,
+        "sha256": "d80d9c38be89bb14088d9798b01e2bf2bcdb317bcb58127bb1987f7c65288597"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "hidden_stats"
+    },
+    {
+      "id": "gen1recomp-trainer-forfeit",
+      "kind": "luaMod",
+      "name": "Trainer Forfeit & Rematches",
+      "tagline": "Pay to walk away from a battle, then rematch any trainer or gym leader later.",
+      "description": "Pay ¥200 to forfeit ordinary trainer battles, then safely rematch defeated trainers and all eight Gym Leaders with offline journey-aware dialogue.",
+      "author": {
+        "name": "ScottExplores",
+        "url": "https://github.com/ScottExplores/gen1recomp-trainer-forfeit"
+      },
+      "version": "0.3.0",
+      "releasedAt": "2026-08-14",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/ScottExplores/gen1recomp-trainer-forfeit/releases/download/v0.3.0/trainer_forfeit-0.3.0.zip",
+        "sizeBytes": 16035,
+        "sha256": "05883414cb8e5ba7b7abe3304049210d7fa5f4a8650cb7c7402477dcf2819c7c"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "trainer_forfeit"
+    },
+    {
+      "id": "careercard",
+      "kind": "luaMod",
+      "name": "Career Card",
+      "tagline": "Your mum pays you for badges, dex entries, and the Pokemon you meet along the way.",
+      "description": "Your mom believes in you, so she sends you money. Earn badges, fill the POKeDEX and meet enough wild POKeMON to get promoted through six sponsors.",
+      "author": {
+        "name": "Dileppy",
+        "url": "https://github.com/Dileppy/CareerCard"
+      },
+      "version": "1.0.1",
+      "releasedAt": "2026-08-06",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/Dileppy/CareerCard/releases/download/v1.0.1/career_card-1.0.1.zip",
+        "sizeBytes": 25133,
+        "sha256": "a4e510e3984d7ed38d413241f7bd93df58511f647662d074142419d04e04ba25"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "career_card"
+    },
+    {
+      "id": "gen1recomp-lets-go-catch-throw",
+      "kind": "luaMod",
+      "name": "Let's Go Catch & Throw",
+      "tagline": "Catching becomes a throw you aim, in the Let's Go style.",
+      "description": "Interactive Let's Go-style wild-battle catching plus R2/L2 overworld throws for Dramaless, Kanto First Person, and optional Wilds integration.",
+      "author": {
+        "name": "ScottExplores",
+        "url": "https://github.com/ScottExplores/gen1recomp-lets-go-catch-throw"
+      },
+      "version": "0.2.2",
+      "releasedAt": "2026-08-15",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/ScottExplores/gen1recomp-lets-go-catch-throw/releases/download/v0.2.2/LETS_GO_CATCH_THROW-0.2.2.zip",
+        "sizeBytes": 95889,
+        "sha256": "e6f35c6d1fbaba9356a6dda28ca5fb2a2c85a860956654eee8a532dd1e13465f"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "LETS_GO_CATCH_THROW"
+    },
+    {
+      "id": "gen1recomp-oaks-spare-starter",
+      "kind": "luaMod",
+      "name": "Oak's Spare Starter",
+      "tagline": "Claim the starter Oak never gave away, once the lab battle is done.",
+      "description": "Lets you claim Professor Oak's unchosen level-5 starter after the lab rival battle, provided your party has room.",
+      "author": {
+        "name": "ScottExplores",
+        "url": "https://github.com/ScottExplores/gen1recomp-oaks-spare-starter"
+      },
+      "version": "0.1.1",
+      "releasedAt": "2026-08-13",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/ScottExplores/gen1recomp-oaks-spare-starter/releases/download/v0.1.1/oak_spare_starter-0.1.1.zip",
+        "sizeBytes": 6707,
+        "sha256": "1aae91329ac8079d1dcef5e3f83216a760350be30e461822fb54e2edc956c9f5"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "oak_spare_starter"
+    },
+    {
+      "id": "gen1recomp-voxel-run-bridge",
+      "kind": "luaMod",
+      "name": "Scott's Tweaks",
+      "tagline": "A menu of small changes at once: running, bag pockets, rematches and badge-free field moves.",
+      "description": "Scott's organized gameplay menu: built-in Pack/Pokegear navigation, bag pockets, EXP modes, Trade Stone, trainer forfeits and rematches, Oak's spare starter, B-button running with light head bob, badge-free field moves, gapped land, and physical-Thor dual-screen control.",
+      "author": {
+        "name": "ScottExplores",
+        "url": "https://github.com/ScottExplores/gen1recomp-voxel-run-bridge"
+      },
+      "version": "0.7.0",
+      "releasedAt": "2026-08-17",
+      "license": {
+        "spdx": "MIT"
+      },
+      "categories": [
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/ScottExplores/gen1recomp-voxel-run-bridge/releases/download/v0.7.0/SCOTTS_TWEAKS-0.7.0.zip",
+        "sizeBytes": 72523,
+        "sha256": "7cb58c55ffac0469e01cf554ae43157d583140a58e086db2e8340543f4196e42"
+      },
+      "engine": {
+        "id": "gen1recomp"
+      },
+      "modID": "voxel_run_bridge"
+    },
+    {
+      "id": "green-sgb-palette",
+      "kind": "luaMod",
+      "name": "Green SGB Palette",
+      "tagline": "Adds a Pokémon Green-inspired Super Game Boy palette treatment.",
+      "author": {
+        "name": "Harry",
+        "url": "https://github.com/harryw4444/green_sgb_palette_gen1recomp"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/harryw4444/green_sgb_palette_gen1recomp",
+        "status": "permission-queued"
+      }
+    },
+    {
+      "id": "mute-low-hp-alarm",
+      "kind": "luaMod",
+      "name": "Mute Low HP Alarm",
+      "tagline": "Provides a quieter play option by suppressing the repeating low-health alarm.",
+      "author": {
+        "name": "Harry",
+        "url": "https://github.com/harryw4444/mute_low_HP_alarm_gen1recomp"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/harryw4444/mute_low_HP_alarm_gen1recomp",
+        "status": "permission-queued"
+      }
+    },
+    {
+      "id": "fade-overlay-fix",
+      "kind": "luaMod",
+      "name": "Fade Overlay Fix",
+      "tagline": "Corrects visual fade overlays during scene and interface transitions.",
+      "author": {
+        "name": "Harry",
+        "url": "https://github.com/harryw4444/fade_overlay_fix_gen1recomp"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/harryw4444/fade_overlay_fix_gen1recomp",
+        "status": "permission-queued"
+      }
+    },
+    {
+      "id": "bag-stock-preview",
+      "kind": "luaMod",
+      "name": "Bag Stock Preview",
+      "tagline": "Surfaces current bag quantities while browsing shops and inventory screens.",
+      "author": {
+        "name": "Harry",
+        "url": "https://github.com/harryw4444/bag_stock_preview_gen1recomp"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/harryw4444/bag_stock_preview_gen1recomp",
+        "status": "permission-queued"
+      }
+    },
+    {
+      "id": "fishing-mini-game",
+      "kind": "luaMod",
+      "name": "Fishing Mini Game",
+      "tagline": "Turns fishing into a more interactive timing-based activity.",
+      "author": {
+        "name": "Harry",
+        "url": "https://github.com/harryw4444/fishing_mini_game_gen1recomp"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/harryw4444/fishing_mini_game_gen1recomp",
+        "status": "permission-queued"
+      }
+    },
+    {
+      "id": "mew-glitch-mod",
+      "kind": "luaMod",
+      "name": "Mew Glitch Mod",
+      "tagline": "Makes the celebrated Mew encounter glitch available as a native recomp mod.",
+      "author": {
+        "name": "José Maceiras",
+        "url": "https://github.com/Chari69/mewmod"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/Chari69/mewmod",
+        "status": "permission-queued"
+      }
+    },
+    {
+      "id": "oak-brief",
+      "kind": "luaMod",
+      "name": "Oak Brief",
+      "tagline": "Shortens Professor Oak's opening sequence for faster repeat playthroughs.",
+      "author": {
+        "name": "Yukita Mayako",
+        "url": "https://github.com/Yukitty/gen1mod_oak_brief"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/Yukitty/gen1mod_oak_brief",
+        "status": "permission-queued"
+      }
+    },
+    {
+      "id": "anytime-rename",
+      "kind": "luaMod",
+      "name": "Anytime Rename",
+      "tagline": "Renames the trainer and party Pokémon at any point, with automatic German localization.",
+      "author": {
+        "name": "Roxas2712",
+        "url": "https://github.com/Roxas2712/pokemon-gen1-recomp-mod-anytime-rename"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/Roxas2712/pokemon-gen1-recomp-mod-anytime-rename",
+        "status": "permission-queued"
+      }
+    },
+    {
+      "id": "gen2-dramatic-shapes",
+      "kind": "luaMod",
+      "name": "Dramatic Shapes for Gen2",
+      "tagline": "Adapts the Dramatic Shapes voxel-style presentation for the Gen2Recomped engine.",
+      "author": {
+        "name": "UNDERdecodedHD",
+        "url": "https://github.com/UNDERdecoded/Gen2Recomped-DramaticShapes"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen2Recomped · Gold / Silver",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/UNDERdecoded/Gen2Recomped-DramaticShapes",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "gen2-perfect-start",
+      "kind": "luaMod",
+      "name": "Gen 2 Perfect Start",
+      "tagline": "Awards Chikorita, Cyndaquil, and Totodile after the player's initial starter choice.",
+      "author": {
+        "name": "Windwrecker",
+        "url": "https://github.com/Windwrecker/Gen1recomp-Perfect-Start"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen2Recomp · Gold",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/Windwrecker/Gen1recomp-Perfect-Start",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "gen2-3d-sprites",
+      "kind": "luaMod",
+      "name": "Gen 2 3D Sprites",
+      "tagline": "Brings voxel and 3D-styled Pokémon sprite presentation to the Gen 2 runtime.",
+      "author": {
+        "name": "randyadr",
+        "url": "https://github.com/randyadr/Gen2-3D-Sprites"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen2Recomped",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/randyadr/Gen2-3D-Sprites",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "additional-story-healers",
+      "kind": "luaMod",
+      "name": "Additional Story Healers",
+      "tagline": "Adds NPC healers throughout the story",
+      "author": {
+        "name": "ty-mcdk",
+        "url": "https://github.com/ty-mcdk/additional-story-healers"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/ty-mcdk/additional-story-healers/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "dramaticshapevoxelmod",
+      "kind": "luaMod",
+      "name": "Battle Art Voxel Fork",
+      "tagline": "A fork of the Dramatic Shape voxel mod aimed at battle art: animated back sprites, selectable sprite generations, and sprite fallback for other sprite mods.",
+      "author": {
+        "name": "absol89",
+        "url": "https://github.com/absol89/DramaticShapeVoxelMod"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/absol89/DramaticShapeVoxelMod/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "bookers-heaven",
+      "kind": "luaMod",
+      "name": "Booker's Heaven",
+      "tagline": "Booker's Heaven, a quest mod for the Gen 1 recomp.",
+      "author": {
+        "name": "bryanthaboi",
+        "url": "https://github.com/bryanthaboi/bookers_heaven"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/bryanthaboi/bookers_heaven/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "candy-jar",
+      "kind": "luaMod",
+      "name": "Candy Jar",
+      "tagline": "Adds a research quest and a Candy Jar that converts excess level-100 EXP into Rare Candy.",
+      "author": {
+        "name": "TanukiTooks",
+        "url": "https://github.com/TanukiTooks/Candy-Jar"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/TanukiTooks/Candy-Jar/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "gen1recomp-mod-cheat-engine",
+      "kind": "luaMod",
+      "name": "Cheat Engine",
+      "tagline": "Cheat engine: heal/XP/money, evolve, give pokemon, items, no encounters, spawn, bike anywhere, surf always, always catch, god mode, OHKO, walk walls, turbo, perfect DVs, shiny, badges, TMs.",
+      "author": {
+        "name": "hdbreaker",
+        "url": "https://github.com/hdbreaker/gen1recomp-mod-cheat_engine"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/hdbreaker/gen1recomp-mod-cheat_engine/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "leaf",
+      "kind": "luaMod",
+      "name": "Choose Your Avatar",
+      "tagline": "Adds a boy/girl question to Oak's intro and dresses the player in a female avatar across every sprite and COLORS mode.",
+      "author": {
+        "name": "MrKrisSatan",
+        "url": "https://github.com/MrKrisSatan/Leaf"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/MrKrisSatan/Leaf/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "critical-capture",
+      "kind": "luaMod",
+      "name": "Critical Capture",
+      "tagline": "Gen 5's critical capture: a thrown ball can whistle, pause and shudder mid-air, then shake once with far better odds, scaled with your Pokedex completion.",
+      "author": {
+        "name": "ShaneMcGovernIE",
+        "url": "https://github.com/ShaneMcGovernIE/critical_capture"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/ShaneMcGovernIE/critical_capture/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "pokemon-blau-deutsch-mod",
+      "kind": "luaMod",
+      "name": "Deutsch für Pokémon Blau",
+      "tagline": "Deutsche Übersetzung von Pokémon Blau: Originaltexte, Namen, Schrift und Titelgrafik der Blauen Edition für die importierte US-ROM.",
+      "author": {
+        "name": "Roxas2712",
+        "url": "https://github.com/Roxas2712/pokemon-blau-deutsch-mod"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/Roxas2712/pokemon-blau-deutsch-mod/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "pokemon-gelb-deutsch-mod",
+      "kind": "luaMod",
+      "name": "Deutsch für Pokémon Gelb",
+      "tagline": "Deutsche Übersetzung von Pokémon Gelb: Originaltexte, Namen und Schrift der Gelben Edition für die importierte US-ROM.",
+      "author": {
+        "name": "Roxas2712",
+        "url": "https://github.com/Roxas2712/pokemon-gelb-deutsch-mod"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/Roxas2712/pokemon-gelb-deutsch-mod/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "pokemon-rot-deutsch-mod",
+      "kind": "luaMod",
+      "name": "Deutsch für Pokémon Rot",
+      "tagline": "Deutsche Übersetzung von Pokémon Rot: Originaltexte, Namen, Schrift und Titelgrafik der Roten Edition für die importierte US-ROM.",
+      "author": {
+        "name": "Roxas2712",
+        "url": "https://github.com/Roxas2712/pokemon-rot-deutsch-mod"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/Roxas2712/pokemon-rot-deutsch-mod/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "dev-hook-inspector",
+      "kind": "luaMod",
+      "name": "Dev Hook Inspector",
+      "tagline": "Developer tool: a HOOKS entry on the START menu lists every installed mod's public exports and events.",
+      "author": {
+        "name": "ShaneHudson",
+        "url": "https://github.com/shanehudson-gen1recomp-mods/dev-hook-inspector"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/shanehudson-gen1recomp-mods/dev-hook-inspector/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "double-battles",
+      "kind": "luaMod",
+      "name": "Double Battles",
+      "tagline": "Wild and trainer double battles: 1v2, 2v2 and trainer pairs, in classic, wide and 3D.",
+      "author": {
+        "name": "ShaneHudson",
+        "url": "https://github.com/shanehudson-gen1recomp-mods/double_battles"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/shanehudson-gen1recomp-mods/double_battles/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "dramaticshapevoxelmod-latest",
+      "kind": "luaMod",
+      "name": "Dramatic Shape Voxel Mod",
+      "tagline": "The overworld as a 3D voxel diorama: extruded terrain, cast shadows, tilt-shift, and battles fought on the map itself.",
+      "author": {
+        "name": "scottcandy34",
+        "url": "https://github.com/scottcandy34/DramaticShapeVoxelMod-latest"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/scottcandy34/DramaticShapeVoxelMod-latest/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "dramatic-sky-ride",
+      "kind": "luaMod",
+      "name": "Dramatic Sky Ride",
+      "tagline": "Ride Gen 1 Pokémon on land, water and in the air with Battle Art Voxel Fork, PokéPC sprites, story-aware progression and Wild Skies integration.",
+      "author": {
+        "name": "MFR TechConsult",
+        "url": "https://github.com/burgerslayer7/dramatic-sky-ride"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/burgerslayer7/dramatic-sky-ride/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "gen1recomp-dutch-generator",
+      "kind": "luaMod",
+      "name": "Dutch translation",
+      "tagline": "Dutch translation for Pokémon Red and Blue, generated from PokeCorpus.",
+      "author": {
+        "name": "BartInTheField",
+        "url": "https://github.com/BartInTheField/gen1recomp-dutch-generator"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/BartInTheField/gen1recomp-dutch-generator/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "gen-1-recomp-spanish",
+      "kind": "luaMod",
+      "name": "Edición Roja",
+      "tagline": "Traducción al español de Pokémon Rojo/Azul. Bienvenidos al mundo de POKéMON, ahora en ESPAÑOL.",
+      "author": {
+        "name": "Sebarosu",
+        "url": "https://github.com/Sebarosu/Gen-1-Recomp-Spanish"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/Sebarosu/Gen-1-Recomp-Spanish/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "exp-share",
+      "kind": "luaMod",
+      "name": "Exp Share (Gen 1 / Gen 5+ styles)",
+      "tagline": "Party-wide EXP from the OPTIONS menu: Gen 1 Exp. All style or Gen 5+ style, with one shared-exp line instead of a message per Pokemon.",
+      "author": {
+        "name": "ShaneMcGovernIE",
+        "url": "https://github.com/ShaneMcGovernIE/exp_share"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/ShaneMcGovernIE/exp_share/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "free-fly",
+      "kind": "luaMod",
+      "name": "Free Fly",
+      "tagline": "Ride a FLY user around the overworld and land wherever you like.",
+      "author": {
+        "name": "ShaneHudson",
+        "url": "https://github.com/shanehudson-gen1recomp-mods/free_fly"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/shanehudson-gen1recomp-mods/free_fly/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "gen1recomp-gen2-dex",
+      "kind": "luaMod",
+      "name": "Gen 2 Dex",
+      "tagline": "The complete Johto Pokedex (#152-251) as real, catchable species: real Gen 2 stats/types, Crystal sprites, and thematic wild placement across Kanto.",
+      "author": {
+        "name": "eduardocalafell",
+        "url": "https://github.com/eduardocalafell/gen1recomp-gen2-dex"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/eduardocalafell/gen1recomp-gen2-dex/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "gen1-modern-ui",
+      "kind": "luaMod",
+      "name": "Gen1 Modern UI",
+      "tagline": "Repaints the menus in full window space — responsive dialogue, Party, PC, Trainer Card, Pokedex, Bag and Shop, with themes and a minimal mode.",
+      "author": {
+        "name": "ArmstrongThomas",
+        "url": "https://github.com/ArmstrongThomas/gen1-modern-ui"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/ArmstrongThomas/gen1-modern-ui/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "gen1recomp-voiceactingmod",
+      "kind": "luaMod",
+      "name": "Gen1Recomp - Voice Acting Mod",
+      "tagline": "Complete voice acting overhaul with current coverage through Pewter City.",
+      "author": {
+        "name": "Campo",
+        "url": "https://github.com/1-Camp0-1/Gen1recomp-VoiceActingMod"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/1-Camp0-1/Gen1recomp-VoiceActingMod/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "gen1recomp-mod-intro-bypass",
+      "kind": "luaMod",
+      "name": "Intro Bypass",
+      "tagline": "Skip Oak's intro: pick your name, starter (starters + legendaries), shiny or not, and level, then jump straight into the overworld.",
+      "author": {
+        "name": "hdbreaker",
+        "url": "https://github.com/hdbreaker/gen1recomp-mod-intro_bypass"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/hdbreaker/gen1recomp-mod-intro_bypass/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "jp-green-poketto-monsuta-midori",
+      "kind": "luaMod",
+      "name": "JP GREEN - Poketto Monsutā Midori",
+      "tagline": "Japanese translation of Red and Blue, rendered through the engine's bundled Plain Pixel TTF — no glyph sheet needed.",
+      "author": {
+        "name": "bryanthaboi",
+        "url": "https://github.com/bryanthaboi/JP-GREEN-Poketto-Monsuta-Midori"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/bryanthaboi/JP-GREEN-Poketto-Monsuta-Midori/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "kanto-companion-lite",
+      "kind": "luaMod",
+      "name": "Kanto Companion Lite",
+      "tagline": "A stripped-down fork of Kanto Companion by @matthew.me, redesigned for Android. Keyboard shortcuts have been replaced with touch controls for a mobile-friendly experience while retaining the companion",
+      "author": {
+        "name": "redelpedron",
+        "url": "https://github.com/redelpedron/Kanto-Companion-Lite"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/redelpedron/Kanto-Companion-Lite/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "kanto-gen1-dive",
+      "kind": "luaMod",
+      "name": "Kanto Dive",
+      "tagline": "Adds HM06 DIVE and Emerald-style underwater exploration with linked Kanto seafloor maps and Tiled-authored dive zones.",
+      "author": {
+        "name": "Mra YT",
+        "url": "https://github.com/burgerslayer7/Kanto-gen1-dive"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/burgerslayer7/Kanto-gen1-dive/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "kanto-dynamic-weather",
+      "kind": "luaMod",
+      "name": "Kanto Dynamic Weather",
+      "tagline": "Dynamic 3D weather and atmospheric effects for Dramatic Shape, including clouds, fog, rain, thunderstorms, lightning, puddles and distant scenery.",
+      "author": {
+        "name": "Campo",
+        "url": "https://github.com/1-Camp0-1/Kanto-Dynamic-Weather"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/1-Camp0-1/Kanto-Dynamic-Weather/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "modern-type-framework",
+      "kind": "luaMod",
+      "name": "Modern Type Framework",
+      "tagline": "Updates the type chart to modern chart. Does not edit Pokémon or moves.",
+      "author": {
+        "name": "MaybeGreg",
+        "url": "https://github.com/MaybeGreg/modern_type_framework"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/MaybeGreg/modern_type_framework/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "mods-hotkeys",
+      "kind": "luaMod",
+      "name": "Mods Hotkeys",
+      "tagline": "Detects the hotkeys other installed mods listen for (and the engine's built-ins) and lets you rebind them from OPTIONS, multi-button combos included.",
+      "author": {
+        "name": "ShaneMcGovernIE",
+        "url": "https://github.com/ShaneMcGovernIE/mods_hotkeys"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/ShaneMcGovernIE/mods_hotkeys/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "relearn-moves",
+      "kind": "luaMod",
+      "name": "Move Relearn",
+      "tagline": "Party menu gains RELEARN (between STATS and SWITCH, field only) to relearn any level-up move the mon has reached the level for.",
+      "author": {
+        "name": "ShaneMcGovernIE",
+        "url": "https://github.com/ShaneMcGovernIE/relearn_moves"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/ShaneMcGovernIE/relearn_moves/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "gen1recomp-musicmods",
+      "kind": "luaMod",
+      "name": "Music-LGPE",
+      "tagline": "Music from Let's Go Pikachu / Let's Go Eevee",
+      "author": {
+        "name": "DarioMelo",
+        "url": "https://github.com/DarioMelo/Gen1Recomp-MusicMods"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/DarioMelo/Gen1Recomp-MusicMods/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "gen1recomp-music2-hgss",
+      "kind": "luaMod",
+      "name": "Music2-HGSS",
+      "tagline": "Music from HeartGold / SoulSilver",
+      "author": {
+        "name": "DaríoMelo",
+        "url": "https://github.com/DarioMelo/Gen1Recomp-Music2-HGSS"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen2Recomped",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/DarioMelo/Gen1Recomp-Music2-HGSS/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "gen1recomp-npc-bubbles",
+      "kind": "luaMod",
+      "name": "NPC Bubbles",
+      "tagline": "Puts a bubble over the NPCs who actually do something, so the person holding a free TM does not look like the person who wants to tell you about ledges.",
+      "author": {
+        "name": "ddagent",
+        "url": "https://github.com/ddagent/gen1recomp-npc-bubbles"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/ddagent/gen1recomp-npc-bubbles/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "instant-heal-pc-rest",
+      "kind": "luaMod",
+      "name": "Nurse Speed Heal & PC Rest",
+      "tagline": "Instantly heals your party when talking to Nurse Joy, auto-advances the heal dialog, turns the player around to prevent accidental re-dialogue, and automatically heals Pokémon deposited into PC storag",
+      "author": {
+        "name": "TheRhysWyrill",
+        "url": "https://github.com/TheRhysWyrill/instant_heal_pc_rest"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/TheRhysWyrill/instant_heal_pc_rest/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "nuzlocke",
+      "kind": "luaMod",
+      "name": "Nuzlocke",
+      "tagline": "An enforced Gen 1 Nuzlocke: one catch per area, mandatory nicknames, permanent death.",
+      "author": {
+        "name": "bryanthaboi",
+        "url": "https://github.com/bryanthaboi/nuzlocke"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/bryanthaboi/nuzlocke/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "gen1pc-overworldencounters",
+      "kind": "luaMod",
+      "name": "Overworld Wild Encounters",
+      "tagline": "Replaces hidden random grass encounters with visible roaming overworld Pokémon sprites!",
+      "author": {
+        "name": "Gamecorner_033",
+        "url": "https://github.com/gamecorner-033/Gen1PC-OverworldEncounters"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/gamecorner-033/Gen1PC-OverworldEncounters",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "pokepcfollowers",
+      "kind": "luaMod",
+      "name": "PokéPC Followers (W/Voxel Support)",
+      "tagline": "An all-species overworld follower mod for Pokémon Red, Blue, and Yellow (Gen 1 Recomp). This mod allows every single Gen 1 Pokémon to walk behind you in full overworld color as your companion!",
+      "author": {
+        "name": "Gamecorner_033",
+        "url": "https://github.com/gamecorner-033/PokePCFollowers"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/gamecorner-033/PokePCFollowers",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "potato-voxel",
+      "kind": "luaMod",
+      "name": "PotatoVoxel (Beta)",
+      "tagline": "An unconditional Brick-mode 3D voxel overworld tuned for low-end devices, with scalable render modes, mesh caching, and prebuild support.",
+      "author": {
+        "name": "ShaneMcGovernIE",
+        "url": "https://github.com/ShaneMcGovernIE/potato_voxel"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/ShaneMcGovernIE/potato_voxel/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "qol-toggles",
+      "kind": "luaMod",
+      "name": "QoL Toggles",
+      "tagline": "OPTIONS -> QOL TOGGLES: poison survival, full-heal catches, infinite repel, learnable field moves, badgeless moves, max DVs, double EXP, instant flee, heal on map change, quick S.S. Anne.",
+      "author": {
+        "name": "ShaneMcGovernIE",
+        "url": "https://github.com/ShaneMcGovernIE/qol_toggles"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/ShaneMcGovernIE/qol_toggles/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "pokemon-gen1-recomp-mod-qol",
+      "kind": "luaMod",
+      "name": "Quality of Life",
+      "tagline": "Quality of Life from later generations.",
+      "author": {
+        "name": "unxpected-uxp",
+        "url": "https://github.com/unxpected-uxp/pokemon-gen1-recomp-mod-qol"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/unxpected-uxp/pokemon-gen1-recomp-mod-qol/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "pokemonrecomprandomizer",
+      "kind": "luaMod",
+      "name": "Randomizer",
+      "tagline": "Randomize settings in game",
+      "author": {
+        "name": "ciddmandude",
+        "url": "https://github.com/ciddmandude/PokemonRecompRandomizer"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/ciddmandude/PokemonRecompRandomizer/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "flyingoverhaul",
+      "kind": "luaMod",
+      "name": "Razor1993s Flying Overhaul",
+      "tagline": "Overhauls the FLY system while keeping it as close to the vanilla style as possible. FLY no longer opens the town map—instead, ride the bird freely over Kanto and choose your own landing spot",
+      "author": {
+        "name": "Razor1993",
+        "url": "https://github.com/Razor1993-Real/FlyingOverhaul"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/Razor1993-Real/FlyingOverhaul/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "rbymmomod",
+      "kind": "luaMod",
+      "name": "RBY MMO",
+      "tagline": "Play Kanto with friends: shared overworld presence, nameplates and chat, parties of two, co-op 2-on-2 battles, ranked PVP, and trade or battle requests from anywhere.",
+      "author": {
+        "name": "alamops",
+        "url": "https://github.com/alamops/RBYMMOMod"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/alamops/RBYMMOMod/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "recomp-cartographer",
+      "kind": "luaMod",
+      "name": "Recomp Cartographer",
+      "tagline": "This mod allows dumping of the maps into tiled.",
+      "author": {
+        "name": "Sedatb23",
+        "url": "https://github.com/Sedatb23/recomp_cartographer"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/Sedatb23/recomp_cartographer/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "recomp-rider",
+      "kind": "luaMod",
+      "name": "Recomp Rider",
+      "tagline": "Drive KITT across the Pokémon world.",
+      "author": {
+        "name": "adrian",
+        "url": "https://github.com/castdrian/recomp-rider"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/castdrian/recomp-rider/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "silph-scope-network",
+      "kind": "luaMod",
+      "name": "Silph Scope Network",
+      "tagline": "online invasion mechanic with players across the world.",
+      "author": {
+        "name": "Nezara",
+        "url": "https://github.com/Nezara/silph-scope-network"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/Nezara/silph-scope-network/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "silphnet",
+      "kind": "luaMod",
+      "name": "SilphNet",
+      "tagline": "See where your friends were last, in-game, with no live server or 24/7 process required.",
+      "author": {
+        "name": "AshJam",
+        "url": "https://github.com/AshJamB/SilphNet"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/AshJamB/SilphNet/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "gen1mod-simple-girl",
+      "kind": "luaMod",
+      "name": "Simple Girl mod",
+      "tagline": "Content patch replacing the main character's sprites and pronouns.",
+      "author": {
+        "name": "Yukita Mayako",
+        "url": "https://github.com/Yukitty/gen1mod-simple_girl"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/Yukitty/gen1mod-simple_girl/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "surround-audio",
+      "kind": "luaMod",
+      "name": "Stereo & 5.1 Audio",
+      "tagline": "Pokémon Crystal's SOUND option, ported to Red/Blue/Yellow's 8-bit music: MONO, STEREO channel split, and 5.1 surround with center-channel sound effects.",
+      "author": {
+        "name": "ShaneMcGovernIE",
+        "url": "https://github.com/ShaneMcGovernIE/surround-audio"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/ShaneMcGovernIE/surround-audio/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "terrarium",
+      "kind": "luaMod",
+      "name": "Terrarium",
+      "tagline": "Independent fork of DramaticShape's 3D voxel diorama: own id, folder, pipelines and letter hotkeys; installs beside DRAMATIC_SHAPE.",
+      "author": {
+        "name": "BrenoBertucci",
+        "url": "https://github.com/BrenoBertucci/Terrarium"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/BrenoBertucci/Terrarium/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "traduccion-es",
+      "kind": "luaMod",
+      "name": "Traducción Española",
+      "tagline": "El juego en español desde tu propio cartucho EUR — guion oficial, sin redistribuir nada",
+      "author": {
+        "name": "jherediagu",
+        "url": "https://github.com/jherediagu/traduccion_es"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/jherediagu/traduccion_es/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "trad-fr-extended",
+      "kind": "luaMod",
+      "name": "Traduction FR étendue",
+      "tagline": "Complète la traduction française de translation-fr : 151 catégories du Pokédex, 109 textes moteur et 11 noms manquants. Nécessite translation-fr.",
+      "author": {
+        "name": "AntoniMan31",
+        "url": "https://github.com/antoniman31/trad-fr-extended"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/antoniman31/trad-fr-extended/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "pokemon-gen1-recomp-mod-frqc",
+      "kind": "luaMod",
+      "name": "Traduction Québécoise",
+      "tagline": "Traduction complète en français québécois (joual + sacres ciblés) pour Pokémon Rouge, Bleu et Jaune, basée sur le texte français officiel.",
+      "author": {
+        "name": "MrJoufflu",
+        "url": "https://github.com/git-mrjoufflu/pokemon-gen1-recomp-mod-FRQC"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/git-mrjoufflu/pokemon-gen1-recomp-mod-FRQC/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "trainer-rematch",
+      "kind": "luaMod",
+      "name": "Trainer Rematch",
+      "tagline": "Talk to any trainer you have already beaten and they challenge you to a rematch, with a YES/NO prompt.",
+      "author": {
+        "name": "ShaneMcGovernIE",
+        "url": "https://github.com/ShaneMcGovernIE/trainer_rematch"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/ShaneMcGovernIE/trainer_rematch/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "unique-menu-icons",
+      "kind": "luaMod",
+      "name": "Unique Menu Icons",
+      "tagline": "Gives every Gen 1 Pokemon its own unique party/menu icon instead of the vanilla shared body-type icons.",
+      "author": {
+        "name": "menyas",
+        "url": "https://github.com/menyas/unique-menu-icons"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/menyas/unique-menu-icons/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "useful-bag",
+      "kind": "luaMod",
+      "name": "Useful Bag",
+      "tagline": "999-capacity bag auto-sorted into six pockets (Items, Medicine, Poké Balls, TMs / HMs, Battle Items, Key Items) cycled with Left/Right, plus TAB / R3 to sort by name or count.",
+      "author": {
+        "name": "ShaneMcGovernIE",
+        "url": "https://github.com/ShaneMcGovernIE/useful-bag"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/ShaneMcGovernIE/useful-bag/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "useful-dex",
+      "kind": "luaMod",
+      "name": "Useful Dex",
+      "tagline": "Press A in the Pokédex to cycle the species page into base stats, BST, evolutions, and the full movelist.",
+      "author": {
+        "name": "ShaneMcGovernIE",
+        "url": "https://github.com/ShaneMcGovernIE/useful_dex"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/ShaneMcGovernIE/useful_dex/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "useful-marts",
+      "kind": "luaMod",
+      "name": "Useful Marts",
+      "tagline": "Mart lists with useful info: BUY rows show how many of each item you already have (live), SELL rows show the per-item sell price, and both lists wrap at the ends.",
+      "author": {
+        "name": "ShaneMcGovernIE",
+        "url": "https://github.com/ShaneMcGovernIE/useful-marts"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/ShaneMcGovernIE/useful-marts/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "useful-move-info",
+      "kind": "luaMod",
+      "name": "Useful Move Info",
+      "tagline": "In battle, press Start (or Q) on a highlighted move to see type, power, accuracy, effect and type effectiveness; the same shortcut inspects moves when learning one.",
+      "author": {
+        "name": "ShaneMcGovernIE",
+        "url": "https://github.com/ShaneMcGovernIE/useful-move-info"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/ShaneMcGovernIE/useful-move-info/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "versaovermelha",
+      "kind": "luaMod",
+      "name": "VersãoVermelha",
+      "tagline": "Português brasileiro, ripped from the Hyd~Traduções Versão Vermelha v1.3.1 IPS patch.",
+      "author": {
+        "name": "bryanthaboi",
+        "url": "https://github.com/bryanthaboi/versaovermelha"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/bryanthaboi/versaovermelha/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "whos-that-trainer",
+      "kind": "luaMod",
+      "name": "Who's That Trainer?",
+      "tagline": "Inject your own custom sprites or play as Gym Leaders, Elite 4, and Rivals.",
+      "author": {
+        "name": "MyFriendDevBR",
+        "url": "https://github.com/MyFriendPKMN/whos-that-trainer"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/MyFriendPKMN/whos-that-trainer/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "gen1recomp-widescreen-battle-intro",
+      "kind": "luaMod",
+      "name": "Widescreen Battle Intro",
+      "tagline": "Extends the battle-intro flash across the full window on widescreen displays, instead of a centered 160x144 square.",
+      "author": {
+        "name": "ShaneMcGovernIE",
+        "url": "https://github.com/ShaneMcGovernIE/gen1recomp-widescreen-battle-intro"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/ShaneMcGovernIE/gen1recomp-widescreen-battle-intro/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "wild-skies",
+      "kind": "luaMod",
+      "name": "Wild Skies",
+      "tagline": "Flying Pokémon from the encounter tables cross the overworld.",
+      "author": {
+        "name": "ShaneHudson",
+        "url": "https://github.com/shanehudson-gen1recomp-mods/wild_skies"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/shanehudson-gen1recomp-mods/wild_skies/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "overworld-spawn-mod",
+      "kind": "luaMod",
+      "name": "Wilds of Kanto",
+      "tagline": "Visible and reactive wild Pokemon for the Gen 1 overworld",
+      "author": {
+        "name": "YoDrehDenSwagAuf",
+        "url": "https://github.com/YoDrehDenSwagAuf/overworld-spawn-mod"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp and Gen2Recomped",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/YoDrehDenSwagAuf/overworld-spawn-mod/releases",
+        "status": "permission-needed"
+      }
+    },
+    {
+      "id": "yellow-legacy-changes",
+      "kind": "luaMod",
+      "name": "Yellow Legacy Changes",
+      "tagline": "Applies the move and stat rebalances from Yellow Legacy by TSP: buffed/nerfed moves, new types and effects, rebalanced base stats.",
+      "author": {
+        "name": "ShaneMcGovernIE",
+        "url": "https://github.com/ShaneMcGovernIE/yellow_legacy_changes"
+      },
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "project": {
+        "url": "https://github.com/ShaneMcGovernIE/yellow_legacy_changes/releases",
+        "status": "permission-needed"
+      }
     }
   ]
 }
