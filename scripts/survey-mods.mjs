@@ -365,7 +365,15 @@ async function surveyRepo(name, hint) {
           totalUncompressed: contents.totalUncompressed }
       : null,
     blocking,
-    verdict: blocking.length === 0 && licensed ? "installable"
+    // "unevaluated" is not "refused".
+    //
+    // An archive that could not be fetched has been judged on nothing, and
+    // folding that into "skip" reads as a verdict about the mod. It bit here:
+    // a re-run with --offline met a release cut that morning, could not fetch
+    // the new asset, and quietly dropped a mod that had done nothing wrong.
+    // On a real run the same shape is a network blip removing listings.
+    verdict: blocking.includes("archive could not be fetched") ? "unevaluated"
+      : blocking.length === 0 && licensed ? "installable"
       : hint.indexed ? "link-out"
       : "skip",
   };
@@ -647,6 +655,12 @@ async function main() {
   console.log(`  installable  ${count("installable")}`);
   console.log(`  link-out     ${count("link-out")}`);
   console.log(`  skip         ${count("skip")}`);
+  if (count("unevaluated")) {
+    console.log(`  UNEVALUATED  ${count("unevaluated")} — fetched nothing, judged nothing:`);
+    for (const r of results.filter((r) => r.verdict === "unevaluated")) {
+      console.log(`               ${r.repo}`);
+    }
+  }
   console.log(`\nWritten to survey/report.json`);
 
   const { rows, skipped } = draftRows(results);
