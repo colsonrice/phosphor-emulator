@@ -20,11 +20,18 @@ them down:
 - `gbal8rTests/Fixtures/published-manifest.json` is a byte copy of
   `public/v1/manifest.json`. Refresh it in the app repo whenever this file
   changes, or the app is testing a catalog that no longer exists.
-- `DiscoverPublishedManifestTests` records the **mix of manifest depths** among
-  installable entries, currently 70 at the archive root and 11 one directory
-  down. A release whose archive nests differently shifts that mix and fails
-  that test on purpose, so the change shows up in a diff instead of passing
-  quietly. Update the numbers there deliberately.
+- `DiscoverPublishedManifestTests` pins that **both manifest depths stay
+  represented**: at least one listing with its manifest at the archive root,
+  and at least one nesting it a directory down. Not the counts, which would
+  fail on every honest addition. Publishing an ordinary mod, at either depth,
+  needs nothing done there.
+
+  It fails only if a whole group empties. The depth-1 group is the one that
+  matters: `maxManifestDepth` exists for it, since depth 0 alone would be
+  satisfied by a bound of zero, so if every published archive were flattened
+  the app's bound would stop being exercised by real data and could drift
+  unnoticed. If that ever happens on purpose, the test is the thing to
+  reconsider, and it says so.
 
 `manifestPath` exists for the same reason: the app asserts that nothing
 published sits deeper than its own installer will look
