@@ -49,7 +49,12 @@ for a bundled open-source license, updates the catalog, and deploys the site.
 - `title`, `creator`, `version`, `releaseDate`
 - `category`: `rom-hack`, `gen1recomp`, or `gen2recomp`
 - `compatibility`: every catalog channel in which the release should appear
-- `target`: base game or recomp target
+- `target`: base game or recomp target. On a row that names an engine this is
+  ALSO read by `scripts/engine-family.mjs`, which turns it into the
+  `engine.family` the app's Workshop filters by. Use a spelling that table
+  already knows, or add yours to it: an unrecognised one fails the survey and
+  the manifest build rather than reaching players as a mod their engine filter
+  quietly hides. A ROM hack's target names a cartridge and is not checked.
 - `summary`: plain-language description
 - `fileUrl`, `fileName`, `fileSize`, `sha256`
 - `homepageUrl`: canonical project page
