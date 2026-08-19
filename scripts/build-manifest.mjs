@@ -14,6 +14,7 @@
 //   node scripts/build-manifest.mjs --check   fail if the committed file is stale
 
 import { readFile, writeFile, mkdir } from "node:fs/promises";
+import { engineFacet } from "./engine-family.mjs";
 import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -140,6 +141,16 @@ function entriesForRelease(release, errors) {
 
   return engines.map((channel) => {
     const engineId = ENGINE_IDS[channel];
+    // The engine family the app filters by, derived rather than typed. It is
+    // scoped to THIS entry's engine and not to the release's compatibility:
+    // a dual-engine mod is published once per engine, and each half installs
+    // into one of them. See engineFacet.
+    let facet = null;
+    try {
+      facet = engineFacet({ target: release.target, channels, installsInto: engineId, label });
+    } catch (error) {
+      errors.push(error.message);
+    }
     return {
       id: engines.length > 1 ? `${release.id}@${engineId}` : release.id,
       kind: "luaMod",
@@ -168,7 +179,11 @@ function entriesForRelease(release, errors) {
         // constant here against a constant there across two repositories.
         manifestPath: release.manifestPath,
       },
-      engine: { id: engineId },
+      // `id` is the engine this archive installs into, and it is what the
+      // installer acts on. `family` and `games` are what the Workshop's engine
+      // filter reads, and they are structured precisely because `target` above
+      // is not.
+      engine: { id: engineId, ...(facet ?? {}) },
       modID: release.modId,
     };
   });
@@ -191,6 +206,17 @@ function entryForProject(project, errors) {
     return null;
   }
 
+  // An indexed listing carries no `engine.id`, because there is nothing to
+  // install into one. It still names an engine in its `target`, on every one
+  // of them, so the Workshop's engine filter works over the link-outs too.
+  let facet = null;
+  try {
+    facet = engineFacet({ target: project.target, channels: project.compatibility ?? [], label });
+  } catch (error) {
+    errors.push(error.message);
+    return null;
+  }
+
   return {
     id: project.id,
     kind: project.kind === "rom-hack" ? "romPatch" : "luaMod",
@@ -201,6 +227,7 @@ function entryForProject(project, errors) {
     author: { name: project.creator, url: project.homepageUrl },
     categories: ["PENDING"],
     target: project.target,
+    ...(facet ? { engine: facet } : {}),
     screenshots: [],
     project: { url: project.releasesUrl ?? project.homepageUrl, status: project.reviewStatus },
   };

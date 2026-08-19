@@ -25,6 +25,8 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { promisify } from "node:util";
 
+import { auditTargets, engineFacet } from "./engine-family.mjs";
+
 const run = promisify(execFile);
 
 const INDEX_FEED = "https://bryanthaboi.github.io/gen1recomp-mod-index/data/index.json";
@@ -515,6 +517,19 @@ function channelsFor(manifest) {
   return channels.length ? channels : ["gen1recomp"];
 }
 
+/// What a listing's `target` says, for the channels it supports.
+///
+/// Deliberately one of the three spellings in ENGINE_BY_TARGET and not a
+/// fourth: the drafted string has to be one the catalog can turn back into a
+/// family. A human narrowing it by hand afterwards ("Gen1Recomp · Yellow") is
+/// expected and fine, as long as they use a spelling the table knows, which is
+/// what auditCatalogTargets checks on the next run.
+function targetFor(channels) {
+  return channels.includes("gen2recomp") && channels.includes("gen1recomp")
+    ? "Gen1Recomp and Gen2Recomped"
+    : channels[0] === "gen2recomp" ? "Gen2Recomped" : "Gen1Recomp";
+}
+
 const humanSize = (bytes) => bytes >= 1024 * 1024
   ? `${(bytes / 1024 / 1024).toFixed(1)} MB`
   : `${(bytes / 1024).toFixed(1)} KB`;
@@ -556,9 +571,13 @@ function draftRows(results) {
       releaseDate: (r.release.publishedAt ?? "").slice(0, 10),
       category: channels[0],
       compatibility: channels,
-      target: channels.includes("gen2recomp") && channels.includes("gen1recomp")
-        ? "Gen1Recomp and Gen2Recomped"
-        : channels[0] === "gen2recomp" ? "Gen2Recomped" : "Gen1Recomp",
+      target: targetFor(channels),
+      // Structured beside the free-text `target`, because the app filters on
+      // it. A drafted row carries it so the row a human pastes into src/data
+      // is already complete; build-manifest.mjs derives it again from the
+      // pasted row rather than trusting this copy, so an edited target string
+      // cannot leave a stale family behind it.
+      engine: engineFacet({ target: targetFor(channels), channels, label: r.repo }),
       summary: "TODO tagline — one line, a whole sentence, no truncation",
       // The long prose the detail screen renders. The manifest's own words
       // first, because they are the author's; the index summary and the repo
@@ -644,9 +663,8 @@ function draftProjects(results, alreadyListed, takenIds) {
       kind: "mod",
       category: channels[0],
       compatibility: channels,
-      target: channels.includes("gen2recomp") && channels.includes("gen1recomp")
-        ? "Gen1Recomp and Gen2Recomped"
-        : channels[0] === "gen2recomp" ? "Gen2Recomped" : "Gen1Recomp",
+      target: targetFor(channels),
+      engine: engineFacet({ target: targetFor(channels), channels, label: r.repo }),
       summary,
       homepageUrl: r.homepage,
       ...(r.release ? { releasesUrl: r.releasesPage } : {}),
@@ -659,7 +677,34 @@ function draftProjects(results, alreadyListed, takenIds) {
   return rows;
 }
 
+/// Every hand-typed `target` already in the catalog, checked against the table
+/// that turns it into an engine family.
+///
+/// This runs FIRST, before a single request, because it is the cheapest thing
+/// here and the only one that can fail for a reason a person can fix in ten
+/// seconds. It is also why the mapping lives on this side at all: the survey
+/// is the script a human runs while editing the catalog, so a tenth spelling
+/// of "Gen1Recomp" stops here, in front of the person who typed it, rather
+/// than reaching a shipped app as a mod its engine filter quietly hides.
+///
+/// ROM-hack rows are not checked and must not be: their `target` names a
+/// cartridge, and no engine filter has anything to say about it.
+async function auditCatalogTargets() {
+  const errors = [];
+  for (const file of ["../src/data/releases.json", "../src/data/projects.json"]) {
+    const rows = JSON.parse(await readFile(new URL(file, import.meta.url), "utf8"));
+    errors.push(...auditTargets(rows, file.replace("../src/data/", "")));
+  }
+  if (errors.length === 0) return;
+  console.error("The catalog holds a target string this survey cannot read:\n");
+  for (const error of errors) console.error(`  - ${error}`);
+  console.error("");
+  process.exit(1);
+}
+
 async function main() {
+  await auditCatalogTargets();
+
   console.log("Gathering repositories…");
   const repos = await gatherRepos();
 
