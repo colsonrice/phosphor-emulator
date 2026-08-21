@@ -1958,7 +1958,7 @@
       "family": "gen1recomp",
       "games": []
     },
-    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "summary": "A Gen 1 battle HUD that floats over the staged 3D battles of Dramatic Shape, PotatoVoxel and Voxel Ascendant.",
     "description": "Floating Gen-I battle UI for Dramatic Shape, PotatoVoxel and Voxel Ascendant staged 3D battles.",
     "fileUrl": "https://github.com/bass-dv/g1rFloatingBattleHUD/releases/download/v0.7.17/FloatingBattleHUD_v0.7.17.zip",
     "fileName": "FloatingBattleHUD_v0.7.17.zip",
@@ -1992,7 +1992,7 @@
       "family": "both",
       "games": []
     },
-    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "summary": "A controller friendly overlay built for a small screen: party, route encounters and battle matchups on one button, items and boxes on another.",
     "description": "Overhaul designed to optimize display on a smaller screen and for use with a controller. An in-game companion. Press R2 to toggle a live overlay (party, trainer, route encounters, and a battle matchup screen during fights). Press X for an Items screen to move items between your Bag and the PC (drag/click, quantities, sort). Press Y for a Party/Boxes screen to deposit, withdraw, rearrange and swap Pokemon by drag-and-drop. Press F6 (or R3 on a controller) to enter Edit Mode and freely drag, resize, and collapse every panel to fit your screen exactly how you want it, with full mouse/touch/gamepad support and settings that persist across sessions. NEW: if a compatible weather mod is installed (e.g. Weather FX), the Route panel shows live weather-adjusted encounter odds and weather-only species instead of the static base table, plus a current-weather readout next to every location's name. Nothing changes without one installed. Enforces the game's limits (box/bag caps; the party is never left without a healthy Pokemon). Fan-made; not affiliated with or endorsed by Nintendo / Game Freak / The Pokemon Company.",
     "fileUrl": "https://github.com/BountyHunterKanden/Kanto-Companion-Mobile/releases/download/2.9.4/kanto_companion-2.9.4.zip",
     "fileName": "kanto_companion-2.9.4.zip",
@@ -2026,7 +2026,7 @@
       "family": "gen1recomp",
       "games": []
     },
-    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "summary": "One free Premier Ball for every ten Poke Balls you buy.",
     "description": "Awards 1 Premier Ball for every 10 Poké Balls added to your bag.",
     "fileUrl": "https://github.com/daGoncs/premier-ball-bonus/releases/download/stable/premier-ball-bonus-1.0.0.zip",
     "fileName": "premier-ball-bonus-1.0.0.zip",
@@ -2059,7 +2059,7 @@
       "family": "gen1recomp",
       "games": []
     },
-    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "summary": "A secret base of your own in Gen 1: a hideout to furnish and come back to.",
     "description": "A secret base housing system for Gen 1.",
     "fileUrl": "https://github.com/dburton95/secret-base/releases/download/1.0.9/secret-base-1.0.9.zip",
     "fileName": "secret-base-1.0.9.zip",
@@ -2092,7 +2092,7 @@
       "family": "gen1recomp",
       "games": []
     },
-    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "summary": "A wide Gen 1 overhaul: continuation, rebalancing, HM comforts, scaled wild Pokemon, an Evolution Man and a real endgame.",
     "description": "Compatibility update: supports Gen1Recomp v0.2.12 and the broader audited 0.2.x engine family while preserving the v0.2.01 source-save import hotfix and all continuation, balance, HM QoL, Wilds scaling, Evolution Man, endgame, and status systems.",
     "fileUrl": "https://github.com/Debatesmith/Project-Celebi/releases/download/v0.2.02-Hotfix/ProjectCelebi-v0.2.02.zip",
     "fileName": "ProjectCelebi-v0.2.02.zip",
@@ -2126,7 +2126,7 @@
       "family": "both",
       "games": []
     },
-    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "summary": "A voice line on the moments that matter, with the music ducking underneath it.",
     "description": "Plays a voice line when the player triggers an event such as a New Game or Continues an existing save, with the music briefly ducking underneath each line.",
     "fileUrl": "https://github.com/ElvieBlooms/trainer_talk/releases/download/v0.3.1/trainer_talk-0.3.1.zip",
     "fileName": "trainer_talk-0.3.1.zip",
@@ -2159,7 +2159,7 @@
       "family": "gen1recomp",
       "games": []
     },
-    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "summary": "Gust flies and Karate Chop fights, the way Gen 2 corrected them, so the Pokemon that learn them finally get their STAB.",
     "description": "Gust becomes Flying and Karate Chop becomes Fighting, the way Gen 2 corrected them, so the Pokemon that learn them get the STAB they should have had. Sand-Attack to Ground is a separate toggle, off by default, since a Ground move cannot touch Flying. Also keeps Gen 1's Ghost 0x Psychic matchup, overriding mods that patch it out. Bite stays Normal: Gen 1 has no Dark type.",
     "fileUrl": "https://github.com/Gilles93/Move-Type-fix/releases/download/v1.1.0/move_type_fixes-1.1.0.zip",
     "fileName": "move_type_fixes-1.1.0.zip",
@@ -2192,7 +2192,7 @@
       "family": "gen1recomp",
       "games": []
     },
-    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "summary": "Dragon moves worth using, fixed stats on 17 Pokemon, retyped Gengar and Charizard, and learnsets they should always have had, each behind its own switch.",
     "description": "Gen 1 only has one Dragon move and it does a flat 40 damage, so Dragon types never really got to play like one. This adds Twister, Dragonbreath and a physical Outrage. It also fixes stats on 17 Pokemon, retypes Gengar, Pinsir and Charizard, gives Arcanine and Ninetales the learnsets they never had, and lets Charizard learn Fly. Everything is switchable, and the two biggest changes ship switched off.",
     "fileUrl": "https://github.com/Gilles93/Species-Rebalance/releases/download/v0.4.0/species_rebalance-0.4.0.zip",
     "fileName": "species_rebalance-0.4.0.zip",
@@ -2225,7 +2225,7 @@
       "family": "gen1recomp",
       "games": []
     },
-    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "summary": "Gym leaders, rivals and the Elite Four field full teams of six with real type coverage, and switch when the matchup turns against them.",
     "description": "Gym leaders, the Elite Four, the Champion, the rivals and Giovanni field full six-Pokemon teams with real type coverage, on a level curve computed from the experience a playthrough actually banks rather than guessed at. Bosses switch to answer a bad matchup, and a fair-play AI estimates damage and weighs accuracy. Red, Blue and Yellow each get their own rosters, so Yellow's rival fights his own Eevee line at the right levels. Every ordinary trainer gets a level bump and stops fielding pre-evolutions its level has outgrown. The static overworld encounters are raised to match, and the legendary birds sit at level 70 with movesets to go with it. All adjustable from the MODS menu.",
     "fileUrl": "https://github.com/Gilles93/Stronger-Trainers/releases/download/v1.8.0/stronger_trainers-1.8.0.zip",
     "fileName": "stronger_trainers-1.8.0.zip",
@@ -2258,7 +2258,7 @@
       "family": "both",
       "games": []
     },
-    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "summary": "Shuffles the gym leaders of Kanto and Johto in Gold and Silver, with every gym keeping its own badge, rewards and level curve.",
     "description": "Standalone Gym Leader Shuffle for Kanto and Johto in Gold and Silver, with optional Crystal 251 compatibility. No randomizer or starter mod is required; each physical gym keeps its own badge, rewards, progression, and level curve.",
     "fileUrl": "https://github.com/inmento/Gym-Leader-Shuffle/releases/download/1.0.9/gym_leader_shuffle-1.0.9.zip",
     "fileName": "gym_leader_shuffle-1.0.9.zip",
@@ -2291,7 +2291,7 @@
       "family": "gen1recomp",
       "games": []
     },
-    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "summary": "One dial from 0 to 150 percent that makes the game more or less colourful without shifting a single hue.",
     "description": "One SATURATION dial, 0 to 150 percent, that scales how colourful the game is without changing the colours. Every palette that tones ADVANCED down does it by dragging every hue toward one family -- sepia warm, ocean cool, pocket grey. This scales each colour's distance from grey instead, so luminance and hue stay exactly where they were and only chroma moves: 70 is ADVANCED with the shouting turned down, 0 is a true greyscale of the real colours, 150 is louder than vanilla.",
     "fileUrl": "https://github.com/keberos/color-saturation/releases/download/v1.0.0/color-saturation-1.0.0.zip",
     "fileName": "color-saturation-1.0.0.zip",
@@ -2324,7 +2324,7 @@
       "family": "gen1recomp",
       "games": []
     },
-    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "summary": "Colours the Poke Balls the game leaves grey: the ball you throw, the party rows beside your team, and the healing machine.",
     "description": "Colors the Poke Balls the game leaves gray: the thrown ball in battle (fixed per-ball palette -- red Poke, blue Great, gold Ultra, purple Master, green Safari, instead of sampling the enemy Pokemon's colors), the party ball rows per state (red healthy, amber statused, dimmed fainted), and the Pokemon Center healing machine. Also turns on colorization for the battle animation layer under the WIDE layout, which skips it entirely.",
     "fileUrl": "https://github.com/keberos/pokeball-colorfix/releases/download/v1.1.0/pokeball-colorfix-1.1.0.zip",
     "fileName": "pokeball-colorfix-1.1.0.zip",
@@ -2357,7 +2357,7 @@
       "family": "gen1recomp",
       "games": []
     },
-    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "summary": "Move animations in the colour of their type: Ember burns orange, Thundershock is yellow, Surf is blue.",
     "description": "Battle move animations render two-tone white-and-black because their sprites use the f0 OBJ palette slot, which selects only the lightest and darkest shades -- the hue is discarded before any palette is consulted, so no COLORS mod can reach it. This gives every move animation a three-stop ramp from its elemental type: Ember burns orange, Thundershock is yellow, Surf is blue. Fifteen type ramps plus a small per-move exception list, all editable at the top of main.lua.",
     "fileUrl": "https://github.com/keberos/pokemove-colorfix/releases/download/v1.1.3/pokemove-colorfix-1.1.3.zip",
     "fileName": "pokemove-colorfix-1.1.3.zip",
@@ -2390,7 +2390,7 @@
       "family": "gen1recomp",
       "games": []
     },
-    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "summary": "Turns the hidden tiles behind Bill's house into Mew grass.",
     "description": "Turns the hidden tiles directly behind Bill's Route 25 house into Mew grass and links them to his right transformer.",
     "fileUrl": "https://github.com/LSDMTHC420/BillsBackyard/releases/download/release2/bills_backyard_mew_v1.1.1.zip",
     "fileName": "bills_backyard_mew_v1.1.1.zip",
@@ -2424,7 +2424,7 @@
       "family": "both",
       "games": []
     },
-    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "summary": "Eighteen ribbons your Pokemon can earn, buy or bond their way to, kept on the status screen.",
     "description": "Eighteen per-Pokemon ribbons for Red/Blue/Yellow and Gold -- earned, bought, and bonded -- awarded automatically (retroactively where the save allows) and shown inside the status screen.",
     "fileUrl": "https://github.com/mistermiracle3036/Ribbons/releases/download/v0.21.4/kanto_ribbons-0.21.4.zip",
     "fileName": "kanto_ribbons-0.21.4.zip",
@@ -2457,7 +2457,7 @@
       "family": "both",
       "games": []
     },
-    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "summary": "Your real world steps become EXP for your party, on a phone build that carries the step bridge.",
     "description": "Your real-world steps become EXP for your party. Opt-in: enable SYNC STEPS in this mod's options. Needs an iOS or Android build with the step bridge; dormant elsewhere.",
     "fileUrl": "https://github.com/mresnick67/Gen1ReComp-Pokewalker/releases/download/v1.2.0/pokewalker-1.2.0.zip",
     "fileName": "pokewalker-1.2.0.zip",
@@ -2491,7 +2491,7 @@
       "family": "gen1recomp",
       "games": []
     },
-    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "summary": "Change your trainer sprite in the overworld on a keypress, and the trainer card, back, bike and fishing sprites with it.",
     "description": "Overworld real-time Player Sprite Switcher. Can also change Trainer Card / Back / Bike / Fishing Sprites. Shortcuts - PageUp PageDown. hide.lua can be used to hide specific sprites.",
     "fileUrl": "https://github.com/on1san/Custom-Player-Sprite-Switcher/releases/download/1.1/CPSS.1.1.zip",
     "fileName": "CPSS.1.1.zip",
@@ -2524,7 +2524,7 @@
       "family": "gen1recomp",
       "games": []
     },
-    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "summary": "Modern comforts brought back to Gen 1: running shoes on the B button, and an EXP bar that fills in real time.",
     "description": "Modern Pokemon features, ported back to Gen 1. Running shoes: hold B and the player runs, as in Gen 3, with the sprite keeping pace. EXP bar: a thin bar on the battle HUD fills in real time toward the next level, as in every game since Gen 2. Each feature has its own ON/OFF row in OPTIONS. Nothing here changes encounter rates, step counters or experience math.",
     "fileUrl": "https://github.com/reikolul/Reikos-Enhancements-Mod/releases/download/v1.0.0/reikos-enhancements-v1.0.0.zip",
     "fileName": "reikos-enhancements-v1.0.0.zip",
@@ -2557,7 +2557,7 @@
       "family": "gen1recomp",
       "games": []
     },
-    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "summary": "Hold a direction in a menu and the list keeps scrolling, at one steady cadence and never on the overworld.",
     "description": "Hold D-pad directions in menus to auto-repeat after a short delay (lists + Left/Right option rows). Same cadence for every direction; never repeats on the overworld.",
     "fileUrl": "https://github.com/WizzStar/PKMN-G1R-HoldToScrollUI-Mod/releases/download/v1.0.4/wizzstar-hold-to-scroll-ui-1.0.4.zip",
     "fileName": "wizzstar-hold-to-scroll-ui-1.0.4.zip",
@@ -2590,7 +2590,7 @@
       "family": "gen1recomp",
       "games": []
     },
-    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "summary": "Oak offers you a journey log in his lab, and it fills itself in every time you save.",
     "description": "Prototype. Oak offers POKéLOG (two-line pages, then YES/NO). Oak talks normally after install. Journey stats after SAVE. T/ widens playtime display.",
     "fileUrl": "https://github.com/WizzStar/PKMN-G1R-PokeLog/releases/download/v0.0.8/wizzstar-pokelog-mod-0.0.8.zip",
     "fileName": "wizzstar-pokelog-mod-0.0.8.zip",
@@ -2623,7 +2623,7 @@
       "family": "gen1recomp",
       "games": []
     },
-    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "summary": "Power and PP while you choose which move to forget, and power and accuracy on the TMs in the mart.",
     "description": "Move POWER/PP on the forget screen; TM POWER/ACC in mart BUY/SELL footers.",
     "fileUrl": "https://github.com/Zetto22/move_learn_plus/releases/download/v1.1.1/move_learn_plus-1.1.1.zip",
     "fileName": "move_learn_plus-1.1.1.zip",
@@ -2656,7 +2656,7 @@
       "family": "both",
       "games": []
     },
-    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "summary": "Shares battle EXP across the whole party, with an optional level cap on what each Pokemon takes.",
     "description": "Party EXP share and/or level-cap filter on battle EXP awards (Gen 1 + Gen 2).",
     "fileUrl": "https://github.com/Zetto22/sweet_share/releases/download/v1.2.0/sweet_share-1.2.0.zip",
     "fileName": "sweet_share-1.2.0.zip",
@@ -2689,7 +2689,7 @@
       "family": "gen1recomp",
       "games": []
     },
-    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "summary": "Custom 3D grass and LGPE flowers swaying at 60 Hz, composed into one renderer chain.",
     "description": "Seamless upgrade of HD Grass V3: keeps the optimized custom 3D grass replacement and adds the LGPE 3D flower replacement with corrected textures and 60 Hz wind sway, in one composed renderer chain.",
     "fileUrl": "https://github.com/randyadr/Gen1-Recomp-HD-Grass/releases/download/v3.4.1/DRAMATIC_SHAPE_GRASS_OBJ_REPLACER_V3-3.4.1.zip",
     "fileName": "DRAMATIC_SHAPE_GRASS_OBJ_REPLACER_V3-3.4.1.zip",
