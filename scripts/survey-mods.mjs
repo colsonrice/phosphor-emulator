@@ -414,7 +414,7 @@ const EXCLUDED = {
 /// Update these when the app takes an engine bump. A stale value here does not
 /// fail loudly: it publishes mods whose own manifest rules them out, and the
 /// player gets a card that installs, switches on, and never loads.
-const ENGINE_VERSIONS = { gen1recomp: "0.2.7", gen2recomp: "0.7.6" };
+const ENGINE_VERSIONS = { gen1recomp: "0.2.14", gen2recomp: "0.7.6" };
 
 /// Enough semver to read a `game_version` range.
 ///
