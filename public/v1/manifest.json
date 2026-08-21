@@ -3059,6 +3059,40 @@
       "modID": "DRAMATIC_SHAPE_GRASS_OBJ_REPLACER_V3"
     },
     {
+      "id": "stadium2-overworld-models",
+      "kind": "luaMod",
+      "name": "Stadium 2 Overworld Models (Gold and Silver)",
+      "tagline": "Gold and Silver in 3D: a voxel Johto, Stadium 2 models for all 251, a follower that walks behind you, and a Stadium style battle UI.",
+      "description": "A standalone 3D overhaul for Gold and Silver. It rebuilds Johto as voxel terrain with day and night lighting, renders party and wild Pokemon as Stadium 2 models extracted from a Stadium 2 cartridge you supply yourself, and gives the overworld a follower that tracks whichever Pokemon sits at the top of your party. Battles, the Pokedex and the pause menus get a Stadium style glass UI with a controller command diamond, and OPEN WORLD zoom pulls the camera back over the whole region. First person and free camera modes are included, and it coexists with the 3D Character Selector. Nothing here needs another mod installed first: the voxel and roaming Wilds runtimes travel inside the package.",
+      "author": {
+        "name": "randyadr",
+        "url": "https://github.com/randyadr/Gen2-3D-Sprites"
+      },
+      "version": "0.2.81",
+      "releasedAt": "2026-08-15",
+      "license": {
+        "spdx": "NOASSERTION",
+        "text": "This package carries the licence files of the projects it is built from.\n\n=== DRAMALESS_LICENSE.txt ===\n\nMIT License\r\n\r\nCopyright (c) 2026 Stahltier\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy\r\nof this software and associated documentation files (the \"Software\"), to deal\r\nin the Software without restriction, including without limitation the rights\r\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\r\ncopies of the Software, and to permit persons to whom the Software is\r\nfurnished to do so, subject to the following conditions:\r\n\r\nThe above copyright notice and this permission notice shall be included in all\r\ncopies or substantial portions of the Software.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\r\nSOFTWARE.\r\n\r\nThe OpenXR loader is shipped unmodified in assets/vr (Apache-2.0; full license text alongside the DLL).\r\n\r\nThis repo contains code from DramaticShape's [Dramatic Shape Voxel Mod](https://github.com/DramaticShape/DramaticShapeVoxelMod), specifically v1.6.1.\r\nIt also contains code from absol89's fork [BATTLE ART](https://github.com/absol89/DramaticShapeVoxelMod).\r\nIt also contains code from the [TERRARIUM](https://github.com/BrenoBertucci/Terrarium) fork created by BrenoBertucci.\r\nIt also contains compatibility code from the [StadiumFX](https://github.com/anxiousintrovert/StadiumBattleFX) mod by anxiousintrovert.\r\n\r\nIt also contains my own code which is provided under the [CC-BY-NC License](https://creativecommons.org/licenses/by-nc/4.0/).\n\n=== WILDS_LICENSE.txt ===\n\nMIT License\n\nCopyright (c) 2026 YoDrehDenSwagAuf\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n\n---------------------------------------------------------------------------\n\nThe MIT License applies to the original Wilds of Kanto source code and\noriginal project assets only.\n\nThird-party assets included in this repository remain subject to their\nrespective licenses and are not relicensed under MIT. See\nTHIRD_PARTY_NOTICES.md for details.\n"
+      },
+      "categories": [
+        "ART"
+      ],
+      "target": "Gen1Recomp",
+      "screenshots": [],
+      "download": {
+        "url": "https://github.com/randyadr/Gen2-3D-Sprites/releases/download/v0.2.81/STADIUM2_OVERWORLD_MODELS-0.2.81.zip",
+        "sizeBytes": 4425067,
+        "sha256": "5f899da032546e539d8c56d55584c00f465d109842a57cd4cda3c3610f48c7c2",
+        "manifestPath": "manifest.json"
+      },
+      "engine": {
+        "id": "gen1recomp",
+        "family": "gen1recomp",
+        "games": []
+      },
+      "modID": "STADIUM2_OVERWORLD_MODELS"
+    },
+    {
       "id": "green-sgb-palette",
       "kind": "luaMod",
       "name": "Green SGB Palette",
