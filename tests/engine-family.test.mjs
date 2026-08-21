@@ -87,18 +87,32 @@ test("an installable entry's family agrees with the engine it installs into", as
   }
 });
 
-/// Both facets have to be populated on both tabs of the app's Workshop, or a
-/// filter chip appears over nothing.
-test("both engines are represented among installable and indexed listings", async () => {
+/// Every engine facet has to be populated among both the installable listings
+/// and the link-outs, or a filter chip in the app's Workshop appears over
+/// nothing.
+///
+/// The engines are read out of the manifest rather than written down here. The
+/// list used to be `["gen1recomp", "gen2recomped"]` and it went stale the day
+/// Gen2Recomped left the app: a hardcoded engine turns a correct catalog into
+/// a failing suite, and the reflex is to delete the assertion rather than
+/// notice what it was protecting. Derived, the same test keeps working through
+/// an engine arriving or leaving, and still fails on the thing it is for — an
+/// engine present in one population and absent from the other.
+test("every engine is represented among both installable and indexed listings", async () => {
   const { entries } = await buildManifest();
   const covers = (entry, engine) =>
     entry.engine.family === engine || entry.engine.family === "both";
+
+  const engines = [...new Set(
+    entries.map((e) => e.engine?.family).filter((f) => f && f !== "both"),
+  )];
+  assert.ok(engines.length > 0, "the catalog names no engine at all");
 
   for (const [label, pool] of [
     ["installable", entries.filter((e) => e.download)],
     ["indexed", entries.filter((e) => !e.download)],
   ]) {
-    for (const engine of ["gen1recomp", "gen2recomped"]) {
+    for (const engine of engines) {
       assert.ok(pool.some((entry) => covers(entry, engine)),
                 `no ${engine} listing among the ${label} entries`);
     }

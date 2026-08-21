@@ -22,10 +22,39 @@ const RELEASES = new URL("../src/data/releases.json", import.meta.url);
 const PROJECTS = new URL("../src/data/projects.json", import.meta.url);
 const OUTPUT = new URL("../public/v1/manifest.json", import.meta.url);
 
-/// The site and the app spell the second engine differently. Getting this
-/// wrong produces entries that no installed engine claims, which reads in the
-/// app as a mod that simply refuses to install with no explanation.
-const ENGINE_IDS = { gen1recomp: "gen1recomp", gen2recomp: "gen2recomped" };
+/// The site and the app spell an engine differently. Getting this wrong
+/// produces entries that no installed engine claims, which reads in the app as
+/// a mod that simply refuses to install with no explanation.
+const ENGINE_IDS = { gen1recomp: "gen1recomp" };
+
+/// Engines Phosphor used to ship and does not any more.
+///
+/// A listing for one of these is not a listing. No installed engine can claim
+/// it, so INSTALL fails on the player's phone with nothing on screen to
+/// explain it, and a link-out is worse still: it sends somebody to a mod that
+/// cannot run here at all. That is a dead end dressed as a discovery.
+///
+/// This is the failure that actually happened. The catalog generated on
+/// 17 Aug 2026 carried 14 installable rows and 4 link-outs for `gen2recomp`;
+/// the engine came out of the app on 20 Aug because its licence is dual and
+/// the Part B files forbid redistribution and modified builds, which is what
+/// Phosphor was doing. The site had no way to know, so the rows stayed live.
+/// Keyed separately from "no supported engine" so the message says which of
+/// the two mistakes this is.
+///
+/// **Do not clear an error from this table by putting the id back into
+/// ENGINE_IDS.** The engine has to exist in the app first; the app repo is the
+/// authority and this table follows it. Gold and Silver run on gen1recomp now.
+const RETIRED_ENGINES = {
+  gen2recomp:
+    "Gen2Recomped, removed from Phosphor in 3.8 over its licence. Gold and Silver run on gen1recomp now, " +
+    "so a dual-engine mod belongs here as gen1recomp alone; a Gen 2-only mod does not belong here at all",
+};
+
+/// The retired engines a row names, if any.
+function retiredEngines(channels) {
+  return channels.filter((channel) => RETIRED_ENGINES[channel]);
+}
 
 /// ROM hacks are not published yet.
 ///
@@ -114,6 +143,11 @@ function entriesForRelease(release, errors) {
   }
 
   const channels = release.compatibility ?? [];
+  const retired = retiredEngines(channels);
+  if (retired.length) {
+    errors.push(`${label}: compatibility names ${retired.join(", ")} — ${RETIRED_ENGINES[retired[0]]}.`);
+    return [];
+  }
   const engines = channels.filter((channel) => ENGINE_IDS[channel]);
 
   // A cleared ROM hack needs patch metadata the site does not carry yet: the
@@ -203,6 +237,12 @@ function entryForProject(project, errors) {
   }
   if (!/^https:\/\//.test(project.homepageUrl ?? "")) {
     errors.push(`${label}: homepageUrl must use HTTPS — it is the only thing an indexed listing can offer`);
+    return null;
+  }
+
+  const retired = retiredEngines(project.compatibility ?? []);
+  if (retired.length) {
+    errors.push(`${label}: compatibility names ${retired.join(", ")} — ${RETIRED_ENGINES[retired[0]]}.`);
     return null;
   }
 

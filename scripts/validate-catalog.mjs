@@ -151,10 +151,21 @@ export async function validateProjectIndex(
   const combined = [...projects, ...(Array.isArray(releases) ? releases.map((release) => ({ ...release, kind: release.category === "rom-hack" ? "rom-hack" : "mod" })) : [])];
   const romHacks = combined.filter((project) => project.kind === "rom-hack").length;
   const mods = combined.filter((project) => project.kind === "mod").length;
-  const gen2Mods = combined.filter((project) => project.kind === "mod" && project.compatibility?.includes("gen2recomp")).length;
+  // Was a floor of 3: the catalog used to be required to carry Gen 2 mods.
+  // It is a ceiling of zero now. Gen2Recomped came out of Phosphor in 3.8 over
+  // its licence, so a Gen 2 row is a listing no installed engine can claim —
+  // INSTALL fails on the phone, and a link-out sends somebody to a mod that
+  // cannot run here. Inverted rather than deleted, because the rule that
+  // catches the mistake is the same rule either way round.
+  const gen2Mods = combined.filter((project) => project.compatibility?.includes("gen2recomp")).length;
   if (romHacks < 10 || romHacks > 20) errors.push(`Project index must track 10–20 ROM hacks; found ${romHacks}`);
   if (mods < 30) errors.push(`Project index must track at least 30 recomp mods; found ${mods}`);
-  if (gen2Mods < 3) errors.push(`Project index must track at least 3 Gen2Recomp-compatible mods; found ${gen2Mods}`);
+  if (gen2Mods > 0) {
+    errors.push(
+      `Project index still carries ${gen2Mods} gen2recomp row(s). Phosphor removed that engine in 3.8: ` +
+      `demote a dual-engine mod to ["gen1recomp"], and drop a Gen 2-only one.`,
+    );
+  }
   return errors;
 }
 

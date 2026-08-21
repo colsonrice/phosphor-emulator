@@ -89,12 +89,11 @@
     "creator": "Mister Miracle",
     "version": "0.1.27",
     "releaseDate": "2026-08-13",
-    "category": "gen2recomp",
+    "category": "gen1recomp",
     "compatibility": [
-      "gen1recomp",
-      "gen2recomp"
+      "gen1recomp"
     ],
-    "target": "Gen1Recomp + Gen2Recomp",
+    "target": "Gen1Recomp",
     "summary": "Adds per-ball colors to battle tosses and the Pokémon Center healing machine in Red, Blue, Yellow, and Gold.",
     "fileUrl": "https://github.com/mistermiracle3036/Pokeball-Colors/releases/download/v0.1.27/pokeball_colors-0.1.27.zip",
     "fileName": "pokeball_colors-0.1.27.zip",
@@ -111,62 +110,6 @@
     "fileSizeBytes": 33407,
     "topic": "ART",
     "manifestPath": "manifest.json"
-  },
-  {
-    "id": "indigo-plateau-conference",
-    "title": "Indigo Plateau Conference",
-    "creator": "Mister Miracle",
-    "version": "1.0.2",
-    "releaseDate": "2026-08-14",
-    "category": "gen2recomp",
-    "compatibility": [
-      "gen2recomp"
-    ],
-    "target": "Gen2Recomp · Gold",
-    "summary": "Turns five Pokémon Center battle rooms into a repeatable four-round tournament circuit with 39 challengers.",
-    "fileUrl": "https://github.com/mistermiracle3036/Indigo-Plateau-Conference/releases/download/v1.0.2/indigo_conference-1.0.2.zip",
-    "fileName": "indigo_conference-1.0.2.zip",
-    "fileSize": "55.0 KB",
-    "sha256": "bd8379400db57418c84dad72bf7e03df49fb203e0782f6a238e6b56ab2af288a",
-    "homepageUrl": "https://github.com/mistermiracle3036/Indigo-Plateau-Conference",
-    "permission": "open-license",
-    "license": "MIT",
-    "licenseIncluded": true,
-    "permissionEvidenceUrl": "https://github.com/mistermiracle3036/Indigo-Plateau-Conference/blob/main/LICENSE",
-    "containsRom": false,
-    "images": [],
-    "modId": "indigo_conference",
-    "fileSizeBytes": 56357,
-    "topic": "CONTENT",
-    "manifestPath": "manifest.json"
-  },
-  {
-    "id": "gen1recomp-plus-randomizer-nuzlocke",
-    "title": "Randomizer Nuzlocke",
-    "creator": "Sqtls",
-    "version": "0.28.1",
-    "releaseDate": "2026-08-15",
-    "category": "gen2recomp",
-    "compatibility": [
-      "gen2recomp"
-    ],
-    "target": "Gen2Recomp · Gold",
-    "summary": "An all-in-one Gold randomizer with strictly enforced Nuzlocke encounters, level caps, permadeath, and run-ending wipes.",
-    "fileUrl": "https://github.com/Sqtls/gen1recomp-plus-randomizer-nuzlocke/releases/download/v0.28.1/gen1recomp-plus-randomizer-nuzlocke-0.28.1.zip",
-    "fileName": "gen1recomp-plus-randomizer-nuzlocke-0.28.1.zip",
-    "fileSize": "113.6 KB",
-    "sha256": "ab6d7907e710c54ee4816ca390cbeab742cb796fb37185c67fe0cfc3b2c28fef",
-    "homepageUrl": "https://github.com/Sqtls/gen1recomp-plus-randomizer-nuzlocke",
-    "permission": "open-license",
-    "license": "MIT",
-    "licenseIncluded": true,
-    "permissionEvidenceUrl": "https://github.com/Sqtls/gen1recomp-plus-randomizer-nuzlocke/blob/main/LICENSE",
-    "containsRom": false,
-    "images": [],
-    "modId": "gen1recomp_plus_randomizer_nuzlocke",
-    "fileSizeBytes": 116341,
-    "topic": "GAMEPLAY",
-    "manifestPath": "gen1recomp-plus-randomizer-nuzlocke-0.28.1/manifest.json"
   },
   {
     "id": "pokemon-red-ptbr",
@@ -476,34 +419,6 @@
     "images": [],
     "modId": "dex_radar",
     "topic": "UI",
-    "manifestPath": "manifest.json"
-  },
-  {
-    "id": "gen2-online",
-    "title": "Gen2Recomp Online",
-    "creator": "UNDERdecodedHD",
-    "version": "0.6.5",
-    "releaseDate": "2026-08-12",
-    "category": "gen2recomp",
-    "compatibility": [
-      "gen2recomp"
-    ],
-    "target": "Gen2Recomped",
-    "summary": "Explores online connectivity for the Gen2Recomped runtime.",
-    "fileUrl": "https://github.com/UNDERdecoded/Gen2Recomp---Online/releases/download/Beta0.6.5Hotfix/gen2recomped-online.zip",
-    "fileName": "gen2recomped-online.zip",
-    "fileSize": "226.1 KB",
-    "fileSizeBytes": 231573,
-    "sha256": "d89c0bd1379a60e910d2cc5eb243f9ed0663998386d3fd82c086a5e7d6a75cde",
-    "homepageUrl": "https://github.com/UNDERdecoded/Gen2Recomp---Online",
-    "permission": "open-license",
-    "license": "MIT",
-    "licenseIncluded": true,
-    "permissionEvidenceUrl": "https://github.com/UNDERdecoded/Gen2Recomp---Online/blob/main/LICENSE",
-    "containsRom": false,
-    "images": [],
-    "modId": "gen2online",
-    "topic": "GAMEPLAY",
     "manifestPath": "manifest.json"
   },
   {
@@ -897,10 +812,9 @@
     "releaseDate": "2026-08-12",
     "category": "gen1recomp",
     "compatibility": [
-      "gen1recomp",
-      "gen2recomp"
+      "gen1recomp"
     ],
-    "target": "Gen1Recomp and Gen2Recomped",
+    "target": "Gen1Recomp",
     "summary": "Storage as a Ruby and Sapphire style grid you can search, sort and mark.",
     "fileUrl": "https://github.com/MadeinTaly/gen1recomp-gen3-boxes/releases/download/v1.8.0/gen3_box-1.8.0.zip",
     "fileName": "gen3_box-1.8.0.zip",
@@ -927,10 +841,9 @@
     "releaseDate": "2026-08-12",
     "category": "gen1recomp",
     "compatibility": [
-      "gen1recomp",
-      "gen2recomp"
+      "gen1recomp"
     ],
-    "target": "Gen1Recomp and Gen2Recomped",
+    "target": "Gen1Recomp",
     "summary": "The Pokedex as a grid of pictures, every owned species in its own colours.",
     "fileUrl": "https://github.com/MadeinTaly/gen1recomp-gen3-dex/releases/download/v0.5.0/gen3_dex-0.5.0.zip",
     "fileName": "gen3_dex-0.5.0.zip",
@@ -957,10 +870,9 @@
     "releaseDate": "2026-08-12",
     "category": "gen1recomp",
     "compatibility": [
-      "gen1recomp",
-      "gen2recomp"
+      "gen1recomp"
     ],
-    "target": "Gen1Recomp and Gen2Recomped",
+    "target": "Gen1Recomp",
     "summary": "Thirty more colour schemes and eight text box borders, previewed on the running game.",
     "fileUrl": "https://github.com/MadeinTaly/gen1recomp-groovy-palette-frames/releases/download/v0.7.0/groovy_palette-0.7.0.zip",
     "fileName": "groovy_palette-0.7.0.zip",
@@ -1016,10 +928,9 @@
     "releaseDate": "2026-08-17",
     "category": "gen1recomp",
     "compatibility": [
-      "gen1recomp",
-      "gen2recomp"
+      "gen1recomp"
     ],
-    "target": "Gen1Recomp and Gen2Recomped",
+    "target": "Gen1Recomp",
     "summary": "A companion panel for your party, map and bag, built for a second screen.",
     "fileUrl": "https://github.com/AverageConsumer/kanto-gear/releases/download/v2.2.0/kanto_gear-2.2.0.zip",
     "fileName": "kanto_gear-2.2.0.zip",
@@ -1126,35 +1037,6 @@
     "topic": "UI",
     "description": "Modern rounded dialogue boxes with a soft shadow, optional translucency, size presets, and a speaker-name header. Restyles menus too.",
     "licenseText": "MIT License\n\nCopyright (c) 2026 Eduardo Calafell (eduardocalafell)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
-    "manifestPath": "manifest.json"
-  },
-  {
-    "id": "gen1recomp-modern-johto",
-    "title": "Modern Johto",
-    "creator": "MadeinTaly",
-    "version": "0.2.0",
-    "releaseDate": "2026-08-12",
-    "category": "gen2recomp",
-    "compatibility": [
-      "gen2recomp"
-    ],
-    "target": "Gen2Recomped",
-    "summary": "Gold gets the Gen 4 physical and special split, decided move by move.",
-    "fileUrl": "https://github.com/MadeinTaly/gen1recomp-modern-johto/releases/download/v0.2.0/modern_johto-0.2.0.zip",
-    "fileName": "modern_johto-0.2.0.zip",
-    "fileSize": "16.8 KB",
-    "sha256": "1db28278956ce7200ba39075343f08c3d8009b6cbd77da7d5004b46156558731",
-    "homepageUrl": "https://github.com/MadeinTaly/gen1recomp-modern-johto",
-    "permission": "open-license",
-    "license": "MIT",
-    "licenseIncluded": true,
-    "permissionEvidenceUrl": "https://github.com/MadeinTaly/gen1recomp-modern-johto/blob/main/LICENSE",
-    "containsRom": false,
-    "images": [],
-    "modId": "modern_johto",
-    "fileSizeBytes": 17153,
-    "topic": "GAMEPLAY",
-    "description": "The Gen 4 physical/special split for Pokemon Gold, decided per move instead of per type -- so Crunch comes off Attack, Shadow Ball off Special Attack, and Gyarados finally throws Hydro Pump off the stat it was never meant to use. Gold already splits Special into two stats, which is what makes the per-move category the real Gen 4 change here rather than the half-measure it is on a game with one Special. Now also an AI toggle: a trainer class that never carries the TYPES bit reads type effectiveness anyway, through a second ai_classes layer that steps aside for any class Gold already made type-aware. Both toggles off by default, because both change the balance. The Gen 2 counterpart of Modern Kanto, which stays where it is: five of that mod's six pieces have nothing to fix on Gold.",
     "manifestPath": "manifest.json"
   },
   {
@@ -1281,10 +1163,9 @@
     "releaseDate": "2026-08-14",
     "category": "gen1recomp",
     "compatibility": [
-      "gen1recomp",
-      "gen2recomp"
+      "gen1recomp"
     ],
-    "target": "Gen1Recomp and Gen2Recomped",
+    "target": "Gen1Recomp",
     "summary": "Steal a Pokemon out of a trainer battle, then fence it on Kanto's black market.",
     "fileUrl": "https://github.com/mistermiracle3036/Pokemon-Snag/releases/download/v0.15.9/snag_quest-0.15.9.zip",
     "fileName": "snag_quest-0.15.9.zip",
@@ -1311,10 +1192,9 @@
     "releaseDate": "2026-08-13",
     "category": "gen1recomp",
     "compatibility": [
-      "gen1recomp",
-      "gen2recomp"
+      "gen1recomp"
     ],
-    "target": "Gen1Recomp and Gen2Recomped",
+    "target": "Gen1Recomp",
     "summary": "A journal for side quests and the NPC trades you have taken on.",
     "fileUrl": "https://github.com/TanukiTooks/Quest-Menu/releases/download/v1.1.0/QuestMenu-1.1.0.zip",
     "fileName": "QuestMenu-1.1.0.zip",
@@ -1371,10 +1251,9 @@
     "releaseDate": "2026-08-13",
     "category": "gen1recomp",
     "compatibility": [
-      "gen1recomp",
-      "gen2recomp"
+      "gen1recomp"
     ],
-    "target": "Gen1Recomp and Gen2Recomped",
+    "target": "Gen1Recomp",
     "summary": "Hold B to move faster, at a speed you choose, with a trail off your heels.",
     "fileUrl": "https://github.com/MadeinTaly/gen1recomp-running-shoes/releases/download/v1.7.0/running_shoes-1.7.0.zip",
     "fileName": "running_shoes-1.7.0.zip",
@@ -1634,10 +1513,9 @@
     "releaseDate": "2026-08-17",
     "category": "gen1recomp",
     "compatibility": [
-      "gen1recomp",
-      "gen2recomp"
+      "gen1recomp"
     ],
-    "target": "Gen1Recomp and Gen2Recomped",
+    "target": "Gen1Recomp",
     "summary": "A moving battle camera in the style of Stadium, for the 3D battle views.",
     "fileUrl": "https://github.com/EnterPlayerOne/Battle-Cinematics-Stadium-Camera/releases/download/V1.0.7/Battle_Cinematics-v1.0.7.zip",
     "fileName": "Battle_Cinematics-v1.0.7.zip",
@@ -1840,10 +1718,9 @@
     "releaseDate": "2026-08-17",
     "category": "gen1recomp",
     "compatibility": [
-      "gen1recomp",
-      "gen2recomp"
+      "gen1recomp"
     ],
-    "target": "Gen1Recomp and Gen2Recomped",
+    "target": "Gen1Recomp",
     "summary": "Hand Pikachu a Moon Stone and see what the rumours were about.",
     "fileUrl": "https://github.com/dburton95/its-clefairy/releases/download/1.0.0/its-clefairy-1.0.0.zip",
     "fileName": "its-clefairy-1.0.0.zip",
@@ -2064,6 +1941,770 @@
     "fileSizeBytes": 72523,
     "topic": "GAMEPLAY",
     "description": "Scott's organized gameplay menu: built-in Pack/Pokegear navigation, bag pockets, EXP modes, Trade Stone, trainer forfeits and rematches, Oak's spare starter, B-button running with light head bob, badge-free field moves, gapped land, and physical-Thor dual-screen control.",
+    "manifestPath": "manifest.json"
+  },
+  {
+    "id": "g1rfloatingbattlehud",
+    "title": "Floating Battle HUD",
+    "creator": "bass-dv",
+    "version": "0.7.17",
+    "releaseDate": "2026-08-21",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "description": "Floating Gen-I battle UI for Dramatic Shape, PotatoVoxel and Voxel Ascendant staged 3D battles.",
+    "fileUrl": "https://github.com/bass-dv/g1rFloatingBattleHUD/releases/download/v0.7.17/FloatingBattleHUD_v0.7.17.zip",
+    "fileName": "FloatingBattleHUD_v0.7.17.zip",
+    "fileSize": "86.6 KB",
+    "fileSizeBytes": 88713,
+    "sha256": "228f0ec9fd6e2e5eb1d0155722a841f5ccf703007e4b41420e8cc62429cf27d7",
+    "homepageUrl": "https://github.com/bass-dv/g1rFloatingBattleHUD",
+    "permission": "open-license",
+    "license": "MIT",
+    "licenseIncluded": false,
+    "licenseText": "MIT License\n\nCopyright (c) 2026 bass-dv\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+    "permissionEvidenceUrl": "https://github.com/bass-dv/g1rFloatingBattleHUD/blob/main/LICENSE",
+    "containsRom": false,
+    "images": [],
+    "modId": "FLOATING_BATTLE_HUD",
+    "topic": "UI",
+    "manifestPath": "manifest.json"
+  },
+  {
+    "id": "kanto-companion-mobile",
+    "title": "Kanto Companion",
+    "creator": "bountyhunterkanden",
+    "version": "2.9.4",
+    "releaseDate": "2026-08-18",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "both",
+      "games": []
+    },
+    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "description": "Overhaul designed to optimize display on a smaller screen and for use with a controller. An in-game companion. Press R2 to toggle a live overlay (party, trainer, route encounters, and a battle matchup screen during fights). Press X for an Items screen to move items between your Bag and the PC (drag/click, quantities, sort). Press Y for a Party/Boxes screen to deposit, withdraw, rearrange and swap Pokemon by drag-and-drop. Press F6 (or R3 on a controller) to enter Edit Mode and freely drag, resize, and collapse every panel to fit your screen exactly how you want it, with full mouse/touch/gamepad support and settings that persist across sessions. NEW: if a compatible weather mod is installed (e.g. Weather FX), the Route panel shows live weather-adjusted encounter odds and weather-only species instead of the static base table, plus a current-weather readout next to every location's name. Nothing changes without one installed. Enforces the game's limits (box/bag caps; the party is never left without a healthy Pokemon). Fan-made; not affiliated with or endorsed by Nintendo / Game Freak / The Pokemon Company.",
+    "fileUrl": "https://github.com/BountyHunterKanden/Kanto-Companion-Mobile/releases/download/2.9.4/kanto_companion-2.9.4.zip",
+    "fileName": "kanto_companion-2.9.4.zip",
+    "fileSize": "165.2 KB",
+    "fileSizeBytes": 169198,
+    "sha256": "f39881e4302831c9e622195ae37281462a9e0c19ced16866c974d18eb27cc60a",
+    "homepageUrl": "https://github.com/BountyHunterKanden/Kanto-Companion-Mobile",
+    "permission": "open-license",
+    "license": "MIT",
+    "licenseIncluded": false,
+    "licenseText": "MIT License\n\nCopyright (c) 2026 BountyHunterKanden\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+    "permissionEvidenceUrl": "https://github.com/BountyHunterKanden/Kanto-Companion-Mobile/blob/main/LICENSE",
+    "containsRom": false,
+    "images": [],
+    "modId": "kanto_companion",
+    "topic": "QOL",
+    "manifestPath": "manifest.json"
+  },
+  {
+    "id": "premier-ball-bonus",
+    "title": "Poké Mart Premier Ball Bonus",
+    "creator": "daGoncs",
+    "version": "1.0.0",
+    "releaseDate": "2026-08-11",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "description": "Awards 1 Premier Ball for every 10 Poké Balls added to your bag.",
+    "fileUrl": "https://github.com/daGoncs/premier-ball-bonus/releases/download/stable/premier-ball-bonus-1.0.0.zip",
+    "fileName": "premier-ball-bonus-1.0.0.zip",
+    "fileSize": "4.2 KB",
+    "fileSizeBytes": 4264,
+    "sha256": "2bc4ed35a2e49e74b7e290a9c0fb64d15799289bb961b0baf7a1f76278837de3",
+    "homepageUrl": "https://github.com/daGoncs/premier-ball-bonus",
+    "permission": "open-license",
+    "license": "MIT",
+    "licenseIncluded": true,
+    "permissionEvidenceUrl": "https://github.com/daGoncs/premier-ball-bonus/blob/main/LICENSE",
+    "containsRom": false,
+    "images": [],
+    "modId": "premier_ball_bonus",
+    "topic": "GAMEPLAY",
+    "manifestPath": "premier-ball-bonus-main/manifest.json"
+  },
+  {
+    "id": "secret-base",
+    "title": "Secret Base",
+    "creator": "dburton95",
+    "version": "1.0.9",
+    "releaseDate": "2026-08-21",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "description": "A secret base housing system for Gen 1.",
+    "fileUrl": "https://github.com/dburton95/secret-base/releases/download/1.0.9/secret-base-1.0.9.zip",
+    "fileName": "secret-base-1.0.9.zip",
+    "fileSize": "15.5 KB",
+    "fileSizeBytes": 15836,
+    "sha256": "f89ed526006545f0c9bd9fdb529f442ac1cd857d0d985c4a9165500f70a67744",
+    "homepageUrl": "https://github.com/dburton95/secret-base",
+    "permission": "open-license",
+    "license": "MIT",
+    "licenseIncluded": true,
+    "permissionEvidenceUrl": "https://github.com/dburton95/secret-base/blob/main/LICENSE",
+    "containsRom": false,
+    "images": [],
+    "modId": "secret-base",
+    "topic": "CONTENT",
+    "manifestPath": "manifest.json"
+  },
+  {
+    "id": "project-celebi",
+    "title": "Project Celebi",
+    "creator": "debatesmith",
+    "version": "0.2.2",
+    "releaseDate": "2026-08-20",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "description": "Compatibility update: supports Gen1Recomp v0.2.12 and the broader audited 0.2.x engine family while preserving the v0.2.01 source-save import hotfix and all continuation, balance, HM QoL, Wilds scaling, Evolution Man, endgame, and status systems.",
+    "fileUrl": "https://github.com/Debatesmith/Project-Celebi/releases/download/v0.2.02-Hotfix/ProjectCelebi-v0.2.02.zip",
+    "fileName": "ProjectCelebi-v0.2.02.zip",
+    "fileSize": "73.2 KB",
+    "fileSizeBytes": 74910,
+    "sha256": "bf8e7095a93a5efb9f2c684af9d130cfb32b14cc6757d5dde531158f31d0f74b",
+    "homepageUrl": "https://github.com/Debatesmith/Project-Celebi",
+    "permission": "open-license",
+    "license": "MIT",
+    "licenseIncluded": false,
+    "licenseText": "MIT License\n\nCopyright (c) 2026 Debatesmith\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+    "permissionEvidenceUrl": "https://github.com/Debatesmith/Project-Celebi/blob/main/LICENSE",
+    "containsRom": false,
+    "images": [],
+    "modId": "legacy_bridge",
+    "topic": "QOL",
+    "manifestPath": "project_celebi/manifest.json"
+  },
+  {
+    "id": "trainer-talk",
+    "title": "Trainer Talk",
+    "creator": "elvieblooms",
+    "version": "0.3.1",
+    "releaseDate": "2026-08-20",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "both",
+      "games": []
+    },
+    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "description": "Plays a voice line when the player triggers an event such as a New Game or Continues an existing save, with the music briefly ducking underneath each line.",
+    "fileUrl": "https://github.com/ElvieBlooms/trainer_talk/releases/download/v0.3.1/trainer_talk-0.3.1.zip",
+    "fileName": "trainer_talk-0.3.1.zip",
+    "fileSize": "5.3 MB",
+    "fileSizeBytes": 5564719,
+    "sha256": "6e008a84a595a1d155ad35fb33c6557d4052ca16da6be3a1687b721d55ac5e48",
+    "homepageUrl": "https://github.com/ElvieBlooms/trainer_talk",
+    "permission": "open-license",
+    "license": "MIT",
+    "licenseIncluded": true,
+    "permissionEvidenceUrl": "https://github.com/ElvieBlooms/trainer_talk/blob/main/LICENSE",
+    "containsRom": false,
+    "images": [],
+    "modId": "trainer_talk",
+    "topic": "AUDIO",
+    "manifestPath": "trainer_talk-0.3.1/manifest.json"
+  },
+  {
+    "id": "move-type-fix",
+    "title": "Move Type Fixes",
+    "creator": "gilles93",
+    "version": "1.1.0",
+    "releaseDate": "2026-08-12",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "description": "Gust becomes Flying and Karate Chop becomes Fighting, the way Gen 2 corrected them, so the Pokemon that learn them get the STAB they should have had. Sand-Attack to Ground is a separate toggle, off by default, since a Ground move cannot touch Flying. Also keeps Gen 1's Ghost 0x Psychic matchup, overriding mods that patch it out. Bite stays Normal: Gen 1 has no Dark type.",
+    "fileUrl": "https://github.com/Gilles93/Move-Type-fix/releases/download/v1.1.0/move_type_fixes-1.1.0.zip",
+    "fileName": "move_type_fixes-1.1.0.zip",
+    "fileSize": "7.9 KB",
+    "fileSizeBytes": 8121,
+    "sha256": "64a754df3a74118163293b432f7799192a5828a2a4f979db610709f506dfb357",
+    "homepageUrl": "https://github.com/Gilles93/Move-Type-fix",
+    "permission": "open-license",
+    "license": "MIT",
+    "licenseIncluded": true,
+    "permissionEvidenceUrl": "https://github.com/Gilles93/Move-Type-fix/blob/main/LICENSE",
+    "containsRom": false,
+    "images": [],
+    "modId": "move_type_fixes",
+    "topic": "GAMEPLAY",
+    "manifestPath": "MOVE_TYPE_FIXES/manifest.json"
+  },
+  {
+    "id": "species-rebalance",
+    "title": "Species Rebalance",
+    "creator": "gilles93",
+    "version": "0.4.0",
+    "releaseDate": "2026-08-07",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "description": "Gen 1 only has one Dragon move and it does a flat 40 damage, so Dragon types never really got to play like one. This adds Twister, Dragonbreath and a physical Outrage. It also fixes stats on 17 Pokemon, retypes Gengar, Pinsir and Charizard, gives Arcanine and Ninetales the learnsets they never had, and lets Charizard learn Fly. Everything is switchable, and the two biggest changes ship switched off.",
+    "fileUrl": "https://github.com/Gilles93/Species-Rebalance/releases/download/v0.4.0/species_rebalance-0.4.0.zip",
+    "fileName": "species_rebalance-0.4.0.zip",
+    "fileSize": "21.9 KB",
+    "fileSizeBytes": 22459,
+    "sha256": "70c6d0c98c40e41a1607d47804043145248546a7ae579bf3698a9024c381709b",
+    "homepageUrl": "https://github.com/Gilles93/Species-Rebalance",
+    "permission": "open-license",
+    "license": "MIT",
+    "licenseIncluded": true,
+    "permissionEvidenceUrl": "https://github.com/Gilles93/Species-Rebalance/blob/main/LICENSE",
+    "containsRom": false,
+    "images": [],
+    "modId": "species_rebalance",
+    "topic": "GAMEPLAY",
+    "manifestPath": "species_rebalance/manifest.json"
+  },
+  {
+    "id": "stronger-trainers",
+    "title": "Stronger Trainers",
+    "creator": "gilles93",
+    "version": "1.8.0",
+    "releaseDate": "2026-08-10",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "description": "Gym leaders, the Elite Four, the Champion, the rivals and Giovanni field full six-Pokemon teams with real type coverage, on a level curve computed from the experience a playthrough actually banks rather than guessed at. Bosses switch to answer a bad matchup, and a fair-play AI estimates damage and weighs accuracy. Red, Blue and Yellow each get their own rosters, so Yellow's rival fights his own Eevee line at the right levels. Every ordinary trainer gets a level bump and stops fielding pre-evolutions its level has outgrown. The static overworld encounters are raised to match, and the legendary birds sit at level 70 with movesets to go with it. All adjustable from the MODS menu.",
+    "fileUrl": "https://github.com/Gilles93/Stronger-Trainers/releases/download/v1.8.0/stronger_trainers-1.8.0.zip",
+    "fileName": "stronger_trainers-1.8.0.zip",
+    "fileSize": "47.7 KB",
+    "fileSizeBytes": 48833,
+    "sha256": "667ed94ea9f4f7b2cd0379f7b854107ddef169da556a61a8662ce0a489eca2bc",
+    "homepageUrl": "https://github.com/Gilles93/Stronger-Trainers",
+    "permission": "open-license",
+    "license": "MIT",
+    "licenseIncluded": true,
+    "permissionEvidenceUrl": "https://github.com/Gilles93/Stronger-Trainers/blob/main/LICENSE",
+    "containsRom": false,
+    "images": [],
+    "modId": "stronger_trainers",
+    "topic": "GAMEPLAY",
+    "manifestPath": "stronger_trainers/manifest.json"
+  },
+  {
+    "id": "gym-leader-shuffle",
+    "title": "Gym Leader Shuffle",
+    "creator": "inmento",
+    "version": "1.0.9",
+    "releaseDate": "2026-08-20",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "both",
+      "games": []
+    },
+    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "description": "Standalone Gym Leader Shuffle for Kanto and Johto in Gold and Silver, with optional Crystal 251 compatibility. No randomizer or starter mod is required; each physical gym keeps its own badge, rewards, progression, and level curve.",
+    "fileUrl": "https://github.com/inmento/Gym-Leader-Shuffle/releases/download/1.0.9/gym_leader_shuffle-1.0.9.zip",
+    "fileName": "gym_leader_shuffle-1.0.9.zip",
+    "fileSize": "17.9 KB",
+    "fileSizeBytes": 18370,
+    "sha256": "94a1d0dc4bd72d2018900a8bd2c4a52cf6f0890809e1661ae44a48abd5e2ecb7",
+    "homepageUrl": "https://github.com/inmento/Gym-Leader-Shuffle",
+    "permission": "open-license",
+    "license": "MIT",
+    "licenseIncluded": true,
+    "permissionEvidenceUrl": "https://github.com/inmento/Gym-Leader-Shuffle/blob/main/LICENSE",
+    "containsRom": false,
+    "images": [],
+    "modId": "gym_leader_shuffle",
+    "topic": "GAMEPLAY",
+    "manifestPath": "manifest.json"
+  },
+  {
+    "id": "color-saturation",
+    "title": "Color Saturation",
+    "creator": "keberos",
+    "version": "1.0.0",
+    "releaseDate": "2026-08-09",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "description": "One SATURATION dial, 0 to 150 percent, that scales how colourful the game is without changing the colours. Every palette that tones ADVANCED down does it by dragging every hue toward one family -- sepia warm, ocean cool, pocket grey. This scales each colour's distance from grey instead, so luminance and hue stay exactly where they were and only chroma moves: 70 is ADVANCED with the shouting turned down, 0 is a true greyscale of the real colours, 150 is louder than vanilla.",
+    "fileUrl": "https://github.com/keberos/color-saturation/releases/download/v1.0.0/color-saturation-1.0.0.zip",
+    "fileName": "color-saturation-1.0.0.zip",
+    "fileSize": "7.4 KB",
+    "fileSizeBytes": 7556,
+    "sha256": "69144ce69ddaeee12a1781fdaaf86e6d05ff9b7b7714c01155ab37431393931c",
+    "homepageUrl": "https://github.com/keberos/color-saturation",
+    "permission": "open-license",
+    "license": "MIT",
+    "licenseIncluded": true,
+    "permissionEvidenceUrl": "https://github.com/keberos/color-saturation/blob/main/LICENSE",
+    "containsRom": false,
+    "images": [],
+    "modId": "color-saturation",
+    "topic": "ART",
+    "manifestPath": "color-saturation/manifest.json"
+  },
+  {
+    "id": "pokeball-colorfix",
+    "title": "Pokeball Colorfix",
+    "creator": "keberos",
+    "version": "1.1.0",
+    "releaseDate": "2026-08-19",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "description": "Colors the Poke Balls the game leaves gray: the thrown ball in battle (fixed per-ball palette -- red Poke, blue Great, gold Ultra, purple Master, green Safari, instead of sampling the enemy Pokemon's colors), the party ball rows per state (red healthy, amber statused, dimmed fainted), and the Pokemon Center healing machine. Also turns on colorization for the battle animation layer under the WIDE layout, which skips it entirely.",
+    "fileUrl": "https://github.com/keberos/pokeball-colorfix/releases/download/v1.1.0/pokeball-colorfix-1.1.0.zip",
+    "fileName": "pokeball-colorfix-1.1.0.zip",
+    "fileSize": "13.8 KB",
+    "fileSizeBytes": 14116,
+    "sha256": "87f3087d29995f577f40f42c8512fdafa7615acb21470637c72557f67c287dc7",
+    "homepageUrl": "https://github.com/keberos/pokeball-colorfix",
+    "permission": "open-license",
+    "license": "MIT",
+    "licenseIncluded": true,
+    "permissionEvidenceUrl": "https://github.com/keberos/pokeball-colorfix/blob/main/LICENSE",
+    "containsRom": false,
+    "images": [],
+    "modId": "pokeball-colorfix",
+    "topic": "ART",
+    "manifestPath": "pokeball-colorfix/manifest.json"
+  },
+  {
+    "id": "pokemove-colorfix",
+    "title": "Pokemove Colorfix",
+    "creator": "keberos",
+    "version": "1.1.3",
+    "releaseDate": "2026-08-08",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "description": "Battle move animations render two-tone white-and-black because their sprites use the f0 OBJ palette slot, which selects only the lightest and darkest shades -- the hue is discarded before any palette is consulted, so no COLORS mod can reach it. This gives every move animation a three-stop ramp from its elemental type: Ember burns orange, Thundershock is yellow, Surf is blue. Fifteen type ramps plus a small per-move exception list, all editable at the top of main.lua.",
+    "fileUrl": "https://github.com/keberos/pokemove-colorfix/releases/download/v1.1.3/pokemove-colorfix-1.1.3.zip",
+    "fileName": "pokemove-colorfix-1.1.3.zip",
+    "fileSize": "6.7 KB",
+    "fileSizeBytes": 6821,
+    "sha256": "48bccfb8f63b86614d15ba1590ccba7a1d9e649a9b2ccdcbe9ca0ce9e1b80421",
+    "homepageUrl": "https://github.com/keberos/pokemove-colorfix",
+    "permission": "open-license",
+    "license": "MIT",
+    "licenseIncluded": true,
+    "permissionEvidenceUrl": "https://github.com/keberos/pokemove-colorfix/blob/main/LICENSE",
+    "containsRom": false,
+    "images": [],
+    "modId": "pokemove-colorfix",
+    "topic": "ART",
+    "manifestPath": "pokemove-colorfix/manifest.json"
+  },
+  {
+    "id": "billsbackyard",
+    "title": "Bill's Backyard Mew",
+    "creator": "lsdmthc420",
+    "version": "1.1.1",
+    "releaseDate": "2026-08-20",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "description": "Turns the hidden tiles directly behind Bill's Route 25 house into Mew grass and links them to his right transformer.",
+    "fileUrl": "https://github.com/LSDMTHC420/BillsBackyard/releases/download/release2/bills_backyard_mew_v1.1.1.zip",
+    "fileName": "bills_backyard_mew_v1.1.1.zip",
+    "fileSize": "6.2 KB",
+    "fileSizeBytes": 6310,
+    "sha256": "f4d41b6e9bd269fb1edd52971069df9deb3632eea3129b55027b26a583675642",
+    "homepageUrl": "https://github.com/LSDMTHC420/BillsBackyard",
+    "permission": "open-license",
+    "license": "MIT",
+    "licenseIncluded": false,
+    "licenseText": "MIT License\n\nCopyright (c) 2026 LSDMTHC420\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+    "permissionEvidenceUrl": "https://github.com/LSDMTHC420/BillsBackyard/blob/main/LICENSE",
+    "containsRom": false,
+    "images": [],
+    "modId": "bills_backyard_mew",
+    "topic": "CONTENT",
+    "manifestPath": "bills_backyard_mew/manifest.json"
+  },
+  {
+    "id": "kanto-ribbons",
+    "title": "Ribbons",
+    "creator": "mistermiracle3036",
+    "version": "0.21.4",
+    "releaseDate": "2026-08-12",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "both",
+      "games": []
+    },
+    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "description": "Eighteen per-Pokemon ribbons for Red/Blue/Yellow and Gold -- earned, bought, and bonded -- awarded automatically (retroactively where the save allows) and shown inside the status screen.",
+    "fileUrl": "https://github.com/mistermiracle3036/Ribbons/releases/download/v0.21.4/kanto_ribbons-0.21.4.zip",
+    "fileName": "kanto_ribbons-0.21.4.zip",
+    "fileSize": "60.2 KB",
+    "fileSizeBytes": 61605,
+    "sha256": "ef811f2f05c543371b105911574de20162f07111d75af1c74f662c4f0cc99fe0",
+    "homepageUrl": "https://github.com/mistermiracle3036/Ribbons",
+    "permission": "open-license",
+    "license": "MIT",
+    "licenseIncluded": true,
+    "permissionEvidenceUrl": "https://github.com/mistermiracle3036/Ribbons/blob/main/LICENSE",
+    "containsRom": false,
+    "images": [],
+    "modId": "kanto_ribbons",
+    "topic": "GAMEPLAY",
+    "manifestPath": "manifest.json"
+  },
+  {
+    "id": "gen1recomp-pokewalker",
+    "title": "Pokewalker (Step Sync)",
+    "creator": "mresnick67",
+    "version": "1.2.0",
+    "releaseDate": "2026-08-15",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "both",
+      "games": []
+    },
+    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "description": "Your real-world steps become EXP for your party. Opt-in: enable SYNC STEPS in this mod's options. Needs an iOS or Android build with the step bridge; dormant elsewhere.",
+    "fileUrl": "https://github.com/mresnick67/Gen1ReComp-Pokewalker/releases/download/v1.2.0/pokewalker-1.2.0.zip",
+    "fileName": "pokewalker-1.2.0.zip",
+    "fileSize": "31.4 KB",
+    "fileSizeBytes": 32202,
+    "sha256": "e7e6910b5024c49f91fbea35ad3397632c94c98614f6038789d27e93bbfd2f22",
+    "homepageUrl": "https://github.com/mresnick67/Gen1ReComp-Pokewalker",
+    "permission": "open-license",
+    "license": "MIT",
+    "licenseIncluded": false,
+    "licenseText": "MIT License\n\nCopyright (c) 2026 Myles Resnick\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+    "permissionEvidenceUrl": "https://github.com/mresnick67/Gen1ReComp-Pokewalker/blob/main/LICENSE",
+    "containsRom": false,
+    "images": [],
+    "modId": "pokewalker",
+    "topic": "GAMEPLAY",
+    "manifestPath": "manifest.json"
+  },
+  {
+    "id": "custom-player-sprite-switcher",
+    "title": "Custom Player Sprite Switcher",
+    "creator": "on1san",
+    "version": "1.1",
+    "releaseDate": "2026-08-12",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "description": "Overworld real-time Player Sprite Switcher. Can also change Trainer Card / Back / Bike / Fishing Sprites. Shortcuts - PageUp PageDown. hide.lua can be used to hide specific sprites.",
+    "fileUrl": "https://github.com/on1san/Custom-Player-Sprite-Switcher/releases/download/1.1/CPSS.1.1.zip",
+    "fileName": "CPSS.1.1.zip",
+    "fileSize": "38.2 KB",
+    "fileSizeBytes": 39068,
+    "sha256": "0b9abdcf2effff1cbcc5389b1f07ae4df9acbf435784aec04dee2d7624785802",
+    "homepageUrl": "https://github.com/on1san/Custom-Player-Sprite-Switcher",
+    "permission": "open-license",
+    "license": "MIT",
+    "licenseIncluded": true,
+    "permissionEvidenceUrl": "https://github.com/on1san/Custom-Player-Sprite-Switcher/blob/main/LICENSE",
+    "containsRom": false,
+    "images": [],
+    "modId": "custom-player-sprite-switcher",
+    "topic": "ART",
+    "manifestPath": "manifest.json"
+  },
+  {
+    "id": "reikos-enhancements-mod",
+    "title": "Reiko's Enhancements",
+    "creator": "reikolul",
+    "version": "1.0.0",
+    "releaseDate": "2026-07-31",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "description": "Modern Pokemon features, ported back to Gen 1. Running shoes: hold B and the player runs, as in Gen 3, with the sprite keeping pace. EXP bar: a thin bar on the battle HUD fills in real time toward the next level, as in every game since Gen 2. Each feature has its own ON/OFF row in OPTIONS. Nothing here changes encounter rates, step counters or experience math.",
+    "fileUrl": "https://github.com/reikolul/Reikos-Enhancements-Mod/releases/download/v1.0.0/reikos-enhancements-v1.0.0.zip",
+    "fileName": "reikos-enhancements-v1.0.0.zip",
+    "fileSize": "7.5 KB",
+    "fileSizeBytes": 7686,
+    "sha256": "00137cbe71eb4670f03ae1697c74a2642e3c886d73df319582ba86e8bbb65607",
+    "homepageUrl": "https://github.com/reikolul/Reikos-Enhancements-Mod",
+    "permission": "open-license",
+    "license": "MIT",
+    "licenseIncluded": true,
+    "permissionEvidenceUrl": "https://github.com/reikolul/Reikos-Enhancements-Mod/blob/main/LICENSE",
+    "containsRom": false,
+    "images": [],
+    "modId": "reikos_enhancements",
+    "topic": "GAMEPLAY",
+    "manifestPath": "manifest.json"
+  },
+  {
+    "id": "pkmn-g1r-holdtoscrollui-mod",
+    "title": "G1R HoldToScrollUI Mod",
+    "creator": "wizzstar",
+    "version": "1.0.4",
+    "releaseDate": "2026-08-08",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "description": "Hold D-pad directions in menus to auto-repeat after a short delay (lists + Left/Right option rows). Same cadence for every direction; never repeats on the overworld.",
+    "fileUrl": "https://github.com/WizzStar/PKMN-G1R-HoldToScrollUI-Mod/releases/download/v1.0.4/wizzstar-hold-to-scroll-ui-1.0.4.zip",
+    "fileName": "wizzstar-hold-to-scroll-ui-1.0.4.zip",
+    "fileSize": "7.4 KB",
+    "fileSizeBytes": 7544,
+    "sha256": "daa42605f5b5c74b6f84496aab7eb57ef72400d6fa53140d97e4efb2d9e5b3a1",
+    "homepageUrl": "https://github.com/WizzStar/PKMN-G1R-HoldToScrollUI-Mod",
+    "permission": "open-license",
+    "license": "MIT",
+    "licenseIncluded": true,
+    "permissionEvidenceUrl": "https://github.com/WizzStar/PKMN-G1R-HoldToScrollUI-Mod/blob/main/LICENSE.wizz",
+    "containsRom": false,
+    "images": [],
+    "modId": "hold_to_scroll_ui",
+    "topic": "UI",
+    "manifestPath": "manifest.json"
+  },
+  {
+    "id": "pkmn-g1r-pokelog",
+    "title": "pokelog-mod",
+    "creator": "wizzstar",
+    "version": "0.0.8",
+    "releaseDate": "2026-08-08",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "description": "Prototype. Oak offers POKéLOG (two-line pages, then YES/NO). Oak talks normally after install. Journey stats after SAVE. T/ widens playtime display.",
+    "fileUrl": "https://github.com/WizzStar/PKMN-G1R-PokeLog/releases/download/v0.0.8/wizzstar-pokelog-mod-0.0.8.zip",
+    "fileName": "wizzstar-pokelog-mod-0.0.8.zip",
+    "fileSize": "22.4 KB",
+    "fileSizeBytes": 22977,
+    "sha256": "c488937e53c2e4f5707e7f7a2b995025ce1d9f4707b3e78b5378e776a00a607b",
+    "homepageUrl": "https://github.com/WizzStar/PKMN-G1R-PokeLog",
+    "permission": "open-license",
+    "license": "MIT",
+    "licenseIncluded": true,
+    "permissionEvidenceUrl": "https://github.com/WizzStar/PKMN-G1R-PokeLog/blob/main/LICENSE",
+    "containsRom": false,
+    "images": [],
+    "modId": "pokelog_mod",
+    "topic": "UI",
+    "manifestPath": "manifest.json"
+  },
+  {
+    "id": "move-learn-plus",
+    "title": "Move Learn Plus",
+    "creator": "zetto22",
+    "version": "1.1.1",
+    "releaseDate": "2026-08-05",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "description": "Move POWER/PP on the forget screen; TM POWER/ACC in mart BUY/SELL footers.",
+    "fileUrl": "https://github.com/Zetto22/move_learn_plus/releases/download/v1.1.1/move_learn_plus-1.1.1.zip",
+    "fileName": "move_learn_plus-1.1.1.zip",
+    "fileSize": "8.2 KB",
+    "fileSizeBytes": 8397,
+    "sha256": "d42354cb048b8da2a0623007c32c8f7969a0dae913b277af1c46625644b019eb",
+    "homepageUrl": "https://github.com/Zetto22/move_learn_plus",
+    "permission": "open-license",
+    "license": "MIT",
+    "licenseIncluded": true,
+    "permissionEvidenceUrl": "https://github.com/Zetto22/move_learn_plus/blob/main/LICENSE",
+    "containsRom": false,
+    "images": [],
+    "modId": "move_learn_plus",
+    "topic": "UI",
+    "manifestPath": "manifest.json"
+  },
+  {
+    "id": "sweet-share",
+    "title": "Sweet Share",
+    "creator": "zetto22",
+    "version": "1.2.0",
+    "releaseDate": "2026-08-20",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "both",
+      "games": []
+    },
+    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "description": "Party EXP share and/or level-cap filter on battle EXP awards (Gen 1 + Gen 2).",
+    "fileUrl": "https://github.com/Zetto22/sweet_share/releases/download/v1.2.0/sweet_share-1.2.0.zip",
+    "fileName": "sweet_share-1.2.0.zip",
+    "fileSize": "14.3 KB",
+    "fileSizeBytes": 14682,
+    "sha256": "e5c337642356fecb6b42545751ec03170dc9be811ca84781cbebf22a795fac7a",
+    "homepageUrl": "https://github.com/Zetto22/sweet_share",
+    "permission": "open-license",
+    "license": "MIT",
+    "licenseIncluded": true,
+    "permissionEvidenceUrl": "https://github.com/Zetto22/sweet_share/blob/main/LICENSE",
+    "containsRom": false,
+    "images": [],
+    "modId": "sweet_share",
+    "topic": "GAMEPLAY",
+    "manifestPath": "manifest.json"
+  },
+  {
+    "id": "gen1-recomp-hd-grass",
+    "title": "HD Grass + LGPE Wind Flowers",
+    "creator": "randyadr",
+    "version": "3.4.1",
+    "releaseDate": "2026-08-09",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "TODO tagline — one line, a whole sentence, no truncation",
+    "description": "Seamless upgrade of HD Grass V3: keeps the optimized custom 3D grass replacement and adds the LGPE 3D flower replacement with corrected textures and 60 Hz wind sway, in one composed renderer chain.",
+    "fileUrl": "https://github.com/randyadr/Gen1-Recomp-HD-Grass/releases/download/v3.4.1/DRAMATIC_SHAPE_GRASS_OBJ_REPLACER_V3-3.4.1.zip",
+    "fileName": "DRAMATIC_SHAPE_GRASS_OBJ_REPLACER_V3-3.4.1.zip",
+    "fileSize": "86.5 KB",
+    "fileSizeBytes": 88565,
+    "sha256": "e9826155f612b81e4941b9007fcf4231107f98b8bb86577c55daf60adb48ae63",
+    "homepageUrl": "https://github.com/randyadr/Gen1-Recomp-HD-Grass",
+    "permission": "open-license",
+    "license": "MIT",
+    "licenseIncluded": true,
+    "permissionEvidenceUrl": "https://github.com/randyadr/Gen1-Recomp-HD-Grass/blob/main/LICENSE",
+    "containsRom": false,
+    "images": [],
+    "modId": "DRAMATIC_SHAPE_GRASS_OBJ_REPLACER_V3",
+    "topic": "ART",
     "manifestPath": "manifest.json"
   }
 ]
