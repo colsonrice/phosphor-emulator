@@ -67,14 +67,22 @@ const verifiedProjects: VerifiedProject[] = releases.map((release) => ({
 const catalogProjects: CatalogProject[] = [...verifiedProjects, ...discoveryProjects];
 const romHackCount = catalogProjects.filter((project) => project.kind === "rom-hack").length;
 const modCount = catalogProjects.filter((project) => project.kind === "mod").length;
-const gen2Count = catalogProjects.filter((project) => project.kind === "mod" && project.compatibility.includes("gen2recomp")).length;
 
-const filters: Array<{ value: "all" | Category; label: string; short: string }> = [
+/// Built from what the catalog actually holds, so a tab that would filter to
+/// nothing is never drawn. The Gen 2 recomp tab outlived its engine: it was
+/// still offered after that engine was retired, and tapping it emptied a page
+/// of 266 mods for anyone looking for Gold or Silver, which is precisely the
+/// visitor most likely to tap it. Those mods are here; they run on gen1recomp.
+const allFilters: Array<{ value: "all" | Category; label: string; short: string }> = [
   { value: "all", label: "Everything", short: "All" },
   { value: "rom-hack", label: "ROM hacks", short: "Patches" },
   { value: "gen1recomp", label: "Gen 1 recomp", short: "Gen 1" },
   { value: "gen2recomp", label: "Gen 2 recomp", short: "Gen 2" },
 ];
+
+const filters = allFilters.filter((filter) =>
+  filter.value === "all"
+  || catalogProjects.some((project) => project.compatibility.includes(filter.value as Category)));
 
 const submissionTemplate = `# Phosphor Index submission
 
@@ -214,10 +222,18 @@ export function LibraryApp() {
               />
               <button type="submit">Search</button>
             </form>
+            {/* Counted, not typed. These read 15 / 30 / 07 for months while
+                the panel beside them said 266, because they were written once
+                and the catalog grows on a push. The third was "Made for Gen 2",
+                which counted gen2recomp compatibility and has been 0 since that
+                engine was retired -- Gold and Silver run on gen1recomp now, so
+                the number said "no Gen 2 support" about a catalog full of it.
+                Direct downloads is a real number and the one a visitor is
+                actually deciding on. */}
             <div className="hero-notes" aria-label="Archive principles">
-              <span><b>15</b> ROM hacks</span>
-              <span><b>30</b> Recomp mods</span>
-              <span><b>07</b> Made for Gen 2</span>
+              <span><b>{String(romHackCount).padStart(2, "0")}</b> ROM hacks</span>
+              <span><b>{String(modCount).padStart(2, "0")}</b> Recomp mods</span>
+              <span><b>{String(releases.length).padStart(2, "0")}</b> Direct downloads</span>
             </div>
           </div>
 
@@ -261,7 +277,6 @@ export function LibraryApp() {
           <div className="catalog-counts" aria-label="Catalog totals">
             <div><span>ROM HACKS</span><strong>{String(romHackCount).padStart(2, "0")}</strong><small>projects to explore</small></div>
             <div><span>RECOMP MODS</span><strong>{String(modCount).padStart(2, "0")}</strong><small>across Gen 1 + Gen 2</small></div>
-            <div className="count-gen2"><span>GEN 2</span><strong>{String(gen2Count).padStart(2, "0")}</strong><small>compatible mods</small></div>
             <div className="count-cleared"><span>DOWNLOADS</span><strong>{String(releases.length).padStart(2, "0")}</strong><small>checked and ready</small></div>
           </div>
 
