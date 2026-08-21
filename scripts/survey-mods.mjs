@@ -63,7 +63,7 @@ const MAX_TOTAL_UNCOMPRESSED = 512 * 1024 * 1024;
 const ROM_EXTENSIONS = [".gb", ".gbc", ".gba", ".sgb"];
 
 const CACHE = new URL("../survey/cache/", import.meta.url);
-const REPORT = new URL("../survey/report.json", import.meta.url);
+// REPORT is defined below, after the flags are parsed.
 
 const args = process.argv.slice(2);
 const flag = (name) => args.includes(name);
@@ -73,6 +73,16 @@ const value = (name) => {
 };
 const OFFLINE = flag("--offline");
 const LIMIT = Number(value("--limit")) || Infinity;
+/// A newline-separated list of `owner/repo` to survey instead of discovering
+/// them. The two built-in sources are the official index and a GitHub search
+/// sweep, and there are places mods are announced that neither can see — the
+/// BOI'S CLUB GAMES #pkmn-mods forum most of all. This lets that list be fed
+/// in directly rather than waiting for a repo to become findable.
+const REPO_LIST = value("--repos");
+/// Where to write the report. A run over a hand-fed list is not the standing
+/// survey and must not overwrite it.
+const REPORT_PATH = value("--report");
+const REPORT = new URL(REPORT_PATH ?? "../survey/report.json", import.meta.url);
 
 async function gh(path, jq) {
   const argv = ["api", "-X", "GET", path];
@@ -93,6 +103,14 @@ async function ghJSON(path, jq) {
 /// Every repository worth asking about, from both directions.
 async function gatherRepos() {
   const repos = new Map();
+
+  if (REPO_LIST) {
+    const listed = (await readFile(REPO_LIST, "utf8"))
+      .split("\n").map((l) => l.trim()).filter((l) => l && !l.startsWith("#"));
+    for (const name of listed) repos.set(name.replace(/\/+$/, ""), { indexed: null });
+    console.log(`  from ${REPO_LIST}: ${repos.size} repositories (discovery skipped)`);
+    return repos;
+  }
 
   const feed = await fetch(INDEX_FEED).then((r) => r.json());
   for (const mod of feed.mods ?? []) {
