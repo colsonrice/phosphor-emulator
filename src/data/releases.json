@@ -89,12 +89,11 @@
     "creator": "Mister Miracle",
     "version": "0.1.27",
     "releaseDate": "2026-08-13",
-    "category": "gen2recomp",
+    "category": "gen1recomp",
     "compatibility": [
-      "gen1recomp",
-      "gen2recomp"
+      "gen1recomp"
     ],
-    "target": "Gen1Recomp + Gen2Recomp",
+    "target": "Gen1Recomp",
     "summary": "Adds per-ball colors to battle tosses and the Pokémon Center healing machine in Red, Blue, Yellow, and Gold.",
     "fileUrl": "https://github.com/mistermiracle3036/Pokeball-Colors/releases/download/v0.1.27/pokeball_colors-0.1.27.zip",
     "fileName": "pokeball_colors-0.1.27.zip",
@@ -111,62 +110,6 @@
     "fileSizeBytes": 33407,
     "topic": "ART",
     "manifestPath": "manifest.json"
-  },
-  {
-    "id": "indigo-plateau-conference",
-    "title": "Indigo Plateau Conference",
-    "creator": "Mister Miracle",
-    "version": "1.0.2",
-    "releaseDate": "2026-08-14",
-    "category": "gen2recomp",
-    "compatibility": [
-      "gen2recomp"
-    ],
-    "target": "Gen2Recomp · Gold",
-    "summary": "Turns five Pokémon Center battle rooms into a repeatable four-round tournament circuit with 39 challengers.",
-    "fileUrl": "https://github.com/mistermiracle3036/Indigo-Plateau-Conference/releases/download/v1.0.2/indigo_conference-1.0.2.zip",
-    "fileName": "indigo_conference-1.0.2.zip",
-    "fileSize": "55.0 KB",
-    "sha256": "bd8379400db57418c84dad72bf7e03df49fb203e0782f6a238e6b56ab2af288a",
-    "homepageUrl": "https://github.com/mistermiracle3036/Indigo-Plateau-Conference",
-    "permission": "open-license",
-    "license": "MIT",
-    "licenseIncluded": true,
-    "permissionEvidenceUrl": "https://github.com/mistermiracle3036/Indigo-Plateau-Conference/blob/main/LICENSE",
-    "containsRom": false,
-    "images": [],
-    "modId": "indigo_conference",
-    "fileSizeBytes": 56357,
-    "topic": "CONTENT",
-    "manifestPath": "manifest.json"
-  },
-  {
-    "id": "gen1recomp-plus-randomizer-nuzlocke",
-    "title": "Randomizer Nuzlocke",
-    "creator": "Sqtls",
-    "version": "0.28.1",
-    "releaseDate": "2026-08-15",
-    "category": "gen2recomp",
-    "compatibility": [
-      "gen2recomp"
-    ],
-    "target": "Gen2Recomp · Gold",
-    "summary": "An all-in-one Gold randomizer with strictly enforced Nuzlocke encounters, level caps, permadeath, and run-ending wipes.",
-    "fileUrl": "https://github.com/Sqtls/gen1recomp-plus-randomizer-nuzlocke/releases/download/v0.28.1/gen1recomp-plus-randomizer-nuzlocke-0.28.1.zip",
-    "fileName": "gen1recomp-plus-randomizer-nuzlocke-0.28.1.zip",
-    "fileSize": "113.6 KB",
-    "sha256": "ab6d7907e710c54ee4816ca390cbeab742cb796fb37185c67fe0cfc3b2c28fef",
-    "homepageUrl": "https://github.com/Sqtls/gen1recomp-plus-randomizer-nuzlocke",
-    "permission": "open-license",
-    "license": "MIT",
-    "licenseIncluded": true,
-    "permissionEvidenceUrl": "https://github.com/Sqtls/gen1recomp-plus-randomizer-nuzlocke/blob/main/LICENSE",
-    "containsRom": false,
-    "images": [],
-    "modId": "gen1recomp_plus_randomizer_nuzlocke",
-    "fileSizeBytes": 116341,
-    "topic": "GAMEPLAY",
-    "manifestPath": "gen1recomp-plus-randomizer-nuzlocke-0.28.1/manifest.json"
   },
   {
     "id": "pokemon-red-ptbr",
@@ -476,34 +419,6 @@
     "images": [],
     "modId": "dex_radar",
     "topic": "UI",
-    "manifestPath": "manifest.json"
-  },
-  {
-    "id": "gen2-online",
-    "title": "Gen2Recomp Online",
-    "creator": "UNDERdecodedHD",
-    "version": "0.6.5",
-    "releaseDate": "2026-08-12",
-    "category": "gen2recomp",
-    "compatibility": [
-      "gen2recomp"
-    ],
-    "target": "Gen2Recomped",
-    "summary": "Explores online connectivity for the Gen2Recomped runtime.",
-    "fileUrl": "https://github.com/UNDERdecoded/Gen2Recomp---Online/releases/download/Beta0.6.5Hotfix/gen2recomped-online.zip",
-    "fileName": "gen2recomped-online.zip",
-    "fileSize": "226.1 KB",
-    "fileSizeBytes": 231573,
-    "sha256": "d89c0bd1379a60e910d2cc5eb243f9ed0663998386d3fd82c086a5e7d6a75cde",
-    "homepageUrl": "https://github.com/UNDERdecoded/Gen2Recomp---Online",
-    "permission": "open-license",
-    "license": "MIT",
-    "licenseIncluded": true,
-    "permissionEvidenceUrl": "https://github.com/UNDERdecoded/Gen2Recomp---Online/blob/main/LICENSE",
-    "containsRom": false,
-    "images": [],
-    "modId": "gen2online",
-    "topic": "GAMEPLAY",
     "manifestPath": "manifest.json"
   },
   {
@@ -897,10 +812,9 @@
     "releaseDate": "2026-08-12",
     "category": "gen1recomp",
     "compatibility": [
-      "gen1recomp",
-      "gen2recomp"
+      "gen1recomp"
     ],
-    "target": "Gen1Recomp and Gen2Recomped",
+    "target": "Gen1Recomp",
     "summary": "Storage as a Ruby and Sapphire style grid you can search, sort and mark.",
     "fileUrl": "https://github.com/MadeinTaly/gen1recomp-gen3-boxes/releases/download/v1.8.0/gen3_box-1.8.0.zip",
     "fileName": "gen3_box-1.8.0.zip",
@@ -927,10 +841,9 @@
     "releaseDate": "2026-08-12",
     "category": "gen1recomp",
     "compatibility": [
-      "gen1recomp",
-      "gen2recomp"
+      "gen1recomp"
     ],
-    "target": "Gen1Recomp and Gen2Recomped",
+    "target": "Gen1Recomp",
     "summary": "The Pokedex as a grid of pictures, every owned species in its own colours.",
     "fileUrl": "https://github.com/MadeinTaly/gen1recomp-gen3-dex/releases/download/v0.5.0/gen3_dex-0.5.0.zip",
     "fileName": "gen3_dex-0.5.0.zip",
@@ -957,10 +870,9 @@
     "releaseDate": "2026-08-12",
     "category": "gen1recomp",
     "compatibility": [
-      "gen1recomp",
-      "gen2recomp"
+      "gen1recomp"
     ],
-    "target": "Gen1Recomp and Gen2Recomped",
+    "target": "Gen1Recomp",
     "summary": "Thirty more colour schemes and eight text box borders, previewed on the running game.",
     "fileUrl": "https://github.com/MadeinTaly/gen1recomp-groovy-palette-frames/releases/download/v0.7.0/groovy_palette-0.7.0.zip",
     "fileName": "groovy_palette-0.7.0.zip",
@@ -1016,10 +928,9 @@
     "releaseDate": "2026-08-17",
     "category": "gen1recomp",
     "compatibility": [
-      "gen1recomp",
-      "gen2recomp"
+      "gen1recomp"
     ],
-    "target": "Gen1Recomp and Gen2Recomped",
+    "target": "Gen1Recomp",
     "summary": "A companion panel for your party, map and bag, built for a second screen.",
     "fileUrl": "https://github.com/AverageConsumer/kanto-gear/releases/download/v2.2.0/kanto_gear-2.2.0.zip",
     "fileName": "kanto_gear-2.2.0.zip",
@@ -1126,35 +1037,6 @@
     "topic": "UI",
     "description": "Modern rounded dialogue boxes with a soft shadow, optional translucency, size presets, and a speaker-name header. Restyles menus too.",
     "licenseText": "MIT License\n\nCopyright (c) 2026 Eduardo Calafell (eduardocalafell)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
-    "manifestPath": "manifest.json"
-  },
-  {
-    "id": "gen1recomp-modern-johto",
-    "title": "Modern Johto",
-    "creator": "MadeinTaly",
-    "version": "0.2.0",
-    "releaseDate": "2026-08-12",
-    "category": "gen2recomp",
-    "compatibility": [
-      "gen2recomp"
-    ],
-    "target": "Gen2Recomped",
-    "summary": "Gold gets the Gen 4 physical and special split, decided move by move.",
-    "fileUrl": "https://github.com/MadeinTaly/gen1recomp-modern-johto/releases/download/v0.2.0/modern_johto-0.2.0.zip",
-    "fileName": "modern_johto-0.2.0.zip",
-    "fileSize": "16.8 KB",
-    "sha256": "1db28278956ce7200ba39075343f08c3d8009b6cbd77da7d5004b46156558731",
-    "homepageUrl": "https://github.com/MadeinTaly/gen1recomp-modern-johto",
-    "permission": "open-license",
-    "license": "MIT",
-    "licenseIncluded": true,
-    "permissionEvidenceUrl": "https://github.com/MadeinTaly/gen1recomp-modern-johto/blob/main/LICENSE",
-    "containsRom": false,
-    "images": [],
-    "modId": "modern_johto",
-    "fileSizeBytes": 17153,
-    "topic": "GAMEPLAY",
-    "description": "The Gen 4 physical/special split for Pokemon Gold, decided per move instead of per type -- so Crunch comes off Attack, Shadow Ball off Special Attack, and Gyarados finally throws Hydro Pump off the stat it was never meant to use. Gold already splits Special into two stats, which is what makes the per-move category the real Gen 4 change here rather than the half-measure it is on a game with one Special. Now also an AI toggle: a trainer class that never carries the TYPES bit reads type effectiveness anyway, through a second ai_classes layer that steps aside for any class Gold already made type-aware. Both toggles off by default, because both change the balance. The Gen 2 counterpart of Modern Kanto, which stays where it is: five of that mod's six pieces have nothing to fix on Gold.",
     "manifestPath": "manifest.json"
   },
   {
@@ -1281,10 +1163,9 @@
     "releaseDate": "2026-08-14",
     "category": "gen1recomp",
     "compatibility": [
-      "gen1recomp",
-      "gen2recomp"
+      "gen1recomp"
     ],
-    "target": "Gen1Recomp and Gen2Recomped",
+    "target": "Gen1Recomp",
     "summary": "Steal a Pokemon out of a trainer battle, then fence it on Kanto's black market.",
     "fileUrl": "https://github.com/mistermiracle3036/Pokemon-Snag/releases/download/v0.15.9/snag_quest-0.15.9.zip",
     "fileName": "snag_quest-0.15.9.zip",
@@ -1311,10 +1192,9 @@
     "releaseDate": "2026-08-13",
     "category": "gen1recomp",
     "compatibility": [
-      "gen1recomp",
-      "gen2recomp"
+      "gen1recomp"
     ],
-    "target": "Gen1Recomp and Gen2Recomped",
+    "target": "Gen1Recomp",
     "summary": "A journal for side quests and the NPC trades you have taken on.",
     "fileUrl": "https://github.com/TanukiTooks/Quest-Menu/releases/download/v1.1.0/QuestMenu-1.1.0.zip",
     "fileName": "QuestMenu-1.1.0.zip",
@@ -1371,10 +1251,9 @@
     "releaseDate": "2026-08-13",
     "category": "gen1recomp",
     "compatibility": [
-      "gen1recomp",
-      "gen2recomp"
+      "gen1recomp"
     ],
-    "target": "Gen1Recomp and Gen2Recomped",
+    "target": "Gen1Recomp",
     "summary": "Hold B to move faster, at a speed you choose, with a trail off your heels.",
     "fileUrl": "https://github.com/MadeinTaly/gen1recomp-running-shoes/releases/download/v1.7.0/running_shoes-1.7.0.zip",
     "fileName": "running_shoes-1.7.0.zip",
@@ -1634,10 +1513,9 @@
     "releaseDate": "2026-08-17",
     "category": "gen1recomp",
     "compatibility": [
-      "gen1recomp",
-      "gen2recomp"
+      "gen1recomp"
     ],
-    "target": "Gen1Recomp and Gen2Recomped",
+    "target": "Gen1Recomp",
     "summary": "A moving battle camera in the style of Stadium, for the 3D battle views.",
     "fileUrl": "https://github.com/EnterPlayerOne/Battle-Cinematics-Stadium-Camera/releases/download/V1.0.7/Battle_Cinematics-v1.0.7.zip",
     "fileName": "Battle_Cinematics-v1.0.7.zip",
@@ -1840,10 +1718,9 @@
     "releaseDate": "2026-08-17",
     "category": "gen1recomp",
     "compatibility": [
-      "gen1recomp",
-      "gen2recomp"
+      "gen1recomp"
     ],
-    "target": "Gen1Recomp and Gen2Recomped",
+    "target": "Gen1Recomp",
     "summary": "Hand Pikachu a Moon Stone and see what the rumours were about.",
     "fileUrl": "https://github.com/dburton95/its-clefairy/releases/download/1.0.0/its-clefairy-1.0.0.zip",
     "fileName": "its-clefairy-1.0.0.zip",

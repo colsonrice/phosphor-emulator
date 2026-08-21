@@ -42,24 +42,52 @@ test("any indexed entry offers a link and never a download", async () => {
   }
 });
 
-test("a mod supporting both engines is offered once per engine", async () => {
+test("the fan-out is dormant while one engine ships, and ids carry no suffix", async () => {
   const { entries } = await buildManifest();
+  // `pokeball-colors` was the fan-out's live example: one release, two
+  // listings, `id@engineId` apiece. With Gen2Recomped gone there is one engine
+  // to install into, so it is one entry again and the id is bare.
+  //
+  // The bare id is the part worth pinning. The app's install ledger is keyed on
+  // the catalog id, so the suffix coming off is a key change for every player
+  // who installed one of the ten dual-engine mods. It is self-healing —
+  // `DiscoverModel.modsAlreadyOnDisk` adopts an entry with no ledger row when a
+  // mod with its `modID` is on disk — but only while the id stays put after
+  // this. Reintroducing a suffix would break it a second time with no adoption
+  // to catch it, because the old row would already be adopted under the new id.
   const fanned = entries.filter((entry) => entry.id.startsWith("pokeball-colors"));
-  assert.deepEqual(
-    fanned.map((entry) => entry.engine.id).sort(),
-    ["gen1recomp", "gen2recomped"],
+  assert.deepEqual(fanned.map((entry) => entry.id), ["pokeball-colors"]);
+  assert.equal(fanned[0].engine.id, "gen1recomp");
+
+  assert.ok(
+    !entries.some((entry) => entry.id.includes("@")),
+    "no entry should carry an @engine suffix while only one engine ships",
   );
-  // Same archive, two listings: the app installs into one engine at a time.
-  assert.equal(new Set(fanned.map((entry) => entry.download.sha256)).size, 1);
 });
 
-test("the second engine keeps the id the app expects", async () => {
+test("no retired engine reaches the manifest", async () => {
   const { entries } = await buildManifest();
-  const engines = new Set(entries.filter((e) => e.engine).map((e) => e.engine.id));
-  // The site calls it gen2recomp; the app calls it gen2recomped. A mismatch
-  // here produces mods that no installed engine ever claims.
-  assert.ok(engines.has("gen2recomped"));
-  assert.ok(!engines.has("gen2recomp"));
+  // An indexed listing carries `engine.family` but no `engine.id` — there is
+  // nothing to install it into — so the two are counted separately. Folding
+  // them together yields an `undefined` that hides whatever it is standing in
+  // for.
+  const engines = new Set(entries.map((e) => e.engine?.id).filter(Boolean));
+  const families = new Set(entries.map((e) => e.engine?.family).filter(Boolean));
+
+  // Gen2Recomped came out of Phosphor in 3.8 over its licence. Until 20 Aug
+  // 2026 this test asserted the opposite — that the app's spelling for it was
+  // present — because the risk then was the site saying `gen2recomp` and the
+  // app saying `gen2recomped`, which produced listings no installed engine
+  // claimed. The risk is the same shape now and the answer is stricter: there
+  // is no installed engine to claim them at all, under either spelling.
+  assert.ok(!engines.has("gen2recomped"), "the app has no Gen2Recomped engine to install into");
+  assert.ok(!engines.has("gen2recomp"), "and the site spelling must never reach the app either");
+  assert.deepEqual([...engines].sort(), ["gen1recomp"]);
+
+  // "both" is a family, not an engine, and it is unreachable while one engine
+  // ships: a row naming both channels is now refused outright. A link-out
+  // filed under it would be offered by a Gen 2 filter that matches nothing.
+  assert.deepEqual([...families].sort(), ["gen1recomp"]);
 });
 
 test("every entry lands in a declared section and category", async () => {
