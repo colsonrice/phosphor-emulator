@@ -1818,5 +1818,1278 @@
     "homepageUrl": "https://github.com/oldtriplesix/DVColors-2.1.0-PKMN-Gen1-ReComp-",
     "releasesUrl": "https://github.com/oldtriplesix/DVColors-2.1.0-PKMN-Gen1-ReComp-/releases",
     "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "kanto-reforged",
+    "title": "Kanto Reforged",
+    "creator": "1jamie",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "both",
+      "games": []
+    },
+    "summary": "Gen 2–3 for Red/Blue on gen1recomp. Same Kanto story, more Pokémon, abilities, held items, a berry farm, DexNav, and Qo, all built to feel like Gen 1 did it.",
+    "homepageUrl": "https://github.com/1Jamie/Kanto-Reforged",
+    "releasesUrl": "https://github.com/1Jamie/Kanto-Reforged/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen1recomp-better-battles",
+    "title": "Better Battles",
+    "creator": "arsdaemonia-design",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Mejora de batallas para el port Gen1Recomp de Pokemon",
+    "homepageUrl": "https://github.com/arsdaemonia-design/Gen1Recomp-better-battles",
+    "releasesUrl": "https://github.com/arsdaemonia-design/Gen1Recomp-better-battles/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "anime-realism",
+    "title": "Anime Realism",
+    "creator": "businessmachines02",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "make battles feel more like the anime",
+    "homepageUrl": "https://github.com/businessmachines02/anime-realism",
+    "releasesUrl": "https://github.com/businessmachines02/anime-realism/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "what-the-heck",
+    "title": "what-the-heck",
+    "creator": "castdrian",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Forty-language back-translation for Pokémon Red, Blue, Yellow, and Gold",
+    "homepageUrl": "https://github.com/castdrian/what-the-heck",
+    "releasesUrl": "https://github.com/castdrian/what-the-heck/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "pallet-chaos",
+    "title": "Pallet Chaos",
+    "creator": "cleverleviathan",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "New addition to pallet town for Gen1 Recomp",
+    "homepageUrl": "https://github.com/cleverleviathan/Pallet-Chaos",
+    "releasesUrl": "https://github.com/cleverleviathan/Pallet-Chaos/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen1recomp-autosave",
+    "title": "Auto Save",
+    "creator": "czajo",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "A mod for Gen1Recomp that adds automatic saving at a user-defined time interval.  The game will automatically save only when no player action is being performed, preventing saves from interrupting gameplay. The save interval can be configured by the user to suit their preferences.",
+    "homepageUrl": "https://github.com/Czajo/gen1recomp-autosave",
+    "releasesUrl": "https://github.com/Czajo/gen1recomp-autosave/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen-2-save-screen-gen1recomp",
+    "title": "Gen 2 Save Screen",
+    "creator": "danikh1",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Replaces the plain SAVE confirmation text with a Gold/Silver-style stat panel (player, badges, Pokedex, time played) drawn in its own box above the Yes/No prompt.",
+    "homepageUrl": "https://github.com/DaniKH1/Gen-2-Save-Screen-Gen1Recomp",
+    "releasesUrl": "https://github.com/DaniKH1/Gen-2-Save-Screen-Gen1Recomp/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen1recomp-dex-pages",
+    "title": "Dex Pages",
+    "creator": "ddagent",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Extra POKeDEX pages for gen1recomp: type matchups, catch odds, locations, level moves, TM/HM and evolution. The vanilla entry page is untouched.",
+    "homepageUrl": "https://github.com/ddagent/gen1recomp-dex-pages",
+    "releasesUrl": "https://github.com/ddagent/gen1recomp-dex-pages/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen1recomp-quick-save",
+    "title": "Quick Save",
+    "creator": "ddagent",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Save from the field with one button instead of the START menu, for gen1recomp.",
+    "homepageUrl": "https://github.com/ddagent/gen1recomp-quick-save",
+    "releasesUrl": "https://github.com/ddagent/gen1recomp-quick-save/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "rbyrecomp-instant-load",
+    "title": "Instant Load",
+    "creator": "dumkaf",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "both",
+      "games": []
+    },
+    "summary": "Insta-loads the last saved file, bypassing the startup, credits, and main menu for the Pokemon Recomp project",
+    "homepageUrl": "https://github.com/dumkaf/rbyrecomp-instant-load",
+    "releasesUrl": "https://github.com/dumkaf/rbyrecomp-instant-load/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen1-recomp-mods",
+    "title": "Dynamic Scaling",
+    "creator": "FelizNavidad-D",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "both",
+      "games": []
+    },
+    "summary": "Where I upload mods.",
+    "homepageUrl": "https://github.com/FelizNavidad-D/Gen1-Recomp-Mods",
+    "releasesUrl": "https://github.com/FelizNavidad-D/Gen1-Recomp-Mods/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "pokesurvive",
+    "title": "PokeSurvive Gold",
+    "creator": "gawdmode",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "A survival roguelike mod for Pokémon Red featuring randomized runs, permadeath, Pokémon personalities, survival mechanics, Adventure Events, camping, and more.",
+    "homepageUrl": "https://github.com/GawdMode/PokeSurvive",
+    "releasesUrl": "https://github.com/GawdMode/PokeSurvive/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "colosseum-inspired-ui-overhaul-v-1-0-0",
+    "title": "Colosseum Inspired UI Overhaul",
+    "creator": "Community",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "both",
+      "games": []
+    },
+    "summary": "Colosseum Inspired UI Overhaul for Gen1Recomp V.1.0.0",
+    "homepageUrl": "https://github.com/HighDrexler/Colosseum-Inspired-UI-Overhaul-V.1.0.0",
+    "releasesUrl": "https://github.com/HighDrexler/Colosseum-Inspired-UI-Overhaul-V.1.0.0/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen-3-inspired-ui-overhaul-for-gen1recomp-v2-0",
+    "title": "Gen 3 Inspired UI Overhaul",
+    "creator": "HighDrexler",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "both",
+      "games": []
+    },
+    "summary": "Gen 3 inspired UI overhaul for Gen1Recomp, version 2.0.0. Download .zip and install into gen1recomp launcher.",
+    "homepageUrl": "https://github.com/HighDrexler/Gen-3-inspired-UI-overhaul-for-Gen1Recomp-V2.0",
+    "releasesUrl": "https://github.com/HighDrexler/Gen-3-inspired-UI-overhaul-for-Gen1Recomp-V2.0/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen1recomp-phase-step",
+    "title": "Phase Step",
+    "creator": "hubgit8",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "A Gen1Recomp mod that moves the player two spaces forward through blocked objects and doors.",
+    "homepageUrl": "https://github.com/HubGit8/Gen1Recomp-Phase-Step",
+    "releasesUrl": "https://github.com/HubGit8/Gen1Recomp-Phase-Step/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen1recomp-portuguese-ui",
+    "title": "Interface em PT-BR (Launcher)",
+    "creator": "hydhyro",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Tradução da interface do Laucher do gen1recomp",
+    "homepageUrl": "https://github.com/hydhyro/gen1recomp_portuguese_ui",
+    "releasesUrl": "https://github.com/hydhyro/gen1recomp_portuguese_ui/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen1recompspaceworldsprites",
+    "title": "Spaceworld's Sprites",
+    "creator": "hydhyro",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "SpaceWorldSprites",
+    "homepageUrl": "https://github.com/hydhyro/gen1recompSpaceWorldSprites",
+    "releasesUrl": "https://github.com/hydhyro/gen1recompSpaceWorldSprites/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "item-randomizer",
+    "title": "Item Randomizer",
+    "creator": "inmento",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "both",
+      "games": []
+    },
+    "summary": "Safe Gen 1 Recomp item randomizer with progression-weighted loot and protected New Game PC rerolls.",
+    "homepageUrl": "https://github.com/inmento/Item-Randomizer",
+    "releasesUrl": "https://github.com/inmento/Item-Randomizer/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "starter-picker",
+    "title": "Starter Picker",
+    "creator": "inmento",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "both",
+      "games": []
+    },
+    "summary": "Gen 1 Recomp starter-ball picker with live post-load editing and Gen 1 Randomizer interoperability.",
+    "homepageUrl": "https://github.com/inmento/Starter-Picker",
+    "releasesUrl": "https://github.com/inmento/Starter-Picker/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "fair-battles",
+    "title": "Fair Battles",
+    "creator": "jrmsrs",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "both",
+      "games": []
+    },
+    "summary": "Gen1Recomp mod: automatically limits your usable party size to match the number of Pokémon your opponent has.",
+    "homepageUrl": "https://github.com/jrmsrs/fair-battles",
+    "releasesUrl": "https://github.com/jrmsrs/fair-battles/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "kanto-life-mod",
+    "title": "Kanto Life",
+    "creator": "jtfresh90",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "NPCs Immersion Changes",
+    "homepageUrl": "https://github.com/jtfresh90/Kanto-Life-Mod",
+    "releasesUrl": "https://github.com/jtfresh90/Kanto-Life-Mod/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "betterback",
+    "title": "Better Player Backsprite",
+    "creator": "kamon137",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Better default trainer backsprite for gen1recomp",
+    "homepageUrl": "https://github.com/Kamon137/betterback",
+    "releasesUrl": "https://github.com/Kamon137/betterback/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "pocketmonsterspc",
+    "title": "Pocket Monsters PC",
+    "creator": "lakelssky",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Improve core elements without ruining a fresh impression of Gen 1",
+    "homepageUrl": "https://github.com/lakelssky/PocketMonstersPC",
+    "releasesUrl": "https://github.com/lakelssky/PocketMonstersPC/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "stadium-cries",
+    "title": "Dynamic_Cries",
+    "creator": "lockerz102",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "both",
+      "games": []
+    },
+    "summary": "By JappaWakka from Pokemon3D",
+    "homepageUrl": "https://github.com/Lockerz102/Stadium-Cries",
+    "releasesUrl": "https://github.com/Lockerz102/Stadium-Cries/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "versaodourada",
+    "title": "Versao Dourada",
+    "creator": "lordsangreal",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Pokemon Gold em portugues brasileiro para o gen1recomp",
+    "homepageUrl": "https://github.com/LordSangreal/versaodourada",
+    "releasesUrl": "https://github.com/LordSangreal/versaodourada/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "itemfinder-plus",
+    "title": "ItFindrPlus",
+    "creator": "magalvao",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "A gen1recomp mod that improves one of the most useless Gen 1 item",
+    "homepageUrl": "https://github.com/magalvao/itemfinder-plus",
+    "releasesUrl": "https://github.com/magalvao/itemfinder-plus/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "fast-pokemon-center",
+    "title": "Fast Pokemon Center",
+    "creator": "mjdenucci",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Gen1Recomp mod: skip all Pokemon Center nurse dialogue - talk to the nurse and go straight into the healing-machine animation, no text.",
+    "homepageUrl": "https://github.com/mjdenucci/fast-pokemon-center",
+    "releasesUrl": "https://github.com/mjdenucci/fast-pokemon-center/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "the-world",
+    "title": "The World",
+    "creator": "mrkrissatan",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "An all in mod for gen1recomp",
+    "homepageUrl": "https://github.com/MrKrisSatan/The_World",
+    "releasesUrl": "https://github.com/MrKrisSatan/The_World/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "weather-fx",
+    "title": "Weather FX",
+    "creator": "mrkrissatan",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "both",
+      "games": []
+    },
+    "summary": "Weather fx in Pokémon recomp",
+    "homepageUrl": "https://github.com/MrKrisSatan/Weather-fx",
+    "releasesUrl": "https://github.com/MrKrisSatan/Weather-fx/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen-1-3d-npc-s",
+    "title": "Gen1 TRUE 3D Characters",
+    "creator": "randyadr",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Gen 1 3D NPC's",
+    "homepageUrl": "https://github.com/randyadr/Gen-1-3D-NPC-s",
+    "releasesUrl": "https://github.com/randyadr/Gen-1-3D-NPC-s/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen2-cheat-menu",
+    "title": "Gen2 Gold Cheat Menu",
+    "creator": "randyadr",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Gen2 Cheat Menu",
+    "homepageUrl": "https://github.com/randyadr/Gen2-Cheat-Menu",
+    "releasesUrl": "https://github.com/randyadr/Gen2-Cheat-Menu/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "stadium-model-viewer-for-pokedex",
+    "title": "Pokemon Stadium UI Model Viewer",
+    "creator": "randyadr",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "3D Model Viewer for Pokedex",
+    "homepageUrl": "https://github.com/randyadr/Stadium-Model-Viewer-for-Pokedex",
+    "releasesUrl": "https://github.com/randyadr/Stadium-Model-Viewer-for-Pokedex/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "kanto-ascendant",
+    "title": "Kanto Ascendant",
+    "creator": "roxas2712",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "A living Pokémon Gen 1 post-game expansion with evolving rematches, Master and Crown circuits, legendary events, research reports and a reactive Kanto.",
+    "homepageUrl": "https://github.com/Roxas2712/kanto-ascendant",
+    "releasesUrl": "https://github.com/Roxas2712/kanto-ascendant/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "pokemon-quick-select",
+    "title": "Quick Select",
+    "creator": "roxas2712",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Gen II-style registered-item shortcuts for Pokémon Gen 1 Recomp",
+    "homepageUrl": "https://github.com/Roxas2712/pokemon-quick-select",
+    "releasesUrl": "https://github.com/Roxas2712/pokemon-quick-select/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "jp-anime-opening-title",
+    "title": "Mezase Pokemon Master (Title Screen)",
+    "creator": "sebarosu",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "ポケモンGETだぜ！",
+    "homepageUrl": "https://github.com/Sebarosu/JP-anime-opening-title",
+    "releasesUrl": "https://github.com/Sebarosu/JP-anime-opening-title/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "luigi-in-gen1-recomp",
+    "title": "Playable Luigi",
+    "creator": "sebarosu",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "I'm-a Luigi, mumber 1 Pokémon Master!",
+    "homepageUrl": "https://github.com/Sebarosu/Luigi-in-gen1-recomp",
+    "releasesUrl": "https://github.com/Sebarosu/Luigi-in-gen1-recomp/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "tabbed-options",
+    "title": "Tabbed Options",
+    "creator": "shanemcgovernie",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Tabbed OPTIONS menu: GAME / GFX / SND / MODS header tabs, mod-contributed settings sorted alphabetically. Gen 1 (Red/Blue/Yellow).",
+    "homepageUrl": "https://github.com/ShaneMcGovernIE/tabbed_options",
+    "releasesUrl": "https://github.com/ShaneMcGovernIE/tabbed_options/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "throw-ball-hotkey",
+    "title": "Throw Ball Hotkey",
+    "creator": "shanemcgovernie",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "In battle, press T on the main menu to instantly throw a POKé BALL. OPTIONS > THROW BALL picks the preferred ball; rebindable via Mods Hotkeys.",
+    "homepageUrl": "https://github.com/ShaneMcGovernIE/throw_ball_hotkey",
+    "releasesUrl": "https://github.com/ShaneMcGovernIE/throw_ball_hotkey/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen1recompdeltas",
+    "title": "Delta Pokemon",
+    "creator": "swuff-star",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "adds delta pkmn to gen1 recomp",
+    "homepageUrl": "https://github.com/swuff-star/Gen1RecompDeltas",
+    "releasesUrl": "https://github.com/swuff-star/Gen1RecompDeltas/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "kep-recomp-port",
+    "title": "Kanto Expansion Pak",
+    "creator": "swuff-star",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "unofficial port of KEP to gen1 recomp",
+    "homepageUrl": "https://github.com/swuff-star/KEP-Recomp-Port",
+    "releasesUrl": "https://github.com/swuff-star/KEP-Recomp-Port/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "dynamax-pokemon-league",
+    "title": "Dynamic Scaling: Final Dynamax (Standalone)",
+    "creator": "tectorifter",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "makes the final pokemon of gym leaders and elite four be dynamax",
+    "homepageUrl": "https://github.com/tectorifter/dynamax-pokemon-league",
+    "releasesUrl": "https://github.com/tectorifter/dynamax-pokemon-league/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gimmicks-menu",
+    "title": "Gimmick Menu Ring",
+    "creator": "tectorifter",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "A menu mod that adds gimmicks hooks to gen1comp",
+    "homepageUrl": "https://github.com/tectorifter/Gimmicks_Menu",
+    "releasesUrl": "https://github.com/tectorifter/Gimmicks_Menu/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen-2-radomizer-plus",
+    "title": "Gen 2 Randomizer+",
+    "creator": "therealcrosss",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Gen 2 Randomizer+ transforms Pokémon Gold with customizable random Pokémon, stats, moves, types, learnsets, starters, trainers, wild encounters, items, TMs, and enhanced trainer rematches. Mix and match features through a custom settings menu to create a unique experience every playthrough.",
+    "homepageUrl": "https://github.com/TheRealCrosss/Gen-2-Radomizer-Plus",
+    "releasesUrl": "https://github.com/TheRealCrosss/Gen-2-Radomizer-Plus/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen1recomp-effective-markers",
+    "title": "Effective Markers",
+    "creator": "thorkdev",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Draws a small icon in the FIGHT menu's TYPE/PP info panel for the currently selected move's effectiveness.",
+    "homepageUrl": "https://github.com/thorkdev/gen1recomp-effective-markers",
+    "releasesUrl": "https://github.com/thorkdev/gen1recomp-effective-markers/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen1recomp-happiness",
+    "title": "Happiness",
+    "creator": "thorkdev",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Every caught Pokémon — not just Pikachu — tracks a hidden 0-255 happiness value!",
+    "homepageUrl": "https://github.com/thorkdev/gen1recomp-happiness",
+    "releasesUrl": "https://github.com/thorkdev/gen1recomp-happiness/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen1recomp-mystery-gift",
+    "title": "Mystery Gift",
+    "creator": "thorkdev",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Adds a MYSTERY GIFT row to the START menu.",
+    "homepageUrl": "https://github.com/thorkdev/gen1recomp-mystery-gift",
+    "releasesUrl": "https://github.com/thorkdev/gen1recomp-mystery-gift/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen1-recomp-norwegian-translate",
+    "title": "Norsk Bokmaal",
+    "creator": "tooandorisu",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Norwegian translation for Gen1recompile",
+    "homepageUrl": "https://github.com/Tooandorisu/Gen1-Recomp-Norwegian-Translate",
+    "releasesUrl": "https://github.com/Tooandorisu/Gen1-Recomp-Norwegian-Translate/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "wild-dv-display",
+    "title": "Wild DV Display",
+    "creator": "tophiero",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Displays wild Pokémon DVs during battle in Gen1Recomp. Requires Dramatic Shape.",
+    "homepageUrl": "https://github.com/Tophiero/Wild-DV-Display",
+    "releasesUrl": "https://github.com/Tophiero/Wild-DV-Display/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "custom-video-intro",
+    "title": "Custom Video Intro",
+    "creator": "ty-mcdk",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Lets users replace the intro video on Gen1Recomp",
+    "homepageUrl": "https://github.com/ty-mcdk/custom-video-intro",
+    "releasesUrl": "https://github.com/ty-mcdk/custom-video-intro/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "easy-custom-music",
+    "title": "Easy Custom Music",
+    "creator": "ty-mcdk",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Allows User to drag & drop their own music to replace in-game music",
+    "homepageUrl": "https://github.com/ty-mcdk/easy-custom-music",
+    "releasesUrl": "https://github.com/ty-mcdk/easy-custom-music/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "classic-ironmon-kaizo",
+    "title": "IronMON Classic",
+    "creator": "weskestis",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "A harder challenge for Gen 1",
+    "homepageUrl": "https://github.com/weskestis/Classic-Ironmon-Kaizo",
+    "releasesUrl": "https://github.com/weskestis/Classic-Ironmon-Kaizo/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "kaizo-ultimate",
+    "title": "Kaizo Ultimate",
+    "creator": "weskestis",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Integrated KAIZO mods for Gen 1and 2 for gen1recomp, gen one is built from blue Kaizo, Gen 2 is built from crystal Kaizo",
+    "homepageUrl": "https://github.com/weskestis/Kaizo-Ultimate",
+    "releasesUrl": "https://github.com/weskestis/Kaizo-Ultimate/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "universalrandomizer",
+    "title": "Universal Randomizer",
+    "creator": "weskestis",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "both",
+      "games": []
+    },
+    "summary": "Universal Pokémon Randomizer for Gen1Recomp — Red, Blue, Yellow, Gold & Silver with Pokémon #001–493, Random Start, Gen 1–4 rulesets, abilities, natures, encounters, hints, and expanded graphics/audio.",
+    "homepageUrl": "https://github.com/weskestis/UniversalRandomizer",
+    "releasesUrl": "https://github.com/weskestis/UniversalRandomizer/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "windwrecker-mew-under-the-truck",
+    "title": "Mew Under the Truck",
+    "creator": "windwrecker",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "A Gen1Recomp mod that brings the classic playground rumour to life. Speak to the sailor at the Vermilion City harbour to access a hidden maintenance route leading to the truck. Interacting with the truck triggers a wild level 25 Mew encounter.",
+    "homepageUrl": "https://github.com/Windwrecker/Mew-Under-the-Truck",
+    "releasesUrl": "https://github.com/Windwrecker/Mew-Under-the-Truck/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "pkmn-g1r-immersive-bicycle-mod",
+    "title": "Immersive Bicycle Mod",
+    "creator": "wizzstar",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Your bicycle dream becomes reality.  And if you don’t need it anymore, just dump it somewhere.",
+    "homepageUrl": "https://github.com/WizzStar/PKMN-G1R-Immersive-Bicycle-Mod",
+    "releasesUrl": "https://github.com/WizzStar/PKMN-G1R-Immersive-Bicycle-Mod/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen1recomp-bag-pc-999",
+    "title": "Bag and PC 999 Item Slots",
+    "creator": "zeikar-ethereal",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Bag and PC hold 999 items.",
+    "homepageUrl": "https://github.com/Zeikar-Ethereal/gen1recomp_bag_pc_999",
+    "releasesUrl": "https://github.com/Zeikar-Ethereal/gen1recomp_bag_pc_999/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "can-always-escape",
+    "title": "Always Escape",
+    "creator": "zyrancz",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Can Always Escape Wild Pokémon in GEN1RECOMPILE",
+    "homepageUrl": "https://github.com/ZyranCZ/Can-Always-Escape",
+    "releasesUrl": "https://github.com/ZyranCZ/Can-Always-Escape/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "enemy-hp",
+    "title": "Enemy HP Readout",
+    "creator": "zyrancz",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "both",
+      "games": []
+    },
+    "summary": "Shows the enemies' HP on the same line as their level",
+    "homepageUrl": "https://github.com/ZyranCZ/Enemy-HP",
+    "releasesUrl": "https://github.com/ZyranCZ/Enemy-HP/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "help-story-guide",
+    "title": "HELP - Story Guide",
+    "creator": "zyrancz",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Gives START MENU the option to ask for HELP, what to do next in the game",
+    "homepageUrl": "https://github.com/ZyranCZ/HELP-Story-Guide",
+    "releasesUrl": "https://github.com/ZyranCZ/HELP-Story-Guide/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "press-b-to-escape-wild-encounters",
+    "title": "B to Escape Encounters",
+    "creator": "zyrancz",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "both",
+      "games": []
+    },
+    "summary": "Back in the day, I and my friends believed that holding B reduced wild encounter. This mod makes the urban legend real. Hold the B and the encounter rate can be either reduced or stopped entirely. You can also make the encounter reaction-based so that you can shake off the Pokemon by pressing B if you manage to press it fast enough.",
+    "homepageUrl": "https://github.com/ZyranCZ/Press-B-to-Escape-Wild-Encounters",
+    "releasesUrl": "https://github.com/ZyranCZ/Press-B-to-Escape-Wild-Encounters/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "professor-oak-dv-stat-evaluation",
+    "title": "Professor Oak's Pokemon Appraisal",
+    "creator": "zyrancz",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Let's you ask Professor Oak for DV/STAT Evaluation either directly in the PokePC or personally in Pallet Town.",
+    "homepageUrl": "https://github.com/ZyranCZ/Professor-Oak-DV-STAT-Evaluation",
+    "releasesUrl": "https://github.com/ZyranCZ/Professor-Oak-DV-STAT-Evaluation/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "special-stat-split",
+    "title": "Special Stat Split",
+    "creator": "zyrancz",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Splits the simple SPECIAL into two SPATK and SPDEF as it was from GEN II onward. Also splits the MOVEs themselves as GEN IV onwards.",
+    "homepageUrl": "https://github.com/ZyranCZ/Special-Stat-Split",
+    "releasesUrl": "https://github.com/ZyranCZ/Special-Stat-Split/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "steel-and-or-fairy-and-or-typing-charts",
+    "title": "STEEL/FAIRY AND TYPING CHARTS",
+    "creator": "zyrancz",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "both",
+      "games": []
+    },
+    "summary": "Adds newer types to the game: Fairy, Steel and Dark. Compatible now with Crystal 251 Mod. Can also change WEAK/RESIST Charts between Vanilla, GEN II and GEN VI",
+    "homepageUrl": "https://github.com/ZyranCZ/Fairy-Steel-Dark-and-Typing-Charts",
+    "releasesUrl": "https://github.com/ZyranCZ/Fairy-Steel-Dark-and-Typing-Charts/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "tap-to-move",
+    "title": "Tap to Move",
+    "creator": "zyrancz",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "You can now Tap to Move, the game hhas functional pathfinding and functional interactions. To avoid unwanted interactions midway, interactions are limited to only actually single tapping the object/npc, so that you can Hold Touch and keep moving.",
+    "homepageUrl": "https://github.com/ZyranCZ/Tap-to-Move",
+    "releasesUrl": "https://github.com/ZyranCZ/Tap-to-Move/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "trainers-let-you-choose-lead-pokemon",
+    "title": "Trainers Let You Choose Lead Pokemon",
+    "creator": "zyrancz",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "both",
+      "games": []
+    },
+    "summary": "Trainers Let You Choose Lead Pokemon, you don't have to always send out the first one in the party",
+    "homepageUrl": "https://github.com/ZyranCZ/Trainers-Let-You-Choose-Lead-Pokemon",
+    "releasesUrl": "https://github.com/ZyranCZ/Trainers-Let-You-Choose-Lead-Pokemon/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen1-pt-br-mod",
+    "title": "(PT-BR) Versão Brasileira",
+    "creator": "hydhyro",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "mod de Tradução dos jogos da primeira geração através do gen1recomp",
+    "homepageUrl": "https://github.com/hydhyro/gen1_pt-br_mod",
+    "releasesUrl": "https://github.com/hydhyro/gen1_pt-br_mod/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "3d-pokemon-sprites",
+    "title": "Pokemon Stadium Overworld Models",
+    "creator": "randyadr",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Makes All Sprites into 3D Models",
+    "homepageUrl": "https://github.com/randyadr/3D-Pokemon-Sprites",
+    "releasesUrl": "https://github.com/randyadr/3D-Pokemon-Sprites/releases",
+    "reviewStatus": "permission-needed"
   }
 ]
