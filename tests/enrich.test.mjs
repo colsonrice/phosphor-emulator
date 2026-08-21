@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { requirementsFrom } from "../scripts/enrich-catalog.mjs";
+import { requirementsFrom, popularityFrom } from "../scripts/enrich-catalog.mjs";
 
 test("a mod with nothing to say produces nothing", () => {
   assert.equal(requirementsFrom({ id: "x" }), null);
@@ -74,5 +74,43 @@ test("a real manifest from the catalog reads the way the survey counted it", () 
       permissions: ["engine_internals"], affects_link: false, experimental: false,
     }),
     { worksWith: ["exp_share"], games: ["yellow"] },
+  );
+});
+
+// MARK: popularity
+
+test("a repo with no release assets has no popularity block at all", () => {
+  // NOT { downloads: 0 }. A mod distributed outside GitHub releases is
+  // unmeasured, not unpopular, and the two must never share a bucket: that is
+  // how a network blip becomes a delisting.
+  assert.equal(popularityFrom({ stargazers_count: 12 }, [], "2026-08-21"), null);
+  assert.equal(popularityFrom({ stargazers_count: 12 }, [{ assets: [] }], "2026-08-21"), null);
+  assert.equal(popularityFrom(null, null, "2026-08-21"), null);
+});
+
+test("downloads sum across every asset of every release", () => {
+  const releases = [
+    { assets: [{ download_count: 100 }, { download_count: 5 }] },
+    { assets: [{ download_count: 21 }] },
+  ];
+  assert.deepEqual(
+    popularityFrom({ stargazers_count: 84 }, releases, "2026-08-21"),
+    { downloads: 126, stars: 84, asOf: "2026-08-21" },
+  );
+});
+
+test("a release with assets that nobody downloaded is a measured zero", () => {
+  // Distinct from the absent case above, and the whole reason the schema has
+  // both: this repo published a file and nobody took it.
+  assert.deepEqual(
+    popularityFrom(null, [{ assets: [{ download_count: 0 }] }], "2026-08-21"),
+    { downloads: 0, asOf: "2026-08-21" },
+  );
+});
+
+test("stars are omitted rather than zeroed when the repo call failed", () => {
+  assert.deepEqual(
+    popularityFrom(null, [{ assets: [{ download_count: 7 }] }], "2026-08-21"),
+    { downloads: 7, asOf: "2026-08-21" },
   );
 });

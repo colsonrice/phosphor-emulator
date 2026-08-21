@@ -61,3 +61,24 @@ export function requirementsFrom(manifest) {
 
   return Object.keys(out).length ? out : null;
 }
+
+/// How used a mod is, from its GitHub releases.
+///
+/// **Absence is a fact, not a zero.** The whole block is omitted for a repo
+/// that publishes no release assets, because a mod distributed another way is
+/// unmeasured rather than unpopular. A repo that published a file nobody took
+/// is a different thing and gets `downloads: 0`. Nothing downstream may
+/// substitute one for the other: that is the same mistake as folding "could
+/// not fetch" into "refused", which on a real run turns a network blip into a
+/// delisting.
+export function popularityFrom(repo, releases, asOf) {
+  const assets = (releases ?? []).flatMap((r) => r.assets ?? []);
+  if (!assets.length) return null;
+
+  const out = { downloads: assets.reduce((sum, a) => sum + (a.download_count ?? 0), 0) };
+  // Omitted rather than zeroed when the repo call itself failed or 404'd, for
+  // the same reason as the block above.
+  if (typeof repo?.stargazers_count === "number") out.stars = repo.stargazers_count;
+  out.asOf = asOf;
+  return out;
+}
