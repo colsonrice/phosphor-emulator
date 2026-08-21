@@ -19,6 +19,9 @@ type Release = {
   fileSize: string;
   sha256: string;
   homepageUrl: string;
+  /// The id inside the archive's own manifest. Optional because a ROM hack
+  /// patch has no mod manifest to declare one.
+  modId?: string;
   permission: "open-license" | "author-approved";
   license: string;
   licenseIncluded: boolean;
@@ -121,7 +124,17 @@ export function LibraryApp() {
     const needle = query.trim().toLowerCase();
     return catalogProjects.filter((project) => {
       const matchesCategory = category === "all" || project.compatibility.includes(category);
-      const haystack = `${project.title} ${project.creator} ${project.target} ${project.summary}`.toLowerCase();
+      // The repo and the mod id are in here because the name on the card is
+      // often not the name people know it by. A mod is announced in Discord
+      // and on GitHub under its repository, arrives with an id of its own,
+      // and lands in the catalog under whatever it calls itself in its
+      // manifest: Gen2-3D-Sprites publishes STADIUM2_OVERWORLD_MODELS and is
+      // listed as "Stadium 2 Overworld Models". Searching either of the first
+      // two found nothing and read as "the mod is not here".
+      const modId = "modId" in project ? project.modId : undefined;
+      const haystack = [project.title, project.creator, project.target, project.summary,
+                        project.homepageUrl, modId]
+        .filter(Boolean).join(" ").toLowerCase();
       return matchesCategory && (!needle || haystack.includes(needle));
     });
   }, [category, query]);
