@@ -20,7 +20,7 @@
 //   GITHUB_TOKEN=$(gh auth token) node scripts/enrich-catalog.mjs
 
 import { readFile, writeFile } from "node:fs/promises";
-import { readManifest } from "./lib/archive.mjs";
+import { entryNames, readEntry, readManifest } from "./lib/archive.mjs";
 
 /// The three cartridges this app ships an engine for.
 ///
@@ -40,10 +40,23 @@ const UNIVERSAL_PERMISSION = "engine_internals";
 /// a third of the installable catalog answers null, and that is the correct
 /// shape: a mod with no conflicts, no unusual permissions and no flags has
 /// nothing to warn anybody about.
-export function requirementsFrom(manifest) {
+/// `usesNetwork` is what the mod's Lua actually reaches for, which the caller
+/// reads from the archive. Null means it was not checked.
+export function requirementsFrom(manifest, { usesNetwork = null } = {}) {
   const out = {};
 
-  const permissions = (manifest.permissions ?? []).filter((p) => p !== UNIVERSAL_PERMISSION);
+  const permissions = (manifest.permissions ?? [])
+    .filter((p) => p !== UNIVERSAL_PERMISSION)
+    // **Check what a mod requires, not what it declares.** The app refuses to
+    // install a mod that needs the network, because the sandbox denies sockets
+    // unconditionally and such a mod would install and then do nothing. But a
+    // declaration is not a requirement: Pokewalker declares `network` and
+    // never loads a network module, it reads `mod.steps`, a field of the mod
+    // object. Publishing its declaration made the app refuse the one working
+    // mod the rule applies to. Every guard in this project has refused a
+    // legitimate mod before it refused a hostile one; this is that, caught on
+    // a simulator instead of by a player.
+    .filter((p) => !(p === "network" && usesNetwork === false));
   if (permissions.length) out.permissions = permissions;
 
   if (manifest.conflicts?.length) out.conflicts = [...manifest.conflicts];
@@ -98,6 +111,29 @@ const CACHE = new URL("../survey/cache/", import.meta.url);
 /// against the catalog, so requirements cannot describe a different file than
 /// the one the catalog ships.
 const cacheNameFor = (release) => `published__${release.id}__${release.fileName}`;
+
+/// Whether the mod's Lua actually reaches for a network module.
+///
+/// Only asked of a mod that declares `network`, because opening every .lua in
+/// every archive to answer a question nobody asked is the slow half of this
+/// pass. See the filter in `requirementsFrom` for why the declaration alone is
+/// not enough.
+const NETWORK_USE = [
+  /require\s*\(?\s*["'](socket|enet|http|https|lua-https)[."']/,
+  /\bmod\.fetch\b/,
+  /\bsocket\s*\./,
+  /\benet\s*\./,
+];
+
+async function usesNetwork(archive) {
+  const { names } = await entryNames(archive);
+  for (const name of names.keys()) {
+    if (!name.endsWith(".lua")) continue;
+    const source = await readEntry(archive, name, names);
+    if (NETWORK_USE.some((pattern) => pattern.test(source))) return true;
+  }
+  return false;
+}
 
 const repoFrom = (...urls) => {
   for (const url of urls) {
@@ -159,7 +195,10 @@ async function main() {
     const manifest = await readManifest(archive);
     if (manifest) {
       manifestsRead += 1;
-      const requirements = requirementsFrom(manifest);
+      const declaresNetwork = (manifest.permissions ?? []).includes("network");
+      const requirements = requirementsFrom(manifest, {
+        usesNetwork: declaresNetwork ? await usesNetwork(archive) : null,
+      });
       if (requirements) entry.requirements = requirements;
     } else {
       unreadable.push(release.id);

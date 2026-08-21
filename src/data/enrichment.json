@@ -46,7 +46,7 @@
       ]
     },
     "popularity": {
-      "downloads": 13212,
+      "downloads": 13219,
       "stars": 20,
       "asOf": "2026-08-21"
     }
@@ -59,14 +59,14 @@
       ]
     },
     "popularity": {
-      "downloads": 1222,
+      "downloads": 1224,
       "stars": 1,
       "asOf": "2026-08-21"
     }
   },
   "pokemon-red-ptbr": {
     "popularity": {
-      "downloads": 55,
+      "downloads": 56,
       "stars": 2,
       "asOf": "2026-08-21"
     }
@@ -131,7 +131,7 @@
   },
   "all-pokemon-catchable": {
     "popularity": {
-      "downloads": 21846,
+      "downloads": 21851,
       "stars": 75,
       "asOf": "2026-08-21"
     }
@@ -147,7 +147,7 @@
       ]
     },
     "popularity": {
-      "downloads": 1627,
+      "downloads": 1628,
       "stars": 4,
       "asOf": "2026-08-21"
     }
@@ -167,7 +167,7 @@
       ]
     },
     "popularity": {
-      "downloads": 2391,
+      "downloads": 2392,
       "stars": 4,
       "asOf": "2026-08-21"
     }
@@ -188,7 +188,7 @@
   },
   "gen1recomp-access-pc-anywhere": {
     "popularity": {
-      "downloads": 6204,
+      "downloads": 6205,
       "stars": 6,
       "asOf": "2026-08-21"
     }
@@ -221,7 +221,7 @@
       ]
     },
     "popularity": {
-      "downloads": 2652,
+      "downloads": 2656,
       "stars": 3,
       "asOf": "2026-08-21"
     }
@@ -247,7 +247,7 @@
       ]
     },
     "popularity": {
-      "downloads": 2211,
+      "downloads": 2212,
       "stars": 6,
       "asOf": "2026-08-21"
     }
@@ -292,7 +292,7 @@
   },
   "gen1recomp-gen3-boxes": {
     "popularity": {
-      "downloads": 23298,
+      "downloads": 23312,
       "stars": 23,
       "asOf": "2026-08-21"
     }
@@ -306,7 +306,7 @@
   },
   "gen1recomp-groovy-palette-frames": {
     "popularity": {
-      "downloads": 4071,
+      "downloads": 4073,
       "stars": 1,
       "asOf": "2026-08-21"
     }
@@ -320,7 +320,7 @@
   },
   "kanto-gear": {
     "popularity": {
-      "downloads": 8788,
+      "downloads": 8799,
       "stars": 51,
       "asOf": "2026-08-21"
     }
@@ -341,7 +341,7 @@
   },
   "gen1recomp-modern-dialog": {
     "popularity": {
-      "downloads": 970,
+      "downloads": 972,
       "stars": 0,
       "asOf": "2026-08-21"
     }
@@ -351,21 +351,21 @@
       "experimental": true
     },
     "popularity": {
-      "downloads": 11550,
+      "downloads": 11555,
       "stars": 5,
       "asOf": "2026-08-21"
     }
   },
   "move-descriptions": {
     "popularity": {
-      "downloads": 408,
+      "downloads": 410,
       "stars": 0,
       "asOf": "2026-08-21"
     }
   },
   "gen1recomp-multi-save-slots": {
     "popularity": {
-      "downloads": 4667,
+      "downloads": 4668,
       "stars": 8,
       "asOf": "2026-08-21"
     }
@@ -406,7 +406,7 @@
   },
   "gen1recomp-run-mode": {
     "popularity": {
-      "downloads": 7290,
+      "downloads": 7292,
       "stars": 8,
       "asOf": "2026-08-21"
     }
@@ -418,7 +418,7 @@
       ]
     },
     "popularity": {
-      "downloads": 13522,
+      "downloads": 13529,
       "stars": 11,
       "asOf": "2026-08-21"
     }
@@ -437,7 +437,7 @@
   },
   "gen1recomp-shiny-starters-gifts": {
     "popularity": {
-      "downloads": 1139,
+      "downloads": 1140,
       "stars": 0,
       "asOf": "2026-08-21"
     }
@@ -467,7 +467,7 @@
       ]
     },
     "popularity": {
-      "downloads": 1027,
+      "downloads": 1028,
       "stars": 6,
       "asOf": "2026-08-21"
     }
@@ -515,7 +515,7 @@
       ]
     },
     "popularity": {
-      "downloads": 11005,
+      "downloads": 11015,
       "stars": 15,
       "asOf": "2026-08-21"
     }
@@ -548,7 +548,7 @@
       ]
     },
     "popularity": {
-      "downloads": 583,
+      "downloads": 587,
       "stars": 1,
       "asOf": "2026-08-21"
     }
@@ -576,7 +576,7 @@
   },
   "gen1recomp-terrain-minimap": {
     "popularity": {
-      "downloads": 30,
+      "downloads": 31,
       "stars": 0,
       "asOf": "2026-08-21"
     }
@@ -663,7 +663,7 @@
       ]
     },
     "popularity": {
-      "downloads": 55,
+      "downloads": 56,
       "stars": 1,
       "asOf": "2026-08-21"
     }
@@ -677,7 +677,7 @@
       ]
     },
     "popularity": {
-      "downloads": 319,
+      "downloads": 322,
       "stars": 1,
       "asOf": "2026-08-21"
     }
@@ -698,7 +698,7 @@
   },
   "secret-base": {
     "popularity": {
-      "downloads": 112,
+      "downloads": 113,
       "stars": 1,
       "asOf": "2026-08-21"
     }
@@ -722,7 +722,7 @@
   },
   "trainer-talk": {
     "popularity": {
-      "downloads": 342,
+      "downloads": 343,
       "stars": 3,
       "asOf": "2026-08-21"
     }
@@ -816,12 +816,11 @@
   "gen1recomp-pokewalker": {
     "requirements": {
       "permissions": [
-        "network",
         "steps"
       ]
     },
     "popularity": {
-      "downloads": 2674,
+      "downloads": 2676,
       "stars": 5,
       "asOf": "2026-08-21"
     }
@@ -898,7 +897,7 @@
       ]
     },
     "popularity": {
-      "downloads": 659,
+      "downloads": 660,
       "stars": 2,
       "asOf": "2026-08-21"
     }
@@ -916,14 +915,14 @@
       ]
     },
     "popularity": {
-      "downloads": 6567,
+      "downloads": 6569,
       "stars": 25,
       "asOf": "2026-08-21"
     }
   },
   "pokemon-polished-crystal": {
     "popularity": {
-      "downloads": 224095,
+      "downloads": 224098,
       "stars": 1620,
       "asOf": "2026-08-21"
     }
@@ -944,7 +943,7 @@
   },
   "pokemon-heart-and-soul": {
     "popularity": {
-      "downloads": 260315,
+      "downloads": 260337,
       "stars": 297,
       "asOf": "2026-08-21"
     }
@@ -979,7 +978,7 @@
   },
   "pokemon-yellow-legacy": {
     "popularity": {
-      "downloads": 52852,
+      "downloads": 52854,
       "stars": 292,
       "asOf": "2026-08-21"
     }
@@ -1014,21 +1013,21 @@
   },
   "mute-low-hp-alarm": {
     "popularity": {
-      "downloads": 589,
+      "downloads": 590,
       "stars": 2,
       "asOf": "2026-08-21"
     }
   },
   "fade-overlay-fix": {
     "popularity": {
-      "downloads": 91,
+      "downloads": 92,
       "stars": 0,
       "asOf": "2026-08-21"
     }
   },
   "bag-stock-preview": {
     "popularity": {
-      "downloads": 146,
+      "downloads": 147,
       "stars": 1,
       "asOf": "2026-08-21"
     }
@@ -1063,14 +1062,14 @@
   },
   "additional-story-healers": {
     "popularity": {
-      "downloads": 503,
+      "downloads": 504,
       "stars": 0,
       "asOf": "2026-08-21"
     }
   },
   "dramaticshapevoxelmod": {
     "popularity": {
-      "downloads": 62040,
+      "downloads": 62083,
       "stars": 166,
       "asOf": "2026-08-21"
     }
@@ -1147,14 +1146,14 @@
   },
   "dramaticshapevoxelmod-latest": {
     "popularity": {
-      "downloads": 12611,
-      "stars": 70,
+      "downloads": 12624,
+      "stars": 71,
       "asOf": "2026-08-21"
     }
   },
   "dramatic-sky-ride": {
     "popularity": {
-      "downloads": 5768,
+      "downloads": 5769,
       "stars": 6,
       "asOf": "2026-08-21"
     }
@@ -1175,35 +1174,35 @@
   },
   "exp-share": {
     "popularity": {
-      "downloads": 21286,
+      "downloads": 21307,
       "stars": 17,
       "asOf": "2026-08-21"
     }
   },
   "free-fly": {
     "popularity": {
-      "downloads": 6831,
+      "downloads": 6833,
       "stars": 10,
       "asOf": "2026-08-21"
     }
   },
   "gen1recomp-gen2-dex": {
     "popularity": {
-      "downloads": 838,
+      "downloads": 839,
       "stars": 1,
       "asOf": "2026-08-21"
     }
   },
   "gen1-modern-ui": {
     "popularity": {
-      "downloads": 30804,
+      "downloads": 30813,
       "stars": 43,
       "asOf": "2026-08-21"
     }
   },
   "gen1recomp-voiceactingmod": {
     "popularity": {
-      "downloads": 1860,
+      "downloads": 1861,
       "stars": 2,
       "asOf": "2026-08-21"
     }
@@ -1273,35 +1272,35 @@
   },
   "instant-heal-pc-rest": {
     "popularity": {
-      "downloads": 1354,
+      "downloads": 1356,
       "stars": 0,
       "asOf": "2026-08-21"
     }
   },
   "nuzlocke": {
     "popularity": {
-      "downloads": 4620,
+      "downloads": 4621,
       "stars": 7,
       "asOf": "2026-08-21"
     }
   },
   "potato-voxel": {
     "popularity": {
-      "downloads": 14325,
+      "downloads": 14336,
       "stars": 53,
       "asOf": "2026-08-21"
     }
   },
   "qol-toggles": {
     "popularity": {
-      "downloads": 13391,
+      "downloads": 13392,
       "stars": 4,
       "asOf": "2026-08-21"
     }
   },
   "pokemon-gen1-recomp-mod-qol": {
     "popularity": {
-      "downloads": 51044,
+      "downloads": 51055,
       "stars": 83,
       "asOf": "2026-08-21"
     }
@@ -1322,7 +1321,7 @@
   },
   "rbymmomod": {
     "popularity": {
-      "downloads": 4634,
+      "downloads": 4637,
       "stars": 14,
       "asOf": "2026-08-21"
     }
@@ -1364,14 +1363,14 @@
   },
   "surround-audio": {
     "popularity": {
-      "downloads": 8371,
+      "downloads": 8372,
       "stars": 9,
       "asOf": "2026-08-21"
     }
   },
   "terrarium": {
     "popularity": {
-      "downloads": 6778,
+      "downloads": 6779,
       "stars": 2,
       "asOf": "2026-08-21"
     }
@@ -1406,42 +1405,42 @@
   },
   "unique-menu-icons": {
     "popularity": {
-      "downloads": 12506,
+      "downloads": 12509,
       "stars": 26,
       "asOf": "2026-08-21"
     }
   },
   "useful-bag": {
     "popularity": {
-      "downloads": 13572,
+      "downloads": 13590,
       "stars": 10,
       "asOf": "2026-08-21"
     }
   },
   "useful-dex": {
     "popularity": {
-      "downloads": 7099,
+      "downloads": 7100,
       "stars": 6,
       "asOf": "2026-08-21"
     }
   },
   "useful-marts": {
     "popularity": {
-      "downloads": 1883,
+      "downloads": 1884,
       "stars": 1,
       "asOf": "2026-08-21"
     }
   },
   "useful-move-info": {
     "popularity": {
-      "downloads": 8654,
+      "downloads": 8655,
       "stars": 3,
       "asOf": "2026-08-21"
     }
   },
   "versaovermelha": {
     "popularity": {
-      "downloads": 4336,
+      "downloads": 4339,
       "stars": 20,
       "asOf": "2026-08-21"
     }
@@ -1455,35 +1454,35 @@
   },
   "gen1recomp-widescreen-battle-intro": {
     "popularity": {
-      "downloads": 10616,
+      "downloads": 10617,
       "stars": 9,
       "asOf": "2026-08-21"
     }
   },
   "wild-skies": {
     "popularity": {
-      "downloads": 9588,
+      "downloads": 9589,
       "stars": 14,
       "asOf": "2026-08-21"
     }
   },
   "overworld-spawn-mod": {
     "popularity": {
-      "downloads": 63200,
+      "downloads": 63237,
       "stars": 92,
       "asOf": "2026-08-21"
     }
   },
   "yellow-legacy-changes": {
     "popularity": {
-      "downloads": 5671,
+      "downloads": 5674,
       "stars": 6,
       "asOf": "2026-08-21"
     }
   },
   "dramaless-shape": {
     "popularity": {
-      "downloads": 19989,
+      "downloads": 20007,
       "stars": 109,
       "asOf": "2026-08-21"
     }
@@ -1497,7 +1496,7 @@
   },
   "gameshark": {
     "popularity": {
-      "downloads": 3665,
+      "downloads": 3669,
       "stars": 13,
       "asOf": "2026-08-21"
     }
@@ -1525,14 +1524,14 @@
   },
   "airivials": {
     "popularity": {
-      "downloads": 1033,
+      "downloads": 1035,
       "stars": 4,
       "asOf": "2026-08-21"
     }
   },
   "crystal-animated-sprites-with-shiny-visuals": {
     "popularity": {
-      "downloads": 13229,
+      "downloads": 13236,
       "stars": 59,
       "asOf": "2026-08-21"
     }
@@ -1651,14 +1650,14 @@
   },
   "dynamax-4-recomp": {
     "popularity": {
-      "downloads": 114,
+      "downloads": 115,
       "stars": 1,
       "asOf": "2026-08-21"
     }
   },
   "autofire": {
     "popularity": {
-      "downloads": 245,
+      "downloads": 246,
       "stars": 1,
       "asOf": "2026-08-21"
     }
@@ -1700,7 +1699,7 @@
   },
   "evolve-in-battle": {
     "popularity": {
-      "downloads": 1382,
+      "downloads": 1383,
       "stars": 3,
       "asOf": "2026-08-21"
     }
@@ -1742,7 +1741,7 @@
   },
   "kanto-reforged": {
     "popularity": {
-      "downloads": 4841,
+      "downloads": 4847,
       "stars": 13,
       "asOf": "2026-08-21"
     }
@@ -1756,7 +1755,7 @@
   },
   "anime-realism": {
     "popularity": {
-      "downloads": 782,
+      "downloads": 785,
       "stars": 3,
       "asOf": "2026-08-21"
     }
@@ -1812,7 +1811,7 @@
   },
   "gen1-recomp-mods": {
     "popularity": {
-      "downloads": 12799,
+      "downloads": 12802,
       "stars": 22,
       "asOf": "2026-08-21"
     }
@@ -1826,14 +1825,14 @@
   },
   "colosseum-inspired-ui-overhaul-v-1-0-0": {
     "popularity": {
-      "downloads": 1225,
+      "downloads": 1226,
       "stars": 1,
       "asOf": "2026-08-21"
     }
   },
   "gen-3-inspired-ui-overhaul-for-gen1recomp-v2-0": {
     "popularity": {
-      "downloads": 299,
+      "downloads": 301,
       "stars": 1,
       "asOf": "2026-08-21"
     }
@@ -1882,7 +1881,7 @@
   },
   "kanto-life-mod": {
     "popularity": {
-      "downloads": 1495,
+      "downloads": 1496,
       "stars": 5,
       "asOf": "2026-08-21"
     }
@@ -1931,14 +1930,14 @@
   },
   "the-world": {
     "popularity": {
-      "downloads": 425,
+      "downloads": 440,
       "stars": 0,
       "asOf": "2026-08-21"
     }
   },
   "weather-fx": {
     "popularity": {
-      "downloads": 5836,
+      "downloads": 5841,
       "stars": 11,
       "asOf": "2026-08-21"
     }
@@ -1952,7 +1951,7 @@
   },
   "gen2-cheat-menu": {
     "popularity": {
-      "downloads": 230,
+      "downloads": 231,
       "stars": 0,
       "asOf": "2026-08-21"
     }
@@ -2036,7 +2035,7 @@
   },
   "gen-2-radomizer-plus": {
     "popularity": {
-      "downloads": 154,
+      "downloads": 155,
       "stars": 0,
       "asOf": "2026-08-21"
     }
@@ -2134,7 +2133,7 @@
   },
   "can-always-escape": {
     "popularity": {
-      "downloads": 67,
+      "downloads": 68,
       "stars": 1,
       "asOf": "2026-08-21"
     }

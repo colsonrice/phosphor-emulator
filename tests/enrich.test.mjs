@@ -114,3 +114,28 @@ test("stars are omitted rather than zeroed when the repo call failed", () => {
     { downloads: 7, asOf: "2026-08-21" },
   );
 });
+
+test("a declared network permission that the code never uses is not published", () => {
+  // Check what a mod requires, not what it declares. Pokewalker declares
+  // `network` and never loads a network module: it reads `mod.steps`, a field
+  // of the mod object. Publishing the declaration made the app refuse the one
+  // working mod the rule applies to.
+  assert.equal(
+    requirementsFrom({ permissions: ["engine_internals", "network"] }, { usesNetwork: false }),
+    null,
+  );
+  assert.deepEqual(
+    requirementsFrom({ permissions: ["network", "steps"] }, { usesNetwork: false }),
+    { permissions: ["steps"] },
+  );
+});
+
+test("a network permission the code DOES use is still published", () => {
+  assert.deepEqual(
+    requirementsFrom({ permissions: ["network"] }, { usesNetwork: true }),
+    { permissions: ["network"] },
+  );
+  // Unchecked stays published: withholding on 'we did not look' would silently
+  // let a mod that needs sockets through as installable.
+  assert.deepEqual(requirementsFrom({ permissions: ["network"] }), { permissions: ["network"] });
+});
