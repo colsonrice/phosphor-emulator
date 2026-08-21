@@ -20,6 +20,7 @@ import { fileURLToPath } from "node:url";
 
 const RELEASES = new URL("../src/data/releases.json", import.meta.url);
 const PROJECTS = new URL("../src/data/projects.json", import.meta.url);
+const ENRICHMENT = new URL("../src/data/enrichment.json", import.meta.url);
 const OUTPUT = new URL("../public/v1/manifest.json", import.meta.url);
 
 /// The site and the app spell an engine differently. Getting this wrong
@@ -273,9 +274,41 @@ function entryForProject(project, errors) {
   };
 }
 
+/// What `scripts/enrich-catalog.mjs` last read out of the archives and the
+/// GitHub API, keyed by release or project id.
+///
+/// Read from a committed file rather than fetched here, because this script
+/// runs on every push and in CI and has to stay deterministic and offline.
+/// An absent file is not an error: the catalog is complete without enrichment
+/// and every field it adds is optional in the app.
+async function enrichment() {
+  try {
+    return JSON.parse(await readFile(ENRICHMENT, "utf8"));
+  } catch {
+    return {};
+  }
+}
+
+/// Copies the enriched blocks onto an entry.
+///
+/// Keyed by the id BEFORE the fan-out suffix: one release published for two
+/// engines becomes `id@engine` twice, and both halves are the same archive and
+/// the same repository, so both carry the same requirements and the same
+/// download count.
+function enrich(entry, table) {
+  const enriched = table[entry.id] ?? table[entry.id.split("@")[0]];
+  if (!enriched) return entry;
+  return {
+    ...entry,
+    ...(enriched.requirements ? { requirements: enriched.requirements } : {}),
+    ...(enriched.popularity ? { popularity: enriched.popularity } : {}),
+  };
+}
+
 export async function buildManifest() {
   const releases = JSON.parse(await readFile(RELEASES, "utf8"));
   const projects = JSON.parse(await readFile(PROJECTS, "utf8"));
+  const enriched = await enrichment();
   const errors = [];
 
   const publishedKinds = new Set(SECTIONS.map((section) => section.kind));
@@ -286,7 +319,8 @@ export async function buildManifest() {
       ? projects.map((project) => entryForProject(project, errors)).filter(Boolean)
       : []),
   // An entry whose kind has no section would be fetched and then never shown.
-  ].filter((entry) => publishedKinds.has(entry.kind));
+  ].filter((entry) => publishedKinds.has(entry.kind))
+    .map((entry) => enrich(entry, enriched));
 
   const ids = entries.map((entry) => entry.id);
   for (const id of new Set(ids.filter((id, i) => ids.indexOf(id) !== i))) {

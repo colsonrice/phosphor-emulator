@@ -1,0 +1,2212 @@
+{
+  "exp-multiplier": {
+    "requirements": {
+      "worksWith": [
+        "exp_share"
+      ],
+      "games": [
+        "yellow"
+      ]
+    },
+    "popularity": {
+      "downloads": 106,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "battle-info-hud": {
+    "requirements": {
+      "worksWith": [
+        "DRAMATIC_SHAPE",
+        "BATTLE_ART_VOXEL_FORK",
+        "DRAMALESS_SHAPE",
+        "gender_mod"
+      ]
+    },
+    "popularity": {
+      "downloads": 262,
+      "stars": 2,
+      "asOf": "2026-08-21"
+    }
+  },
+  "stadium-battle-fx": {
+    "requirements": {
+      "conflicts": [
+        "DRAMALESS_SHAPE@<2.0.0",
+        "STADIUM2_IMPORTER"
+      ],
+      "worksWith": [
+        "BATTLE_ART_VOXEL_FORK",
+        "DRAMATIC_SHAPE",
+        "potato_voxel",
+        "FOLLOWERS_EX",
+        "kanto_dynamic_weather",
+        "wild_skies",
+        "overworld_wild_spawns"
+      ]
+    },
+    "popularity": {
+      "downloads": 13212,
+      "stars": 20,
+      "asOf": "2026-08-21"
+    }
+  },
+  "pokeball-colors": {
+    "requirements": {
+      "worksWith": [
+        "custom_pokeballs",
+        "snag_quest"
+      ]
+    },
+    "popularity": {
+      "downloads": 1222,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "pokemon-red-ptbr": {
+    "popularity": {
+      "downloads": 55,
+      "stars": 2,
+      "asOf": "2026-08-21"
+    }
+  },
+  "button-shortcuts": {
+    "popularity": {
+      "downloads": 45,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "quick-map": {
+    "popularity": {
+      "downloads": 86,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "rename-character": {
+    "popularity": {
+      "downloads": 30,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "too-many-balls": {
+    "requirements": {
+      "conflicts": [
+        "example_balls"
+      ],
+      "worksWith": [
+        "pokeball_colors",
+        "custom_pokeballs"
+      ]
+    },
+    "popularity": {
+      "downloads": 1180,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "bottomless-bag": {
+    "popularity": {
+      "downloads": 601,
+      "stars": 6,
+      "asOf": "2026-08-21"
+    }
+  },
+  "shiny-pokemon": {
+    "requirements": {
+      "worksWith": [
+        "overworld_wild_spawns",
+        "PokePCFollowers_VoxelMerge",
+        "FOLLOWERS_EX"
+      ]
+    },
+    "popularity": {
+      "downloads": 12784,
+      "stars": 20,
+      "asOf": "2026-08-21"
+    }
+  },
+  "all-pokemon-catchable": {
+    "popularity": {
+      "downloads": 21846,
+      "stars": 75,
+      "asOf": "2026-08-21"
+    }
+  },
+  "typed-move-colors": {
+    "requirements": {
+      "worksWith": [
+        "modern_party_ui",
+        "useful_move_info",
+        "gen3_battle_ui",
+        "BATTLE_ART_VOXEL_FORK",
+        "potato_voxel"
+      ]
+    },
+    "popularity": {
+      "downloads": 1627,
+      "stars": 4,
+      "asOf": "2026-08-21"
+    }
+  },
+  "modern-party-ui": {
+    "requirements": {
+      "worksWith": [
+        "gender_mod",
+        "dv_tracker",
+        "kanto_ribbons",
+        "gen1_modern_ui",
+        "DRAMATIC_SHAPE",
+        "CRYSTAL_251",
+        "crystal_animated_sprites_with_shiny_visuals",
+        "unique_menu_icons",
+        "Gold_Silver_Sprites"
+      ]
+    },
+    "popularity": {
+      "downloads": 2391,
+      "stars": 4,
+      "asOf": "2026-08-21"
+    }
+  },
+  "dex-radar": {
+    "popularity": {
+      "downloads": 698,
+      "stars": 5,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-no-exp-challenge": {
+    "popularity": {
+      "downloads": 231,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-access-pc-anywhere": {
+    "popularity": {
+      "downloads": 6204,
+      "stars": 6,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-auto-battle": {
+    "popularity": {
+      "downloads": 881,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-bag-sort": {
+    "popularity": {
+      "downloads": 672,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-battle-move-info": {
+    "popularity": {
+      "downloads": 5918,
+      "stars": 5,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-better-battle-ui": {
+    "requirements": {
+      "worksWith": [
+        "DRAMATIC_SHAPE"
+      ]
+    },
+    "popularity": {
+      "downloads": 2652,
+      "stars": 3,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-bike-anywhere": {
+    "popularity": {
+      "downloads": 366,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-blackjack-corner": {
+    "requirements": {
+      "permissions": [
+        "filesystem"
+      ],
+      "worksWith": [
+        "shiny_indicators",
+        "SHINY_POKEMON",
+        "crystal_animated_sprites_with_shiny_visuals",
+        "gen2_shiny_visuals",
+        "shiny_visuals"
+      ]
+    },
+    "popularity": {
+      "downloads": 2211,
+      "stars": 6,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-childhood-myths-are-real": {
+    "requirements": {
+      "experimental": true
+    },
+    "popularity": {
+      "downloads": 427,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-controller-rumble": {
+    "popularity": {
+      "downloads": 5042,
+      "stars": 5,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-damage-numbers": {
+    "popularity": {
+      "downloads": 1773,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "wills-mod": {
+    "popularity": {
+      "downloads": 263,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-fakemons": {
+    "popularity": {
+      "downloads": 182,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-gen3-boxes": {
+    "popularity": {
+      "downloads": 23298,
+      "stars": 23,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-gen3-dex": {
+    "popularity": {
+      "downloads": 1794,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-groovy-palette-frames": {
+    "popularity": {
+      "downloads": 4071,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-heal-anywhere": {
+    "popularity": {
+      "downloads": 1363,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "kanto-gear": {
+    "popularity": {
+      "downloads": 8788,
+      "stars": 51,
+      "asOf": "2026-08-21"
+    }
+  },
+  "mew-under-the-truck": {
+    "popularity": {
+      "downloads": 577,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-minimap": {
+    "popularity": {
+      "downloads": 713,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-modern-dialog": {
+    "popularity": {
+      "downloads": 970,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-modern-kanto": {
+    "requirements": {
+      "experimental": true
+    },
+    "popularity": {
+      "downloads": 11550,
+      "stars": 5,
+      "asOf": "2026-08-21"
+    }
+  },
+  "move-descriptions": {
+    "popularity": {
+      "downloads": 408,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-multi-save-slots": {
+    "popularity": {
+      "downloads": 4667,
+      "stars": 8,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-music-player": {
+    "popularity": {
+      "downloads": 1337,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "pokemon-snag": {
+    "requirements": {
+      "worksWith": [
+        "quest_system",
+        "SHINY_POKEMON",
+        "pokeball_colors",
+        "kanto_balls"
+      ]
+    },
+    "popularity": {
+      "downloads": 645,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "quest-menu": {
+    "requirements": {
+      "worksWith": [
+        "pokegear_cards"
+      ]
+    },
+    "popularity": {
+      "downloads": 637,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-run-mode": {
+    "popularity": {
+      "downloads": 7290,
+      "stars": 8,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-running-shoes": {
+    "requirements": {
+      "worksWith": [
+        "DRAMATIC_SHAPE"
+      ]
+    },
+    "popularity": {
+      "downloads": 13522,
+      "stars": 11,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-savestates": {
+    "requirements": {
+      "worksWith": [
+        "gen1_modern_ui"
+      ]
+    },
+    "popularity": {
+      "downloads": 221,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-shiny-starters-gifts": {
+    "popularity": {
+      "downloads": 1139,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-switch-advisor": {
+    "popularity": {
+      "downloads": 479,
+      "stars": 2,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-buttonmash": {
+    "popularity": {
+      "downloads": 273,
+      "stars": 4,
+      "asOf": "2026-08-21"
+    }
+  },
+  "voxel-ascendant": {
+    "requirements": {
+      "conflicts": [
+        "DRAMATIC_SHAPE",
+        "DRAMALESS_SHAPE",
+        "BATTLE_ART_VOXEL_FORK",
+        "potato_voxel",
+        "TERRARIUM"
+      ]
+    },
+    "popularity": {
+      "downloads": 1027,
+      "stars": 6,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-bag-wrap": {
+    "popularity": {
+      "downloads": 217,
+      "stars": 2,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-minimal-cheats": {
+    "requirements": {
+      "conflicts": [
+        "free_fly"
+      ],
+      "worksWith": [
+        "PokePCFollowers_VoxelMerge",
+        "DRAMATIC_SHAPE"
+      ]
+    },
+    "popularity": {
+      "downloads": 60,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "non-binary-mode": {
+    "popularity": {
+      "downloads": 69,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "battle-cinematics-stadium-camera": {
+    "requirements": {
+      "worksWith": [
+        "DRAMATIC_SHAPE",
+        "DRAMALESS_SHAPE",
+        "BATTLE_ART_VOXEL_FORK",
+        "STADIUM2_OVERWORLD_MODELS",
+        "STADIUM_BATTLE_FX",
+        "potato_voxel",
+        "VOXEL_ASCENDANT"
+      ]
+    },
+    "popularity": {
+      "downloads": 11005,
+      "stars": 15,
+      "asOf": "2026-08-21"
+    }
+  },
+  "girl-mode": {
+    "popularity": {
+      "downloads": 155,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-infinite-repel": {
+    "popularity": {
+      "downloads": 24,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-battle-exp-bar": {
+    "popularity": {
+      "downloads": 93,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-modern-bag-ui": {
+    "requirements": {
+      "worksWith": [
+        "modern_party_ui"
+      ]
+    },
+    "popularity": {
+      "downloads": 583,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-settings-hotkeys": {
+    "popularity": {
+      "downloads": 11,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-professor-oak-challenge": {
+    "popularity": {
+      "downloads": 29,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "its-clefairy": {
+    "popularity": {
+      "downloads": 37,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-terrain-minimap": {
+    "popularity": {
+      "downloads": 30,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "hiddenstats": {
+    "requirements": {
+      "worksWith": [
+        "gen1_modern_ui",
+        "Kanto-Reforged"
+      ]
+    },
+    "popularity": {
+      "downloads": 53,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-trainer-forfeit": {
+    "requirements": {
+      "conflicts": [
+        "scott_mod"
+      ]
+    },
+    "popularity": {
+      "downloads": 19,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "careercard": {
+    "popularity": {
+      "downloads": 32,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-lets-go-catch-throw": {
+    "requirements": {
+      "worksWith": [
+        "DRAMALESS_SHAPE",
+        "ds_fp_ceiling",
+        "overworld_wild_spawns",
+        "DRAMATIC_SKY_RIDE"
+      ]
+    },
+    "popularity": {
+      "downloads": 24,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-oaks-spare-starter": {
+    "requirements": {
+      "conflicts": [
+        "random_starters"
+      ],
+      "games": [
+        "blue",
+        "red"
+      ]
+    },
+    "popularity": {
+      "downloads": 44,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-voxel-run-bridge": {
+    "requirements": {
+      "worksWith": [
+        "running_shoes",
+        "trainer_forfeit",
+        "oak_spare_starter",
+        "random_starters",
+        "gen1recomp_ds",
+        "RUN_MODE",
+        "free_fly",
+        "gen1_modern_ui",
+        "POKEMON_FINAL",
+        "DRAMATIC_SHAPE",
+        "BATTLE_ART_VOXEL_FORK",
+        "DRAMALESS_SHAPE",
+        "potato_voxel"
+      ]
+    },
+    "popularity": {
+      "downloads": 55,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "g1rfloatingbattlehud": {
+    "requirements": {
+      "worksWith": [
+        "DRAMATIC_SHAPE",
+        "POTATO_VOXEL",
+        "VOXEL_ASCENDANT"
+      ]
+    },
+    "popularity": {
+      "downloads": 319,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "kanto-companion-mobile": {
+    "popularity": {
+      "downloads": 951,
+      "stars": 7,
+      "asOf": "2026-08-21"
+    }
+  },
+  "premier-ball-bonus": {
+    "popularity": {
+      "downloads": 49,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "secret-base": {
+    "popularity": {
+      "downloads": 112,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "project-celebi": {
+    "requirements": {
+      "permissions": [
+        "filesystem"
+      ],
+      "conflicts": [
+        "jj_hm_field_unlock",
+        "jj_auto_field_moves",
+        "evolution_man_gold"
+      ]
+    },
+    "popularity": {
+      "downloads": 130,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "trainer-talk": {
+    "popularity": {
+      "downloads": 342,
+      "stars": 3,
+      "asOf": "2026-08-21"
+    }
+  },
+  "move-type-fix": {
+    "requirements": {
+      "affectsLink": true
+    },
+    "popularity": {
+      "downloads": 291,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "species-rebalance": {
+    "requirements": {
+      "affectsLink": true,
+      "experimental": true
+    },
+    "popularity": {
+      "downloads": 37,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "stronger-trainers": {
+    "popularity": {
+      "downloads": 580,
+      "stars": 3,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gym-leader-shuffle": {
+    "requirements": {
+      "conflicts": [
+        "randomized_gym_challenge"
+      ]
+    },
+    "popularity": {
+      "downloads": 89,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "color-saturation": {
+    "popularity": {
+      "downloads": 55,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "pokeball-colorfix": {
+    "popularity": {
+      "downloads": 594,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "pokemove-colorfix": {
+    "popularity": {
+      "downloads": 383,
+      "stars": 2,
+      "asOf": "2026-08-21"
+    }
+  },
+  "billsbackyard": {
+    "requirements": {
+      "affectsLink": true
+    },
+    "popularity": {
+      "downloads": 64,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "kanto-ribbons": {
+    "requirements": {
+      "worksWith": [
+        "kanto_achievements",
+        "snag_quest",
+        "kanto_contests",
+        "happiness"
+      ]
+    },
+    "popularity": {
+      "downloads": 209,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-pokewalker": {
+    "requirements": {
+      "permissions": [
+        "network",
+        "steps"
+      ]
+    },
+    "popularity": {
+      "downloads": 2674,
+      "stars": 5,
+      "asOf": "2026-08-21"
+    }
+  },
+  "custom-player-sprite-switcher": {
+    "popularity": {
+      "downloads": 1216,
+      "stars": 5,
+      "asOf": "2026-08-21"
+    }
+  },
+  "reikos-enhancements-mod": {
+    "requirements": {
+      "conflicts": [
+        "running_shoes",
+        "exp_bar"
+      ]
+    },
+    "popularity": {
+      "downloads": 123,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "pkmn-g1r-holdtoscrollui-mod": {
+    "popularity": {
+      "downloads": 282,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "pkmn-g1r-pokelog": {
+    "requirements": {
+      "permissions": [
+        "filesystem"
+      ],
+      "conflicts": [
+        "playtime_extend"
+      ],
+      "worksWith": [
+        "metadata_system"
+      ]
+    },
+    "popularity": {
+      "downloads": 37,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "move-learn-plus": {
+    "popularity": {
+      "downloads": 369,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "sweet-share": {
+    "popularity": {
+      "downloads": 1724,
+      "stars": 2,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1-recomp-hd-grass": {
+    "requirements": {
+      "conflicts": [
+        "DRAMATIC_SHAPE_LGPE_FLOWER_OBJ_REPLACER_V4",
+        "DRAMATIC_SHAPE_LGPE_FLOWER_OBJ_REPLACER_V3",
+        "DRAMATIC_SHAPE_LGPE_FLOWER_OBJ_REPLACER_V2"
+      ],
+      "worksWith": [
+        "DRAMALESS_SHAPE",
+        "DRAMATIC_SHAPE"
+      ]
+    },
+    "popularity": {
+      "downloads": 659,
+      "stars": 2,
+      "asOf": "2026-08-21"
+    }
+  },
+  "stadium2-overworld-models": {
+    "requirements": {
+      "permissions": [
+        "filesystem"
+      ],
+      "conflicts": [
+        "STADIUM_OVERWORLD_MODELS"
+      ],
+      "worksWith": [
+        "red_3d_player"
+      ]
+    },
+    "popularity": {
+      "downloads": 6567,
+      "stars": 25,
+      "asOf": "2026-08-21"
+    }
+  },
+  "pokemon-polished-crystal": {
+    "popularity": {
+      "downloads": 224095,
+      "stars": 1620,
+      "asOf": "2026-08-21"
+    }
+  },
+  "pokemon-pure-rgb": {
+    "popularity": {
+      "downloads": 99172,
+      "stars": 809,
+      "asOf": "2026-08-21"
+    }
+  },
+  "pokemon-solus-rgb": {
+    "popularity": {
+      "downloads": 5866,
+      "stars": 92,
+      "asOf": "2026-08-21"
+    }
+  },
+  "pokemon-heart-and-soul": {
+    "popularity": {
+      "downloads": 260315,
+      "stars": 297,
+      "asOf": "2026-08-21"
+    }
+  },
+  "pokemon-crossroads": {
+    "popularity": {
+      "downloads": 15339,
+      "stars": 272,
+      "asOf": "2026-08-21"
+    }
+  },
+  "shin-pokemon": {
+    "popularity": {
+      "downloads": 23711,
+      "stars": 317,
+      "asOf": "2026-08-21"
+    }
+  },
+  "pokemon-orange": {
+    "popularity": {
+      "downloads": 5416,
+      "stars": 220,
+      "asOf": "2026-08-21"
+    }
+  },
+  "pokemon-crystal-legacy": {
+    "popularity": {
+      "downloads": 38542,
+      "stars": 241,
+      "asOf": "2026-08-21"
+    }
+  },
+  "pokemon-yellow-legacy": {
+    "popularity": {
+      "downloads": 52852,
+      "stars": 292,
+      "asOf": "2026-08-21"
+    }
+  },
+  "kanto-expansion-pak": {
+    "popularity": {
+      "downloads": 15740,
+      "stars": 128,
+      "asOf": "2026-08-21"
+    }
+  },
+  "pokemon-yellow-kaizo": {
+    "popularity": {
+      "downloads": 65,
+      "stars": 5,
+      "asOf": "2026-08-21"
+    }
+  },
+  "static-yellow": {
+    "popularity": {
+      "downloads": 1631,
+      "stars": 31,
+      "asOf": "2026-08-21"
+    }
+  },
+  "green-sgb-palette": {
+    "popularity": {
+      "downloads": 39,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "mute-low-hp-alarm": {
+    "popularity": {
+      "downloads": 589,
+      "stars": 2,
+      "asOf": "2026-08-21"
+    }
+  },
+  "fade-overlay-fix": {
+    "popularity": {
+      "downloads": 91,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "bag-stock-preview": {
+    "popularity": {
+      "downloads": 146,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "fishing-mini-game": {
+    "popularity": {
+      "downloads": 168,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "mew-glitch-mod": {
+    "popularity": {
+      "downloads": 167,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "oak-brief": {
+    "popularity": {
+      "downloads": 981,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "anytime-rename": {
+    "popularity": {
+      "downloads": 335,
+      "stars": 2,
+      "asOf": "2026-08-21"
+    }
+  },
+  "additional-story-healers": {
+    "popularity": {
+      "downloads": 503,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "dramaticshapevoxelmod": {
+    "popularity": {
+      "downloads": 62040,
+      "stars": 166,
+      "asOf": "2026-08-21"
+    }
+  },
+  "bookers-heaven": {
+    "popularity": {
+      "downloads": 3448,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "candy-jar": {
+    "popularity": {
+      "downloads": 322,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-mod-cheat-engine": {
+    "popularity": {
+      "downloads": 550,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "leaf": {
+    "popularity": {
+      "downloads": 4908,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "critical-capture": {
+    "popularity": {
+      "downloads": 1038,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "pokemon-blau-deutsch-mod": {
+    "popularity": {
+      "downloads": 612,
+      "stars": 3,
+      "asOf": "2026-08-21"
+    }
+  },
+  "pokemon-gelb-deutsch-mod": {
+    "popularity": {
+      "downloads": 796,
+      "stars": 3,
+      "asOf": "2026-08-21"
+    }
+  },
+  "pokemon-rot-deutsch-mod": {
+    "popularity": {
+      "downloads": 1741,
+      "stars": 7,
+      "asOf": "2026-08-21"
+    }
+  },
+  "dev-hook-inspector": {
+    "popularity": {
+      "downloads": 106,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "double-battles": {
+    "popularity": {
+      "downloads": 1086,
+      "stars": 2,
+      "asOf": "2026-08-21"
+    }
+  },
+  "dramaticshapevoxelmod-latest": {
+    "popularity": {
+      "downloads": 12611,
+      "stars": 70,
+      "asOf": "2026-08-21"
+    }
+  },
+  "dramatic-sky-ride": {
+    "popularity": {
+      "downloads": 5768,
+      "stars": 6,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-dutch-generator": {
+    "popularity": {
+      "downloads": 182,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen-1-recomp-spanish": {
+    "popularity": {
+      "downloads": 5212,
+      "stars": 15,
+      "asOf": "2026-08-21"
+    }
+  },
+  "exp-share": {
+    "popularity": {
+      "downloads": 21286,
+      "stars": 17,
+      "asOf": "2026-08-21"
+    }
+  },
+  "free-fly": {
+    "popularity": {
+      "downloads": 6831,
+      "stars": 10,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-gen2-dex": {
+    "popularity": {
+      "downloads": 838,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1-modern-ui": {
+    "popularity": {
+      "downloads": 30804,
+      "stars": 43,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-voiceactingmod": {
+    "popularity": {
+      "downloads": 1860,
+      "stars": 2,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-mod-intro-bypass": {
+    "popularity": {
+      "downloads": 195,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "jp-green-poketto-monsuta-midori": {
+    "popularity": {
+      "downloads": 286,
+      "stars": 2,
+      "asOf": "2026-08-21"
+    }
+  },
+  "kanto-companion-lite": {
+    "popularity": {
+      "downloads": 1647,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "kanto-gen1-dive": {
+    "popularity": {
+      "downloads": 314,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "kanto-dynamic-weather": {
+    "popularity": {
+      "downloads": 1915,
+      "stars": 2,
+      "asOf": "2026-08-21"
+    }
+  },
+  "modern-type-framework": {
+    "popularity": {
+      "downloads": 31,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "mods-hotkeys": {
+    "popularity": {
+      "downloads": 856,
+      "stars": 3,
+      "asOf": "2026-08-21"
+    }
+  },
+  "relearn-moves": {
+    "popularity": {
+      "downloads": 3184,
+      "stars": 2,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-npc-bubbles": {
+    "popularity": {
+      "downloads": 3635,
+      "stars": 7,
+      "asOf": "2026-08-21"
+    }
+  },
+  "instant-heal-pc-rest": {
+    "popularity": {
+      "downloads": 1354,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "nuzlocke": {
+    "popularity": {
+      "downloads": 4620,
+      "stars": 7,
+      "asOf": "2026-08-21"
+    }
+  },
+  "potato-voxel": {
+    "popularity": {
+      "downloads": 14325,
+      "stars": 53,
+      "asOf": "2026-08-21"
+    }
+  },
+  "qol-toggles": {
+    "popularity": {
+      "downloads": 13391,
+      "stars": 4,
+      "asOf": "2026-08-21"
+    }
+  },
+  "pokemon-gen1-recomp-mod-qol": {
+    "popularity": {
+      "downloads": 51044,
+      "stars": 83,
+      "asOf": "2026-08-21"
+    }
+  },
+  "pokemonrecomprandomizer": {
+    "popularity": {
+      "downloads": 5008,
+      "stars": 6,
+      "asOf": "2026-08-21"
+    }
+  },
+  "flyingoverhaul": {
+    "popularity": {
+      "downloads": 435,
+      "stars": 3,
+      "asOf": "2026-08-21"
+    }
+  },
+  "rbymmomod": {
+    "popularity": {
+      "downloads": 4634,
+      "stars": 14,
+      "asOf": "2026-08-21"
+    }
+  },
+  "recomp-cartographer": {
+    "popularity": {
+      "downloads": 114,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "recomp-rider": {
+    "popularity": {
+      "downloads": 595,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "silph-scope-network": {
+    "popularity": {
+      "downloads": 284,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "silphnet": {
+    "popularity": {
+      "downloads": 299,
+      "stars": 5,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1mod-simple-girl": {
+    "popularity": {
+      "downloads": 183,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "surround-audio": {
+    "popularity": {
+      "downloads": 8371,
+      "stars": 9,
+      "asOf": "2026-08-21"
+    }
+  },
+  "terrarium": {
+    "popularity": {
+      "downloads": 6778,
+      "stars": 2,
+      "asOf": "2026-08-21"
+    }
+  },
+  "traduccion-es": {
+    "popularity": {
+      "downloads": 182,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "trad-fr-extended": {
+    "popularity": {
+      "downloads": 559,
+      "stars": 2,
+      "asOf": "2026-08-21"
+    }
+  },
+  "pokemon-gen1-recomp-mod-frqc": {
+    "popularity": {
+      "downloads": 129,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "trainer-rematch": {
+    "popularity": {
+      "downloads": 6716,
+      "stars": 5,
+      "asOf": "2026-08-21"
+    }
+  },
+  "unique-menu-icons": {
+    "popularity": {
+      "downloads": 12506,
+      "stars": 26,
+      "asOf": "2026-08-21"
+    }
+  },
+  "useful-bag": {
+    "popularity": {
+      "downloads": 13572,
+      "stars": 10,
+      "asOf": "2026-08-21"
+    }
+  },
+  "useful-dex": {
+    "popularity": {
+      "downloads": 7099,
+      "stars": 6,
+      "asOf": "2026-08-21"
+    }
+  },
+  "useful-marts": {
+    "popularity": {
+      "downloads": 1883,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "useful-move-info": {
+    "popularity": {
+      "downloads": 8654,
+      "stars": 3,
+      "asOf": "2026-08-21"
+    }
+  },
+  "versaovermelha": {
+    "popularity": {
+      "downloads": 4336,
+      "stars": 20,
+      "asOf": "2026-08-21"
+    }
+  },
+  "whos-that-trainer": {
+    "popularity": {
+      "downloads": 1442,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-widescreen-battle-intro": {
+    "popularity": {
+      "downloads": 10616,
+      "stars": 9,
+      "asOf": "2026-08-21"
+    }
+  },
+  "wild-skies": {
+    "popularity": {
+      "downloads": 9588,
+      "stars": 14,
+      "asOf": "2026-08-21"
+    }
+  },
+  "overworld-spawn-mod": {
+    "popularity": {
+      "downloads": 63200,
+      "stars": 92,
+      "asOf": "2026-08-21"
+    }
+  },
+  "yellow-legacy-changes": {
+    "popularity": {
+      "downloads": 5671,
+      "stars": 6,
+      "asOf": "2026-08-21"
+    }
+  },
+  "dramaless-shape": {
+    "popularity": {
+      "downloads": 19989,
+      "stars": 109,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen-3-inspired-ui-overhaul-for-gen1recomp": {
+    "popularity": {
+      "downloads": 568,
+      "stars": 9,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gameshark": {
+    "popularity": {
+      "downloads": 3665,
+      "stars": 13,
+      "asOf": "2026-08-21"
+    }
+  },
+  "pokemon-bank": {
+    "popularity": {
+      "downloads": 2448,
+      "stars": 9,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-allgen-kaizo": {
+    "popularity": {
+      "downloads": 854,
+      "stars": 6,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recompmegaevolution": {
+    "popularity": {
+      "downloads": 660,
+      "stars": 5,
+      "asOf": "2026-08-21"
+    }
+  },
+  "airivials": {
+    "popularity": {
+      "downloads": 1033,
+      "stars": 4,
+      "asOf": "2026-08-21"
+    }
+  },
+  "crystal-animated-sprites-with-shiny-visuals": {
+    "popularity": {
+      "downloads": 13229,
+      "stars": 59,
+      "asOf": "2026-08-21"
+    }
+  },
+  "more-text-speed-options-gen1recomp": {
+    "popularity": {
+      "downloads": 85,
+      "stars": 3,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-screen-effects": {
+    "popularity": {
+      "downloads": 105,
+      "stars": 3,
+      "asOf": "2026-08-21"
+    }
+  },
+  "thorkdev-gen1recomp-running-shoes": {
+    "popularity": {
+      "downloads": 730,
+      "stars": 3,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen-3-inspired-ui-overhaul-for-gen1recomp-v1-1-w-updater": {
+    "popularity": {
+      "downloads": 2863,
+      "stars": 6,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-radio": {
+    "popularity": {
+      "downloads": 83,
+      "stars": 2,
+      "asOf": "2026-08-21"
+    }
+  },
+  "tloz-recomp-mania": {
+    "popularity": {
+      "downloads": 143,
+      "stars": 2,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-battle-dex": {
+    "popularity": {
+      "downloads": 209,
+      "stars": 2,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-national-dex": {
+    "popularity": {
+      "downloads": 305,
+      "stars": 2,
+      "asOf": "2026-08-21"
+    }
+  },
+  "mods-gen1recomp": {
+    "popularity": {
+      "downloads": 19,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-mods": {
+    "popularity": {
+      "downloads": 19,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "choose-your-hero-mod-gen1recomp": {
+    "popularity": {
+      "downloads": 552,
+      "stars": 3,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1-cheat-menu": {
+    "popularity": {
+      "downloads": 311,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp": {
+    "popularity": {
+      "downloads": 8,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-polish": {
+    "popularity": {
+      "downloads": 5,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-translation-jp-mod": {
+    "popularity": {
+      "downloads": 43,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "pkmn-g1r-gender-mod": {
+    "popularity": {
+      "downloads": 345,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "dynamax-4-recomp": {
+    "popularity": {
+      "downloads": 114,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "autofire": {
+    "popularity": {
+      "downloads": 245,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "battle-spees-mod": {
+    "popularity": {
+      "downloads": 37,
+      "stars": 2,
+      "asOf": "2026-08-21"
+    }
+  },
+  "wide-menus": {
+    "popularity": {
+      "downloads": 87,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "more-gymz": {
+    "popularity": {
+      "downloads": 31,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-finnish-mod": {
+    "popularity": {
+      "downloads": 3,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-italian": {
+    "popularity": {
+      "downloads": 106,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "evolve-in-battle": {
+    "popularity": {
+      "downloads": 1382,
+      "stars": 3,
+      "asOf": "2026-08-21"
+    }
+  },
+  "versaocristal-ptbr": {
+    "popularity": {
+      "downloads": 25,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "musicreplacementmod": {
+    "popularity": {
+      "downloads": 1737,
+      "stars": 11,
+      "asOf": "2026-08-21"
+    }
+  },
+  "cryreplacementmod": {
+    "popularity": {
+      "downloads": 1357,
+      "stars": 10,
+      "asOf": "2026-08-21"
+    }
+  },
+  "textkerninggen1recomp": {
+    "popularity": {
+      "downloads": 45,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "dvcolors-2-1-0-pkmn-gen1-recomp": {
+    "popularity": {
+      "downloads": 174,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "kanto-reforged": {
+    "popularity": {
+      "downloads": 4841,
+      "stars": 13,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-better-battles": {
+    "popularity": {
+      "downloads": 125,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "anime-realism": {
+    "popularity": {
+      "downloads": 782,
+      "stars": 3,
+      "asOf": "2026-08-21"
+    }
+  },
+  "what-the-heck": {
+    "popularity": {
+      "downloads": 36,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "pallet-chaos": {
+    "popularity": {
+      "downloads": 56,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-autosave": {
+    "popularity": {
+      "downloads": 16,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen-2-save-screen-gen1recomp": {
+    "popularity": {
+      "downloads": 10,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-dex-pages": {
+    "popularity": {
+      "downloads": 141,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-quick-save": {
+    "popularity": {
+      "downloads": 91,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "rbyrecomp-instant-load": {
+    "popularity": {
+      "downloads": 7,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1-recomp-mods": {
+    "popularity": {
+      "downloads": 12799,
+      "stars": 22,
+      "asOf": "2026-08-21"
+    }
+  },
+  "pokesurvive": {
+    "popularity": {
+      "downloads": 357,
+      "stars": 2,
+      "asOf": "2026-08-21"
+    }
+  },
+  "colosseum-inspired-ui-overhaul-v-1-0-0": {
+    "popularity": {
+      "downloads": 1225,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen-3-inspired-ui-overhaul-for-gen1recomp-v2-0": {
+    "popularity": {
+      "downloads": 299,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-phase-step": {
+    "popularity": {
+      "downloads": 56,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-portuguese-ui": {
+    "popularity": {
+      "downloads": 8,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recompspaceworldsprites": {
+    "popularity": {
+      "downloads": 70,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "item-randomizer": {
+    "popularity": {
+      "downloads": 80,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "starter-picker": {
+    "popularity": {
+      "downloads": 236,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "fair-battles": {
+    "popularity": {
+      "downloads": 137,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "kanto-life-mod": {
+    "popularity": {
+      "downloads": 1495,
+      "stars": 5,
+      "asOf": "2026-08-21"
+    }
+  },
+  "betterback": {
+    "popularity": {
+      "downloads": 232,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "pocketmonsterspc": {
+    "popularity": {
+      "downloads": 21,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "stadium-cries": {
+    "popularity": {
+      "downloads": 271,
+      "stars": 4,
+      "asOf": "2026-08-21"
+    }
+  },
+  "versaodourada": {
+    "popularity": {
+      "downloads": 135,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "itemfinder-plus": {
+    "popularity": {
+      "downloads": 395,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "fast-pokemon-center": {
+    "popularity": {
+      "downloads": 22,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "the-world": {
+    "popularity": {
+      "downloads": 425,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "weather-fx": {
+    "popularity": {
+      "downloads": 5836,
+      "stars": 11,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen-1-3d-npc-s": {
+    "popularity": {
+      "downloads": 439,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen2-cheat-menu": {
+    "popularity": {
+      "downloads": 230,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "stadium-model-viewer-for-pokedex": {
+    "popularity": {
+      "downloads": 1207,
+      "stars": 3,
+      "asOf": "2026-08-21"
+    }
+  },
+  "kanto-ascendant": {
+    "popularity": {
+      "downloads": 7252,
+      "stars": 13,
+      "asOf": "2026-08-21"
+    }
+  },
+  "pokemon-quick-select": {
+    "popularity": {
+      "downloads": 235,
+      "stars": 2,
+      "asOf": "2026-08-21"
+    }
+  },
+  "jp-anime-opening-title": {
+    "popularity": {
+      "downloads": 46,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "luigi-in-gen1-recomp": {
+    "popularity": {
+      "downloads": 88,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "tabbed-options": {
+    "popularity": {
+      "downloads": 101,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "throw-ball-hotkey": {
+    "popularity": {
+      "downloads": 336,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recompdeltas": {
+    "popularity": {
+      "downloads": 44,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "kep-recomp-port": {
+    "popularity": {
+      "downloads": 127,
+      "stars": 2,
+      "asOf": "2026-08-21"
+    }
+  },
+  "dynamax-pokemon-league": {
+    "popularity": {
+      "downloads": 63,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gimmicks-menu": {
+    "popularity": {
+      "downloads": 98,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen-2-radomizer-plus": {
+    "popularity": {
+      "downloads": 154,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-effective-markers": {
+    "popularity": {
+      "downloads": 105,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-happiness": {
+    "popularity": {
+      "downloads": 78,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-mystery-gift": {
+    "popularity": {
+      "downloads": 135,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1-recomp-norwegian-translate": {
+    "popularity": {
+      "downloads": 2,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "wild-dv-display": {
+    "popularity": {
+      "downloads": 47,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "custom-video-intro": {
+    "popularity": {
+      "downloads": 10,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "easy-custom-music": {
+    "popularity": {
+      "downloads": 121,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "classic-ironmon-kaizo": {
+    "popularity": {
+      "downloads": 27,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "kaizo-ultimate": {
+    "popularity": {
+      "downloads": 22,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "universalrandomizer": {
+    "popularity": {
+      "downloads": 12,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "windwrecker-mew-under-the-truck": {
+    "popularity": {
+      "downloads": 747,
+      "stars": 4,
+      "asOf": "2026-08-21"
+    }
+  },
+  "pkmn-g1r-immersive-bicycle-mod": {
+    "popularity": {
+      "downloads": 155,
+      "stars": 3,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1recomp-bag-pc-999": {
+    "popularity": {
+      "downloads": 16,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "can-always-escape": {
+    "popularity": {
+      "downloads": 67,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "enemy-hp": {
+    "popularity": {
+      "downloads": 559,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "help-story-guide": {
+    "popularity": {
+      "downloads": 284,
+      "stars": 2,
+      "asOf": "2026-08-21"
+    }
+  },
+  "press-b-to-escape-wild-encounters": {
+    "popularity": {
+      "downloads": 145,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "professor-oak-dv-stat-evaluation": {
+    "popularity": {
+      "downloads": 111,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "special-stat-split": {
+    "popularity": {
+      "downloads": 753,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "steel-and-or-fairy-and-or-typing-charts": {
+    "popularity": {
+      "downloads": 567,
+      "stars": 1,
+      "asOf": "2026-08-21"
+    }
+  },
+  "tap-to-move": {
+    "popularity": {
+      "downloads": 407,
+      "stars": 2,
+      "asOf": "2026-08-21"
+    }
+  },
+  "trainers-let-you-choose-lead-pokemon": {
+    "popularity": {
+      "downloads": 715,
+      "stars": 3,
+      "asOf": "2026-08-21"
+    }
+  },
+  "gen1-pt-br-mod": {
+    "popularity": {
+      "downloads": 152,
+      "stars": 0,
+      "asOf": "2026-08-21"
+    }
+  },
+  "3d-pokemon-sprites": {
+    "popularity": {
+      "downloads": 6013,
+      "stars": 25,
+      "asOf": "2026-08-21"
+    }
+  }
+}
