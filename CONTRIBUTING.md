@@ -33,6 +33,29 @@ them down:
   unnoticed. If that ever happens on purpose, the test is the thing to
   reconsider, and it says so.
 
+- `src/data/enrichment.json`, written by `scripts/enrich-catalog.mjs`, is
+  merged onto every entry as `requirements` and `popularity`. Both decode into
+  named Swift types over there, so **renaming a key inside either block empties
+  it on a player's phone without failing anything here**. Two of its rules are
+  load-bearing and neither is obvious from the JSON:
+
+  - **`popularity` is omitted, never zeroed**, for a repo that publishes no
+    release assets. The app sorts unmeasured entries below a measured zero on
+    purpose, and `DiscoverPublishedManifestTests` asserts that at least one
+    published entry still has no `popularity` block at all. Start writing
+    `downloads: 0` for unmeasured repos and that test fails, correctly: it
+    would rank "we never looked" as "nobody wanted it".
+  - **`requirements.permissions` never contains `engine_internals`.** Every mod
+    that declares any permission declares that one, so publishing it would put
+    a line on every detail screen that distinguishes nothing.
+
+  Re-run it with `npm run enrich` (it needs `GITHUB_TOKEN`; it refuses to run
+  without one rather than publish a partial pass, since absence is meaningful
+  here). It asserts that it read a manifest from **every** published release
+  and fails otherwise: ten live archives are Windows-made and store
+  `MOD\manifest.json`, and a reader that loses them still looks like it
+  succeeded.
+
 `manifestPath` exists for the same reason: the app asserts that nothing
 published sits deeper than its own installer will look
 (`RecompModLibrary.maxManifestDepth`, mirrored here as `maxManifestDepth` in
