@@ -10,6 +10,7 @@ export default defineConfig({
       input: {
         home: resolve(import.meta.dirname, "index.html"),
         library: resolve(import.meta.dirname, "library.html"),
+        logo: resolve(import.meta.dirname, "logo.html"),
       },
     },
   },

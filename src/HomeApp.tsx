@@ -214,7 +214,7 @@ function HomeApp() {
         <div className="home-footer-top">
           <a className="home-brand" href="#top"><img src="assets/phosphor/app-icon.png" alt="" /><span>phosphor<i>_</i></span></a>
           <p>Game Boy on Apple, with better controls and just enough glow.</p>
-          <div><a href={appStoreUrl}>App Store</a><a href="library.html">Mod library</a><a href="https://www.squatchcraft.com/phosphor.html">SquatchCraft</a></div>
+          <div><a href={appStoreUrl}>App Store</a><a href="library.html">Mod library</a><a href="logo.html">Logo</a><a href="https://www.squatchcraft.com/phosphor.html">SquatchCraft</a></div>
         </div>
         <div className="home-footer-bottom">
           <span>© 2026 SquatchCraft LLC</span>
