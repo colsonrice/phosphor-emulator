@@ -432,7 +432,19 @@ const EXCLUDED = {
 /// Update these when the app takes an engine bump. A stale value here does not
 /// fail loudly: it publishes mods whose own manifest rules them out, and the
 /// player gets a card that installs, switches on, and never loads.
-const ENGINE_VERSIONS = { gen1recomp: "0.2.14", gen2recomp: "0.7.6" };
+/// The engines Phosphor ships, and the version of each.
+///
+/// Gen2Recomped is gone from this table because it is gone from the app; a row
+/// for it is refused outright by build-manifest.mjs now, so leaving a version
+/// here would let the survey draft something the build then rejects, and the
+/// two would disagree about why.
+///
+/// **This number has been wrong three times.** It is unreadable from here and
+/// unenforceable from the app repo, so it goes stale every time somebody bumps
+/// the pin, and it fails in both directions when it does: it withholds mods
+/// the shipped engine can run and publishes mods it cannot. Check it against
+/// `LoveCore/GEN1RECOMP_VERSION` whenever the pin moves.
+const ENGINE_VERSIONS = { gen1recomp: "0.2.19" };
 
 /// Enough semver to read a `game_version` range.
 ///
@@ -575,10 +587,16 @@ function draftRows(results) {
     // that installs and never loads. Checked per channel, because the two
     // engines version independently.
     const channels = channelsFor(manifest)
+      // An engine we still ship, and one whose version the mod accepts. The
+      // first half used to be implicit in the table having a key for every
+      // channel `channelsFor` can return; it no longer does, and an undefined
+      // version reaching `satisfies` is not a filter, it is a coin toss.
+      .filter((channel) => ENGINE_VERSIONS[channel])
       .filter((channel) => satisfies(ENGINE_VERSIONS[channel], manifest.game_version));
     if (channels.length === 0) {
       skipped.push({ repo: r.repo,
-        why: `needs engine ${manifest.game_version}, and we ship gen1recomp ${ENGINE_VERSIONS.gen1recomp} / gen2recomp ${ENGINE_VERSIONS.gen2recomp}` });
+        why: `needs engine ${manifest.game_version}, and we ship `
+          + Object.entries(ENGINE_VERSIONS).map(([k, v]) => `${k} ${v}`).join(" / ") });
       continue;
     }
     rows.push({
