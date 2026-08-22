@@ -14,7 +14,7 @@
 //   node scripts/build-manifest.mjs --check   fail if the committed file is stale
 
 import { readFile, writeFile, mkdir } from "node:fs/promises";
-import { engineFacet } from "./engine-family.mjs";
+import { engineFacet, ENGINE_VERSIONS } from "./engine-family.mjs";
 import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -338,7 +338,25 @@ export async function buildManifest() {
     .sort()
     .at(-1) ?? "";
 
-  return { schemaVersion: 1, generated, sections: SECTIONS, categories: CATEGORIES, entries };
+  // The engine versions every `game_version` range above was evaluated
+  // against, keyed by the APP's engine id the way `entry.engine.id` is,
+  // because the app is who reads this.
+  //
+  // Published because the constant behind it went stale three times and
+  // nothing could notice: it is unreadable from the app repo and
+  // unenforceable from this one, and it is wrong in both directions when it
+  // drifts — withholding mods the shipped engine can run, publishing mods it
+  // cannot. The app compares this against the ENGINE_VERSION sidecar in its
+  // own payload and fails its suite when they disagree, which puts the alarm
+  // on the side that knows which engine is actually running.
+  //
+  // No schemaVersion bump: this is an added field, and a build that has never
+  // heard of it ignores it and behaves exactly as before.
+  const engines = Object.entries(ENGINE_VERSIONS)
+    .filter(([channel]) => ENGINE_IDS[channel])
+    .map(([channel, version]) => ({ id: ENGINE_IDS[channel], catalogedAgainst: version }));
+
+  return { schemaVersion: 1, generated, engines, sections: SECTIONS, categories: CATEGORIES, entries };
 }
 
 const serialise = (manifest) => JSON.stringify(manifest, null, 2) + "\n";

@@ -19,6 +19,21 @@
 // string naming Gen 2 on a row whose compatibility says gen1recomp is a typo,
 // and it stops the build.
 
+/// The engine versions this catalog's `game_version` ranges were evaluated
+/// against — the versions Phosphor actually ships.
+///
+/// Lives here rather than in survey-mods.mjs because two callers need it and
+/// they need it to agree: the survey applies it as a gate, and
+/// build-manifest.mjs publishes it so the app can tell whether the catalog it
+/// fetched was built for the engine it is running. It was a private constant
+/// in the survey and went stale three times, invisibly, because nothing that
+/// could notice ever saw it.
+///
+/// Check against `LoveCore/GEN1RECOMP_VERSION` in the app repo whenever the
+/// pin moves. The app's own suite fails when these disagree now, which is the
+/// point of publishing it.
+export const ENGINE_VERSIONS = { gen1recomp: "0.2.19" };
+
 /// The two families, spelled the way the APP spells them.
 ///
 /// The site says `gen2recomp` and the app says `gen2recomped`, which is a

@@ -65,6 +65,28 @@ test("the fan-out is dormant while one engine ships, and ids carry no suffix", a
   );
 });
 
+test("the manifest publishes the engine version it was gated against", async () => {
+  const { entries, engines } = await buildManifest();
+
+  assert.ok(Array.isArray(engines) && engines.length > 0,
+            "the app has nothing to compare against without this");
+  for (const engine of engines) {
+    assert.match(engine.catalogedAgainst, /^\d+\.\d+\.\d+(-\S+)?$/,
+                 `${engine.id}: catalogedAgainst must be a version the app can parse`);
+  }
+
+  // Every engine an entry claims must be declared, or the app can check the
+  // gate for one engine while installing under another. This is the half that
+  // would go quiet on its own: adding a second engine is exactly the moment
+  // somebody forgets the table, and the symptom is a gate that passes because
+  // it was never consulted.
+  const declared = new Set(engines.map((e) => e.id));
+  const used = new Set(entries.map((e) => e.engine?.id).filter(Boolean));
+  for (const id of used) {
+    assert.ok(declared.has(id), `entries install into ${id}, which engines[] does not declare`);
+  }
+});
+
 test("no retired engine reaches the manifest", async () => {
   const { entries } = await buildManifest();
   // An indexed listing carries `engine.family` but no `engine.id` — there is
