@@ -1,6 +1,12 @@
 {
   "schemaVersion": 1,
   "generated": "2026-08-21",
+  "engines": [
+    {
+      "id": "gen1recomp",
+      "catalogedAgainst": "0.2.19"
+    }
+  ],
   "sections": [
     {
       "id": "luaMods",

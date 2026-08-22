@@ -25,7 +25,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { promisify } from "node:util";
 
-import { auditTargets, engineFacet } from "./engine-family.mjs";
+import { auditTargets, engineFacet, ENGINE_VERSIONS } from "./engine-family.mjs";
 
 const run = promisify(execFile);
 
@@ -432,19 +432,6 @@ const EXCLUDED = {
 /// Update these when the app takes an engine bump. A stale value here does not
 /// fail loudly: it publishes mods whose own manifest rules them out, and the
 /// player gets a card that installs, switches on, and never loads.
-/// The engines Phosphor ships, and the version of each.
-///
-/// Gen2Recomped is gone from this table because it is gone from the app; a row
-/// for it is refused outright by build-manifest.mjs now, so leaving a version
-/// here would let the survey draft something the build then rejects, and the
-/// two would disagree about why.
-///
-/// **This number has been wrong three times.** It is unreadable from here and
-/// unenforceable from the app repo, so it goes stale every time somebody bumps
-/// the pin, and it fails in both directions when it does: it withholds mods
-/// the shipped engine can run and publishes mods it cannot. Check it against
-/// `LoveCore/GEN1RECOMP_VERSION` whenever the pin moves.
-const ENGINE_VERSIONS = { gen1recomp: "0.2.19" };
 
 /// Enough semver to read a `game_version` range.
 ///
