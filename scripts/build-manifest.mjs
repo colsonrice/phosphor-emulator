@@ -302,6 +302,16 @@ function enrich(entry, table) {
     ...entry,
     ...(enriched.requirements ? { requirements: enriched.requirements } : {}),
     ...(enriched.popularity ? { popularity: enriched.popularity } : {}),
+    // The mod's own logo, where its author has adopted the Logo.PNG
+    // convention. `screenshots` stays whatever the row declared: a logo is not
+    // a screenshot, and feeding one to the detail screen's gallery would
+    // stretch a wordmark across a viewport sized for gameplay.
+    ...(enriched.icon ? { icon: enriched.icon } : {}),
+    // Only when the row declared none of its own: a hand-picked screenshot in
+    // src/data beats one scraped out of a README, and the scrape must never
+    // quietly replace an editor's choice.
+    ...(enriched.screenshots && !entry.screenshots?.length
+        ? { screenshots: enriched.screenshots } : {}),
   };
 }
 

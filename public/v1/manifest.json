@@ -104,9 +104,9 @@
         ]
       },
       "popularity": {
-        "downloads": 106,
+        "downloads": 119,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -154,9 +154,9 @@
         ]
       },
       "popularity": {
-        "downloads": 262,
+        "downloads": 283,
         "stars": 2,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -178,7 +178,26 @@
         "ART"
       ],
       "target": "Gen1Recomp · R/B/Y",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/anxiousintrovert/StadiumBattleFX/main/promo/gifs/01_normal_hyper_beam.gif"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/anxiousintrovert/StadiumBattleFX/main/promo/gifs/02_fighting_submission.gif"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/anxiousintrovert/StadiumBattleFX/main/promo/gifs/03_flying_wing_attack.gif"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/anxiousintrovert/StadiumBattleFX/main/promo/gifs/04_poison_acid.gif"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/anxiousintrovert/StadiumBattleFX/main/promo/gifs/05_ground_bone_club.gif"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/anxiousintrovert/StadiumBattleFX/main/promo/gifs/06_rock_rock_slide.gif"
+        }
+      ],
       "download": {
         "url": "https://github.com/anxiousintrovert/StadiumBattleFX/releases/download/v2.1.7/STADIUM_BATTLE_FX-2.1.7.zip",
         "sizeBytes": 359093,
@@ -211,9 +230,9 @@
         ]
       },
       "popularity": {
-        "downloads": 13219,
+        "downloads": 13503,
         "stars": 20,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -255,9 +274,9 @@
         ]
       },
       "popularity": {
-        "downloads": 1224,
+        "downloads": 1261,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -296,9 +315,9 @@
       },
       "modID": "red_ptbr_golpes_ingles",
       "popularity": {
-        "downloads": 56,
+        "downloads": 59,
         "stars": 2,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -334,9 +353,9 @@
       },
       "modID": "button-shortcuts",
       "popularity": {
-        "downloads": 45,
+        "downloads": 52,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -372,9 +391,9 @@
       },
       "modID": "quickmap",
       "popularity": {
-        "downloads": 86,
+        "downloads": 93,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -410,9 +429,9 @@
       },
       "modID": "rename-character",
       "popularity": {
-        "downloads": 30,
+        "downloads": 31,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -435,7 +454,26 @@
         "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/mistermiracle3036/Too-Many-Balls/main/docs/mart-shelf.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/mistermiracle3036/Too-Many-Balls/main/docs/premier-bonus.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/mistermiracle3036/Too-Many-Balls/main/docs/silph-broke.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/mistermiracle3036/Too-Many-Balls/main/docs/kurt-case1.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/mistermiracle3036/Too-Many-Balls/main/docs/kurt-case2.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/mistermiracle3036/Too-Many-Balls/main/docs/craft-made.png"
+        }
+      ],
       "download": {
         "url": "https://github.com/mistermiracle3036/Too-Many-Balls/releases/download/v0.6.1/kanto_balls-0.6.1.zip",
         "sizeBytes": 67047,
@@ -458,9 +496,9 @@
         ]
       },
       "popularity": {
-        "downloads": 1180,
+        "downloads": 1190,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -496,9 +534,9 @@
       },
       "modID": "erilab_bottomless_bag",
       "popularity": {
-        "downloads": 601,
+        "downloads": 610,
         "stars": 6,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -541,9 +579,9 @@
         ]
       },
       "popularity": {
-        "downloads": 12784,
+        "downloads": 12977,
         "stars": 20,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -579,9 +617,9 @@
       },
       "modID": "all_pokemon_catchable_151_mod",
       "popularity": {
-        "downloads": 21851,
+        "downloads": 22073,
         "stars": 75,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -626,9 +664,9 @@
         ]
       },
       "popularity": {
-        "downloads": 1628,
+        "downloads": 1677,
         "stars": 4,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -677,9 +715,9 @@
         ]
       },
       "popularity": {
-        "downloads": 2392,
+        "downloads": 2463,
         "stars": 4,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -715,9 +753,9 @@
       },
       "modID": "dex_radar",
       "popularity": {
-        "downloads": 698,
+        "downloads": 726,
         "stars": 5,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -753,9 +791,9 @@
       },
       "modID": "no_exp_challenge",
       "popularity": {
-        "downloads": 231,
+        "downloads": 235,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -791,9 +829,9 @@
       },
       "modID": "ACCESS_PC_ANYWHERE",
       "popularity": {
-        "downloads": 6205,
+        "downloads": 6306,
         "stars": 6,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -830,9 +868,9 @@
       },
       "modID": "auto_battle",
       "popularity": {
-        "downloads": 881,
+        "downloads": 892,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -869,9 +907,9 @@
       },
       "modID": "bag_sort",
       "popularity": {
-        "downloads": 672,
+        "downloads": 698,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -907,9 +945,9 @@
       },
       "modID": "MOVE_MATCHUP",
       "popularity": {
-        "downloads": 5918,
+        "downloads": 5982,
         "stars": 5,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -932,7 +970,11 @@
         "UI"
       ],
       "target": "Gen1Recomp",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/eduardocalafell/gen1recomp-better-battle-ui/main/screenshot.png"
+        }
+      ],
       "download": {
         "url": "https://github.com/eduardocalafell/gen1recomp-better-battle-ui/releases/download/v0.2.1/better_battle_ui-0.2.1.zip",
         "sizeBytes": 10101,
@@ -951,9 +993,9 @@
         ]
       },
       "popularity": {
-        "downloads": 2656,
+        "downloads": 2750,
         "stars": 3,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -976,7 +1018,11 @@
         "QOL"
       ],
       "target": "Gen1Recomp",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/eduardocalafell/gen1recomp-bike-anywhere/main/screenshot.png"
+        }
+      ],
       "download": {
         "url": "https://github.com/eduardocalafell/gen1recomp-bike-anywhere/releases/download/v0.1.1/bike_anywhere-0.1.1.zip",
         "sizeBytes": 7705,
@@ -990,9 +1036,9 @@
       },
       "modID": "bike_anywhere",
       "popularity": {
-        "downloads": 366,
+        "downloads": 375,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -1014,7 +1060,26 @@
         "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/martin2844/gen1recomp-blackjack-corner/main/assets/screenshots/randomizer-starter-roulette.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/martin2844/gen1recomp-blackjack-corner/main/assets/screenshots/gym-water-case-reel.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/martin2844/gen1recomp-blackjack-corner/main/assets/screenshots/regional-casino-viridian.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/martin2844/gen1recomp-blackjack-corner/main/assets/screenshots/regional-casino-cinnabar.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/martin2844/gen1recomp-blackjack-corner/main/assets/screenshots/regional-case-ace-cerulean.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/martin2844/gen1recomp-blackjack-corner/main/assets/screenshots/gamble-story-rumor-clue.png"
+        }
+      ],
       "download": {
         "url": "https://github.com/martin2844/gen1recomp-blackjack-corner/releases/download/v0.7.4/blackjack_corner-0.7.4.zip",
         "sizeBytes": 179724,
@@ -1040,9 +1105,9 @@
         ]
       },
       "popularity": {
-        "downloads": 2212,
+        "downloads": 2243,
         "stars": 6,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -1081,9 +1146,9 @@
         "experimental": true
       },
       "popularity": {
-        "downloads": 427,
+        "downloads": 436,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -1119,9 +1184,9 @@
       },
       "modID": "CONTROLLER_RUMBLE",
       "popularity": {
-        "downloads": 5042,
+        "downloads": 5096,
         "stars": 5,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -1158,9 +1223,9 @@
       },
       "modID": "damage_numbers",
       "popularity": {
-        "downloads": 1773,
+        "downloads": 1819,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -1182,7 +1247,17 @@
         "QOL"
       ],
       "target": "Gen1Recomp",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/illanrego/wills-mod/main/.github/resources/screenshot-map.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/illanrego/wills-mod/main/.github/resources/screenshot-walking-hud.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/illanrego/wills-mod/main/.github/resources/screenshot-encounter-list.png"
+        }
+      ],
       "download": {
         "url": "https://github.com/illanrego/wills-mod/releases/download/v1.0.1/wills_mod-1.0.1.zip",
         "sizeBytes": 13492,
@@ -1196,9 +1271,9 @@
       },
       "modID": "wills_mod",
       "popularity": {
-        "downloads": 263,
+        "downloads": 274,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -1235,9 +1310,9 @@
       },
       "modID": "fakemons",
       "popularity": {
-        "downloads": 182,
+        "downloads": 192,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -1273,9 +1348,9 @@
       },
       "modID": "gen3_box",
       "popularity": {
-        "downloads": 23312,
+        "downloads": 23767,
         "stars": 23,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -1311,9 +1386,9 @@
       },
       "modID": "gen3_dex",
       "popularity": {
-        "downloads": 1794,
+        "downloads": 1847,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -1349,9 +1424,9 @@
       },
       "modID": "groovy_palette",
       "popularity": {
-        "downloads": 4073,
+        "downloads": 4129,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -1373,7 +1448,11 @@
         "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://github.com/user-attachments/assets/fedeb77a-4bea-44fe-82c1-f8d31e9f8407"
+        }
+      ],
       "download": {
         "url": "https://github.com/masterwebx/gen1recomp-heal-anywhere/releases/download/v1.0.0/HEAL_ANYWHERE-1.0.0.zip",
         "sizeBytes": 6296,
@@ -1387,9 +1466,9 @@
       },
       "modID": "HEAL_ANYWHERE",
       "popularity": {
-        "downloads": 1363,
+        "downloads": 1393,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -1426,9 +1505,9 @@
       },
       "modID": "kanto_gear",
       "popularity": {
-        "downloads": 8799,
-        "stars": 51,
-        "asOf": "2026-08-21"
+        "downloads": 9030,
+        "stars": 52,
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -1450,7 +1529,20 @@
         "CONTENT"
       ],
       "target": "Gen1Recomp",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/Maaggel/mew-under-the-truck/main/docs/01-sailor-offer.jpg"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Maaggel/mew-under-the-truck/main/docs/04-no-strength.jpg"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Maaggel/mew-under-the-truck/main/docs/02-use-strength.jpg"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Maaggel/mew-under-the-truck/main/docs/03-wild-mew.jpg"
+        }
+      ],
       "download": {
         "url": "https://github.com/Maaggel/mew-under-the-truck/releases/download/v0.8.3/mew_under_the_truck-0.8.3.zip",
         "sizeBytes": 239963,
@@ -1464,9 +1556,9 @@
       },
       "modID": "mew_under_the_truck",
       "popularity": {
-        "downloads": 577,
+        "downloads": 621,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -1503,9 +1595,9 @@
       },
       "modID": "minimap",
       "popularity": {
-        "downloads": 713,
+        "downloads": 736,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -1528,7 +1620,14 @@
         "UI"
       ],
       "target": "Gen1Recomp",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/eduardocalafell/gen1recomp-modern-dialog/main/preview-themes.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/eduardocalafell/gen1recomp-modern-dialog/main/preview-patterns.png"
+        }
+      ],
       "download": {
         "url": "https://github.com/eduardocalafell/gen1recomp-modern-dialog/releases/download/v0.4.1/modern_dialog-0.4.1.zip",
         "sizeBytes": 7754,
@@ -1542,9 +1641,9 @@
       },
       "modID": "modern_dialog",
       "popularity": {
-        "downloads": 972,
+        "downloads": 1005,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -1583,9 +1682,9 @@
         "experimental": true
       },
       "popularity": {
-        "downloads": 11555,
+        "downloads": 11710,
         "stars": 5,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -1621,9 +1720,9 @@
       },
       "modID": "move_descriptions",
       "popularity": {
-        "downloads": 410,
+        "downloads": 433,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -1645,7 +1744,11 @@
         "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://github.com/user-attachments/assets/82c08ffd-8ae4-4fc5-b589-20fe2bdd6216"
+        }
+      ],
       "download": {
         "url": "https://github.com/masterwebx/gen1recomp-multi-save-slots/releases/download/v1.0.0/MULTI_SAVE_SLOTS-1.0.0.zip",
         "sizeBytes": 4910,
@@ -1659,9 +1762,9 @@
       },
       "modID": "MULTI_SAVE_SLOTS",
       "popularity": {
-        "downloads": 4668,
+        "downloads": 4725,
         "stars": 8,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -1697,9 +1800,9 @@
       },
       "modID": "MUSIC_PLAYER",
       "popularity": {
-        "downloads": 1337,
+        "downloads": 1362,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -1721,7 +1824,26 @@
         "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/mistermiracle3036/Pokemon-Snag/main/docs/snag-01-cherrygrove-first-ball.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/mistermiracle3036/Pokemon-Snag/main/docs/snag-02-you-stole-my-meowth.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/mistermiracle3036/Pokemon-Snag/main/docs/snag-03-fence-route36.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/mistermiracle3036/Pokemon-Snag/main/docs/snag-05-choose-a-lead.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/mistermiracle3036/Pokemon-Snag/main/docs/snag-06-mark-brags-about-yanma.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/mistermiracle3036/Pokemon-Snag/main/docs/snag-07-yanma-caught.png"
+        }
+      ],
       "download": {
         "url": "https://github.com/mistermiracle3036/Pokemon-Snag/releases/download/v0.15.9/snag_quest-0.15.9.zip",
         "sizeBytes": 108040,
@@ -1743,9 +1865,9 @@
         ]
       },
       "popularity": {
-        "downloads": 645,
+        "downloads": 660,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -1787,9 +1909,12 @@
         ]
       },
       "popularity": {
-        "downloads": 637,
+        "downloads": 671,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
+      },
+      "icon": {
+        "url": "https://raw.githubusercontent.com/TanukiTooks/Quest-Menu/main/LOGO.png"
       }
     },
     {
@@ -1825,9 +1950,9 @@
       },
       "modID": "RUN_MODE",
       "popularity": {
-        "downloads": 7292,
+        "downloads": 7363,
         "stars": 8,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -1868,9 +1993,9 @@
         ]
       },
       "popularity": {
-        "downloads": 13529,
+        "downloads": 13757,
         "stars": 11,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -1911,9 +2036,9 @@
         ]
       },
       "popularity": {
-        "downloads": 221,
+        "downloads": 239,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -1949,9 +2074,9 @@
       },
       "modID": "shiny_starters_gifts",
       "popularity": {
-        "downloads": 1140,
+        "downloads": 1201,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -1987,9 +2112,9 @@
       },
       "modID": "SWITCH_ADVISOR",
       "popularity": {
-        "downloads": 479,
+        "downloads": 494,
         "stars": 2,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -2026,9 +2151,9 @@
       },
       "modID": "mash-catch",
       "popularity": {
-        "downloads": 273,
+        "downloads": 277,
         "stars": 4,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -2073,9 +2198,9 @@
         ]
       },
       "popularity": {
-        "downloads": 1028,
+        "downloads": 1079,
         "stars": 6,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -2111,9 +2236,9 @@
       },
       "modID": "erilab_bag_wrap",
       "popularity": {
-        "downloads": 217,
+        "downloads": 221,
         "stars": 2,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -2158,9 +2283,9 @@
         ]
       },
       "popularity": {
-        "downloads": 60,
+        "downloads": 63,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -2182,7 +2307,11 @@
         "CONTENT"
       ],
       "target": "Gen1Recomp",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://github.com/user-attachments/assets/311c853f-90d8-447d-8909-1e93b9e621f0"
+        }
+      ],
       "download": {
         "url": "https://github.com/dburton95/non-binary-mode/releases/download/2.0.2/non-binary-mode-2.0.2.zip",
         "sizeBytes": 5294,
@@ -2196,9 +2325,9 @@
       },
       "modID": "non-binary-mode",
       "popularity": {
-        "downloads": 69,
+        "downloads": 73,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -2221,7 +2350,26 @@
         "ART"
       ],
       "target": "Gen1Recomp",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/EnterPlayerOne/Battle-Cinematics-Stadium-Camera/main/media/articuno-attack-faint.gif"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/EnterPlayerOne/Battle-Cinematics-Stadium-Camera/main/media/stadium-mewtwo-full-cycle.gif"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/EnterPlayerOne/Battle-Cinematics-Stadium-Camera/main/media/pidgeotto-apb-origin.gif"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/EnterPlayerOne/Battle-Cinematics-Stadium-Camera/main/media/crystal-mewtwo-dw3.gif"
+        },
+        {
+          "url": "https://github.com/user-attachments/assets/a3a994e3-4163-4033-ab1c-6b9a2a61f716"
+        },
+        {
+          "url": "https://github.com/user-attachments/assets/3dc361c8-12d1-4d97-870d-d1d05f19975f"
+        }
+      ],
       "download": {
         "url": "https://github.com/EnterPlayerOne/Battle-Cinematics-Stadium-Camera/releases/download/V1.0.7/Battle_Cinematics-v1.0.7.zip",
         "sizeBytes": 119988,
@@ -2246,9 +2394,9 @@
         ]
       },
       "popularity": {
-        "downloads": 11015,
+        "downloads": 11387,
         "stars": 15,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -2270,7 +2418,11 @@
         "CONTENT"
       ],
       "target": "Gen1Recomp",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://github.com/user-attachments/assets/d4df6911-d20e-4a64-93ef-2955e9897b2c"
+        }
+      ],
       "download": {
         "url": "https://github.com/dburton95/girl-mode/releases/download/2.0.3/girl-mode-2.0.3.zip",
         "sizeBytes": 5292,
@@ -2284,9 +2436,9 @@
       },
       "modID": "girl-mode",
       "popularity": {
-        "downloads": 155,
+        "downloads": 161,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -2323,9 +2475,9 @@
       },
       "modID": "infinite_repel",
       "popularity": {
-        "downloads": 24,
+        "downloads": 27,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -2361,9 +2513,9 @@
       },
       "modID": "battle_exp_bar",
       "popularity": {
-        "downloads": 93,
+        "downloads": 107,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -2404,9 +2556,9 @@
         ]
       },
       "popularity": {
-        "downloads": 587,
+        "downloads": 636,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -2442,9 +2594,9 @@
       },
       "modID": "settings_hotkeys",
       "popularity": {
-        "downloads": 11,
+        "downloads": 13,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -2480,9 +2632,9 @@
       },
       "modID": "professor_oak_challenge",
       "popularity": {
-        "downloads": 29,
+        "downloads": 31,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -2518,9 +2670,9 @@
       },
       "modID": "its-clefairy",
       "popularity": {
-        "downloads": 37,
+        "downloads": 43,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -2542,7 +2694,11 @@
         "UI"
       ],
       "target": "Gen1Recomp",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/Ryan1731/gen1recomp-terrain-minimap/main/docs/images/terrain-minimap-in-game.png"
+        }
+      ],
       "download": {
         "url": "https://github.com/Ryan1731/gen1recomp-terrain-minimap/releases/download/v1.0.5/terrain_minimap-1.0.5.zip",
         "sizeBytes": 1091206,
@@ -2556,9 +2712,9 @@
       },
       "modID": "terrain_minimap",
       "popularity": {
-        "downloads": 31,
+        "downloads": 38,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -2581,7 +2737,14 @@
         "UI"
       ],
       "target": "Gen1Recomp",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/miguelcjalmeida/HiddenStats/main/docs/screenshots/standalone.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/miguelcjalmeida/HiddenStats/main/docs/screenshots/modern-ui.png"
+        }
+      ],
       "download": {
         "url": "https://github.com/miguelcjalmeida/HiddenStats/releases/download/v3.0.1/hidden_stats.zip",
         "sizeBytes": 3613,
@@ -2601,9 +2764,9 @@
         ]
       },
       "popularity": {
-        "downloads": 53,
+        "downloads": 61,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -2644,9 +2807,9 @@
         ]
       },
       "popularity": {
-        "downloads": 19,
+        "downloads": 24,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -2682,9 +2845,9 @@
       },
       "modID": "career_card",
       "popularity": {
-        "downloads": 32,
+        "downloads": 35,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -2728,9 +2891,9 @@
         ]
       },
       "popularity": {
-        "downloads": 24,
+        "downloads": 28,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -2775,9 +2938,9 @@
         ]
       },
       "popularity": {
-        "downloads": 44,
+        "downloads": 52,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -2830,9 +2993,9 @@
         ]
       },
       "popularity": {
-        "downloads": 56,
+        "downloads": 60,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -2876,9 +3039,9 @@
         ]
       },
       "popularity": {
-        "downloads": 322,
+        "downloads": 398,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -2915,9 +3078,9 @@
       },
       "modID": "kanto_companion",
       "popularity": {
-        "downloads": 951,
+        "downloads": 969,
         "stars": 7,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -2953,9 +3116,9 @@
       },
       "modID": "premier_ball_bonus",
       "popularity": {
-        "downloads": 49,
+        "downloads": 58,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -2991,9 +3154,9 @@
       },
       "modID": "secret-base",
       "popularity": {
-        "downloads": 113,
+        "downloads": 133,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -3016,7 +3179,11 @@
         "QOL"
       ],
       "target": "Gen1Recomp",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/Debatesmith/Project-Celebi/main/docs/images/victory-road-gate.png"
+        }
+      ],
       "download": {
         "url": "https://github.com/Debatesmith/Project-Celebi/releases/download/v0.2.02-Hotfix/ProjectCelebi-v0.2.02.zip",
         "sizeBytes": 74910,
@@ -3040,9 +3207,9 @@
         ]
       },
       "popularity": {
-        "downloads": 130,
+        "downloads": 144,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -3078,9 +3245,9 @@
       },
       "modID": "trainer_talk",
       "popularity": {
-        "downloads": 343,
+        "downloads": 362,
         "stars": 3,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -3119,9 +3286,9 @@
         "affectsLink": true
       },
       "popularity": {
-        "downloads": 291,
+        "downloads": 300,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -3161,9 +3328,9 @@
         "experimental": true
       },
       "popularity": {
-        "downloads": 37,
+        "downloads": 43,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -3199,9 +3366,9 @@
       },
       "modID": "stronger_trainers",
       "popularity": {
-        "downloads": 580,
+        "downloads": 587,
         "stars": 3,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -3242,9 +3409,9 @@
         ]
       },
       "popularity": {
-        "downloads": 89,
+        "downloads": 96,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -3280,9 +3447,9 @@
       },
       "modID": "color-saturation",
       "popularity": {
-        "downloads": 55,
+        "downloads": 66,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -3318,9 +3485,9 @@
       },
       "modID": "pokeball-colorfix",
       "popularity": {
-        "downloads": 594,
+        "downloads": 615,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -3356,9 +3523,9 @@
       },
       "modID": "pokemove-colorfix",
       "popularity": {
-        "downloads": 383,
+        "downloads": 402,
         "stars": 2,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -3398,9 +3565,9 @@
         "affectsLink": true
       },
       "popularity": {
-        "downloads": 64,
+        "downloads": 85,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -3444,9 +3611,9 @@
         ]
       },
       "popularity": {
-        "downloads": 209,
+        "downloads": 214,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -3488,9 +3655,9 @@
         ]
       },
       "popularity": {
-        "downloads": 2676,
+        "downloads": 2705,
         "stars": 5,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -3512,7 +3679,26 @@
         "ART"
       ],
       "target": "Gen1Recomp",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://i.imgur.com/Oj1pFyY.gif"
+        },
+        {
+          "url": "https://i.imgur.com/muC6M5f.png"
+        },
+        {
+          "url": "https://i.imgur.com/aOGaTzs.png"
+        },
+        {
+          "url": "https://i.imgur.com/S5Tz8Wa.png"
+        },
+        {
+          "url": "https://i.imgur.com/ilGNNwE.png"
+        },
+        {
+          "url": "https://i.imgur.com/ZpznmkK.png"
+        }
+      ],
       "download": {
         "url": "https://github.com/on1san/Custom-Player-Sprite-Switcher/releases/download/1.1/CPSS.1.1.zip",
         "sizeBytes": 39068,
@@ -3526,9 +3712,9 @@
       },
       "modID": "custom-player-sprite-switcher",
       "popularity": {
-        "downloads": 1216,
+        "downloads": 1264,
         "stars": 5,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -3570,9 +3756,9 @@
         ]
       },
       "popularity": {
-        "downloads": 123,
+        "downloads": 127,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -3608,9 +3794,9 @@
       },
       "modID": "hold_to_scroll_ui",
       "popularity": {
-        "downloads": 282,
+        "downloads": 286,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -3657,9 +3843,9 @@
         ]
       },
       "popularity": {
-        "downloads": 37,
+        "downloads": 40,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -3695,9 +3881,9 @@
       },
       "modID": "move_learn_plus",
       "popularity": {
-        "downloads": 369,
+        "downloads": 377,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -3733,9 +3919,9 @@
       },
       "modID": "sweet_share",
       "popularity": {
-        "downloads": 1724,
+        "downloads": 1764,
         "stars": 2,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -3782,9 +3968,9 @@
         ]
       },
       "popularity": {
-        "downloads": 660,
+        "downloads": 691,
         "stars": 2,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -3832,9 +4018,9 @@
         ]
       },
       "popularity": {
-        "downloads": 6569,
+        "downloads": 6717,
         "stars": 25,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -3854,7 +4040,14 @@
         "family": "gen1recomp",
         "games": []
       },
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://github.com/user-attachments/assets/d93697f2-49de-413f-81d0-8ea721077e21"
+        },
+        {
+          "url": "https://github.com/user-attachments/assets/19583d1b-43fd-433d-b398-6f685805c546"
+        }
+      ],
       "project": {
         "url": "https://github.com/harryw4444/green_sgb_palette_gen1recomp",
         "status": "permission-queued"
@@ -3862,7 +4055,7 @@
       "popularity": {
         "downloads": 39,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -3888,9 +4081,9 @@
         "status": "permission-queued"
       },
       "popularity": {
-        "downloads": 590,
+        "downloads": 594,
         "stars": 2,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -3918,7 +4111,7 @@
       "popularity": {
         "downloads": 92,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -3938,7 +4131,11 @@
         "family": "gen1recomp",
         "games": []
       },
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://github.com/user-attachments/assets/5e3a49c3-0bf0-4aa2-b0df-6df525afda41"
+        }
+      ],
       "project": {
         "url": "https://github.com/harryw4444/bag_stock_preview_gen1recomp",
         "status": "permission-queued"
@@ -3946,7 +4143,7 @@
       "popularity": {
         "downloads": 147,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -3966,7 +4163,11 @@
         "family": "gen1recomp",
         "games": []
       },
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://github.com/user-attachments/assets/b5b561c2-8f63-4ac4-9d9e-9954be3fefd3"
+        }
+      ],
       "project": {
         "url": "https://github.com/harryw4444/fishing_mini_game_gen1recomp",
         "status": "permission-queued"
@@ -3974,7 +4175,7 @@
       "popularity": {
         "downloads": 168,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4000,9 +4201,9 @@
         "status": "permission-queued"
       },
       "popularity": {
-        "downloads": 167,
-        "stars": 0,
-        "asOf": "2026-08-21"
+        "downloads": 168,
+        "stars": 1,
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4028,9 +4229,9 @@
         "status": "permission-queued"
       },
       "popularity": {
-        "downloads": 981,
+        "downloads": 996,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4056,9 +4257,9 @@
         "status": "permission-queued"
       },
       "popularity": {
-        "downloads": 335,
+        "downloads": 338,
         "stars": 2,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4084,9 +4285,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 504,
+        "downloads": 515,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4112,9 +4313,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 62083,
-        "stars": 166,
-        "asOf": "2026-08-21"
+        "downloads": 64261,
+        "stars": 168,
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4140,9 +4341,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 3448,
+        "downloads": 3490,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4168,9 +4369,12 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 322,
+        "downloads": 337,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
+      },
+      "icon": {
+        "url": "https://raw.githubusercontent.com/TanukiTooks/Candy-Jar/main/LOGO.png"
       }
     },
     {
@@ -4190,15 +4394,19 @@
         "family": "gen1recomp",
         "games": []
       },
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/hdbreaker/gen1recomp-mod-cheat_engine/main/screenshots/cheat_engine_menu.png"
+        }
+      ],
       "project": {
         "url": "https://github.com/hdbreaker/gen1recomp-mod-cheat_engine/releases",
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 550,
-        "stars": 1,
-        "asOf": "2026-08-21"
+        "downloads": 552,
+        "stars": 2,
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4224,9 +4432,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 4908,
+        "downloads": 4976,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4252,9 +4460,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 1038,
+        "downloads": 1054,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4274,15 +4482,25 @@
         "family": "gen1recomp",
         "games": []
       },
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/Roxas2712/pokemon-blau-deutsch-mod/main/screenshots/titel-blaue-edition.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Roxas2712/pokemon-blau-deutsch-mod/main/screenshots/trainerwechsel.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Roxas2712/pokemon-blau-deutsch-mod/main/screenshots/status-gif.png"
+        }
+      ],
       "project": {
         "url": "https://github.com/Roxas2712/pokemon-blau-deutsch-mod/releases",
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 612,
+        "downloads": 623,
         "stars": 3,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4302,15 +4520,25 @@
         "family": "gen1recomp",
         "games": []
       },
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/Roxas2712/pokemon-gelb-deutsch-mod/main/screenshots/titel-gelbe-edition.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Roxas2712/pokemon-gelb-deutsch-mod/main/screenshots/trainerwechsel.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Roxas2712/pokemon-gelb-deutsch-mod/main/screenshots/status-gif.png"
+        }
+      ],
       "project": {
         "url": "https://github.com/Roxas2712/pokemon-gelb-deutsch-mod/releases",
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 796,
+        "downloads": 815,
         "stars": 3,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4330,15 +4558,25 @@
         "family": "gen1recomp",
         "games": []
       },
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/Roxas2712/pokemon-rot-deutsch-mod/main/screenshots/titel-rote-edition.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Roxas2712/pokemon-rot-deutsch-mod/main/screenshots/trainerwechsel.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Roxas2712/pokemon-rot-deutsch-mod/main/screenshots/status-gif.png"
+        }
+      ],
       "project": {
         "url": "https://github.com/Roxas2712/pokemon-rot-deutsch-mod/releases",
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 1741,
+        "downloads": 1770,
         "stars": 7,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4364,9 +4602,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 106,
+        "downloads": 108,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4392,9 +4630,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 1086,
+        "downloads": 1107,
         "stars": 2,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4420,9 +4658,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 12624,
+        "downloads": 13164,
         "stars": 71,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4448,9 +4686,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 5769,
+        "downloads": 5835,
         "stars": 6,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4476,9 +4714,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 182,
+        "downloads": 184,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4504,9 +4742,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 5212,
+        "downloads": 5256,
         "stars": 15,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4532,9 +4770,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 21307,
+        "downloads": 21925,
         "stars": 17,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4554,15 +4792,19 @@
         "family": "gen1recomp",
         "games": []
       },
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/shanehudson-gen1recomp-mods/monorepo/main/.github/free_fly-demo.gif"
+        }
+      ],
       "project": {
         "url": "https://github.com/shanehudson-gen1recomp-mods/free_fly/releases",
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 6833,
+        "downloads": 6948,
         "stars": 10,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4588,9 +4830,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 839,
+        "downloads": 883,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4616,9 +4858,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 30813,
+        "downloads": 31171,
         "stars": 43,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4644,9 +4886,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 1861,
+        "downloads": 1906,
         "stars": 2,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4666,7 +4908,11 @@
         "family": "gen1recomp",
         "games": []
       },
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/hdbreaker/gen1recomp-mod-intro_bypass/main/screenshots/intro_bypass_menu.png"
+        }
+      ],
       "project": {
         "url": "https://github.com/hdbreaker/gen1recomp-mod-intro_bypass/releases",
         "status": "permission-needed"
@@ -4674,7 +4920,7 @@
       "popularity": {
         "downloads": 195,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4700,9 +4946,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 286,
+        "downloads": 292,
         "stars": 2,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4728,9 +4974,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 1647,
+        "downloads": 1675,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4756,9 +5002,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 314,
+        "downloads": 325,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4784,9 +5030,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 1915,
+        "downloads": 1966,
         "stars": 2,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4814,7 +5060,7 @@
       "popularity": {
         "downloads": 31,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4840,9 +5086,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 856,
+        "downloads": 861,
         "stars": 3,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4868,9 +5114,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 3184,
+        "downloads": 3382,
         "stars": 2,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4913,15 +5159,31 @@
         "family": "gen1recomp",
         "games": []
       },
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/ddagent/gen1recomp-npc-bubbles/main/docs/screenshot-town.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/ddagent/gen1recomp-npc-bubbles/main/docs/screenshot-bikeshop.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/ddagent/gen1recomp-npc-bubbles/main/docs/screenshot-options.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/ddagent/gen1recomp-npc-bubbles/main/docs/screenshot-checklist.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/ddagent/gen1recomp-npc-bubbles/main/docs/screenshot-checklist-places.png"
+        }
+      ],
       "project": {
         "url": "https://github.com/ddagent/gen1recomp-npc-bubbles/releases",
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 3635,
+        "downloads": 3707,
         "stars": 7,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4947,9 +5209,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 1356,
+        "downloads": 1381,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -4975,9 +5237,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 4621,
+        "downloads": 4666,
         "stars": 7,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5049,9 +5311,12 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 14336,
-        "stars": 53,
-        "asOf": "2026-08-21"
+        "downloads": 14656,
+        "stars": 54,
+        "asOf": "2026-08-22"
+      },
+      "icon": {
+        "url": "https://raw.githubusercontent.com/ShaneMcGovernIE/potato_voxel/main/Logo.png"
       }
     },
     {
@@ -5077,9 +5342,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 13392,
+        "downloads": 13578,
         "stars": 4,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5099,15 +5364,28 @@
         "family": "gen1recomp",
         "games": []
       },
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/unxpected-uxp/pokemon-gen1-recomp-mod-qol/main/images/menu.gif"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/unxpected-uxp/pokemon-gen1-recomp-mod-qol/main/images/battle.gif"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/unxpected-uxp/pokemon-gen1-recomp-mod-qol/main/images/qol_location_banners.gif"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/unxpected-uxp/pokemon-gen1-recomp-mod-qol/main/images/qol_easy_interactions.gif"
+        }
+      ],
       "project": {
         "url": "https://github.com/unxpected-uxp/pokemon-gen1-recomp-mod-qol/releases",
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 51055,
+        "downloads": 51538,
         "stars": 83,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5133,9 +5411,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 5008,
+        "downloads": 5055,
         "stars": 6,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5155,15 +5433,28 @@
         "family": "gen1recomp",
         "games": []
       },
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/Razor1993-Real/FlyingOverhaul/main/docs/media/flight.gif"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Razor1993-Real/FlyingOverhaul/main/docs/media/fly-menu.gif"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Razor1993-Real/FlyingOverhaul/main/docs/media/compass.gif"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Razor1993-Real/FlyingOverhaul/main/docs/media/landing.gif"
+        }
+      ],
       "project": {
         "url": "https://github.com/Razor1993-Real/FlyingOverhaul/releases",
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 435,
+        "downloads": 449,
         "stars": 3,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5183,15 +5474,34 @@
         "family": "gen1recomp",
         "games": []
       },
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/alamops/RBYMMOMod/main/docs/screenshots/character-creation.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/alamops/RBYMMOMod/main/docs/screenshots/character-picker.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/alamops/RBYMMOMod/main/docs/screenshots/room-size.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/alamops/RBYMMOMod/main/docs/screenshots/overworld-presence.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/alamops/RBYMMOMod/main/docs/screenshots/chat-log.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/alamops/RBYMMOMod/main/docs/screenshots/party-townmap.png"
+        }
+      ],
       "project": {
         "url": "https://github.com/alamops/RBYMMOMod/releases",
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 4637,
+        "downloads": 4717,
         "stars": 14,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5217,9 +5527,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 114,
+        "downloads": 115,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5245,9 +5555,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 595,
+        "downloads": 609,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5273,9 +5583,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 284,
+        "downloads": 311,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5301,9 +5611,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 299,
+        "downloads": 309,
         "stars": 5,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5329,9 +5639,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 183,
+        "downloads": 187,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5357,9 +5667,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 8372,
+        "downloads": 8513,
         "stars": 9,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5385,9 +5695,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 6779,
+        "downloads": 6871,
         "stars": 2,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5413,9 +5723,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 182,
+        "downloads": 186,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5441,9 +5751,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 559,
+        "downloads": 574,
         "stars": 2,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5469,9 +5779,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 129,
+        "downloads": 130,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5497,9 +5807,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 6716,
+        "downloads": 6789,
         "stars": 5,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5525,9 +5835,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 12509,
+        "downloads": 12690,
         "stars": 26,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5553,9 +5863,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 13590,
-        "stars": 10,
-        "asOf": "2026-08-21"
+        "downloads": 14134,
+        "stars": 11,
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5581,9 +5891,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 7100,
+        "downloads": 7170,
         "stars": 6,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5609,9 +5919,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 1884,
+        "downloads": 1914,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5637,9 +5947,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 8655,
+        "downloads": 8744,
         "stars": 3,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5665,9 +5975,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 4339,
+        "downloads": 4376,
         "stars": 20,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5693,9 +6003,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 1442,
+        "downloads": 1451,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5721,9 +6031,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 10617,
+        "downloads": 10702,
         "stars": 9,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5743,15 +6053,19 @@
         "family": "gen1recomp",
         "games": []
       },
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/shanehudson-gen1recomp-mods/monorepo/main/.github/wild_skies-demo.gif"
+        }
+      ],
       "project": {
         "url": "https://github.com/shanehudson-gen1recomp-mods/wild_skies/releases",
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 9589,
+        "downloads": 9741,
         "stars": 14,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5777,9 +6091,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 63237,
-        "stars": 92,
-        "asOf": "2026-08-21"
+        "downloads": 64349,
+        "stars": 93,
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5805,9 +6119,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 5674,
+        "downloads": 5749,
         "stars": 6,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5833,9 +6147,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 20007,
+        "downloads": 20476,
         "stars": 109,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5861,9 +6175,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 568,
+        "downloads": 573,
         "stars": 9,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5889,9 +6203,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 3669,
+        "downloads": 3819,
         "stars": 13,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5917,9 +6231,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 2448,
+        "downloads": 2474,
         "stars": 9,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5945,9 +6259,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 854,
+        "downloads": 860,
         "stars": 6,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -5975,7 +6289,7 @@
       "popularity": {
         "downloads": 660,
         "stars": 5,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6001,9 +6315,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 1035,
+        "downloads": 1050,
         "stars": 4,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6029,9 +6343,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 13236,
-        "stars": 59,
-        "asOf": "2026-08-21"
+        "downloads": 13387,
+        "stars": 60,
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6059,7 +6373,7 @@
       "popularity": {
         "downloads": 85,
         "stars": 3,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6079,7 +6393,26 @@
         "family": "gen1recomp",
         "games": []
       },
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://github.com/user-attachments/assets/3f41f41e-62ec-4c35-a54c-4901c9019cca"
+        },
+        {
+          "url": "https://github.com/user-attachments/assets/b2d48dba-2b5e-4444-a54c-09632bc74a48"
+        },
+        {
+          "url": "https://github.com/user-attachments/assets/4d1cc091-fc95-4899-88f3-e62ba8c71447"
+        },
+        {
+          "url": "https://github.com/user-attachments/assets/0d5ec717-a6d9-4889-ac56-b4675f099665"
+        },
+        {
+          "url": "https://github.com/user-attachments/assets/a0060247-e721-4dca-83e6-b29754bcfac0"
+        },
+        {
+          "url": "https://github.com/user-attachments/assets/f285254b-0d08-4852-ae29-6e9ef68bd71a"
+        }
+      ],
       "project": {
         "url": "https://github.com/thorkdev/gen1recomp-screen-effects/releases",
         "status": "permission-needed"
@@ -6087,7 +6420,7 @@
       "popularity": {
         "downloads": 105,
         "stars": 3,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6107,7 +6440,20 @@
         "family": "gen1recomp",
         "games": []
       },
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://github.com/user-attachments/assets/353cda33-befd-4ba4-8304-e38fbddfda9e"
+        },
+        {
+          "url": "https://github.com/user-attachments/assets/ba6bf095-17b5-4c98-bef3-2ceb7a86ffa3"
+        },
+        {
+          "url": "https://github.com/user-attachments/assets/d112c7fd-bafe-4bec-b6b1-ae1eea0233ee"
+        },
+        {
+          "url": "https://github.com/user-attachments/assets/d131bd49-e3ef-4a33-97b3-2e7d1819eccb"
+        }
+      ],
       "project": {
         "url": "https://github.com/thorkdev/gen1recomp-running-shoes/releases",
         "status": "permission-needed"
@@ -6115,7 +6461,7 @@
       "popularity": {
         "downloads": 730,
         "stars": 3,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6141,9 +6487,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 2863,
+        "downloads": 2900,
         "stars": 6,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6163,7 +6509,14 @@
         "family": "gen1recomp",
         "games": []
       },
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://github.com/user-attachments/assets/253bc74b-0076-41a1-9f67-c23aeb3e3ac7"
+        },
+        {
+          "url": "https://github.com/user-attachments/assets/58905a6b-10e4-445b-9a1d-a3390d0ca802"
+        }
+      ],
       "project": {
         "url": "https://github.com/thorkdev/gen1recomp-radio/releases",
         "status": "permission-needed"
@@ -6171,7 +6524,7 @@
       "popularity": {
         "downloads": 83,
         "stars": 2,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6197,9 +6550,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 143,
+        "downloads": 151,
         "stars": 2,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6219,15 +6572,19 @@
         "family": "gen1recomp",
         "games": []
       },
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/ddagent/gen1recomp-battle-dex/main/docs/screenshot.png"
+        }
+      ],
       "project": {
         "url": "https://github.com/ddagent/gen1recomp-battle-dex/releases",
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 209,
+        "downloads": 210,
         "stars": 2,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6253,9 +6610,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 305,
+        "downloads": 315,
         "stars": 2,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6283,7 +6640,7 @@
       "popularity": {
         "downloads": 19,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6309,9 +6666,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 19,
+        "downloads": 20,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6331,15 +6688,22 @@
         "family": "gen1recomp",
         "games": []
       },
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://github.com/user-attachments/assets/0a888292-4949-4278-bdc8-aff12e78b00c"
+        },
+        {
+          "url": "https://github.com/user-attachments/assets/1e2905f5-3dfd-44cc-8a45-30f901947713"
+        }
+      ],
       "project": {
         "url": "https://github.com/TranswarpTechnologies/choose-your-hero-mod-gen1recomp/releases",
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 552,
+        "downloads": 559,
         "stars": 3,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6365,9 +6729,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 311,
+        "downloads": 312,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6395,7 +6759,7 @@
       "popularity": {
         "downloads": 8,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6423,7 +6787,7 @@
       "popularity": {
         "downloads": 5,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6449,9 +6813,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 43,
+        "downloads": 44,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6477,9 +6841,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 345,
+        "downloads": 355,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6507,7 +6871,7 @@
       "popularity": {
         "downloads": 115,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6533,9 +6897,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 246,
+        "downloads": 250,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6561,9 +6925,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 37,
+        "downloads": 38,
         "stars": 2,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6589,9 +6953,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 87,
+        "downloads": 89,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6619,7 +6983,7 @@
       "popularity": {
         "downloads": 31,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6647,7 +7011,7 @@
       "popularity": {
         "downloads": 3,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6673,9 +7037,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 106,
+        "downloads": 109,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6701,9 +7065,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 1383,
+        "downloads": 1393,
         "stars": 3,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6731,7 +7095,7 @@
       "popularity": {
         "downloads": 25,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6757,9 +7121,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 1737,
+        "downloads": 1752,
         "stars": 11,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6785,9 +7149,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 1357,
-        "stars": 10,
-        "asOf": "2026-08-21"
+        "downloads": 1367,
+        "stars": 11,
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6815,7 +7179,7 @@
       "popularity": {
         "downloads": 45,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6841,9 +7205,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 174,
+        "downloads": 176,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6869,9 +7233,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 4847,
+        "downloads": 4985,
         "stars": 13,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6897,9 +7261,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 125,
+        "downloads": 127,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6919,15 +7283,31 @@
         "family": "gen1recomp",
         "games": []
       },
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://github.com/user-attachments/assets/cd3cd582-08dc-4b5a-8e24-87603efa9c53"
+        },
+        {
+          "url": "https://github.com/user-attachments/assets/74ea5cd7-0f45-41cd-ab26-db53226e0c43"
+        },
+        {
+          "url": "https://github.com/user-attachments/assets/eb277dcf-562a-4adc-a44d-481071a1c10a"
+        },
+        {
+          "url": "https://github.com/user-attachments/assets/6f86a3a4-6e48-43c2-a0df-c94ac85b4449"
+        },
+        {
+          "url": "https://github.com/user-attachments/assets/56d2ea5f-9469-493f-8d89-b78ed2815563"
+        }
+      ],
       "project": {
         "url": "https://github.com/businessmachines02/anime-realism/releases",
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 785,
-        "stars": 3,
-        "asOf": "2026-08-21"
+        "downloads": 880,
+        "stars": 4,
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6953,9 +7333,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 36,
+        "downloads": 38,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -6981,9 +7361,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 56,
+        "downloads": 57,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7011,7 +7391,7 @@
       "popularity": {
         "downloads": 16,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7037,9 +7417,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 10,
+        "downloads": 11,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7059,15 +7439,34 @@
         "family": "gen1recomp",
         "games": []
       },
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/ddagent/gen1recomp-dex-pages/main/docs/page-1-data.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/ddagent/gen1recomp-dex-pages/main/docs/page-2-type-matchup.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/ddagent/gen1recomp-dex-pages/main/docs/page-3-catch-odds.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/ddagent/gen1recomp-dex-pages/main/docs/page-4-locations.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/ddagent/gen1recomp-dex-pages/main/docs/page-5-level-moves.png"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/ddagent/gen1recomp-dex-pages/main/docs/page-6-tm-and-hm.png"
+        }
+      ],
       "project": {
         "url": "https://github.com/ddagent/gen1recomp-dex-pages/releases",
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 141,
+        "downloads": 143,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7095,7 +7494,7 @@
       "popularity": {
         "downloads": 91,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7121,9 +7520,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 7,
+        "downloads": 9,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7149,9 +7548,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 12802,
+        "downloads": 12864,
         "stars": 22,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7177,9 +7576,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 357,
+        "downloads": 369,
         "stars": 2,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7205,9 +7604,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 1226,
+        "downloads": 1286,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7233,9 +7632,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 301,
+        "downloads": 316,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7263,7 +7662,7 @@
       "popularity": {
         "downloads": 56,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7291,7 +7690,7 @@
       "popularity": {
         "downloads": 8,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7317,9 +7716,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 70,
+        "downloads": 71,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7345,9 +7744,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 80,
+        "downloads": 84,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7373,9 +7772,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 236,
+        "downloads": 249,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7401,9 +7800,12 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 137,
+        "downloads": 141,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
+      },
+      "icon": {
+        "url": "https://raw.githubusercontent.com/jrmsrs/fair-battles/master/Logo.png"
       }
     },
     {
@@ -7429,9 +7831,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 1496,
+        "downloads": 1529,
         "stars": 5,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7451,7 +7853,11 @@
         "family": "gen1recomp",
         "games": []
       },
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://github.com/user-attachments/assets/8c4d4676-902d-429a-af2b-9535bb402a5f"
+        }
+      ],
       "project": {
         "url": "https://github.com/Kamon137/betterback/releases",
         "status": "permission-needed"
@@ -7459,7 +7865,7 @@
       "popularity": {
         "downloads": 232,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7487,7 +7893,7 @@
       "popularity": {
         "downloads": 21,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7513,9 +7919,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 271,
+        "downloads": 275,
         "stars": 4,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7541,9 +7947,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 135,
-        "stars": 0,
-        "asOf": "2026-08-21"
+        "downloads": 141,
+        "stars": 1,
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7563,7 +7969,14 @@
         "family": "gen1recomp",
         "games": []
       },
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/magalvao/itemfinder-plus/main/demo.gif"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/magalvao/itemfinder-plus/main/dramatic-shape-demo.jpg"
+        }
+      ],
       "project": {
         "url": "https://github.com/magalvao/itemfinder-plus/releases",
         "status": "permission-needed"
@@ -7571,7 +7984,7 @@
       "popularity": {
         "downloads": 395,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7597,9 +8010,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 22,
+        "downloads": 25,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7625,9 +8038,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 440,
+        "downloads": 545,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7653,9 +8066,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 5841,
+        "downloads": 5925,
         "stars": 11,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7683,7 +8096,7 @@
       "popularity": {
         "downloads": 439,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7709,9 +8122,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 231,
+        "downloads": 235,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7737,9 +8150,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 1207,
+        "downloads": 1223,
         "stars": 3,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7765,9 +8178,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 7252,
+        "downloads": 7324,
         "stars": 13,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7793,9 +8206,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 235,
+        "downloads": 236,
         "stars": 2,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7823,7 +8236,7 @@
       "popularity": {
         "downloads": 46,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7851,7 +8264,7 @@
       "popularity": {
         "downloads": 88,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7879,7 +8292,7 @@
       "popularity": {
         "downloads": 101,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7905,9 +8318,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 336,
+        "downloads": 337,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7935,7 +8348,7 @@
       "popularity": {
         "downloads": 44,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7961,9 +8374,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 127,
+        "downloads": 128,
         "stars": 2,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -7991,7 +8404,7 @@
       "popularity": {
         "downloads": 63,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -8019,7 +8432,7 @@
       "popularity": {
         "downloads": 98,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -8045,9 +8458,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 155,
+        "downloads": 162,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -8067,15 +8480,28 @@
         "family": "gen1recomp",
         "games": []
       },
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://github.com/user-attachments/assets/72d8f353-a179-4a10-99a3-046b70a94431"
+        },
+        {
+          "url": "https://github.com/user-attachments/assets/41a7c22c-6afd-4a2b-9a63-3c1bf598f26e"
+        },
+        {
+          "url": "https://github.com/user-attachments/assets/b0ced7ab-c2a5-4725-a142-a5922e7a0b1d"
+        },
+        {
+          "url": "https://github.com/user-attachments/assets/65fbae8d-9637-4582-b1cb-e1526c26ac55"
+        }
+      ],
       "project": {
         "url": "https://github.com/thorkdev/gen1recomp-effective-markers/releases",
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 105,
+        "downloads": 106,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -8095,7 +8521,20 @@
         "family": "gen1recomp",
         "games": []
       },
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://github.com/user-attachments/assets/901a4533-6f94-44eb-b083-7077cfcdb8f3"
+        },
+        {
+          "url": "https://github.com/user-attachments/assets/6b86e93d-76f5-4c6a-b215-673c566d6f0e"
+        },
+        {
+          "url": "https://github.com/user-attachments/assets/7cd5f1ef-763a-40a8-9d15-36fe6b9b0ab8"
+        },
+        {
+          "url": "https://github.com/user-attachments/assets/d3b78e04-3c47-499f-8285-192353556107"
+        }
+      ],
       "project": {
         "url": "https://github.com/thorkdev/gen1recomp-happiness/releases",
         "status": "permission-needed"
@@ -8103,7 +8542,7 @@
       "popularity": {
         "downloads": 78,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -8123,7 +8562,20 @@
         "family": "gen1recomp",
         "games": []
       },
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://github.com/user-attachments/assets/c89594f4-866d-46bf-9960-ec786bb5c71c"
+        },
+        {
+          "url": "https://github.com/user-attachments/assets/5d3760d3-835b-4240-a3e2-28d9acb92692"
+        },
+        {
+          "url": "https://github.com/user-attachments/assets/abdba8d2-c664-4ebd-9930-c3fa0573b91f"
+        },
+        {
+          "url": "https://github.com/user-attachments/assets/af800495-f509-4330-8870-9be52fa9a0c6"
+        }
+      ],
       "project": {
         "url": "https://github.com/thorkdev/gen1recomp-mystery-gift/releases",
         "status": "permission-needed"
@@ -8131,7 +8583,7 @@
       "popularity": {
         "downloads": 135,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -8159,7 +8611,7 @@
       "popularity": {
         "downloads": 2,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -8187,7 +8639,7 @@
       "popularity": {
         "downloads": 47,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -8213,9 +8665,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 10,
+        "downloads": 11,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -8241,9 +8693,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 121,
+        "downloads": 125,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -8271,7 +8723,7 @@
       "popularity": {
         "downloads": 27,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -8297,9 +8749,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 22,
+        "downloads": 27,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -8325,9 +8777,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 12,
+        "downloads": 42,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -8353,9 +8805,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 747,
+        "downloads": 748,
         "stars": 4,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -8381,9 +8833,12 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 155,
+        "downloads": 156,
         "stars": 3,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
+      },
+      "icon": {
+        "url": "https://raw.githubusercontent.com/WizzStar/PKMN-G1R-Immersive-Bicycle-Mod/main/logo.png"
       }
     },
     {
@@ -8409,9 +8864,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 16,
+        "downloads": 34,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -8439,7 +8894,7 @@
       "popularity": {
         "downloads": 68,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -8465,9 +8920,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 559,
+        "downloads": 560,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -8487,7 +8942,17 @@
         "family": "gen1recomp",
         "games": []
       },
-      "screenshots": [],
+      "screenshots": [
+        {
+          "url": "https://github.com/user-attachments/assets/51e28bb8-5565-4c4b-8776-8d8720bf04cd"
+        },
+        {
+          "url": "https://github.com/user-attachments/assets/5130bdb2-6c2e-4c2b-a094-28d61bb0b6ed"
+        },
+        {
+          "url": "https://github.com/user-attachments/assets/103f2c38-7e13-4ec6-8712-5050961a4426"
+        }
+      ],
       "project": {
         "url": "https://github.com/ZyranCZ/HELP-Story-Guide/releases",
         "status": "permission-needed"
@@ -8495,7 +8960,7 @@
       "popularity": {
         "downloads": 284,
         "stars": 2,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -8523,7 +8988,7 @@
       "popularity": {
         "downloads": 145,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -8551,7 +9016,7 @@
       "popularity": {
         "downloads": 111,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -8577,9 +9042,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 753,
+        "downloads": 763,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -8605,9 +9070,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 567,
+        "downloads": 572,
         "stars": 1,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -8633,9 +9098,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 407,
+        "downloads": 409,
         "stars": 2,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -8661,9 +9126,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 715,
+        "downloads": 731,
         "stars": 3,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -8689,9 +9154,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 152,
+        "downloads": 155,
         "stars": 0,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     },
     {
@@ -8717,9 +9182,9 @@
         "status": "permission-needed"
       },
       "popularity": {
-        "downloads": 6013,
+        "downloads": 6080,
         "stars": 25,
-        "asOf": "2026-08-21"
+        "asOf": "2026-08-22"
       }
     }
   ]

@@ -178,6 +178,100 @@ async function popularityForRepo(repo, token, asOf) {
   return popularityFrom(meta, releases, asOf);
 }
 
+/// The mod's own logo, by the convention the community started in August 2026:
+/// an image called Logo.PNG at the root of the repo.
+///
+/// Matched case-insensitively, and that is not pedantry. The announcement says
+/// "Logo.PNG" and of the first five mods to adopt it, none used that spelling —
+/// they shipped `Logo.png`, `LOGO.png` and `logo.png`. A literal match would
+/// have found zero of them. The name that comes back from the API is used
+/// verbatim afterwards, because raw.githubusercontent IS case-sensitive.
+///
+/// `download_url` rather than a URL assembled here: the API already knows the
+/// default branch, and guessing between `main` and `master` is a 404 for
+/// whichever half of the ecosystem guessed wrong.
+const LOGO_NAME = /^logo\.(png|jpe?g|webp)$/i;
+/// A logo is fetched on a row that may be one of two hundred on screen. Past
+/// this it is not a logo, it is somebody's uncompressed export, and the cost
+/// lands on a phone.
+const MAX_LOGO_BYTES = 4 * 1024 * 1024;
+
+async function logoForRepo(repo, token) {
+  if (!repo) return null;
+  const root = await gh(`/repos/${repo}/contents/`, token);
+  if (!Array.isArray(root)) return null;
+  const file = root.find((e) => e?.type === "file" && LOGO_NAME.test(e.name ?? ""));
+  if (!file?.download_url) return null;
+  if (typeof file.size === "number" && file.size > MAX_LOGO_BYTES) return null;
+  return { url: file.download_url };
+}
+
+/// Screenshots, from where mod authors actually put them.
+///
+/// The Logo.PNG convention is three weeks old and five of 281 catalogued repos
+/// follow it. Sixty-two put images in their README, which is four hundred-odd
+/// pictures nobody was reading. So the README is the source, and the
+/// convention is the exception rather than the rule.
+///
+/// What survives the filter, decided by looking at the four hundred rather
+/// than by guessing:
+///
+///   kept     paths that say what they are — screenshot, preview, promo, demo,
+///            docs/, gif, showcase — plus drag-and-drop uploads to
+///            github.com/user-attachments, which have no meaningful path but
+///            are always a picture somebody pasted in to show the thing off
+///   dropped  sprite sheets and loose art (`assets/cindrake_front.png`), which
+///            are the reason this is not simply "every image in the README"
+///   dropped  badges, and img.youtube thumbnails, which look like a screenshot
+///            and are a link to a video the app cannot play
+///
+/// Relative paths resolve against the README's own location, not the repo
+/// root: a README under docs/ makes `shot.png` mean `docs/shot.png`.
+const SHOT_HINT = /(screen ?shot|preview|promo|demo|docs?\/|gif|showcase|example)/i;
+const SHOT_EXT = /\.(png|jpe?g|webp|gif)(\?|$)/i;
+const SHOT_SKIP = /img\.youtube|youtube\.com|badge|shields\.io|licensebuttons|forthebadge/i;
+const SHOT_ALWAYS = /github\.com\/user-attachments|i\.imgur\.com/i;
+const MAX_SHOTS = 6;
+
+function imageURLsIn(markdown) {
+  const out = [];
+  const pattern = /!\[[^\]]*\]\(\s*<?([^)\s>]+)>?[^)]*\)|<img[^>]+src=["']([^"']+)["']/gi;
+  for (const match of markdown.matchAll(pattern)) {
+    const url = (match[1] ?? match[2] ?? "").trim();
+    if (url) out.push(url);
+  }
+  return out;
+}
+
+async function screenshotsForRepo(repo, token, skipURL) {
+  if (!repo) return null;
+  const readme = await gh(`/repos/${repo}/readme`, token);
+  if (!readme?.content || !readme?.download_url) return null;
+
+  let markdown;
+  try {
+    markdown = Buffer.from(readme.content, "base64").toString("utf8");
+  } catch { return null; }
+
+  const seen = new Set(skipURL ? [skipURL] : []);
+  const shots = [];
+  for (const raw of imageURLsIn(markdown)) {
+    if (SHOT_SKIP.test(raw)) continue;
+    if (!SHOT_EXT.test(raw) && !SHOT_ALWAYS.test(raw)) continue;
+    if (!SHOT_HINT.test(raw) && !SHOT_ALWAYS.test(raw)) continue;
+
+    let url;
+    try {
+      url = new URL(raw, readme.download_url).toString();
+    } catch { continue; }
+    if (!url.startsWith("https://") || seen.has(url)) continue;
+    seen.add(url);
+    shots.push({ url });
+    if (shots.length === MAX_SHOTS) break;
+  }
+  return shots.length ? shots : null;
+}
+
 async function main() {
   const token = requireToken();
   const releases = JSON.parse(await readFile(RELEASES, "utf8"));
@@ -204,10 +298,14 @@ async function main() {
       unreadable.push(release.id);
     }
 
-    const popularity = await popularityForRepo(
-      repoFrom(release.homepageUrl, release.fileUrl), token, asOf,
-    );
+    const repo = repoFrom(release.homepageUrl, release.fileUrl);
+    const popularity = await popularityForRepo(repo, token, asOf);
     if (popularity) entry.popularity = popularity;
+
+    const icon = await logoForRepo(repo, token);
+    if (icon) entry.icon = icon;
+    const shots = await screenshotsForRepo(repo, token, icon?.url);
+    if (shots) entry.screenshots = shots;
 
     if (Object.keys(entry).length) out[release.id] = entry;
   }
@@ -216,8 +314,18 @@ async function main() {
   // They are two thirds of the catalog and they sort in the same list, so
   // skipping them would make the new sort a filter.
   for (const project of projects) {
-    const popularity = await popularityForRepo(repoFrom(project.homepageUrl), token, asOf);
-    if (popularity) out[project.id] = { popularity };
+    const repo = repoFrom(project.homepageUrl);
+    const entry = {};
+    const popularity = await popularityForRepo(repo, token, asOf);
+    if (popularity) entry.popularity = popularity;
+    // A link-out gets a logo too. It sits in the same list as everything else
+    // now that the tabs are gone, so giving art only to the installable third
+    // would make the list look sorted by something it is not.
+    const icon = await logoForRepo(repo, token);
+    if (icon) entry.icon = icon;
+    const shots = await screenshotsForRepo(repo, token, icon?.url);
+    if (shots) entry.screenshots = shots;
+    if (Object.keys(entry).length) out[project.id] = entry;
   }
 
   // A silent 80-of-90 is the exact failure this feature was born from: a
