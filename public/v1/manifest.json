@@ -151,6 +151,11 @@
           "BATTLE_ART_VOXEL_FORK",
           "DRAMALESS_SHAPE",
           "gender_mod"
+        ],
+        "games": [
+          "red",
+          "blue",
+          "yellow"
         ]
       },
       "popularity": {
@@ -227,6 +232,11 @@
           "kanto_dynamic_weather",
           "wild_skies",
           "overworld_wild_spawns"
+        ],
+        "games": [
+          "red",
+          "blue",
+          "yellow"
         ]
       },
       "popularity": {
@@ -314,6 +324,13 @@
         ]
       },
       "modID": "red_ptbr_golpes_ingles",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 59,
         "stars": 2,
@@ -533,6 +550,13 @@
         "games": []
       },
       "modID": "erilab_bottomless_bag",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 610,
         "stars": 6,
@@ -576,6 +600,11 @@
           "overworld_wild_spawns",
           "PokePCFollowers_VoxelMerge",
           "FOLLOWERS_EX"
+        ],
+        "games": [
+          "red",
+          "blue",
+          "yellow"
         ]
       },
       "popularity": {
@@ -661,6 +690,11 @@
           "gen3_battle_ui",
           "BATTLE_ART_VOXEL_FORK",
           "potato_voxel"
+        ],
+        "games": [
+          "red",
+          "blue",
+          "yellow"
         ]
       },
       "popularity": {
@@ -712,6 +746,11 @@
           "crystal_animated_sprites_with_shiny_visuals",
           "unique_menu_icons",
           "Gold_Silver_Sprites"
+        ],
+        "games": [
+          "red",
+          "blue",
+          "yellow"
         ]
       },
       "popularity": {
@@ -828,6 +867,13 @@
         "games": []
       },
       "modID": "ACCESS_PC_ANYWHERE",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 6306,
         "stars": 6,
@@ -867,6 +913,13 @@
         "games": []
       },
       "modID": "auto_battle",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 892,
         "stars": 0,
@@ -906,6 +959,13 @@
         "games": []
       },
       "modID": "bag_sort",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 698,
         "stars": 0,
@@ -944,6 +1004,13 @@
         "games": []
       },
       "modID": "MOVE_MATCHUP",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 5982,
         "stars": 5,
@@ -990,6 +1057,11 @@
       "requirements": {
         "worksWith": [
           "DRAMATIC_SHAPE"
+        ],
+        "games": [
+          "red",
+          "blue",
+          "yellow"
         ]
       },
       "popularity": {
@@ -1035,6 +1107,13 @@
         "games": []
       },
       "modID": "bike_anywhere",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 375,
         "stars": 0,
@@ -1102,6 +1181,11 @@
           "crystal_animated_sprites_with_shiny_visuals",
           "gen2_shiny_visuals",
           "shiny_visuals"
+        ],
+        "games": [
+          "red",
+          "blue",
+          "yellow"
         ]
       },
       "popularity": {
@@ -1143,7 +1227,12 @@
       },
       "modID": "childhood_myths_are_real",
       "requirements": {
-        "experimental": true
+        "experimental": true,
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 436,
@@ -1183,6 +1272,13 @@
         "games": []
       },
       "modID": "CONTROLLER_RUMBLE",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 5096,
         "stars": 5,
@@ -1222,6 +1318,13 @@
         "games": []
       },
       "modID": "damage_numbers",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 1819,
         "stars": 0,
@@ -1270,6 +1373,13 @@
         "games": []
       },
       "modID": "wills_mod",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 274,
         "stars": 1,
@@ -1309,6 +1419,13 @@
         "games": []
       },
       "modID": "fakemons",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 192,
         "stars": 0,
@@ -1465,6 +1582,13 @@
         "games": []
       },
       "modID": "HEAL_ANYWHERE",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 1393,
         "stars": 0,
@@ -1555,6 +1679,13 @@
         "games": []
       },
       "modID": "mew_under_the_truck",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 621,
         "stars": 0,
@@ -1594,6 +1725,13 @@
         "games": []
       },
       "modID": "minimap",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 736,
         "stars": 0,
@@ -1640,6 +1778,13 @@
         "games": []
       },
       "modID": "modern_dialog",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 1005,
         "stars": 0,
@@ -1679,7 +1824,12 @@
       },
       "modID": "modern_kanto",
       "requirements": {
-        "experimental": true
+        "experimental": true,
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 11710,
@@ -1719,6 +1869,13 @@
         "games": []
       },
       "modID": "move_descriptions",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 433,
         "stars": 0,
@@ -1761,6 +1918,13 @@
         "games": []
       },
       "modID": "MULTI_SAVE_SLOTS",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 4725,
         "stars": 8,
@@ -1799,6 +1963,13 @@
         "games": []
       },
       "modID": "MUSIC_PLAYER",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 1362,
         "stars": 0,
@@ -1949,6 +2120,13 @@
         "games": []
       },
       "modID": "RUN_MODE",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 7363,
         "stars": 8,
@@ -2033,6 +2211,11 @@
       "requirements": {
         "worksWith": [
           "gen1_modern_ui"
+        ],
+        "games": [
+          "red",
+          "blue",
+          "yellow"
         ]
       },
       "popularity": {
@@ -2111,6 +2294,13 @@
         "games": []
       },
       "modID": "SWITCH_ADVISOR",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 494,
         "stars": 2,
@@ -2150,6 +2340,13 @@
         "games": []
       },
       "modID": "mash-catch",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 277,
         "stars": 4,
@@ -2195,6 +2392,11 @@
           "BATTLE_ART_VOXEL_FORK",
           "potato_voxel",
           "TERRARIUM"
+        ],
+        "games": [
+          "red",
+          "blue",
+          "yellow"
         ]
       },
       "popularity": {
@@ -2235,6 +2437,13 @@
         "games": []
       },
       "modID": "erilab_bag_wrap",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 221,
         "stars": 2,
@@ -2280,6 +2489,11 @@
         "worksWith": [
           "PokePCFollowers_VoxelMerge",
           "DRAMATIC_SHAPE"
+        ],
+        "games": [
+          "red",
+          "blue",
+          "yellow"
         ]
       },
       "popularity": {
@@ -2324,6 +2538,14 @@
         "games": []
       },
       "modID": "non-binary-mode",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold"
+        ]
+      },
       "popularity": {
         "downloads": 73,
         "stars": 0,
@@ -2435,6 +2657,14 @@
         "games": []
       },
       "modID": "girl-mode",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold"
+        ]
+      },
       "popularity": {
         "downloads": 161,
         "stars": 0,
@@ -2474,6 +2704,13 @@
         "games": []
       },
       "modID": "infinite_repel",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 27,
         "stars": 0,
@@ -2512,6 +2749,13 @@
         "games": []
       },
       "modID": "battle_exp_bar",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 107,
         "stars": 0,
@@ -2553,6 +2797,11 @@
       "requirements": {
         "worksWith": [
           "modern_party_ui"
+        ],
+        "games": [
+          "red",
+          "blue",
+          "yellow"
         ]
       },
       "popularity": {
@@ -2593,6 +2842,13 @@
         "games": []
       },
       "modID": "settings_hotkeys",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 13,
         "stars": 0,
@@ -2631,6 +2887,13 @@
         "games": []
       },
       "modID": "professor_oak_challenge",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 31,
         "stars": 0,
@@ -2711,6 +2974,13 @@
         "games": []
       },
       "modID": "terrain_minimap",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 38,
         "stars": 0,
@@ -2761,6 +3031,11 @@
         "worksWith": [
           "gen1_modern_ui",
           "Kanto-Reforged"
+        ],
+        "games": [
+          "red",
+          "blue",
+          "yellow"
         ]
       },
       "popularity": {
@@ -2804,6 +3079,11 @@
       "requirements": {
         "conflicts": [
           "scott_mod"
+        ],
+        "games": [
+          "red",
+          "blue",
+          "yellow"
         ]
       },
       "popularity": {
@@ -2844,6 +3124,13 @@
         "games": []
       },
       "modID": "career_card",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 35,
         "stars": 0,
@@ -2888,6 +3175,11 @@
           "ds_fp_ceiling",
           "overworld_wild_spawns",
           "DRAMATIC_SKY_RIDE"
+        ],
+        "games": [
+          "red",
+          "blue",
+          "yellow"
         ]
       },
       "popularity": {
@@ -2933,8 +3225,8 @@
           "random_starters"
         ],
         "games": [
-          "blue",
-          "red"
+          "red",
+          "blue"
         ]
       },
       "popularity": {
@@ -2990,6 +3282,11 @@
           "BATTLE_ART_VOXEL_FORK",
           "DRAMALESS_SHAPE",
           "potato_voxel"
+        ],
+        "games": [
+          "red",
+          "blue",
+          "yellow"
         ]
       },
       "popularity": {
@@ -3153,6 +3450,13 @@
         "games": []
       },
       "modID": "secret-base",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 133,
         "stars": 1,
@@ -3965,6 +4269,11 @@
         "worksWith": [
           "DRAMALESS_SHAPE",
           "DRAMATIC_SHAPE"
+        ],
+        "games": [
+          "red",
+          "blue",
+          "yellow"
         ]
       },
       "popularity": {
@@ -4062,6 +4371,13 @@
         "url": "https://github.com/harryw4444/green_sgb_palette_gen1recomp",
         "status": "permission-queued"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 39,
         "stars": 0,
@@ -4100,6 +4416,13 @@
         "url": "https://github.com/harryw4444/mute_low_HP_alarm_gen1recomp",
         "status": "permission-queued"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 594,
         "stars": 2,
@@ -4137,6 +4460,13 @@
       "project": {
         "url": "https://github.com/harryw4444/fade_overlay_fix_gen1recomp",
         "status": "permission-queued"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 92,
@@ -4180,6 +4510,13 @@
         "url": "https://github.com/harryw4444/bag_stock_preview_gen1recomp",
         "status": "permission-queued"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 147,
         "stars": 1,
@@ -4222,6 +4559,13 @@
         "url": "https://github.com/harryw4444/fishing_mini_game_gen1recomp",
         "status": "permission-queued"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 168,
         "stars": 1,
@@ -4259,6 +4603,13 @@
       "project": {
         "url": "https://github.com/Chari69/mewmod",
         "status": "permission-queued"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 168,
@@ -4298,6 +4649,13 @@
         "url": "https://github.com/Yukitty/gen1mod_oak_brief",
         "status": "permission-queued"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 996,
         "stars": 0,
@@ -4335,6 +4693,13 @@
       "project": {
         "url": "https://github.com/Roxas2712/pokemon-gen1-recomp-mod-anytime-rename",
         "status": "permission-queued"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 338,
@@ -4374,6 +4739,13 @@
         "url": "https://github.com/ty-mcdk/additional-story-healers/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 515,
         "stars": 0,
@@ -4412,6 +4784,13 @@
         "url": "https://github.com/absol89/DramaticShapeVoxelMod/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 64261,
         "stars": 168,
@@ -4449,6 +4828,13 @@
       "project": {
         "url": "https://github.com/bryanthaboi/bookers_heaven/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 3490,
@@ -4533,6 +4919,13 @@
         "url": "https://github.com/hdbreaker/gen1recomp-mod-cheat_engine/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 552,
         "stars": 2,
@@ -4609,6 +5002,13 @@
         "url": "https://github.com/ShaneMcGovernIE/critical_capture/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 1054,
         "stars": 0,
@@ -4656,6 +5056,13 @@
       "project": {
         "url": "https://github.com/Roxas2712/pokemon-blau-deutsch-mod/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 623,
@@ -4705,6 +5112,13 @@
         "url": "https://github.com/Roxas2712/pokemon-gelb-deutsch-mod/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 815,
         "stars": 3,
@@ -4753,6 +5167,13 @@
         "url": "https://github.com/Roxas2712/pokemon-rot-deutsch-mod/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 1770,
         "stars": 7,
@@ -4791,6 +5212,13 @@
         "url": "https://github.com/shanehudson-gen1recomp-mods/dev-hook-inspector/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 108,
         "stars": 0,
@@ -4828,6 +5256,13 @@
       "project": {
         "url": "https://github.com/shanehudson-gen1recomp-mods/double_battles/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 1107,
@@ -4923,6 +5358,13 @@
         "url": "https://github.com/BartInTheField/gen1recomp-dutch-generator/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 184,
         "stars": 0,
@@ -4960,6 +5402,13 @@
       "project": {
         "url": "https://github.com/Sebarosu/Gen-1-Recomp-Spanish/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 5256,
@@ -5079,6 +5528,13 @@
         "url": "https://github.com/eduardocalafell/gen1recomp-gen2-dex/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 883,
         "stars": 1,
@@ -5117,6 +5573,13 @@
         "url": "https://github.com/ArmstrongThomas/gen1-modern-ui/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 31171,
         "stars": 43,
@@ -5154,6 +5617,13 @@
       "project": {
         "url": "https://github.com/1-Camp0-1/Gen1recomp-VoiceActingMod/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 1906,
@@ -5225,6 +5695,13 @@
         "url": "https://github.com/bryanthaboi/JP-GREEN-Poketto-Monsuta-Midori/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 292,
         "stars": 2,
@@ -5252,6 +5729,13 @@
       "project": {
         "url": "https://github.com/redelpedron/Kanto-Companion-Lite/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 1675,
@@ -5319,6 +5803,13 @@
         "url": "https://github.com/1-Camp0-1/Kanto-Dynamic-Weather/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 1966,
         "stars": 2,
@@ -5357,6 +5848,13 @@
         "url": "https://github.com/MaybeGreg/modern_type_framework/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 31,
         "stars": 0,
@@ -5394,6 +5892,13 @@
       "project": {
         "url": "https://github.com/ShaneMcGovernIE/mods_hotkeys/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 861,
@@ -5510,6 +6015,13 @@
         "url": "https://github.com/ddagent/gen1recomp-npc-bubbles/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 3707,
         "stars": 7,
@@ -5585,6 +6097,14 @@
       "project": {
         "url": "https://github.com/bryanthaboi/nuzlocke/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold"
+        ]
       },
       "popularity": {
         "downloads": 4666,
@@ -5669,6 +6189,13 @@
       "project": {
         "url": "https://github.com/ShaneMcGovernIE/potato_voxel/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 14656,
@@ -5800,6 +6327,13 @@
         "url": "https://github.com/ciddmandude/PokemonRecompRandomizer/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 5055,
         "stars": 6,
@@ -5850,6 +6384,13 @@
       "project": {
         "url": "https://github.com/Razor1993-Real/FlyingOverhaul/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 449,
@@ -5945,6 +6486,13 @@
       "project": {
         "url": "https://github.com/Sedatb23/recomp_cartographer/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 115,
@@ -6088,6 +6636,13 @@
         "url": "https://github.com/Yukitty/gen1mod-simple_girl/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 187,
         "stars": 0,
@@ -6125,6 +6680,13 @@
       "project": {
         "url": "https://github.com/ShaneMcGovernIE/surround-audio/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 8513,
@@ -6202,6 +6764,13 @@
         "url": "https://github.com/jherediagu/traduccion_es/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 186,
         "stars": 0,
@@ -6229,6 +6798,13 @@
       "project": {
         "url": "https://github.com/antoniman31/trad-fr-extended/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 574,
@@ -6268,6 +6844,13 @@
         "url": "https://github.com/git-mrjoufflu/pokemon-gen1-recomp-mod-FRQC/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 130,
         "stars": 1,
@@ -6305,6 +6888,13 @@
       "project": {
         "url": "https://github.com/ShaneMcGovernIE/trainer_rematch/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 6789,
@@ -6382,6 +6972,13 @@
         "url": "https://github.com/ShaneMcGovernIE/useful-bag/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 14134,
         "stars": 11,
@@ -6419,6 +7016,13 @@
       "project": {
         "url": "https://github.com/ShaneMcGovernIE/useful_dex/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 7170,
@@ -6458,6 +7062,13 @@
         "url": "https://github.com/ShaneMcGovernIE/useful-marts/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 1914,
         "stars": 1,
@@ -6495,6 +7106,13 @@
       "project": {
         "url": "https://github.com/ShaneMcGovernIE/useful-move-info/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 8744,
@@ -6534,6 +7152,13 @@
         "url": "https://github.com/bryanthaboi/versaovermelha/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 4376,
         "stars": 20,
@@ -6572,6 +7197,13 @@
         "url": "https://github.com/MyFriendPKMN/whos-that-trainer/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 1451,
         "stars": 0,
@@ -6609,6 +7241,13 @@
       "project": {
         "url": "https://github.com/ShaneMcGovernIE/gen1recomp-widescreen-battle-intro/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 10702,
@@ -6728,6 +7367,13 @@
         "url": "https://github.com/ShaneMcGovernIE/yellow_legacy_changes/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 5749,
         "stars": 6,
@@ -6765,6 +7411,13 @@
       "project": {
         "url": "https://github.com/artyrambles/DRAMALESS_SHAPE/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 20476,
@@ -6918,6 +7571,13 @@
         "url": "https://github.com/AyeBathingApe/gen1recomp-allgen-kaizo/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 860,
         "stars": 6,
@@ -6956,6 +7616,13 @@
         "url": "https://github.com/magatsu64/Gen1RecompMegaEvolution/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 660,
         "stars": 5,
@@ -6993,6 +7660,14 @@
       "project": {
         "url": "https://github.com/MrKrisSatan/AIRivials/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold"
+        ]
       },
       "popularity": {
         "downloads": 1050,
@@ -7127,6 +7802,13 @@
         "url": "https://github.com/thorkdev/gen1recomp-screen-effects/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 105,
         "stars": 3,
@@ -7177,6 +7859,13 @@
       "project": {
         "url": "https://github.com/thorkdev/gen1recomp-running-shoes/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 730,
@@ -7261,6 +7950,13 @@
         "url": "https://github.com/thorkdev/gen1recomp-radio/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 83,
         "stars": 2,
@@ -7341,6 +8037,13 @@
         "url": "https://github.com/ddagent/gen1recomp-battle-dex/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 210,
         "stars": 2,
@@ -7417,6 +8120,13 @@
         "url": "https://github.com/audris42/Mods-Gen1Recomp/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 19,
         "stars": 1,
@@ -7454,6 +8164,13 @@
       "project": {
         "url": "https://github.com/chrispanella/gen1recomp-mods/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 20,
@@ -7500,6 +8217,13 @@
         "url": "https://github.com/TranswarpTechnologies/choose-your-hero-mod-gen1recomp/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 559,
         "stars": 3,
@@ -7537,6 +8261,13 @@
       "project": {
         "url": "https://github.com/randyadr/Gen1-Cheat-Menu/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 312,
@@ -7576,6 +8307,13 @@
         "url": "https://github.com/NikoKatsu575/Gen1Recomp/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 8,
         "stars": 0,
@@ -7613,6 +8351,13 @@
       "project": {
         "url": "https://github.com/Czajo/gen1recomp-polish/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 5,
@@ -7652,6 +8397,13 @@
         "url": "https://github.com/yyoossk/Gen1Recomp-translation-jp-mod/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 44,
         "stars": 0,
@@ -7690,6 +8442,13 @@
         "url": "https://github.com/WizzStar/PKMN-G1R-Gender-Mod/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 355,
         "stars": 1,
@@ -7727,6 +8486,13 @@
       "project": {
         "url": "https://github.com/tectorifter/Dynamax_4_Recomp/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 115,
@@ -7804,6 +8570,13 @@
         "url": "https://github.com/tectorifter/Battle_Spees_Mod/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 38,
         "stars": 2,
@@ -7880,6 +8653,13 @@
         "url": "https://github.com/leftshoe18/more_gymz/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 31,
         "stars": 1,
@@ -7918,6 +8698,13 @@
         "url": "https://github.com/eioo/gen1recomp-finnish-mod/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 3,
         "stars": 0,
@@ -7945,6 +8732,13 @@
       "project": {
         "url": "https://github.com/klokkett90/gen1recomp-italian/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 109,
@@ -7984,6 +8778,14 @@
         "url": "https://github.com/ZyranCZ/Evolve-in-Battle/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold"
+        ]
+      },
       "popularity": {
         "downloads": 1393,
         "stars": 3,
@@ -8021,6 +8823,11 @@
       "project": {
         "url": "https://github.com/LordSangreal/versaocristal-ptbr/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 25,
@@ -8060,6 +8867,13 @@
         "url": "https://github.com/AlucardTheFirstHunter/MusicReplacementMod/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 1752,
         "stars": 11,
@@ -8097,6 +8911,13 @@
       "project": {
         "url": "https://github.com/AlucardTheFirstHunter/CryReplacementMod/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 1367,
@@ -8136,6 +8957,13 @@
         "url": "https://github.com/SliferDaG/TextKerningGen1Recomp/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 45,
         "stars": 0,
@@ -8173,6 +9001,13 @@
       "project": {
         "url": "https://github.com/oldtriplesix/DVColors-2.1.0-PKMN-Gen1-ReComp-/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 176,
@@ -8311,6 +9146,14 @@
       "project": {
         "url": "https://github.com/castdrian/what-the-heck/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold"
+        ]
       },
       "popularity": {
         "downloads": 38,
@@ -9057,6 +9900,15 @@
         "url": "https://github.com/MrKrisSatan/The_World/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver"
+        ]
+      },
       "popularity": {
         "downloads": 545,
         "stars": 0,
@@ -9721,6 +10573,13 @@
       "project": {
         "url": "https://github.com/ty-mcdk/easy-custom-music/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 125,

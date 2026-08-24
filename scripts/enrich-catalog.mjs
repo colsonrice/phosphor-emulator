@@ -22,13 +22,45 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { entryNames, readEntry, readManifest } from "./lib/archive.mjs";
 
-/// The three cartridges this app ships an engine for.
+/// Every cartridge this app ships an engine for, by generation.
 ///
-/// A `games` value naming all three, or naming a generation rather than a
-/// cartridge, is a constant and is not published: it would be the
-/// `target: "Gen1Recomp"` mistake in a new costume. Two live mods name a real
-/// subset.
-const CARTRIDGES = ["blue", "red", "yellow"];
+/// This list was `["blue", "red", "yellow"]` and stayed that way through
+/// gen1recomp declaring gold and silver (v0.2.12) and crystal (v0.2.24). The
+/// cost was not cosmetic: the rule below only publishes a `games` line for a
+/// STRICT SUBSET of this list, so once the engine ran six games a Gen 1-only
+/// mod stopped looking like a subset of three and the line vanished for
+/// exactly the mods that most needed it. Two of 266 rows carried it, and a
+/// player installing a Gen 1 mod for Crystal was told nothing at all.
+///
+/// Keep it in step with the engine's GameVersion.ORDER.
+const GEN1_CARTRIDGES = ["red", "blue", "yellow"];
+const GEN2_CARTRIDGES = ["gold", "silver", "crystal"];
+const CARTRIDGES = [...GEN1_CARTRIDGES, ...GEN2_CARTRIDGES];
+
+/// Which cartridges a manifest actually covers, by the ENGINE's own rule
+/// (src/mods/ModTargets.lua). An explicit `games` list wins, expanding "all"
+/// and "genN"; otherwise the legacy flag decides, and `gen2compat` is what
+/// upgrades a mod from Gen 1 only to every game.
+///
+/// This has to match the loader exactly, because the loader is what refuses
+/// the mod at boot: `Loader:_skip(mod, "wrong_generation", "not marked
+/// gen2compat; this is a Gen 2 game")`. A catalog that disagrees would promise
+/// an install the engine then silently declines.
+export function cartridgesFor(manifest) {
+  const declared = manifest.games;
+  if (Array.isArray(declared) && declared.length) {
+    const out = new Set();
+    for (const raw of declared) {
+      const key = String(raw).toLowerCase().trim();
+      if (key === "all") CARTRIDGES.forEach((c) => out.add(c));
+      else if (key === "gen1") GEN1_CARTRIDGES.forEach((c) => out.add(c));
+      else if (key === "gen2") GEN2_CARTRIDGES.forEach((c) => out.add(c));
+      else if (CARTRIDGES.includes(key)) out.add(key);
+    }
+    if (out.size) return CARTRIDGES.filter((c) => out.has(c));
+  }
+  return manifest.gen2compat ? [...CARTRIDGES] : [...GEN1_CARTRIDGES];
+}
 
 /// Declared by every mod that declares any permission at all. Not a
 /// disclosure.
@@ -71,9 +103,11 @@ export function requirementsFrom(manifest, { usesNetwork = null } = {}) {
   if (manifest.affects_link === true) out.affectsLink = true;
   if (manifest.experimental === true) out.experimental = true;
 
-  const games = (manifest.games ?? []).map((g) => String(g).toLowerCase()).sort();
-  const namesCartridges = games.length > 0 && games.every((g) => CARTRIDGES.includes(g));
-  if (namesCartridges && games.length < CARTRIDGES.length) out.games = games;
+  // Published whenever the mod does NOT cover every cartridge. "For Red, Blue
+  // and Yellow only." is the line the app draws from this, and for a Gen 1 mod
+  // being installed against Crystal it is the whole warning.
+  const covers = cartridgesFor(manifest);
+  if (covers.length < CARTRIDGES.length) out.games = covers;
 
   return Object.keys(out).length ? out : null;
 }

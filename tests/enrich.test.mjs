@@ -2,17 +2,22 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { requirementsFrom, popularityFrom } from "../scripts/enrich-catalog.mjs";
 
+// Several fixtures below carry `games: ["all"]`. That is not what they test:
+// it keeps the games line out of the answer so each test still asserts one
+// field. Without it every fixture would also disclose "Gen 1 only", which is
+// correct (see the games test) and would bury the point being made.
+
 test("a mod with nothing to say produces nothing", () => {
-  assert.equal(requirementsFrom({ id: "x" }), null);
+  assert.equal(requirementsFrom({ id: "x", games: ["all"] }), null);
 });
 
 test("engine_internals is not a disclosure", () => {
   // Every one of the mods that declares any permission declares this one. A
   // line every mod carries tells the player nothing, and printing it would
   // repeat the mistake this feature is deleting from the detail screen.
-  assert.equal(requirementsFrom({ permissions: ["engine_internals"] }), null);
+  assert.equal(requirementsFrom({ permissions: ["engine_internals"], games: ["all"] }), null);
   assert.deepEqual(
-    requirementsFrom({ permissions: ["engine_internals", "filesystem"] }),
+    requirementsFrom({ permissions: ["engine_internals", "filesystem"], games: ["all"] }),
     { permissions: ["filesystem"] },
   );
 });
@@ -21,47 +26,66 @@ test("optional_dependencies become worksWith; dependencies are ignored", () => {
   // `dependencies` is declared by 61 manifests and empty in every one. There
   // is no Requires line to build, and drawing one as a blocker would be a lie.
   assert.deepEqual(
-    requirementsFrom({ dependencies: [], optional_dependencies: ["exp_share"] }),
+    requirementsFrom({ dependencies: [], optional_dependencies: ["exp_share"], games: ["all"] }),
     { worksWith: ["exp_share"] },
   );
-  assert.equal(requirementsFrom({ dependencies: ["national_dex"] }), null);
+  assert.equal(requirementsFrom({ dependencies: ["national_dex"], games: ["all"] }), null);
 });
 
 test("conflicts are carried verbatim", () => {
   assert.deepEqual(
-    requirementsFrom({ conflicts: ["DRAMATIC_SHAPE", "free_fly"] }),
+    requirementsFrom({ conflicts: ["DRAMATIC_SHAPE", "free_fly"], games: ["all"] }),
     { conflicts: ["DRAMATIC_SHAPE", "free_fly"] },
   );
 });
 
 test("flags are carried only when true", () => {
-  assert.equal(requirementsFrom({ experimental: false, affects_link: false }), null);
+  assert.equal(requirementsFrom({ experimental: false, affects_link: false, games: ["all"] }), null);
   assert.deepEqual(
-    requirementsFrom({ experimental: true, affects_link: true }),
+    requirementsFrom({ experimental: true, affects_link: true, games: ["all"] }),
     { affectsLink: true, experimental: true },
   );
 });
 
-test("games are dropped unless they name real cartridges", () => {
-  // 24 of the 32 non-empty values say "gen1" or "gen1,gen2", which with Gen 2
-  // retired is the same constant this feature is deleting elsewhere.
+test("games are published whenever a mod does not cover every cartridge", () => {
+  // This test used to assert the opposite, and its reasoning was sound at the
+  // time: with Gen 2 retired, "gen1" and "blue, red, yellow" named every game
+  // the app could offer, so the line was a constant worth deleting. gen1recomp
+  // brought silver back on Aug 20 and crystal on Aug 24, and the moment the
+  // engine ran six games "Gen 1 only" stopped being a constant and became the
+  // single most important thing a Crystal owner can be told before installing.
+  // The rule follows the engine's own src/mods/ModTargets.lua.
+
+  // Still constants: these cover every cartridge.
   assert.equal(requirementsFrom({ games: ["gen1", "gen2"] }), null);
-  assert.equal(requirementsFrom({ games: ["gen1"] }), null);
   assert.equal(requirementsFrom({ games: ["all"] }), null);
-  assert.equal(requirementsFrom({ games: ["gen1", "gold"] }), null,
-               "a retired game is not a cartridge this app can offer");
-  assert.equal(requirementsFrom({ games: ["blue", "red", "yellow"] }), null,
-               "all three is a constant too");
+  assert.equal(requirementsFrom({ gen2compat: true }), null);
+
+  // Gen 1 only, which is most of the catalog and the whole point of this line.
+  assert.deepEqual(requirementsFrom({ games: ["gen1"] }), { games: ["red", "blue", "yellow"] });
+  assert.deepEqual(requirementsFrom({ games: ["blue", "red", "yellow"] }),
+                   { games: ["red", "blue", "yellow"] });
+  // No games key and no gen2compat is the legacy default, and it means Gen 1.
+  // The engine refuses those on a Gen 2 game as `wrong_generation`, so saying
+  // nothing here would promise an install the loader silently declines.
+  assert.deepEqual(requirementsFrom({ id: "legacy-mod" }), { games: ["red", "blue", "yellow"] });
+
+  // Gold is a cartridge again, so a mod naming it names a real game.
+  assert.deepEqual(requirementsFrom({ games: ["gen1", "gold"] }),
+                   { games: ["red", "blue", "yellow", "gold"] });
+  assert.deepEqual(requirementsFrom({ games: ["crystal"] }), { games: ["crystal"] });
+
   assert.deepEqual(requirementsFrom({ games: ["yellow"] }), { games: ["yellow"] });
-  assert.deepEqual(requirementsFrom({ games: ["red", "blue"] }), { games: ["blue", "red"] });
   assert.deepEqual(requirementsFrom({ games: ["Yellow"] }), { games: ["yellow"] },
                    "case is the author's business, not the player's");
+  // Order follows the engine's launcher order, never the author's spelling.
+  assert.deepEqual(requirementsFrom({ games: ["yellow", "red"] }), { games: ["red", "yellow"] });
 });
 
 test("a network permission survives, because it is the one that refuses", () => {
   // The sandbox denies sockets unconditionally, so this is the disclosure that
   // changes what the install button says.
-  assert.deepEqual(requirementsFrom({ permissions: ["network"] }), { permissions: ["network"] });
+  assert.deepEqual(requirementsFrom({ permissions: ["network"], games: ["all"] }), { permissions: ["network"] });
 });
 
 test("a real manifest from the catalog reads the way the survey counted it", () => {
@@ -121,21 +145,21 @@ test("a declared network permission that the code never uses is not published", 
   // of the mod object. Publishing the declaration made the app refuse the one
   // working mod the rule applies to.
   assert.equal(
-    requirementsFrom({ permissions: ["engine_internals", "network"] }, { usesNetwork: false }),
+    requirementsFrom({ permissions: ["engine_internals", "network"], games: ["all"] }, { usesNetwork: false }),
     null,
   );
   assert.deepEqual(
-    requirementsFrom({ permissions: ["network", "steps"] }, { usesNetwork: false }),
+    requirementsFrom({ permissions: ["network", "steps"], games: ["all"] }, { usesNetwork: false }),
     { permissions: ["steps"] },
   );
 });
 
 test("a network permission the code DOES use is still published", () => {
   assert.deepEqual(
-    requirementsFrom({ permissions: ["network"] }, { usesNetwork: true }),
+    requirementsFrom({ permissions: ["network"], games: ["all"] }, { usesNetwork: true }),
     { permissions: ["network"] },
   );
   // Unchecked stays published: withholding on 'we did not look' would silently
   // let a mod that needs sockets through as installable.
-  assert.deepEqual(requirementsFrom({ permissions: ["network"] }), { permissions: ["network"] });
+  assert.deepEqual(requirementsFrom({ permissions: ["network"], games: ["all"] }), { permissions: ["network"] });
 });
