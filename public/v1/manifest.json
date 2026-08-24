@@ -4037,6 +4037,7 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
@@ -4048,6 +4049,15 @@
           "url": "https://github.com/user-attachments/assets/19583d1b-43fd-433d-b398-6f685805c546"
         }
       ],
+      "version": "1.0.0",
+      "releasedAt": "2026-08-05T07:16:55Z",
+      "modID": "green_sgb_palette",
+      "download": {
+        "url": "https://github.com/harryw4444/green_sgb_palette_gen1recomp/releases/download/FirstRelease/green_sgb_palette.zip",
+        "sizeBytes": 2170,
+        "sha256": "9a377038c5cb8e8b7f240de6a2ad811192ad52a3c3a3eb80ba3443e12360b8d5",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/harryw4444/green_sgb_palette_gen1recomp",
         "status": "permission-queued"
@@ -4072,10 +4082,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.1.0",
+      "releasedAt": "2026-08-06T18:36:27Z",
+      "modID": "mute_low_hp_alarm",
+      "download": {
+        "url": "https://github.com/harryw4444/mute_low_HP_alarm_gen1recomp/releases/download/Update/mute_low_hp_alarm_v1.1.zip",
+        "sizeBytes": 917,
+        "sha256": "08afbf0de48c819f5407efed2757e86fbf99fd89c75a2bc172a76f8026e58f4a",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/harryw4444/mute_low_HP_alarm_gen1recomp",
         "status": "permission-queued"
@@ -4100,10 +4120,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.0.0",
+      "releasedAt": "2026-08-06T09:09:01Z",
+      "modID": "fade_overlay_fix",
+      "download": {
+        "url": "https://github.com/harryw4444/fade_overlay_fix_gen1recomp/releases/download/FirstRelease/face_overlay_fix.zip",
+        "sizeBytes": 2353,
+        "sha256": "c3710e57382f96ae3140bfc42827203fbbf94f55352843c35bc65f76303e9af7",
+        "manifestPath": "face_overlay_fix/manifest.json"
+      },
       "project": {
         "url": "https://github.com/harryw4444/fade_overlay_fix_gen1recomp",
         "status": "permission-queued"
@@ -4128,6 +4158,7 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
@@ -4136,6 +4167,15 @@
           "url": "https://github.com/user-attachments/assets/5e3a49c3-0bf0-4aa2-b0df-6df525afda41"
         }
       ],
+      "version": "1.2.0",
+      "releasedAt": "2026-08-02T21:01:28Z",
+      "modID": "bag_stock_preview",
+      "download": {
+        "url": "https://github.com/harryw4444/bag_stock_preview_gen1recomp/releases/download/FirstRelease/bag_stock.zip",
+        "sizeBytes": 1889,
+        "sha256": "7a2ef9cbf012ff5f5d1f61a37633610c1c1c4844a669238044040db49460c5eb",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/harryw4444/bag_stock_preview_gen1recomp",
         "status": "permission-queued"
@@ -4160,6 +4200,7 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
@@ -4168,6 +4209,15 @@
           "url": "https://github.com/user-attachments/assets/b5b561c2-8f63-4ac4-9d9e-9954be3fefd3"
         }
       ],
+      "version": "1.1.0",
+      "releasedAt": "2026-08-11T08:08:15Z",
+      "modID": "fishing_minigame",
+      "download": {
+        "url": "https://github.com/harryw4444/fishing_mini_game_gen1recomp/releases/download/v1.1.0/Fishing_Mini_Game_v1.1.zip",
+        "sizeBytes": 3679,
+        "sha256": "f0a73504946f335639a14a903b798c97b9e5f1ff9786a6eaa369f8544e546b6d",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/harryw4444/fishing_mini_game_gen1recomp",
         "status": "permission-queued"
@@ -4192,10 +4242,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.0.0",
+      "releasedAt": "2026-08-07T07:39:34Z",
+      "modID": "mewmod",
+      "download": {
+        "url": "https://github.com/Chari69/mewmod/releases/download/v1.0.0/mewmod-1.0.0.zip",
+        "sizeBytes": 314466,
+        "sha256": "81df4977378229abfa774da57e69c211f6c5f398759ce5127eea58292ab5bfe9",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/Chari69/mewmod",
         "status": "permission-queued"
@@ -4220,10 +4280,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.0.1",
+      "releasedAt": "2026-08-05T02:20:01Z",
+      "modID": "oak_brief",
+      "download": {
+        "url": "https://github.com/Yukitty/gen1mod_oak_brief/releases/download/v1.0.1/oak_brief-1.0.1.zip",
+        "sizeBytes": 1200,
+        "sha256": "d62bfb53c56f2fd92b3573049571311aaab6cdfbb4e6621d3c1724bd58f8f252",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/Yukitty/gen1mod_oak_brief",
         "status": "permission-queued"
@@ -4248,10 +4318,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.2.1",
+      "releasedAt": "2026-08-18T10:47:15Z",
+      "modID": "anytime_rename",
+      "download": {
+        "url": "https://github.com/Roxas2712/pokemon-gen1-recomp-mod-anytime-rename/releases/download/v1.2.1/anytime_rename-1.2.1.zip",
+        "sizeBytes": 5996,
+        "sha256": "74e83956b1fb35099c5df6f03d7ad8d5a96ac5524c6b43cae62c3b21293b32a6",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/Roxas2712/pokemon-gen1-recomp-mod-anytime-rename",
         "status": "permission-queued"
@@ -4276,10 +4356,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "0.2.1",
+      "releasedAt": "2026-08-12T20:35:59Z",
+      "modID": "additional_story_healers",
+      "download": {
+        "url": "https://github.com/ty-mcdk/additional-story-healers/releases/download/v0.2.1/additional_story_healers-0.2.1.zip",
+        "sizeBytes": 3786,
+        "sha256": "da4534f44a2f5cc5194991d3fd698deb4cf3595aed612b04d58f8189618a4595",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/ty-mcdk/additional-story-healers/releases",
         "status": "permission-needed"
@@ -4304,10 +4394,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.9.6",
+      "releasedAt": "2026-08-21T03:23:02Z",
+      "modID": "BATTLE_ART_VOXEL_FORK",
+      "download": {
+        "url": "https://github.com/absol89/DramaticShapeVoxelMod/releases/download/1.9.6/BATTLE_ART_VOXEL_FORK-1.9.6.zip",
+        "sizeBytes": 123647837,
+        "sha256": "a210958be9e975842fbf66520b0b8722c839afa27b91738c68763e333dcdf351",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/absol89/DramaticShapeVoxelMod/releases",
         "status": "permission-needed"
@@ -4332,10 +4432,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.1.0",
+      "releasedAt": "2026-07-29T10:11:48Z",
+      "modID": "bookers_heaven",
+      "download": {
+        "url": "https://github.com/bryanthaboi/bookers_heaven/releases/download/v1.1.0/bookers_heaven-1.1.0.zip",
+        "sizeBytes": 8346,
+        "sha256": "b92314586b25c1ff377ebf0777bc9678e66285dad79476ecd1c700e1f17d9564",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/bryanthaboi/bookers_heaven/releases",
         "status": "permission-needed"
@@ -4360,10 +4470,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.5.0",
+      "releasedAt": "2026-08-13T09:14:44Z",
+      "modID": "candy_jar",
+      "download": {
+        "url": "https://github.com/TanukiTooks/Candy-Jar/releases/download/v1.5.0/CandyJar-1.5.0.zip",
+        "sizeBytes": 8783,
+        "sha256": "84e70799f55c669a0b61fda6cdab68ddd809a9f0a16890d61cf3e28b5212b264",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/TanukiTooks/Candy-Jar/releases",
         "status": "permission-needed"
@@ -4391,6 +4511,7 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
@@ -4399,6 +4520,15 @@
           "url": "https://raw.githubusercontent.com/hdbreaker/gen1recomp-mod-cheat_engine/main/screenshots/cheat_engine_menu.png"
         }
       ],
+      "version": "1.0.0",
+      "releasedAt": "2026-08-09T16:40:05Z",
+      "modID": "cheat_engine",
+      "download": {
+        "url": "https://github.com/hdbreaker/gen1recomp-mod-cheat_engine/releases/download/v1.0.0/cheat_engine-1.0.0.zip",
+        "sizeBytes": 14141,
+        "sha256": "2515701c1a34e557abd7afbcca9854f33183ba0853670ad61d216f9d49054c2c",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/hdbreaker/gen1recomp-mod-cheat_engine/releases",
         "status": "permission-needed"
@@ -4423,10 +4553,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "2.0.0",
+      "releasedAt": "2026-08-12T11:55:05Z",
+      "modID": "leaf_avatar",
+      "download": {
+        "url": "https://github.com/MrKrisSatan/Leaf/releases/download/2.0.0/leaf_avatar-2.0.0.zip",
+        "sizeBytes": 38474,
+        "sha256": "9dee1d07187405625d404c668b4d1c62479a333839a6f71ee9a9ae4cd21db507",
+        "manifestPath": "leaf_avatar/manifest.json"
+      },
       "project": {
         "url": "https://github.com/MrKrisSatan/Leaf/releases",
         "status": "permission-needed"
@@ -4451,10 +4591,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "0.1.1",
+      "releasedAt": "2026-08-05T03:33:25Z",
+      "modID": "critical_capture",
+      "download": {
+        "url": "https://github.com/ShaneMcGovernIE/critical_capture/releases/download/v0.1.1/critical_capture-0.1.1.zip",
+        "sizeBytes": 13373,
+        "sha256": "32c5a04b65fb4d8b91a6c521f3bdf91897685e00cd13f6be3ac6562f518acc2d",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/ShaneMcGovernIE/critical_capture/releases",
         "status": "permission-needed"
@@ -4479,6 +4629,7 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
@@ -4493,6 +4644,15 @@
           "url": "https://raw.githubusercontent.com/Roxas2712/pokemon-blau-deutsch-mod/main/screenshots/status-gif.png"
         }
       ],
+      "version": "1.1.1",
+      "releasedAt": "2026-08-18T10:47:12Z",
+      "modID": "deutsch-blau",
+      "download": {
+        "url": "https://github.com/Roxas2712/pokemon-blau-deutsch-mod/releases/download/v1.1.1/deutsch-blau-1.1.1.zip",
+        "sizeBytes": 126155,
+        "sha256": "80e445312968a7bf215b2084a016f0f42a572ea5b3f7e31a3dd618bff8094aa5",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/Roxas2712/pokemon-blau-deutsch-mod/releases",
         "status": "permission-needed"
@@ -4517,6 +4677,7 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
@@ -4531,6 +4692,15 @@
           "url": "https://raw.githubusercontent.com/Roxas2712/pokemon-gelb-deutsch-mod/main/screenshots/status-gif.png"
         }
       ],
+      "version": "1.1.1",
+      "releasedAt": "2026-08-18T10:47:13Z",
+      "modID": "deutsch-gelb",
+      "download": {
+        "url": "https://github.com/Roxas2712/pokemon-gelb-deutsch-mod/releases/download/v1.1.1/deutsch-gelb-1.1.1.zip",
+        "sizeBytes": 136774,
+        "sha256": "153a3b177857b9bf74dcd48d5aeee80c4eb2526e5bf333d417015630db565a0b",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/Roxas2712/pokemon-gelb-deutsch-mod/releases",
         "status": "permission-needed"
@@ -4555,6 +4725,7 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
@@ -4569,6 +4740,15 @@
           "url": "https://raw.githubusercontent.com/Roxas2712/pokemon-rot-deutsch-mod/main/screenshots/status-gif.png"
         }
       ],
+      "version": "2.2.1",
+      "releasedAt": "2026-08-18T10:47:10Z",
+      "modID": "deutsch",
+      "download": {
+        "url": "https://github.com/Roxas2712/pokemon-rot-deutsch-mod/releases/download/v2.2.1/deutsch-2.2.1.zip",
+        "sizeBytes": 126508,
+        "sha256": "5f700c6ffbca6bd80421396fb3c0a72ba98090b2bd30a793061a04eaaf26c3db",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/Roxas2712/pokemon-rot-deutsch-mod/releases",
         "status": "permission-needed"
@@ -4593,10 +4773,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "0.2.0",
+      "releasedAt": "2026-08-10T21:43:49Z",
+      "modID": "dev-hook-inspector",
+      "download": {
+        "url": "https://github.com/shanehudson-gen1recomp-mods/dev-hook-inspector/releases/download/v0.2.0/dev-hook-inspector-0.2.0.zip",
+        "sizeBytes": 15847,
+        "sha256": "b30668a8ea57d648b2a6ccc6f12b45fbea79e1dc4060f03859e74ebc62d0d734",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/shanehudson-gen1recomp-mods/dev-hook-inspector/releases",
         "status": "permission-needed"
@@ -4621,10 +4811,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "0.6.1",
+      "releasedAt": "2026-08-19T02:15:16Z",
+      "modID": "double_battles",
+      "download": {
+        "url": "https://github.com/shanehudson-gen1recomp-mods/double_battles/releases/download/v0.6.1/double_battles-0.6.1.zip",
+        "sizeBytes": 83434,
+        "sha256": "1b2c4e97cb67ffa1b52eed8282f0459a9e6541c2cee1a761a8b3725c88c36155",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/shanehudson-gen1recomp-mods/double_battles/releases",
         "status": "permission-needed"
@@ -4705,10 +4905,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "0.0.2",
+      "releasedAt": "2026-07-31T20:48:48Z",
+      "modID": "translation-nl",
+      "download": {
+        "url": "https://github.com/BartInTheField/gen1recomp-dutch-generator/releases/download/v0.0.2/translation-nl-0.0.2.zip",
+        "sizeBytes": 105853,
+        "sha256": "35f9c051f894f5d3b7dddec5bb33305f34feac3aa3d9809a60add49f5d08634e",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/BartInTheField/gen1recomp-dutch-generator/releases",
         "status": "permission-needed"
@@ -4733,10 +4943,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.1.0",
+      "releasedAt": "2026-08-02T12:26:20Z",
+      "modID": "recomp-spanish",
+      "download": {
+        "url": "https://github.com/Sebarosu/Gen-1-Recomp-Spanish/releases/download/1.1.0/recompilacion_spanish.zip",
+        "sizeBytes": 118266,
+        "sha256": "47c178874951c104f9801593b2c0c14349d256780ecae04902203328d9b996c5",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/Sebarosu/Gen-1-Recomp-Spanish/releases",
         "status": "permission-needed"
@@ -4761,10 +4981,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "0.1.10",
+      "releasedAt": "2026-08-21T14:15:15Z",
+      "modID": "exp_share",
+      "download": {
+        "url": "https://github.com/ShaneMcGovernIE/exp_share/releases/download/v0.1.10/exp_share-0.1.10.zip",
+        "sizeBytes": 20065,
+        "sha256": "7a22e8d143b27b857773db350d969f3f5b31f0e2c813cd82d4181ef2c3d85f86",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/ShaneMcGovernIE/exp_share/releases",
         "status": "permission-needed"
@@ -4789,6 +5019,7 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
@@ -4797,6 +5028,15 @@
           "url": "https://raw.githubusercontent.com/shanehudson-gen1recomp-mods/monorepo/main/.github/free_fly-demo.gif"
         }
       ],
+      "version": "1.8.0",
+      "releasedAt": "2026-08-19T02:15:20Z",
+      "modID": "free_fly",
+      "download": {
+        "url": "https://github.com/shanehudson-gen1recomp-mods/free_fly/releases/download/v1.8.0/free_fly-1.8.0.zip",
+        "sizeBytes": 93089,
+        "sha256": "63ab8c4248288ddf235372aee1017873502b352a3e889f0407b267523c72fb2f",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/shanehudson-gen1recomp-mods/free_fly/releases",
         "status": "permission-needed"
@@ -4821,10 +5061,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.2.2",
+      "releasedAt": "2026-08-09T16:21:19Z",
+      "modID": "gen2_dex",
+      "download": {
+        "url": "https://github.com/eduardocalafell/gen1recomp-gen2-dex/releases/download/v1.2.2/gen2_dex-1.2.2.zip",
+        "sizeBytes": 242091,
+        "sha256": "7c74c3beba12154af51ea1d9ee9a3e2cb6f6038cd04e3fd4fa47d469e8050aa8",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/eduardocalafell/gen1recomp-gen2-dex/releases",
         "status": "permission-needed"
@@ -4849,10 +5099,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "0.9.2",
+      "releasedAt": "2026-08-16T15:13:48Z",
+      "modID": "gen1_modern_ui",
+      "download": {
+        "url": "https://github.com/ArmstrongThomas/gen1-modern-ui/releases/download/v0.9.2/gen1_modern_ui-0.9.2.zip",
+        "sizeBytes": 188363,
+        "sha256": "fd88c2f14deb135f0cb6eb25d8580303fb7a484ab4fa48765493f02ad24f8969",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/ArmstrongThomas/gen1-modern-ui/releases",
         "status": "permission-needed"
@@ -4877,10 +5137,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.17.10",
+      "releasedAt": "2026-08-05T07:56:33Z",
+      "modID": "pokemon_red_voice_acting",
+      "download": {
+        "url": "https://github.com/1-Camp0-1/Gen1recomp-VoiceActingMod/releases/download/v1.17.10/pokemon_red_voice_acting-1.17.10.zip",
+        "sizeBytes": 4717483,
+        "sha256": "e1f155ab95715a99c2dd7c79661d3ab805fad481064f06de86871951ca664746",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/1-Camp0-1/Gen1recomp-VoiceActingMod/releases",
         "status": "permission-needed"
@@ -4937,10 +5207,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "0.4.4",
+      "releasedAt": "2026-08-04T14:07:19Z",
+      "modID": "translation-ja-hrkt",
+      "download": {
+        "url": "https://github.com/bryanthaboi/JP-GREEN-Poketto-Monsuta-Midori/releases/download/v0.4.4/translation-ja-hrkt-0.4.4.zip",
+        "sizeBytes": 130473,
+        "sha256": "607990e614890a41e4bcc27d9368b74452a0cd7cbe56c4bd6988d1fcb306a628",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/bryanthaboi/JP-GREEN-Poketto-Monsuta-Midori/releases",
         "status": "permission-needed"
@@ -5021,10 +5301,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.0.3",
+      "releasedAt": "2026-08-08T11:28:26Z",
+      "modID": "kanto_dynamic_weather",
+      "download": {
+        "url": "https://github.com/1-Camp0-1/Kanto-Dynamic-Weather/releases/download/v1.0.3/kanto_dynamic_weather-1.0.3.zip",
+        "sizeBytes": 67817,
+        "sha256": "d9d882fdb452db0cca0879a8fcde99f0e00819fa1614d548c6573c7d8b6c7d16",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/1-Camp0-1/Kanto-Dynamic-Weather/releases",
         "status": "permission-needed"
@@ -5049,10 +5339,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.1.0",
+      "releasedAt": "2026-08-13T14:25:05Z",
+      "modID": "modern_type_framework",
+      "download": {
+        "url": "https://github.com/MaybeGreg/modern_type_framework/releases/download/release/modern_type_framework.zip",
+        "sizeBytes": 2469,
+        "sha256": "a44fcd67574afbaa2b70e52d84c5ec66158fc82d2a1bc4af3cff46ace76d95f3",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/MaybeGreg/modern_type_framework/releases",
         "status": "permission-needed"
@@ -5077,10 +5377,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "0.1.10",
+      "releasedAt": "2026-08-05T03:33:21Z",
+      "modID": "mods_hotkeys",
+      "download": {
+        "url": "https://github.com/ShaneMcGovernIE/mods_hotkeys/releases/download/v0.1.10/mods_hotkeys-0.1.10.zip",
+        "sizeBytes": 30463,
+        "sha256": "2c85a82100902d6422efefdd4f4a4f7fe624663655e5bc69560c0e264d3a0524",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/ShaneMcGovernIE/mods_hotkeys/releases",
         "status": "permission-needed"
@@ -5105,10 +5415,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.5.1",
+      "releasedAt": "2026-08-21T17:07:02Z",
+      "modID": "relearn_moves",
+      "download": {
+        "url": "https://github.com/ShaneMcGovernIE/relearn_moves/releases/download/v1.5.1/relearn_moves-1.5.1.zip",
+        "sizeBytes": 16929,
+        "sha256": "a856f46700e98ba567393671ac67121b67673f84348d8f996eaf1a7137414481",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/ShaneMcGovernIE/relearn_moves/releases",
         "status": "permission-needed"
@@ -5156,6 +5476,7 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
@@ -5176,6 +5497,15 @@
           "url": "https://raw.githubusercontent.com/ddagent/gen1recomp-npc-bubbles/main/docs/screenshot-checklist-places.png"
         }
       ],
+      "version": "2.3.11",
+      "releasedAt": "2026-08-17T12:18:53Z",
+      "modID": "npc_bubbles",
+      "download": {
+        "url": "https://github.com/ddagent/gen1recomp-npc-bubbles/releases/download/v2.3.11/npc_bubbles-2.3.11.zip",
+        "sizeBytes": 66175,
+        "sha256": "0be449ef95f38799181e25487f67af377bca3a404b98a08f064e0572f0ff7e7b",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/ddagent/gen1recomp-npc-bubbles/releases",
         "status": "permission-needed"
@@ -5200,10 +5530,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.2.0",
+      "releasedAt": "2026-08-16T17:23:09Z",
+      "modID": "instant_heal_pc_rest",
+      "download": {
+        "url": "https://github.com/TheRhysWyrill/instant_heal_pc_rest/releases/download/v1.2.0/instant_heal_pc_rest.zip",
+        "sizeBytes": 7498,
+        "sha256": "e4313b76f791b43597fbe0a830690099abb50d7c9eddf5a0ea677d1019b120b3",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/TheRhysWyrill/instant_heal_pc_rest/releases",
         "status": "permission-needed"
@@ -5228,10 +5568,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.0.2",
+      "releasedAt": "2026-08-12T00:05:54Z",
+      "modID": "nuzlocke",
+      "download": {
+        "url": "https://github.com/bryanthaboi/nuzlocke/releases/download/v1.0.2/nuzlocke-1.0.2.zip",
+        "sizeBytes": 98524,
+        "sha256": "3ada09b07b80799c1c1cd04f43bbf9407ff601c9e5ed1ba2256ece31718e6b7d",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/bryanthaboi/nuzlocke/releases",
         "status": "permission-needed"
@@ -5302,10 +5652,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.8.3",
+      "releasedAt": "2026-08-20T18:15:21Z",
+      "modID": "potato_voxel",
+      "download": {
+        "url": "https://github.com/ShaneMcGovernIE/potato_voxel/releases/download/v1.8.3/potato_voxel-1.8.3.zip",
+        "sizeBytes": 1828530,
+        "sha256": "d68cf6c61a995ff3edb3edc5d2846bd6a28c7ff800f17496764e8620d7b2606a",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/ShaneMcGovernIE/potato_voxel/releases",
         "status": "permission-needed"
@@ -5333,10 +5693,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.29.0",
+      "releasedAt": "2026-08-20T15:33:21Z",
+      "modID": "qol_toggles",
+      "download": {
+        "url": "https://github.com/ShaneMcGovernIE/qol_toggles/releases/download/v1.29.0/qol_toggles-1.29.0.zip",
+        "sizeBytes": 147571,
+        "sha256": "a9c5f873d420f5b10d8ba3f3f018e672e2bee3a1247bbe77cd305dd447e03b47",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/ShaneMcGovernIE/qol_toggles/releases",
         "status": "permission-needed"
@@ -5361,6 +5731,7 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
@@ -5378,6 +5749,15 @@
           "url": "https://raw.githubusercontent.com/unxpected-uxp/pokemon-gen1-recomp-mod-qol/main/images/qol_easy_interactions.gif"
         }
       ],
+      "version": "1.3.0",
+      "releasedAt": "2026-08-12T21:37:50Z",
+      "modID": "quality_of_life",
+      "download": {
+        "url": "https://github.com/unxpected-uxp/pokemon-gen1-recomp-mod-qol/releases/download/v1.3.0/quality_of_life-1.3.0.zip",
+        "sizeBytes": 25720,
+        "sha256": "adafefb6874fd4c9de97219fa1b047e287cc0ecf70ecaaa1164d39516ac247c4",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/unxpected-uxp/pokemon-gen1-recomp-mod-qol/releases",
         "status": "permission-needed"
@@ -5402,10 +5782,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "0.46.4",
+      "releasedAt": "2026-08-07T00:59:01Z",
+      "modID": "pokemon_randomizer",
+      "download": {
+        "url": "https://github.com/ciddmandude/PokemonRecompRandomizer/releases/download/v0.46.4/pokemon_randomizer-0.46.4.zip",
+        "sizeBytes": 160204,
+        "sha256": "ce534bf60765a100145200873786045e76c234d0a1eacc736726d93d76cc8413",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/ciddmandude/PokemonRecompRandomizer/releases",
         "status": "permission-needed"
@@ -5430,6 +5820,7 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
@@ -5447,6 +5838,15 @@
           "url": "https://raw.githubusercontent.com/Razor1993-Real/FlyingOverhaul/main/docs/media/landing.gif"
         }
       ],
+      "version": "1.2.1",
+      "releasedAt": "2026-08-18T22:59:24Z",
+      "modID": "FLYING_OVERHAUL",
+      "download": {
+        "url": "https://github.com/Razor1993-Real/FlyingOverhaul/releases/download/v1.2.1/FLYING_OVERHAUL-1.2.1.zip",
+        "sizeBytes": 77634,
+        "sha256": "6a7015803194fbe32ba8b9ad3c890f2cb3872f3f688d776daea85103c6a86b18",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/Razor1993-Real/FlyingOverhaul/releases",
         "status": "permission-needed"
@@ -5471,6 +5871,7 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
@@ -5494,6 +5895,15 @@
           "url": "https://raw.githubusercontent.com/alamops/RBYMMOMod/main/docs/screenshots/party-townmap.png"
         }
       ],
+      "version": "1.1.0",
+      "releasedAt": "2026-08-21T03:59:18Z",
+      "modID": "rby_mmo",
+      "download": {
+        "url": "https://github.com/alamops/RBYMMOMod/releases/download/v1.1.0/rby_mmo-1.1.0.zip",
+        "sizeBytes": 2280967,
+        "sha256": "23012374b08a5aef3d298ba5836402726e1075b17f1f59de30d27a1d9d95713c",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/alamops/RBYMMOMod/releases",
         "status": "permission-needed"
@@ -5518,10 +5928,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "0.2.0",
+      "releasedAt": "2026-08-10T14:50:02Z",
+      "modID": "recomp_cartographer",
+      "download": {
+        "url": "https://github.com/Sedatb23/recomp_cartographer/releases/download/v0.2.0/recomp_cartographer-0.2.0.zip",
+        "sizeBytes": 28936,
+        "sha256": "4d9c925238d5036eaeff82d646ff23c756bed4cf351ecd9556d4459584388ec2",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/Sedatb23/recomp_cartographer/releases",
         "status": "permission-needed"
@@ -5546,10 +5966,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "0.4.0",
+      "releasedAt": "2026-08-11T20:29:07Z",
+      "modID": "recomp-rider",
+      "download": {
+        "url": "https://github.com/castdrian/recomp-rider/releases/download/v0.4.0/recomp-rider-0.4.0.zip",
+        "sizeBytes": 6975086,
+        "sha256": "887fe6394de1352bdbb1dfd5f777408e0c6fe71e5371e6f3855fda4d748ebbb1",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/castdrian/recomp-rider/releases",
         "status": "permission-needed"
@@ -5574,10 +6004,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "0.15.0",
+      "releasedAt": "2026-08-19T02:31:45Z",
+      "modID": "silphscope_network",
+      "download": {
+        "url": "https://github.com/Nezara/silph-scope-network/releases/download/v0.15.0/silphscope_network-0.15.0.zip",
+        "sizeBytes": 67210,
+        "sha256": "d2c841c39d73bc4f3263ed77d58c922494f6cbd4f9e864e29efee74eb888bcf2",
+        "manifestPath": "silphscope_network/manifest.json"
+      },
       "project": {
         "url": "https://github.com/Nezara/silph-scope-network/releases",
         "status": "permission-needed"
@@ -5630,10 +6070,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.0.0",
+      "releasedAt": "2026-08-11T07:59:23Z",
+      "modID": "simple_girl",
+      "download": {
+        "url": "https://github.com/Yukitty/gen1mod-simple_girl/releases/download/v1.0.0/simple_girl-1.0.0.zip",
+        "sizeBytes": 5147,
+        "sha256": "7af18dedb8b97ca3e564712f0489faa4ad2da771bb4ef0eb4779dd1872d2490b",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/Yukitty/gen1mod-simple_girl/releases",
         "status": "permission-needed"
@@ -5658,10 +6108,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.7.0",
+      "releasedAt": "2026-08-17T08:41:40Z",
+      "modID": "surround_audio",
+      "download": {
+        "url": "https://github.com/ShaneMcGovernIE/surround-audio/releases/download/v1.7.0/surround_audio-1.7.0.zip",
+        "sizeBytes": 16303,
+        "sha256": "58f8747a0cd029efc074e440334f77bb347ece246b68c7fe81ee8679dc15a88c",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/ShaneMcGovernIE/surround-audio/releases",
         "status": "permission-needed"
@@ -5686,10 +6146,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.26.0-mobile",
+      "releasedAt": "2026-08-18T19:15:27Z",
+      "modID": "TERRARIUM",
+      "download": {
+        "url": "https://github.com/BrenoBertucci/Terrarium/releases/download/v1.26.0-mobile/TERRARIUM-1.26.0-mobile.zip",
+        "sizeBytes": 40559110,
+        "sha256": "68421ef9a1abeb4d020ba06a31308010e9dfc1a9e394e9ab80bd66c4e467e18a",
+        "manifestPath": "TERRARIUM/manifest.json"
+      },
       "project": {
         "url": "https://github.com/BrenoBertucci/Terrarium/releases",
         "status": "permission-needed"
@@ -5714,10 +6184,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "0.1.0",
+      "releasedAt": "2026-08-07T18:58:18Z",
+      "modID": "traduccion_es",
+      "download": {
+        "url": "https://github.com/jherediagu/traduccion_es/releases/download/v0.1.0/traduccion_es-0.1.0.zip",
+        "sizeBytes": 67259,
+        "sha256": "d52c30cafcd23f3e6aed6defa27ac5d40cc453e3ec17609d4f770c2b6b96112a",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/jherediagu/traduccion_es/releases",
         "status": "permission-needed"
@@ -5770,10 +6250,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.0.16",
+      "releasedAt": "2026-08-08T04:51:29Z",
+      "modID": "translation-qc",
+      "download": {
+        "url": "https://github.com/git-mrjoufflu/pokemon-gen1-recomp-mod-FRQC/releases/download/v1.0.16/translation-qc-1.0.16.zip",
+        "sizeBytes": 120194,
+        "sha256": "01f4812fa858e469a84a982d7f096fbf9b60b06d191f08b4595da38eaa2d9e85",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/git-mrjoufflu/pokemon-gen1-recomp-mod-FRQC/releases",
         "status": "permission-needed"
@@ -5798,10 +6288,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "0.4.4",
+      "releasedAt": "2026-08-05T20:58:15Z",
+      "modID": "trainer_rematch",
+      "download": {
+        "url": "https://github.com/ShaneMcGovernIE/trainer_rematch/releases/download/v0.4.4/trainer_rematch-0.4.4.zip",
+        "sizeBytes": 10914,
+        "sha256": "37181acc2af590bdc7b2de44d9467e8430ae0d01aac160c0059635f7a6b8d5e9",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/ShaneMcGovernIE/trainer_rematch/releases",
         "status": "permission-needed"
@@ -5826,10 +6326,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.5.0",
+      "releasedAt": "2026-08-13T20:02:21Z",
+      "modID": "unique_menu_icons",
+      "download": {
+        "url": "https://github.com/menyas/unique-menu-icons/releases/download/1.5.0/unique_menu_icons_1.5.0.zip",
+        "sizeBytes": 411769,
+        "sha256": "ec2ac4495810f93e0ca85b4feb99fc9bdfba8149e6956c6fc6c405cece353069",
+        "manifestPath": "unique_menu_icons/manifest.json"
+      },
       "project": {
         "url": "https://github.com/menyas/unique-menu-icons/releases",
         "status": "permission-needed"
@@ -5854,10 +6364,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "2.4.1",
+      "releasedAt": "2026-08-06T00:05:46Z",
+      "modID": "useful_bag",
+      "download": {
+        "url": "https://github.com/ShaneMcGovernIE/useful-bag/releases/download/v2.4.1/useful_bag-2.4.1.zip",
+        "sizeBytes": 20528,
+        "sha256": "4d0db932db1c3ebe91808091e7ee9167d1da9e6710d41f218214d9a89b7902dd",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/ShaneMcGovernIE/useful-bag/releases",
         "status": "permission-needed"
@@ -5882,10 +6402,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.3.0",
+      "releasedAt": "2026-08-07T02:58:34Z",
+      "modID": "useful_dex",
+      "download": {
+        "url": "https://github.com/ShaneMcGovernIE/useful_dex/releases/download/v1.3.0/useful_dex-1.3.0.zip",
+        "sizeBytes": 14140,
+        "sha256": "45153bda4099e23dcddcbf0ef111986a09cfc0b547b54451736be2020c38e7c1",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/ShaneMcGovernIE/useful_dex/releases",
         "status": "permission-needed"
@@ -5910,10 +6440,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.0.1",
+      "releasedAt": "2026-08-05T03:33:27Z",
+      "modID": "useful_marts",
+      "download": {
+        "url": "https://github.com/ShaneMcGovernIE/useful-marts/releases/download/v1.0.1/useful_marts-1.0.1.zip",
+        "sizeBytes": 6585,
+        "sha256": "c997969feea804a884a9e6163a2f7f4d5af342205b96fa05d3478792e040643d",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/ShaneMcGovernIE/useful-marts/releases",
         "status": "permission-needed"
@@ -5938,10 +6478,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.4.0",
+      "releasedAt": "2026-08-05T10:18:40Z",
+      "modID": "useful_move_info",
+      "download": {
+        "url": "https://github.com/ShaneMcGovernIE/useful-move-info/releases/download/v1.4.0/useful_move_info-1.4.0.zip",
+        "sizeBytes": 12956,
+        "sha256": "33f25d832de386a47113c82d5744c1cf2b6b6688cfb719b5ec5e3707159e4340",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/ShaneMcGovernIE/useful-move-info/releases",
         "status": "permission-needed"
@@ -5966,10 +6516,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "0.2.5",
+      "releasedAt": "2026-08-14T10:01:09Z",
+      "modID": "versaovermelha",
+      "download": {
+        "url": "https://github.com/bryanthaboi/versaovermelha/releases/download/v0.2.5/versaovermelha-0.2.5.zip",
+        "sizeBytes": 125964,
+        "sha256": "225f97e8db7dd66a57a1bc7c1ed16ae92b2119c48c62dd9274fb37277f2a58c9",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/bryanthaboi/versaovermelha/releases",
         "status": "permission-needed"
@@ -5994,10 +6554,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.5.0",
+      "releasedAt": "2026-08-07T14:10:33Z",
+      "modID": "whos_that_trainer",
+      "download": {
+        "url": "https://github.com/MyFriendPKMN/whos-that-trainer/releases/download/1.5.0/whos-that-trainer.zip",
+        "sizeBytes": 431816,
+        "sha256": "5fdcfa6289dd5e18c6e4020b6e14d2abdde28df3b20fd41f9821f7172ad4c2de",
+        "manifestPath": "whos-that-trainer/manifest.json"
+      },
       "project": {
         "url": "https://github.com/MyFriendPKMN/whos-that-trainer/releases",
         "status": "permission-needed"
@@ -6022,10 +6592,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.5.0",
+      "releasedAt": "2026-08-06T17:24:07Z",
+      "modID": "widescreen_battle_intro",
+      "download": {
+        "url": "https://github.com/ShaneMcGovernIE/gen1recomp-widescreen-battle-intro/releases/download/v1.5.0/widescreen_battle_intro-1.5.0.zip",
+        "sizeBytes": 13068,
+        "sha256": "07c91135c96d205d4c07532c528d7479bc9e77b4c478c0c9b8c017ee7dad0cdd",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/ShaneMcGovernIE/gen1recomp-widescreen-battle-intro/releases",
         "status": "permission-needed"
@@ -6050,6 +6630,7 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
@@ -6058,6 +6639,15 @@
           "url": "https://raw.githubusercontent.com/shanehudson-gen1recomp-mods/monorepo/main/.github/wild_skies-demo.gif"
         }
       ],
+      "version": "1.12.0",
+      "releasedAt": "2026-08-19T02:16:29Z",
+      "modID": "wild_skies",
+      "download": {
+        "url": "https://github.com/shanehudson-gen1recomp-mods/wild_skies/releases/download/v1.12.0/wild_skies-1.12.0.zip",
+        "sizeBytes": 104971,
+        "sha256": "9932561e0d2cc119fc94c72df40f93bb15c905868a4d0cd71b42f08f8f9f6d92",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/shanehudson-gen1recomp-mods/wild_skies/releases",
         "status": "permission-needed"
@@ -6082,10 +6672,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "2.1.9",
+      "releasedAt": "2026-08-21T09:48:33Z",
+      "modID": "overworld_wild_spawns",
+      "download": {
+        "url": "https://github.com/YoDrehDenSwagAuf/overworld-spawn-mod/releases/download/v2.1.9/wilds-of-kanto-v2.1.9.zip",
+        "sizeBytes": 15211876,
+        "sha256": "0ac172cd0f463f78f9544d8a02cc31596655699e879d9a02895ae5aef22923dd",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/YoDrehDenSwagAuf/overworld-spawn-mod/releases",
         "status": "permission-needed"
@@ -6110,10 +6710,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.10.4",
+      "releasedAt": "2026-08-19T09:43:18Z",
+      "modID": "yellow_legacy_changes",
+      "download": {
+        "url": "https://github.com/ShaneMcGovernIE/yellow_legacy_changes/releases/download/v1.10.4/yellow_legacy_changes-1.10.4.zip",
+        "sizeBytes": 73089,
+        "sha256": "7c91e7aee6adbd90b489609a7a71ba809f951d2334ce39d2f51dc99cb1926b47",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/ShaneMcGovernIE/yellow_legacy_changes/releases",
         "status": "permission-needed"
@@ -6138,10 +6748,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "2.0.2",
+      "releasedAt": "2026-08-15T14:22:01Z",
+      "modID": "DRAMALESS_SHAPE",
+      "download": {
+        "url": "https://github.com/artyrambles/DRAMALESS_SHAPE/releases/download/v2.0.2/DRAMALESS_SHAPE-2.0.2.zip",
+        "sizeBytes": 547472,
+        "sha256": "0e5223b6e7bc74cff0773c3f3c72795b377f56370d3fdd871d3a6447311dfbae",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/artyrambles/DRAMALESS_SHAPE/releases",
         "status": "permission-needed"
@@ -6166,10 +6786,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.4.1",
+      "releasedAt": "2026-08-12T18:20:40Z",
+      "modID": "gen3_battle_ui",
+      "download": {
+        "url": "https://github.com/HighDrexler/Gen-3-inspired-UI-overhaul-for-Gen1Recomp/releases/download/v1.4.1/gen3_battle_ui-1.4.1.zip",
+        "sizeBytes": 103632,
+        "sha256": "b9689897f2dd5f9ddf432ac82ccc8e933631ce17a9e4c9ace303ddacc6f596a8",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/HighDrexler/Gen-3-inspired-UI-overhaul-for-Gen1Recomp/releases",
         "status": "permission-needed"
@@ -6194,10 +6824,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "0.7.5",
+      "releasedAt": "2026-08-21T13:41:08Z",
+      "modID": "GameShark",
+      "download": {
+        "url": "https://github.com/goofwear/gameshark/releases/download/0.7.5/GameShark-0.7.5.zip",
+        "sizeBytes": 31309,
+        "sha256": "93abfe8d3cd58bf7223607d6838646315e3e0fb89678096f2ca7c40d8c9bc236",
+        "manifestPath": "GameShark/manifest.json"
+      },
       "project": {
         "url": "https://github.com/goofwear/gameshark/releases",
         "status": "permission-needed"
@@ -6222,10 +6862,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.11.0",
+      "releasedAt": "2026-08-19T04:02:03Z",
+      "modID": "vrm_pokemon_bank",
+      "download": {
+        "url": "https://github.com/VRM97/pokemon-bank/releases/download/v1.11.0/pokemon-bank-1.11.0.zip",
+        "sizeBytes": 87249,
+        "sha256": "de27c0f365d95efd0b40c32a0e1f89531648d60470959536f7f0f2f64a987451",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/VRM97/pokemon-bank/releases",
         "status": "permission-needed"
@@ -6250,10 +6900,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "0.8.3",
+      "releasedAt": "2026-08-10T21:44:01Z",
+      "modID": "gen1_kaizo",
+      "download": {
+        "url": "https://github.com/AyeBathingApe/gen1recomp-allgen-kaizo/releases/download/v0.8.3/gen1-recomp-allgen-kaizo-0.8.3.zip",
+        "sizeBytes": 3333097,
+        "sha256": "99fff33b12764496e185bc5e0c5397f0c6670f439830e54e866fd8fa82813ad2",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/AyeBathingApe/gen1recomp-allgen-kaizo/releases",
         "status": "permission-needed"
@@ -6278,10 +6938,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.0.0",
+      "releasedAt": "2026-08-04T08:42:46Z",
+      "modID": "fairy_dark_steel_types",
+      "download": {
+        "url": "https://github.com/magatsu64/Gen1RecompMegaEvolution/releases/download/1.2.0/fairy_dark_steel_types.zip",
+        "sizeBytes": 3967,
+        "sha256": "4cafe586801223ffda54616b60b55d51b41d8b9d3128f22748c9cfaad83adb08",
+        "manifestPath": "fairy_dark_steel_types/manifest.json"
+      },
       "project": {
         "url": "https://github.com/magatsu64/Gen1RecompMegaEvolution/releases",
         "status": "permission-needed"
@@ -6306,10 +6976,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "7.5.4",
+      "releasedAt": "2026-08-20T17:47:57Z",
+      "modID": "ai_rivals",
+      "download": {
+        "url": "https://github.com/MrKrisSatan/AIRivials/releases/download/7.5.4/AI_Rivals_v7_5_4.zip",
+        "sizeBytes": 1046006,
+        "sha256": "592b059a71801b2b2ad34f18e62068171a8bf26d4d0ac30c7e83ac9550e1ff8d",
+        "manifestPath": "ai_rivals/manifest.json"
+      },
       "project": {
         "url": "https://github.com/MrKrisSatan/AIRivials/releases",
         "status": "permission-needed"
@@ -6334,10 +7014,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "2.0.2",
+      "releasedAt": "2026-08-20T11:41:50Z",
+      "modID": "crystal_animated_sprites_with_shiny_visuals",
+      "download": {
+        "url": "https://github.com/distilledorion-sketch/crystal_animated_sprites_with_shiny_visuals/releases/download/v2.0.2/crystal_animated_sprites_with_shiny_visuals_v2.0.2.zip",
+        "sizeBytes": 6044763,
+        "sha256": "59b6204e66dc14c32b3035fea115236080dfc33ec86f928f04ac6974a1aca86c",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/distilledorion-sketch/crystal_animated_sprites_with_shiny_visuals/releases",
         "status": "permission-needed"
@@ -6362,10 +7052,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.0.1",
+      "releasedAt": "2026-08-15T08:44:52Z",
+      "modID": "instant_text_speed",
+      "download": {
+        "url": "https://github.com/DaniKH1/More-Text-Speed-Options-Gen1Recomp/releases/download/1.0.1/instant_text_speed.zip",
+        "sizeBytes": 1685,
+        "sha256": "7571991f8b9223e75772260613173e1f65fafd3fbe1d218385cc8c44e0a7bc1e",
+        "manifestPath": "instant_text_speed/manifest.json"
+      },
       "project": {
         "url": "https://github.com/DaniKH1/More-Text-Speed-Options-Gen1Recomp/releases",
         "status": "permission-needed"
@@ -6390,6 +7090,7 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
@@ -6413,6 +7114,15 @@
           "url": "https://github.com/user-attachments/assets/f285254b-0d08-4852-ae29-6e9ef68bd71a"
         }
       ],
+      "version": "0.1.0",
+      "releasedAt": "2026-08-09T22:59:55Z",
+      "modID": "screen-effects",
+      "download": {
+        "url": "https://github.com/thorkdev/gen1recomp-screen-effects/releases/download/0.1.0/screen-effects-0.1.0.zip",
+        "sizeBytes": 4750,
+        "sha256": "4035f5a386b3f7ee7d95e7bd4c3348409270ea47b32fd2a637b01acf1af6f747",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/thorkdev/gen1recomp-screen-effects/releases",
         "status": "permission-needed"
@@ -6437,6 +7147,7 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
@@ -6454,6 +7165,15 @@
           "url": "https://github.com/user-attachments/assets/d131bd49-e3ef-4a33-97b3-2e7d1819eccb"
         }
       ],
+      "version": "0.3.0",
+      "releasedAt": "2026-08-09T23:38:46Z",
+      "modID": "running_shoes",
+      "download": {
+        "url": "https://github.com/thorkdev/gen1recomp-running-shoes/releases/download/0.3.0/running-shoes-0.3.0.zip",
+        "sizeBytes": 7841,
+        "sha256": "af194a0fe7859c6d00a64cb6d1e054b08280041bd2060c8139da2db7fcdd1177",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/thorkdev/gen1recomp-running-shoes/releases",
         "status": "permission-needed"
@@ -6478,10 +7198,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.4.0",
+      "releasedAt": "2026-08-12T03:42:44Z",
+      "modID": "gen3_battle_ui",
+      "download": {
+        "url": "https://github.com/HighDrexler/Gen-3-inspired-UI-overhaul-for-Gen1Recomp-V1.1-w-updater/releases/download/v1.4.0/gen3_battle_ui-1.4.0-final-release.zip",
+        "sizeBytes": 92812,
+        "sha256": "6bd11f79196c35d7225ff6dde050866ea661315465f71e6c65f94d3a6366f349",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/HighDrexler/Gen-3-inspired-UI-overhaul-for-Gen1Recomp-V1.1-w-updater/releases",
         "status": "permission-needed"
@@ -6506,6 +7236,7 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
@@ -6517,6 +7248,15 @@
           "url": "https://github.com/user-attachments/assets/58905a6b-10e4-445b-9a1d-a3390d0ca802"
         }
       ],
+      "version": "0.1.0",
+      "releasedAt": "2026-08-09T21:16:13Z",
+      "modID": "radio",
+      "download": {
+        "url": "https://github.com/thorkdev/gen1recomp-radio/releases/download/0.1.0/radio-0.1.0.zip",
+        "sizeBytes": 3707,
+        "sha256": "e76b2c32f80c7b45ebef0ea10215610a6a03bb15e50443925bdebdeb089d25c4",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/thorkdev/gen1recomp-radio/releases",
         "status": "permission-needed"
@@ -6541,10 +7281,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "0.5.0",
+      "releasedAt": "2026-08-15T18:50:19Z",
+      "modID": "tloz-recomp-mania",
+      "download": {
+        "url": "https://github.com/castdrian/tloz-recomp-mania/releases/download/v0.5.0/tloz-recomp-mania-0.5.0.zip",
+        "sizeBytes": 5286660,
+        "sha256": "728df2d06d2bc20fc272a9d51f9e98bd6baa188a2a5cea3e240f4276d3e6771a",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/castdrian/tloz-recomp-mania/releases",
         "status": "permission-needed"
@@ -6569,6 +7319,7 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
@@ -6577,6 +7328,15 @@
           "url": "https://raw.githubusercontent.com/ddagent/gen1recomp-battle-dex/main/docs/screenshot.png"
         }
       ],
+      "version": "1.7.7",
+      "releasedAt": "2026-08-08T23:01:43Z",
+      "modID": "battle_dex",
+      "download": {
+        "url": "https://github.com/ddagent/gen1recomp-battle-dex/releases/download/v1.7.7/battle_dex-1.7.7.zip",
+        "sizeBytes": 17059,
+        "sha256": "ec03ead75e78b8ebdaddc38dbeba422c0422a1ce499387184d162e7efaffe923",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/ddagent/gen1recomp-battle-dex/releases",
         "status": "permission-needed"
@@ -6601,10 +7361,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "0.27.1",
+      "releasedAt": "2026-08-16T15:48:06Z",
+      "modID": "national_dex",
+      "download": {
+        "url": "https://github.com/sanjinpepic/gen1recomp-national-dex/releases/download/v0.27.1/national_dex-0.27.1.zip",
+        "sizeBytes": 1552620,
+        "sha256": "b13e673c890c3b19cae03ee8a3f29616120f03ce36b20abcd14f7775052b4ac3",
+        "manifestPath": "national_dex/manifest.json"
+      },
       "project": {
         "url": "https://github.com/sanjinpepic/gen1recomp-national-dex/releases",
         "status": "permission-needed"
@@ -6629,10 +7399,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.0.0",
+      "releasedAt": "2026-08-16T10:17:37Z",
+      "modID": "translation-fr",
+      "download": {
+        "url": "https://github.com/audris42/Mods-Gen1Recomp/releases/download/pokemon-trad-fr-v1.0.0/Pokemon-Trad-Fr-1.0.0.zip",
+        "sizeBytes": 1076813,
+        "sha256": "f351ee151856249442ffbef1c7cc2829db990bc78c665c4e1313e822fe323a72",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/audris42/Mods-Gen1Recomp/releases",
         "status": "permission-needed"
@@ -6657,10 +7437,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.1.1",
+      "releasedAt": "2026-08-13T13:57:28Z",
+      "modID": "lottery",
+      "download": {
+        "url": "https://github.com/chrispanella/gen1recomp-mods/releases/download/lottery-v1.1.1/lottery-1.1.1.zip",
+        "sizeBytes": 4430,
+        "sha256": "35815edb94d9cdf91904c5dd96ec327654a7cb1aa7d1a5a18251ffbad9f08953",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/chrispanella/gen1recomp-mods/releases",
         "status": "permission-needed"
@@ -6685,6 +7475,7 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
@@ -6696,6 +7487,15 @@
           "url": "https://github.com/user-attachments/assets/1e2905f5-3dfd-44cc-8a45-30f901947713"
         }
       ],
+      "version": "1.2",
+      "releasedAt": "2026-08-20T21:52:31Z",
+      "modID": "choose_your_hero",
+      "download": {
+        "url": "https://github.com/TranswarpTechnologies/choose-your-hero-mod-gen1recomp/releases/download/v1.2-beta/v1.2-beta.zip",
+        "sizeBytes": 13416,
+        "sha256": "76ed85a71a0c150b654d6ac3ef3dec875c287b284b6c865b6a3c36b8acfdde23",
+        "manifestPath": "choose_your_hero/manifest.json"
+      },
       "project": {
         "url": "https://github.com/TranswarpTechnologies/choose-your-hero-mod-gen1recomp/releases",
         "status": "permission-needed"
@@ -6720,10 +7520,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.3.2",
+      "releasedAt": "2026-08-07T16:12:49Z",
+      "modID": "gen1_cheat_menu",
+      "download": {
+        "url": "https://github.com/randyadr/Gen1-Cheat-Menu/releases/download/gen1recomp/gen1_cheat_menu.zip",
+        "sizeBytes": 22269,
+        "sha256": "be51486a5825a216cd03e5c50917a7fa9fb32f3d7686358bcf3c0952a2ad901b",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/randyadr/Gen1-Cheat-Menu/releases",
         "status": "permission-needed"
@@ -6748,10 +7558,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.1.1",
+      "releasedAt": "2026-08-06T14:53:28Z",
+      "modID": "Furret_Gen1",
+      "download": {
+        "url": "https://github.com/NikoKatsu575/Gen1Recomp/releases/download/furret/FurretGen1.zip",
+        "sizeBytes": 46800,
+        "sha256": "e61b14dfc8820e7b6d135d2b0fc4df28efd92dac4089cbf853095b90f66fe96f",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/NikoKatsu575/Gen1Recomp/releases",
         "status": "permission-needed"
@@ -6776,10 +7596,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.0.0",
+      "releasedAt": "2026-08-03T17:10:29Z",
+      "modID": "recomp-polish",
+      "download": {
+        "url": "https://github.com/Czajo/gen1recomp-polish/releases/download/1.0.0/gen1recomp_polish.zip",
+        "sizeBytes": 103031,
+        "sha256": "4e95de39a4b3286293bddcdb74cdbb28791a466500544267376fc13b8a4ddca8",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/Czajo/gen1recomp-polish/releases",
         "status": "permission-needed"
@@ -6804,10 +7634,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "0.6.0",
+      "releasedAt": "2026-08-09T15:10:51Z",
+      "modID": "translation-ja-hrkt",
+      "download": {
+        "url": "https://github.com/yyoossk/Gen1Recomp-translation-jp-mod/releases/download/0.0.6/translation-ja-hrkt-0.6.0.zip",
+        "sizeBytes": 975687,
+        "sha256": "f58f537dbe6b0e71cfaf73566a6880ac0d0d2b165699608a04541eaa8a9f7aaa",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/yyoossk/Gen1Recomp-translation-jp-mod/releases",
         "status": "permission-needed"
@@ -6832,10 +7672,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "0.3.5",
+      "releasedAt": "2026-08-06T19:46:59Z",
+      "modID": "gender_mod",
+      "download": {
+        "url": "https://github.com/WizzStar/PKMN-G1R-Gender-Mod/releases/download/v0.3.5/gender-mod-0.3.5-wizzstar.zip",
+        "sizeBytes": 35179,
+        "sha256": "95db8e8d714eca2500fa626fc4f15ff90b8a840e60a0612f72724686d7566363",
+        "manifestPath": "gender-mod/manifest.json"
+      },
       "project": {
         "url": "https://github.com/WizzStar/PKMN-G1R-Gender-Mod/releases",
         "status": "permission-needed"
@@ -6860,10 +7710,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "0.6.2",
+      "releasedAt": "2026-08-05T18:20:44Z",
+      "modID": "dynamax",
+      "download": {
+        "url": "https://github.com/tectorifter/Dynamax_4_Recomp/releases/download/v0.6.2/Dynamax_v0_6_2.zip",
+        "sizeBytes": 20740,
+        "sha256": "0c1e299e29b4cc1c0641a902c1c6494d736bb84c474c5e60c8d8ecaf777c8422",
+        "manifestPath": "Dynamax/manifest.json"
+      },
       "project": {
         "url": "https://github.com/tectorifter/Dynamax_4_Recomp/releases",
         "status": "permission-needed"
@@ -6888,10 +7748,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "2.0.2",
+      "releasedAt": "2026-08-14T18:25:40Z",
+      "modID": "a_autofire",
+      "download": {
+        "url": "https://github.com/ZyranCZ/autofire/releases/download/2.0.2/autofire_ab_v2.0.2.zip",
+        "sizeBytes": 10211,
+        "sha256": "997817d9dfca0050e9e5f7c1668a2b8d885fd9d60b22829950b7b4343ddf3c34",
+        "manifestPath": "a_autofire/manifest.json"
+      },
       "project": {
         "url": "https://github.com/ZyranCZ/autofire/releases",
         "status": "permission-needed"
@@ -6916,10 +7786,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "2.0.0",
+      "releasedAt": "2026-08-11T12:19:02Z",
+      "modID": "battle_speed",
+      "download": {
+        "url": "https://github.com/tectorifter/Battle_Spees_Mod/releases/download/v2.1.0/battle_speed.zip",
+        "sizeBytes": 3081,
+        "sha256": "2262ddf492e94fff2cd375aa364e0535f042e01133ff61e6696d03157054f397",
+        "manifestPath": "battle_speed/manifest.json"
+      },
       "project": {
         "url": "https://github.com/tectorifter/Battle_Spees_Mod/releases",
         "status": "permission-needed"
@@ -6944,10 +7824,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "V0.3.0",
+      "releasedAt": "2026-08-20T00:59:42Z",
+      "modID": "wide-menus",
+      "download": {
+        "url": "https://github.com/juancdominici/wide-menus/releases/download/V0.3.0/wide-menus-V0.3.0.zip",
+        "sizeBytes": 22000,
+        "sha256": "4ccbc78ffa09490279fdadf2e46f9ab4f83f50390f3a40bce180c0b0af704062",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/juancdominici/wide-menus/releases",
         "status": "permission-needed"
@@ -6972,10 +7862,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "0.1.0",
+      "releasedAt": "2026-08-10T20:11:28Z",
+      "modID": "more_gymz",
+      "download": {
+        "url": "https://github.com/leftshoe18/more_gymz/releases/download/Alpha/more_gymz-0.2.1.zip",
+        "sizeBytes": 20829,
+        "sha256": "d55deaec3187a8b3c78e10891efb0b97396f64078713f147bb53ac16988756d3",
+        "manifestPath": "more_gymz/manifest.json"
+      },
       "project": {
         "url": "https://github.com/leftshoe18/more_gymz/releases",
         "status": "permission-needed"
@@ -7000,10 +7900,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "0.1.0",
+      "releasedAt": "2026-08-14T07:05:41Z",
+      "modID": "finnish",
+      "download": {
+        "url": "https://github.com/eioo/gen1recomp-finnish-mod/releases/download/v0.1.0/finnish-0.1.0.zip",
+        "sizeBytes": 229815,
+        "sha256": "10c9701ada7e468f03f75846e1798a6e997ad4bcac135fc792a53dd522803758",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/eioo/gen1recomp-finnish-mod/releases",
         "status": "permission-needed"
@@ -7056,10 +7966,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "2.0.3",
+      "releasedAt": "2026-08-14T18:58:35Z",
+      "modID": "evolve_in_battle",
+      "download": {
+        "url": "https://github.com/ZyranCZ/Evolve-in-Battle/releases/download/2.0.3/evolve_in_battle-v2.0.3.zip",
+        "sizeBytes": 26097,
+        "sha256": "7c50fc3231d062a822c7ec150a7d271f7f4878a45f5011b029c3a41f5cd61a19",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/ZyranCZ/Evolve-in-Battle/releases",
         "status": "permission-needed"
@@ -7084,10 +8004,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "0.46.3",
+      "releasedAt": "2026-08-15T21:46:21Z",
+      "modID": "versaocristal",
+      "download": {
+        "url": "https://github.com/LordSangreal/versaocristal-ptbr/releases/download/v0.46.3/versaocristal-0.46.3.zip",
+        "sizeBytes": 310772,
+        "sha256": "11f27bfd0244aa6d7628dd9993edbea91ae6350231ccb3b4853e57bf6df8febf",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/LordSangreal/versaocristal-ptbr/releases",
         "status": "permission-needed"
@@ -7112,10 +8042,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "2.0.0",
+      "releasedAt": "2026-08-02T21:54:18Z",
+      "modID": "SFXMusicReplacementMod",
+      "download": {
+        "url": "https://github.com/AlucardTheFirstHunter/MusicReplacementMod/releases/download/stereo/SFXMusicReplacementMod.zip",
+        "sizeBytes": 180961496,
+        "sha256": "a7e5e8cdcc264234cc6d90657b97658599fc74b01f2d9efb6e89f75b63a28b5d",
+        "manifestPath": "SFXMusicReplacementMod/manifest.json"
+      },
       "project": {
         "url": "https://github.com/AlucardTheFirstHunter/MusicReplacementMod/releases",
         "status": "permission-needed"
@@ -7140,10 +8080,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.0.0",
+      "releasedAt": "2026-08-07T02:22:24Z",
+      "modID": "CryReplacementMod",
+      "download": {
+        "url": "https://github.com/AlucardTheFirstHunter/CryReplacementMod/releases/download/anime/CryReplacementMod.zip",
+        "sizeBytes": 4439618,
+        "sha256": "b113f01fda41cdc16fc139630a5966e42eeedc0f3865e703baafc4f0f2fc9011",
+        "manifestPath": "CryReplacementMod/manifest.json"
+      },
       "project": {
         "url": "https://github.com/AlucardTheFirstHunter/CryReplacementMod/releases",
         "status": "permission-needed"
@@ -7168,10 +8118,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.0.0",
+      "releasedAt": "2026-08-11T21:44:32Z",
+      "modID": "variable_width_kerning",
+      "download": {
+        "url": "https://github.com/SliferDaG/TextKerningGen1Recomp/releases/download/1.0/Slifers.Gen1.text.kerning.mod.1.0.zip",
+        "sizeBytes": 6793,
+        "sha256": "b355fe9bd1380e64753ce07945b6c373d49bfc95d26d060d4befccd0de8a18e0",
+        "manifestPath": "kerning-mod-repo/manifest.json"
+      },
       "project": {
         "url": "https://github.com/SliferDaG/TextKerningGen1Recomp/releases",
         "status": "permission-needed"
@@ -7196,10 +8156,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "2.2.1",
+      "releasedAt": "2026-08-02T17:11:16Z",
+      "modID": "dvcolors",
+      "download": {
+        "url": "https://github.com/oldtriplesix/DVColors-2.1.0-PKMN-Gen1-ReComp-/releases/download/Gen1ReCompDVColors/dvcolors.zip",
+        "sizeBytes": 9109,
+        "sha256": "e7b2b61724833974778b137003f31b923cc0bdcc6974b53c901dac42c5674ddc",
+        "manifestPath": "dvcolors/manifest.json"
+      },
       "project": {
         "url": "https://github.com/oldtriplesix/DVColors-2.1.0-PKMN-Gen1-ReComp-/releases",
         "status": "permission-needed"
@@ -7324,10 +8294,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "0.2.0",
+      "releasedAt": "2026-08-19T16:21:30Z",
+      "modID": "what-the-heck",
+      "download": {
+        "url": "https://github.com/castdrian/what-the-heck/releases/download/v0.2.0/what-the-heck-0.2.0.zip",
+        "sizeBytes": 413809,
+        "sha256": "78732926e700c77f55545c04386a92f33a18d5082e9d60f575ac8a0470939717",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/castdrian/what-the-heck/releases",
         "status": "permission-needed"
@@ -7735,10 +8715,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.0.13",
+      "releasedAt": "2026-08-20T23:48:30Z",
+      "modID": "item_randomizer",
+      "download": {
+        "url": "https://github.com/inmento/Item-Randomizer/releases/download/1.0.13/item_randomizer-1.0.13.zip",
+        "sizeBytes": 18555,
+        "sha256": "fd7850a2f72630cc935c1ecdbf5a7d6b09b41fd96afd8111f6883b8f3fb52c06",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/inmento/Item-Randomizer/releases",
         "status": "permission-needed"
@@ -7763,10 +8753,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.0.14",
+      "releasedAt": "2026-08-20T23:45:33Z",
+      "modID": "starter_picker",
+      "download": {
+        "url": "https://github.com/inmento/Starter-Picker/releases/download/1.0.14/starter_picker-1.0.14.zip",
+        "sizeBytes": 20850,
+        "sha256": "578db88f9690f76f094eb5284107a3ec22a2ee0d7efaec95045e15cbdfc27fa8",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/inmento/Starter-Picker/releases",
         "status": "permission-needed"
@@ -7822,10 +8822,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "0.7.3",
+      "releasedAt": "2026-08-17T18:32:30Z",
+      "modID": "kanto_life",
+      "download": {
+        "url": "https://github.com/jtfresh90/Kanto-Life-Mod/releases/download/0.7.3/kanto-life-0_7_3.zip",
+        "sizeBytes": 13851,
+        "sha256": "b57a333a96246ed3eb1a3c0e227d69aec0f17bdd962f36f09c0e28733ad7556e",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/jtfresh90/Kanto-Life-Mod/releases",
         "status": "permission-needed"
@@ -8029,10 +9039,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "2.9.0",
+      "releasedAt": "2026-08-21T17:22:52Z",
+      "modID": "the_world",
+      "download": {
+        "url": "https://github.com/MrKrisSatan/The_World/releases/download/2.9.0/The_World_v2_9_0.zip",
+        "sizeBytes": 11185527,
+        "sha256": "94b6f9fc5582c95a71cdf18a3428e84087d69f25dcf04b2281c65d34e3514d5d",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/MrKrisSatan/The_World/releases",
         "status": "permission-needed"
@@ -8684,10 +9704,20 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.1.1",
+      "releasedAt": "2026-08-18T09:58:16Z",
+      "modID": "easy_custom_music",
+      "download": {
+        "url": "https://github.com/ty-mcdk/easy-custom-music/releases/download/v1.1.1/easy_custom_music-1.1.1.zip",
+        "sizeBytes": 142741,
+        "sha256": "a29de1dd6565a0bb7eba25922adba7ddea83efb460b93ba6960a9b43fd4975ef",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/ty-mcdk/easy-custom-music/releases",
         "status": "permission-needed"

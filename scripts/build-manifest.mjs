@@ -224,16 +224,37 @@ function entriesForRelease(release, errors) {
   });
 }
 
-/// An indexed listing: catalogued, linked, and deliberately not installable.
+/// A pending listing: catalogued, linked, and installable only as CATALOG_POLICY
+/// tier 2 ("direct from source").
 ///
-/// CATALOG_POLICY is explicit that a pending project is indexed and points at
-/// the creator's own page, and that nothing is mirrored until redistribution
-/// is verified. So this emits no download at all — not an empty one.
+/// Tier 2 is not a mirror and not an approval. The creator has granted nothing
+/// and has not been asked, so Phosphor hosts nothing: the entry carries THEIR
+/// release asset URL and the SHA-256 of the bytes the survey actually
+/// downloaded and inspected, and the app refuses to unpack anything whose hash
+/// does not match. That is the same integrity guarantee tier 1 has always had —
+/// every install in this catalog has always pointed at somebody else's hosting.
+///
+/// What tier 2 must keep, and this function enforces:
+///   - `project` stays, so the creator's own page is always one tap away
+///   - `categories: ["PENDING"]`, so these sit on "From their creators" and
+///     never on a curated shelf that would imply review
+///   - `license` is absent, because there is no licence to name
+///   - a rom-hack is never promoted: a hack that is not a patch is a cartridge
 function entryForProject(project, errors) {
   const label = project.id;
+  const direct = project.directSource ?? null;
 
   if (project.fileUrl) {
-    errors.push(`${label}: a project pending review must not carry a fileUrl (move it to releases.json once permission is verified)`);
+    errors.push(`${label}: put an install under "directSource" (tier 2) or move the row to releases.json once permission is verified — a bare fileUrl says which of those it is`);
+    return null;
+  }
+  if (direct && project.kind === "rom-hack") {
+    errors.push(`${label}: a rom-hack cannot be tier 2 — a hack that is not a patch is a cartridge`);
+    return null;
+  }
+  if (direct && (!direct.sha256 || !direct.fileUrl || !(direct.fileSizeBytes > 0)
+                 || !direct.version || !direct.modId)) {
+    errors.push(`${label}: tier 2 needs fileUrl, sha256, a positive fileSizeBytes, version and modId — an unverifiable install is the one thing pointing at a third-party URL must never allow`);
     return null;
   }
   if (!/^https:\/\//.test(project.homepageUrl ?? "")) {
@@ -268,10 +289,41 @@ function entryForProject(project, errors) {
     author: { name: project.creator, url: project.homepageUrl },
     categories: ["PENDING"],
     target: project.target,
-    ...(facet ? { engine: facet } : {}),
+    // Tier 2 needs `engine.id` for the app to install into one; a link-out
+    // still names the family so the Workshop's engine filter works over it.
+    ...(facet ? { engine: direct ? { id: engineIdFor(project, facet), ...facet } : facet } : {}),
     screenshots: [],
+    ...(direct ? {
+      version: direct.version,
+      releasedAt: direct.releasedAt,
+      modID: direct.modId,
+      download: {
+        url: direct.fileUrl,
+        sizeBytes: direct.fileSizeBytes,
+        sha256: direct.sha256,
+        manifestPath: direct.manifestPath,
+      },
+    } : {}),
+    // Kept in BOTH tiers. For tier 2 it is load-bearing rather than a
+    // fallback: it is the only route to the person whose work this is.
     project: { url: project.releasesUrl ?? project.homepageUrl, status: project.reviewStatus },
   };
+}
+
+/// Which engine a tier-2 archive installs into, as a STRING.
+///
+/// Not `project.engine`: that field is a facet OBJECT on some rows, and
+/// assigning it to `id` emitted `{"id": {"family": ...}}`, which the app's
+/// decoder refuses because it reads `id` as a String. Six listings decoded as
+/// unreadable and were silently dropped -- the app counted them, which is the
+/// only reason it was visible at all. The family is the string, and every
+/// promoted row declares `compatibility: ["gen1recomp"]` anyway.
+function engineIdFor(project, facet) {
+  const declared = typeof project.engine === "string" ? project.engine : null;
+  const family = typeof facet?.family === "string" ? facet.family : null;
+  // "both" is a FAMILY spanning two engines, never an engine to install into.
+  const id = declared ?? (family === "both" ? GEN1 : family) ?? GEN1;
+  return id;
 }
 
 /// What `scripts/enrich-catalog.mjs` last read out of the archives and the
