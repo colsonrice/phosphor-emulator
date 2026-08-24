@@ -27,18 +27,38 @@ test("every installable entry carries what the app needs to verify it", async ()
   }
 });
 
-// Indexed listings are switched off for now (PUBLISH_INDEXED), so this asserts
-// the rule rather than their presence: it has to keep holding whenever they are
-// switched back on.
-test("any indexed entry offers a link and never a download", async () => {
+// A pending listing always offers the creator's own page. Since CATALOG_POLICY
+// grew tier 2 it MAY also offer an install straight from their release asset --
+// their hosting, their file, our pinned hash -- so the rule is no longer "never
+// a download". It is: whatever else a pending row does, it keeps the link, it
+// keeps the PENDING shelf, and if it installs then it is verifiable.
+test("any indexed entry offers a link, and a tier-2 install is verifiable", async () => {
   const { entries } = await buildManifest();
   const indexed = entries.filter((entry) => entry.project);
 
   for (const entry of indexed) {
-    assert.equal(entry.download, undefined, `${entry.id}: must not be mirrored while pending`);
     assert.match(entry.project.url, /^https:\/\//, `${entry.id}: project url`);
     assert.ok(entry.project.status, `${entry.id}: review status`);
     assert.deepEqual(entry.categories, ["PENDING"], `${entry.id}: shelf`);
+
+    if (!entry.download) continue;
+
+    // Tier 2. Everything below is the safety argument for fetching a file
+    // nobody granted us: an unverifiable install is the one thing pointing at
+    // a third-party URL must never allow.
+    assert.notEqual(entry.kind, "romPatch",
+      `${entry.id}: a rom-hack is never tier 2 -- a hack that is not a patch is a cartridge`);
+    assert.match(entry.download.url, /^https:\/\//, `${entry.id}: tier-2 download url`);
+    assert.ok(entry.download.sha256, `${entry.id}: tier 2 without a pinned hash`);
+    assert.ok(entry.download.sizeBytes > 0, `${entry.id}: tier 2 without a size cap`);
+    assert.ok(entry.version, `${entry.id}: tier 2 without a version`);
+    assert.ok(entry.modID, `${entry.id}: tier 2 without a modID to install under`);
+    assert.equal(typeof entry.engine?.id, "string",
+      `${entry.id}: engine.id must be a STRING -- the app decodes it as one and drops the row otherwise`);
+    // No licence, because there is no licence. Claiming one here is the single
+    // most misleading thing this file could publish.
+    assert.equal(entry.license, undefined,
+      `${entry.id}: tier 2 has no licence to name`);
   }
 });
 
@@ -125,23 +145,27 @@ test("every entry lands in a declared section and category", async () => {
   }
 });
 
-// The deliberate scope of the ship. If ROM hacks come back, or an indexed
-// listing ever acquires a download, this test is the one that should fail and
-// be updated on purpose, rather than the change going out unnoticed.
+// The deliberate scope of the ship. If ROM hacks come back this test is the one
+// that should fail and be updated on purpose, rather than the change going out
+// unnoticed. It already did that job once: an indexed listing acquiring a
+// download was forbidden here until tier 2 made it deliberate, and this test
+// is what stopped that going out unremarked.
 test("the published catalog is mods, installable or linked, and never a ROM hack", async () => {
   const { entries, sections, categories } = await buildManifest();
 
   assert.deepEqual(sections.map((section) => section.id), ["luaMods"]);
   assert.equal(entries.filter((entry) => entry.kind === "romPatch").length, 0);
 
-  // Every entry is one thing or the other, never both and never neither. The
-  // app's decoder splits on exactly this, and an entry carrying a download AND
-  // a project would be an install site reached through a link-out card.
+  // Every entry offers the player SOMETHING: an install, a link, or (tier 2)
+  // both. Neither is the only forbidden combination -- it is a card that does
+  // nothing when tapped. "Both" used to be forbidden too, and stopped being so
+  // when tier 2 landed: a tier-2 row is an install AND a link to the person
+  // whose work it is, deliberately.
   for (const entry of entries) {
     const installable = Boolean(entry.download);
     const indexed = Boolean(entry.project);
-    assert.ok(installable !== indexed,
-      `${entry.id}: must be installable or indexed, not ${installable ? "both" : "neither"}`);
+    assert.ok(installable || indexed,
+      `${entry.id}: offers neither an install nor a link, so its card does nothing`);
   }
 
   const indexed = entries.filter((entry) => entry.project);
@@ -149,13 +173,21 @@ test("the published catalog is mods, installable or linked, and never a ROM hack
   assert.equal(categories.filter((category) => category.id === "PENDING").length, 1,
     "indexed listings need the shelf they file under");
 
-  // An indexed listing must carry no trace of a file. CATALOG_POLICY draws the
-  // line at redistribution, and a version or a hash on a row nobody can install
-  // is the beginning of pretending otherwise.
+  // A pending listing never claims a LICENCE, in either tier. That is the line
+  // CATALOG_POLICY actually draws: tier 2 fetches a file the creator published
+  // and pins its hash, which is a statement about bytes, while a licence would
+  // be a statement about permission that nobody granted.
+  //
+  // A version is fine now, and on a tier-2 row it is required -- the app
+  // refuses to install anything it cannot name a version for. A version on a
+  // row with no download would still be pretending, so that stays refused.
   for (const entry of indexed) {
     assert.ok(/^https:\/\//.test(entry.project.url), `${entry.id}: link must be HTTPS`);
-    assert.equal(entry.version, undefined, `${entry.id}: an indexed listing has no version`);
-    assert.equal(entry.license, undefined, `${entry.id}: an indexed listing claims no licence`);
+    assert.equal(entry.license, undefined, `${entry.id}: a pending listing claims no licence`);
+    if (!entry.download) {
+      assert.equal(entry.version, undefined,
+        `${entry.id}: a link-out with no file has no version to state`);
+    }
   }
 });
 
