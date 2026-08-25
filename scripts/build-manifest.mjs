@@ -117,20 +117,23 @@ function categoriesFor(topic, modId) {
 }
 
 const CATEGORIES = [
-  { id: "GAMEPLAY", title: "Gameplay", subtitle: "New systems and rules", order: 0 },
-  { id: "QOL", title: "Quality of Life", subtitle: "Small frictions, removed", order: 1 },
-  { id: "UI", title: "Interface", subtitle: "Menus, HUD and readouts", order: 2 },
-  { id: "ART", title: "Art & Effects", subtitle: "How the game looks", order: 3 },
-  { id: "CONTENT", title: "New Content", subtitle: "Places, events and challenges", order: 4 },
-  { id: "AUDIO", title: "Sound", subtitle: "Music and what you hear", order: 5 },
+  // Voxel leads the row. It is the one shelf players come looking for by
+  // name, and burying it behind five taxonomy chips made the thing this
+  // catalog is best known for the hardest thing in it to find.
+  { id: "VOXEL", title: "Voxel", subtitle: "The world rendered in 3D", order: 0 },
+  { id: "GAMEPLAY", title: "Gameplay", subtitle: "New systems and rules", order: 1 },
+  { id: "QOL", title: "Quality of Life", subtitle: "Small frictions, removed", order: 2 },
+  { id: "UI", title: "Interface", subtitle: "Menus, HUD and readouts", order: 3 },
+  { id: "ART", title: "Art & Effects", subtitle: "How the game looks", order: 4 },
+  { id: "CONTENT", title: "New Content", subtitle: "Places, events and challenges", order: 5 },
+  { id: "AUDIO", title: "Sound", subtitle: "Music and what you hear", order: 6 },
   // Everything indexed lands here. Assigning invented topics to listings
   // nobody can install yet would be curation of things that are not on offer;
   // an entry moves to a real shelf the moment it has a topic and a file.
   // Named for where the download is, not for what Phosphor has not finished.
   // The id stays PENDING because entries reference it; only the words a player
   // reads have changed.
-  { id: "TRANSLATION", title: "Translations", subtitle: "The game in another language", order: 6 },
-  { id: "VOXEL", title: "Voxel", subtitle: "The world rendered in 3D", order: 7 },
+  { id: "TRANSLATION", title: "Translations", subtitle: "The game in another language", order: 7 },
   { id: "PENDING", title: "From their creators", subtitle: "Download straight from the source", order: 8 },
 ].filter((category) => category.id !== "PENDING" || PUBLISH_INDEXED);
 

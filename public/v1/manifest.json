@@ -18,51 +18,51 @@
   ],
   "categories": [
     {
+      "id": "VOXEL",
+      "title": "Voxel",
+      "subtitle": "The world rendered in 3D",
+      "order": 0
+    },
+    {
       "id": "GAMEPLAY",
       "title": "Gameplay",
       "subtitle": "New systems and rules",
-      "order": 0
+      "order": 1
     },
     {
       "id": "QOL",
       "title": "Quality of Life",
       "subtitle": "Small frictions, removed",
-      "order": 1
+      "order": 2
     },
     {
       "id": "UI",
       "title": "Interface",
       "subtitle": "Menus, HUD and readouts",
-      "order": 2
+      "order": 3
     },
     {
       "id": "ART",
       "title": "Art & Effects",
       "subtitle": "How the game looks",
-      "order": 3
+      "order": 4
     },
     {
       "id": "CONTENT",
       "title": "New Content",
       "subtitle": "Places, events and challenges",
-      "order": 4
+      "order": 5
     },
     {
       "id": "AUDIO",
       "title": "Sound",
       "subtitle": "Music and what you hear",
-      "order": 5
+      "order": 6
     },
     {
       "id": "TRANSLATION",
       "title": "Translations",
       "subtitle": "The game in another language",
-      "order": 6
-    },
-    {
-      "id": "VOXEL",
-      "title": "Voxel",
-      "subtitle": "The world rendered in 3D",
       "order": 7
     },
     {
