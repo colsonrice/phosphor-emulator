@@ -39,7 +39,16 @@ test("any indexed entry offers a link, and a tier-2 install is verifiable", asyn
   for (const entry of indexed) {
     assert.match(entry.project.url, /^https:\/\//, `${entry.id}: project url`);
     assert.ok(entry.project.status, `${entry.id}: review status`);
-    assert.deepEqual(entry.categories, ["PENDING"], `${entry.id}: shelf`);
+    // A pending row belongs on PENDING and on no CURATED shelf: filing one
+    // under Gameplay or Interface would say Phosphor picked it, and nobody
+    // reviewed it. VOXEL is allowed beside PENDING because it is a derived
+    // FACT, not an editorial one -- the mod's own archive calls
+    // `render_pipelines:register("voxel")`, and hiding the voxel family from
+    // the voxel filter to protect a wording rule would serve nobody.
+    const CURATED = ["GAMEPLAY", "QOL", "UI", "ART", "CONTENT", "AUDIO"];
+    assert.ok(entry.categories.includes("PENDING"), `${entry.id}: shelf`);
+    assert.deepEqual(entry.categories.filter((c) => CURATED.includes(c)), [],
+      `${entry.id}: a pending listing must not sit on a curated shelf`);
 
     if (!entry.download) continue;
 

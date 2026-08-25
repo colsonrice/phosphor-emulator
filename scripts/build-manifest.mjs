@@ -85,6 +85,37 @@ const PUBLISH_INDEXED = true;
 
 const TOPICS = ["GAMEPLAY", "QOL", "UI", "ART", "CONTENT", "AUDIO"];
 
+/// The voxel family, which gets a shelf of its own because it is the one part
+/// of this catalog a player goes looking for BY NAME.
+///
+/// The six PROVIDERS are derived, not guessed: each one's archive calls
+/// `mod.content.render_pipelines:register("voxel", ...)`, found by grepping
+/// every cached release. That is the engine's own definition of a mod that
+/// renders the world in voxels (src/mods/Schemas.lua documents the call).
+///
+/// The CONTENT mods cannot be derived and are named here on purpose. The
+/// dependency graph does not separate them: authors use
+/// `optional_dependencies` both for "this is voxel content" and for "this
+/// coexists with voxel mods", so deriving from it swept in a cheat menu and a
+/// running-shoes patch. A short hand list that somebody can read is the honest
+/// answer, and it lives beside the derivation so the difference is visible.
+const VOXEL_PROVIDERS = [
+  "BATTLE_ART_VOXEL_FORK", "DRAMALESS_SHAPE", "DRAMATIC_SHAPE",
+  "VOXEL_ASCENDANT", "potato_voxel", "voxel_run_bridge",
+];
+const VOXEL_CONTENT = [
+  "voxel_characters", "red_3d_player", "VOXEL_DEX", "TERRARIUM",
+  "DRAMATIC_SHAPE_GRASS_OBJ_REPLACER_V3",
+];
+const VOXEL_MODS = new Set([...VOXEL_PROVIDERS, ...VOXEL_CONTENT]);
+
+/// A listing's shelves. Every mod keeps the topic it earned; a voxel mod is
+/// ALSO on the voxel shelf, because "show me the voxel stuff" and "show me the
+/// art mods" are different questions and the app filters on `contains`.
+function categoriesFor(topic, modId) {
+  return modId && VOXEL_MODS.has(modId) ? [topic, "VOXEL"] : [topic];
+}
+
 const CATEGORIES = [
   { id: "GAMEPLAY", title: "Gameplay", subtitle: "New systems and rules", order: 0 },
   { id: "QOL", title: "Quality of Life", subtitle: "Small frictions, removed", order: 1 },
@@ -98,7 +129,8 @@ const CATEGORIES = [
   // Named for where the download is, not for what Phosphor has not finished.
   // The id stays PENDING because entries reference it; only the words a player
   // reads have changed.
-  { id: "PENDING", title: "From their creators", subtitle: "Download straight from the source", order: 6 },
+  { id: "VOXEL", title: "Voxel", subtitle: "The world rendered in 3D", order: 6 },
+  { id: "PENDING", title: "From their creators", subtitle: "Download straight from the source", order: 7 },
 ].filter((category) => category.id !== "PENDING" || PUBLISH_INDEXED);
 
 const ALL_SECTIONS = [
@@ -201,7 +233,7 @@ function entriesForRelease(release, errors) {
       license: release.licenseText
         ? { spdx: release.license, text: release.licenseText }
         : { spdx: release.license },
-      categories: [release.topic],
+      categories: categoriesFor(release.topic, release.modId),
       target: release.target,
       screenshots: [],
       download: {
@@ -287,7 +319,8 @@ function entryForProject(project, errors) {
     // The author credit points at the project; the card's own link points at
     // the download. They are different questions and usually different pages.
     author: { name: project.creator, url: project.homepageUrl },
-    categories: ["PENDING"],
+    categories: direct?.modId && VOXEL_MODS.has(direct.modId)
+      ? ["PENDING", "VOXEL"] : ["PENDING"],
     target: project.target,
     // Tier 2 needs `engine.id` for the app to install into one; a link-out
     // still names the family so the Workshop's engine filter works over it.

@@ -54,10 +54,16 @@
       "order": 5
     },
     {
+      "id": "VOXEL",
+      "title": "Voxel",
+      "subtitle": "The world rendered in 3D",
+      "order": 6
+    },
+    {
       "id": "PENDING",
       "title": "From their creators",
       "subtitle": "Download straight from the source",
-      "order": 6
+      "order": 7
     }
   ],
   "entries": [
@@ -2369,7 +2375,8 @@
         "spdx": "MIT"
       },
       "categories": [
-        "ART"
+        "ART",
+        "VOXEL"
       ],
       "target": "Gen1Recomp",
       "screenshots": [],
@@ -3251,7 +3258,8 @@
         "spdx": "MIT"
       },
       "categories": [
-        "GAMEPLAY"
+        "GAMEPLAY",
+        "VOXEL"
       ],
       "target": "Gen1Recomp",
       "screenshots": [],
@@ -4244,7 +4252,8 @@
         "spdx": "MIT"
       },
       "categories": [
-        "ART"
+        "ART",
+        "VOXEL"
       ],
       "target": "Gen1Recomp",
       "screenshots": [],
@@ -4762,7 +4771,8 @@
         "url": "https://github.com/absol89/DramaticShapeVoxelMod"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "VOXEL"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -6168,7 +6178,8 @@
         "url": "https://github.com/ShaneMcGovernIE/potato_voxel"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "VOXEL"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -6704,7 +6715,8 @@
         "url": "https://github.com/BrenoBertucci/Terrarium"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "VOXEL"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -7390,7 +7402,8 @@
         "url": "https://github.com/artyrambles/DRAMALESS_SHAPE"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "VOXEL"
       ],
       "target": "Gen1Recomp",
       "engine": {
