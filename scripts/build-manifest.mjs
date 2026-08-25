@@ -83,7 +83,7 @@ const PUBLISH_ROM_HACKS = false;
 /// that happen to carry a LICENSE file rather than the field it is indexing.
 const PUBLISH_INDEXED = true;
 
-const TOPICS = ["GAMEPLAY", "QOL", "UI", "ART", "CONTENT", "AUDIO"];
+const TOPICS = ["GAMEPLAY", "QOL", "UI", "ART", "CONTENT", "AUDIO", "TRANSLATION"];
 
 /// The voxel family, which gets a shelf of its own because it is the one part
 /// of this catalog a player goes looking for BY NAME.
@@ -129,8 +129,9 @@ const CATEGORIES = [
   // Named for where the download is, not for what Phosphor has not finished.
   // The id stays PENDING because entries reference it; only the words a player
   // reads have changed.
-  { id: "VOXEL", title: "Voxel", subtitle: "The world rendered in 3D", order: 6 },
-  { id: "PENDING", title: "From their creators", subtitle: "Download straight from the source", order: 7 },
+  { id: "TRANSLATION", title: "Translations", subtitle: "The game in another language", order: 6 },
+  { id: "VOXEL", title: "Voxel", subtitle: "The world rendered in 3D", order: 7 },
+  { id: "PENDING", title: "From their creators", subtitle: "Download straight from the source", order: 8 },
 ].filter((category) => category.id !== "PENDING" || PUBLISH_INDEXED);
 
 const ALL_SECTIONS = [

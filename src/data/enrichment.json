@@ -2073,13 +2073,6 @@
       "downloads": 1675,
       "stars": 0,
       "asOf": "2026-08-22"
-    },
-    "requirements": {
-      "games": [
-        "red",
-        "blue",
-        "yellow"
-      ]
     }
   },
   "kanto-gen1-dive": {
@@ -2199,13 +2192,6 @@
     },
     "icon": {
       "url": "https://raw.githubusercontent.com/ShaneMcGovernIE/potato_voxel/main/Logo.png"
-    },
-    "requirements": {
-      "games": [
-        "red",
-        "blue",
-        "yellow"
-      ]
     }
   },
   "qol-toggles": {
@@ -3265,6 +3251,13 @@
       "downloads": 1529,
       "stars": 5,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
     }
   },
   "betterback": {
@@ -3327,15 +3320,6 @@
       "downloads": 545,
       "stars": 0,
       "asOf": "2026-08-22"
-    },
-    "requirements": {
-      "games": [
-        "red",
-        "blue",
-        "yellow",
-        "gold",
-        "silver"
-      ]
     }
   },
   "weather-fx": {
@@ -3532,13 +3516,6 @@
       "downloads": 125,
       "stars": 0,
       "asOf": "2026-08-22"
-    },
-    "requirements": {
-      "games": [
-        "red",
-        "blue",
-        "yellow"
-      ]
     }
   },
   "classic-ironmon-kaizo": {
@@ -3672,6 +3649,204 @@
       "downloads": 6080,
       "stars": 25,
       "asOf": "2026-08-22"
+    }
+  },
+  "gen9dex": {
+    "requirements": {
+      "games": [
+        "gold",
+        "silver",
+        "crystal"
+      ]
+    }
+  },
+  "gen1recomp-modern-johto": {
+    "requirements": {
+      "games": [
+        "gold",
+        "silver",
+        "crystal"
+      ]
+    }
+  },
+  "gen1recomp-shiny-pokemon": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "gen1recomp-bottomless-bag": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "gen1recomp-modern-party-ui": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "gen1recomp-typed-move-colors": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "red-ptbr-gen1recomp": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "gen1recomp-battle-info-hud": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "gen1recomp-modern-pokedex-ui": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "gen1recomp-modern-pc-ui": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "gen1recomp-gen2-types": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "gen1recomp-gen2-moves": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "gen1recomp-more-attacks": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "useful-marts-gold": {
+    "requirements": {
+      "games": [
+        "gold",
+        "silver",
+        "crystal"
+      ]
+    }
+  },
+  "one-exp-line": {
+    "requirements": {
+      "games": [
+        "gold",
+        "silver",
+        "crystal"
+      ]
+    }
+  },
+  "auto-field-moves": {
+    "requirements": {
+      "games": [
+        "gold",
+        "silver",
+        "crystal"
+      ]
+    }
+  },
+  "sticky-zoom": {
+    "requirements": {
+      "games": [
+        "gold",
+        "silver",
+        "crystal"
+      ]
+    }
+  },
+  "unown-caught-mark": {
+    "requirements": {
+      "games": [
+        "gold",
+        "silver",
+        "crystal"
+      ]
+    }
+  },
+  "heal-me-fast": {
+    "requirements": {
+      "games": [
+        "gold",
+        "silver",
+        "crystal"
+      ]
+    }
+  },
+  "kurt-bulk-apricorns": {
+    "requirements": {
+      "games": [
+        "gold",
+        "silver",
+        "crystal"
+      ]
+    }
+  },
+  "1tb-agenda": {
+    "requirements": {
+      "games": [
+        "gold",
+        "silver",
+        "crystal"
+      ]
+    }
+  },
+  "pokemon-auto-deposit": {
+    "requirements": {
+      "games": [
+        "gold",
+        "silver",
+        "crystal"
+      ]
     }
   }
 }

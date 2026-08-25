@@ -492,7 +492,20 @@ const TOPICS_BY_CATEGORY = {
   TWEAK: "QOL", UTILITY: "QOL", ACCESSIBILITY: "QOL",
   LOCALIZATION: "TRANSLATION", LOCALISATION: "TRANSLATION", LANGUAGE: "TRANSLATION",
   MUSIC: "AUDIO", SOUND: "AUDIO",
+  // Held back on the Aug 24 sweep for having no shelf. A sprite pack is art;
+  // the rest are one author's mods that declare no category at all, and a
+  // missing category is not a reason to refuse a working mod. UNCATEGORIZED
+  // is the fallback `topicFor` reaches when a manifest says nothing.
+  "SPRITE PACK": "ART", SPRITE_PACK: "ART", SPRITEPACK: "ART",
 };
+
+/// Where a mod with no category of its own lands.
+///
+/// Refusing it was the old behaviour and it cost six working mods on one
+/// sweep. QOL is the honest default: it is the shelf a player browses when
+/// they do not know what they are looking for, and a mod that never said what
+/// it was has not earned a louder one.
+const TOPIC_WHEN_UNCATEGORIZED = "QOL";
 
 /// Shelves decided by hand, for mods whose own category says nothing useful.
 const TOPIC_OVERRIDES = {
@@ -515,7 +528,11 @@ function topicFor(result) {
     if (topic) return topic;
   }
   const own = String(result.contents?.manifest?.category ?? "").toUpperCase();
-  return TOPICS_BY_CATEGORY[own] ?? null;
+  if (TOPICS_BY_CATEGORY[own]) return TOPICS_BY_CATEGORY[own];
+  // A manifest that names no category at all still describes a working mod.
+  // Refusing it was the old behaviour; see TOPIC_WHEN_UNCATEGORIZED.
+  if (!own) return TOPIC_WHEN_UNCATEGORIZED;
+  return null;
 }
 
 /// Which engine's save world a mod belongs to.
@@ -524,14 +541,21 @@ function topicFor(result) {
 /// gen1recomp++ is still the Gen 1 engine, so a bare "gold" says nothing about
 /// Gen2Recomped. Only an explicit "gen2" moves a mod to the other channel.
 function channelsFor(manifest) {
-  const games = (manifest.games ?? []).map((g) => String(g).toLowerCase());
-  const channels = [];
-  if (games.includes("gen2")) channels.push("gen2recomp");
-  if (games.length === 0 || games.some((g) =>
-    ["gen1", "all", "red", "blue", "yellow", "gold", "silver", "crystal"].includes(g))) {
-    channels.unshift("gen1recomp");
-  }
-  return channels.length ? channels : ["gen1recomp"];
+  // ONE channel, because one engine ships and it runs both generations.
+  //
+  // This used to route `games: ["gen2"]` to a "gen2recomp" channel, which was
+  // right while a second engine existed and became wrong the moment gen1recomp
+  // declared silver (v0.2.12) and crystal (v0.2.24). The cost was invisible
+  // and specific: six Gen 2 mods -- the exact mods a Crystal owner wants --
+  // were filtered out for naming an engine we no longer ship, and the skip
+  // line blamed their engine VERSION, so the report read "needs engine
+  // undefined" for a mod whose only sin was saying "gen2".
+  //
+  // Which GAMES a mod covers is a different question and is answered
+  // elsewhere: enrich-catalog's `cartridgesFor`, published as
+  // `requirements.games` and drawn as "For Red, Blue and Yellow only."
+  void manifest;
+  return ["gen1recomp"];
 }
 
 /// What a listing's `target` says, for the channels it supports.

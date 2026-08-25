@@ -5,7 +5,12 @@ export const allowedPermissions = new Set(["open-license", "author-approved"]);
 // AUDIO joined when the survey found music mods with nowhere to file: under
 // the old five they landed in "Art & Effects", which is where a player looking
 // for a soundtrack would never think to look.
-export const allowedTopics = new Set(["GAMEPLAY", "QOL", "UI", "ART", "CONTENT", "AUDIO"]);
+// TRANSLATION joined them on Aug 24 2026, for the same reason AUDIO did: a
+// Portuguese translation filed under "New Content" is not findable by anyone
+// looking for their own language. Keep this in step with TOPICS in
+// build-manifest.mjs -- they are two lists of one thing, and the build fails
+// loudly rather than quietly when they disagree, which is how this was found.
+export const allowedTopics = new Set(["GAMEPLAY", "QOL", "UI", "ART", "CONTENT", "AUDIO", "TRANSLATION"]);
 export const allowedReviewStatuses = new Set(["permission-needed", "permission-queued", "archive-review"]);
 /// Mirrors RecompModLibrary.maxManifestDepth in the app. Keep them equal: a
 /// larger value here publishes listings the installer refuses, a smaller one
