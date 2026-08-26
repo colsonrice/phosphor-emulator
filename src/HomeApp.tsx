@@ -36,7 +36,12 @@ const screenshots = [
   { src: "assets/phosphor/screenshot-3.png", label: "Game mode", detail: "The game gets the whole screen." },
   { src: "assets/phosphor/screenshot-4.png", label: "Skins", detail: "18 ways to change the mood." },
   { src: "assets/phosphor/screenshot-5.png", label: "Trade", detail: "Move data between your own saves." },
-  { src: "assets/phosphor/screenshot-6.png", label: "Link cable", detail: "Host or join a nearby player." },
+  // The screenshot is a Game Boy game, and link cable is a Game Boy and Game
+  // Boy Color feature: the GBA's own protocol needs each exchange to finish in
+  // under two milliseconds, which Wi-Fi cannot do, so Gen 3 trades through
+  // Friend Trade instead. Saying only "host or join a nearby player" sent a
+  // FireRed player hunting the app for a screen that was never meant for them.
+  { src: "assets/phosphor/screenshot-6.png", label: "Link cable", detail: "Game Boy and Game Boy Color: host or join a nearby player." },
 ];
 
 function Arrow() {
