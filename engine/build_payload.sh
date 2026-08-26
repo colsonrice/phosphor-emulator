@@ -79,8 +79,30 @@ if unzip -Z1 "$OUT" \
     | grep -E '^(data|assets)/generated/[^/]+|^(data|assets)/generated/.+/' >/dev/null; then
   fail "payload unexpectedly contains generated ROM data"
 fi
+# The archive listing, read ONCE. Not `unzip -Z1 | grep -q` per file: grep -q
+# exits on its first match, unzip takes SIGPIPE, and `set -o pipefail` turns
+# that into a failed build. This file already warns about exactly that trap
+# twenty lines up and then walked straight into it.
+ENTRIES="$(unzip -Z1 "$OUT")"
+
 for required in src/update/Boot.lua tools/save-editor/App.lua src/core/GameVersion.lua; do
-  unzip -Z1 "$OUT" | grep -Fxq "$required" || fail "payload is missing $required"
+  printf '%s\n' "$ENTRIES" | grep -Fxq "$required" \
+    || fail "payload is missing $required"
+done
+# EVERY manifest GameVersion.lua names, checked individually.
+#
+# The list above cannot catch a missing manifest, and a payload without one
+# packs, stamps, declares all six games and boots -- then dies at import with
+# "ROM import metadata is missing: Could not open file
+# tools/rom_manifest_crystal.json". Which is exactly what happened building
+# 0.2.27 by hand: the recipe was run under zsh, where an unquoted $MANIFESTS
+# does NOT word-split, so all six paths arrived as one filename and zip skipped
+# them with a warning it is not an error to ignore. The engine looked fine
+# until a Gen 2 game was opened.
+# shellcheck disable=SC2086
+for manifest in $MANIFESTS; do
+  printf '%s\n' "$ENTRIES" | grep -Fxq "$manifest" \
+    || fail "payload is missing $manifest, which src/core/GameVersion.lua requires"
 done
 
 # --------------------------------------------------------------- version stamp
@@ -109,6 +131,13 @@ GAMES="$(unzip -p "$OUT" src/core/GameVersion.lua \
   | tr -d ' =' | sort -u | tr '\n' ' ')"
 [ -n "$GAMES" ] || fail "payload declares no games: that is not a usable engine"
 
-printf 'BUILD_SHA256=%s\n' "$(sha256sum "$OUT" | cut -d' ' -f1)"
-printf 'BUILD_BYTES=%s\n'  "$(stat -c%s "$OUT")"
+# GNU on the CI runner, BSD on a Mac. Portable because this script is the one
+# honest way to reproduce a published payload locally, and a build recipe you
+# cannot run on the machine you are debugging from is a recipe you check by
+# reading instead of by running.
+sha256_of() { command -v sha256sum >/dev/null && sha256sum "$1" | cut -d' ' -f1 || shasum -a 256 "$1" | cut -d' ' -f1; }
+bytes_of()  { stat -c%s "$1" 2>/dev/null || stat -f%z "$1"; }
+
+printf 'BUILD_SHA256=%s\n' "$(sha256_of "$OUT")"
+printf 'BUILD_BYTES=%s\n'  "$(bytes_of "$OUT")"
 printf 'BUILD_GAMES=%s\n'  "$(printf '%s' "$GAMES" | sed 's/[[:space:]]*$//')"
