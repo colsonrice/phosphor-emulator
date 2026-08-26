@@ -46,7 +46,10 @@ printf '%s' "$ENGINE_VERSION" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+$' \
 # Copied over upstream's tree, BASE_SHA256SUMS excluded: it is the drift
 # guard, not a file the engine runs.
 say "applying overlay"
-( cd "$OVERLAY" && find . -type f ! -name 'BASE_SHA256SUMS' -print0 ) \
+# `.proposed` sidecars excluded alongside BASE_SHA256SUMS: port_overlay.sh
+# writes Sandbox.lua.proposed for a human to read, and packing it would put a
+# merge nobody approved inside a published payload.
+( cd "$OVERLAY" && find . -type f ! -name 'BASE_SHA256SUMS' ! -name '*.proposed' -print0 ) \
   | while IFS= read -r -d '' f; do
       mkdir -p "$SRC/$(dirname "$f")"
       cp "$OVERLAY/$f" "$SRC/$f"
