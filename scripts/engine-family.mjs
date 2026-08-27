@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 // Which engine a listing runs on, as a field the app can filter by.
 //
 // `target` is free text. A human types it into src/data when they paste a
@@ -32,7 +33,42 @@
 /// Check against `LoveCore/GEN1RECOMP_VERSION` in the app repo whenever the
 /// pin moves. The app's own suite fails when these disagree now, which is the
 /// point of publishing it.
-export const ENGINE_VERSIONS = { gen1recomp: "0.2.31" };
+/// DERIVED, not written down. It was a literal until 0.2.32 and went stale
+/// four times: 0.2.25, 0.2.27, 0.2.31, and again the day the app shipped
+/// 0.2.32. Three of those four have a commit whose whole message is "gate
+/// against X, the engine the app now ships", which is the shape of a constant
+/// that nothing can notice going wrong.
+///
+/// The catalog already knows: every engine the hourly workflow publishes lands
+/// in public/v1/engines.json with its engineVersion and an ordinal, and
+/// ordinals are assigned max + 1 in release order. So the newest published
+/// engine IS the version the catalog was evaluated against, and it follows the
+/// workflow automatically.
+///
+/// No network: this reads the file the same repo publishes. If it is missing
+/// or unreadable the export is empty, which makes survey-mods gate nothing and
+/// build-manifest publish no engine row -- loud in both, rather than silently
+/// gating against a number from months ago.
+function newestPublishedEngines() {
+  const out = {};
+  try {
+    const path = new URL("../public/v1/engines.json", import.meta.url);
+    const { entries } = JSON.parse(readFileSync(path, "utf8"));
+    for (const entry of entries ?? []) {
+      const id = entry.engineID;
+      const version = entry.engineVersion;
+      if (!id || !version) continue;
+      const ordinal = Number(entry.ordinal ?? -1);
+      if (!out[id] || ordinal > out[id].ordinal) out[id] = { version, ordinal };
+    }
+  } catch {
+    return {};
+  }
+  return Object.fromEntries(
+    Object.entries(out).map(([id, { version }]) => [id, version]));
+}
+
+export const ENGINE_VERSIONS = newestPublishedEngines();
 
 /// The two families, spelled the way the APP spells them.
 ///
