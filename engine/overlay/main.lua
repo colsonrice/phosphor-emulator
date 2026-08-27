@@ -22,6 +22,56 @@ local PlatformHooks = require("src.core.PlatformHooks")
 local HostDisplay = require("src.core.HostDisplay")
 local GameViewport = require("src.render.GameViewport")
 
+-- Global emergency quit: holding Start + Select for 5 seconds forcefully terminates LOVE.
+local emergencyQuitTimer = 0
+
+local function checkEmergencyQuit(dt)
+  local held = false
+  if love.joystick and love.joystick.getJoysticks then
+    local joysticks = love.joystick.getJoysticks()
+    for _, j in ipairs(joysticks) do
+      if j:isGamepad() then
+        local start = j:isGamepadDown("start")
+        local selectBtn = j:isGamepadDown("back") or j:isGamepadDown("guide")
+        if start and selectBtn then
+          held = true
+          break
+        end
+      else
+        local bCount = j:getButtonCount()
+        local s1 = (bCount >= 7 and j:isDown(7)) or (bCount >= 9 and j:isDown(9))
+        local s2 = (bCount >= 8 and j:isDown(8)) or (bCount >= 10 and j:isDown(10))
+        if s1 and s2 then
+          held = true
+          break
+        end
+      end
+    end
+  end
+
+  if love.keyboard and love.keyboard.isDown then
+    if (love.keyboard.isDown("escape") and love.keyboard.isDown("return"))
+        or (love.keyboard.isDown("lalt") and love.keyboard.isDown("f4")) then
+      held = true
+    end
+  end
+
+  if held then
+    emergencyQuitTimer = emergencyQuitTimer + (dt or 0.016)
+    if emergencyQuitTimer >= 5.0 then
+      print("[FORCE QUIT] Start + Select held for 5 seconds. Exiting forcefully.")
+      pcall(function()
+        if love.audio and love.audio.stop then love.audio.stop() end
+        if love.window and love.window.close then love.window.close() end
+      end)
+      local exitFn = os["exit"]
+      exitFn(0)
+    end
+  else
+    emergencyQuitTimer = 0
+  end
+end
+
 -- Lua errors: persist a redacted trace in the save dir and surface a hint.
 do
   local defaultErrorHandler = love.errorhandler or love.errhand
@@ -30,10 +80,49 @@ do
     if ok and hint and type(msg) == "string" then
       msg = msg .. "\n\n" .. hint
     end
+
+    -- PHOSPHOR OVERLAY. 0.2.27 added the screen below, and it must not run
+    -- when this LOVE is embedded in a host app.
+    --
+    -- An error screen is a FRAME LOOP: love.errorhandler returns a per-frame
+    -- function and boot.lua installs it as the new `func`, so the boot
+    -- coroutine yields forever. Standalone a human presses escape. Embedded,
+    -- LoveHost.isRunning never goes false, RecompSession.canStart reads that
+    -- process-wide flag, and ONE crash refuses every later launch on every
+    -- engine until the app is force quit. That was a real device report
+    -- ("if Silver crashes once, no other games will work") and the host's own
+    -- handler is the fix: it records the message and returns NOTHING, so
+    -- boot.lua retires the loop and the coroutine finishes cleanly.
+    --
+    -- Falling through to defaultErrorHandler below IS that host handler when
+    -- embedded, so the whole port is this one condition.
+    if not (love._phosphorEmbedded)
+        and love.window and love.window.isOpen and love.window.isOpen() and love.graphics and love.graphics.isActive() then
+      local fullMsg = tostring(msg) .. "\n\n" .. tostring(debug.traceback()) .. "\n\n[Hold START + SELECT for 5s to Force Quit]"
+      return function()
+        love.event.pump()
+        for e, a in love.event.poll() do
+          if e == "quit" or (e == "keypressed" and a == "escape") then
+            return 1
+          elseif e == "gamepadpressed" and (a == "start" or a == "back") then
+            return 1
+          end
+        end
+        checkEmergencyQuit(0.016)
+        love.graphics.origin()
+        love.graphics.clear(0.10, 0.10, 0.12)
+        love.graphics.setColor(1, 0.4, 0.4, 1)
+        love.graphics.printf(fullMsg, 20, 20, love.graphics.getWidth() - 40)
+        love.graphics.present()
+        love.timer.sleep(0.016)
+      end
+    end
+
     if defaultErrorHandler then
       return defaultErrorHandler(msg)
     end
   end
+  love.errhand = love.errorhandler
 end
 
 local Game, EditorApp, Importer, TouchEditor, Studio
@@ -631,12 +720,14 @@ function bootGame(version, cartId)
     Game = require("src.core.Game2").new()
     Game:load()
   else
-    -- Gen1 Game is a module singleton.  In-process EXIT GAME resets it in
-    -- place; if a prior teardown left load missing, rebuild from source.
+    -- Gen1 Game is a module singleton.  Always re-require after in-process
+    -- EXIT GAME so a prior session cannot leave a table whose rawget(load)
+    -- is nil (release Android: bootGame then dies with load-a-nil-value).
+    -- rawget: type(mod.load) can lie via __index and skip a rebuild.
+    package.loaded["src.core.Game"] = nil
     local gameMod = require("src.core.Game")
-    if type(gameMod.load) ~= "function" then
-      package.loaded["src.core.Game"] = nil
-      gameMod = require("src.core.Game")
+    if type(rawget(gameMod, "load")) ~= "function" then
+      error("src.core.Game missing load after reload")
     end
     Game = gameMod
     Game:load()
@@ -882,6 +973,7 @@ function love.load(args)
 end
 
 function love.update(dt)
+  checkEmergencyQuit(dt)
   HostDisplay.update(dt)
   SwitchDiagnostics.maybeFlush(false)
   -- NX only (no-op elsewhere): follow dock/undock without waiting for SDL.
@@ -1516,10 +1608,33 @@ function love.quit()
   -- docs/modding.md's core.quit_to_launcher entry) may veto returning to
   -- this Lua launcher via that hook. Vanilla behavior (used when no mod
   -- claims the hook) is exactly the condition below.
-  local isAndroid = (love.system and love.system.getOS and love.system.getOS() == "Android")
+  --
+  -- Android and iOS both tear down LOVE in-process rather than
+  -- love.event.quit("restart"): Android's vendored love.cpp PHYSFS-crashes
+  -- on a second init (#575), and iOS's love.cpp forces DONE_RESTART for
+  -- every quit while warning that leftover threads make that unreliable.
+  -- SessionLifecycle workers (ChipAudio / Fetch / Check) make that warning
+  -- real -- endProcess joins them, then the native restart still blows up.
+  local osName = love.system and love.system.getOS and love.system.getOS()
+  local inProcessReturn = (osName == "Android" or osName == "iOS")
   local wouldReturnToLauncher = PlatformHooks.quitToLauncher(function()
     return Game and not Importer and not quitToLauncher and not scripted
-      and (isAndroid or not launchedIntoGame)
+      -- PHOSPHOR: NOT upstream's `(inProcessReturn or not launchedIntoGame)`.
+      -- The inner branch below takes their widened condition and should; this
+      -- outer one must not. `isAndroid` was FALSE here, which is what kept a
+      -- host-launched session out of the launcher-return path altogether and
+      -- let it fall through to a normal quit, where Phosphor's library takes
+      -- over. `inProcessReturn` is TRUE on iOS, so taking it here sends the
+      -- player to gen1recomp's own Lua launcher on exit and leaves them
+      -- sitting on it. Reported on device the same afternoon 0.2.27 was
+      -- ported: "i exited my game and the gen1recomp native screen was just
+      -- sitting there showing".
+      --
+      -- The platform term is dropped rather than translated. This overlay only
+      -- ever runs on Phosphor's host, so the term could only ever be wrong: as
+      -- `isAndroid` it was inert, as `inProcessReturn` it is harmful. What is
+      -- left is the fact `bootFromHost` sets the flag to mean.
+      and not launchedIntoGame
   end)
   if wouldReturnToLauncher then
     -- #339's shutdowns, before the restart and not only after it. A live
@@ -1527,10 +1642,14 @@ function love.quit()
     -- leaves the workers parked in Channel:demand() carries that module
     -- into the fresh boot -- fatal when LOVE is embedded rather than the
     -- process (see bootFromHost above). Standalone it only ever helped.
+    --
+    -- 0.2.27 widened this branch's own condition from isAndroid to
+    -- inProcessReturn, which now names iOS too. That is the case Phosphor IS,
+    -- so the overlay takes upstream's condition rather than keeping its own.
     shutdownWorkers()
-    if isAndroid then
+    if inProcessReturn then
       returnToLauncher()
-      return true -- abort this quit; the restart lands back in the launcher
+      return true -- abort this quit; stay in the same LOVE run
     end
     quitToLauncher = true
     -- Tell the fresh boot to ignore any boot-straight-into-a-game option this
@@ -1612,6 +1731,8 @@ function love.run()
     -- update dt
     if love.timer then dt = love.timer.step() end
     idleFor = idleFor + dt
+
+    checkEmergencyQuit(dt)
 
     -- call update and draw
     if love.update then love.update(dt) end
