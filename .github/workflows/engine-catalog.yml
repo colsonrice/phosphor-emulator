@@ -6,17 +6,21 @@ name: Publish gen1recomp engines
 # compares against what the catalog already holds before cloning or building
 # anything.
 #
-# What it publishes is a PREVIEW: an engine offered to players who go looking
-# for it on a game's own "Play With" page, never chosen for anyone. A workflow
-# that has not run a line of Lua cannot know an engine works, and it does not
-# claim to. `shippedIn` stays null until a human cuts a Phosphor release with
-# that engine in it.
+# IT CATCHES UP, it does not only take the newest. An earlier version of this
+# asked `releases/latest` and published that one release. At several releases a
+# day against an hourly poll, any release superseded inside the hour was
+# skipped forever: v0.2.28 already existed, unpublished, while v0.2.29 was
+# latest. So it publishes EVERY release the catalog is missing, oldest first,
+# because ordinals are assigned `max + 1` and release order is exactly what
+# they have to mean.
+#
+# What it publishes is a PREVIEW. A workflow that has not run a line of Lua
+# cannot know an engine works, and `shippedIn` stays null until a human cuts a
+# Phosphor release with that engine in it.
 #
 # THESE ARE GEN1RECOMP'S ENGINES. Every artifact is upstream's source
 # (github.com/bryanthaboi/gen1recomp, by BOIS CLUB GAMES) with Phosphor's
 # overlay applied. Phosphor packages and publishes them; it did not write them.
-# Release tags are named for the engine and its own release number so nothing
-# downstream can read as a Phosphor build.
 
 on:
   schedule:
@@ -24,7 +28,7 @@ on:
   workflow_dispatch:
     inputs:
       upstream_ref:
-        description: 'Publish this ref instead of the newest release'
+        description: 'Publish only this ref, instead of catching up'
         required: false
 
 permissions:
@@ -38,6 +42,11 @@ concurrency:
 env:
   ENGINE_ID: gen1recomp
   UPSTREAM_REPO: bryanthaboi/gen1recomp
+  # A bound on how many releases one run will build, so a first run against a
+  # long backlog cannot sit for an hour. Whatever is left is named in the log
+  # and picked up by the next run: a cap that hides what it dropped reads as
+  # "everything is published" when it is not.
+  MAX_PER_RUN: 5
 
 jobs:
   publish:
@@ -55,16 +64,16 @@ jobs:
         run: npm ci
 
       # The overlay is MIRRORED from the Phosphor app repo, which has no git
-      # remote, so this repo cannot check it out. OVERLAY_STAMP is the gate:
-      # it hashes every overlay file, path included, and a mirror that has been
-      # hand-edited here fails loudly instead of publishing an engine built
-      # from files nobody reviewed. Sandbox.lua's deny lists are a blacklist,
-      # so a wrong copy is a sandbox with an entry missing.
+      # remote, so this repo cannot check it out. OVERLAY_STAMP is the gate: it
+      # hashes every overlay file, path included, and a mirror hand-edited here
+      # fails loudly instead of publishing an engine built from files nobody
+      # reviewed. Sandbox.lua's deny lists are a blacklist, so a wrong copy is
+      # a sandbox with an entry missing.
       - name: Verify the overlay mirror
         id: overlay
         run: |
           set -euo pipefail
-          stamp=$(cd engine/overlay && find . -type f -print0 \
+          stamp=$(cd engine/overlay && find . -type f ! -name '*.proposed' -print0 \
             | sort -z | xargs -0 sha256sum | sha256sum | cut -d' ' -f1)
           recorded=$(tr -d '[:space:]' < engine/OVERLAY_STAMP)
           if [ "$stamp" != "$recorded" ]; then
@@ -75,12 +84,11 @@ jobs:
           fi
           echo "stamp=$stamp" >> "$GITHUB_OUTPUT"
 
-      # The cheap question, asked before anything is cloned. Two checks, and
-      # the second is the one that matters: zip is not byte-identical between
-      # runs, so repacking a commit yields a fresh hash and a fresh id. Keying
-      # only on the id would publish a "new" engine every hour, each one the
-      # same release under a different name.
-      - name: Is there anything new upstream
+      # The cheap question, asked before anything is cloned. Keyed on the
+      # upstream COMMIT, not the payload id: zip is not byte-identical between
+      # runs, so repacking one commit yields a fresh hash and a fresh id, and
+      # keying on that would republish the same release every hour.
+      - name: Which releases is the catalog missing
         id: poll
         env:
           GH_TOKEN: ${{ github.token }}
@@ -88,183 +96,199 @@ jobs:
           set -euo pipefail
           ref="${{ github.event.inputs.upstream_ref }}"
           if [ -n "$ref" ]; then
-            tag="$ref"
-            sha=$(gh api "repos/$UPSTREAM_REPO/commits/$ref" --jq .sha)
+            printf '%s\n' "$ref" > tags.txt
           else
-            release=$(gh api "repos/$UPSTREAM_REPO/releases/latest")
-            tag=$(printf '%s' "$release" | jq -r .tag_name)
-            sha=$(gh api "repos/$UPSTREAM_REPO/git/ref/tags/$tag" \
-              --jq '.object.sha' 2>/dev/null || true)
-            # An annotated tag points at a tag object, not the commit.
+            # Oldest first. `--paginate` so a long history is not truncated,
+            # and drafts and prereleases are dropped: upstream marking a
+            # release as a prerelease is upstream saying not yet.
+            gh api "repos/$UPSTREAM_REPO/releases" --paginate \
+              --jq '.[] | select(.draft == false and .prerelease == false)
+                    | [.published_at, .tag_name] | @tsv' \
+              | sort | cut -f2 > tags.txt
+          fi
+
+          # Resolve every tag to a commit, oldest first, then take only what
+          # comes AFTER the newest release the catalog already has.
+          #
+          # NOT "every release the catalog is missing". The catalog holds three
+          # seeded entries and upstream has years of tags, so that reading made
+          # every release since 0.2.1 pending and the run would have ground
+          # backwards through history publishing ancient engines as "previews".
+          # Catching up means the releases since the last one we published, and
+          # nothing older.
+          : > resolved.txt
+          while read -r tag; do
+            [ -n "$tag" ] || continue
+            sha=$(gh api "repos/$UPSTREAM_REPO/git/ref/tags/$tag" --jq '.object.sha' 2>/dev/null || true)
             if [ -n "$sha" ]; then
               type=$(gh api "repos/$UPSTREAM_REPO/git/ref/tags/$tag" --jq '.object.type')
-              if [ "$type" = "tag" ]; then
-                sha=$(gh api "repos/$UPSTREAM_REPO/git/tags/$sha" --jq '.object.sha')
-              fi
+              # An annotated tag points at a tag object, not the commit.
+              [ "$type" = "tag" ] && sha=$(gh api "repos/$UPSTREAM_REPO/git/tags/$sha" --jq '.object.sha')
             fi
-          fi
-          [ -n "$sha" ] || { echo "::error::could not resolve $tag to a commit"; exit 1; }
-          echo "tag=$tag" >> "$GITHUB_OUTPUT"
-          echo "sha=$sha" >> "$GITHUB_OUTPUT"
-          # Strip a leading v so the engine version is the strict X.Y.Z the
-          # payload stamp requires.
-          echo "version=${tag#v}" >> "$GITHUB_OUTPUT"
+            [ -n "$sha" ] && printf '%s\t%s\n' "$tag" "$sha" >> resolved.txt
+          done < tags.txt
 
-          known=$(node -e '
+          node -e '
             const fs = require("fs");
             let catalog = { entries: [] };
             try { catalog = JSON.parse(fs.readFileSync("public/v1/engines.json", "utf8")); }
             catch (e) { if (e.code !== "ENOENT") throw e; }
-            const hit = catalog.entries.some(
-              (x) => x.engineID === process.env.ENGINE_ID && x.upstream === process.argv[1]);
-            process.stdout.write(hit ? "yes" : "no");
-          ' "$sha")
-          echo "known=$known" >> "$GITHUB_OUTPUT"
-          if [ "$known" = "yes" ]; then
-            echo "$tag ($sha) is already published: nothing to do."
-          fi
+            const engine = process.env.ENGINE_ID;
+            const known = new Set((catalog.entries || [])
+              .filter((x) => x.engineID === engine).map((x) => x.upstream));
+            const rows = fs.readFileSync("resolved.txt", "utf8").trim().split("\n")
+              .filter(Boolean).map((l) => l.split("\t"));
+            // The LAST already-published release in release order. Everything
+            // after it is what this run owes; everything before it is history
+            // that was deliberately never published.
+            let lastKnown = -1;
+            rows.forEach(([, sha], i) => { if (known.has(sha)) lastKnown = i; });
+            // A catalog with none of these at all is a catalog that has never
+            // published this engine. Take the newest release only: backfilling
+            // a whole history as "previews" is not what anybody asked for.
+            const pending = lastKnown === -1 ? rows.slice(-1) : rows.slice(lastKnown + 1);
+            fs.writeFileSync("pending.txt",
+              pending.map((r) => r.join("\t")).join("\n") + (pending.length ? "\n" : ""));
+            process.stderr.write(
+              `${rows.length} releases upstream, newest already published at index ` +
+              `${lastKnown}, ${pending.length} to build\n`);
+          '
 
-      # Read as an object store only: never checkout, fetch, or anything that
-      # moves a ref. port_overlay.sh is explicit about this because the same
-      # clone is shared across worktrees in the app repo.
-      - name: Clone gen1recomp at that commit
-        if: steps.poll.outputs.known == 'no'
+          total=$(wc -l < pending.txt | tr -d ' ')
+          echo "Catalog is missing $total release(s) newer than what it holds."
+          if [ "$total" -gt "$MAX_PER_RUN" ]; then
+            echo "::notice::Building the oldest $MAX_PER_RUN of $total this run. Deferred to the next run:"
+            tail -n +"$((MAX_PER_RUN + 1))" pending.txt | cut -f1 | sed 's/^/::notice::  /'
+            head -n "$MAX_PER_RUN" pending.txt > pending.trimmed && mv pending.trimmed pending.txt
+          fi
+          echo "count=$(wc -l < pending.txt | tr -d ' ')" >> "$GITHUB_OUTPUT"
+
+      - name: Clone gen1recomp
+        if: steps.poll.outputs.count != '0'
         run: |
           set -euo pipefail
           git clone --quiet "https://github.com/$UPSTREAM_REPO.git" work/LoveCore/.gen1recomp-pin
-          git -C work/LoveCore/.gen1recomp-pin cat-file -e "${{ steps.poll.outputs.sha }}^{commit}"
-
-      # port_overlay.sh expects the app repo's layout, so build that layout
-      # rather than fork the script. A mirrored script answering the drift
-      # question with different rules than the real one is worse than no
-      # mirror.
-      - name: Does the overlay still apply
-        if: steps.poll.outputs.known == 'no'
-        id: port
-        run: |
-          set -euo pipefail
           mkdir -p work/Scripts work/LoveCore
           cp engine/port_overlay.sh work/Scripts/port_overlay.sh
           chmod +x work/Scripts/port_overlay.sh
           cp engine/GEN1RECOMP_SHA work/LoveCore/GEN1RECOMP_SHA
           cp -R engine/overlay work/LoveCore/gen1recomp-overlay
-          set +e
-          bash work/Scripts/port_overlay.sh --check "${{ steps.poll.outputs.sha }}" \
-            > port-report.txt 2>&1
-          set -e
-          grep '^PORT_' port-report.txt >> "$GITHUB_OUTPUT" || true
-          cat port-report.txt
+          chmod +x engine/build_payload.sh
 
-      # ONE OPEN ISSUE PER DRIFTED FILE SET, updated, rather than one per
-      # release. At several releases a day a naive workflow would file an issue
-      # an hour; the signal is "the overlay is behind", not "here is the 47th
-      # notification". The title carries the file set, so a NEW set of files
-      # drifting does open a new issue, which is the case that genuinely needs
-      # a second look.
-      - name: Surface the drift
-        if: steps.poll.outputs.known == 'no' && steps.port.outputs.PORT_VERDICT != 'clean'
+      # One loop, oldest first, because ordinals are `max + 1` and must follow
+      # release order. A drifted release STOPS the run rather than being
+      # skipped: skipping it would hand a later release the lower ordinal and
+      # put the catalog permanently out of order.
+      - name: Build and publish each missing release
+        if: steps.poll.outputs.count != '0'
+        id: publish
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          files="${{ steps.port.outputs.PORT_CONFLICT_FILES }}"
+          published=0
+          while IFS=$'\t' read -r tag sha; do
+            version="${tag#v}"
+            echo "::group::$tag ($sha)"
+
+            set +e
+            bash work/Scripts/port_overlay.sh --check "$sha" > port.txt 2>&1
+            set -e
+            verdict=$(grep '^PORT_VERDICT=' port.txt | cut -d= -f2 || echo drifted)
+            if [ "$verdict" != "clean" ]; then
+              files=$(grep '^PORT_CONFLICT_FILES=' port.txt | cut -d= -f2- || true)
+              echo "::endgroup::"
+              echo "DRIFTED=$tag" >> "$GITHUB_OUTPUT"
+              echo "DRIFT_FILES=${files:-unknown}" >> "$GITHUB_OUTPUT"
+              echo "::warning::$tag does not port cleanly. Stopping here so ordinals stay in release order."
+              break
+            fi
+
+            rm -rf src out && mkdir -p src out
+            git -C work/LoveCore/.gen1recomp-pin archive "$sha" | tar -x -C src
+            bash engine/build_payload.sh "$PWD/src" "$PWD/engine/overlay" "$version" \
+              "$PWD/out/payload.love" | tee build.txt
+            bsha=$(grep '^BUILD_SHA256=' build.txt | cut -d= -f2)
+            bytes=$(grep '^BUILD_BYTES=' build.txt | cut -d= -f2)
+            games=$(grep '^BUILD_GAMES=' build.txt | cut -d= -f2-)
+            id="$ENGINE_ID-${bsha:0:12}"
+            mv out/payload.love "out/$id.love"
+            date=$(git -C work/LoveCore/.gen1recomp-pin show -s --format=%cI "$sha")
+
+            # The tag names the ENGINE and its own release number, never a
+            # Phosphor version. Assets are release assets rather than files in
+            # this repo: Pages content is committed, and several payloads a day
+            # at 3 to 9 MB each would grow the repository without bound.
+            rtag="$ENGINE_ID-$version"
+            if ! gh release view "$rtag" >/dev/null 2>&1; then
+              gh release create "$rtag" --title "$ENGINE_ID $version" --notes \
+          "gen1recomp $version (upstream \`$sha\`), packaged for Phosphor with its host overlay.
+
+          gen1recomp is by BOIS CLUB GAMES: https://github.com/$UPSTREAM_REPO
+          Phosphor packages and publishes this build. It is not an official build of gen1recomp and is not endorsed by its authors."
+            fi
+            gh release upload "$rtag" "out/$id.love" --clobber
+
+            node scripts/publish-engine.mjs \
+              --engine "$ENGINE_ID" --engine-version "$version" --upstream "$sha" \
+              --snapshot-date "$date" --sha256 "$bsha" --bytes "$bytes" \
+              --url "${{ github.server_url }}/${{ github.repository }}/releases/download/$rtag/$id.love" \
+              --games "$games" --overlay-stamp "${{ steps.overlay.outputs.stamp }}"
+            published=$((published + 1))
+            echo "::endgroup::"
+          done < pending.txt
+          echo "published=$published" >> "$GITHUB_OUTPUT"
+          [ "$published" -gt 0 ] && npm test || true
+
+      # ONE OPEN ISSUE PER DRIFTED FILE SET, updated, rather than one per
+      # release. At several releases a day a naive workflow would file an issue
+      # an hour; the signal is "the overlay is behind", not the 47th
+      # notification. The title carries the file set, so a NEW set of files
+      # drifting does open a new issue, which is the case that needs a look.
+      - name: Surface the drift
+        if: steps.publish.outputs.DRIFTED != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          files="${{ steps.publish.outputs.DRIFT_FILES }}"
           title="Overlay is behind upstream: ${files:-unknown files}"
           body=$(cat <<EOF
-          Upstream released \`${{ steps.poll.outputs.tag }}\`
-          (\`${{ steps.poll.outputs.sha }}\`) and the overlay does not port to it
-          cleanly, so nothing was published.
+          \`${{ steps.publish.outputs.DRIFTED }}\` does not port cleanly, so it and
+          everything after it were not published. Ordinals must follow release
+          order, so the run stops at the first release it cannot build rather
+          than skipping ahead.
 
           Conflicting files: \`${files:-unknown}\`
-          Needing a read before the merge is trusted: \`${{ steps.port.outputs.PORT_REVIEW_FILES }}\`
-          Sandbox.lua needs review: \`${{ steps.port.outputs.PORT_SANDBOX_REVIEW }}\`
 
           Re-port in the app repo, which is where the overlay actually lives:
 
           \`\`\`
-          bash Scripts/port_overlay.sh ${{ steps.poll.outputs.sha }}
+          bash Scripts/port_overlay.sh <sha>
           bash Scripts/sync_overlay_mirror.sh
           \`\`\`
 
           \`src/mods/Sandbox.lua\` is never auto-merged. Its deny lists are a
-          blacklist, so a merge that silently drops an entry is a sandbox
-          escape no test would catch.
+          blacklist, so a merge that silently drops an entry is a sandbox escape
+          no test would catch.
 
-          This issue is UPDATED, not duplicated, while the same files are
-          drifted. Latest run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          Updated, not duplicated, while the same files are drifted. Latest run:
+          ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           EOF
           )
           existing=$(gh issue list --state open --search "in:title \"$title\"" \
             --json number,title --jq ".[] | select(.title == \"$title\") | .number" | head -1)
           if [ -n "$existing" ]; then
-            gh issue comment "$existing" --body "Still drifted as of \`${{ steps.poll.outputs.tag }}\`."
+            gh issue comment "$existing" --body "Still drifted as of \`${{ steps.publish.outputs.DRIFTED }}\`."
           else
-            gh issue create --title "$title" --body "$body" --label overlay-drift || \
-              gh issue create --title "$title" --body "$body"
+            gh issue create --title "$title" --body "$body" --label overlay-drift \
+              || gh issue create --title "$title" --body "$body"
           fi
-
-      - name: Build the payload
-        if: steps.poll.outputs.known == 'no' && steps.port.outputs.PORT_VERDICT == 'clean'
-        id: build
-        run: |
-          set -euo pipefail
-          mkdir -p src out
-          git -C work/LoveCore/.gen1recomp-pin archive "${{ steps.poll.outputs.sha }}" \
-            | tar -x -C src
-          chmod +x engine/build_payload.sh
-          bash engine/build_payload.sh "$PWD/src" "$PWD/engine/overlay" \
-            "${{ steps.poll.outputs.version }}" "$PWD/out/payload.love" \
-            | tee build-report.txt
-          grep '^BUILD_' build-report.txt >> "$GITHUB_OUTPUT"
-          sha="$(grep '^BUILD_SHA256=' build-report.txt | cut -d= -f2)"
-          echo "id=$ENGINE_ID-${sha:0:12}" >> "$GITHUB_OUTPUT"
-          mv out/payload.love "out/$ENGINE_ID-${sha:0:12}.love"
-          echo "date=$(git -C work/LoveCore/.gen1recomp-pin show -s --format=%cI \
-            "${{ steps.poll.outputs.sha }}")" >> "$GITHUB_OUTPUT"
-
-      # The tag names the ENGINE and its own release number, never a Phosphor
-      # version. Assets are release assets rather than files in this repo:
-      # Pages content is committed, and several payloads a day at 3 to 9 MB
-      # each would grow the repository without bound and never shrink.
-      - name: Publish the release asset
-        if: steps.poll.outputs.known == 'no' && steps.port.outputs.PORT_VERDICT == 'clean'
-        id: release
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          set -euo pipefail
-          tag="$ENGINE_ID-${{ steps.poll.outputs.version }}"
-          asset="out/${{ steps.build.outputs.id }}.love"
-          if ! gh release view "$tag" >/dev/null 2>&1; then
-            gh release create "$tag" \
-              --title "$ENGINE_ID ${{ steps.poll.outputs.version }}" \
-              --notes "gen1recomp ${{ steps.poll.outputs.version }} (upstream \`${{ steps.poll.outputs.sha }}\`), packaged for Phosphor with its host overlay.
-
-          gen1recomp is by BOIS CLUB GAMES: https://github.com/$UPSTREAM_REPO
-          Phosphor packages and publishes this build. It is not an official build of gen1recomp and is not endorsed by its authors."
-          fi
-          gh release upload "$tag" "$asset" --clobber
-          echo "url=${{ github.server_url }}/${{ github.repository }}/releases/download/$tag/${{ steps.build.outputs.id }}.love" >> "$GITHUB_OUTPUT"
-
-      - name: Add it to the catalog
-        if: steps.poll.outputs.known == 'no' && steps.port.outputs.PORT_VERDICT == 'clean'
-        run: |
-          set -euo pipefail
-          node scripts/publish-engine.mjs \
-            --engine "$ENGINE_ID" \
-            --engine-version "${{ steps.poll.outputs.version }}" \
-            --upstream "${{ steps.poll.outputs.sha }}" \
-            --snapshot-date "${{ steps.build.outputs.date }}" \
-            --sha256 "${{ steps.build.outputs.BUILD_SHA256 }}" \
-            --bytes "${{ steps.build.outputs.BUILD_BYTES }}" \
-            --url "${{ steps.release.outputs.url }}" \
-            --games "${{ steps.build.outputs.BUILD_GAMES }}" \
-            --overlay-stamp "${{ steps.overlay.outputs.stamp }}"
-          npm test
 
       # Pushing to main is what deploys Pages, so this is also what makes the
-      # new engine reachable by a phone.
+      # new engines reachable by a phone.
       - name: Commit the catalog
-        if: steps.poll.outputs.known == 'no' && steps.port.outputs.PORT_VERDICT == 'clean'
+        if: steps.publish.outputs.published != '' && steps.publish.outputs.published != '0'
         run: |
           set -euo pipefail
           if git diff --quiet -- public/v1/engines.json; then
@@ -274,5 +298,5 @@ jobs:
           git config user.name "phosphor-engine-bot"
           git config user.email "noreply@phosphoremulator.com"
           git add public/v1/engines.json
-          git commit -m "feat(engines): publish gen1recomp ${{ steps.poll.outputs.version }} as a preview"
+          git commit -m "feat(engines): publish ${{ steps.publish.outputs.published }} gen1recomp release(s) as previews"
           git push
