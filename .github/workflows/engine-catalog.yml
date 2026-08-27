@@ -143,7 +143,17 @@ jobs:
             // A catalog with none of these at all is a catalog that has never
             // published this engine. Take the newest release only: backfilling
             // a whole history as "previews" is not what anybody asked for.
-            const pending = lastKnown === -1 ? rows.slice(-1) : rows.slice(lastKnown + 1);
+            let pending = lastKnown === -1 ? rows.slice(-1) : rows.slice(lastKnown + 1);
+            // ONE COMMIT CAN CARRY SEVERAL TAGS, and upstream does it: v0.2.30
+            // and v0.2.31 are the same commit, the same code, released twice
+            // under two names. Building both published one release twice, at
+            // two ordinals, with two payload ids that differ only because zip
+            // is not deterministic -- two rows on the player's page for one
+            // engine. Keep the LAST tag on a commit, which is the name
+            // upstream settled on.
+            const byCommit = new Map();
+            pending.forEach((row) => byCommit.set(row[1], row));
+            pending = [...byCommit.values()];
             fs.writeFileSync("pending.txt",
               pending.map((r) => r.join("\t")).join("\n") + (pending.length ? "\n" : ""));
             process.stderr.write(
