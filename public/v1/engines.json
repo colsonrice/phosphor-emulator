@@ -1,0 +1,59 @@
+{
+  "note": "Builds of gen1recomp (https://github.com/bryanthaboi/gen1recomp) by BOIS CLUB GAMES, packaged and published by Phosphor. Phosphor is not an official build of gen1recomp and is not endorsed by its authors.",
+  "entries": [
+    {
+      "id": "gen1recomp-c3eca9c27036",
+      "engineID": "gen1recomp",
+      "engineVersion": "0.2.27",
+      "upstream": "7797962f664b52a25c25db9952d367c340dd6bc0",
+      "snapshotDate": "2026-08-26T13:31:23-04:00",
+      "sha256": "c3eca9c2703608369188fe68ac7a5de7e6eb940ec78029eb411e3ad77ed4d2ef",
+      "bytes": 8734913,
+      "url": "https://github.com/colsonrice/phosphor-emulator/releases/download/gen1recomp-0.2.27/gen1recomp-c3eca9c27036.love",
+      "shippedIn": "3.8",
+      "ordinal": 3,
+      "games": [
+        "blue",
+        "crystal",
+        "gold",
+        "red",
+        "silver",
+        "yellow"
+      ]
+    },
+    {
+      "id": "gen1recomp-a0d04b927d2b",
+      "engineID": "gen1recomp",
+      "engineVersion": "0.1.75",
+      "upstream": "60cf07fb",
+      "snapshotDate": "2026-08-06T10:32:17-04:00",
+      "sha256": "a0d04b927d2b0f82d58ade620e3ebef2fd94a9b1437f1916e8fb042cbf547e72",
+      "bytes": 3036507,
+      "url": "https://github.com/colsonrice/phosphor-emulator/releases/download/gen1recomp-0.1.75/gen1recomp-a0d04b927d2b.love",
+      "shippedIn": "3.3",
+      "ordinal": 2,
+      "games": [
+        "blue",
+        "red",
+        "yellow"
+      ]
+    },
+    {
+      "id": "gen1recomp-a54cd6fc1ab4",
+      "engineID": "gen1recomp",
+      "engineVersion": "0.1.75",
+      "upstream": "60cf07fb",
+      "snapshotDate": "2026-08-06T10:32:17-04:00",
+      "sha256": "a54cd6fc1ab40a52265904665669740a22f51477619ababf9f8f183f7178b121",
+      "bytes": 2452625,
+      "url": "https://github.com/colsonrice/phosphor-emulator/releases/download/gen1recomp-0.1.75/gen1recomp-a54cd6fc1ab4.love",
+      "shippedIn": "3.2",
+      "ordinal": 1,
+      "games": [
+        "blue",
+        "red",
+        "yellow"
+      ]
+    }
+  ]
+}
