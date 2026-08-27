@@ -60,9 +60,6 @@ jobs:
           node-version: 22
           cache: npm
 
-      - name: Install dependencies
-        run: npm ci
-
       # The overlay is MIRRORED from the Phosphor app repo, which has no git
       # remote, so this repo cannot check it out. OVERLAY_STAMP is the gate: it
       # hashes every overlay file, path included, and a mirror hand-edited here
@@ -162,6 +159,14 @@ jobs:
             head -n "$MAX_PER_RUN" pending.txt > pending.trimmed && mv pending.trimmed pending.txt
           fi
           echo "count=$(wc -l < pending.txt | tr -d ' ')" >> "$GITHUB_OUTPUT"
+
+      # AFTER the poll, deliberately. The no-op path is the common one at
+      # hourly, and it needs only `node` and `gh`, both already on the runner.
+      # Installing first spent a dependency install on ~720 runs a month that
+      # find nothing.
+      - name: Install dependencies
+        if: steps.poll.outputs.count != '0'
+        run: npm ci
 
       - name: Clone gen1recomp
         if: steps.poll.outputs.count != '0'
