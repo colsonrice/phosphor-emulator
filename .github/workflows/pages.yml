@@ -4,6 +4,19 @@ on:
   push:
     branches: ["main", "master"]
   workflow_dispatch:
+  # The engine catalog workflow commits public/v1/engines.json with
+  # GITHUB_TOKEN, and a push made with that token deliberately does NOT
+  # trigger other workflows -- GitHub's loop prevention. So the catalog was
+  # committed and then never deployed: phosphoremulator.com kept serving the
+  # previous file, and the whole hourly pipeline ended one step short of the
+  # URL the app actually reads. Caught by publishing two real engines and
+  # then curling the URL, which still showed three entries.
+  #
+  # `workflow_run` is the escape hatch for exactly this: it fires on another
+  # workflow completing, whoever pushed.
+  workflow_run:
+    workflows: ["Publish gen1recomp engines"]
+    types: [completed]
 
 permissions:
   contents: read
@@ -16,6 +29,10 @@ concurrency:
 
 jobs:
   build:
+    # A failed or drifted engine run has nothing new to serve.
+    if: >-
+      github.event_name != 'workflow_run' ||
+      github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repository
