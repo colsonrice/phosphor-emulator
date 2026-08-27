@@ -32,7 +32,7 @@
 /// Check against `LoveCore/GEN1RECOMP_VERSION` in the app repo whenever the
 /// pin moves. The app's own suite fails when these disagree now, which is the
 /// point of publishing it.
-export const ENGINE_VERSIONS = { gen1recomp: "0.2.27" };
+export const ENGINE_VERSIONS = { gen1recomp: "0.2.31" };
 
 /// The two families, spelled the way the APP spells them.
 ///
