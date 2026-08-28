@@ -57,6 +57,12 @@ end
 -- fallback cartridge image is this sidecar -- the same one exportActiveSlot
 -- reads below. A miss is nil, never an error.
 SaveFileIO.readCart = readCart
+-- And the matching write: the host's save refreshes the active slot's
+-- sidecar with the image it just exported, for EVERY version -- Gen 1 gains
+-- its first sidecar this way. Fresh sidecars are the next export's template
+-- and the host's proof that its library .sav and this slot hold the same
+-- save, which is what lets its Saves list show one row instead of two.
+SaveFileIO.writeCart = writeCart
 
 local SAVE_SIZE = SaveConvert.SAVE_SIZE
 

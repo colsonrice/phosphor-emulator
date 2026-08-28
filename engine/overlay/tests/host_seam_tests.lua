@@ -739,6 +739,27 @@ do
         "cart image: the sidecar read is the ACTIVE slot's")
 end
 do
+  -- The image is the SRAM's 32768 bytes, whatever the source held. A real
+  -- GBC .sav is 32786 (RTC trailer); the export encodes INTO the image, so
+  -- an oversized template made an oversized export the host refused --
+  -- silently, at session exit ("wasn't where I left off", device, Aug 28).
+  local trailered = string.rep("S", 32768) .. string.rep("T", 18)
+  local fs = fakeFs()
+  fs.write("host/export_template.sav", trailered)
+  local bytes = HostSeam.resolveExportCartImage(fs, "crystal", {
+    SaveData = { activeSlot = function() return nil end },
+    SaveFileIO = { readCart = function() return nil end },
+  })
+  check(#bytes == 32768, "cart image: a trailered template is trimmed to SRAM size")
+  check(bytes:sub(-1) == "S", "cart image: trimmed from the tail, the SRAM half kept")
+  local fs2 = fakeFs()
+  local bytes2 = HostSeam.resolveExportCartImage(fs2, "crystal", {
+    SaveData = { activeSlot = function() return "slot7" end },
+    SaveFileIO = { readCart = function() return trailered end },
+  })
+  check(#bytes2 == 32768, "cart image: a legacy oversized sidecar is trimmed the same way")
+end
+do
   local fs = fakeFs()
   local deps = {
     SaveData = { activeSlot = function() return nil end },
@@ -771,6 +792,40 @@ do
   check(SaveFileIO.readCart("crystal", "slot1") == nil,
         "SaveFileIO.readCart: a missing sidecar is nil, never an error")
   SaveData.portableFs = savedPortable
+end
+do
+  -- The write half, and its caller: the host's save refreshes the active
+  -- slot's sidecar with the exported image, every version, so the sidecar
+  -- describes the save as it LEFT, not only as it arrived (import was the
+  -- only writer before, and Gen 1 had no sidecar at all). The host's
+  -- one-row-per-save Saves list rests on this equality.
+  local SaveData = require("src.core.SaveData")
+  local savedPortable = SaveData.portableFs
+  local written = {}
+  SaveData.portableFs = function()
+    return {
+      write = function(path, bytes) written[path] = bytes end,
+      createDirectory = function() end,
+    }
+  end
+  local SaveFileIO = require("src.import.SaveFileIO")
+  check(type(SaveFileIO.writeCart) == "function",
+        "SaveFileIO.writeCart is exposed for the host save handler")
+  SaveFileIO.writeCart("yellow", "slot3", "EXPORTBYTES")
+  check(written["saves/yellow/slot3.cart"] == "EXPORTBYTES",
+        "writeCart lands the export at saves/<version>/<id>.cart, Gen 1 included")
+  SaveData.portableFs = savedPortable
+  -- And main.lua's save handler actually refreshes it after a successful
+  -- export -- source-pinned like the tripwire above, because the handler
+  -- needs a live Game to run.
+  local main = io.open("main.lua", "r")
+  if main then
+    local src = main:read("*a"); main:close()
+    check(src:find([[require("src.import.SaveFileIO").writeCart(version, slotId, bytes)]], 1, true) ~= nil,
+          "the host save handler refreshes the active slot's sidecar with the exported image")
+  else
+    check(false, "sidecar-refresh pin could not open main.lua to scan it")
+  end
 end
 
 S.finish()

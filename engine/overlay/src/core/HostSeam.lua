@@ -591,11 +591,22 @@ end
 -- 2026: an imported Crystal slot, sidecar on disk, refused to export the
 -- moment the host staged nothing.
 function HostSeam.resolveExportCartImage(fs, version, deps)
+  -- Whatever the source, the image is the SRAM's 32768 bytes and nothing
+  -- more. A real GBC .sav carries an RTC trailer (32786 bytes), the export
+  -- encodes INTO this image, and an oversized template makes an oversized
+  -- export the host then refuses -- silently, at session exit, which read
+  -- on a device as 2D "not where I left off". The host now stages a
+  -- trimmed template, and this trims again so a legacy oversized sidecar
+  -- (or an older host) cannot reintroduce it.
+  local function sramSized(image)
+    if image and #image > 32768 then return image:sub(1, 32768) end
+    return image
+  end
   local lfs = fsOrDefault(fs)
   local template = lfs and lfs.read and lfs.read("host/export_template.sav") or nil
   if template then
     removeFile(fs, "export_template.sav")
-    return template, "template"
+    return sramSized(template), "template"
   end
   deps = deps or {}
   local SaveData = deps.SaveData or require("src.core.SaveData")
@@ -603,7 +614,7 @@ function HostSeam.resolveExportCartImage(fs, version, deps)
   local slot = SaveData.activeSlot(version)
   if not slot then return nil end
   local sidecar = SaveFileIO.readCart(version, slot)
-  if sidecar then return sidecar, "sidecar" end
+  if sidecar then return sramSized(sidecar), "sidecar" end
   return nil
 end
 

@@ -423,6 +423,23 @@ local function pollHostCommands(dt)
       love.filesystem.createDirectory("host")
       local wrote, werr = love.filesystem.write("host/export_save.sav", bytes)
       if not wrote then error(tostring(werr), 0) end
+      -- Refresh the active slot's .cart sidecar with the image this export
+      -- produced, whatever the generation -- Gen 1 slots gain their first
+      -- sidecar here. Import used to be the only writer, so the sidecar
+      -- described the save as it ARRIVED, never as it left: the next
+      -- export's template was stale-but-harmless (templates only feed
+      -- unmodeled regions), but the host could not tell whether its library
+      -- .sav and this slot hold the same save. Now sidecar and .sav are the
+      -- same bytes at every host save, and its Saves list can show one row
+      -- for one save. Best effort, like the sidecar always was: a failed
+      -- write leaves the previous template standing.
+      do
+        local SaveData = require("src.core.SaveData")
+        local slotId = SaveData.activeSlot(version)
+        if slotId then
+          require("src.import.SaveFileIO").writeCart(version, slotId, bytes)
+        end
+      end
       -- The bag and PC the cartridge could not hold. A Game Boy bag has 20
       -- slots and the PC 50, mods routinely grant hundreds, and the host's
       -- iCloud sync carries nothing but this .sav -- so without the sidecar
