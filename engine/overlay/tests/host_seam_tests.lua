@@ -739,10 +739,11 @@ do
         "cart image: the sidecar read is the ACTIVE slot's")
 end
 do
-  -- The image is the SRAM's 32768 bytes, whatever the source held. A real
-  -- GBC .sav is 32786 (RTC trailer); the export encodes INTO the image, so
-  -- an oversized template made an oversized export the host refused --
-  -- silently, at session exit ("wasn't where I left off", device, Aug 28).
+  -- The RTC footer rides through WHOLE. A real GBC .sav is 32786 bytes
+  -- (SRAM + the cart's clock) and the exporters hand the template's footer
+  -- back on purpose: dropping it resets the Gen 2 clock. An early version
+  -- trimmed here to appease the host's strict size check, which cost the
+  -- clock on every 3D-to-2D hop -- the check was the thing to fix.
   local trailered = string.rep("S", 32768) .. string.rep("T", 18)
   local fs = fakeFs()
   fs.write("host/export_template.sav", trailered)
@@ -750,14 +751,14 @@ do
     SaveData = { activeSlot = function() return nil end },
     SaveFileIO = { readCart = function() return nil end },
   })
-  check(#bytes == 32768, "cart image: a trailered template is trimmed to SRAM size")
-  check(bytes:sub(-1) == "S", "cart image: trimmed from the tail, the SRAM half kept")
+  check(#bytes == 32786, "cart image: a trailered template passes through whole")
+  check(bytes:sub(-18) == string.rep("T", 18), "cart image: the RTC footer is intact for the exporter to hand back")
   local fs2 = fakeFs()
   local bytes2 = HostSeam.resolveExportCartImage(fs2, "crystal", {
     SaveData = { activeSlot = function() return "slot7" end },
     SaveFileIO = { readCart = function() return trailered end },
   })
-  check(#bytes2 == 32768, "cart image: a legacy oversized sidecar is trimmed the same way")
+  check(#bytes2 == 32786, "cart image: a trailered sidecar passes through whole too")
 end
 do
   local fs = fakeFs()

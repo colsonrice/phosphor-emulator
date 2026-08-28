@@ -14,6 +14,18 @@
 
 package.path = "./?.lua;./?/init.lua;" .. package.path
 
+-- 0.2.34 (#1691): encode REFUSES an export whose map window cannot be
+-- built, instead of silently writing a save that jumbles the 2D map.
+-- This suite runs with no generated map data, and the extras hop under
+-- test has nothing to do with maps -- satisfy the new contract with the
+-- smallest possible context. Loaded BEFORE GenSave, which captures the
+-- module at require time.
+package.loaded["src.save_convert.MapContext"] = {
+  build = function()
+    return { writes = {}, spriteData = {}, tileAnimations = 0 }
+  end,
+}
+
 local S = require("tests.harness").suite("save extras")
 local check, eq = S.check, S.eq
 
