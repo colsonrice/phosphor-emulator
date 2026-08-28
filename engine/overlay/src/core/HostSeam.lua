@@ -580,6 +580,33 @@ end
 
 -- ---------------------------------------------------------------- commands
 
+-- The cartridge image a host export writes back into. The staged template
+-- (host/export_template.sav, the host's CURRENT library save — the freshest
+-- image, staged only when it validates for this cartridge) wins and is
+-- consumed; with none, the active slot's own .cart sidecar — the image an
+-- imported Gen 2 slot came from, written by SaveFileIO.importToSlot and
+-- read by the launcher's own exportActiveSlot. Nil when neither exists, so
+-- the codec's refusal (Gen 2) or the template-less path (Gen 1) decides.
+-- Handing exportSav the template ALONE was the device failure of Aug 27
+-- 2026: an imported Crystal slot, sidecar on disk, refused to export the
+-- moment the host staged nothing.
+function HostSeam.resolveExportCartImage(fs, version, deps)
+  local lfs = fsOrDefault(fs)
+  local template = lfs and lfs.read and lfs.read("host/export_template.sav") or nil
+  if template then
+    removeFile(fs, "export_template.sav")
+    return template, "template"
+  end
+  deps = deps or {}
+  local SaveData = deps.SaveData or require("src.core.SaveData")
+  local SaveFileIO = deps.SaveFileIO or require("src.import.SaveFileIO")
+  local slot = SaveData.activeSlot(version)
+  if not slot then return nil end
+  local sidecar = SaveFileIO.readCart(version, slot)
+  if sidecar then return sidecar, "sidecar" end
+  return nil
+end
+
 local lastCommandSeq = nil
 
 -- Poll host/command.json — the host's runtime channel for the things its

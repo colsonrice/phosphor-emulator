@@ -702,4 +702,75 @@ do
   check(HostSeam.pendingSlotPicture() == nil, "cleared")
 end
 
+-- ------- resolveExportCartImage: what a host export writes back into
+--
+-- The host `save` handler used to hand exportSav the staged template alone,
+-- so an imported Gen 2 slot with a perfectly good .cart sidecar still refused
+-- to export whenever the host staged nothing ("this save has no cartridge
+-- image to write back into", live on device Aug 27 2026). The launcher's own
+-- exportActiveSlot reads the sidecar; the seam now resolves the same way:
+-- template first (the host stages its CURRENT library save, the freshest
+-- image), then the active slot's sidecar, then nil for the codec to judge.
+
+do
+  local fs = fakeFs()
+  fs.write("host/export_template.sav", "TEMPLATE")
+  local deps = {
+    SaveData = { activeSlot = function() return "slot4" end },
+    SaveFileIO = { readCart = function() error("must not be asked when a template is staged") end },
+  }
+  local bytes, source = HostSeam.resolveExportCartImage(fs, "crystal", deps)
+  check(bytes == "TEMPLATE", "cart image: the staged template wins")
+  check(source == "template", "cart image: and names its source")
+  check(fs.read("host/export_template.sav") == nil, "cart image: the template is consumed")
+end
+do
+  local fs = fakeFs()
+  local asked = {}
+  local deps = {
+    SaveData = { activeSlot = function(v) asked.version = v; return "slot7" end },
+    SaveFileIO = { readCart = function(v, id) asked.cart = { v, id }; return "SIDECAR" end },
+  }
+  local bytes, source = HostSeam.resolveExportCartImage(fs, "crystal", deps)
+  check(bytes == "SIDECAR", "cart image: no template falls back to the slot's sidecar")
+  check(source == "sidecar", "cart image: and names its source")
+  check(asked.version == "crystal", "cart image: the active slot asked for is this game's")
+  check(asked.cart[1] == "crystal" and asked.cart[2] == "slot7",
+        "cart image: the sidecar read is the ACTIVE slot's")
+end
+do
+  local fs = fakeFs()
+  local deps = {
+    SaveData = { activeSlot = function() return nil end },
+    SaveFileIO = { readCart = function() error("no active slot, nothing to read") end },
+  }
+  check(HostSeam.resolveExportCartImage(fs, "crystal", deps) == nil,
+        "cart image: nothing staged and no active slot -> nil")
+  local deps2 = {
+    SaveData = { activeSlot = function() return "slot1" end },
+    SaveFileIO = { readCart = function() return nil end },
+  }
+  check(HostSeam.resolveExportCartImage(fs, "crystal", deps2) == nil,
+        "cart image: nothing staged and no sidecar -> nil, the codec decides")
+end
+do
+  -- The exposure the resolver rests on: SaveFileIO.readCart reads the
+  -- sidecar importToSlot writes, by the same path, through the same
+  -- persistence fs the slots use — and a miss is nil, never an error.
+  local SaveData = require("src.core.SaveData")
+  local savedPortable = SaveData.portableFs
+  SaveData.portableFs = function()
+    return { read = function(path)
+      if path == "saves/crystal/slot9.cart" then return "CARTBYTES" end
+      error("no such file: " .. tostring(path))
+    end }
+  end
+  local SaveFileIO = require("src.import.SaveFileIO")
+  check(SaveFileIO.readCart("crystal", "slot9") == "CARTBYTES",
+        "SaveFileIO.readCart reads saves/<version>/<id>.cart")
+  check(SaveFileIO.readCart("crystal", "slot1") == nil,
+        "SaveFileIO.readCart: a missing sidecar is nil, never an error")
+  SaveData.portableFs = savedPortable
+end
+
 S.finish()

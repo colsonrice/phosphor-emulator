@@ -308,7 +308,7 @@ end
 -- platform happens to be missing the tool" is not a sandbox.
 do
   local quiet = Sandbox.envFor({ modId = "QUIET_MOD", permissions = {} })
-  for _, name in ipairs({ "src.core.HostShell", "src.net.Fetch",
+  for _, name in ipairs({ "src.core.HostShell", "src.ui.kit.FileBrowser", "src.net.Fetch",
                           "src.net.fetch_worker", "src.sync.SyncClient",
                           "src.sync.SyncTransport", "src.sync.SyncEngine",
                           "src.core.IssueReport" }) do

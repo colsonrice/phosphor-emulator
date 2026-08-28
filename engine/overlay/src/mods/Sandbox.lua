@@ -236,6 +236,10 @@ end
 local HOST_ESCAPE = {
   ["src.core.HostShell"] = "io.popen, os.execute and the curl transport",
   ["src.core.IssueReport"] = "io.popen and love.system.openURL",
+  -- Arrived in 0.2.32 as a launcher file picker. It shells out twice
+  -- (`test -d`, `ls -1ap`) with a path interpolated, so requiring it hands a
+  -- mod io.popen with an argument it controls.
+  ["src.ui.kit.FileBrowser"] = "io.popen with a caller-supplied path",
 }
 
 -- Ordered, not a hash: the message a mod author reads must not depend on

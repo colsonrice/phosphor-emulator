@@ -95,7 +95,11 @@ do
     -- boot.lua retires the loop and the coroutine finishes cleanly.
     --
     -- Falling through to defaultErrorHandler below IS that host handler when
-    -- embedded, so the whole port is this one condition.
+    -- embedded, so the whole port is this one condition. (Dropped once
+    -- already: the 0.2.32 take re-ported this file from a base that predated
+    -- the condition, and the merge that landed it took that port whole. The
+    -- host sets _phosphorEmbedded in LoveHost.mm; grep for it before
+    -- resolving this file to anyone's side wholesale.)
     if not (love._phosphorEmbedded)
         and love.window and love.window.isOpen and love.window.isOpen() and love.graphics and love.graphics.isActive() then
       local fullMsg = tostring(msg) .. "\n\n" .. tostring(debug.traceback()) .. "\n\n[Hold START + SELECT for 5s to Force Quit]"
@@ -397,14 +401,16 @@ local function pollHostCommands(dt)
       -- from a slot the engine declined to write.
       if not session.writeSave() then error("the engine declined to save", 0) end
       local SaveConvert = require("src.save_convert.SaveConvert")
-      -- The host stages its current library .sav as the export's fallback
-      -- template: a playthrough started as a New Game in 3D has no
-      -- rawImport, and a template-less export zero-fills the unmodeled
+      -- The cartridge image the export writes back into: the host's staged
+      -- template (its current library .sav, consumed per save so a stale
+      -- copy can never outlive the save it mirrored), else the active
+      -- slot's own .cart sidecar (HostSeam.resolveExportCartImage). A
+      -- template-less export used to be the end of the road here, which
+      -- refused a perfectly good imported Gen 2 slot whose sidecar was on
+      -- disk; and for Gen 1 a template-less export zero-fills the unmodeled
       -- machine regions -- accepted by every checksum, fatal to the real
-      -- cartridge on Continue. Consumed per save so a stale copy can never
-      -- outlive the library save it mirrored.
-      local template = love.filesystem.read("host/export_template.sav")
-      love.filesystem.remove("host/export_template.sav")
+      -- cartridge on Continue -- which is why the image matters at all.
+      local cartImage = HostSeam.resolveExportCartImage(nil, version)
       -- The staged base cartridge: exportSav derives the map-header cache
       -- from it for the save's position, so Continue on the vanilla game
       -- never runs a stale template's script pointer in the wrong bank.
@@ -412,7 +418,7 @@ local function pollHostCommands(dt)
       -- refreshes baseroms/baserom.gb every launch as the durable copy.
       local rom = love.filesystem.read("picked_rom.gb")
                   or love.filesystem.read("baseroms/baserom.gb")
-      local bytes, cerr = SaveConvert.exportSav(Game.save, version, template, rom)
+      local bytes, cerr = SaveConvert.exportSav(Game.save, version, cartImage, rom)
       if not bytes then error(tostring(cerr), 0) end
       love.filesystem.createDirectory("host")
       local wrote, werr = love.filesystem.write("host/export_save.sav", bytes)
@@ -1627,8 +1633,11 @@ function love.quit()
       -- over. `inProcessReturn` is TRUE on iOS, so taking it here sends the
       -- player to gen1recomp's own Lua launcher on exit and leaves them
       -- sitting on it. Reported on device the same afternoon 0.2.27 was
-      -- ported: "i exited my game and the gen1recomp native screen was just
-      -- sitting there showing".
+      -- ported ("i exited my game and the gen1recomp native screen was just
+      -- sitting there showing"), and AGAIN on Aug 27 2026 as the two-minute
+      -- exit: the 0.2.32 take re-ported this file from a base that predated
+      -- the term-drop, the quit bounced every session into the launcher, and
+      -- onExit never fired for the host waiting on it.
       --
       -- The platform term is dropped rather than translated. This overlay only
       -- ever runs on Phosphor's host, so the term could only ever be wrong: as
