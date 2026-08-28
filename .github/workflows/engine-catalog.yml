@@ -148,8 +148,11 @@ jobs:
             // and v0.2.31 are the same commit, the same code, released twice
             // under two names. Building both published one release twice, at
             // two ordinals, with two payload ids that differ only because zip
-            // is not deterministic -- two rows on the player's page for one
-            // engine. Keep the LAST tag on a commit, which is the name
+            // is not deterministic -- two rows on the player page for one
+            // engine. (No apostrophes in this block: it lives inside a
+            // single-quoted node -e, and one ended the script mid-line and
+            // handed the rest to bash. Both Aug 27 runs died exactly there.)
+            // Keep the LAST tag on a commit, which is the name
             // upstream settled on.
             const byCommit = new Map();
             pending.forEach((row) => byCommit.set(row[1], row));
