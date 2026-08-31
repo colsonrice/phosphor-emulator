@@ -195,7 +195,12 @@ function SaveFileIO.exportActiveSlot(version)
   version = version or GameVersion.get()
   local save = SaveData.load(version)
   if not save then return false, "this game has no save to export yet" end
-  local slotId = SaveData.activeSlot(version) or "save"
+  local activeSlot = SaveData.activeSlot(version)
+  local slotId = activeSlot or "save"
+  if activeSlot and type(save.meta) == "table" then
+    local minted, id = pcall(SaveData.slotPlaythroughId, version, activeSlot, save)
+    if minted and type(id) == "string" then save.meta.playthroughId = id end
+  end
   -- The map-header cache must be derived for the save's position or vanilla
   -- Continue runs a stale script pointer in the wrong bank. picked_rom.gb
   -- until the importer consumes it; baseroms/baserom.gb is the durable copy.
