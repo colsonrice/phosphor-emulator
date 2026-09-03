@@ -153,9 +153,9 @@ function HomeApp() {
             </div>
             <div className="console-readout">
               <p>INDEX ONLINE · CURATED PROJECT SIGNALS</p>
-              <strong>45<span>_</span></strong>
+              <strong>{__PROJECT_COUNT__}<span>_</span></strong>
             </div>
-            <div className="console-foot"><span>15 ROM HACKS</span><span>30 RECOMP MODS</span><span>PERMISSION FIRST</span></div>
+            <div className="console-foot"><span>{__ROM_HACK_COUNT__} ROM HACKS</span><span>{__MOD_COUNT__} RECOMP MODS</span><span>PERMISSION FIRST</span></div>
           </div>
           <div className="mods-copy">
             <div className="section-label"><span>02</span> MOD LIBRARY</div>
