@@ -14,7 +14,7 @@
 //   node scripts/build-manifest.mjs --check   fail if the committed file is stale
 
 import { readFile, writeFile, mkdir } from "node:fs/promises";
-import { engineFacet, ENGINE_VERSIONS } from "./engine-family.mjs";
+import { engineFacet, ENGINE_VERSIONS, GEN1 } from "./engine-family.mjs";
 import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 

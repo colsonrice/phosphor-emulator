@@ -46,6 +46,15 @@ jobs:
         run: npm ci
       - name: Test catalog policy
         run: npm test
+      # `no-undef` is the whole reason this step exists. `build-manifest.mjs`
+      # used GEN1 without importing it, and because `??` is lazy the reference
+      # was only reached when a tier-2 row had no string `engine` AND a family
+      # of "both" or none -- so every existing row missed it and the catalog
+      # kept building. Nothing here ran eslint, so a latent ReferenceError in
+      # the script that regenerates the published catalog sat in main until it
+      # was read by eye.
+      - name: Lint
+        run: npm run lint
       - name: Build static site
         env:
           VITE_GITHUB_REPOSITORY: ${{ github.repository }}
