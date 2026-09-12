@@ -702,6 +702,30 @@ function HostSeam.applyModIntents(fs)
     end
   end
 
+  -- "Try it anyway", for the OTHER claim: the engine range in `game_version`.
+  -- Flat and per mod rather than per game, because the range is over the
+  -- ENGINE and the engine is the same one whichever cartridge boots -- so
+  -- unlike `forced` above this needs no game in hand, and the Settings pane
+  -- can write it as honestly as a cartridge's own pane can.
+  --
+  -- A FULL statement, like the two above: every id the host names is written
+  -- true or false, so withdrawing the acceptance clears the row instead of
+  -- leaving a mod forced past its range forever.
+  if type(intents.forcedEngine) == "table" then
+    local bucket = options.modsEngine
+    if type(bucket) ~= "table" then bucket = {}; options.modsEngine = bucket end
+    for id, on in pairs(intents.forcedEngine) do
+      if type(id) == "string" and type(on) == "boolean" then
+        local want = on or nil
+        if bucket[id] ~= want then
+          bucket[id] = want
+          changed = true
+        end
+      end
+    end
+    if next(bucket) == nil then options.modsEngine = nil end
+  end
+
   if changed then SaveData.saveOptions(options, fs) end
   return changed
 end
@@ -761,6 +785,14 @@ function HostSeam.writeModState(loader, fs, data)
           -- WHY it failed, so the host can show a reason instead of an
           -- unexplained "broken" chip the player can do nothing with.
           failure = mod.failure and tostring(mod.failure) or nil,
+          -- Loaded, but outside the engine range its author declared, because
+          -- the player accepted that. Reported so a row can say "running
+          -- unverified" rather than a plain green "loaded" that hides the
+          -- deal the player actually made. The host derives the OFFER from
+          -- the manifest (it can read `game_version` without a boot); this
+          -- reports what the last boot ACTUALLY did with it, which is the
+          -- only place the two could disagree.
+          forcedEngine = mod.forcedEngine == true or nil,
         }
       end
     end

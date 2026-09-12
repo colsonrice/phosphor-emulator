@@ -129,6 +129,51 @@ opts = SaveData.loadOptions(fs)
 check(SaveData.modForced(opts, "OLD", "crystal", 2) ~= true,
   "forced without a game is ignored, not applied to some default")
 
+-- ------- "try it anyway": the ENGINE-RANGE override
+--
+-- PHOSPHOR: the other claim a manifest makes. `game_version` is a semver range
+-- over the ENGINE, and until now a mod outside it was a hard _fail in
+-- Loader:_validate with no override anywhere -- the target claim above had one
+-- for months, this had nothing. Note the shape difference and why: this one
+-- carries NO game token, because the range is over the engine and the engine
+-- is the same one whichever cartridge boots. That is what lets the Settings
+-- pane, which has no cartridge in hand, write it as honestly as a game's own
+-- pane can.
+
+fs = fakeFs()
+fs._files["host/mods.json"] =
+  '{"set":{"OLD":true},"forcedEngine":{"OLD":true}}'
+check(HostSeam.applyModIntents(fs) == true, "engine-range intents applied")
+opts = SaveData.loadOptions(fs)
+check(opts.modsEngine and opts.modsEngine.OLD == true,
+  "the accepted risk reached options.modsEngine, where _loadState reads it")
+
+-- taking it back, the same FULL-statement rule the two blocks above follow
+fs._files["host/mods.json"] =
+  '{"set":{"OLD":true},"forcedEngine":{"OLD":false}}'
+HostSeam.applyModIntents(fs)
+opts = SaveData.loadOptions(fs)
+check((opts.modsEngine or {}).OLD ~= true,
+  "taking it back clears the row rather than leaving it forced forever")
+
+-- one mod's acceptance is not another's
+fs = fakeFs()
+fs._files["host/mods.json"] =
+  '{"set":{"A":true,"B":true},"forcedEngine":{"A":true,"B":false}}'
+HostSeam.applyModIntents(fs)
+opts = SaveData.loadOptions(fs)
+check(opts.modsEngine.A == true and (opts.modsEngine.B == nil),
+  "the override is per mod: accepting A says nothing about B")
+
+-- junk from a host must not land in the player's options
+fs = fakeFs()
+fs._files["host/mods.json"] =
+  '{"set":{"A":true},"forcedEngine":{"A":"yes"}}'
+HostSeam.applyModIntents(fs)
+opts = SaveData.loadOptions(fs)
+check((opts.modsEngine or {}).A ~= "yes",
+  "a non-boolean value is ignored rather than stored")
+
 check(HostSeam.applyModIntents(fs) == false,
   "second boot with no new intents -> no-op")
 

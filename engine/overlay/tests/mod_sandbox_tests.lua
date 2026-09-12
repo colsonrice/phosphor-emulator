@@ -343,12 +343,51 @@ check(pcall(env.require, "src.mods.Semver"),
 
 check(type(env.love.graphics) == "table",
   "love.graphics passes through -- drawing is the point of a render mod")
-for _, blocked in ipairs({ "filesystem", "thread", "system", "event" }) do
+for _, blocked in ipairs({ "filesystem", "thread", "event" }) do
   check(not pcall(function() return env.love[blocked] end),
     "love." .. blocked .. " is refused by the facade")
 end
 check(not pcall(function() env.love.filesystem = {} end),
   "a mod cannot assign into the love facade")
+
+-- ------- love.system is NARROWED, not dropped
+--
+-- It was dropped, for openURL alone, and that cost every mod the ability to
+-- ask what device it is on. `getOS() == "iOS"` is how a mod picks a touch
+-- control scheme, so denying it did not make these mods safe -- it made them
+-- run their DESKTOP scheme on a phone. See the note in src/mods/Sandbox.lua.
+
+-- The exact defensive idiom the voxel mods write. It matters that this is
+-- one expression: the facade RAISES on a blocked module, so `love.system and`
+-- used to throw on the first term rather than short-circuiting, and the mod
+-- failed to load outright instead of degrading.
+local okIdiom, ranIdiom = pcall(function()
+  return env.love.system and env.love.system.getOS and env.love.system.getOS()
+end)
+check(okIdiom, "the `love.system and love.system.getOS and ...` idiom survives")
+check(type(ranIdiom) == "string" and #ranIdiom > 0,
+  "and answers a real OS name, so a mod can detect iOS")
+
+for _, open in ipairs({ "getOS", "getPowerInfo", "getProcessorCount", "vibrate" }) do
+  check(pcall(function() return env.love.system[open] end),
+    "love.system." .. open .. " is open: read-only device facts")
+end
+
+-- The member the module was dropped for, and the two that are the player's.
+for _, shut in ipairs({ "openURL", "getClipboardText", "setClipboardText" }) do
+  local ok, err = pcall(function() return env.love.system[shut] end)
+  check(not ok, "love.system." .. shut .. " stays refused")
+  check(type(err) == "string" and err:find("love.system." .. shut, 1, true),
+    "...and the error names the member, not just the module")
+end
+
+-- Default-DENY inside a narrowed module, unlike the module-level rule: we
+-- narrowed this one because it held an escape, so an unknown future member is
+-- unknown risk rather than a convenience.
+check(not pcall(function() return env.love.system.someFutureEscape end),
+  "a member LOVE adds later is denied until it is listed by hand")
+check(not pcall(function() env.love.system.openURL = function() end end),
+  "and a mod cannot write its way past the narrowing")
 
 -- ------- load(): compiles INTO the sandbox, and never from bytecode
 

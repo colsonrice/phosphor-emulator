@@ -270,10 +270,9 @@ end
 
 -- Dropped, not narrowed: filesystem writes anywhere in the save directory
 -- (including another mod's storage), thread opens a Lua state with a full
--- standard library, system.openURL launches whatever it is handed, and event
--- lets a mod quit the game out from under the player.  Everything else LÖVE
--- exposes passes through, so a new module in a future LÖVE is available
--- without an edit here.
+-- standard library, and event lets a mod quit the game out from under the
+-- player.  Everything else LÖVE exposes passes through, so a new module in a
+-- future LÖVE is available without an edit here.
 -- value is the replacement to name in the error, or true when there is none
 local BLOCKED_LOVE = {
   filesystem = "mod.storage, mod:read and mod:list",
@@ -281,19 +280,97 @@ local BLOCKED_LOVE = {
   -- rules, so it stays blocked -- but the reason mods reached for it was
   -- background work, and mod.fetch is that without the escape.
   thread = 'mod.fetch for background HTTP (needs the "network" permission)',
-  system = "mod.device:powerInfo() for battery information, mod.steps for "
-    .. "the step bridge", event = true,
+  event = true,
 }
+
+-- ------- narrowed modules
+--
+-- PHOSPHOR: one dangerous member should not cost a mod the whole module.
+--
+-- love.system used to sit in BLOCKED_LOVE for one reason -- openURL launches
+-- whatever it is handed -- and dropping the module to stop that member cost
+-- more than it bought. Every love.system call in the Dramatic Shape voxel
+-- family is `getOS`, and three of them read `getOS() == "iOS"`: it is how a
+-- mod picks a TOUCH control scheme over a desktop one. Denying it did not
+-- make those mods safe, it made them think they were on a desktop -- which is
+-- the very thing src/mods/Gen2TouchUIShim.lua was written to patch back out
+-- of their source. We broke their iOS detection and then shimmed around them
+-- not detecting iOS.
+--
+-- Worse, the facade RAISES rather than answering nil, so the defensive idiom
+-- those mods actually write --
+--   love.system and love.system.getOS and love.system.getOS() == "iOS"
+-- -- throws on the first term instead of short-circuiting, and the mod fails
+-- to load outright. Reported Sep 2026 as a MOD MANAGER ERRORS screen reading
+-- "love.system is not available to mods", with the author shipping releases
+-- to guess their way around it.
+--
+-- love.thread two entries up is the precedent: gated, not dropped.
+--
+-- DEFAULT-DENY inside a narrowed module, deliberately, and unlike the
+-- module-level rule above. At module level an unknown future LÖVE module
+-- passing through is a convenience; inside a module we narrowed *because it
+-- held an escape*, an unknown future member is unknown risk. The cost is the
+-- one written at the top of this file: the list cannot grow on its own, so a
+-- harmless member LÖVE adds later is absent for mods until it is added here
+-- by hand, and a green build is not evidence.
+local NARROWED_LOVE = {
+  system = {
+    -- read-only facts about the device, and the one output that is a
+    -- courtesy rather than a capability
+    allow = {
+      getOS = true, getPowerInfo = true, getProcessorCount = true,
+      vibrate = true,
+    },
+    -- named individually so the error says what to do instead of what is
+    -- missing; anything not listed either way falls to the default below
+    deny = {
+      openURL = "it launches whatever it is handed; mods do not open the "
+        .. "browser in this build",
+      getClipboardText = "the clipboard is the player's, not the mod's",
+      setClipboardText = "the clipboard is the player's, not the mod's",
+    },
+    default = "love.system is narrowed here; only getOS, getPowerInfo, "
+      .. "getProcessorCount and vibrate are open to mods",
+  },
+}
+
+-- One table per narrowed module per mod env.  Memoized on first touch: the
+-- facade's __index runs on every `love.system.x` a mod writes, and that is no
+-- place to build a metatable.
+local function narrowedModule(name, rule, cache)
+  local made = cache[name]
+  if made then return made end
+  local real = _G.love[name]
+  made = setmetatable({}, {
+    __index = function(_, member)
+      if rule.allow[member] and real then return real[member] end
+      local why = rule.deny[member] or rule.default
+      error(("love.%s.%s is not available to mods: %s"):format(name, member, why), 2)
+    end,
+    __newindex = function()
+      error(("love.%s is read-only to mods"):format(name), 2)
+    end,
+  })
+  cache[name] = made
+  return made
+end
 
 -- Per-mod, because the compat overrides (src/mods/LegacyCompat.lua) are backed
 -- by that mod's own overlay and must not be shared.
 local function loveFacade(compat, permissions)
   if not _G.love then return nil end
   local overrides = compat and compat.love
+  -- per-facade, so one mod's narrowed tables are never handed to another
+  local narrowCache = {}
   return setmetatable({}, {
     __index = function(_, key)
       local override = overrides and overrides[key]
       if override ~= nil then return override end
+      -- Before BLOCKED_LOVE, because a narrowed module is not a blocked one:
+      -- the member decides, not the module name.
+      local narrow = NARROWED_LOVE[key]
+      if narrow then return narrowedModule(key, narrow, narrowCache) end
       if key == "thread" then
         -- Threads open a fresh Lua state with a full standard library, so
         -- they stay blocked unless the mod declares the `compute`

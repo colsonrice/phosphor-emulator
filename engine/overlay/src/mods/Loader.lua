@@ -22,6 +22,8 @@ local Semver = require("src.mods.Semver")
 local Events = require("src.mods.Events")
 local Gen2Compat = require("src.mods.Gen2Compat")
 local Gen2ClipSpaceShim = require("src.mods.Gen2ClipSpaceShim")
+local Gen2PipelineRows = require("src.mods.Gen2PipelineRows")
+local Gen2TouchUIShim = require("src.mods.Gen2TouchUIShim")
 local Gen2WildAlertFix = require("src.mods.Gen2WildAlertFix")
 local ModRenderGuard = require("src.mods.ModRenderGuard")
 local ModShaderReport = require("src.mods.ModShaderReport")
@@ -324,6 +326,11 @@ function Loader.new(opts)
   end
   self.disabled = {}
   self.gen2Forced = {}
+  -- Phosphor: Gen 2's OPTIONS screen has no row for a mod's render pipeline, so
+  -- without this a voxel mod can only be switched on by its keyboard hotkey --
+  -- which is no way at all on a phone. Gen 1 already splices the same rows in
+  -- its own menu, so this is a no-op there. See src/mods/Gen2PipelineRows.lua.
+  pcall(Gen2PipelineRows.install, self)
   return self
 end
 
@@ -374,6 +381,20 @@ function Loader:_loadState()
       self.gen2Forced[id] = true
     end
   end
+  -- PHOSPHOR: the same override, for the OTHER claim a manifest makes.
+  -- `game_version` is a range over the ENGINE, so unlike the target override
+  -- this is per mod and not per game: forcing a mod past its engine range on
+  -- Gold means the same thing on Red, because it is the same engine running.
+  -- Stored flat under options.modsEngine for that reason.
+  --
+  -- A stale entry is harmless by construction. This is only ever consulted on
+  -- the failure path below, so once the player moves to an engine the mod
+  -- actually claims, the range check passes first and the override is never
+  -- read. Nothing has to clean it up.
+  self.engineForced = {}
+  for id, on in pairs(options.modsEngine or {}) do
+    if on == true then self.engineForced[id] = true end
+  end
   -- mod.options reads through this; M11 owns writing it back
   self.modOptions = options.modOptions or {}
   -- Migrate the original prototype manager's separate state file into the
@@ -415,6 +436,15 @@ function Loader:_saveState()
     -- are not this run's to rewrite.  With no version (an injected-generation
     -- harness) the override stays in memory for this boot only.
     SaveData.setModForced(options, id, self.gen2Forced[id] == true, version)
+    -- PHOSPHOR: engine-range override, flat and per mod. Written for every
+    -- installed id so taking the acceptance back clears the row rather than
+    -- leaving it forced forever, which is the rule the target override above
+    -- follows too.
+    options.modsEngine = options.modsEngine or {}
+    options.modsEngine[id] = self.engineForced[id] == true or nil
+  end
+  if options.modsEngine and next(options.modsEngine) == nil then
+    options.modsEngine = nil
   end
   SaveData.saveOptions(options, self.fs)
 end
@@ -908,9 +938,28 @@ function Loader:_validate()
     if not reason and manifest.game_version and not devEngine() then
       local ok, err = Semver.satisfies(Version.engine, manifest.game_version)
       if not ok then
-        reason = ("needs game version %s, engine is %s")
-          :format(manifest.game_version, Version.engine)
-        if err then reason = reason .. " (" .. err .. ")" end
+        -- PHOSPHOR: the player's override, the same one _gateGeneration has
+        -- for the target claim. `game_version` is the AUTHOR's statement about
+        -- which engines they tested, not a capability the engine can check, so
+        -- a mod written before this engine existed can never name it however
+        -- well it would run. Refusing outright left the player nothing to do:
+        -- unlike the generation gate there was no override anywhere, and the
+        -- host could only report "invalid" with a reason string.
+        --
+        -- Forced still LOADS normally -- everything downstream treats it as any
+        -- other mod -- and only carries a note, so the host can say the mod is
+        -- running outside what its author claimed.
+        if self.engineForced[mod.manifest.id] then
+          mod.forcedEngine = true
+          mod.engineNote = ("runs outside its declared engine range %s (engine "
+            .. "is %s); not verified by its author")
+            :format(manifest.game_version, Version.engine)
+          Logger.warn("mod %s: %s", mod.manifest.id, mod.engineNote)
+        else
+          reason = ("needs game version %s, engine is %s")
+            :format(manifest.game_version, Version.engine)
+          if err then reason = reason .. " (" .. err .. ")" end
+        end
       end
     end
     if reason then self:_fail(mod, "invalid", reason) end
@@ -1785,6 +1834,13 @@ function Loader:_loadMod(mod)
   -- Phosphor: the Gold wild-alert crash (emote table with no `left`), which
   -- is randyadr/Gen2-3D-Sprites#6 sitting unmerged upstream.
   pcall(Gen2WildAlertFix.consider, self, mod, api)
+  -- Phosphor: the Gen 2 voxel mod's camera controls, on iOS. Its touch gates
+  -- test Android alone, so iOS gets the desktop scheme: no DIORAMA/3RD/1ST
+  -- slider, no thumb-look, no pinch, and a mode switch that polls F6. Anchors
+  -- re-checked against the mod's CURRENT source (0.4.33, Sep 2026): all three
+  -- still match, so this patches rather than no-ops. Chains onto api.read with
+  -- the two shims above; the three touch disjoint files.
+  pcall(Gen2TouchUIShim.consider, self, mod, api)
   local result = chunk(api)
   if type(result) == "function" then result(api) end
   -- a mod that replaced the table wholesale (mod.exports = {...}) still
