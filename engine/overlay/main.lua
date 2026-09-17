@@ -694,6 +694,8 @@ local function makeLauncher(launcherOpts)
 end
 
 local function returnToLauncher(opts)
+  -- PHOSPHOR: the native library owns navigation, never the upstream shell.
+  if love._phosphorEmbedded then return love.event.quit() end
   if not Game then return end
 
   if require("src.core.RequireGuard").repair() then
@@ -970,6 +972,11 @@ function love.load(args)
   HostDisplay.setBackend(HostSeam.displayBackend)
   HostSeam.applyModIntents()
   local hostLaunch = HostSeam.consumeLaunch()
+  -- PHOSPHOR: a missing or malformed directive must fail through the native
+  -- error handler, not fall through into a second application's launcher.
+  if love._phosphorEmbedded and (not hostLaunch or hostLaunch.autoplay == false) then
+    error("Phosphor could not prepare this game. Return to the library and try again.")
+  end
 
   local savePath
   for i, a in ipairs(args or {}) do
@@ -1268,6 +1275,14 @@ function love.update(dt)
 end
 
 function love.draw()
+  -- PHOSPHOR: native progress and navigation own every non-game surface.
+  -- Suppress the shell itself, including the frames before the host polls
+  -- import status and the diagnostic paths that have no native overlay.
+  if love._phosphorEmbedded and
+      (Importer or editorMode or TouchEditor or Studio or Prelaunch or not Game) then
+    love.graphics.clear(0, 0, 0, 1)
+    return
+  end
   if editorMode then
     GameViewport.reset()
     HostDisplay.beginFrame("editor", EditorApp)
