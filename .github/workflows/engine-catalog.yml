@@ -256,7 +256,12 @@ jobs:
             echo "::endgroup::"
           done < pending.txt
           echo "published=$published" >> "$GITHUB_OUTPUT"
-          [ "$published" -gt 0 ] && npm test || true
+          if [ "$published" -gt 0 ]; then
+            # The mod manifest derives its compatibility version from engines.json.
+            # Commit both together or the Pages consistency check blocks deployment.
+            node scripts/build-manifest.mjs
+            npm test
+          fi
 
       # ONE OPEN ISSUE PER DRIFTED FILE SET, updated, rather than one per
       # release. At several releases a day a naive workflow would file an issue
@@ -315,6 +320,6 @@ jobs:
           fi
           git config user.name "phosphor-engine-bot"
           git config user.email "noreply@phosphoremulator.com"
-          git add public/v1/engines.json
+          git add public/v1/engines.json public/v1/manifest.json
           git commit -m "feat(engines): publish ${{ steps.publish.outputs.published }} gen1recomp release(s) as previews"
           git push
