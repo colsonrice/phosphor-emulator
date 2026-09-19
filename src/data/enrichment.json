@@ -21,11 +21,6 @@
         "BATTLE_ART_VOXEL_FORK",
         "DRAMALESS_SHAPE",
         "gender_mod"
-      ],
-      "games": [
-        "red",
-        "blue",
-        "yellow"
       ]
     },
     "popularity": {
@@ -223,11 +218,6 @@
         "gen3_battle_ui",
         "BATTLE_ART_VOXEL_FORK",
         "potato_voxel"
-      ],
-      "games": [
-        "red",
-        "blue",
-        "yellow"
       ]
     },
     "popularity": {
@@ -248,11 +238,6 @@
         "crystal_animated_sprites_with_shiny_visuals",
         "unique_menu_icons",
         "Gold_Silver_Sprites"
-      ],
-      "games": [
-        "red",
-        "blue",
-        "yellow"
       ]
     },
     "popularity": {
@@ -965,11 +950,6 @@
     "requirements": {
       "worksWith": [
         "modern_party_ui"
-      ],
-      "games": [
-        "red",
-        "blue",
-        "yellow"
       ]
     },
     "popularity": {
@@ -1141,11 +1121,6 @@
         "BATTLE_ART_VOXEL_FORK",
         "DRAMALESS_SHAPE",
         "potato_voxel"
-      ],
-      "games": [
-        "red",
-        "blue",
-        "yellow"
       ]
     },
     "popularity": {
@@ -1961,6 +1936,11 @@
       "downloads": 5835,
       "stars": 6,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "permissions": [
+        "filesystem"
+      ]
     }
   },
   "gen1recomp-dutch-generator": {
@@ -2205,6 +2185,11 @@
     },
     "icon": {
       "url": "https://raw.githubusercontent.com/ShaneMcGovernIE/potato_voxel/main/Logo.png"
+    },
+    "requirements": {
+      "permissions": [
+        "compute"
+      ]
     }
   },
   "qol-toggles": {
@@ -2246,6 +2231,9 @@
         "red",
         "blue",
         "yellow"
+      ],
+      "permissions": [
+        "filesystem"
       ]
     }
   },
@@ -2315,6 +2303,9 @@
         "red",
         "blue",
         "yellow"
+      ],
+      "permissions": [
+        "filesystem"
       ]
     }
   },
@@ -2377,6 +2368,11 @@
       "downloads": 6871,
       "stars": 2,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "permissions": [
+        "filesystem"
+      ]
     }
   },
   "traduccion-es": {
@@ -2390,6 +2386,23 @@
         "red",
         "blue",
         "yellow"
+      ],
+      "imports": [
+        {
+          "name": "Pokémon Edición Roja (ESP)",
+          "required": false
+        },
+        {
+          "name": "Pokémon Edición Azul (ESP)",
+          "required": false
+        },
+        {
+          "name": "Pokémon Edición Amarilla (ESP)",
+          "required": false
+        }
+      ],
+      "permissions": [
+        "filesystem"
       ]
     }
   },
@@ -2404,6 +2417,9 @@
         "red",
         "blue",
         "yellow"
+      ],
+      "requires": [
+        "translation-fr"
       ]
     }
   },
@@ -2426,13 +2442,6 @@
       "downloads": 6789,
       "stars": 5,
       "asOf": "2026-08-22"
-    },
-    "requirements": {
-      "games": [
-        "red",
-        "blue",
-        "yellow"
-      ]
     }
   },
   "unique-menu-icons": {
@@ -2475,13 +2484,6 @@
       "downloads": 1914,
       "stars": 1,
       "asOf": "2026-08-22"
-    },
-    "requirements": {
-      "games": [
-        "red",
-        "blue",
-        "yellow"
-      ]
     }
   },
   "useful-move-info": {
@@ -2536,7 +2538,8 @@
       "games": [
         "red",
         "blue",
-        "yellow"
+        "yellow",
+        "crystal"
       ]
     }
   },
@@ -3084,6 +3087,11 @@
       "downloads": 4985,
       "stars": 13,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "requires": [
+        "pokegear_cards"
+      ]
     }
   },
   "gen1recomp-better-battles": {
@@ -3206,6 +3214,15 @@
       "downloads": 369,
       "stars": 2,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow",
+        "gold",
+        "crystal"
+      ]
     }
   },
   "colosseum-inspired-ui-overhaul-v-1-0-0": {
@@ -3234,6 +3251,13 @@
       "downloads": 8,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
     }
   },
   "gen1recompspaceworldsprites": {
@@ -3291,7 +3315,14 @@
       {
         "url": "https://github.com/user-attachments/assets/8c4d4676-902d-429a-af2b-9535bb402a5f"
       }
-    ]
+    ],
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
   },
   "pocketmonsterspc": {
     "popularity": {
@@ -3312,6 +3343,12 @@
       "downloads": 141,
       "stars": 1,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "games": [
+        "gold",
+        "silver"
+      ]
     }
   },
   "itemfinder-plus": {
@@ -3341,6 +3378,11 @@
       "downloads": 545,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "permissions": [
+        "filesystem"
+      ]
     }
   },
   "weather-fx": {
@@ -3355,6 +3397,11 @@
       "downloads": 439,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "requires": [
+        "DRAMATIC_SHAPE"
+      ]
     }
   },
   "gen2-cheat-menu": {
@@ -3369,6 +3416,11 @@
       "downloads": 1223,
       "stars": 3,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "requires": [
+        "STADIUM_OVERWORLD_MODELS"
+      ]
     }
   },
   "kanto-ascendant": {
@@ -3376,6 +3428,17 @@
       "downloads": 7324,
       "stars": 13,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "imports": [
+        {
+          "name": "Ascendant sprite / HD package",
+          "required": false
+        }
+      ],
+      "permissions": [
+        "compute"
+      ]
     }
   },
   "pokemon-quick-select": {
@@ -3383,6 +3446,13 @@
       "downloads": 236,
       "stars": 2,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
     }
   },
   "jp-anime-opening-title": {
@@ -3418,6 +3488,11 @@
       "downloads": 44,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "permissions": [
+        "filesystem"
+      ]
     }
   },
   "kep-recomp-port": {
@@ -3432,6 +3507,11 @@
       "downloads": 63,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "requires": [
+        "Dynamic_Scaling"
+      ]
     }
   },
   "gimmicks-menu": {
@@ -3663,6 +3743,13 @@
       "downloads": 155,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
     }
   },
   "3d-pokemon-sprites": {
@@ -3674,11 +3761,6 @@
   },
   "gen9dex": {
     "requirements": {
-      "games": [
-        "gold",
-        "silver",
-        "crystal"
-      ],
       "requires": [
         "national_dex"
       ]
@@ -3711,52 +3793,7 @@
       ]
     }
   },
-  "gen1recomp-modern-party-ui": {
-    "requirements": {
-      "games": [
-        "red",
-        "blue",
-        "yellow"
-      ]
-    }
-  },
-  "gen1recomp-typed-move-colors": {
-    "requirements": {
-      "games": [
-        "red",
-        "blue",
-        "yellow"
-      ]
-    }
-  },
   "red-ptbr-gen1recomp": {
-    "requirements": {
-      "games": [
-        "red",
-        "blue",
-        "yellow"
-      ]
-    }
-  },
-  "gen1recomp-battle-info-hud": {
-    "requirements": {
-      "games": [
-        "red",
-        "blue",
-        "yellow"
-      ]
-    }
-  },
-  "gen1recomp-modern-pokedex-ui": {
-    "requirements": {
-      "games": [
-        "red",
-        "blue",
-        "yellow"
-      ]
-    }
-  },
-  "gen1recomp-modern-pc-ui": {
     "requirements": {
       "games": [
         "red",
@@ -3876,6 +3913,480 @@
         "gold",
         "silver",
         "crystal"
+      ]
+    }
+  },
+  "expanded-species": {
+    "requirements": {
+      "games": [
+        "gold",
+        "silver",
+        "crystal"
+      ]
+    }
+  },
+  "gen1remember": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "gender-display": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "gold-records": {
+    "requirements": {
+      "games": [
+        "gold",
+        "silver",
+        "crystal"
+      ]
+    }
+  },
+  "indigo-plateau-conference": {
+    "requirements": {
+      "games": [
+        "gold"
+      ]
+    }
+  },
+  "gen1recomp-mouse-adventure": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "pokebag-plus": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "st-spriteswapper": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "requires": [
+        "ST_SPRITESWAPPER"
+      ]
+    }
+  },
+  "infinite-hair-cuts": {
+    "requirements": {
+      "games": [
+        "gold",
+        "silver",
+        "crystal"
+      ]
+    }
+  },
+  "house-always-lose": {
+    "requirements": {
+      "games": [
+        "gold",
+        "silver",
+        "crystal"
+      ]
+    }
+  },
+  "battlica-gen1recomp-terrain-minimap": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "gen1recomp-beginner-mods": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "anglers-cove-aquarium": {
+    "requirements": {
+      "games": [
+        "gold",
+        "silver",
+        "crystal"
+      ]
+    }
+  },
+  "battle-factory-remix": {
+    "requirements": {
+      "games": [
+        "red",
+        "crystal"
+      ]
+    }
+  },
+  "bcr": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue"
+      ]
+    }
+  },
+  "character-sprite-selection": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "gen1recomp-dialogue-portraits": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "fast-nurse-joy": {
+    "requirements": {
+      "games": [
+        "gold",
+        "silver",
+        "crystal"
+      ]
+    }
+  },
+  "fast-pokemon-center-heal": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "versaocristal": {
+    "requirements": {
+      "games": [
+        "crystal"
+      ]
+    }
+  },
+  "infinite-tms": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "level-match-mod": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "mars-s-expanded-kanto": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue"
+      ]
+    }
+  },
+  "gen1recomp-music1-frlg": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "gen1recomp-music1-hgss": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "gen1recomp-music1-lgpe": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "gen1recomp-music2-hgss": {
+    "requirements": {
+      "games": [
+        "gold",
+        "silver",
+        "crystal"
+      ]
+    }
+  },
+  "mutant-monster-lab": {
+    "requirements": {
+      "games": [
+        "crystal"
+      ]
+    }
+  },
+  "porygonal-overworld-characters": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "safari-derby": {
+    "requirements": {
+      "games": [
+        "gold",
+        "silver",
+        "crystal"
+      ]
+    }
+  },
+  "gen1recomp-trainer-avatars": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "vanilla": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "nexhas28-gen1recomp-widescreen-battle-intro": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow",
+        "crystal"
+      ]
+    }
+  },
+  "voxelvr": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "requires": [
+        "DRAMATIC_SHAPE"
+      ]
+    }
+  },
+  "silver-sprites": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "gen1recomp-evolution-man": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "gen1recomp-nexus-ui": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "max-bag-capacity-gen2": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "hm-anywhere-gen2": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "s-j-s-aio-gen-2": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "imports": [
+        {
+          "name": "Pokémon Stadium 2 (USA) ROM",
+          "required": true
+        }
+      ]
+    }
+  },
+  "gen2recomp-indigo97": {
+    "requirements": {
+      "games": [
+        "gold",
+        "silver",
+        "crystal"
+      ]
+    }
+  },
+  "gen-1-recomp-modern-types-moves": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "gen1recomp-perfect-start": {
+    "requirements": {
+      "games": [
+        "gold",
+        "silver",
+        "crystal"
+      ]
+    }
+  },
+  "pokemon-anime-brawler": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "shedinja-expanded-bridge": {
+    "requirements": {
+      "requires": [
+        "shedinja"
+      ]
+    }
+  },
+  "gen1recomp-mod-crystal-251": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "imports": [
+        {
+          "name": "Pokemon Crystal (English UE) ROM",
+          "required": true
+        }
+      ]
+    }
+  },
+  "gen1recomp-mod-quality-of-life": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "gen1recomp-mod-roaming-events": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "gen1recomp-mod-shiny-indicators": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "permissions": [
+        "filesystem"
+      ]
+    }
+  },
+  "gen1recomp-italian-translation": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "gen1recomp-mod-stadium2-importer": {
+    "requirements": {
+      "imports": [
+        {
+          "name": "Pokemon Stadium 2 (USA) ROM",
+          "required": true
+        }
+      ],
+      "permissions": [
+        "compute"
       ]
     }
   }

@@ -29,7 +29,7 @@ import { createHash } from "node:crypto";
 import { readFile, writeFile } from "node:fs/promises";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
-import { importsFrom, requiresFrom } from "./enrich-catalog.mjs";
+import { importsFrom, requiresFrom, requirementsFrom, usesNetwork } from "./enrich-catalog.mjs";
 import { readManifest } from "./lib/archive.mjs";
 
 const RELEASES = new URL("../src/data/releases.json", import.meta.url);
@@ -72,7 +72,8 @@ async function publishedManifest(row) {
   // Not `file.pathname`: that is still percent-encoded, and `unzip` would be
   // handed a name with %20 in it for any asset whose author used a space.
   const manifest = await readManifest(fileURLToPath(file));
-  return manifest ? { manifest } : { why: `${name} has no readable manifest.json` };
+  return manifest ? { manifest, archive: fileURLToPath(file) }
+                  : { why: `${name} has no readable manifest.json` };
 }
 
 async function main() {
@@ -90,8 +91,18 @@ async function main() {
   let changed = 0;
 
   for (const row of rows) {
-    const { manifest, why } = await publishedManifest(row);
+    const { manifest, archive, why } = await publishedManifest(row);
     if (!manifest) { unread.push(`${row.id}: ${why}`); continue; }
+
+    // `permissions`, for the same reason and by the same rule as the full
+    // pass. Tier 2 rows never had it: 0 of 103 on Sep 19 2026, so a tier 2 mod
+    // that needs the network offered an install the sandbox then refused to
+    // honour, and one that patches engine code never said so.
+    const declaresNetwork = (manifest.permissions ?? []).includes("network");
+    // `requirementsFrom` answers null for a mod that needs nothing at all.
+    const permissions = requirementsFrom(manifest, {
+      usesNetwork: declaresNetwork ? await usesNetwork(archive) : null,
+    })?.permissions;
 
     const imports = importsFrom(manifest);
     const entry = (enrichment[row.id] ??= {});
@@ -112,7 +123,12 @@ async function main() {
     if (requires) requirements.requires = requires;
     else delete requirements.requires;
 
-    if (before !== JSON.stringify(imports) || beforeRequires !== JSON.stringify(requires)) changed += 1;
+    const beforePermissions = JSON.stringify(requirements.permissions ?? null);
+    if (permissions) requirements.permissions = permissions;
+    else delete requirements.permissions;
+
+    if (before !== JSON.stringify(imports ?? null) || beforeRequires !== JSON.stringify(requires ?? null)
+        || beforePermissions !== JSON.stringify(permissions ?? null)) changed += 1;
     if (imports) declaring.push({ id: row.id, imports });
     if (requires) depending.push({ id: row.id, requires });
   }

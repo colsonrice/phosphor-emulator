@@ -27,6 +27,7 @@ import { promisify } from "node:util";
 
 import { auditTargets, engineFacet, ENGINE_VERSIONS } from "./engine-family.mjs";
 import { importsFrom } from "./enrich-catalog.mjs";
+import { EXCLUDED } from "./lib/excluded.mjs";
 
 const run = promisify(execFile);
 
@@ -84,6 +85,14 @@ const REPO_LIST = value("--repos");
 /// survey and must not overwrite it.
 const REPORT_PATH = value("--report");
 const REPORT = new URL(REPORT_PATH ?? "../survey/report.json", import.meta.url);
+/// Drafts sit beside the report they were drafted from. They used to have one
+/// fixed path each, so a hand-fed run (which correctly leaves the standing
+/// report alone) still overwrote the standing DRAFTS, and with a list of repos
+/// that are all already catalogued it overwrote them with `[]`: 107 drafted
+/// rows gone, from a run whose whole point was not to disturb anything.
+const draftPath = (kind) => new URL(
+  REPORT_PATH ? REPORT_PATH.replace(/([^/]+?)(\.json)?$/, `draft-${kind}.$1.json`)
+              : `../survey/draft-${kind}.json`, import.meta.url);
 
 async function gh(path, jq) {
   const argv = ["api", "-X", "GET", path];
@@ -414,26 +423,6 @@ async function surveyRepo(name, hint) {
 ///
 /// Curation, not blocking: every one of these can still be sideloaded through
 /// the + button. What is refused here is Phosphor putting its name on it.
-const EXCLUDED = {
-  "gamecorner-033/Gen1Online":
-    "an in-app MMO with chat, PvP and a poker lounge — 4.7.1 would require content filtering, reporting and blocking abusive users, none of which Phosphor can offer for someone else's server",
-  "tebwritescode/gen1mmo":
-    "a shared public world with chat, carrying the same 4.7.1 duties",
-  "tebwritescode/savesync":
-    "uploads the player's save to a public server; save custody is the app's own responsibility and not a thing to hand off in a listing",
-  "mresnick67/Gen1ReComp-Pokewalker":
-    "needs a companion iOS app and a step feed the sandbox does not provide, so the listing would promise something that cannot work here",
-  "dburton95/crystal":
-    "a sprite replacement that asks for the network permission; harmless or not, a cosmetic mod wanting the network is not something to wave through",
-  "DavidSchuchert/gen1-voxel-dex":
-    "hard dependency on DRAMATIC_SHAPE, which the catalog does not carry — it would install and do nothing",
-  "masterwebx/gen1recomp-followers-ex":
-    "hard dependencies on PokePCFollowers_VoxelMerge and overworld_wild_spawns, neither of them catalogued",
-  "eduardocalafell/gen1recomp-player-sprite-flip":
-    "flips a sprite in the Dramatic Shape voxel battle specifically; with no Dramatic Shape in the catalog there is nothing for it to flip",
-  "randyadr/Gen1-Recomp-HD-Grass":
-    "replaces grass objects inside DramaticShapes; with no voxel mod catalogued there is nothing for it to decorate",
-};
 
 
 /// The engine versions Phosphor actually ships, from LoveCore/GEN1RECOMP_VERSION
@@ -700,7 +689,12 @@ function draftProjects(results, alreadyListed, takenIds) {
 
     const manifest = r.contents?.manifest ?? {};
     const channels = channelsFor(manifest);
-    const summary = (r.indexEntry?.summary ?? r.description ?? "").trim();
+    // The manifest's own description is the last resort and a good one: a
+    // repo with no GitHub description used to be dropped here outright, which
+    // lost eight clean mods on Sep 19 2026, Crystal 251 and the Stadium 2
+    // importer among them, for the want of a sentence they had written
+    // themselves, one file down.
+    const summary = (r.indexEntry?.summary ?? r.description ?? manifest.description ?? "").trim();
     if (!summary) continue;
 
     // Two people really do name their repositories the same thing: a link-out
@@ -792,7 +786,7 @@ async function main() {
   console.log(`\nWritten to survey/report.json`);
 
   const { rows, skipped } = draftRows(results);
-  await writeFile(new URL("../survey/draft-releases.json", import.meta.url),
+  await writeFile(draftPath("releases"),
                   JSON.stringify(rows, null, 2) + "\n");
   console.log(`\n  ${rows.length} rows drafted to survey/draft-releases.json`);
   for (const s of skipped) console.log(`  held back  ${s.repo} — ${s.why}`);
@@ -829,7 +823,7 @@ async function main() {
   for (const row of rows) takenIds.add(row.id);
 
   const projects = draftProjects(results, listed, takenIds);
-  await writeFile(new URL("../survey/draft-projects.json", import.meta.url),
+  await writeFile(draftPath("projects"),
                   JSON.stringify(projects, null, 2) + "\n");
   console.log(`  ${projects.length} link-outs drafted to survey/draft-projects.json`);
 

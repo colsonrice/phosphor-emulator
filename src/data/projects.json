@@ -595,7 +595,7 @@
     "reviewStatus": "permission-needed",
     "directSource": {
       "permission": "none-direct-source",
-      "fileUrl": "https://github.com/ShaneMcGovernIE/critical_capture/releases/download/v0.1.1/critical_capture-0.1.1.zip",
+      "fileUrl": "https://github.com/Nexhas28/critical_capture/releases/download/v0.1.1/critical_capture-0.1.1.zip",
       "sha256": "32c5a04b65fb4d8b91a6c521f3bdf91897685e00cd13f6be3ac6562f518acc2d",
       "fileSizeBytes": 13373,
       "version": "0.1.1",
@@ -769,7 +769,19 @@
     "summary": "Ride Gen 1 Pokémon on land, water and in the air with Battle Art Voxel Fork, PokéPC sprites, story-aware progression and Wild Skies integration.",
     "homepageUrl": "https://github.com/burgerslayer7/dramatic-sky-ride",
     "releasesUrl": "https://github.com/burgerslayer7/dramatic-sky-ride/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/burgerslayer7/dramatic-sky-ride/releases/download/v0.2.18/dramatic-sky-ride-0.2.18.zip",
+      "sha256": "c8d4e0e815a6177b93adbe697429c9fe73e9543a8695a8b652036e446cb96cdb",
+      "fileSizeBytes": 266956,
+      "version": "0.2.18",
+      "releasedAt": "2026-08-16T17:41:38Z",
+      "manifestPath": "manifest.json",
+      "modId": "DRAMATIC_SKY_RIDE",
+      "gameVersion": "0.0.0-dev || >=0.1.69 <2.0.0",
+      "surveyedRelease": "v0.2.18"
+    }
   },
   {
     "id": "gen1recomp-dutch-generator",
@@ -841,7 +853,7 @@
     "reviewStatus": "permission-needed",
     "directSource": {
       "permission": "none-direct-source",
-      "fileUrl": "https://github.com/ShaneMcGovernIE/exp_share/releases/download/v0.1.10/exp_share-0.1.10.zip",
+      "fileUrl": "https://github.com/Nexhas28/exp_share/releases/download/v0.1.10/exp_share-0.1.10.zip",
       "sha256": "7a22e8d143b27b857773db350d969f3f5b31f0e2c813cd82d4181ef2c3d85f86",
       "fileSizeBytes": 20065,
       "version": "0.1.10",
@@ -868,15 +880,15 @@
     "reviewStatus": "permission-needed",
     "directSource": {
       "permission": "none-direct-source",
-      "fileUrl": "https://github.com/shanehudson-gen1recomp-mods/free_fly/releases/download/v1.8.0/free_fly-1.8.0.zip",
-      "sha256": "63ab8c4248288ddf235372aee1017873502b352a3e889f0407b267523c72fb2f",
-      "fileSizeBytes": 93089,
-      "version": "1.8.0",
-      "releasedAt": "2026-08-19T02:15:20Z",
+      "fileUrl": "https://github.com/shanehudson-gen1recomp-mods/free_fly/releases/download/v1.8.1/free_fly-1.8.1.zip",
+      "sha256": "f23bf8088914ce308dfc2494d163a48adf571858b0d2f3c6523f43b074df7ab9",
+      "fileSizeBytes": 93763,
+      "version": "1.8.1",
+      "releasedAt": "2026-09-13T19:27:48Z",
       "manifestPath": "manifest.json",
       "modId": "free_fly",
       "gameVersion": "0.0.0-dev || >=0.1.0 <2.0.0",
-      "surveyedRelease": "v1.8.0"
+      "surveyedRelease": "v1.8.1"
     }
   },
   {
@@ -973,7 +985,19 @@
     "summary": "Skip Oak's intro: pick your name, starter (starters + legendaries), shiny or not, and level, then jump straight into the overworld.",
     "homepageUrl": "https://github.com/hdbreaker/gen1recomp-mod-intro_bypass",
     "releasesUrl": "https://github.com/hdbreaker/gen1recomp-mod-intro_bypass/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/hdbreaker/gen1recomp-mod-intro_bypass/releases/download/v1.0.0/intro_bypass-1.0.0.zip",
+      "sha256": "dffa2bd271dcc6a89d8ef21c8b37a6d4b5eaaf7f5270f8207838a2153835d3df",
+      "fileSizeBytes": 5295,
+      "version": "1.0.0",
+      "releasedAt": "2026-08-09T16:40:04Z",
+      "manifestPath": "manifest.json",
+      "modId": "intro_bypass",
+      "gameVersion": ">=0.0.0-dev <1.0.0",
+      "surveyedRelease": "v1.0.0"
+    }
   },
   {
     "id": "jp-green-poketto-monsuta-midori",
@@ -1030,7 +1054,19 @@
     "summary": "Adds HM06 DIVE and Emerald-style underwater exploration with linked Kanto seafloor maps and Tiled-authored dive zones.",
     "homepageUrl": "https://github.com/burgerslayer7/Kanto-gen1-dive",
     "releasesUrl": "https://github.com/burgerslayer7/Kanto-gen1-dive/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/burgerslayer7/Kanto-gen1-dive/releases/download/v1.6.1/Kanto-Dive-1.6.1-Launcher-Ready.zip",
+      "sha256": "f472a75a8db75a1c742da910832b1b9a880e1cbacbe1468e6437c40f7f3c23e5",
+      "fileSizeBytes": 82864,
+      "version": "1.6.1",
+      "releasedAt": "2026-08-11T14:53:58Z",
+      "manifestPath": "manifest.json",
+      "modId": "kanto_dive",
+      "gameVersion": ">=0.0.0-0 <2.0.0",
+      "surveyedRelease": "v1.6.1"
+    }
   },
   {
     "id": "kanto-dynamic-weather",
@@ -1102,7 +1138,7 @@
     "reviewStatus": "permission-needed",
     "directSource": {
       "permission": "none-direct-source",
-      "fileUrl": "https://github.com/ShaneMcGovernIE/mods_hotkeys/releases/download/v0.1.10/mods_hotkeys-0.1.10.zip",
+      "fileUrl": "https://github.com/Nexhas28/mods_hotkeys/releases/download/v0.1.10/mods_hotkeys-0.1.10.zip",
       "sha256": "2c85a82100902d6422efefdd4f4a4f7fe624663655e5bc69560c0e264d3a0524",
       "fileSizeBytes": 30463,
       "version": "0.1.10",
@@ -1129,15 +1165,15 @@
     "reviewStatus": "permission-needed",
     "directSource": {
       "permission": "none-direct-source",
-      "fileUrl": "https://github.com/ShaneMcGovernIE/relearn_moves/releases/download/v1.5.1/relearn_moves-1.5.1.zip",
-      "sha256": "a856f46700e98ba567393671ac67121b67673f84348d8f996eaf1a7137414481",
-      "fileSizeBytes": 16929,
-      "version": "1.5.1",
-      "releasedAt": "2026-08-21T17:07:02Z",
+      "fileUrl": "https://github.com/Nexhas28/relearn_moves/releases/download/v1.5.5/relearn_moves-1.5.5.zip",
+      "sha256": "e427f25722ccb65b22d22b826fd927e0615928a7f671a8ae5cbfc3667057171b",
+      "fileSizeBytes": 17764,
+      "version": "1.5.5",
+      "releasedAt": "2026-09-04T12:42:38Z",
       "manifestPath": "manifest.json",
       "modId": "relearn_moves",
       "gameVersion": ">=0.0.0-0 <2.0.0",
-      "surveyedRelease": "v1.5.1"
+      "surveyedRelease": "v1.5.5"
     }
   },
   {
@@ -1171,15 +1207,15 @@
     "reviewStatus": "permission-needed",
     "directSource": {
       "permission": "none-direct-source",
-      "fileUrl": "https://github.com/ddagent/gen1recomp-npc-bubbles/releases/download/v2.3.11/npc_bubbles-2.3.11.zip",
-      "sha256": "0be449ef95f38799181e25487f67af377bca3a404b98a08f064e0572f0ff7e7b",
-      "fileSizeBytes": 66175,
-      "version": "2.3.11",
-      "releasedAt": "2026-08-17T12:18:53Z",
+      "fileUrl": "https://github.com/ddagent/gen1recomp-npc-bubbles/releases/download/v2.3.12/npc_bubbles-2.3.12.zip",
+      "sha256": "8c1d3beb08d609ae93cf6154efa05ba4114176ed0c1069325631d91f25aad0fd",
+      "fileSizeBytes": 66454,
+      "version": "2.3.12",
+      "releasedAt": "2026-08-23T10:09:18Z",
       "manifestPath": "manifest.json",
       "modId": "npc_bubbles",
       "gameVersion": ">=0.0.0-0 <2.0.0",
-      "surveyedRelease": "v2.3.11"
+      "surveyedRelease": "v2.3.12"
     }
   },
   {
@@ -1280,15 +1316,15 @@
     "reviewStatus": "permission-needed",
     "directSource": {
       "permission": "none-direct-source",
-      "fileUrl": "https://github.com/ShaneMcGovernIE/potato_voxel/releases/download/v1.8.3/potato_voxel-1.8.3.zip",
-      "sha256": "d68cf6c61a995ff3edb3edc5d2846bd6a28c7ff800f17496764e8620d7b2606a",
-      "fileSizeBytes": 1828530,
-      "version": "1.8.3",
-      "releasedAt": "2026-08-20T18:15:21Z",
+      "fileUrl": "https://github.com/Nexhas28/potato_voxel/releases/download/v1.9.6/potato_voxel-1.9.6.zip",
+      "sha256": "f57c83e24fd8252fdc936bc7420ea2bc0439ec253d8a0f9ba11ffa9a06ea9846",
+      "fileSizeBytes": 2000383,
+      "version": "1.9.6",
+      "releasedAt": "2026-08-26T14:12:56Z",
       "manifestPath": "manifest.json",
       "modId": "potato_voxel",
       "gameVersion": "0.0.0-dev || >=0.1.37 <2.0.0",
-      "surveyedRelease": "v1.8.3"
+      "surveyedRelease": "v1.9.6"
     }
   },
   {
@@ -1307,15 +1343,15 @@
     "reviewStatus": "permission-needed",
     "directSource": {
       "permission": "none-direct-source",
-      "fileUrl": "https://github.com/ShaneMcGovernIE/qol_toggles/releases/download/v1.29.0/qol_toggles-1.29.0.zip",
-      "sha256": "a9c5f873d420f5b10d8ba3f3f018e672e2bee3a1247bbe77cd305dd447e03b47",
-      "fileSizeBytes": 147571,
-      "version": "1.29.0",
-      "releasedAt": "2026-08-20T15:33:21Z",
+      "fileUrl": "https://github.com/Nexhas28/qol_toggles/releases/download/v1.31.0/qol_toggles-1.31.0.zip",
+      "sha256": "f4e95a054f8b779b6244484458d373c84a8ec2f04df83878bdeec8e0a9d6a3b5",
+      "fileSizeBytes": 146955,
+      "version": "1.31.0",
+      "releasedAt": "2026-09-12T18:07:41Z",
       "manifestPath": "manifest.json",
       "modId": "qol_toggles",
       "gameVersion": null,
-      "surveyedRelease": "v1.29.0"
+      "surveyedRelease": "v1.31.0"
     }
   },
   {
@@ -1412,19 +1448,7 @@
     "summary": "Play Kanto with friends: shared overworld presence, nameplates and chat, parties of two, co-op 2-on-2 battles, ranked PVP, and trade or battle requests from anywhere.",
     "homepageUrl": "https://github.com/alamops/RBYMMOMod",
     "releasesUrl": "https://github.com/alamops/RBYMMOMod/releases",
-    "reviewStatus": "permission-needed",
-    "directSource": {
-      "permission": "none-direct-source",
-      "fileUrl": "https://github.com/alamops/RBYMMOMod/releases/download/v1.1.0/rby_mmo-1.1.0.zip",
-      "sha256": "23012374b08a5aef3d298ba5836402726e1075b17f1f59de30d27a1d9d95713c",
-      "fileSizeBytes": 2280967,
-      "version": "1.1.0",
-      "releasedAt": "2026-08-21T03:59:18Z",
-      "manifestPath": "manifest.json",
-      "modId": "rby_mmo",
-      "gameVersion": ">=0.1.86 <2.0.0",
-      "surveyedRelease": "v1.1.0"
-    }
+    "reviewStatus": "permission-needed"
   },
   {
     "id": "recomp-cartographer",
@@ -1565,7 +1589,7 @@
     "reviewStatus": "permission-needed",
     "directSource": {
       "permission": "none-direct-source",
-      "fileUrl": "https://github.com/ShaneMcGovernIE/surround-audio/releases/download/v1.7.0/surround_audio-1.7.0.zip",
+      "fileUrl": "https://github.com/Nexhas28/surround-audio/releases/download/v1.7.0/surround_audio-1.7.0.zip",
       "sha256": "58f8747a0cd029efc074e440334f77bb347ece246b68c7fe81ee8679dc15a88c",
       "fileSizeBytes": 16303,
       "version": "1.7.0",
@@ -1592,15 +1616,15 @@
     "reviewStatus": "permission-needed",
     "directSource": {
       "permission": "none-direct-source",
-      "fileUrl": "https://github.com/BrenoBertucci/Terrarium/releases/download/v1.26.0-mobile/TERRARIUM-1.26.0-mobile.zip",
-      "sha256": "68421ef9a1abeb4d020ba06a31308010e9dfc1a9e394e9ab80bd66c4e467e18a",
-      "fileSizeBytes": 40559110,
-      "version": "1.26.0-mobile",
-      "releasedAt": "2026-08-18T19:15:27Z",
+      "fileUrl": "https://github.com/BrenoBertucci/Terrarium/releases/download/v1.30.1/TERRARIUM-1.30.1.zip",
+      "sha256": "c13769b3278934da7060295e23a6748d24d92dea2f7c6f643e6c0b0ae5af91f0",
+      "fileSizeBytes": 44023567,
+      "version": "1.30.1",
+      "releasedAt": "2026-09-06T21:03:41Z",
       "manifestPath": "TERRARIUM/manifest.json",
       "modId": "TERRARIUM",
       "gameVersion": "0.0.0-dev || >=0.1.37 <2.0.0",
-      "surveyedRelease": "v1.26.0-mobile"
+      "surveyedRelease": "v1.30.1"
     }
   },
   {
@@ -1619,15 +1643,15 @@
     "reviewStatus": "permission-needed",
     "directSource": {
       "permission": "none-direct-source",
-      "fileUrl": "https://github.com/jherediagu/traduccion_es/releases/download/v0.1.0/traduccion_es-0.1.0.zip",
-      "sha256": "d52c30cafcd23f3e6aed6defa27ac5d40cc453e3ec17609d4f770c2b6b96112a",
-      "fileSizeBytes": 67259,
-      "version": "0.1.0",
-      "releasedAt": "2026-08-07T18:58:18Z",
+      "fileUrl": "https://github.com/jherediagu/traduccion_es/releases/download/v0.2.0/traduccion_es-0.2.0.zip",
+      "sha256": "64df29088ce77f4c082fafa04e93951138ac9e51cc39faa62f29aea0b4f1778d",
+      "fileSizeBytes": 130360,
+      "version": "0.2.0",
+      "releasedAt": "2026-09-11T10:06:00Z",
       "manifestPath": "manifest.json",
       "modId": "traduccion_es",
       "gameVersion": ">=0.0.0-dev <1.0.0",
-      "surveyedRelease": "v0.1.0"
+      "surveyedRelease": "v0.2.0"
     }
   },
   {
@@ -1643,7 +1667,19 @@
     "summary": "Complète la traduction française de translation-fr : 151 catégories du Pokédex, 109 textes moteur et 11 noms manquants. Nécessite translation-fr.",
     "homepageUrl": "https://github.com/antoniman31/trad-fr-extended",
     "releasesUrl": "https://github.com/antoniman31/trad-fr-extended/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/antoniman31/trad-fr-extended/releases/download/v0.2.0/trad-fr-extended-0.2.0.zip",
+      "sha256": "84b2b77d32d35d25707f20e430cbe6c4464c211126f0375e25a74f07a0690216",
+      "fileSizeBytes": 5936,
+      "version": "0.2.0",
+      "releasedAt": "2026-08-09T19:38:46Z",
+      "manifestPath": "manifest.json",
+      "modId": "trad-fr-extended",
+      "gameVersion": ">=0.1.66 <1.0.0",
+      "surveyedRelease": "v0.2.0"
+    }
   },
   {
     "id": "pokemon-gen1-recomp-mod-frqc",
@@ -1688,15 +1724,15 @@
     "reviewStatus": "permission-needed",
     "directSource": {
       "permission": "none-direct-source",
-      "fileUrl": "https://github.com/ShaneMcGovernIE/trainer_rematch/releases/download/v0.4.4/trainer_rematch-0.4.4.zip",
-      "sha256": "37181acc2af590bdc7b2de44d9467e8430ae0d01aac160c0059635f7a6b8d5e9",
-      "fileSizeBytes": 10914,
-      "version": "0.4.4",
-      "releasedAt": "2026-08-05T20:58:15Z",
+      "fileUrl": "https://github.com/Nexhas28/trainer_rematch/releases/download/v0.5.4/trainer_rematch-0.5.4.zip",
+      "sha256": "ced809e2c4cefacee9462e185c245ffe01aad5b937e8c801b0cf00abfb1b36a5",
+      "fileSizeBytes": 19803,
+      "version": "0.5.4",
+      "releasedAt": "2026-09-12T18:04:41Z",
       "manifestPath": "manifest.json",
       "modId": "trainer_rematch",
       "gameVersion": "0.0.0-dev || >=0.1.17 <1.0.0",
-      "surveyedRelease": "v0.4.4"
+      "surveyedRelease": "v0.5.4"
     }
   },
   {
@@ -1742,15 +1778,15 @@
     "reviewStatus": "permission-needed",
     "directSource": {
       "permission": "none-direct-source",
-      "fileUrl": "https://github.com/ShaneMcGovernIE/useful-bag/releases/download/v2.4.1/useful_bag-2.4.1.zip",
-      "sha256": "4d0db932db1c3ebe91808091e7ee9167d1da9e6710d41f218214d9a89b7902dd",
-      "fileSizeBytes": 20528,
-      "version": "2.4.1",
-      "releasedAt": "2026-08-06T00:05:46Z",
+      "fileUrl": "https://github.com/Nexhas28/useful-bag/releases/download/v2.6.4/useful_bag-2.6.4.zip",
+      "sha256": "07c8290071dedcb9ee9dbf50a418e3227835b259c2bc6add086ea6f059f77a53",
+      "fileSizeBytes": 33183,
+      "version": "2.6.4",
+      "releasedAt": "2026-09-11T09:37:16Z",
       "manifestPath": "manifest.json",
       "modId": "useful_bag",
       "gameVersion": ">=0.0.0-0 <2.0.0",
-      "surveyedRelease": "v2.4.1"
+      "surveyedRelease": "v2.6.4"
     }
   },
   {
@@ -1769,7 +1805,7 @@
     "reviewStatus": "permission-needed",
     "directSource": {
       "permission": "none-direct-source",
-      "fileUrl": "https://github.com/ShaneMcGovernIE/useful_dex/releases/download/v1.3.0/useful_dex-1.3.0.zip",
+      "fileUrl": "https://github.com/Nexhas28/useful_dex/releases/download/v1.3.0/useful_dex-1.3.0.zip",
       "sha256": "45153bda4099e23dcddcbf0ef111986a09cfc0b547b54451736be2020c38e7c1",
       "fileSizeBytes": 14140,
       "version": "1.3.0",
@@ -1796,15 +1832,15 @@
     "reviewStatus": "permission-needed",
     "directSource": {
       "permission": "none-direct-source",
-      "fileUrl": "https://github.com/ShaneMcGovernIE/useful-marts/releases/download/v1.0.1/useful_marts-1.0.1.zip",
-      "sha256": "c997969feea804a884a9e6163a2f7f4d5af342205b96fa05d3478792e040643d",
-      "fileSizeBytes": 6585,
-      "version": "1.0.1",
-      "releasedAt": "2026-08-05T03:33:27Z",
+      "fileUrl": "https://github.com/Nexhas28/useful-marts/releases/download/v1.1.0/useful_marts-1.1.0.zip",
+      "sha256": "8e677c5140319676b19a6204fed8611229f91e474d686d932789dddb783dc2e6",
+      "fileSizeBytes": 7827,
+      "version": "1.1.0",
+      "releasedAt": "2026-09-13T21:02:11Z",
       "manifestPath": "manifest.json",
       "modId": "useful_marts",
       "gameVersion": ">=0.0.0-0 <2.0.0",
-      "surveyedRelease": "v1.0.1"
+      "surveyedRelease": "v1.1.0"
     }
   },
   {
@@ -1823,7 +1859,7 @@
     "reviewStatus": "permission-needed",
     "directSource": {
       "permission": "none-direct-source",
-      "fileUrl": "https://github.com/ShaneMcGovernIE/useful-move-info/releases/download/v1.4.0/useful_move_info-1.4.0.zip",
+      "fileUrl": "https://github.com/Nexhas28/useful-move-info/releases/download/v1.4.0/useful_move_info-1.4.0.zip",
       "sha256": "33f25d832de386a47113c82d5744c1cf2b6b6688cfb719b5ec5e3707159e4340",
       "fileSizeBytes": 12956,
       "version": "1.4.0",
@@ -1904,15 +1940,15 @@
     "reviewStatus": "permission-needed",
     "directSource": {
       "permission": "none-direct-source",
-      "fileUrl": "https://github.com/ShaneMcGovernIE/gen1recomp-widescreen-battle-intro/releases/download/v1.5.0/widescreen_battle_intro-1.5.0.zip",
-      "sha256": "07c91135c96d205d4c07532c528d7479bc9e77b4c478c0c9b8c017ee7dad0cdd",
-      "fileSizeBytes": 13068,
-      "version": "1.5.0",
-      "releasedAt": "2026-08-06T17:24:07Z",
+      "fileUrl": "https://github.com/Nexhas28/gen1recomp-widescreen-battle-intro/releases/download/v1.6.0/widescreen_battle_intro-1.6.0.zip",
+      "sha256": "dc61081c9d4331b2e9004f65e0753a47a4b52c2bf9624179bbe1249d99048c5e",
+      "fileSizeBytes": 13762,
+      "version": "1.6.0",
+      "releasedAt": "2026-08-29T20:58:38Z",
       "manifestPath": "manifest.json",
       "modId": "widescreen_battle_intro",
       "gameVersion": null,
-      "surveyedRelease": "v1.5.0"
+      "surveyedRelease": "v1.6.0"
     }
   },
   {
@@ -1931,15 +1967,15 @@
     "reviewStatus": "permission-needed",
     "directSource": {
       "permission": "none-direct-source",
-      "fileUrl": "https://github.com/shanehudson-gen1recomp-mods/wild_skies/releases/download/v1.12.0/wild_skies-1.12.0.zip",
-      "sha256": "9932561e0d2cc119fc94c72df40f93bb15c905868a4d0cd71b42f08f8f9f6d92",
-      "fileSizeBytes": 104971,
-      "version": "1.12.0",
-      "releasedAt": "2026-08-19T02:16:29Z",
+      "fileUrl": "https://github.com/shanehudson-gen1recomp-mods/wild_skies/releases/download/v1.12.1/wild_skies-1.12.1.zip",
+      "sha256": "736e94fd19ba816cf5f1bf1b479f99f4b1ea3c8adefb295038f9d57dd0d10fe7",
+      "fileSizeBytes": 106906,
+      "version": "1.12.1",
+      "releasedAt": "2026-09-13T19:27:44Z",
       "manifestPath": "manifest.json",
       "modId": "wild_skies",
       "gameVersion": "0.0.0-dev || >=0.1.0 <2.0.0",
-      "surveyedRelease": "v1.12.0"
+      "surveyedRelease": "v1.12.1"
     }
   },
   {
@@ -1985,15 +2021,15 @@
     "reviewStatus": "permission-needed",
     "directSource": {
       "permission": "none-direct-source",
-      "fileUrl": "https://github.com/ShaneMcGovernIE/yellow_legacy_changes/releases/download/v1.10.4/yellow_legacy_changes-1.10.4.zip",
-      "sha256": "7c91e7aee6adbd90b489609a7a71ba809f951d2334ce39d2f51dc99cb1926b47",
-      "fileSizeBytes": 73089,
-      "version": "1.10.4",
-      "releasedAt": "2026-08-19T09:43:18Z",
+      "fileUrl": "https://github.com/Nexhas28/yellow_legacy_changes/releases/download/v1.12.0/yellow_legacy_changes-1.12.0.zip",
+      "sha256": "fb0e3cf8efc5ecec7f9694c16f23cd83538eda752321b57235e9b683f6cc8124",
+      "fileSizeBytes": 78977,
+      "version": "1.12.0",
+      "releasedAt": "2026-09-17T11:32:33Z",
       "manifestPath": "manifest.json",
       "modId": "yellow_legacy_changes",
       "gameVersion": ">=0.0.0-0 <2.0.0",
-      "surveyedRelease": "v1.10.4"
+      "surveyedRelease": "v1.12.0"
     }
   },
   {
@@ -2012,15 +2048,15 @@
     "reviewStatus": "permission-needed",
     "directSource": {
       "permission": "none-direct-source",
-      "fileUrl": "https://github.com/artyrambles/DRAMALESS_SHAPE/releases/download/v2.0.2/DRAMALESS_SHAPE-2.0.2.zip",
-      "sha256": "0e5223b6e7bc74cff0773c3f3c72795b377f56370d3fdd871d3a6447311dfbae",
-      "fileSizeBytes": 547472,
-      "version": "2.0.2",
-      "releasedAt": "2026-08-15T14:22:01Z",
+      "fileUrl": "https://github.com/artyrambles/DRAMALESS_SHAPE/releases/download/v2.0.4/DRAMALESS_SHAPE-2.0.4.zip",
+      "sha256": "0e074028cfca781385d50d8b4e814614e6dc62a26a774277e0a75d2cc5ce7341",
+      "fileSizeBytes": 601218,
+      "version": "2.0.4",
+      "releasedAt": "2026-09-01T11:58:32Z",
       "manifestPath": "manifest.json",
       "modId": "DRAMALESS_SHAPE",
       "gameVersion": "0.0.0-dev || >=0.1.86 <2.0.0",
-      "surveyedRelease": "v2.0.2"
+      "surveyedRelease": "v2.0.4"
     }
   },
   {
@@ -2039,15 +2075,15 @@
     "reviewStatus": "permission-needed",
     "directSource": {
       "permission": "none-direct-source",
-      "fileUrl": "https://github.com/HighDrexler/Gen-3-inspired-UI-overhaul-for-Gen1Recomp/releases/download/v1.4.1/gen3_battle_ui-1.4.1.zip",
-      "sha256": "b9689897f2dd5f9ddf432ac82ccc8e933631ce17a9e4c9ace303ddacc6f596a8",
-      "fileSizeBytes": 103632,
-      "version": "1.4.1",
-      "releasedAt": "2026-08-12T18:20:40Z",
+      "fileUrl": "https://github.com/HighDrexler/Gen-3-inspired-UI-overhaul-for-Gen1Recomp/releases/download/v3.0.0/Gen-3-inspired-UI-overhaul-v3.0.0.zip",
+      "sha256": "86ba267ade7d72d31475c48928634e8749244d83122a53e31a7709133c2f2224",
+      "fileSizeBytes": 238887,
+      "version": "3.0.0",
+      "releasedAt": "2026-09-06T00:49:38Z",
       "manifestPath": "manifest.json",
       "modId": "gen3_battle_ui",
       "gameVersion": null,
-      "surveyedRelease": "v1.4.1"
+      "surveyedRelease": "v3.0.0"
     }
   },
   {
@@ -2066,15 +2102,15 @@
     "reviewStatus": "permission-needed",
     "directSource": {
       "permission": "none-direct-source",
-      "fileUrl": "https://github.com/goofwear/gameshark/releases/download/0.7.5/GameShark-0.7.5.zip",
-      "sha256": "93abfe8d3cd58bf7223607d6838646315e3e0fb89678096f2ca7c40d8c9bc236",
-      "fileSizeBytes": 31309,
-      "version": "0.7.5",
-      "releasedAt": "2026-08-21T13:41:08Z",
+      "fileUrl": "https://github.com/goofwear/gameshark/releases/download/0.7.10/GameShark-0.7.10.zip",
+      "sha256": "e6226947dd4406cfbac14bbb757aa8d68cab70743df1ace5c4e85b355e09a969",
+      "fileSizeBytes": 32555,
+      "version": "0.7.10",
+      "releasedAt": "2026-09-15T17:50:00Z",
       "manifestPath": "GameShark/manifest.json",
       "modId": "GameShark",
       "gameVersion": ">=0.1.79 || =0.0.0-dev",
-      "surveyedRelease": "0.7.5"
+      "surveyedRelease": "0.7.10"
     }
   },
   {
@@ -2093,15 +2129,15 @@
     "reviewStatus": "permission-needed",
     "directSource": {
       "permission": "none-direct-source",
-      "fileUrl": "https://github.com/VRM97/pokemon-bank/releases/download/v1.11.0/pokemon-bank-1.11.0.zip",
-      "sha256": "de27c0f365d95efd0b40c32a0e1f89531648d60470959536f7f0f2f64a987451",
-      "fileSizeBytes": 87249,
-      "version": "1.11.0",
-      "releasedAt": "2026-08-19T04:02:03Z",
-      "manifestPath": "manifest.json",
+      "fileUrl": "https://github.com/VRM97/pokemon-bank/releases/download/v2.1.1/pokemon-bank-2.1.1.zip",
+      "sha256": "6765881552859d80f4fa5a42a2283be14839c9753067c6844d0149e4e94daff4",
+      "fileSizeBytes": 109202,
+      "version": "2.1.1",
+      "releasedAt": "2026-09-13T09:58:01Z",
+      "manifestPath": "pokemon-bank-master/manifest.json",
       "modId": "vrm_pokemon_bank",
       "gameVersion": ">=0.1.86-0 <2.0.0",
-      "surveyedRelease": "v1.11.0"
+      "surveyedRelease": "v2.1.1"
     }
   },
   {
@@ -2201,15 +2237,15 @@
     "reviewStatus": "permission-needed",
     "directSource": {
       "permission": "none-direct-source",
-      "fileUrl": "https://github.com/distilledorion-sketch/crystal_animated_sprites_with_shiny_visuals/releases/download/v2.0.2/crystal_animated_sprites_with_shiny_visuals_v2.0.2.zip",
-      "sha256": "59b6204e66dc14c32b3035fea115236080dfc33ec86f928f04ac6974a1aca86c",
-      "fileSizeBytes": 6044763,
-      "version": "2.0.2",
-      "releasedAt": "2026-08-20T11:41:50Z",
+      "fileUrl": "https://github.com/distilledorion-sketch/crystal_animated_sprites_with_shiny_visuals/releases/download/v2.0.3/crystal_animated_sprites_with_shiny_visuals_v2.0.3.zip",
+      "sha256": "3d2874917f03a42cbf96d0d7e1b5c19bde09a5405fe12559ac241af017155689",
+      "fileSizeBytes": 6050251,
+      "version": "2.0.3",
+      "releasedAt": "2026-09-12T12:02:45Z",
       "manifestPath": "manifest.json",
       "modId": "crystal_animated_sprites_with_shiny_visuals",
       "gameVersion": ">=0.1.33 <2.0.0",
-      "surveyedRelease": "v2.0.2"
+      "surveyedRelease": "v2.0.3"
     }
   },
   {
@@ -2417,15 +2453,15 @@
     "reviewStatus": "permission-needed",
     "directSource": {
       "permission": "none-direct-source",
-      "fileUrl": "https://github.com/sanjinpepic/gen1recomp-national-dex/releases/download/v0.27.1/national_dex-0.27.1.zip",
-      "sha256": "b13e673c890c3b19cae03ee8a3f29616120f03ce36b20abcd14f7775052b4ac3",
-      "fileSizeBytes": 1552620,
-      "version": "0.27.1",
-      "releasedAt": "2026-08-16T15:48:06Z",
+      "fileUrl": "https://github.com/sanjinpepic/gen1recomp-national-dex/releases/download/v0.35.5/national_dex-0.35.5.zip",
+      "sha256": "c5b550e83774479714cbba5d697f5c5342f37240e8bd16bb0bfdb4a2577406e5",
+      "fileSizeBytes": 1820254,
+      "version": "0.35.5",
+      "releasedAt": "2026-08-29T17:25:07Z",
       "manifestPath": "national_dex/manifest.json",
       "modId": "national_dex",
       "gameVersion": ">=0.0.0-0 <2.0.0",
-      "surveyedRelease": "v0.27.1"
+      "surveyedRelease": "v0.35.5"
     }
   },
   {
@@ -2741,15 +2777,15 @@
     "reviewStatus": "permission-needed",
     "directSource": {
       "permission": "none-direct-source",
-      "fileUrl": "https://github.com/juancdominici/wide-menus/releases/download/V0.3.0/wide-menus-V0.3.0.zip",
-      "sha256": "4ccbc78ffa09490279fdadf2e46f9ab4f83f50390f3a40bce180c0b0af704062",
-      "fileSizeBytes": 22000,
-      "version": "V0.3.0",
-      "releasedAt": "2026-08-20T00:59:42Z",
+      "fileUrl": "https://github.com/juancdominici/wide-menus/releases/download/V0.4.0/wide-menus-V0.4.0.zip",
+      "sha256": "cb5539df76c963626b0e2c7c76941614eb85e9ae07b7ffadf51729c0b573a11f",
+      "fileSizeBytes": 228265,
+      "version": "V0.4.0",
+      "releasedAt": "2026-09-11T00:17:48Z",
       "manifestPath": "manifest.json",
       "modId": "wide-menus",
       "gameVersion": ">=0.0.0-0 <2.0.0",
-      "surveyedRelease": "V0.3.0"
+      "surveyedRelease": "V0.4.0"
     }
   },
   {
@@ -2819,7 +2855,19 @@
     "summary": "Traduzione italiana fan-made per Gen1Recomp — Red, Blue e Yellow. Feedback benvenuti!",
     "homepageUrl": "https://github.com/klokkett90/gen1recomp-italian",
     "releasesUrl": "https://github.com/klokkett90/gen1recomp-italian/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/klokkett90/gen1recomp-italian/releases/download/v0.6.0/translation-it-0.6.0.zip",
+      "sha256": "bc63c6e032ed4583b4bf664d3533bbd02aa8b19d7e19701a9077cacae852ef90",
+      "fileSizeBytes": 1060864,
+      "version": "0.6.0",
+      "releasedAt": "2026-08-12T13:29:54Z",
+      "manifestPath": "manifest.json",
+      "modId": "translation-it",
+      "gameVersion": ">=0.0.0-dev <1.0.0",
+      "surveyedRelease": "v0.6.0"
+    }
   },
   {
     "id": "evolve-in-battle",
@@ -3000,7 +3048,19 @@
     "summary": "Gen 2–3 for Red/Blue on gen1recomp. Same Kanto story, more Pokémon, abilities, held items, a berry farm, DexNav, and Qo, all built to feel like Gen 1 did it.",
     "homepageUrl": "https://github.com/1Jamie/Kanto-Reforged",
     "releasesUrl": "https://github.com/1Jamie/Kanto-Reforged/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/1Jamie/Kanto-Reforged/releases/download/v1.7.10/Kanto-Reforged.zip",
+      "sha256": "356210b94d996f710c61ca7ba622f150d192966ea59f97ef7da4b9899f17d46b",
+      "fileSizeBytes": 10748739,
+      "version": "1.3.0",
+      "releasedAt": "2026-09-19T06:19:36Z",
+      "manifestPath": "Kanto-Reforged/manifest.json",
+      "modId": "Kanto-Reforged",
+      "gameVersion": ">=0.1.84 <1.0.0",
+      "surveyedRelease": "v1.7.10"
+    }
   },
   {
     "id": "gen1recomp-better-battles",
@@ -3019,7 +3079,19 @@
     "summary": "Mejora de batallas para el port Gen1Recomp de Pokemon",
     "homepageUrl": "https://github.com/arsdaemonia-design/Gen1Recomp-better-battles",
     "releasesUrl": "https://github.com/arsdaemonia-design/Gen1Recomp-better-battles/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/arsdaemonia-design/Gen1Recomp-better-battles/releases/download/v2.1/better-battles.zip",
+      "sha256": "fdec9bd6fe9077a672a78c2ca88dc2274599615b21132949a0187e8a69841dad",
+      "fileSizeBytes": 1133206,
+      "version": "1.2.0",
+      "releasedAt": "2026-08-14T23:48:29Z",
+      "manifestPath": "better-battles/manifest.json",
+      "modId": "better-battles",
+      "gameVersion": ">=0.0.0-dev <1.0.0",
+      "surveyedRelease": "v2.1"
+    }
   },
   {
     "id": "anime-realism",
@@ -3038,7 +3110,19 @@
     "summary": "make battles feel more like the anime",
     "homepageUrl": "https://github.com/businessmachines02/anime-realism",
     "releasesUrl": "https://github.com/businessmachines02/anime-realism/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/businessmachines02/anime-realism/releases/download/v4.2.10/anime_realism-4.2.10.zip",
+      "sha256": "bd4584a259b1d727d3a3c197e6922bf7a9c17835aabd6584f5440ece1884f91a",
+      "fileSizeBytes": 33353507,
+      "version": "4.2.10",
+      "releasedAt": "2026-08-24T02:51:57Z",
+      "manifestPath": "manifest.json",
+      "modId": "anime_realism",
+      "gameVersion": ">=0.0.0-0 <2.0.0",
+      "surveyedRelease": "v4.2.10"
+    }
   },
   {
     "id": "what-the-heck",
@@ -3088,7 +3172,19 @@
     "summary": "New addition to pallet town for Gen1 Recomp",
     "homepageUrl": "https://github.com/cleverleviathan/Pallet-Chaos",
     "releasesUrl": "https://github.com/cleverleviathan/Pallet-Chaos/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/cleverleviathan/Pallet-Chaos/releases/download/v0.1.3/PALLET_CHAOS-0.1.3.zip",
+      "sha256": "68b40ff8c252e0f76f7a7fe91dacac93748e94131581db1907d9e2db7f1fc4a5",
+      "fileSizeBytes": 37816,
+      "version": "0.1.3",
+      "releasedAt": "2026-08-09T21:45:02Z",
+      "manifestPath": "manifest.json",
+      "modId": "PALLET_CHAOS",
+      "gameVersion": ">=0.0.0-dev <1.0.0",
+      "surveyedRelease": "v0.1.3"
+    }
   },
   {
     "id": "gen1recomp-autosave",
@@ -3107,7 +3203,19 @@
     "summary": "A mod for Gen1Recomp that adds automatic saving at a user-defined time interval.  The game will automatically save only when no player action is being performed, preventing saves from interrupting gameplay. The save interval can be configured by the user to suit their preferences.",
     "homepageUrl": "https://github.com/Czajo/gen1recomp-autosave",
     "releasesUrl": "https://github.com/Czajo/gen1recomp-autosave/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/Czajo/gen1recomp-autosave/releases/download/latest/gen1recomp_autosave.zip",
+      "sha256": "af978fa07f49dedb82a988120a044d36e7a1f9a4df10c79b5682e9910735a3e8",
+      "fileSizeBytes": 1953,
+      "version": "1.0.1",
+      "releasedAt": "2026-08-17T22:37:18Z",
+      "manifestPath": "manifest.json",
+      "modId": "recomp-autosave",
+      "gameVersion": ">=0.0.0-dev <1.0.0",
+      "surveyedRelease": "latest"
+    }
   },
   {
     "id": "gen-2-save-screen-gen1recomp",
@@ -3126,7 +3234,19 @@
     "summary": "Replaces the plain SAVE confirmation text with a Gold/Silver-style stat panel (player, badges, Pokedex, time played) drawn in its own box above the Yes/No prompt.",
     "homepageUrl": "https://github.com/DaniKH1/Gen-2-Save-Screen-Gen1Recomp",
     "releasesUrl": "https://github.com/DaniKH1/Gen-2-Save-Screen-Gen1Recomp/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/DaniKH1/Gen-2-Save-Screen-Gen1Recomp/releases/download/1.0.0/gen2_save_screen.zip",
+      "sha256": "6326e5406721d6044ced0f36c3c640380caeb8861e7121d3f0185d88db81d093",
+      "fileSizeBytes": 3103,
+      "version": "1.0.0",
+      "releasedAt": "2026-08-15T08:09:59Z",
+      "manifestPath": "gen2_save_screen/manifest.json",
+      "modId": "gen2_save_screen",
+      "gameVersion": ">=0.0.0-0 <2.0.0",
+      "surveyedRelease": "1.0.0"
+    }
   },
   {
     "id": "gen1recomp-dex-pages",
@@ -3145,7 +3265,19 @@
     "summary": "Extra POKeDEX pages for gen1recomp: type matchups, catch odds, locations, level moves, TM/HM and evolution. The vanilla entry page is untouched.",
     "homepageUrl": "https://github.com/ddagent/gen1recomp-dex-pages",
     "releasesUrl": "https://github.com/ddagent/gen1recomp-dex-pages/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/ddagent/gen1recomp-dex-pages/releases/download/v1.8.0/dex_pages-1.8.0.zip",
+      "sha256": "6532cd240500be1c80c292372c2d3325bfa4f717b3313058adc1a73d1b318630",
+      "fileSizeBytes": 19785,
+      "version": "1.8.0",
+      "releasedAt": "2026-08-08T23:01:25Z",
+      "manifestPath": "manifest.json",
+      "modId": "dex_pages",
+      "gameVersion": ">=0.0.0-0 <2.0.0",
+      "surveyedRelease": "v1.8.0"
+    }
   },
   {
     "id": "gen1recomp-quick-save",
@@ -3164,7 +3296,19 @@
     "summary": "Save from the field with one button instead of the START menu, for gen1recomp.",
     "homepageUrl": "https://github.com/ddagent/gen1recomp-quick-save",
     "releasesUrl": "https://github.com/ddagent/gen1recomp-quick-save/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/ddagent/gen1recomp-quick-save/releases/download/v1.0.2/quick_save-1.0.2.zip",
+      "sha256": "b7e91adada76fa2b8b41754edd296452d7e476ca59a0ada015bb0da60618fbf9",
+      "fileSizeBytes": 4872,
+      "version": "1.0.2",
+      "releasedAt": "2026-08-07T11:21:52Z",
+      "manifestPath": "manifest.json",
+      "modId": "quick_save",
+      "gameVersion": ">=0.0.0-0 <2.0.0",
+      "surveyedRelease": "v1.0.2"
+    }
   },
   {
     "id": "rbyrecomp-instant-load",
@@ -3183,7 +3327,19 @@
     "summary": "Insta-loads the last saved file, bypassing the startup, credits, and main menu for the Pokemon Recomp project",
     "homepageUrl": "https://github.com/dumkaf/rbyrecomp-instant-load",
     "releasesUrl": "https://github.com/dumkaf/rbyrecomp-instant-load/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/dumkaf/rbyrecomp-instant-load/releases/download/instantloadexit2.0/instant_load_exit_v2.0.zip",
+      "sha256": "1af8cf2d86c78f090146c18ef1e6553e947e4cb043932d373288584a5f3c66c6",
+      "fileSizeBytes": 4908,
+      "version": "2.0",
+      "releasedAt": "2026-08-24T19:56:12Z",
+      "manifestPath": "manifest.json",
+      "modId": "instant_load",
+      "gameVersion": null,
+      "surveyedRelease": "instantloadexit2.0"
+    }
   },
   {
     "id": "gen1-recomp-mods",
@@ -3202,7 +3358,19 @@
     "summary": "Where I upload mods.",
     "homepageUrl": "https://github.com/FelizNavidad-D/Gen1-Recomp-Mods",
     "releasesUrl": "https://github.com/FelizNavidad-D/Gen1-Recomp-Mods/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/FelizNavidad-D/Gen1-Recomp-Mods/releases/download/DV_Tracker1.0.1/DV.Tracker.Gen1.1.0.1.zip",
+      "sha256": "f52107e12b54647435bcb95b29714b1a1a4651576711529ec846313e4dde099f",
+      "fileSizeBytes": 1878,
+      "version": "1.0.1",
+      "releasedAt": "2026-09-03T02:15:39Z",
+      "manifestPath": "DV Tracker Gen1/manifest.json",
+      "modId": "Gen1_DV_Tracker",
+      "gameVersion": ">=0.0.0-dev",
+      "surveyedRelease": "DV_Tracker1.0.1"
+    }
   },
   {
     "id": "pokesurvive",
@@ -3221,7 +3389,19 @@
     "summary": "A survival roguelike mod for Pokémon Red featuring randomized runs, permadeath, Pokémon personalities, survival mechanics, Adventure Events, camping, and more.",
     "homepageUrl": "https://github.com/GawdMode/PokeSurvive",
     "releasesUrl": "https://github.com/GawdMode/PokeSurvive/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/GawdMode/PokeSurvive/releases/download/v2.1.0/PokeSurvive-v2.1.0-PewterCompat-WeatherLayerFix.zip",
+      "sha256": "9e8cf0cb50bf3ca50c9b620105aa4b6431e01580ce22badfbebedcc045620406",
+      "fileSizeBytes": 1460379,
+      "version": "2.1.0",
+      "releasedAt": "2026-09-18T22:52:18Z",
+      "manifestPath": "pokesurvive/manifest.json",
+      "modId": "pokemon_survival",
+      "gameVersion": ">=0.2.12 <1.0.0",
+      "surveyedRelease": "v2.1.0"
+    }
   },
   {
     "id": "colosseum-inspired-ui-overhaul-v-1-0-0",
@@ -3240,7 +3420,19 @@
     "summary": "Colosseum Inspired UI Overhaul for Gen1Recomp V.1.0.0",
     "homepageUrl": "https://github.com/HighDrexler/Colosseum-Inspired-UI-Overhaul-V.1.0.0",
     "releasesUrl": "https://github.com/HighDrexler/Colosseum-Inspired-UI-Overhaul-V.1.0.0/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/HighDrexler/Colosseum-Inspired-UI-Overhaul-V.1.0.0/releases/download/v3.1/ColosseumInspiredUI_3.1.zip",
+      "sha256": "75ec7f527a7acb0efe14a106d102c0048b013315ff8d571ac5b29e716e04f717",
+      "fileSizeBytes": 5756463,
+      "version": "3.1.0",
+      "releasedAt": "2026-09-14T23:10:32Z",
+      "manifestPath": "manifest.json",
+      "modId": "colosseum_ui_overhaul",
+      "gameVersion": "0.0.0-dev || >=0.2.11 <2.0.0",
+      "surveyedRelease": "v3.1"
+    }
   },
   {
     "id": "gen-3-inspired-ui-overhaul-for-gen1recomp-v2-0",
@@ -3259,7 +3451,19 @@
     "summary": "Gen 3 inspired UI overhaul for Gen1Recomp, version 2.0.0. Download .zip and install into gen1recomp launcher.",
     "homepageUrl": "https://github.com/HighDrexler/Gen-3-inspired-UI-overhaul-for-Gen1Recomp-V2.0",
     "releasesUrl": "https://github.com/HighDrexler/Gen-3-inspired-UI-overhaul-for-Gen1Recomp-V2.0/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/HighDrexler/Gen-3-inspired-UI-overhaul-for-Gen1Recomp-V2.0/releases/download/V2.0.0/gen3_battle_ui-2.0.0.zip",
+      "sha256": "84ed44a66d54d537d6d5acdee0db4b4462f8d163c1bc71b07d60bfc870c88240",
+      "fileSizeBytes": 246837,
+      "version": "2.0.0",
+      "releasedAt": "2026-08-16T06:43:29Z",
+      "manifestPath": "gen3_battle_ui/manifest.json",
+      "modId": "gen3_battle_ui",
+      "gameVersion": null,
+      "surveyedRelease": "V2.0.0"
+    }
   },
   {
     "id": "gen1recomp-phase-step",
@@ -3278,7 +3482,19 @@
     "summary": "A Gen1Recomp mod that moves the player two spaces forward through blocked objects and doors.",
     "homepageUrl": "https://github.com/HubGit8/Gen1Recomp-Phase-Step",
     "releasesUrl": "https://github.com/HubGit8/Gen1Recomp-Phase-Step/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/HubGit8/Gen1Recomp-Phase-Step/releases/download/v1.0.0/phase_step_v1.0.0.zip",
+      "sha256": "d482bbeb8bd8f1fca56df81718e25ac6e00582aec24a921aca894209ad5b994a",
+      "fileSizeBytes": 4805,
+      "version": "1.0.0",
+      "releasedAt": "2026-08-03T05:25:00Z",
+      "manifestPath": "phase_step/manifest.json",
+      "modId": "phase_step",
+      "gameVersion": ">=0.1.60 <0.2.0",
+      "surveyedRelease": "v1.0.0"
+    }
   },
   {
     "id": "gen1recomp-portuguese-ui",
@@ -3297,7 +3513,19 @@
     "summary": "Tradução da interface do Laucher do gen1recomp",
     "homepageUrl": "https://github.com/hydhyro/gen1recomp_portuguese_ui",
     "releasesUrl": "https://github.com/hydhyro/gen1recomp_portuguese_ui/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/hydhyro/gen1recomp_portuguese_ui/releases/download/0.1.3/gen1recomp_portuguese_ui-0.1.3.zip",
+      "sha256": "20bb70a81607ca0f3673b439d7e3158716997081191b4a54660b61ae30f57304",
+      "fileSizeBytes": 10735,
+      "version": "0.1.3",
+      "releasedAt": "2026-09-10T18:29:45Z",
+      "manifestPath": "gen1recomp_portuguese_ui-0.1.3/manifest.json",
+      "modId": "gen1recomp_portuguese_ui",
+      "gameVersion": ">=0.0.0-dev <1.0.0",
+      "surveyedRelease": "0.1.3"
+    }
   },
   {
     "id": "gen1recompspaceworldsprites",
@@ -3316,68 +3544,18 @@
     "summary": "SpaceWorldSprites",
     "homepageUrl": "https://github.com/hydhyro/gen1recompSpaceWorldSprites",
     "releasesUrl": "https://github.com/hydhyro/gen1recompSpaceWorldSprites/releases",
-    "reviewStatus": "permission-needed"
-  },
-  {
-    "id": "item-randomizer",
-    "title": "Item Randomizer",
-    "creator": "inmento",
-    "kind": "mod",
-    "category": "gen1recomp",
-    "compatibility": [
-      "gen1recomp"
-    ],
-    "target": "Gen1Recomp",
-    "engine": {
-      "family": "both",
-      "games": []
-    },
-    "summary": "Safe Gen 1 Recomp item randomizer with progression-weighted loot and protected New Game PC rerolls.",
-    "homepageUrl": "https://github.com/inmento/Item-Randomizer",
-    "releasesUrl": "https://github.com/inmento/Item-Randomizer/releases",
     "reviewStatus": "permission-needed",
     "directSource": {
       "permission": "none-direct-source",
-      "fileUrl": "https://github.com/inmento/Item-Randomizer/releases/download/1.0.13/item_randomizer-1.0.13.zip",
-      "sha256": "fd7850a2f72630cc935c1ecdbf5a7d6b09b41fd96afd8111f6883b8f3fb52c06",
-      "fileSizeBytes": 18555,
-      "version": "1.0.13",
-      "releasedAt": "2026-08-20T23:48:30Z",
-      "manifestPath": "manifest.json",
-      "modId": "item_randomizer",
-      "gameVersion": ">=0.1.99",
-      "surveyedRelease": "1.0.13"
-    }
-  },
-  {
-    "id": "starter-picker",
-    "title": "Starter Picker",
-    "creator": "inmento",
-    "kind": "mod",
-    "category": "gen1recomp",
-    "compatibility": [
-      "gen1recomp"
-    ],
-    "target": "Gen1Recomp",
-    "engine": {
-      "family": "both",
-      "games": []
-    },
-    "summary": "Gen 1 Recomp starter-ball picker with live post-load editing and Gen 1 Randomizer interoperability.",
-    "homepageUrl": "https://github.com/inmento/Starter-Picker",
-    "releasesUrl": "https://github.com/inmento/Starter-Picker/releases",
-    "reviewStatus": "permission-needed",
-    "directSource": {
-      "permission": "none-direct-source",
-      "fileUrl": "https://github.com/inmento/Starter-Picker/releases/download/1.0.14/starter_picker-1.0.14.zip",
-      "sha256": "578db88f9690f76f094eb5284107a3ec22a2ee0d7efaec95045e15cbdfc27fa8",
-      "fileSizeBytes": 20850,
-      "version": "1.0.14",
-      "releasedAt": "2026-08-20T23:45:33Z",
-      "manifestPath": "manifest.json",
-      "modId": "starter_picker",
-      "gameVersion": ">=0.1.99",
-      "surveyedRelease": "1.0.14"
+      "fileUrl": "https://github.com/hydhyro/gen1recompSpaceWorldSprites/releases/download/1.0/gen1recompSpaceWorldSprites-1.0.zip",
+      "sha256": "ace2747c5710204895edba33da5bf58e4335340b93b406e3215372f61bfedaa5",
+      "fileSizeBytes": 281584,
+      "version": "1.0",
+      "releasedAt": "2026-08-16T04:07:02Z",
+      "manifestPath": "gen1recompSpaceWorldSprites-1.0/manifest.json",
+      "modId": "spaceworld_back_sprites",
+      "gameVersion": null,
+      "surveyedRelease": "1.0"
     }
   },
   {
@@ -3397,7 +3575,19 @@
     "summary": "Gen1Recomp mod: automatically limits your usable party size to match the number of Pokémon your opponent has.",
     "homepageUrl": "https://github.com/jrmsrs/fair-battles",
     "releasesUrl": "https://github.com/jrmsrs/fair-battles/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/jrmsrs/fair-battles/releases/download/0.3.1/fair-battles-0.3.1.zip",
+      "sha256": "a2e4bb006822f2d261b181405f30892668916e527f0a7f8a845d971b2060218e",
+      "fileSizeBytes": 96007,
+      "version": "0.3.1",
+      "releasedAt": "2026-08-15T00:38:00Z",
+      "manifestPath": "manifest.json",
+      "modId": "fair_battles",
+      "gameVersion": null,
+      "surveyedRelease": "0.3.1"
+    }
   },
   {
     "id": "kanto-life-mod",
@@ -3447,7 +3637,19 @@
     "summary": "Better default trainer backsprite for gen1recomp",
     "homepageUrl": "https://github.com/Kamon137/betterback",
     "releasesUrl": "https://github.com/Kamon137/betterback/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/Kamon137/betterback/releases/download/mods/betterback.zip",
+      "sha256": "f3e3bf7e04b12bed56321bb9f4011295d1adfd0e851a386ef9123f22f851f6f1",
+      "fileSizeBytes": 26296,
+      "version": "1.0.0",
+      "releasedAt": "2026-08-06T23:38:17Z",
+      "manifestPath": "betterback/manifest.json",
+      "modId": "betterback",
+      "gameVersion": ">=0.0.0-dev <1.0.0",
+      "surveyedRelease": "mods"
+    }
   },
   {
     "id": "pocketmonsterspc",
@@ -3466,7 +3668,19 @@
     "summary": "Improve core elements without ruining a fresh impression of Gen 1",
     "homepageUrl": "https://github.com/lakelssky/PocketMonstersPC",
     "releasesUrl": "https://github.com/lakelssky/PocketMonstersPC/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/lakelssky/PocketMonstersPC/releases/download/PC/PocketMonstersPCPhone.zip",
+      "sha256": "f6815205ce428ee5ccee5a7e3a6c87256439190268c33585059bc5ee80bbee61",
+      "fileSizeBytes": 5514,
+      "version": "1.0",
+      "releasedAt": "2026-08-10T00:03:27Z",
+      "manifestPath": "manifest.json",
+      "modId": "pocket_monsters_pc_phone",
+      "gameVersion": ">=0.1.38 <2.0.0",
+      "surveyedRelease": "PC"
+    }
   },
   {
     "id": "stadium-cries",
@@ -3504,7 +3718,19 @@
     "summary": "Pokemon Gold em portugues brasileiro para o gen1recomp",
     "homepageUrl": "https://github.com/LordSangreal/versaodourada",
     "releasesUrl": "https://github.com/LordSangreal/versaodourada/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/LordSangreal/versaodourada/releases/download/v0.63.8/versaodourada-0.63.8.zip",
+      "sha256": "162a072d38ed94eadd47c61ace11ae2ace043d2cbd0cfac160c9da0559adb590",
+      "fileSizeBytes": 503082,
+      "version": "0.63.8",
+      "releasedAt": "2026-08-31T18:11:46Z",
+      "manifestPath": "manifest.json",
+      "modId": "versaodourada",
+      "gameVersion": ">=0.0.0-0 <2.0.0",
+      "surveyedRelease": "v0.63.8"
+    }
   },
   {
     "id": "itemfinder-plus",
@@ -3523,7 +3749,19 @@
     "summary": "A gen1recomp mod that improves one of the most useless Gen 1 item",
     "homepageUrl": "https://github.com/magalvao/itemfinder-plus",
     "releasesUrl": "https://github.com/magalvao/itemfinder-plus/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/magalvao/itemfinder-plus/releases/download/v1.0.0/itemfinderplus-1.0.0.zip",
+      "sha256": "8fa62ef90fab1e35336e8fbc54c5211040c27d0829a176b1525fa5e8c6496881",
+      "fileSizeBytes": 2296154,
+      "version": "1.0.0",
+      "releasedAt": "2026-08-04T18:00:24Z",
+      "manifestPath": "manifest.json",
+      "modId": "itemfinderplus",
+      "gameVersion": ">=0.0.0-0 <2.0.0",
+      "surveyedRelease": "v1.0.0"
+    }
   },
   {
     "id": "fast-pokemon-center",
@@ -3542,7 +3780,19 @@
     "summary": "Gen1Recomp mod: skip all Pokemon Center nurse dialogue - talk to the nurse and go straight into the healing-machine animation, no text.",
     "homepageUrl": "https://github.com/mjdenucci/fast-pokemon-center",
     "releasesUrl": "https://github.com/mjdenucci/fast-pokemon-center/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/mjdenucci/fast-pokemon-center/releases/download/v1.0.0/fast_pokemon_center-1.0.0.zip",
+      "sha256": "b67ed2344c43dcedc946c78dcded816317877f95134ffbc8bbb7bdbe0f477af1",
+      "fileSizeBytes": 3173,
+      "version": "1.0.0",
+      "releasedAt": "2026-08-19T15:52:06Z",
+      "manifestPath": "manifest.json",
+      "modId": "fast_pokemon_center",
+      "gameVersion": ">=0.0.0-0 <2.0.0",
+      "surveyedRelease": "v1.0.0"
+    }
   },
   {
     "id": "the-world",
@@ -3564,15 +3814,15 @@
     "reviewStatus": "permission-needed",
     "directSource": {
       "permission": "none-direct-source",
-      "fileUrl": "https://github.com/MrKrisSatan/The_World/releases/download/2.9.0/The_World_v2_9_0.zip",
-      "sha256": "94b6f9fc5582c95a71cdf18a3428e84087d69f25dcf04b2281c65d34e3514d5d",
-      "fileSizeBytes": 11185527,
-      "version": "2.9.0",
-      "releasedAt": "2026-08-21T17:22:52Z",
+      "fileUrl": "https://github.com/MrKrisSatan/The_World/releases/download/6.75.1/The_World_v6_75_1.zip",
+      "sha256": "e21adf84e358e67349e24d24d01546897f04225e9ec643637e094d4e683a669e",
+      "fileSizeBytes": 38389474,
+      "version": "6.75.1",
+      "releasedAt": "2026-09-07T20:54:42Z",
       "manifestPath": "manifest.json",
       "modId": "the_world",
-      "gameVersion": ">=0.1.37 <2.0.0",
-      "surveyedRelease": "2.9.0"
+      "gameVersion": ">=0.2.56 <2.0.0",
+      "surveyedRelease": "6.75.1"
     }
   },
   {
@@ -3592,7 +3842,19 @@
     "summary": "Weather fx in Pokémon recomp",
     "homepageUrl": "https://github.com/MrKrisSatan/Weather-fx",
     "releasesUrl": "https://github.com/MrKrisSatan/Weather-fx/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/MrKrisSatan/Weather-fx/releases/download/8.2.14/weather_fx-core-8.2.14.zip",
+      "sha256": "b2af696f8167bbc8f8127b14eb87c11e9eaf4d2f1e6ca34eacb3e62f98a200cf",
+      "fileSizeBytes": 9295386,
+      "version": "8.2.14",
+      "releasedAt": "2026-09-12T23:16:33Z",
+      "manifestPath": "manifest.json",
+      "modId": "weather_fx",
+      "gameVersion": "0.0.0-dev || >=0.1.37 <2.0.0",
+      "surveyedRelease": "8.2.14"
+    }
   },
   {
     "id": "gen-1-3d-npc-s",
@@ -3611,7 +3873,19 @@
     "summary": "Gen 1 3D NPC's",
     "homepageUrl": "https://github.com/randyadr/Gen-1-3D-NPC-s",
     "releasesUrl": "https://github.com/randyadr/Gen-1-3D-NPC-s/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/randyadr/Gen-1-3D-NPC-s/releases/download/v1.1.5/gen1_true_3d_characters-1.1.5.zip",
+      "sha256": "75cdd0dba547723e07a0d3b096aa3bd40d69e61f1d9a50a29bd411e7fe71bd77",
+      "fileSizeBytes": 88942885,
+      "version": "1.1.5",
+      "releasedAt": "2026-08-12T05:15:53Z",
+      "manifestPath": "manifest.json",
+      "modId": "gen1_true_3d_characters",
+      "gameVersion": "0.0.0-dev || >=0.1.37 <2.0.0",
+      "surveyedRelease": "v1.1.5"
+    }
   },
   {
     "id": "gen2-cheat-menu",
@@ -3630,7 +3904,19 @@
     "summary": "Gen2 Cheat Menu",
     "homepageUrl": "https://github.com/randyadr/Gen2-Cheat-Menu",
     "releasesUrl": "https://github.com/randyadr/Gen2-Cheat-Menu/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/randyadr/Gen2-Cheat-Menu/releases/download/v2.0.3/gen2_cheat_menu_gold-2.0.3.zip",
+      "sha256": "545ecfd2a8347040616b546452f074495401807c681d525c3630da4a598f6f2f",
+      "fileSizeBytes": 28222,
+      "version": "2.0.3",
+      "releasedAt": "2026-08-15T06:43:19Z",
+      "manifestPath": "gen2_cheat_menu_gold/manifest.json",
+      "modId": "gen2_cheat_menu_gold",
+      "gameVersion": ">=0.0.0-0 <2.0.0",
+      "surveyedRelease": "v2.0.3"
+    }
   },
   {
     "id": "stadium-model-viewer-for-pokedex",
@@ -3649,7 +3935,19 @@
     "summary": "3D Model Viewer for Pokedex",
     "homepageUrl": "https://github.com/randyadr/Stadium-Model-Viewer-for-Pokedex",
     "releasesUrl": "https://github.com/randyadr/Stadium-Model-Viewer-for-Pokedex/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/randyadr/Stadium-Model-Viewer-for-Pokedex/releases/download/v3.0.3/STADIUM_UI_MODEL_VIEWER-3.0.3.zip",
+      "sha256": "5eadf7ccf2ae82417131a86d0f953229ccc2c56b5101e42400ccd0e29d715100",
+      "fileSizeBytes": 7542,
+      "version": "3.0.3",
+      "releasedAt": "2026-08-09T01:02:58Z",
+      "manifestPath": "manifest.json",
+      "modId": "STADIUM_UI_MODEL_VIEWER",
+      "gameVersion": null,
+      "surveyedRelease": "v3.0.3"
+    }
   },
   {
     "id": "kanto-ascendant",
@@ -3668,7 +3966,19 @@
     "summary": "A living Pokémon Gen 1 post-game expansion with evolving rematches, Master and Crown circuits, legendary events, research reports and a reactive Kanto.",
     "homepageUrl": "https://github.com/Roxas2712/kanto-ascendant",
     "releasesUrl": "https://github.com/Roxas2712/kanto-ascendant/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/Roxas2712/kanto-ascendant/releases/download/v6.7.16/Kanto-Ascendant-6.7.16.zip",
+      "sha256": "cb09ba80bb476417669a5f70c531ce45f172e3e08fa8258dad6cfc3c16daaf0c",
+      "fileSizeBytes": 108472628,
+      "version": "6.7.16",
+      "releasedAt": "2026-09-19T17:09:08Z",
+      "manifestPath": "manifest.json",
+      "modId": "kanto_ascendant",
+      "gameVersion": ">=0.2.57",
+      "surveyedRelease": "v6.7.16"
+    }
   },
   {
     "id": "pokemon-quick-select",
@@ -3687,7 +3997,19 @@
     "summary": "Gen II-style registered-item shortcuts for Pokémon Gen 1 Recomp",
     "homepageUrl": "https://github.com/Roxas2712/pokemon-quick-select",
     "releasesUrl": "https://github.com/Roxas2712/pokemon-quick-select/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/Roxas2712/pokemon-quick-select/releases/download/v1.0.1/jj_quick_select-v1.0.1.zip",
+      "sha256": "b2263b007fd4bce27d0e5e3dd76faefcbfc0c8826a97713abd01585c7235fd24",
+      "fileSizeBytes": 10905,
+      "version": "1.0.1",
+      "releasedAt": "2026-08-03T21:56:48Z",
+      "manifestPath": "manifest.json",
+      "modId": "jj_quick_select",
+      "gameVersion": ">=0.0.0-dev <1.0.0",
+      "surveyedRelease": "v1.0.1"
+    }
   },
   {
     "id": "jp-anime-opening-title",
@@ -3706,7 +4028,19 @@
     "summary": "ポケモンGETだぜ！",
     "homepageUrl": "https://github.com/Sebarosu/JP-anime-opening-title",
     "releasesUrl": "https://github.com/Sebarosu/JP-anime-opening-title/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/Sebarosu/JP-anime-opening-title/releases/download/1.0.0/jp_title_screen.zip",
+      "sha256": "7f1105f29e7e1cf029f90b5eb3416d20177257fceb23e3a77c59db171d886d6f",
+      "fileSizeBytes": 958287,
+      "version": "1.0.0",
+      "releasedAt": "2026-07-28T21:45:50Z",
+      "manifestPath": "manifest.json",
+      "modId": "jp_title_screen",
+      "gameVersion": null,
+      "surveyedRelease": "1.0.0"
+    }
   },
   {
     "id": "luigi-in-gen1-recomp",
@@ -3725,7 +4059,19 @@
     "summary": "I'm-a Luigi, mumber 1 Pokémon Master!",
     "homepageUrl": "https://github.com/Sebarosu/Luigi-in-gen1-recomp",
     "releasesUrl": "https://github.com/Sebarosu/Luigi-in-gen1-recomp/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/Sebarosu/Luigi-in-gen1-recomp/releases/download/1.0.0/playable_luigi_gen1.zip",
+      "sha256": "436b4f87fcfa5c816eb94e88c44245e7f3d55798d1d4213097222d0ff3df293c",
+      "fileSizeBytes": 6605,
+      "version": "1.0.0",
+      "releasedAt": "2026-07-30T16:28:20Z",
+      "manifestPath": "manifest.json",
+      "modId": "playable-luigi",
+      "gameVersion": null,
+      "surveyedRelease": "1.0.0"
+    }
   },
   {
     "id": "tabbed-options",
@@ -3744,7 +4090,19 @@
     "summary": "Tabbed OPTIONS menu: GAME / GFX / SND / MODS header tabs, mod-contributed settings sorted alphabetically. Gen 1 (Red/Blue/Yellow).",
     "homepageUrl": "https://github.com/ShaneMcGovernIE/tabbed_options",
     "releasesUrl": "https://github.com/ShaneMcGovernIE/tabbed_options/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/Nexhas28/tabbed_options/releases/download/v0.2.0/tabbed_options-0.2.0.zip",
+      "sha256": "96c846b28a9ffdfc5904d0c455cbb9c510b0707375a32dd954f6de4344459acb",
+      "fileSizeBytes": 12532,
+      "version": "0.2.0",
+      "releasedAt": "2026-08-12T11:08:38Z",
+      "manifestPath": "manifest.json",
+      "modId": "tabbed_options",
+      "gameVersion": null,
+      "surveyedRelease": "v0.2.0"
+    }
   },
   {
     "id": "throw-ball-hotkey",
@@ -3763,7 +4121,19 @@
     "summary": "In battle, press T on the main menu to instantly throw a POKé BALL. OPTIONS > THROW BALL picks the preferred ball; rebindable via Mods Hotkeys.",
     "homepageUrl": "https://github.com/ShaneMcGovernIE/throw_ball_hotkey",
     "releasesUrl": "https://github.com/ShaneMcGovernIE/throw_ball_hotkey/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/Nexhas28/throw_ball_hotkey/releases/download/v1.1.1/throw_ball_hotkey-1.1.1.zip",
+      "sha256": "114bedf22da9eb3c0f35b60b54dd10fd260bb317662f1403a7cf06c2f74ddad2",
+      "fileSizeBytes": 12426,
+      "version": "1.1.1",
+      "releasedAt": "2026-08-05T03:33:19Z",
+      "manifestPath": "manifest.json",
+      "modId": "throw_ball_hotkey",
+      "gameVersion": ">=0.0.0-0 <2.0.0",
+      "surveyedRelease": "v1.1.1"
+    }
   },
   {
     "id": "gen1recompdeltas",
@@ -3782,7 +4152,19 @@
     "summary": "adds delta pkmn to gen1 recomp",
     "homepageUrl": "https://github.com/swuff-star/Gen1RecompDeltas",
     "releasesUrl": "https://github.com/swuff-star/Gen1RecompDeltas/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/swuff-star/Gen1RecompDeltas/releases/download/v1.0.0/delta-pokemon-v1.0.0.zip",
+      "sha256": "23c341071dd0be9f06fdc6fd8d8612a5e183e1aca7a974edac2cc2a0c67f14aa",
+      "fileSizeBytes": 11144,
+      "version": "1.0.0",
+      "releasedAt": "2026-08-12T00:31:20Z",
+      "manifestPath": "manifest.json",
+      "modId": "deltas",
+      "gameVersion": ">=0.0.0-dev <1.0.0",
+      "surveyedRelease": "v1.0.0"
+    }
   },
   {
     "id": "kep-recomp-port",
@@ -3801,7 +4183,19 @@
     "summary": "unofficial port of KEP to gen1 recomp",
     "homepageUrl": "https://github.com/swuff-star/KEP-Recomp-Port",
     "releasesUrl": "https://github.com/swuff-star/KEP-Recomp-Port/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/swuff-star/KEP-Recomp-Port/releases/download/v1.0.3/Kanto.Expansion.Pak.v1.0.3.zip",
+      "sha256": "f7c3690d9f35aaebc7a13d1c0bdf39b2df1584e6b1ab59a1616f535a3ca0f9a2",
+      "fileSizeBytes": 2008990,
+      "version": "1.0.3",
+      "releasedAt": "2026-08-23T20:15:08Z",
+      "manifestPath": "manifest.json",
+      "modId": "kantoexpansionpak",
+      "gameVersion": ">=0.0.0-dev <1.0.0",
+      "surveyedRelease": "v1.0.3"
+    }
   },
   {
     "id": "dynamax-pokemon-league",
@@ -3820,7 +4214,19 @@
     "summary": "makes the final pokemon of gym leaders and elite four be dynamax",
     "homepageUrl": "https://github.com/tectorifter/dynamax-pokemon-league",
     "releasesUrl": "https://github.com/tectorifter/dynamax-pokemon-league/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/tectorifter/dynamax-pokemon-league/releases/download/standalone/dynamic_scaling_final_dynamax_standalone_v1_2_0.zip",
+      "sha256": "1a6a764a37dcb5af5f1aac2549d1b5f6aec00592b7f32bc7bde9d0e8d59b79df",
+      "fileSizeBytes": 16459,
+      "version": "1.2.0",
+      "releasedAt": "2026-08-05T13:16:37Z",
+      "manifestPath": "dynamic_scaling_final_dynamax_standalone/manifest.json",
+      "modId": "dynamic_scaling_final_dynamax_standalone",
+      "gameVersion": ">=0.0.0-0 <2.0.0",
+      "surveyedRelease": "standalone"
+    }
   },
   {
     "id": "gimmicks-menu",
@@ -3839,7 +4245,19 @@
     "summary": "A menu mod that adds gimmicks hooks to gen1comp",
     "homepageUrl": "https://github.com/tectorifter/Gimmicks_Menu",
     "releasesUrl": "https://github.com/tectorifter/Gimmicks_Menu/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/tectorifter/Gimmicks_Menu/releases/download/v.0.3.5/gimmick_menu_v0_3_5-1.zip",
+      "sha256": "ca9c858ff994b23edfa21cee8d02ce5d524653ad9252cd1ca9a8749dcc0f4f19",
+      "fileSizeBytes": 21136,
+      "version": "0.3.5",
+      "releasedAt": "2026-08-06T04:03:45Z",
+      "manifestPath": "manifest.json",
+      "modId": "gimmick_menu",
+      "gameVersion": ">=0.0.0-0 <2.0.0",
+      "surveyedRelease": "v.0.3.5"
+    }
   },
   {
     "id": "gen-2-radomizer-plus",
@@ -3877,7 +4295,19 @@
     "summary": "Draws a small icon in the FIGHT menu's TYPE/PP info panel for the currently selected move's effectiveness.",
     "homepageUrl": "https://github.com/thorkdev/gen1recomp-effective-markers",
     "releasesUrl": "https://github.com/thorkdev/gen1recomp-effective-markers/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/thorkdev/gen1recomp-effective-markers/releases/download/0.1.0/effective-markers-0.1.0.zip",
+      "sha256": "518fb64a4b7414428e1b3b839ed85aaa9b9ec62c77d28ee92bd60d678ffac50e",
+      "fileSizeBytes": 4442,
+      "version": "0.1.0",
+      "releasedAt": "2026-08-09T19:01:52Z",
+      "manifestPath": "manifest.json",
+      "modId": "effective-markers",
+      "gameVersion": ">=0.0.0-dev <1.0.0",
+      "surveyedRelease": "0.1.0"
+    }
   },
   {
     "id": "gen1recomp-happiness",
@@ -3896,7 +4326,19 @@
     "summary": "Every caught Pokémon — not just Pikachu — tracks a hidden 0-255 happiness value!",
     "homepageUrl": "https://github.com/thorkdev/gen1recomp-happiness",
     "releasesUrl": "https://github.com/thorkdev/gen1recomp-happiness/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/thorkdev/gen1recomp-happiness/releases/download/0.1.0/happiness-0.1.0.zip",
+      "sha256": "1b3e204af5e1694c923209f2dca7c0ad6caf472cf1b0edca494901c246da3574",
+      "fileSizeBytes": 7522,
+      "version": "0.1.0",
+      "releasedAt": "2026-08-10T06:45:35Z",
+      "manifestPath": "manifest.json",
+      "modId": "happiness",
+      "gameVersion": ">=0.0.0-0 <2.0.0",
+      "surveyedRelease": "0.1.0"
+    }
   },
   {
     "id": "gen1recomp-mystery-gift",
@@ -3915,7 +4357,19 @@
     "summary": "Adds a MYSTERY GIFT row to the START menu.",
     "homepageUrl": "https://github.com/thorkdev/gen1recomp-mystery-gift",
     "releasesUrl": "https://github.com/thorkdev/gen1recomp-mystery-gift/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/thorkdev/gen1recomp-mystery-gift/releases/download/0.1.0/mystery-gift-0.1.0.zip",
+      "sha256": "1cd5d6e6999daa3ad5c76646a2a915b3bae12edcd41e01d56a227df29c0a29ab",
+      "fileSizeBytes": 5564,
+      "version": "0.1.0",
+      "releasedAt": "2026-08-08T06:52:10Z",
+      "manifestPath": "manifest.json",
+      "modId": "mystery-gift",
+      "gameVersion": ">=0.0.0-dev <1.0.0",
+      "surveyedRelease": "0.1.0"
+    }
   },
   {
     "id": "gen1-recomp-norwegian-translate",
@@ -3934,7 +4388,19 @@
     "summary": "Norwegian translation for Gen1recompile",
     "homepageUrl": "https://github.com/Tooandorisu/Gen1-Recomp-Norwegian-Translate",
     "releasesUrl": "https://github.com/Tooandorisu/Gen1-Recomp-Norwegian-Translate/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/Tooandorisu/Gen1-Recomp-Norwegian-Translate/releases/download/1.0.0/Norsk-bokmal-v1.0.0-Cerulean-Cave.zip",
+      "sha256": "f1724b655e8e721a03c8fbf8d84af4d21440b810474903d5a8f05e61d27468c5",
+      "fileSizeBytes": 146861,
+      "version": "1.0.0",
+      "releasedAt": "2026-09-14T09:14:16Z",
+      "manifestPath": "manifest.json",
+      "modId": "norsk_bokmaal",
+      "gameVersion": ">=0.0.0-0 <2.0.0",
+      "surveyedRelease": "1.0.0"
+    }
   },
   {
     "id": "wild-dv-display",
@@ -3953,7 +4419,19 @@
     "summary": "Displays wild Pokémon DVs during battle in Gen1Recomp. Requires Dramatic Shape.",
     "homepageUrl": "https://github.com/Tophiero/Wild-DV-Display",
     "releasesUrl": "https://github.com/Tophiero/Wild-DV-Display/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/Tophiero/Wild-DV-Display/releases/download/v0.2.0/Wild-DV-Display-v0.2.0.zip",
+      "sha256": "f6a5cf09a44e8905c8eb6d6aced4d07ffdf973147002205a6dc04e101069b390",
+      "fileSizeBytes": 3017,
+      "version": "0.2.0",
+      "releasedAt": "2026-08-09T22:40:16Z",
+      "manifestPath": "wild_dv_display/manifest.json",
+      "modId": "wild_dv_display",
+      "gameVersion": ">=0.1.37 <2.0.0",
+      "surveyedRelease": "v0.2.0"
+    }
   },
   {
     "id": "custom-video-intro",
@@ -3972,7 +4450,19 @@
     "summary": "Lets users replace the intro video on Gen1Recomp",
     "homepageUrl": "https://github.com/ty-mcdk/custom-video-intro",
     "releasesUrl": "https://github.com/ty-mcdk/custom-video-intro/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/ty-mcdk/custom-video-intro/releases/download/v1.0.0/custom_video_intro-1.0.0.zip",
+      "sha256": "2c2b0cac1f1f5a962496c63129577bcbd55c7204c946c8a7678343206a89f400",
+      "fileSizeBytes": 6623,
+      "version": "1.0.0",
+      "releasedAt": "2026-08-19T22:22:16Z",
+      "manifestPath": "manifest.json",
+      "modId": "custom_video_intro",
+      "gameVersion": ">=0.1.86",
+      "surveyedRelease": "v1.0.0"
+    }
   },
   {
     "id": "easy-custom-music",
@@ -3994,15 +4484,15 @@
     "reviewStatus": "permission-needed",
     "directSource": {
       "permission": "none-direct-source",
-      "fileUrl": "https://github.com/ty-mcdk/easy-custom-music/releases/download/v1.1.1/easy_custom_music-1.1.1.zip",
-      "sha256": "a29de1dd6565a0bb7eba25922adba7ddea83efb460b93ba6960a9b43fd4975ef",
-      "fileSizeBytes": 142741,
-      "version": "1.1.1",
-      "releasedAt": "2026-08-18T09:58:16Z",
+      "fileUrl": "https://github.com/ty-mcdk/easy-custom-music/releases/download/v2.0.0/easy_custom_music-2.0.0.zip",
+      "sha256": "1aea4390adbfd158f3109162173f4f3c014e94b9323f5adba780d0864859b3a9",
+      "fileSizeBytes": 385351,
+      "version": "2.0.0",
+      "releasedAt": "2026-08-23T21:36:36Z",
       "manifestPath": "manifest.json",
       "modId": "easy_custom_music",
       "gameVersion": ">=0.1.88",
-      "surveyedRelease": "v1.1.1"
+      "surveyedRelease": "v2.0.0"
     }
   },
   {
@@ -4022,7 +4512,19 @@
     "summary": "A harder challenge for Gen 1",
     "homepageUrl": "https://github.com/weskestis/Classic-Ironmon-Kaizo",
     "releasesUrl": "https://github.com/weskestis/Classic-Ironmon-Kaizo/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/weskestis/Classic-Ironmon-Kaizo/releases/download/v0.4.27/ironmon_ultimate-0.4.27.zip",
+      "sha256": "798e9f1b014f4273a0ec1d312e465803926b69f5eca5a69dbdbc56e124ac4ccd",
+      "fileSizeBytes": 5522415,
+      "version": "0.4.27",
+      "releasedAt": "2026-08-14T22:08:40Z",
+      "manifestPath": "manifest.json",
+      "modId": "ironmon_ultimate",
+      "gameVersion": ">=0.0.0-dev <1.0.0",
+      "surveyedRelease": "v0.4.27"
+    }
   },
   {
     "id": "kaizo-ultimate",
@@ -4041,7 +4543,19 @@
     "summary": "Integrated KAIZO mods for Gen 1and 2 for gen1recomp, gen one is built from blue Kaizo, Gen 2 is built from crystal Kaizo",
     "homepageUrl": "https://github.com/weskestis/Kaizo-Ultimate",
     "releasesUrl": "https://github.com/weskestis/Kaizo-Ultimate/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/weskestis/Kaizo-Ultimate/releases/download/v1.5.14/Kaizo-Ultimate-1.5.14.zip",
+      "sha256": "8b439c3adba1e5dfc0d6fb8d7cdea8225934a25bebf1debb15d5a543cd99a7ff",
+      "fileSizeBytes": 293066,
+      "version": "1.5.14",
+      "releasedAt": "2026-08-25T03:19:13Z",
+      "manifestPath": "manifest.json",
+      "modId": "gen1_kaizo",
+      "gameVersion": ">=0.2.18 <1.0.0",
+      "surveyedRelease": "v1.5.14"
+    }
   },
   {
     "id": "universalrandomizer",
@@ -4060,7 +4574,19 @@
     "summary": "Universal Pokémon Randomizer for Gen1Recomp — Red, Blue, Yellow, Gold & Silver with Pokémon #001–493, Random Start, Gen 1–4 rulesets, abilities, natures, encounters, hints, and expanded graphics/audio.",
     "homepageUrl": "https://github.com/weskestis/UniversalRandomizer",
     "releasesUrl": "https://github.com/weskestis/UniversalRandomizer/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/weskestis/UniversalRandomizer/releases/download/V.1.3.41/universal_randomizer-1.3.41.zip",
+      "sha256": "d8cfcb6e1e207901cc21933d5f8e32b8b0209a4cca01d7c79ce4e2879c8a7e77",
+      "fileSizeBytes": 12150767,
+      "version": "1.3.41",
+      "releasedAt": "2026-08-26T06:09:17Z",
+      "manifestPath": "manifest.json",
+      "modId": "universal_randomizer",
+      "gameVersion": ">=0.2.18 <1.0.0",
+      "surveyedRelease": "V.1.3.41"
+    }
   },
   {
     "id": "windwrecker-mew-under-the-truck",
@@ -4079,7 +4605,19 @@
     "summary": "A Gen1Recomp mod that brings the classic playground rumour to life. Speak to the sailor at the Vermilion City harbour to access a hidden maintenance route leading to the truck. Interacting with the truck triggers a wild level 25 Mew encounter.",
     "homepageUrl": "https://github.com/Windwrecker/Mew-Under-the-Truck",
     "releasesUrl": "https://github.com/Windwrecker/Mew-Under-the-Truck/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/Windwrecker/Mew-Under-the-Truck/releases/download/Gen1recomp/mew_under_truck_v1.4.0.zip",
+      "sha256": "dcf0c3be05b2403f7798bc3c81b5730df2412504bfa3cce5efa184b595285dc7",
+      "fileSizeBytes": 2731,
+      "version": "1.4.0",
+      "releasedAt": "2026-07-30T20:33:13Z",
+      "manifestPath": "mew_under_truck/manifest.json",
+      "modId": "mew_under_truck",
+      "gameVersion": null,
+      "surveyedRelease": "Gen1recomp"
+    }
   },
   {
     "id": "pkmn-g1r-immersive-bicycle-mod",
@@ -4098,7 +4636,19 @@
     "summary": "Your bicycle dream becomes reality.  And if you don’t need it anymore, just dump it somewhere.",
     "homepageUrl": "https://github.com/WizzStar/PKMN-G1R-Immersive-Bicycle-Mod",
     "releasesUrl": "https://github.com/WizzStar/PKMN-G1R-Immersive-Bicycle-Mod/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/WizzStar/PKMN-G1R-Immersive-Bicycle-Mod/releases/download/v0.1.30/wizzstar-immersive-bicycle-mod-0.1.30.zip",
+      "sha256": "cd11c5167b768eb5290809752324a89c22718047ef462b0a8b3c32f559b0375a",
+      "fileSizeBytes": 29414,
+      "version": "0.1.30",
+      "releasedAt": "2026-08-07T18:41:39Z",
+      "manifestPath": "manifest.json",
+      "modId": "immersive_bicycle_mod",
+      "gameVersion": ">=0.0.0-0 <2.0.0",
+      "surveyedRelease": "v0.1.30"
+    }
   },
   {
     "id": "gen1recomp-bag-pc-999",
@@ -4117,7 +4667,19 @@
     "summary": "Bag and PC hold 999 items.",
     "homepageUrl": "https://github.com/Zeikar-Ethereal/gen1recomp_bag_pc_999",
     "releasesUrl": "https://github.com/Zeikar-Ethereal/gen1recomp_bag_pc_999/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/Zeikar-Ethereal/gen1recomp_bag_pc_999/releases/download/release/bag_pc_999.zip",
+      "sha256": "fb0416e143e98ce27ae7cc78b1101757e950203971e7c2a0993989160bd63aaf",
+      "fileSizeBytes": 763,
+      "version": "1.0",
+      "releasedAt": "2026-08-21T00:03:43Z",
+      "manifestPath": "bag_pc_999/manifest.json",
+      "modId": "bag_pc_999",
+      "gameVersion": "",
+      "surveyedRelease": "release"
+    }
   },
   {
     "id": "can-always-escape",
@@ -4136,7 +4698,19 @@
     "summary": "Can Always Escape Wild Pokémon in GEN1RECOMPILE",
     "homepageUrl": "https://github.com/ZyranCZ/Can-Always-Escape",
     "releasesUrl": "https://github.com/ZyranCZ/Can-Always-Escape/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/ZyranCZ/Can-Always-Escape/releases/download/2.0.1/always_escape_v2.0.1.zip",
+      "sha256": "678c38b46f2e218a06ea515f18b2d6e1f60a319d51eef77eda4c9d2888082095",
+      "fileSizeBytes": 4999,
+      "version": "2.0.1",
+      "releasedAt": "2026-08-14T18:48:53Z",
+      "manifestPath": "manifest.json",
+      "modId": "always_escape",
+      "gameVersion": null,
+      "surveyedRelease": "2.0.1"
+    }
   },
   {
     "id": "enemy-hp",
@@ -4155,7 +4729,19 @@
     "summary": "Shows the enemies' HP on the same line as their level",
     "homepageUrl": "https://github.com/ZyranCZ/Enemy-HP",
     "releasesUrl": "https://github.com/ZyranCZ/Enemy-HP/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/ZyranCZ/Enemy-HP/releases/download/2.3.7/enemy_hp_v2.3.7_potatovoxel_1.6.3_compat.zip",
+      "sha256": "0b005a49afd781a0f4ba1cadbf3bf7e740014accd505fc3405fc74075be98a37",
+      "fileSizeBytes": 9979,
+      "version": "2.3.7",
+      "releasedAt": "2026-08-16T02:02:43Z",
+      "manifestPath": "manifest.json",
+      "modId": "enemy_hp",
+      "gameVersion": null,
+      "surveyedRelease": "2.3.7"
+    }
   },
   {
     "id": "help-story-guide",
@@ -4174,7 +4760,19 @@
     "summary": "Gives START MENU the option to ask for HELP, what to do next in the game",
     "homepageUrl": "https://github.com/ZyranCZ/HELP-Story-Guide",
     "releasesUrl": "https://github.com/ZyranCZ/HELP-Story-Guide/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/ZyranCZ/HELP-Story-Guide/releases/download/2.0.3/help_story_guide_v2.0.3.zip",
+      "sha256": "6d0b104f05abc8749ec6986c29f0431eef55a3ad0c11fcfc47e2bd8a8420fa86",
+      "fileSizeBytes": 63889,
+      "version": "2.0.3",
+      "releasedAt": "2026-08-14T19:11:54Z",
+      "manifestPath": "manifest.json",
+      "modId": "help_story_guide",
+      "gameVersion": null,
+      "surveyedRelease": "2.0.3"
+    }
   },
   {
     "id": "press-b-to-escape-wild-encounters",
@@ -4193,7 +4791,19 @@
     "summary": "Back in the day, I and my friends believed that holding B reduced wild encounter. This mod makes the urban legend real. Hold the B and the encounter rate can be either reduced or stopped entirely. You can also make the encounter reaction-based so that you can shake off the Pokemon by pressing B if you manage to press it fast enough.",
     "homepageUrl": "https://github.com/ZyranCZ/Press-B-to-Escape-Wild-Encounters",
     "releasesUrl": "https://github.com/ZyranCZ/Press-B-to-Escape-Wild-Encounters/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/ZyranCZ/Press-B-to-Escape-Wild-Encounters/releases/download/2.0.1/b_to_escape_encounters-2.0.1.zip",
+      "sha256": "327e76acd025b5167e3297631a4a283834b8044c3e814b8f2d6776157f2c5be2",
+      "fileSizeBytes": 30788,
+      "version": "2.0.1",
+      "releasedAt": "2026-08-14T18:36:34Z",
+      "manifestPath": "manifest.json",
+      "modId": "b_to_escape_encounters",
+      "gameVersion": null,
+      "surveyedRelease": "2.0.1"
+    }
   },
   {
     "id": "professor-oak-dv-stat-evaluation",
@@ -4212,7 +4822,19 @@
     "summary": "Let's you ask Professor Oak for DV/STAT Evaluation either directly in the PokePC or personally in Pallet Town.",
     "homepageUrl": "https://github.com/ZyranCZ/Professor-Oak-DV-STAT-Evaluation",
     "releasesUrl": "https://github.com/ZyranCZ/Professor-Oak-DV-STAT-Evaluation/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/ZyranCZ/Professor-Oak-DV-STAT-Evaluation/releases/download/2.0.1/oak_pokemon_appraisal_v2.0.1.zip",
+      "sha256": "8e12b9363d6e5b4ce92bdfc0ed2d021cb2536ae970d5346f21af60be27164dff",
+      "fileSizeBytes": 33375,
+      "version": "2.0.1",
+      "releasedAt": "2026-08-14T18:40:15Z",
+      "manifestPath": "manifest.json",
+      "modId": "oak_pokemon_appraisal",
+      "gameVersion": null,
+      "surveyedRelease": "2.0.1"
+    }
   },
   {
     "id": "special-stat-split",
@@ -4231,7 +4853,19 @@
     "summary": "Splits the simple SPECIAL into two SPATK and SPDEF as it was from GEN II onward. Also splits the MOVEs themselves as GEN IV onwards.",
     "homepageUrl": "https://github.com/ZyranCZ/Special-Stat-Split",
     "releasesUrl": "https://github.com/ZyranCZ/Special-Stat-Split/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/ZyranCZ/Special-Stat-Split/releases/download/2.7.3/special_stat_split_v2.7.3_gen1recomp_v0.1.86.zip",
+      "sha256": "4d359d48b19778e0571803418bdbc09ad838053280330347d41c641e446aa066",
+      "fileSizeBytes": 25715,
+      "version": "2.7.3",
+      "releasedAt": "2026-08-14T19:22:51Z",
+      "manifestPath": "manifest.json",
+      "modId": "special_stat_split",
+      "gameVersion": null,
+      "surveyedRelease": "2.7.3"
+    }
   },
   {
     "id": "steel-and-or-fairy-and-or-typing-charts",
@@ -4250,7 +4884,19 @@
     "summary": "Adds newer types to the game: Fairy, Steel and Dark. Compatible now with Crystal 251 Mod. Can also change WEAK/RESIST Charts between Vanilla, GEN II and GEN VI",
     "homepageUrl": "https://github.com/ZyranCZ/Fairy-Steel-Dark-and-Typing-Charts",
     "releasesUrl": "https://github.com/ZyranCZ/Fairy-Steel-Dark-and-Typing-Charts/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/ZyranCZ/Fairy-Steel-Dark-and-Typing-Charts/releases/download/2.0.1/steel_fairy_and_typing_charts_v2.0.1.zip",
+      "sha256": "34441cdb2126a4ac701bd7aafda2ca438c2240f7863e26561da2b6ba1c814a31",
+      "fileSizeBytes": 17339,
+      "version": "2.0.1",
+      "releasedAt": "2026-08-14T18:47:17Z",
+      "manifestPath": "steel_typing/manifest.json",
+      "modId": "steel_typing",
+      "gameVersion": null,
+      "surveyedRelease": "2.0.1"
+    }
   },
   {
     "id": "tap-to-move",
@@ -4269,7 +4915,19 @@
     "summary": "You can now Tap to Move, the game hhas functional pathfinding and functional interactions. To avoid unwanted interactions midway, interactions are limited to only actually single tapping the object/npc, so that you can Hold Touch and keep moving.",
     "homepageUrl": "https://github.com/ZyranCZ/Tap-to-Move",
     "releasesUrl": "https://github.com/ZyranCZ/Tap-to-Move/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/ZyranCZ/Tap-to-Move/releases/download/2.3.3/tap_to_move_v2.3.3.zip",
+      "sha256": "b1ec0c5a4a4fad92b6ff241183af4aaf127315dd0cd30b3eb241e5555c4183da",
+      "fileSizeBytes": 142840,
+      "version": "2.3.3",
+      "releasedAt": "2026-08-16T02:45:57Z",
+      "manifestPath": "tap_to_move/manifest.json",
+      "modId": "tap_to_move",
+      "gameVersion": null,
+      "surveyedRelease": "2.3.3"
+    }
   },
   {
     "id": "trainers-let-you-choose-lead-pokemon",
@@ -4288,7 +4946,19 @@
     "summary": "Trainers Let You Choose Lead Pokemon, you don't have to always send out the first one in the party",
     "homepageUrl": "https://github.com/ZyranCZ/Trainers-Let-You-Choose-Lead-Pokemon",
     "releasesUrl": "https://github.com/ZyranCZ/Trainers-Let-You-Choose-Lead-Pokemon/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/ZyranCZ/Trainers-Let-You-Choose-Lead-Pokemon/releases/download/2.0.1/choose_lead_v2.0.1.zip",
+      "sha256": "0121c32226f3a45708d43e458072d6d08b438013cd9e5a1005675c999ffb72ac",
+      "fileSizeBytes": 10385,
+      "version": "2.0.1",
+      "releasedAt": "2026-08-14T18:33:53Z",
+      "manifestPath": "manifest.json",
+      "modId": "choose_lead",
+      "gameVersion": null,
+      "surveyedRelease": "2.0.1"
+    }
   },
   {
     "id": "gen1-pt-br-mod",
@@ -4307,7 +4977,19 @@
     "summary": "mod de Tradução dos jogos da primeira geração através do gen1recomp",
     "homepageUrl": "https://github.com/hydhyro/gen1_pt-br_mod",
     "releasesUrl": "https://github.com/hydhyro/gen1_pt-br_mod/releases",
-    "reviewStatus": "permission-needed"
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/hydhyro/gen1_pt-br_mod/releases/download/0.1.12/gen1_pt-br_mod-0.1.12.zip",
+      "sha256": "cff8b9f12f6d2c4b174eb5cf61bee4af38dc612ad77b459df2e02951c85e895f",
+      "fileSizeBytes": 167502,
+      "version": "0.1.12",
+      "releasedAt": "2026-09-06T19:45:49Z",
+      "manifestPath": "gen1_pt-br_mod-0.1.12/manifest.json",
+      "modId": "gen1_pt-br_mod",
+      "gameVersion": ">=0.0.0-dev <1.0.0",
+      "surveyedRelease": "0.1.12"
+    }
   },
   {
     "id": "3d-pokemon-sprites",
@@ -4326,6 +5008,1803 @@
     "summary": "Makes All Sprites into 3D Models",
     "homepageUrl": "https://github.com/randyadr/3D-Pokemon-Sprites",
     "releasesUrl": "https://github.com/randyadr/3D-Pokemon-Sprites/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/randyadr/3D-Pokemon-Sprites/releases/download/0.1.56/STADIUM_OVERWORLD_MODELS-0.1.56.zip",
+      "sha256": "8f6f4531f278660c7b2835e0748c6eab2713f35bab213886cc137ec81befadbe",
+      "fileSizeBytes": 63395,
+      "version": "0.1.56",
+      "releasedAt": "2026-08-08T20:56:47Z",
+      "manifestPath": "manifest.json",
+      "modId": "STADIUM_OVERWORLD_MODELS",
+      "gameVersion": "0.0.0-dev || >=0.1.30 <2.0.0",
+      "surveyedRelease": "0.1.56"
+    }
+  },
+  {
+    "id": "anglers-cove-aquarium",
+    "title": "Angler's Cove Aquarium",
+    "creator": "Gawd Mode",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Fishing and aquarium sim side activity for Pokémon Crystal, with tank care, unique catches, collectibles, and optional PokeSurvive integration.",
+    "homepageUrl": "https://github.com/GawdMode/anglers-cove-aquarium",
+    "releasesUrl": "https://github.com/GawdMode/anglers-cove-aquarium/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/GawdMode/anglers-cove-aquarium/releases/download/v1.3.2/anglers-cove-aquarium-gen1recomp-1.3.2-fixed.zip",
+      "sha256": "294938be59d8e02da575f3e5a94eb21d8b9203b2ef557cb6c4489147747ad7e0",
+      "fileSizeBytes": 390285,
+      "version": "1.3.2",
+      "releasedAt": "2026-09-19T21:03:38Z",
+      "manifestPath": "manifest.json",
+      "modId": "aquarium_prototype",
+      "gameVersion": ">=0.0.0-0 <2.0.0",
+      "surveyedRelease": "v1.3.2"
+    }
+  },
+  {
+    "id": "battle-factory-remix",
+    "title": "Battle Factory Remix",
+    "creator": "Gawd Mode",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Battle through rental Pokémon challenges, swap your team between rounds, defeat Factory Heads, and earn unique BP rewards.",
+    "homepageUrl": "https://github.com/GawdMode/Battle-Factory-Remix",
+    "releasesUrl": "https://github.com/GawdMode/Battle-Factory-Remix/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/GawdMode/Battle-Factory-Remix/releases/download/v1.2.1/BattleFactoryRemix-v1.2.1-CustomMoveIsolation.zip",
+      "sha256": "1cc5afbdc05668383b026f86703970cc232b98fbec56b9f87848dacf74fb4148",
+      "fileSizeBytes": 107000,
+      "version": "1.2.1",
+      "releasedAt": "2026-09-18T16:00:37Z",
+      "manifestPath": "battle_factory_recomp/manifest.json",
+      "modId": "battle_factory_recomp",
+      "gameVersion": ">=0.2.24 <1.0.0",
+      "surveyedRelease": "v1.2.1"
+    }
+  },
+  {
+    "id": "battlepad",
+    "title": "BattlePad",
+    "creator": "tebwritescode",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Shortcuts for the battle menu: moves and battle actions mapped straight to your controller.",
+    "homepageUrl": "https://github.com/tebwritescode/battlepad",
+    "releasesUrl": "https://github.com/tebwritescode/battlepad/releases",
     "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "bcr",
+    "title": "Bois Club Randomizer",
+    "creator": "bryanthaboi",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Seeded Red/Blue randomizer: wild species at vanilla levels, ground items, shop stock, wild movesets, the three starters, paired two-way warps and map music.",
+    "homepageUrl": "https://github.com/bryanthaboi/bcr",
+    "releasesUrl": "https://github.com/bryanthaboi/bcr/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/bryanthaboi/bcr/releases/download/v1.1.0/bcr-1.1.0.zip",
+      "sha256": "fff9f7668abe8708f835879ef60a548482889abf875e9f7c55ff42b953b84b54",
+      "fileSizeBytes": 32714,
+      "version": "1.1.0",
+      "releasedAt": "2026-08-24T13:58:28Z",
+      "manifestPath": "manifest.json",
+      "modId": "bcr",
+      "gameVersion": null,
+      "surveyedRelease": "v1.1.0"
+    }
+  },
+  {
+    "id": "character-sprite-selection",
+    "title": "Character Sprite Selection",
+    "creator": "xkrisl",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Choose character sprite from the Start menu. Affects overworld, battle, Trainer Card, Hall of Fame, etc.",
+    "homepageUrl": "https://github.com/xkrisl/Character-Sprite-Selection",
+    "releasesUrl": "https://github.com/xkrisl/Character-Sprite-Selection/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/xkrisl/Character-Sprite-Selection/releases/download/Release/Character.Sprite.Selection.v1.Release.zip",
+      "sha256": "d12bc373c72477b3365fcabf7df8fc23329d29b51afdcbad341229f85c0f61cf",
+      "fileSizeBytes": 5062,
+      "version": "1.0.0",
+      "releasedAt": "2026-08-14T20:32:27Z",
+      "manifestPath": "Release/manifest.json",
+      "modId": "character_select",
+      "gameVersion": null,
+      "surveyedRelease": "Release"
+    }
+  },
+  {
+    "id": "pokemon-gold-deutsch-mod",
+    "title": "Deutsch für Pokémon Gold",
+    "creator": "Roxas2712",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Deutsche Beta-Übersetzung für Pokémon Gold: Dialoge, Namen, Menüs, Kämpfe, Schrift und editionsspezifische Grafiken für die importierte US-ROM.",
+    "homepageUrl": "https://github.com/Roxas2712/pokemon-gold-deutsch-mod",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen1recomp-dialogue-portraits",
+    "title": "Dialogue Portraits",
+    "creator": "Nezara",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Shows a portrait of whoever's talking beside the dialogue box: all 45 trainer classes, 28 talking Pokémon, and custom art for anyone else.",
+    "homepageUrl": "https://github.com/Nezara/gen1recomp-dialogue-portraits",
+    "releasesUrl": "https://github.com/Nezara/gen1recomp-dialogue-portraits/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/Nezara/gen1recomp-dialogue-portraits/releases/download/v1.0.2/dialogue_portraits-1.0.2.zip",
+      "sha256": "425863b8b894fac4eb901f15cd538ff1a8e880133d63237b47ebd9d1845d3764",
+      "fileSizeBytes": 203407,
+      "version": "1.0.2",
+      "releasedAt": "2026-08-15T00:09:43Z",
+      "manifestPath": "manifest.json",
+      "modId": "dialogue_portraits",
+      "gameVersion": ">=0.0.0-0 <2.0.0",
+      "surveyedRelease": "v1.0.2"
+    }
+  },
+  {
+    "id": "fast-nurse-joy",
+    "title": "Fast Nurse Joy",
+    "creator": "duderosier",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Skip the wait at every Pokémon Center — and top everything up at the PC.",
+    "homepageUrl": "https://github.com/duderosier/fast-nurse-joy",
+    "releasesUrl": "https://github.com/duderosier/fast-nurse-joy/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/duderosier/fast-nurse-joy/releases/download/v0.2.19/FAST_NURSE_JOY-0_2_19.zip",
+      "sha256": "82d2bd2e0b56ae094064a6b0411fb90d4de7f1af1c029cc6581f6acc2d6b6eb0",
+      "fileSizeBytes": 3727,
+      "version": "0.2.19",
+      "releasedAt": "2026-08-22T20:44:35Z",
+      "manifestPath": "manifest.json",
+      "modId": "FAST_NURSE_JOY",
+      "gameVersion": null,
+      "surveyedRelease": "v0.2.19"
+    }
+  },
+  {
+    "id": "fast-pokemon-center-heal",
+    "title": "Fast Pokemon Center Heal",
+    "creator": "xkrisl",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Skips the pokemon center nurse intro, animation, etc.",
+    "homepageUrl": "https://github.com/xkrisl/Fast-Pokemon-Center-Heal",
+    "releasesUrl": "https://github.com/xkrisl/Fast-Pokemon-Center-Heal/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/xkrisl/Fast-Pokemon-Center-Heal/releases/download/Release/Fast.Pokemon.Center.Heal.v1.Release.zip",
+      "sha256": "cbf72753615c029eb9c3b6cc24ecc08a4199b8a0afd1c7bd243ef1f5556f7090",
+      "fileSizeBytes": 1653,
+      "version": "1.0.0",
+      "releasedAt": "2026-08-14T20:29:10Z",
+      "manifestPath": "Release/manifest.json",
+      "modId": "fast_pokecenter_heal",
+      "gameVersion": null,
+      "surveyedRelease": "Release"
+    }
+  },
+  {
+    "id": "g1gpp",
+    "title": "Gen 1 Glitch Preservation Project",
+    "creator": "Hazard15301",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "A preservation-focused expansion for Pokémon Red and Blue, rewarding curious players who explore beyond the expected.",
+    "homepageUrl": "https://github.com/Hazard15301/G1GPP",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen151",
+    "title": "Gen151",
+    "creator": "Wild",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Every one of the 151 obtainable renewably in one save, on one version, without trading, while every vanilla encounter keeps its exact vanilla behaviour.",
+    "homepageUrl": "https://github.com/wild1walker/Gen151",
+    "releasesUrl": "https://github.com/wild1walker/Gen151/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/wild1walker/Gen151/releases/download/v1.8.0/gen151-1.8.0.zip",
+      "sha256": "f825b5572f41e083e507a2bb1419a8879f547be143c550f65ad965f7dd269dd2",
+      "fileSizeBytes": 133020,
+      "version": "1.8.0",
+      "releasedAt": "2026-09-14T00:51:14Z",
+      "manifestPath": "manifest.json",
+      "modId": "gen151",
+      "gameVersion": ">=0.0.0-0 <2.0.0",
+      "surveyedRelease": "v1.8.0"
+    }
+  },
+  {
+    "id": "gen1arena",
+    "title": "Gen1Arena",
+    "creator": "Wild",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "2D backdrops behind battles, picked by map, tileset and how the encounter started.",
+    "homepageUrl": "https://github.com/wild1walker/Gen1Arena",
+    "releasesUrl": "https://github.com/wild1walker/Gen1Arena/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/wild1walker/Gen1Arena/releases/download/v0.36.0/gen1arena-0.36.0.zip",
+      "sha256": "8c7aa196a7b002c581cb661c89849009b55ba7302f91a31822457d55065a8846",
+      "fileSizeBytes": 1254234,
+      "version": "0.36.0",
+      "releasedAt": "2026-09-15T05:09:20Z",
+      "manifestPath": "manifest.json",
+      "modId": "gen1arena",
+      "gameVersion": ">=0.1.37 <2.0.0",
+      "surveyedRelease": "v0.36.0"
+    }
+  },
+  {
+    "id": "gen1bettermenus",
+    "title": "Gen1BetterMenus",
+    "creator": "Syybott",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Widescreen-friendly Gen 1 menus with cleaner spacing and faithful Game Boy styling",
+    "homepageUrl": "https://github.com/syybott/Gen1Better",
+    "releasesUrl": "https://github.com/syybott/Gen1Better/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen1billsbox",
+    "title": "Gen1BillsBox",
+    "creator": "Wild",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Bill's PC replaced by the box it was always standing in for: the party down the left, twenty visible slots on the right, and a cursor that picks a POKeMON up and puts it down.",
+    "homepageUrl": "https://github.com/wild1walker/Gen1BillsBox",
+    "releasesUrl": "https://github.com/wild1walker/Gen1BillsBox/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/wild1walker/Gen1BillsBox/releases/download/v1.13.0/Gen1BillsBox-1.13.0.zip",
+      "sha256": "a1b455eaad3cf1c3e967dc9546fa643feb6415bc0cff91e8367a0b77ca8281cb",
+      "fileSizeBytes": 203981,
+      "version": "1.13.0",
+      "releasedAt": "2026-09-08T17:04:21Z",
+      "manifestPath": "manifest.json",
+      "modId": "Gen1BillsBox",
+      "gameVersion": ">=0.0.0-0 <2.0.0",
+      "surveyedRelease": "v1.13.0"
+    }
+  },
+  {
+    "id": "gen1follower",
+    "title": "Gen1Follower",
+    "creator": "Wild",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "All 251 Gen 1 and Gen 2 overworld followers, sized by Pokédex proportions, with voxel support. Built from Antigravity & gamecorner33's PokéPC Followers.",
+    "homepageUrl": "https://github.com/wild1walker/Gen1Follower",
+    "releasesUrl": "https://github.com/wild1walker/Gen1Follower/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/wild1walker/Gen1Follower/releases/download/v1.8.0/Gen1Follower-1.8.0.zip",
+      "sha256": "79f96a0b13b0a95880b876bf18d5b908e5c10b51e1b599003fe48a49c346c7bf",
+      "fileSizeBytes": 553313,
+      "version": "1.8.0",
+      "releasedAt": "2026-09-07T01:15:51Z",
+      "manifestPath": "manifest.json",
+      "modId": "Gen1Follower",
+      "gameVersion": "0.0.0-dev || >=0.1.86 <2.0.0",
+      "surveyedRelease": "v1.8.0"
+    }
+  },
+  {
+    "id": "gen1menumanager",
+    "title": "Gen1MenuManager",
+    "creator": "Wild",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Rearrange the START menu and the Pokémon Center PC menu: reorder rows, hide the ones you never touch, and pin field items and moves to rows of their own.",
+    "homepageUrl": "https://github.com/wild1walker/Gen1MenuManager",
+    "releasesUrl": "https://github.com/wild1walker/Gen1MenuManager/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/wild1walker/Gen1MenuManager/releases/download/v0.5.0/Gen1MenuManager-0.5.0.zip",
+      "sha256": "08979c9faf22547f5544a0554cffc46bba4a9acbd3d3ad6dcbf5ab1f6a0ab83a",
+      "fileSizeBytes": 27865,
+      "version": "0.5.0",
+      "releasedAt": "2026-09-07T01:01:29Z",
+      "manifestPath": "manifest.json",
+      "modId": "Gen1MenuManager",
+      "gameVersion": ">=0.0.0-dev <2.0.0",
+      "surveyedRelease": "v0.5.0"
+    }
+  },
+  {
+    "id": "gen1modernbag",
+    "title": "Gen1ModernBag",
+    "creator": "Wild",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Seven inventory pockets with an icon on every row, auto-sorting, Favorites, pinned items, quick search, TM/HM tools and no capacity limit. Derived from FAFF0x's Modern Bag.",
+    "homepageUrl": "https://github.com/wild1walker/Gen1ModernBag",
+    "releasesUrl": "https://github.com/wild1walker/Gen1ModernBag/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/wild1walker/Gen1ModernBag/releases/download/v1.14.0/gen1_modern_bag_v1.14.0.zip",
+      "sha256": "f3af3b22c5c129b0fe754a088c515043ed1b5856d5a949a9552a77a9d6cbb0cc",
+      "fileSizeBytes": 148241,
+      "version": "1.14.0",
+      "releasedAt": "2026-09-07T00:58:59Z",
+      "manifestPath": "gen1_modern_bag/manifest.json",
+      "modId": "gen1_modern_bag",
+      "gameVersion": ">=0.0.0-0 <2.0.0",
+      "surveyedRelease": "v1.14.0"
+    }
+  },
+  {
+    "id": "gen1wildqol",
+    "title": "Gen1WildQOL",
+    "creator": "Wild",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "The quality-of-life half of the suite in one mod: sprinting, autosave, auto continue, sound, followers, all 151, EXP share, the move reminder and the mod manager.",
+    "homepageUrl": "https://github.com/wild1walker/Gen1WildQOL",
+    "releasesUrl": "https://github.com/wild1walker/Gen1WildQOL/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/wild1walker/Gen1WildQOL/releases/download/v1.33.0/gen1_wild_qol-1.33.0.zip",
+      "sha256": "8c43aebbf60aa8972cd011638d6f5b0ba1853795335da395c883f806950ecd6f",
+      "fileSizeBytes": 893570,
+      "version": "1.33.0",
+      "releasedAt": "2026-09-14T00:55:23Z",
+      "manifestPath": "manifest.json",
+      "modId": "gen1_wild_qol",
+      "gameVersion": ">=0.2.57 <2.0.0",
+      "surveyedRelease": "v1.33.0"
+    }
+  },
+  {
+    "id": "gen1wildui",
+    "title": "Gen1WildUI",
+    "creator": "Wild",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "The visual half of the suite in one mod: battle backdrops and intro, the battle menus, the Pokédex, the box, the party menu, the bag, item icons and descriptions, the lift panel.",
+    "homepageUrl": "https://github.com/wild1walker/Gen1WildUI",
+    "releasesUrl": "https://github.com/wild1walker/Gen1WildUI/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/wild1walker/Gen1WildUI/releases/download/v1.42.0/gen1_wild_ui-1.42.0.zip",
+      "sha256": "887f17aad5ebcb86c3025b9b1ac7e7ae7001e5e287e33e09cfc2cf994fbc1aa6",
+      "fileSizeBytes": 1968981,
+      "version": "1.42.0",
+      "releasedAt": "2026-09-15T05:11:06Z",
+      "manifestPath": "manifest.json",
+      "modId": "gen1_wild_ui",
+      "gameVersion": ">=0.1.37 <2.0.0",
+      "surveyedRelease": "v1.42.0"
+    }
+  },
+  {
+    "id": "versaocristal",
+    "title": "Gen2 Tradução pt-br  crystal",
+    "creator": "LordSangreal",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Pokémon Crystal em português brasileiro. Tradução própria, escrita do inglês original de cada fala, com registro duplo de ponteiros e compatibilidade total com o gen1recomp.",
+    "homepageUrl": "https://github.com/LordSangreal/versaocristal",
+    "releasesUrl": "https://github.com/LordSangreal/versaocristal/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/LordSangreal/versaocristal/releases/download/v0.57.9/versaocristal-0.57.9.zip",
+      "sha256": "90e7e06f83024688d2e8306875be6591f7e8f0fff17099ac70af1fcf4dbd0bc3",
+      "fileSizeBytes": 494747,
+      "version": "0.57.9",
+      "releasedAt": "2026-09-05T17:14:12Z",
+      "manifestPath": "manifest.json",
+      "modId": "versaocristal",
+      "gameVersion": ">=0.0.0-0 <2.0.0",
+      "surveyedRelease": "v0.57.9"
+    }
+  },
+  {
+    "id": "infinite-tms",
+    "title": "infinite_tms",
+    "creator": "bastinjul",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Mod that allows you to use TMs indefinitely",
+    "homepageUrl": "https://github.com/bastinjul/infinite_tms",
+    "releasesUrl": "https://github.com/bastinjul/infinite_tms/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/bastinjul/infinite_tms/releases/download/v0.1.0/infinite_tms-0.1.0.zip",
+      "sha256": "fbd9ba48fb7dbc8db9ac2084381addb2e0b5ef1a2c5a767637b4b2a23f4bb870",
+      "fileSizeBytes": 1414,
+      "version": "0.1.0",
+      "releasedAt": "2026-08-30T10:21:18Z",
+      "manifestPath": "manifest.json",
+      "modId": "infinite_tms",
+      "gameVersion": ">=0.0.0-dev <1.0.0",
+      "surveyedRelease": "v0.1.0"
+    }
+  },
+  {
+    "id": "level-match-mod",
+    "title": "Level Match Mod",
+    "creator": "MayoMan7",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Scales enemy trainer Pokemon up to the highest level in the player's healthy party.",
+    "homepageUrl": "https://github.com/MayoMan7/level_match_mod",
+    "releasesUrl": "https://github.com/MayoMan7/level_match_mod/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/MayoMan7/level_match_mod/releases/download/v0.1.0/level_match_mod-0.1.0.zip",
+      "sha256": "43a334a242d624c5862816a1a622de6c0ee6dcc9045e0365ffeebb996ac35d93",
+      "fileSizeBytes": 2221,
+      "version": "0.1.0",
+      "releasedAt": "2026-08-31T20:10:44Z",
+      "manifestPath": "manifest.json",
+      "modId": "level_match_mod",
+      "gameVersion": ">=0.0.0-dev <1.0.0",
+      "surveyedRelease": "v0.1.0"
+    }
+  },
+  {
+    "id": "mars-s-expanded-kanto",
+    "title": "Mars's Expanded Kanto",
+    "creator": "MarsCrowley",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "A large-scale content overhaul for Pokemon Red/Blue in Gen1Recomp",
+    "homepageUrl": "https://github.com/MarsCrowley/Mars-s-Expanded-Kanto",
+    "releasesUrl": "https://github.com/MarsCrowley/Mars-s-Expanded-Kanto/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/MarsCrowley/Mars-s-Expanded-Kanto/releases/download/patch/mars_expanded_kanto-1.0.1.zip",
+      "sha256": "4ea6ca940be383e3961a2bbb543ddcb1899db866ee73021543ceb28003e5d2f2",
+      "fileSizeBytes": 4137641,
+      "version": "1.0.1",
+      "releasedAt": "2026-09-08T17:24:23Z",
+      "manifestPath": "manifest.json",
+      "modId": "mars_expanded_kanto",
+      "gameVersion": null,
+      "surveyedRelease": "patch"
+    }
+  },
+  {
+    "id": "gen1recomp-music1-frlg",
+    "title": "Music1-FRLG",
+    "creator": "DarioMelo",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Music from FireRed / LeafGreen",
+    "homepageUrl": "https://github.com/DarioMelo/Gen1Recomp-Music1-FRLG",
+    "releasesUrl": "https://github.com/DarioMelo/Gen1Recomp-Music1-FRLG/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/DarioMelo/Gen1Recomp-Music1-FRLG/releases/download/26.09.05/Music1_FRLG-26.09.05.zip",
+      "sha256": "c841418c6b72e4726fde0a4a08d83bd9ac006a572f685c46ff9c076f1236a749",
+      "fileSizeBytes": 161338656,
+      "version": "26.09.05",
+      "releasedAt": "2026-09-06T01:15:04Z",
+      "manifestPath": "manifest.json",
+      "modId": "Music1_FRLG",
+      "gameVersion": ">=0.1.83",
+      "surveyedRelease": "26.09.05"
+    }
+  },
+  {
+    "id": "gen1recomp-music1-hgss",
+    "title": "Music1-HGSS",
+    "creator": "DarioMelo",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Music from HeartGold / SoulSilver",
+    "homepageUrl": "https://github.com/DarioMelo/Gen1Recomp-Music1-HGSS",
+    "releasesUrl": "https://github.com/DarioMelo/Gen1Recomp-Music1-HGSS/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/DarioMelo/Gen1Recomp-Music1-HGSS/releases/download/26.09.05/Music1_HGSS-26.09.05.zip",
+      "sha256": "abf49096a609cb671da4191c4c5d22fc99352104da1a09565cb918afcf19d3e3",
+      "fileSizeBytes": 209431771,
+      "version": "26.09.05",
+      "releasedAt": "2026-09-06T01:13:21Z",
+      "manifestPath": "manifest.json",
+      "modId": "Music1_HGSS",
+      "gameVersion": ">=0.1.83",
+      "surveyedRelease": "26.09.05"
+    }
+  },
+  {
+    "id": "gen1recomp-music1-lgpe",
+    "title": "Music1-LGPE",
+    "creator": "DarioMelo",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Music from Let's Go Pikachu / Let's Go Eevee",
+    "homepageUrl": "https://github.com/DarioMelo/Gen1Recomp-Music1-LGPE",
+    "releasesUrl": "https://github.com/DarioMelo/Gen1Recomp-Music1-LGPE/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/DarioMelo/Gen1Recomp-Music1-LGPE/releases/download/26.09.05/Music1_LGPE-26.09.05.zip",
+      "sha256": "165dfc3c45c04ec6f3f9dbd29fa82b6236a6768a5752d17dbc780b0c5e5d7d1d",
+      "fileSizeBytes": 161416794,
+      "version": "26.09.05",
+      "releasedAt": "2026-09-06T01:11:55Z",
+      "manifestPath": "manifest.json",
+      "modId": "Music1_LGPE",
+      "gameVersion": ">=0.1.83",
+      "surveyedRelease": "26.09.05"
+    }
+  },
+  {
+    "id": "gen1recomp-music2-hgss",
+    "title": "Music2-HGSS",
+    "creator": "DarioMelo",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Music from HeartGold / SoulSilver",
+    "homepageUrl": "https://github.com/DarioMelo/Gen1Recomp-Music2-HGSS",
+    "releasesUrl": "https://github.com/DarioMelo/Gen1Recomp-Music2-HGSS/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/DarioMelo/Gen1Recomp-Music2-HGSS/releases/download/26.09.05/Music2_HGSS-26.09.05.zip",
+      "sha256": "994c199a913995edbbfdd54d208cc61317b7fd5b181a791e35a12c29ae6f37e6",
+      "fileSizeBytes": 325270376,
+      "version": "26.09.05",
+      "releasedAt": "2026-09-06T01:06:16Z",
+      "manifestPath": "manifest.json",
+      "modId": "Music2_HGSS",
+      "gameVersion": ">=0.1.83",
+      "surveyedRelease": "26.09.05"
+    }
+  },
+  {
+    "id": "mutant-monster-lab",
+    "title": "Mutant Monster Lab",
+    "creator": "Gawd Mode",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Splice Pokémon mutations and unleash global phenomena with the Holon Collider.",
+    "homepageUrl": "https://github.com/GawdMode/Mutant-Monster-Lab",
+    "releasesUrl": "https://github.com/GawdMode/Mutant-Monster-Lab/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/GawdMode/Mutant-Monster-Lab/releases/download/v1.1.0/Mutant-Monster-Lab-v1.1.0-GitHubUpdateFix-patched.zip",
+      "sha256": "17cb43dfd4a7e8cba6cf1ccc9c771bd0aa9bbf18833b70a89cc334014648ed38",
+      "fileSizeBytes": 2953192,
+      "version": "1.1.0",
+      "releasedAt": "2026-09-08T15:44:03Z",
+      "manifestPath": "mutant_monster_lab/manifest.json",
+      "modId": "cinnabar_experimental_lab",
+      "gameVersion": ">=0.2.55 <1.0.0",
+      "surveyedRelease": "v1.1.0"
+    }
+  },
+  {
+    "id": "stone696-nuzlocke",
+    "title": "Nuzlocke",
+    "creator": "Stone696",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Configurable Nuzlocke enforcement: permadeath, one catch per area, level caps, species lockes, run history and a randomizer.",
+    "homepageUrl": "https://github.com/Stone696/nuzlocke",
+    "releasesUrl": "https://github.com/Stone696/nuzlocke/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/Stone696/nuzlocke/releases/download/2.9.72/Nuzlocke_2.9.72.zip",
+      "sha256": "43c52f8bc3588dc779215c1d731c20c7e95cc799e2c938b91fcf90061569e81b",
+      "fileSizeBytes": 1203251,
+      "version": "2.9.72",
+      "releasedAt": "2026-08-30T21:59:27Z",
+      "manifestPath": "manifest.json",
+      "modId": "nuzlocke",
+      "gameVersion": ">=0.2.24 <2.0.0",
+      "surveyedRelease": "2.9.72"
+    }
+  },
+  {
+    "id": "pixelgen1-font",
+    "title": "PixelGen1 Font",
+    "creator": "ShaneMcGovernIE",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "A Gen 1-style proportional font with refined glyphs, cleaner spacing, and centered summary-screen next EXP.",
+    "homepageUrl": "https://github.com/Nexhas28/PixelGen1_Font",
+    "releasesUrl": "https://github.com/Nexhas28/PixelGen1_Font/releases",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "porygonal-overworld-characters",
+    "title": "Porygonal - Overworld Characters",
+    "creator": "CurlyG004",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Replaces overworld character sprites with custom polygonal 3D models.",
+    "homepageUrl": "https://github.com/CurlyG004/porygonal-overworld-characters",
+    "releasesUrl": "https://github.com/CurlyG004/porygonal-overworld-characters/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/CurlyG004/porygonal-overworld-characters/releases/download/v0.6.5/PORYGONAL_OVERWORLD_CHARACTERS-0.6.5.zip",
+      "sha256": "f3e140cc83e5768e6ba28d659ae05360a24e9b0ededd0efd11c794842a192502",
+      "fileSizeBytes": 1924398,
+      "version": "0.6.5",
+      "releasedAt": "2026-09-14T15:29:50Z",
+      "manifestPath": "manifest.json",
+      "modId": "PORYGONAL_OVERWORLD_CHARACTERS",
+      "gameVersion": "0.0.0-dev || >=0.1.37 <2.0.0",
+      "surveyedRelease": "v0.6.5"
+    }
+  },
+  {
+    "id": "rbyrunforrest",
+    "title": "Run Forrest",
+    "creator": "alamops",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Hold B to run at bike speed, and to jump back UP the ledges these games only ever let you drop off. On foot or on the bike, Red through Gold.",
+    "homepageUrl": "https://github.com/alamops/RBYRunForrest",
+    "releasesUrl": "https://github.com/alamops/RBYRunForrest/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/alamops/RBYRunForrest/releases/download/v1.1.0/rby_run_forrest-1.1.0.zip",
+      "sha256": "1a70f685f30cd042aba4c86c0af46f75267bf7c2975b7381a8c8b2476b749193",
+      "fileSizeBytes": 21176,
+      "version": "1.1.0",
+      "releasedAt": "2026-08-19T03:09:39Z",
+      "manifestPath": "manifest.json",
+      "modId": "rby_run_forrest",
+      "gameVersion": ">=0.1.86 <2.0.0",
+      "surveyedRelease": "v1.1.0"
+    }
+  },
+  {
+    "id": "safari-derby",
+    "title": "Safari Derby",
+    "creator": "Gawd Mode",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Race and train your Pokémon at Fuchsia's Safari Derby, compete in cups, wager on races, earn ribbons, and unlock unique prizes.",
+    "homepageUrl": "https://github.com/GawdMode/Safari-Derby",
+    "releasesUrl": "https://github.com/GawdMode/Safari-Derby/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/GawdMode/Safari-Derby/releases/download/v1.2.1/Safari-Derby-v1.2.1-fixed.zip",
+      "sha256": "d1a582c788bc344531aa4157d9c06da6928229357a4dfc52c858ee4090605f3a",
+      "fileSizeBytes": 11986021,
+      "version": "1.2.1",
+      "releasedAt": "2026-09-19T21:04:40Z",
+      "manifestPath": "manifest.json",
+      "modId": "safari_derby",
+      "gameVersion": ">=0.2.53 <2.0.0",
+      "surveyedRelease": "v1.2.1"
+    }
+  },
+  {
+    "id": "solo-run-modpack-gen1-recomp",
+    "title": "Solo Run Modpack",
+    "creator": "Gym Leader Matt",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "A collection for the solo run experience.",
+    "homepageUrl": "https://github.com/GymLeaderMatt/Solo_Run_Modpack_Gen1_Recomp",
+    "reviewStatus": "permission-needed"
+  },
+  {
+    "id": "gen1recomp-simple-speed-indicator",
+    "title": "Speed Indicator",
+    "creator": "Tonedawg1",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Flashes the current game speed (2X, 10X, etc.) in the bottom-left when you change it.",
+    "homepageUrl": "https://github.com/Tonedawg1/gen1recomp-simple-speed-indicator-",
+    "releasesUrl": "https://github.com/Tonedawg1/gen1recomp-simple-speed-indicator-/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/Tonedawg1/gen1recomp-simple-speed-indicator-/releases/download/v1.1.2/speed_flash-1.1.2.zip",
+      "sha256": "4544e75e737da4122ddeec561aac772624533d29948e476ca0dfd71a8b4a625e",
+      "fileSizeBytes": 2050,
+      "version": "1.1.2",
+      "releasedAt": "2026-09-01T20:29:01Z",
+      "manifestPath": "manifest.json",
+      "modId": "speed_flash",
+      "gameVersion": null,
+      "surveyedRelease": "v1.1.2"
+    }
+  },
+  {
+    "id": "gen1recomp-tm-hm-names",
+    "title": "TM/HM Move Names",
+    "creator": "Tonedawg1",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Shows move names next to TM/HM numbers; long names can scroll the text while the item is highlighted.",
+    "homepageUrl": "https://github.com/Tonedawg1/gen1recomp-tm-hm-names",
+    "releasesUrl": "https://github.com/Tonedawg1/gen1recomp-tm-hm-names/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/Tonedawg1/gen1recomp-tm-hm-names/releases/download/1.2.0/tm_hm_names-1.2.0.zip",
+      "sha256": "42638d84d60f7fbb55de815ab3748b9b530ca8a21239f680b9a95295b7eb4b64",
+      "fileSizeBytes": 4226,
+      "version": "1.2.0",
+      "releasedAt": "2026-09-14T12:52:57Z",
+      "manifestPath": "tm_hm_names-1.2.0/manifest.json",
+      "modId": "tm_hm_names",
+      "gameVersion": null,
+      "surveyedRelease": "1.2.0"
+    }
+  },
+  {
+    "id": "gen1recomp-trainer-avatars",
+    "title": "Trainer Avatars: Choose Your Path",
+    "creator": "RouteboundMods",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Choose from twelve trainer avatars with matching artwork, optional path Pokemon, and class-themed roleplaying details.",
+    "homepageUrl": "https://github.com/RouteboundMods/gen1recomp-trainer-avatars",
+    "releasesUrl": "https://github.com/RouteboundMods/gen1recomp-trainer-avatars/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/RouteboundMods/gen1recomp-trainer-avatars/releases/download/v1.0.0/trainer_avatars-1.0.0.zip",
+      "sha256": "7d6ae42e9f6656b24246c439e55ff7940ebc594a0e584ddbf72f26e04865b37c",
+      "fileSizeBytes": 34005,
+      "version": "1.0.0",
+      "releasedAt": "2026-08-23T16:58:53Z",
+      "manifestPath": "manifest.json",
+      "modId": "trainer_avatars",
+      "gameVersion": ">=0.0.0-0 <2.0.0",
+      "surveyedRelease": "v1.0.0"
+    }
+  },
+  {
+    "id": "trainer-skins",
+    "title": "Trainer Skins",
+    "creator": "DarkwarePX",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Trainer Skins adds customizable trainer sprites to Pokémon Gen 1 and Gen 2 in Gen 1 Recomp.",
+    "homepageUrl": "https://github.com/DarkwarePX/Trainer-Skins",
+    "releasesUrl": "https://github.com/DarkwarePX/Trainer-Skins/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/DarkwarePX/Trainer-Skins/releases/download/V0.2.0/trainer_skins-0.2.0.zip",
+      "sha256": "9295d0f2749d9e5519257fdb6609f781af3b8482cfc91e28fcd2a0437cd5ce36",
+      "fileSizeBytes": 1899698,
+      "version": "0.2.0",
+      "releasedAt": "2026-09-05T23:00:26Z",
+      "manifestPath": "trainer_skins/manifest.json",
+      "modId": "trainer_skins",
+      "gameVersion": ">=0.2.32",
+      "surveyedRelease": "V0.2.0"
+    }
+  },
+  {
+    "id": "vanilla",
+    "title": "Vanilla+",
+    "creator": "GiveScottPot",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Gen I expansion focused on QoL, encounters, field tools, and new interactions.",
+    "homepageUrl": "https://github.com/GiveScottPot/Vanilla-",
+    "releasesUrl": "https://github.com/GiveScottPot/Vanilla-/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/GiveScottPot/Vanilla-/releases/download/v1.4.0/VanillaPlus-v1.4.0.zip",
+      "sha256": "fc964be53ebe9f68ade20e56bfcb890381ab82264513d64534ccb16132b27ad3",
+      "fileSizeBytes": 106297,
+      "version": "1.4.0",
+      "releasedAt": "2026-09-14T16:14:20Z",
+      "manifestPath": "manifest.json",
+      "modId": "vanillaplus",
+      "gameVersion": ">=0.2.56 <2.0.0",
+      "surveyedRelease": "v1.4.0"
+    }
+  },
+  {
+    "id": "nexhas28-gen1recomp-widescreen-battle-intro",
+    "title": "Widescreen Battle Intro",
+    "creator": "Nexhas28",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Extends the battle intro's flash effect across the whole window, so on non-4:3 displays it no longer plays inside a centered 4:3 square.",
+    "homepageUrl": "https://github.com/Nexhas28/gen1recomp-widescreen-battle-intro",
+    "releasesUrl": "https://github.com/Nexhas28/gen1recomp-widescreen-battle-intro/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/Nexhas28/gen1recomp-widescreen-battle-intro/releases/download/v1.6.0/widescreen_battle_intro-1.6.0.zip",
+      "sha256": "dc61081c9d4331b2e9004f65e0753a47a4b52c2bf9624179bbe1249d99048c5e",
+      "fileSizeBytes": 13762,
+      "version": "1.6.0",
+      "releasedAt": "2026-08-29T20:58:38Z",
+      "manifestPath": "manifest.json",
+      "modId": "widescreen_battle_intro",
+      "gameVersion": null,
+      "surveyedRelease": "v1.6.0"
+    }
+  },
+  {
+    "id": "voxelvr",
+    "title": "VoxelVR",
+    "creator": "scottcandy34",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "PCVR / OpenXR companion for Dramatic Shape Voxel Mod (gen1recomp). Windows only.",
+    "homepageUrl": "https://github.com/scottcandy34/VoxelVR",
+    "releasesUrl": "https://github.com/scottcandy34/VoxelVR/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/scottcandy34/VoxelVR/releases/download/v1.0.0/VOXEL_VR-1.0.0.zip",
+      "sha256": "d73dad10cc0021688a71b93f7d82b4fcd005dbf989f2ac89c5ef5ed289403303",
+      "fileSizeBytes": 768615,
+      "version": "1.0.0",
+      "releasedAt": "2026-08-21T12:38:40Z",
+      "manifestPath": "manifest.json",
+      "modId": "VOXEL_VR",
+      "gameVersion": "0.0.0-dev || >=0.1.37 <2.0.0",
+      "surveyedRelease": "v1.0.0"
+    }
+  },
+  {
+    "id": "silver-sprites",
+    "title": "Pokémon Silver Sprites True Color & Grayscale",
+    "creator": "OtaconRevengeance",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "silver_sprites for gen1recomp",
+    "homepageUrl": "https://github.com/OtaconRevengeance/silver_sprites",
+    "releasesUrl": "https://github.com/OtaconRevengeance/silver_sprites/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/OtaconRevengeance/silver_sprites/releases/download/sssprites/Pokemon.Silver.Sprites.0.9.6.zip",
+      "sha256": "863bf6f28bc7616e114e6bbe3b11ba3180e025f1b061cf3b1a4e58f8322a00bc",
+      "fileSizeBytes": 640408,
+      "version": "0.9.6",
+      "releasedAt": "2026-08-11T18:51:17Z",
+      "manifestPath": "silver_sprites/manifest.json",
+      "modId": "silver_sprites",
+      "gameVersion": null,
+      "surveyedRelease": "sssprites"
+    }
+  },
+  {
+    "id": "translation-german-universal",
+    "title": "Translation German Universal",
+    "creator": "Roxas2712",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Universelle deutsche Übersetzungsmod für Pokémon Rot, Blau, Gelb, Gold und Silber in Gen1Recomp",
+    "homepageUrl": "https://github.com/Roxas2712/translation-german-universal",
+    "releasesUrl": "https://github.com/Roxas2712/translation-german-universal/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/Roxas2712/translation-german-universal/releases/download/v0.2.0/translation-german-universal-0.2.0.zip",
+      "sha256": "0003a9c8d1c0a06a0a1bf9d1fa61fa0f763f65c923323700a5b8f55520a7143b",
+      "fileSizeBytes": 1112160,
+      "version": "0.2.0",
+      "releasedAt": "2026-08-25T23:42:08Z",
+      "manifestPath": "manifest.json",
+      "modId": "translation-german-universal",
+      "gameVersion": ">=0.2.22 <1.0.0",
+      "surveyedRelease": "v0.2.0"
+    }
+  },
+  {
+    "id": "gen1recomp-evolution-man",
+    "title": "Evolution Man",
+    "creator": "thorkdev",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "An NPC who evolves a trade-only POKéMON for $4000, no link cable needed.",
+    "homepageUrl": "https://github.com/thorkdev/gen1recomp-evolution-man",
+    "releasesUrl": "https://github.com/thorkdev/gen1recomp-evolution-man/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/thorkdev/gen1recomp-evolution-man/releases/download/0.1.1/evolution_man_0.1.1.zip",
+      "sha256": "20a25aa15e1af800467da2504eb716aeff2503a2bdec25637a2d465790e88509",
+      "fileSizeBytes": 6300,
+      "version": "0.1.1",
+      "releasedAt": "2026-08-12T07:28:15Z",
+      "manifestPath": "manifest.json",
+      "modId": "evolution_man",
+      "gameVersion": ">=0.0.0-0 <2.0.0",
+      "surveyedRelease": "0.1.1"
+    }
+  },
+  {
+    "id": "gen1recomp-nexus-ui",
+    "title": "Nexus UI 1.0.83",
+    "creator": "THCrazy420",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "11 in 1 UI replacement",
+    "homepageUrl": "https://github.com/THCrazy420/Gen1recomp-Nexus-UI",
+    "releasesUrl": "https://github.com/THCrazy420/Gen1recomp-Nexus-UI/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/THCrazy420/Gen1recomp-Nexus-UI/releases/download/1.0.83/NEXUS_UI-1.0.83.zip",
+      "sha256": "d52f6b5eadc65095557f351ac735e0a35facfea2e004dcfcd32add8ccdc97879",
+      "fileSizeBytes": 16596310,
+      "version": "1.0.83",
+      "releasedAt": "2026-09-09T04:29:19Z",
+      "manifestPath": "manifest.json",
+      "modId": "NEXUS_UI",
+      "gameVersion": "0.0.0-dev || >=0.1.69 <3.0.0",
+      "surveyedRelease": "1.0.83"
+    }
+  },
+  {
+    "id": "rbyvehicles",
+    "title": "RBY Vehicles",
+    "creator": "alamops",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "A Gen1Recomp mod for vehicles",
+    "homepageUrl": "https://github.com/alamops/RBYVehicles",
+    "releasesUrl": "https://github.com/alamops/RBYVehicles/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/alamops/RBYVehicles/releases/download/v0.1.0/rby_vehicles-0.1.0.zip",
+      "sha256": "ef15d7a28bd21c3afc8586e86453043e805db2afee66bd435a11447ee8f261b7",
+      "fileSizeBytes": 109569,
+      "version": "0.1.0",
+      "releasedAt": "2026-09-07T17:29:39Z",
+      "manifestPath": "manifest.json",
+      "modId": "rby_vehicles",
+      "gameVersion": ">=0.1.86 <2.0.0",
+      "surveyedRelease": "v0.1.0"
+    }
+  },
+  {
+    "id": "max-bag-capacity-gen2",
+    "title": "Max Bag Capacity",
+    "creator": "Hunter",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Bottomless bag mod for Gen2Recomp",
+    "homepageUrl": "https://github.com/hunter6571/max_bag_capacity_gen2",
+    "releasesUrl": "https://github.com/hunter6571/max_bag_capacity_gen2/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/hunter6571/max_bag_capacity_gen2/releases/download/v1.0/Max_bag_capacity_gen2.zip",
+      "sha256": "03f55e45fc0168fc7c169bf2226c678d56c8bfd65f8090c4875775087498f42d",
+      "fileSizeBytes": 1132,
+      "version": "1.0.0",
+      "releasedAt": "2026-08-20T18:45:58Z",
+      "manifestPath": "manifest.json",
+      "modId": "max_bag_capacity",
+      "gameVersion": null,
+      "surveyedRelease": "v1.0"
+    }
+  },
+  {
+    "id": "hm-anywhere-gen2",
+    "title": "HM Anywhere (Gen 2)",
+    "creator": "hunter6571",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "HM Anywhere mod ported for Gen2Recomp",
+    "homepageUrl": "https://github.com/hunter6571/hm_anywhere_gen2",
+    "releasesUrl": "https://github.com/hunter6571/hm_anywhere_gen2/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/hunter6571/hm_anywhere_gen2/releases/download/v1.2.6/hm_anywhere_gen2.zip",
+      "sha256": "dbecac01ac1c3b7f4277988e0d546ba560006347c8aa931a043557f1453ab344",
+      "fileSizeBytes": 8999,
+      "version": "1.2.5",
+      "releasedAt": "2026-08-22T19:14:06Z",
+      "manifestPath": "manifest.json",
+      "modId": "hm_anywhere_gen2",
+      "gameVersion": ">=0.0.0-0 <2.0.0",
+      "surveyedRelease": "v1.2.6"
+    }
+  },
+  {
+    "id": "s-j-s-aio-gen-2",
+    "title": "S&J's AIO for Gen 2",
+    "creator": "shadowjackyl",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "All in one mod for gen2recomp GEN 2",
+    "homepageUrl": "https://github.com/shadowjackyl/S-J-s-AIO-Gen-2",
+    "releasesUrl": "https://github.com/shadowjackyl/S-J-s-AIO-Gen-2/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/shadowjackyl/S-J-s-AIO-Gen-2/releases/download/v1.0.61-beta/SJ-AIO-Gen2-v1.0.61-beta-hotfix.zip",
+      "sha256": "4d0b28311f76fb91debc71c20f1f800088a4287a8ffd07c407b44457a5b30a8d",
+      "fileSizeBytes": 26539171,
+      "version": "1.0.61-beta",
+      "releasedAt": "2026-09-18T21:11:16Z",
+      "manifestPath": "manifest.json",
+      "modId": "GEN2_STADIUM_ULTIMATE_251",
+      "gameVersion": ">=0.7.6 <1.0.0",
+      "surveyedRelease": "v1.0.61-beta"
+    }
+  },
+  {
+    "id": "gen2recomp-indigo97",
+    "title": "INDIGO//97",
+    "creator": "n47h4ni3l",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "ROM-safe late-1990s anime-inspired true-colour player mod for Gen2Recomped",
+    "homepageUrl": "https://github.com/n47h4ni3l/gen2recomp-indigo97",
+    "releasesUrl": "https://github.com/n47h4ni3l/gen2recomp-indigo97/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/n47h4ni3l/gen2recomp-indigo97/releases/download/v1.5.0/indigo_97-1.5.0.zip",
+      "sha256": "2cc3e9e7f1de286a1efe04afe50992f6f6a5a4bf18d99eb70f5eb71478de686b",
+      "fileSizeBytes": 15406,
+      "version": "1.5.0",
+      "releasedAt": "2026-08-22T01:06:02Z",
+      "manifestPath": "manifest.json",
+      "modId": "indigo_97",
+      "gameVersion": ">=0.7.6 <1.0.0",
+      "surveyedRelease": "v1.5.0"
+    }
+  },
+  {
+    "id": "gen-1-recomp-modern-types-moves",
+    "title": "Steel, Dark & Fairy Types",
+    "creator": "YourName",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Brings modern Pokémon typings (Steel, Dark, Fairy) to Gen 1 Recomp, complete with updated type matchups, retroactively patched vanilla Pokémon, and new signature moves injected seamlessly into level-up learnsets.",
+    "homepageUrl": "https://github.com/RonikBasnet/Gen-1-Recomp-Modern-Types-Moves",
+    "releasesUrl": "https://github.com/RonikBasnet/Gen-1-Recomp-Modern-Types-Moves/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/RonikBasnet/Gen-1-Recomp-Modern-Types-Moves/releases/download/release/modern_types-0.9.0.zip",
+      "sha256": "705d681846a558b49734bb706b16ac02984eb0d9b17bf8bce9b3a67e63df2ab2",
+      "fileSizeBytes": 1859,
+      "version": "0.9.0",
+      "releasedAt": "2026-09-18T08:10:34Z",
+      "manifestPath": "manifest.json",
+      "modId": "modern_types",
+      "gameVersion": null,
+      "surveyedRelease": "release"
+    }
+  },
+  {
+    "id": "gen1recomp-perfect-start",
+    "title": "All Three Johto Starters",
+    "creator": "Windwrecker",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "A Gen1Recomp mod that gives the player Chikorita, Cyndaquil, and Totodile after choosing a starter in Pokémon Gold.",
+    "homepageUrl": "https://github.com/Windwrecker/Gen1recomp-Perfect-Start",
+    "releasesUrl": "https://github.com/Windwrecker/Gen1recomp-Perfect-Start/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/Windwrecker/Gen1recomp-Perfect-Start/releases/download/gen2/all_three_johto_starters_v1.1.1.zip",
+      "sha256": "c024164564cf575137badbe190dae311159021d5684803ac58f70be43fb4d841",
+      "fileSizeBytes": 3435,
+      "version": "1.1.1",
+      "releasedAt": "2026-08-12T14:33:55Z",
+      "manifestPath": "manifest.json",
+      "modId": "all_three_starters",
+      "gameVersion": ">=0.1.79 <1.0.0",
+      "surveyedRelease": "gen2"
+    }
+  },
+  {
+    "id": "pokemon-anime-brawler",
+    "title": "Pokemon Anime Brawler",
+    "creator": "GBurgardt",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Real-time wild Pokemon Red arena combat for Gen1Recomp: move, dodge, fire actual moves and fight a coordinated 2v1.",
+    "homepageUrl": "https://github.com/GBurgardt/pokemon-anime-brawler",
+    "releasesUrl": "https://github.com/GBurgardt/pokemon-anime-brawler/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/GBurgardt/pokemon-anime-brawler/releases/download/v0.3.0/anime_brawler-0.3.0.zip",
+      "sha256": "807211a422f5b6c02acf253c164381bdbdf636d4acb147664d675e65a59396fc",
+      "fileSizeBytes": 6635306,
+      "version": "0.3.0",
+      "releasedAt": "2026-08-24T00:06:13Z",
+      "manifestPath": "manifest.json",
+      "modId": "anime_brawler",
+      "gameVersion": ">=0.0.0-0 <2.0.0",
+      "surveyedRelease": "v0.3.0"
+    }
+  },
+  {
+    "id": "gen1recomp-mod-crystal-251",
+    "title": "Crystal 251",
+    "creator": "Deftones565",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Requires your own English Pokemon Crystal ROM. Adds Generation II battles, 251 Pokemon, breeding, ecology, and legendary sanctuaries.",
+    "homepageUrl": "https://github.com/Deftones565/gen1recomp-mod-crystal-251",
+    "releasesUrl": "https://github.com/Deftones565/gen1recomp-mod-crystal-251/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/Deftones565/gen1recomp-mod-crystal-251/releases/download/v0.12.0/CRYSTAL_251-0.12.0.zip",
+      "sha256": "1990a0612c04ef9b178fb0831e88105d46d01764357f144594d388dccba88f5f",
+      "fileSizeBytes": 263151,
+      "version": "0.12.0",
+      "releasedAt": "2026-09-15T17:10:24Z",
+      "manifestPath": "manifest.json",
+      "modId": "CRYSTAL_251",
+      "gameVersion": ">=0.1.86 <1.0.0",
+      "surveyedRelease": "v0.12.0"
+    }
+  },
+  {
+    "id": "lucianoneo-gen1recomp-mods",
+    "title": "HGSS Visual Overhaul",
+    "creator": "LucianoNeo",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "HGSS intro and overworld overhaul for Gen 1 and Gen 2. PLAYER SELECT controls matching Red, Ash, Ethan, Lyra, Kris, Kris V2, Leaf or Brendan walking, bicycle, fishing and battle-back assets. TRAINER ART includes the credited HGSS-compatible portrait set for Gen 1 and Gen 2, with non-canonical compatibility alternatives for every legacy Gen1 trainer class; Gen 2 battle Pokémon remain native.",
+    "homepageUrl": "https://github.com/LucianoNeo/gen1recomp-mods",
+    "releasesUrl": "https://github.com/LucianoNeo/gen1recomp-mods/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/LucianoNeo/gen1recomp-mods/releases/download/v2.1.5/HGSS_SPRITES-2.1.5.zip",
+      "sha256": "3e71edbaca6226d6f64669b0348b20eb0f647748f0d0617d4bc0191383d4e822",
+      "fileSizeBytes": 86509030,
+      "version": "2.1.5",
+      "releasedAt": "2026-09-16T22:36:38Z",
+      "manifestPath": "manifest.json",
+      "modId": "HGSS_SPRITES",
+      "gameVersion": ">=0.1.75 <10.0.0",
+      "surveyedRelease": "v2.1.5"
+    }
+  },
+  {
+    "id": "gen1recomp-mod-stadium2-importer",
+    "title": "Pokemon Stadium 2 Importer",
+    "creator": "Deftones565",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Pokemon Stadium 2 extractor and renderer with owned 3D battle presentation for Gen 1 and Gen 2.",
+    "homepageUrl": "https://github.com/Deftones565/gen1recomp-mod-stadium2-importer",
+    "releasesUrl": "https://github.com/Deftones565/gen1recomp-mod-stadium2-importer/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/Deftones565/gen1recomp-mod-stadium2-importer/releases/download/v0.14.5/STADIUM2_IMPORTER-0.14.5.zip",
+      "sha256": "d123386dd88cc3e29a060f3a3f4d7aa0e54075a02e31cdf7b38ec2c5b86e727f",
+      "fileSizeBytes": 11398235,
+      "version": "0.14.5",
+      "releasedAt": "2026-09-17T07:05:39Z",
+      "manifestPath": "manifest.json",
+      "modId": "STADIUM2_IMPORTER",
+      "gameVersion": ">=0.1.86 <1.0.0",
+      "surveyedRelease": "v0.14.5"
+    }
+  },
+  {
+    "id": "gen1recomp-mod-quality-of-life",
+    "title": "Quality of Life",
+    "creator": "Deftones565",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Field-move shortcuts, a Gen II-style Pack, and a battle EXP bar.",
+    "homepageUrl": "https://github.com/Deftones565/gen1recomp-mod-quality-of-life",
+    "releasesUrl": "https://github.com/Deftones565/gen1recomp-mod-quality-of-life/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/Deftones565/gen1recomp-mod-quality-of-life/releases/download/v1.3.1/quality_of_life-1.3.1.zip",
+      "sha256": "5d25b4838b8962644638d4c279d3aa4b5e880c163bc68445159b0651b80b9a16",
+      "fileSizeBytes": 14527,
+      "version": "1.3.1",
+      "releasedAt": "2026-08-05T19:06:42Z",
+      "manifestPath": "manifest.json",
+      "modId": "quality_of_life",
+      "gameVersion": ">=0.0.0-0 <2.0.0",
+      "surveyedRelease": "v1.3.1"
+    }
+  },
+  {
+    "id": "gen1recomp-mod-roaming-events",
+    "title": "Roaming Event Pokemon",
+    "creator": "Deftones565",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Historically distributed Gen I Pokemon roam Kanto as rare, persistent encounters.",
+    "homepageUrl": "https://github.com/Deftones565/gen1recomp-mod-roaming-events",
+    "releasesUrl": "https://github.com/Deftones565/gen1recomp-mod-roaming-events/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/Deftones565/gen1recomp-mod-roaming-events/releases/download/1.4.4/roaming_events-1.4.4.zip",
+      "sha256": "9f892884a27819aaa304b992885e6aebd7767753f2eecbb32118a79ee75982c6",
+      "fileSizeBytes": 9722,
+      "version": "1.4.4",
+      "releasedAt": "2026-08-05T19:09:31Z",
+      "manifestPath": "manifest.json",
+      "modId": "roaming_events",
+      "gameVersion": ">=0.0.0-0 <2.0.0",
+      "surveyedRelease": "1.4.4"
+    }
+  },
+  {
+    "id": "gen1recomp-mod-shiny-indicators",
+    "title": "Gen II Shiny Indicators",
+    "creator": "Deftones565",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Adds Gen II-style shiny entrance sparkles, a chime, and battle and status-screen indicators.",
+    "homepageUrl": "https://github.com/Deftones565/gen1recomp-mod-shiny-indicators",
+    "releasesUrl": "https://github.com/Deftones565/gen1recomp-mod-shiny-indicators/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/Deftones565/gen1recomp-mod-shiny-indicators/releases/download/v1.5.2/shiny_indicators-1.5.2.zip",
+      "sha256": "50f1d654af24626b450485179d509b5359179c9c8024211f2e6f071723c7e48d",
+      "fileSizeBytes": 43218,
+      "version": "1.5.2",
+      "releasedAt": "2026-08-08T09:39:35Z",
+      "manifestPath": "manifest.json",
+      "modId": "shiny_indicators",
+      "gameVersion": ">=0.0.0-0 <2.0.0",
+      "surveyedRelease": "v1.5.2"
+    }
+  },
+  {
+    "id": "gen1recomp-italian-translation",
+    "title": "Traduzione ITA",
+    "creator": "Berniuz",
+    "kind": "mod",
+    "category": "gen1recomp",
+    "compatibility": [
+      "gen1recomp"
+    ],
+    "target": "Gen1Recomp",
+    "engine": {
+      "family": "gen1recomp",
+      "games": []
+    },
+    "summary": "Trad. ITA di Berniuz. Benvenuto nel mondo dei POKéMON.",
+    "homepageUrl": "https://github.com/Berniuz/Gen1Recomp-Italian-Translation",
+    "releasesUrl": "https://github.com/Berniuz/Gen1Recomp-Italian-Translation/releases",
+    "reviewStatus": "permission-needed",
+    "directSource": {
+      "permission": "none-direct-source",
+      "fileUrl": "https://github.com/Berniuz/Gen1Recomp-Italian-Translation/releases/download/v0.1.0beta/Gen1Recomp-Italian-Translation.zip",
+      "sha256": "66c41758bfb1d1e9eb7c7bd764080f3a010188a43263609f14d65870c342a287",
+      "fileSizeBytes": 1835446,
+      "version": "0.1.0",
+      "releasedAt": "2026-08-11T10:09:40Z",
+      "manifestPath": "manifest.json",
+      "modId": "recomp-italian",
+      "gameVersion": ">=0.0.0-dev <1.0.0",
+      "surveyedRelease": "v0.1.0beta"
+    }
   }
 ]
