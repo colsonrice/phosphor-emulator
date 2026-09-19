@@ -26,6 +26,7 @@ import { join } from "node:path";
 import { promisify } from "node:util";
 
 import { auditTargets, engineFacet, ENGINE_VERSIONS } from "./engine-family.mjs";
+import { importsFrom } from "./enrich-catalog.mjs";
 
 const run = promisify(execFile);
 
@@ -373,6 +374,15 @@ async function surveyRepo(name, hint) {
       ? { modId: contents.manifest?.id ?? null,
           modVersion: contents.manifest?.version ?? null,
           manifest: contents.manifest,
+          // The ROMs a mod is built from and the player has to bring, in the
+          // compact shape the catalog publishes as `requirements.imports`:
+          // a name and whether it is required. Surfaced here so the person
+          // approving a row reads it BEFORE approving, because a mod that
+          // needs a Stadium cartridge is a different listing from one that
+          // needs nothing, and the raw block sits two hundred lines down a
+          // manifest nobody scrolls. The hashes stay in `manifest` above, in
+          // this gitignored report, and go no further.
+          imports: importsFrom(contents.manifest),
           licenseInArchive: contents.licenseInArchive,
           loveAssignments: contents.loveAssignments ?? [],
           // Carried so the depth bound stays checkable from the report alone.
@@ -786,6 +796,17 @@ async function main() {
                   JSON.stringify(rows, null, 2) + "\n");
   console.log(`\n  ${rows.length} rows drafted to survey/draft-releases.json`);
   for (const s of skipped) console.log(`  held back  ${s.repo} — ${s.why}`);
+
+  // Said out loud, for every surveyed mod and not only the drafted ones: the
+  // engine refuses these until the player supplies the file, so it is the
+  // first thing to know about a row and the last thing a hash can tell you.
+  // `scripts/backfill-mod-imports.mjs` is what publishes it.
+  for (const r of results) {
+    const imports = r.contents?.imports;
+    if (!imports?.length) continue;
+    const list = imports.map((i) => `${i.name}${i.required ? "" : " (optional)"}`).join(", ");
+    console.log(`  needs a file from the player  ${r.repo} — ${list}`);
+  }
 
   const listed = new Set();
   for (const file of ["../src/data/releases.json", "../src/data/projects.json"]) {

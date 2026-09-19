@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { requirementsFrom, popularityFrom } from "../scripts/enrich-catalog.mjs";
+import { requirementsFrom, importsFrom, popularityFrom } from "../scripts/enrich-catalog.mjs";
 
 // Several fixtures below carry `games: ["all"]`. That is not what they test:
 // it keeps the games line out of the answer so each test still asserts one
@@ -22,14 +22,33 @@ test("engine_internals is not a disclosure", () => {
   );
 });
 
-test("optional_dependencies become worksWith; dependencies are ignored", () => {
-  // `dependencies` is declared by 61 manifests and empty in every one. There
-  // is no Requires line to build, and drawing one as a blocker would be a lie.
+test("optional_dependencies become worksWith; an EMPTY dependencies says nothing", () => {
   assert.deepEqual(
     requirementsFrom({ dependencies: [], optional_dependencies: ["exp_share"], games: ["all"] }),
     { worksWith: ["exp_share"] },
   );
-  assert.equal(requirementsFrom({ dependencies: ["national_dex"], games: ["all"] }), null);
+});
+
+test("a hard dependency is published, because the engine blocks the mod without it", () => {
+  // This asserted the opposite until Sep 19 2026, and was right to: every
+  // manifest that declared `dependencies` left it empty. Six published mods
+  // now declare a real one, the loader answers "missing dependency: <id>",
+  // and the Workshop was installing them without a word.
+  assert.deepEqual(requirementsFrom({ dependencies: ["national_dex"], games: ["all"] }),
+    { requires: ["national_dex"] });
+  // The range is the loader's business; the app resolves the bare id against
+  // what is installed.
+  assert.deepEqual(
+    requirementsFrom({ dependencies: ["gen2_dex@^1.2.2", "DRAMALESS_SHAPE@>=1.6.3 <2.0.0"], games: ["all"] }),
+    { requires: ["gen2_dex", "DRAMALESS_SHAPE"] },
+  );
+  assert.deepEqual(requirementsFrom({ dependencies: [{ id: "gimmick_menu", version: ">=1" }, "gimmick_menu"], games: ["all"] }),
+    { requires: ["gimmick_menu"] });
+  // A range written with a space instead of "@" is still not part of the id.
+  assert.deepEqual(requirementsFrom({ dependencies: ["national_dex >=0.3", " gen2_dex\t^1"], games: ["all"] }),
+    { requires: ["national_dex", "gen2_dex"] });
+  assert.equal(requirementsFrom({ dependencies: [7, null, "", { name: "x" }], games: ["all"] }), null);
+  assert.equal(requirementsFrom({ dependencies: "national_dex", games: ["all"] }), null);
 });
 
 test("conflicts are carried verbatim", () => {
@@ -101,6 +120,99 @@ test("a real manifest from the catalog reads the way the survey counted it", () 
   );
 });
 
+// MARK: imports
+
+/// The shape of StadiumBattleFX 2.1.8.1's two blocks. The digests and the
+/// filenames are DUMMIES on purpose: the real ones identify commercial ROMs,
+/// this repository is public, and a test file is publishing too.
+const STADIUM_FX_IMPORTS = {
+  required_imports: [{
+    id: "stadium1_rom", name: "Pokemon Stadium (USA) v1.0 ROM",
+    file: "first.bin", format: "n64", md5: "00000000000000000000000000000001",
+  }],
+  optional_imports: [{
+    id: "stadium2_rom", name: "Pokemon Stadium 2 (USA) ROM",
+    file: "second.bin", format: "n64", md5: "00000000000000000000000000000002",
+  }],
+};
+
+test("a file the player must supply is disclosed, required ones first", () => {
+  // The engine refuses the mod ("required import missing: <name>") until the
+  // player supplies that exact file, and before this the catalog said nothing:
+  // the first a player heard of it was a mod that installed and would not load.
+  assert.deepEqual(requirementsFrom({ ...STADIUM_FX_IMPORTS, games: ["all"] }), {
+    imports: [
+      { name: "Pokemon Stadium (USA) v1.0 ROM", required: true },
+      { name: "Pokemon Stadium 2 (USA) ROM", required: false },
+    ],
+  });
+});
+
+test("an import publishes its name and whether it is required, and nothing else", () => {
+  // The md5 identifies a commercial ROM and the filename is where the engine
+  // looks for it. Neither is needed to tell a player what to go and find, the
+  // app reads both from the installed manifest when it collects the file, and
+  // a catalog has no business being a lookup table for cartridge hashes.
+  const [entry] = importsFrom({
+    required_imports: [{
+      id: "crystal_rom", name: "Pokemon Crystal (English UE) ROM",
+      description: "Required source ROM.", file: "third.bin", format: "raw",
+      size: 2097152, md5: ["00000000000000000000000000000003", "00000000000000000000000000000004"],
+    }],
+  });
+  assert.deepEqual(Object.keys(entry).sort(), ["name", "required"]);
+  assert.deepEqual(entry, { name: "Pokemon Crystal (English UE) ROM", required: true });
+});
+
+test("an import with no name of its own is shown by its id, as the app shows it", () => {
+  // RecompModFileStore falls back the same way, so the line a player reads
+  // before installing names the same thing as the row they fill in after.
+  assert.deepEqual(importsFrom({ required_imports: [{ id: "stadium1_rom", file: "first.bin", md5: "x" }] }),
+    [{ name: "stadium1_rom", required: true }]);
+  assert.deepEqual(importsFrom({ required_imports: [{ id: "rom", name: "   ", file: "fourth.bin" }] }),
+    [{ name: "rom", required: true }]);
+});
+
+test("a name that is really a filename or a hash is not published as one", () => {
+  // `name` is free text, and nothing stops an author typing the file into it.
+  // The rule is that a filename or a digest never reaches the catalog, so the
+  // id stands in, and when that is no better a plain description does. The
+  // entry itself is never dropped: that would publish "needs nothing".
+  assert.deepEqual(importsFrom({ required_imports: [{ id: "base_rom", name: "first.z64" }] }),
+    [{ name: "base_rom", required: true }]);
+  assert.deepEqual(importsFrom({ required_imports: [{ id: "base_rom", name: "0123456789abcdef0123456789abcdef" }] }),
+    [{ name: "base_rom", required: true }]);
+  assert.deepEqual(importsFrom({ required_imports: [{ id: "game.gbc", name: "GAME.GBC" }] }),
+    [{ name: "A file from the original game", required: true }]);
+  // An ordinary name that merely ends a sentence is left alone.
+  assert.deepEqual(importsFrom({ required_imports: [{ id: "x", name: "Pokemon Stadium (USA) v1.0 ROM" }] }),
+    [{ name: "Pokemon Stadium (USA) v1.0 ROM", required: true }]);
+});
+
+test("the same file declared twice is said once", () => {
+  assert.deepEqual(
+    importsFrom({ required_imports: [{ id: "a", name: "A ROM" }, { id: "b", name: "A ROM" }],
+                  optional_imports: [{ id: "c", name: "A ROM" }] }),
+    [{ name: "A ROM", required: true }]);
+});
+
+test("a mod that declares no imports says nothing about them", () => {
+  assert.equal(importsFrom({}), null);
+  assert.equal(importsFrom({ required_imports: [], optional_imports: [] }), null);
+  assert.equal(requirementsFrom({ required_imports: [], games: ["all"] }), null);
+});
+
+test("a malformed imports block is skipped rather than published as a blank line", () => {
+  // `manifest.json` is whatever its author typed. An entry with neither a name
+  // nor an id would draw "Needs a file from you: " and then nothing.
+  assert.equal(importsFrom({ required_imports: "first.bin" }), null);
+  assert.equal(importsFrom({ required_imports: [null, "x", 7, {}, { file: "fourth.bin" }] }), null);
+  assert.deepEqual(
+    importsFrom({ required_imports: [{}, { id: "rom", name: "A ROM" }], optional_imports: { id: "x" } }),
+    [{ name: "A ROM", required: true }],
+  );
+});
+
 // MARK: popularity
 
 test("a repo with no release assets has no popularity block at all", () => {
@@ -162,4 +274,29 @@ test("a network permission the code DOES use is still published", () => {
   // Unchecked stays published: withholding on 'we did not look' would silently
   // let a mod that needs sockets through as installable.
   assert.deepEqual(requirementsFrom({ permissions: ["network"], games: ["all"] }), { permissions: ["network"] });
+});
+
+// MARK: where the published bytes are cached
+
+test("a row's archive is looked up where the script that hashed it left it", async () => {
+  const { cacheNameFor } = await import("../scripts/backfill-mod-imports.mjs");
+  // Tier 1: verify-releases.mjs, under the catalog id.
+  assert.equal(
+    cacheNameFor({ id: "stadium-battle-fx", fileName: "STADIUM_BATTLE_FX-2.1.8.1.zip" }),
+    "published__stadium-battle-fx__STADIUM_BATTLE_FX-2.1.8.1.zip",
+  );
+  // Tier 2: survey-mods.mjs, under owner__repo__asset, with the asset's own
+  // name rather than its URL-encoded one.
+  assert.equal(
+    cacheNameFor({ id: "x", directSource: {
+      fileUrl: "https://github.com/someone/some-mod/releases/download/v1.0/Some%20Mod.zip" } }),
+    "someone__some-mod__Some Mod.zip",
+  );
+  // No release asset to find it by is "unread", which stops the write. So is a
+  // host that merely contains the word, and an escape that does not decode.
+  assert.equal(cacheNameFor({ id: "x", directSource: { fileUrl: "https://example.com/mod.zip" } }), null);
+  assert.equal(cacheNameFor({ id: "x", directSource: {
+    fileUrl: "https://notgithub.com/a/b/releases/download/v1/m.zip" } }), null);
+  assert.equal(cacheNameFor({ id: "x", directSource: {
+    fileUrl: "https://github.com/a/b/releases/download/v1/%ZZ.zip" } }), null);
 });

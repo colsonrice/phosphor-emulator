@@ -53,6 +53,16 @@
         "red",
         "blue",
         "yellow"
+      ],
+      "imports": [
+        {
+          "name": "Pokemon Stadium (USA) v1.0 ROM",
+          "required": true
+        },
+        {
+          "name": "Pokemon Stadium 2 (USA) ROM",
+          "required": false
+        }
       ]
     },
     "popularity": {
@@ -2093,6 +2103,9 @@
         "red",
         "blue",
         "yellow"
+      ],
+      "requires": [
+        "DRAMATIC_SHAPE"
       ]
     }
   },
@@ -2310,6 +2323,11 @@
       "downloads": 609,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "requires": [
+        "DRAMALESS_SHAPE"
+      ]
     }
   },
   "silph-scope-network": {
@@ -2902,6 +2920,9 @@
         "red",
         "blue",
         "yellow"
+      ],
+      "requires": [
+        "gimmick_menu"
       ]
     }
   },
@@ -3657,6 +3678,9 @@
         "gold",
         "silver",
         "crystal"
+      ],
+      "requires": [
+        "national_dex"
       ]
     }
   },
@@ -3756,6 +3780,9 @@
         "red",
         "blue",
         "yellow"
+      ],
+      "requires": [
+        "gen2_dex"
       ]
     }
   },
@@ -3765,6 +3792,9 @@
         "red",
         "blue",
         "yellow"
+      ],
+      "requires": [
+        "gen2_moves_learnsets_251"
       ]
     }
   },

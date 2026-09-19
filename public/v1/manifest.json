@@ -249,6 +249,16 @@
           "red",
           "blue",
           "yellow"
+        ],
+        "imports": [
+          {
+            "name": "Pokemon Stadium (USA) v1.0 ROM",
+            "required": true
+          },
+          {
+            "name": "Pokemon Stadium 2 (USA) ROM",
+            "required": false
+          }
         ]
       },
       "popularity": {
@@ -4385,6 +4395,9 @@
           "gold",
           "silver",
           "crystal"
+        ],
+        "requires": [
+          "national_dex"
         ]
       }
     },
@@ -4826,6 +4839,9 @@
           "red",
           "blue",
           "yellow"
+        ],
+        "requires": [
+          "gen2_dex"
         ]
       }
     },
@@ -4866,6 +4882,9 @@
           "red",
           "blue",
           "yellow"
+        ],
+        "requires": [
+          "gen2_moves_learnsets_251"
         ]
       }
     },
@@ -6732,6 +6751,9 @@
           "red",
           "blue",
           "yellow"
+        ],
+        "requires": [
+          "DRAMATIC_SHAPE"
         ]
       },
       "popularity": {
@@ -7449,6 +7471,11 @@
       "project": {
         "url": "https://github.com/castdrian/recomp-rider/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "requires": [
+          "DRAMALESS_SHAPE"
+        ]
       },
       "popularity": {
         "downloads": 609,
@@ -9412,6 +9439,9 @@
           "red",
           "blue",
           "yellow"
+        ],
+        "requires": [
+          "gimmick_menu"
         ]
       },
       "popularity": {

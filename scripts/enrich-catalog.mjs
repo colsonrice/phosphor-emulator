@@ -66,6 +66,76 @@ export function cartridgesFor(manifest) {
 /// disclosure.
 const UNIVERSAL_PERMISSION = "engine_internals";
 
+/// The files a mod is built from and the player has to bring, from the
+/// manifest's `required_imports` and `optional_imports`.
+///
+/// The engine's loader marks such a mod invalid ("required import missing:
+/// <name>") until `mods/<id>/baseroms/<file>` exists and hashes right, and
+/// the file is a ROM: a Stadium cartridge, a Crystal one. Phosphor collects it
+/// in the Mods pane AFTER install, so without this the catalog's first word on
+/// the subject was a mod that installed and would not load.
+///
+/// **Name and `required`, and nothing else.** The md5 identifies a commercial
+/// ROM and `file` is where the engine looks for it; neither helps a player
+/// decide whether to install, the app reads both from the installed manifest
+/// when it collects the file, and a catalog should not double as a lookup
+/// table for cartridge hashes. Required entries lead, because they are the
+/// ones that refuse.
+///
+/// A missing name falls back to the id, which is what the app's own
+/// RecompModFileStore does, so the line read before installing names the same
+/// thing as the row filled in after. `null` when there is nothing to disclose.
+export function importsFrom(manifest) {
+  const read = (block, required) => (Array.isArray(block) ? block : [])
+    .filter((entry) => entry && typeof entry === "object")
+    .map((entry) => {
+      const own = typeof entry.name === "string" ? entry.name.trim() : "";
+      const id = typeof entry.id === "string" ? entry.id.trim() : "";
+      // `name` is free text, so the no-filenames, no-hashes rule is enforced
+      // on the VALUE and not only by leaving `file` and `md5` unread. The
+      // entry is never dropped for it: absence would publish "needs nothing".
+      const usable = [own, id].find((text) => text && !looksLikeAFileOrAHash(text));
+      return { name: usable ?? (own || id ? "A file from the original game" : ""), required };
+    })
+    // `manifest.json` is whatever its author typed. An entry naming nothing
+    // would reach a player as a label followed by a blank.
+    .filter((entry) => entry.name);
+
+  // Said once. A required entry wins over an optional one of the same name,
+  // because it is read first.
+  const seen = new Set();
+  const out = [...read(manifest?.required_imports, true),
+               ...read(manifest?.optional_imports, false)]
+    .filter((entry) => !seen.has(entry.name) && seen.add(entry.name));
+  return out.length ? out : null;
+}
+
+/// A bare filename ("game.gbc") or a digest, which is what must not be
+/// published. Deliberately narrow: a whole string that is one dotted token
+/// with a short extension, or 32/40/64 hex characters. "Pokemon Stadium (USA)
+/// v1.0 ROM" has spaces and is a name.
+export function looksLikeAFileOrAHash(text) {
+  const value = String(text).trim();
+  if (/^[a-f\d]{32}$|^[a-f\d]{40}$|^[a-f\d]{64}$/i.test(value)) return true;
+  return /^[^\s/\\]+\.[a-z\d]{1,5}$/i.test(value);
+}
+
+/// The mod ids a manifest's hard `dependencies` name, without their version
+/// ranges. Entries are strings in every manifest surveyed; an object with an
+/// `id` is read too, because the engine's own docs show both. `null` when
+/// there are none.
+export function requiresFrom(manifest) {
+  const declared = Array.isArray(manifest?.dependencies) ? manifest.dependencies : [];
+  const ids = declared
+    .map((entry) => (typeof entry === "string" ? entry : entry?.id))
+    .filter((id) => typeof id === "string")
+    // "id@^1.2" is the engine's spelling; "id >=1" turns up too
+    .map((id) => id.trim().split("@")[0].trim().split(/\s+/)[0])
+    .filter(Boolean);
+  const unique = [...new Set(ids)];
+  return unique.length ? unique : null;
+}
+
 /// What a mod says about itself that a player should see before installing.
 ///
 /// `null` when it has nothing to say, so the app draws no empty block. Roughly
@@ -93,15 +163,29 @@ export function requirementsFrom(manifest, { usesNetwork = null } = {}) {
 
   if (manifest.conflicts?.length) out.conflicts = [...manifest.conflicts];
 
-  // `dependencies` is deliberately not read: 61 manifests declare it and all
-  // 61 are empty. `optional_dependencies` is the populated one, and it is
-  // advice rather than a gate, so it must not reach the app as a blocker.
+  // `optional_dependencies` is advice rather than a gate, so it must not reach
+  // the app as a blocker.
   if (manifest.optional_dependencies?.length) {
     out.worksWith = [...manifest.optional_dependencies];
   }
 
+  // `dependencies` IS a gate: the loader answers "missing dependency: <id>"
+  // and the mod does not run. This used to be deliberately unread, because
+  // when the rule was written 61 manifests declared it and all 61 were empty.
+  // By Sep 19 2026 six published mods declared a real one, so the Workshop
+  // was installing a mod the engine then blocked and saying nothing about it.
+  // The id alone: a range ("gen2_dex@^1.2.2") is the loader's business, and
+  // the app resolves the id against what is installed.
+  const requires = requiresFrom(manifest);
+  if (requires) out.requires = requires;
+
   if (manifest.affects_link === true) out.affectsLink = true;
   if (manifest.experimental === true) out.experimental = true;
+
+  // A ROM the player has to supply before the engine will load the mod at
+  // all. See importsFrom for what is published and what deliberately is not.
+  const imports = importsFrom(manifest);
+  if (imports) out.imports = imports;
 
   // Published whenever the mod does NOT cover every cartridge. "For Red, Blue
   // and Yellow only." is the line the app draws from this, and for a Gen 1 mod
@@ -381,6 +465,12 @@ async function main() {
     `wrote src/data/enrichment.json — ${Object.keys(out).length} entries `
     + `(${withRequirements} with requirements, ${withPopularity} with popularity); `
     + `${manifestsRead}/${releases.length} manifests read`,
+  );
+  // This pass rebuilt the file from nothing, and tier 2 rows got popularity
+  // and art only. Said here because it is otherwise a silent loss.
+  console.log(
+    "NOW RUN: node scripts/backfill-mod-games.mjs --write && "
+    + "node scripts/backfill-mod-imports.mjs --write   (tier 2 requirements)",
   );
 }
 
