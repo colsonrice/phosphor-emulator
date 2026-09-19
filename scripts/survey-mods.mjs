@@ -83,7 +83,7 @@ const ENGINE_CLONE_NAMES = /^(gen1recomp|gen2recomp|gen2recomped|gen3recomp)([-_
 /// the same bar the catalog's existing rows use — `permission: "open-license"`
 /// with the LICENSE file as the evidence. Anything else, including GitHub's
 /// "NOASSERTION" for a licence it cannot identify, is a link-out at most.
-const PERMISSIVE = new Set([
+export const PERMISSIVE = new Set([
   "MIT", "Apache-2.0", "BSD-2-Clause", "BSD-3-Clause", "ISC",
   "Unlicense", "CC0-1.0", "Zlib", "0BSD", "MPL-2.0",
 ]);
@@ -96,7 +96,7 @@ const PERMISSIVE = new Set([
 const MAX_ENTRY_COUNT = 50_000;
 /// Mirrors RecompModLibrary.maxManifestDepth. See the note at its use.
 const MAX_MANIFEST_DEPTH = 1;
-const MAX_TOTAL_UNCOMPRESSED = 512 * 1024 * 1024;
+export const MAX_TOTAL_UNCOMPRESSED = 512 * 1024 * 1024;
 
 /// A ROM inside a mod archive is the one thing that can never be published,
 /// whatever the licence says: an author's permission over their own mod grants
@@ -133,7 +133,7 @@ const draftPath = (kind) => new URL(
   REPORT_PATH ? REPORT_PATH.replace(/([^/]+?)(\.json)?$/, `draft-${kind}.$1.json`)
               : `../survey/draft-${kind}.json`, import.meta.url);
 
-async function gh(path, jq) {
+export async function gh(path, jq) {
   const argv = ["api", "-X", "GET", path];
   if (jq) argv.push("--jq", jq);
   const { stdout } = await run("gh", argv, { maxBuffer: 64 * 1024 * 1024 });
@@ -329,7 +329,7 @@ function hashPath(text) {
 /// directory: how many entries, and how much they expand to. Both are checked
 /// before anything is inflated, because a hostile archive should be refused
 /// without being unpacked.
-async function inspect(path) {
+export async function inspect(path) {
   let listing;
   try {
     ({ stdout: listing } = await run("unzip", ["-l", path], { maxBuffer: 64 * 1024 * 1024 }));
@@ -428,7 +428,7 @@ async function inspect(path) {
 }
 
 /// Everything that would stop this being offered as a one-tap install.
-function refusals({ release, asset, contents }) {
+export function refusals({ release, asset, contents }) {
   const out = [];
   // A tree archive answers the question a release would have answered, so it
   // is not missing anything: `asset` is set and `release` is null on purpose.
@@ -743,7 +743,7 @@ function targetFor(channels) {
     : channels[0] === "gen2recomp" ? "Gen2Recomped" : "Gen1Recomp";
 }
 
-const humanSize = (bytes) => bytes >= 1024 * 1024
+export const humanSize = (bytes) => bytes >= 1024 * 1024
   ? `${(bytes / 1024 / 1024).toFixed(1)} MB`
   : `${(bytes / 1024).toFixed(1)} KB`;
 
@@ -1060,4 +1060,7 @@ async function main() {
   console.log(`\n${cached.length} archives cached under survey/cache/`);
 }
 
-await main();
+// Guarded so scripts/refresh-releases.mjs can import `inspect` and `refusals`
+// rather than keep a second copy of the checks: a refreshed pin has to clear
+// the SAME bar a surveyed one did, and two copies of a bar drift.
+if (import.meta.url === `file://${process.argv[1]}`) await main();

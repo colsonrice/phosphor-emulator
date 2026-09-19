@@ -11,6 +11,36 @@
 6. Run `npm test` and `npm run build`, then open a pull request containing the
    metadata and permission evidence.
 
+## Keeping a listing current
+
+A row pins one release and nothing moves it when the creator ships another.
+`node scripts/refresh-releases.mjs` asks every installable row's repo for its
+latest release, downloads the new `.zip`, and runs the survey's own checks
+over it (imported from `survey-mods.mjs`, not copied), plus the ones only a
+refresh can get wrong: the `modId` must be the one the row pins, the release
+must not rule out the engine Phosphor ships, a tier 1 repo must still be under
+the licence its listing names, and it must not have started needing the
+network or a mod the catalog does not carry.
+
+It is a dry run until you pass `--write`, and **a row whose new archive fails
+anything keeps its old pin**: it is reported with the reason and not touched.
+A row whose bytes are unchanged but whose URL moved (an author renamed their
+account) is reported as `moved` and only its address is rewritten. The report
+also lands in `survey/refresh-report.json`.
+
+After a `--write`, run these in order. All of them have to pass:
+
+```
+node scripts/verify-releases.mjs
+node scripts/backfill-mod-imports.mjs --write
+npm run build:manifest
+npm test && npm run check:catalog && npm run lint
+```
+
+The refreshed bytes are ones no person has opened. Read the diff before it is
+published: the report marks a release ten times the size of the one it
+replaces, and new bytes under an unchanged version number.
+
 ## What changes here breaks over in the app
 
 The app fetches this manifest, so two of its tests are assertions about content
