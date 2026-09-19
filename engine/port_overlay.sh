@@ -121,6 +121,24 @@ git -C "$PIN_CLONE" cat-file -e "$CURRENT_PIN^{commit}" 2>/dev/null \
 git -C "$PIN_CLONE" cat-file -e "$NEW_SHA^{commit}" 2>/dev/null \
   || fail "$NEW_SHA is not in $PIN_CLONE -- fetch it into the shared clone first (this script never fetches)"
 
+# A port is only worth doing onto a base Phosphor may ship, and asked FIRST,
+# because a clean port is an invitation to ship it. gen1recomp is MIT through
+# v0.2.61 and GPLv3 with a proprietary launcher from v0.2.62; Phosphor ships a
+# modified build, which the new terms do not allow (CLAUDE.md, "gen1recomp
+# relicensed"). The website's hourly publisher runs this same file with
+# --check and publishes whatever comes back clean, so the verdict line is
+# printed before failing: it stops on anything that is not `clean`.
+NEW_LICENCE="$(git -C "$PIN_CLONE" show "$NEW_SHA:LICENSE.MD" 2>/dev/null || true)"
+case "$NEW_LICENCE" in
+  *"GNU General Public License"*|*"GNU GENERAL PUBLIC LICENSE"*)
+    printf 'PORT_VERDICT=licence\n'
+    fail "$NEW_SHA is GPLv3 with additional terms and a proprietary launcher; Phosphor ships a modified build and cannot take it. The last MIT release is v0.2.61. See CLAUDE.md, \"gen1recomp relicensed\"." ;;
+  *"Permission is hereby granted, free of charge"*) ;;
+  *)
+    printf 'PORT_VERDICT=licence\n'
+    fail "LICENSE.MD at $NEW_SHA is not the MIT text this overlay was cleared against; read it before porting onto it." ;;
+esac
+
 # Tripwire: reproduce ONE known-good hash through this script's own hashing
 # pipeline before trusting it for anything. docs/RECOMP_OVERLAY_PORTING.md
 # records a real incident where a broken git/shasum silently hashed empty

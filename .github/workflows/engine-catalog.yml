@@ -164,8 +164,35 @@ jobs:
               `${lastKnown}, ${pending.length} to build\n`);
           '
 
+          # THE LICENCE, asked here because this is the cheap path and it runs
+          # ~720 times a month. gen1recomp is MIT through v0.2.61 and GPLv3
+          # with Section 7 terms from v0.2.62; those terms make the launcher
+          # proprietary and bar it from any modified version, and every
+          # artifact this workflow publishes is a modified version (upstream
+          # plus Phosphor's overlay). So a release that is not MIT is not
+          # pending, it is off limits, and everything after it goes with it:
+          # ordinals follow release order and a licence does not change back
+          # by itself. One API read per pending release, no clone.
+          : > allowed.txt
+          while IFS=$'\t' read -r tag sha; do
+            [ -n "$sha" ] || continue
+            licence=$(gh api -H 'Accept: application/vnd.github.raw' \
+              "repos/$UPSTREAM_REPO/contents/LICENSE.MD?ref=$sha" 2>/dev/null || true)
+            case "$licence" in
+              *"GNU General Public License"*|*"GNU GENERAL PUBLIC LICENSE"*) mit=0 ;;
+              *"Permission is hereby granted, free of charge"*) mit=1 ;;
+              *) mit=0 ;;
+            esac
+            if [ "$mit" != "1" ]; then
+              echo "::notice::$tag is not MIT-licensed (or its licence could not be read). Phosphor publishes modified builds, which upstream's GPLv3 additional terms do not allow, so $tag and everything after it is not published. This needs upstream's permission, not a port."
+              break
+            fi
+            printf '%s\t%s\n' "$tag" "$sha" >> allowed.txt
+          done < pending.txt
+          mv allowed.txt pending.txt
+
           total=$(wc -l < pending.txt | tr -d ' ')
-          echo "Catalog is missing $total release(s) newer than what it holds."
+          echo "Catalog is missing $total publishable release(s) newer than what it holds."
           if [ "$total" -gt "$MAX_PER_RUN" ]; then
             echo "::notice::Building the oldest $MAX_PER_RUN of $total this run. Deferred to the next run:"
             tail -n +"$((MAX_PER_RUN + 1))" pending.txt | cut -f1 | sed 's/^/::notice::  /'
@@ -213,6 +240,13 @@ jobs:
             bash work/Scripts/port_overlay.sh --check "$sha" > port.txt 2>&1
             set -e
             verdict=$(grep '^PORT_VERDICT=' port.txt | cut -d= -f2 || echo drifted)
+            if [ "$verdict" = "licence" ]; then
+              # Belt to the poll step's braces: a manual `upstream_ref` run, or
+              # an API read that lied, still ends here and publishes nothing.
+              echo "::endgroup::"
+              echo "::warning::$tag is not MIT-licensed. Not published, and not a drift: do not port the overlay to it."
+              break
+            fi
             if [ "$verdict" != "clean" ]; then
               files=$(grep '^PORT_CONFLICT_FILES=' port.txt | cut -d= -f2- || true)
               echo "::endgroup::"
