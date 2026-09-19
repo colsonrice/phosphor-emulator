@@ -49,6 +49,31 @@ them down:
     that declares any permission declares that one, so publishing it would put
     a line on every detail screen that distinguishes nothing.
 
+  - **`requirements.imports` is a name and a `required` flag, and nothing
+    else.** It lists the ROMs a mod is built from and the player has to supply
+    (`required_imports` / `optional_imports` in the mod's manifest); the engine
+    refuses the mod until they are there, and the app draws "Needs a file from
+    you" from it. The md5 and the filename stay in the archive: the app reads
+    them from the installed manifest when it collects the file, and a public
+    catalog should not double as a lookup table for cartridge hashes.
+    `tests/manifest.test.mjs` pins the shape. To fill the one field without a
+    full enrichment pass, run `node scripts/backfill-mod-imports.mjs --write`:
+    it reads each manifest out of the cached archive only after that archive
+    hashes to what the row publishes, and writes nothing if any installable
+    row cannot be read that way.
+
+  - **`requirements.requires` is bare mod ids**, from the manifest's hard
+    `dependencies`, with any version range cut off. The engine blocks a mod
+    whose dependency is missing, and the app resolves these against what is
+    installed, so `gen2_dex@^1.2.2` would match nothing. The same backfill
+    script fills it.
+
+  **After any full `npm run enrich`, re-run both backfills**
+  (`backfill-mod-games.mjs --write`, then `backfill-mod-imports.mjs --write`).
+  The full pass rebuilds `enrichment.json` from nothing and gives the tier 2
+  rows popularity and art only, so their whole `requirements` block (`games`,
+  `imports`, `requires`) is gone until the backfills put it back.
+
   Re-run it with `npm run enrich` (it needs `GITHUB_TOKEN`; it refuses to run
   without one rather than publish a partial pass, since absence is meaningful
   here). It asserts that it read a manifest from **every** published release

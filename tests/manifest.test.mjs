@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { buildManifest } from "../scripts/build-manifest.mjs";
+import { looksLikeAFileOrAHash } from "../scripts/enrich-catalog.mjs";
 
 const manifestURL = new URL("../public/v1/manifest.json", import.meta.url);
 
@@ -222,4 +223,53 @@ test("generated is stable rather than a build clock", async () => {
   // turn --check into noise.
   assert.equal(first.generated, second.generated);
   assert.match(first.generated, /^\d{4}-\d{2}-\d{2}$/);
+});
+
+test("a declared import is published as a name and a flag, and never as a hash", async () => {
+  const { entries } = await buildManifest();
+  const declaring = entries.filter((entry) => entry.requirements?.imports);
+
+  // StadiumBattleFX is the reason the field exists. If it ever stops declaring
+  // its Stadium cartridge this wants re-reading rather than deleting: an empty
+  // loop below would pass, and prove nothing about the shape.
+  const stadium = entries.find((entry) => entry.modID === "STADIUM_BATTLE_FX");
+  assert.deepEqual(stadium?.requirements?.imports?.[0],
+    { name: "Pokemon Stadium (USA) v1.0 ROM", required: true });
+
+  for (const entry of declaring) {
+    // Only something with an install button can need a file supplied.
+    assert.ok(entry.download, `${entry.id}: a link-out cannot be read for imports`);
+    assert.ok(entry.requirements.imports.length > 0, `${entry.id}: an empty imports block`);
+    for (const item of entry.requirements.imports) {
+      // The app decodes exactly these two. Anything more is the md5 or the
+      // filename of a commercial ROM on its way into a public catalog.
+      assert.deepEqual(Object.keys(item).sort(), ["name", "required"], `${entry.id}: import shape`);
+      assert.ok(item.name.trim(), `${entry.id}: an import with no name draws a blank line`);
+      assert.equal(typeof item.required, "boolean", `${entry.id}: required`);
+      // The VALUE as well as the keys: a filename or a digest typed into
+      // `name` is the same leak by another route.
+      assert.ok(!looksLikeAFileOrAHash(item.name), `${entry.id}: "${item.name}" is a filename or a hash`);
+    }
+  }
+
+  const published = await readFile(manifestURL, "utf8");
+  assert.doesNotMatch(published, /"md5"/i, "an import's md5 must not reach the manifest");
+  const enrichment = await readFile(new URL("../src/data/enrichment.json", import.meta.url), "utf8");
+  assert.doesNotMatch(enrichment, /"md5"/i, "nor the file the manifest is built from");
+});
+
+test("a hard dependency is published as bare mod ids, on installable entries only", async () => {
+  const { entries } = await buildManifest();
+  const depending = entries.filter((entry) => entry.requirements?.requires);
+  // Not a count: the point is that the field survives the build at all, and
+  // that a range never leaks into it (the app matches it against installed
+  // ids, and "gen2_dex@^1.2.2" matches nothing).
+  assert.ok(depending.length > 0, "no published mod declares a dependency any more: re-read this test");
+  for (const entry of depending) {
+    assert.ok(entry.download, `${entry.id}: a link-out cannot be read for dependencies`);
+    for (const id of entry.requirements.requires) {
+      assert.equal(typeof id, "string", `${entry.id}: requires holds ids`);
+      assert.ok(id.trim() && !id.includes("@") && !/\s/.test(id), `${entry.id}: "${id}" is not a bare mod id`);
+    }
+  }
 });
