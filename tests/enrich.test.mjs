@@ -51,6 +51,19 @@ test("a hard dependency is published, because the engine blocks the mod without 
   assert.equal(requirementsFrom({ dependencies: "national_dex", games: ["all"] }), null);
 });
 
+test("an entry written as an object is published as its id, because the app reads strings", () => {
+  // One object in a [String] costs the player the whole line, not the entry.
+  assert.deepEqual(
+    requirementsFrom({
+      optional_dependencies: ["exp_share", { id: "voxel_gen2", games: ["gen2"] }, { games: ["gen2"] }, 7],
+      conflicts: [{ id: "free_fly" }, "DRAMALESS_SHAPE@<2.0.0"],
+      games: ["all"],
+    }),
+    // A string keeps its range: that conflict is with old versions only.
+    { conflicts: ["free_fly", "DRAMALESS_SHAPE@<2.0.0"], worksWith: ["exp_share", "voxel_gen2"] },
+  );
+});
+
 test("conflicts are carried verbatim", () => {
   assert.deepEqual(
     requirementsFrom({ conflicts: ["DRAMATIC_SHAPE", "free_fly"], games: ["all"] }),

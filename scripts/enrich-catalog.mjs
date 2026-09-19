@@ -151,6 +151,22 @@ export function requiresFrom(manifest) {
   return unique.length ? unique : null;
 }
 
+/// The entries of a manifest list, as the strings the app decodes.
+///
+/// Strings pass through untouched, range and all: "DRAMALESS_SHAPE@<2.0.0" is
+/// a conflict with OLD versions only, and cutting the range off would publish
+/// a conflict that no longer exists. What this is for is the other spelling
+/// the engine accepts, an object (`{ "id": "...", "games": ["gen2"] }`), which
+/// first turned up in an optional_dependencies list on Sep 19 2026. The app
+/// reads these lists as [String] and one object among them costs the player
+/// the whole line, so an object is published as its id and anything that
+/// names nothing is dropped.
+function namedIn(list) {
+  return (Array.isArray(list) ? list : [])
+    .map((entry) => (typeof entry === "string" ? entry : entry?.id))
+    .filter((name) => typeof name === "string" && name.trim());
+}
+
 /// What a mod says about itself that a player should see before installing.
 ///
 /// `null` when it has nothing to say, so the app draws no empty block. Roughly
@@ -176,13 +192,13 @@ export function requirementsFrom(manifest, { usesNetwork = null } = {}) {
     .filter((p) => !(p === "network" && usesNetwork === false));
   if (permissions.length) out.permissions = permissions;
 
-  if (manifest.conflicts?.length) out.conflicts = [...manifest.conflicts];
+  const conflicts = namedIn(manifest.conflicts);
+  if (conflicts.length) out.conflicts = conflicts;
 
   // `optional_dependencies` is advice rather than a gate, so it must not reach
   // the app as a blocker.
-  if (manifest.optional_dependencies?.length) {
-    out.worksWith = [...manifest.optional_dependencies];
-  }
+  const worksWith = namedIn(manifest.optional_dependencies);
+  if (worksWith.length) out.worksWith = worksWith;
 
   // `dependencies` IS a gate: the loader answers "missing dependency: <id>"
   // and the mod does not run. This used to be deliberately unread, because
