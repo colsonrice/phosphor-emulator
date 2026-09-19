@@ -186,8 +186,8 @@
         "name": "StadiumBattleFX contributors",
         "url": "https://github.com/anxiousintrovert/StadiumBattleFX"
       },
-      "version": "2.1.7",
-      "releasedAt": "2026-08-15",
+      "version": "2.1.8.1",
+      "releasedAt": "2026-08-21",
       "license": {
         "spdx": "MIT"
       },
@@ -216,9 +216,9 @@
         }
       ],
       "download": {
-        "url": "https://github.com/anxiousintrovert/StadiumBattleFX/releases/download/v2.1.7/STADIUM_BATTLE_FX-2.1.7.zip",
-        "sizeBytes": 359093,
-        "sha256": "14476f075127dd69aa7b361fea6d6b7a9f467160bd11e82f05c4830f99e832b6",
+        "url": "https://github.com/anxiousintrovert/StadiumBattleFX/releases/download/v2.1.8.1/STADIUM_BATTLE_FX-2.1.8.1.zip",
+        "sizeBytes": 360553,
+        "sha256": "35e9f78656f60e253407862063300d2a305e92ac6325c038c5cc75778eee3ed9",
         "manifestPath": "manifest.json"
       },
       "engine": {
