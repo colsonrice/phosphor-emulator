@@ -63,8 +63,12 @@ export function taglineFrom(description, fallback) {
 
 /// A drafted release row in the shape the published rows have.
 export function releaseRowFrom(draft) {
-  const { description, engine, summary, ...row } = draft;
-  return { ...row, summary: taglineFrom(description, draft.title) };
+  const row = { ...draft, summary: taglineFrom(draft.description, draft.title) };
+  // Published rows carry neither: the description became the tagline above,
+  // and the engine facet is derived again at build time.
+  delete row.description;
+  delete row.engine;
+  return row;
 }
 
 async function main() {
