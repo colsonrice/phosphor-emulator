@@ -236,19 +236,39 @@ const cacheNameFor = (release) => `published__${release.id}__${release.fileName}
 /// every archive to answer a question nobody asked is the slow half of this
 /// pass. See the filter in `requirementsFrom` for why the declaration alone is
 /// not enough.
+///
+/// **A raw transport, in code the engine loads.** `mod.fetch` used to count and
+/// must not: the engine hands every mod that object, it carries `available()`,
+/// and the documented idiom is to check it and carry on without. Potato Voxel
+/// 1.9.6 does exactly that for an optional diagnostics upload, twelve guarded
+/// references, and counting them would have published `network` for it. The
+/// app REFUSES to install a mod that needs the network, so one regex would
+/// have taken the install button off one of the most used mods in the catalog
+/// the next time this pass ran. Caught Sep 19 2026, before it shipped.
+///
+/// `tests/`, `tools/` and the like are skipped for the same reason the survey
+/// skips them for love-table writes: the engine never loads them, and a test
+/// bench that stubs a socket is not a mod that opens one.
 const NETWORK_USE = [
-  /require\s*\(?\s*["'](socket|enet|http|https|lua-https)[."']/,
-  /\bmod\.fetch\b/,
-  /\bsocket\s*\./,
-  /\benet\s*\./,
+  /require\s*\(?\s*["'](socket|enet|http|https|lua-https|ssl)[."']/,
+  // A CALL on the module, not the word. `\bsocket\s*\.` alone matched English:
+  // Kanto Ascendant's "A basalt weight rests firmly in its socket. Its
+  // ember-line points deeper." read as a mod opening a socket, and held one of
+  // the largest mods in the field back as "uses the network".
+  /\bsocket\s*\.\s*[A-Za-z_]+\s*\(/,
+  /\benet\s*\.\s*[A-Za-z_]+\s*\(/,
 ];
+const NEVER_LOADED = /(^|\/)(tests?|tools?|specs?|examples?|docs?|benchmarks?)\//i;
 
-async function usesNetwork(archive) {
+export const sourceUsesNetwork = (source) => NETWORK_USE.some((pattern) => pattern.test(source));
+export const isLoadedAtRuntime = (name) => name.endsWith(".lua") && !NEVER_LOADED.test(name);
+
+export async function usesNetwork(archive) {
   const { names } = await entryNames(archive);
   for (const name of names.keys()) {
-    if (!name.endsWith(".lua")) continue;
+    if (!isLoadedAtRuntime(name)) continue;
     const source = await readEntry(archive, name, names);
-    if (NETWORK_USE.some((pattern) => pattern.test(source))) return true;
+    if (sourceUsesNetwork(source)) return true;
   }
   return false;
 }

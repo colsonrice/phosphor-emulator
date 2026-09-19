@@ -19,6 +19,17 @@ stay on the "From their creators" shelf rather than a curated one, and always
 show a link to the project itself. Phosphor does not describe them as reviewed,
 approved, or endorsed, because they are none of those things.
 
+**What decides a tier 2 listing is what the archive does, never what licence
+it carries** (Sep 19 2026). Phosphor is free, the community asks for its mods
+to be playable, and a creator who wants out is one message away from being
+out. So every mod the survey can find is listed unless something measured
+stops it: the archive could not be opened, carries a ROM, sits outside the
+installer's ceilings, writes to the love table the sandbox protects, or rules
+out the engine Phosphor ships. `scripts/lib/excluded.mjs` holds the few kept
+out for what they are, each with its reason: online play with strangers that
+Phosphor cannot moderate (guideline 4.7.1), a server taking custody of a
+player's save, a hard dependency nothing carries. None of those is a licence.
+
 A tier 2 listing must still clear every safety check tier 1 does: a verified
 SHA-256, a known file size, and an archive proven to contain no base-game ROM.
 A ROM hack is never tier 2, because a hack that is not a patch is a cartridge.

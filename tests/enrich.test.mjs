@@ -300,3 +300,23 @@ test("a row's archive is looked up where the script that hashed it left it", asy
   assert.equal(cacheNameFor({ id: "x", directSource: {
     fileUrl: "https://github.com/a/b/releases/download/v1/%ZZ.zip" } }), null);
 });
+
+test("an optional mod.fetch is not a mod that needs the network", async () => {
+  const { sourceUsesNetwork, isLoadedAtRuntime } = await import("../scripts/enrich-catalog.mjs");
+  // Potato Voxel 1.9.6, lib/DiagnosticsTransport.lua: guarded, optional, and
+  // the app refuses to install anything this says yes to.
+  assert.equal(sourceUsesNetwork(
+    'if not (sendHandle and mod and mod.fetch and type(mod.fetch.poll) == "function") then return end'), false);
+  assert.equal(sourceUsesNetwork('local socket = require("socket")'), true);
+  assert.equal(sourceUsesNetwork("local http = require 'socket.http'"), true);
+  assert.equal(sourceUsesNetwork("host = enet.host_create()"), true);
+  assert.equal(sourceUsesNetwork("local t = socket.gettime()"), true);
+  // Kanto Ascendant, hidden_evolution_red_path.lua:147. Dialogue, not a socket.
+  assert.equal(sourceUsesNetwork(
+    'TEXT={"A basalt weight rests firmly in its socket. Its ember-line points deeper."}'), false);
+  // The engine never loads a test bench, and one that stubs a socket is not a
+  // mod that opens one.
+  assert.equal(isLoadedAtRuntime("MOD/tests/net_test.lua"), false);
+  assert.equal(isLoadedAtRuntime("MOD/lib/net.lua"), true);
+  assert.equal(isLoadedAtRuntime("MOD/README.md"), false);
+});
