@@ -320,3 +320,16 @@ test("an optional mod.fetch is not a mod that needs the network", async () => {
   assert.equal(isLoadedAtRuntime("MOD/lib/net.lua"), true);
   assert.equal(isLoadedAtRuntime("MOD/README.md"), false);
 });
+
+test("the declared engine range is published verbatim, and only when declared", () => {
+  assert.deepEqual(
+    requirementsFrom({ game_version: ">=0.2.56 <2.0.0", games: ["all"] }),
+    { engineRange: ">=0.2.56 <2.0.0" },
+  );
+  assert.deepEqual(
+    requirementsFrom({ game_version: "  0.0.0-dev || >=0.1.37 <2.0.0 ", games: ["all"] }),
+    { engineRange: "0.0.0-dev || >=0.1.37 <2.0.0" },
+  );
+  assert.equal(requirementsFrom({ game_version: "", games: ["all"] }), null);
+  assert.equal(requirementsFrom({ game_version: 3, games: ["all"] }), null);
+});
