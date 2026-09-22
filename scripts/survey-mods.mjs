@@ -457,7 +457,19 @@ async function surveyRepo(name, hint) {
   const release = await ghJSON(`repos/${name}/releases/latest`,
     "{tag:.tag_name, published:.published_at, body:.body, assets:[.assets[]|{name:.name, url:.browser_download_url, size:.size}]}");
 
-  const asset = release?.assets?.find((a) => /\.(zip|tar\.gz)$/i.test(a.name)) ?? null;
+  // **A zip beats a tarball, whatever order GitHub lists them in.**
+  //
+  // This used to take the first asset matching either, and the app installs
+  // zips: Voxel Ascendant publishes `VASC-3.0.36-...tar.gz` ahead of
+  // `Voxel-Ascendant-3.0.36.zip`, so the survey judged the tarball, reported
+  // "not a readable zip", and a working, MIT-licensed, actively released mod
+  // was refused for the order of a release page. A refusal earned by asset
+  // ordering is the same silent loss as page-one pagination, one mod at a
+  // time.
+  const assets = release?.assets ?? [];
+  const asset = assets.find((a) => /\.zip$/i.test(a.name))
+    ?? assets.find((a) => /\.tar\.gz$/i.test(a.name))
+    ?? null;
 
   let contents = null;
   let sha256 = null;
