@@ -182,6 +182,20 @@ export function requirementsFrom(manifest, { usesNetwork = null } = {}) {
   if (manifest.affects_link === true) out.affectsLink = true;
   if (manifest.experimental === true) out.experimental = true;
 
+  // The engine range the author declared, verbatim. The app ports the
+  // engine's own Semver.lua and judges it against the engine actually
+  // running, so this is the one fact that lets the Workshop say "needs 3D
+  // engine 0.2.56 or newer, yours is 0.2.27" BEFORE a download instead of
+  // the engine saying "invalid" after one. A string, never a derived
+  // minimum: the grammar has upper bounds and alternatives, and a number
+  // picked out of it here would disagree with the engine's own answer.
+  // `engineRange`, not `engine`: an entry already carries an `engine` object
+  // one level up, and two keys of one name and two types would trip the next
+  // reader.
+  if (typeof manifest.game_version === "string" && manifest.game_version.trim()) {
+    out.engineRange = manifest.game_version.trim();
+  }
+
   // A ROM the player has to supply before the engine will load the mod at
   // all. See importsFrom for what is published and what deliberately is not.
   const imports = importsFrom(manifest);

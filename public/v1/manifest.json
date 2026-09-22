@@ -113,7 +113,8 @@
         ],
         "games": [
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.0 <2.0.0"
       },
       "popularity": {
         "downloads": 119,
@@ -163,7 +164,8 @@
           "BATTLE_ART_VOXEL_FORK",
           "DRAMALESS_SHAPE",
           "gender_mod"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 283,
@@ -254,7 +256,8 @@
             "name": "Pokemon Stadium 2 (USA) ROM",
             "required": false
           }
-        ]
+        ],
+        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
       },
       "popularity": {
         "downloads": 13503,
@@ -298,7 +301,8 @@
         "worksWith": [
           "custom_pokeballs",
           "snag_quest"
-        ]
+        ],
+        "engineRange": ">=0.1.38 <2.0.0"
       },
       "popularity": {
         "downloads": 1261,
@@ -386,6 +390,9 @@
         "games": []
       },
       "modID": "button-shortcuts",
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
+      },
       "popularity": {
         "downloads": 52,
         "stars": 0,
@@ -424,6 +431,9 @@
         "games": []
       },
       "modID": "quickmap",
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
+      },
       "popularity": {
         "downloads": 93,
         "stars": 0,
@@ -462,6 +472,9 @@
         "games": []
       },
       "modID": "rename-character",
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
+      },
       "popularity": {
         "downloads": 31,
         "stars": 0,
@@ -527,7 +540,8 @@
         "worksWith": [
           "pokeball_colors",
           "custom_pokeballs"
-        ]
+        ],
+        "engineRange": ">=0.1.38 <2.0.0"
       },
       "popularity": {
         "downloads": 1190,
@@ -572,7 +586,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.50 <2.0.0"
       },
       "popularity": {
         "downloads": 610,
@@ -622,7 +637,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.37 <2.0.0"
       },
       "popularity": {
         "downloads": 12977,
@@ -662,6 +678,9 @@
         "games": []
       },
       "modID": "all_pokemon_catchable_151_mod",
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
+      },
       "popularity": {
         "downloads": 22073,
         "stars": 75,
@@ -707,7 +726,8 @@
           "gen3_battle_ui",
           "BATTLE_ART_VOXEL_FORK",
           "potato_voxel"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 1677,
@@ -758,7 +778,8 @@
           "crystal_animated_sprites_with_shiny_visuals",
           "unique_menu_icons",
           "Gold_Silver_Sprites"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 2463,
@@ -798,6 +819,9 @@
         "games": []
       },
       "modID": "dex_radar",
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
+      },
       "popularity": {
         "downloads": 726,
         "stars": 5,
@@ -879,7 +903,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.0 <2.0.0"
       },
       "popularity": {
         "downloads": 6306,
@@ -925,7 +950,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.37 <2.0.0"
       },
       "popularity": {
         "downloads": 892,
@@ -971,7 +997,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.37 <2.0.0"
       },
       "popularity": {
         "downloads": 698,
@@ -1016,7 +1043,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.37 <2.0.0"
       },
       "popularity": {
         "downloads": 5982,
@@ -1069,7 +1097,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.37 <2.0.0"
       },
       "popularity": {
         "downloads": 2750,
@@ -1119,7 +1148,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.37 <2.0.0"
       },
       "popularity": {
         "downloads": 375,
@@ -1193,7 +1223,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 2243,
@@ -1239,7 +1270,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 436,
@@ -1284,7 +1316,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.37 <2.0.0"
       },
       "popularity": {
         "downloads": 5096,
@@ -1330,7 +1363,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.37 <2.0.0"
       },
       "popularity": {
         "downloads": 1819,
@@ -1385,7 +1419,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 274,
@@ -1431,7 +1466,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.37 <2.0.0"
       },
       "popularity": {
         "downloads": 192,
@@ -1471,6 +1507,9 @@
         "games": []
       },
       "modID": "gen3_box",
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
+      },
       "popularity": {
         "downloads": 23767,
         "stars": 23,
@@ -1509,6 +1548,9 @@
         "games": []
       },
       "modID": "gen3_dex",
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
+      },
       "popularity": {
         "downloads": 1847,
         "stars": 0,
@@ -1547,6 +1589,9 @@
         "games": []
       },
       "modID": "groovy_palette",
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
+      },
       "popularity": {
         "downloads": 4129,
         "stars": 1,
@@ -1594,7 +1639,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.0 <2.0.0"
       },
       "popularity": {
         "downloads": 1393,
@@ -1635,6 +1681,9 @@
         "games": []
       },
       "modID": "kanto_gear",
+      "requirements": {
+        "engineRange": "0.0.0-dev || 0.1.94-kanto.22 || >=0.1.99 <2.0.0"
+      },
       "popularity": {
         "downloads": 9030,
         "stars": 52,
@@ -1691,7 +1740,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 621,
@@ -1737,7 +1787,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.37 <2.0.0"
       },
       "popularity": {
         "downloads": 736,
@@ -1790,7 +1841,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.37 <2.0.0"
       },
       "popularity": {
         "downloads": 1005,
@@ -1836,7 +1888,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 11710,
@@ -1881,7 +1934,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 433,
@@ -1930,7 +1984,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.0 <2.0.0"
       },
       "popularity": {
         "downloads": 4725,
@@ -1975,7 +2030,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.37 <2.0.0"
       },
       "popularity": {
         "downloads": 1362,
@@ -2040,7 +2096,8 @@
           "SHINY_POKEMON",
           "pokeball_colors",
           "kanto_balls"
-        ]
+        ],
+        "engineRange": ">=0.1.38 <2.0.0"
       },
       "popularity": {
         "downloads": 660,
@@ -2084,7 +2141,8 @@
       "requirements": {
         "worksWith": [
           "pokegear_cards"
-        ]
+        ],
+        "engineRange": ">=0.1.33 <2.0.0"
       },
       "popularity": {
         "downloads": 671,
@@ -2132,7 +2190,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.37 <2.0.0"
       },
       "popularity": {
         "downloads": 7363,
@@ -2175,7 +2234,8 @@
       "requirements": {
         "worksWith": [
           "DRAMATIC_SHAPE"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 13757,
@@ -2223,7 +2283,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.80 <1.0.0"
       },
       "popularity": {
         "downloads": 239,
@@ -2306,7 +2367,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 494,
@@ -2352,7 +2414,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 277,
@@ -2405,7 +2468,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.90"
       },
       "popularity": {
         "downloads": 1079,
@@ -2450,7 +2514,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <2.0.0"
       },
       "popularity": {
         "downloads": 221,
@@ -2502,7 +2567,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.75 <2.0.0"
       },
       "popularity": {
         "downloads": 63,
@@ -2552,7 +2618,8 @@
           "blue",
           "yellow",
           "gold"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 73,
@@ -2621,7 +2688,8 @@
           "STADIUM_BATTLE_FX",
           "potato_voxel",
           "VOXEL_ASCENDANT"
-        ]
+        ],
+        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
       },
       "popularity": {
         "downloads": 11387,
@@ -2671,7 +2739,8 @@
           "blue",
           "yellow",
           "gold"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 161,
@@ -2762,7 +2831,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.0 <2.0.0"
       },
       "popularity": {
         "downloads": 107,
@@ -2805,7 +2875,8 @@
       "requirements": {
         "worksWith": [
           "modern_party_ui"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 636,
@@ -2850,7 +2921,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.0 <2.0.0"
       },
       "popularity": {
         "downloads": 13,
@@ -2895,7 +2967,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.0 <2.0.0"
       },
       "popularity": {
         "downloads": 31,
@@ -2935,6 +3008,9 @@
         "games": []
       },
       "modID": "its-clefairy",
+      "requirements": {
+        "engineRange": ">=0.1.86"
+      },
       "popularity": {
         "downloads": 43,
         "stars": 0,
@@ -2982,7 +3058,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 38,
@@ -3087,7 +3164,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": "0.0.0-dev || >=0.1.75 <2.0.0"
       },
       "popularity": {
         "downloads": 24,
@@ -3132,7 +3210,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 35,
@@ -3183,7 +3262,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": "0.0.0-dev || >=0.1.75 <2.0.0"
       },
       "popularity": {
         "downloads": 28,
@@ -3230,7 +3310,8 @@
         "games": [
           "red",
           "blue"
-        ]
+        ],
+        "engineRange": "0.0.0-dev || >=0.1.75 <2.0.0"
       },
       "popularity": {
         "downloads": 52,
@@ -3286,7 +3367,8 @@
           "BATTLE_ART_VOXEL_FORK",
           "DRAMALESS_SHAPE",
           "potato_voxel"
-        ]
+        ],
+        "engineRange": "0.0.0-dev || >=0.1.75 <2.0.0"
       },
       "popularity": {
         "downloads": 60,
@@ -3332,7 +3414,8 @@
           "DRAMATIC_SHAPE",
           "POTATO_VOXEL",
           "VOXEL_ASCENDANT"
-        ]
+        ],
+        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
       },
       "popularity": {
         "downloads": 398,
@@ -3373,6 +3456,9 @@
         "games": []
       },
       "modID": "kanto_companion",
+      "requirements": {
+        "engineRange": ">=0.1.83"
+      },
       "popularity": {
         "downloads": 969,
         "stars": 7,
@@ -3411,6 +3497,9 @@
         "games": []
       },
       "modID": "premier_ball_bonus",
+      "requirements": {
+        "engineRange": ">=0.1.0 <2.0.0"
+      },
       "popularity": {
         "downloads": 58,
         "stars": 0,
@@ -3454,7 +3543,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.86"
       },
       "popularity": {
         "downloads": 133,
@@ -3507,7 +3597,8 @@
           "jj_hm_field_unlock",
           "jj_auto_field_moves",
           "evolution_man_gold"
-        ]
+        ],
+        "engineRange": ">=0.1.78 <0.3.0"
       },
       "popularity": {
         "downloads": 144,
@@ -3586,7 +3677,8 @@
       },
       "modID": "move_type_fixes",
       "requirements": {
-        "affectsLink": true
+        "affectsLink": true,
+        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0"
       },
       "popularity": {
         "downloads": 300,
@@ -3628,7 +3720,8 @@
       "modID": "species_rebalance",
       "requirements": {
         "affectsLink": true,
-        "experimental": true
+        "experimental": true,
+        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0"
       },
       "popularity": {
         "downloads": 43,
@@ -3668,6 +3761,9 @@
         "games": []
       },
       "modID": "stronger_trainers",
+      "requirements": {
+        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0"
+      },
       "popularity": {
         "downloads": 587,
         "stars": 3,
@@ -3709,7 +3805,8 @@
       "requirements": {
         "conflicts": [
           "randomized_gym_challenge"
-        ]
+        ],
+        "engineRange": ">=0.2.18"
       },
       "popularity": {
         "downloads": 96,
@@ -3749,6 +3846,9 @@
         "games": []
       },
       "modID": "color-saturation",
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
+      },
       "popularity": {
         "downloads": 66,
         "stars": 0,
@@ -3787,6 +3887,9 @@
         "games": []
       },
       "modID": "pokeball-colorfix",
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
+      },
       "popularity": {
         "downloads": 615,
         "stars": 1,
@@ -3825,6 +3928,9 @@
         "games": []
       },
       "modID": "pokemove-colorfix",
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
+      },
       "popularity": {
         "downloads": 402,
         "stars": 2,
@@ -3911,7 +4017,8 @@
           "snag_quest",
           "kanto_contests",
           "happiness"
-        ]
+        ],
+        "engineRange": ">=0.1.38 <2.0.0"
       },
       "popularity": {
         "downloads": 214,
@@ -3955,7 +4062,8 @@
       "requirements": {
         "permissions": [
           "steps"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 2705,
@@ -4056,7 +4164,8 @@
         "conflicts": [
           "running_shoes",
           "exp_bar"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 127,
@@ -4096,6 +4205,9 @@
         "games": []
       },
       "modID": "hold_to_scroll_ui",
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
+      },
       "popularity": {
         "downloads": 286,
         "stars": 1,
@@ -4143,7 +4255,8 @@
         ],
         "worksWith": [
           "metadata_system"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 40,
@@ -4183,6 +4296,9 @@
         "games": []
       },
       "modID": "move_learn_plus",
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
+      },
       "popularity": {
         "downloads": 377,
         "stars": 1,
@@ -4221,6 +4337,9 @@
         "games": []
       },
       "modID": "sweet_share",
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
+      },
       "popularity": {
         "downloads": 1764,
         "stars": 2,
@@ -4274,7 +4393,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": "0.0.0-dev || >=0.1.28 <2.0.0"
       },
       "popularity": {
         "downloads": 691,
@@ -4324,7 +4444,8 @@
         ],
         "worksWith": [
           "red_3d_player"
-        ]
+        ],
+        "engineRange": "0.0.0-dev || >0.1.77 <2.0.0"
       },
       "popularity": {
         "downloads": 6717,
@@ -4368,7 +4489,8 @@
       "requirements": {
         "requires": [
           "national_dex"
-        ]
+        ],
+        "engineRange": ">=0.1.45"
       }
     },
     {
@@ -4408,7 +4530,8 @@
           "gold",
           "silver",
           "crystal"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       }
     },
     {
@@ -4448,7 +4571,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.37 <2.0.0"
       }
     },
     {
@@ -4488,7 +4612,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.50 <2.0.0"
       }
     },
     {
@@ -4522,7 +4647,10 @@
         "family": "gen1recomp",
         "games": []
       },
-      "modID": "modern_party_ui"
+      "modID": "modern_party_ui",
+      "requirements": {
+        "engineRange": ">=0.0.0-dev <1.0.0"
+      }
     },
     {
       "id": "gen1recomp-typed-move-colors",
@@ -4555,7 +4683,10 @@
         "family": "gen1recomp",
         "games": []
       },
-      "modID": "typed_move_colors"
+      "modID": "typed_move_colors",
+      "requirements": {
+        "engineRange": ">=0.0.0-dev <1.0.0"
+      }
     },
     {
       "id": "red-ptbr-gen1recomp",
@@ -4629,7 +4760,10 @@
         "family": "gen1recomp",
         "games": []
       },
-      "modID": "battle_info_hud"
+      "modID": "battle_info_hud",
+      "requirements": {
+        "engineRange": ">=0.0.0-dev <1.0.0"
+      }
     },
     {
       "id": "gen1recomp-modern-pokedex-ui",
@@ -4662,7 +4796,10 @@
         "family": "gen1recomp",
         "games": []
       },
-      "modID": "modern_pokedex_ui"
+      "modID": "modern_pokedex_ui",
+      "requirements": {
+        "engineRange": ">=0.0.0-dev <1.0.0"
+      }
     },
     {
       "id": "gen1recomp-modern-pc-ui",
@@ -4695,7 +4832,10 @@
         "family": "gen1recomp",
         "games": []
       },
-      "modID": "modern_pc_ui"
+      "modID": "modern_pc_ui",
+      "requirements": {
+        "engineRange": ">=0.0.0-dev <1.0.0"
+      }
     },
     {
       "id": "gen1recomp-gen2-types",
@@ -4734,7 +4874,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.33 <2.0.0"
       }
     },
     {
@@ -4777,7 +4918,8 @@
         ],
         "requires": [
           "gen2_dex"
-        ]
+        ],
+        "engineRange": ">=0.1.37 <2.0.0"
       }
     },
     {
@@ -4820,7 +4962,8 @@
         ],
         "requires": [
           "gen2_moves_learnsets_251"
-        ]
+        ],
+        "engineRange": ">=0.1.37 <2.0.0"
       }
     },
     {
@@ -5247,7 +5390,10 @@
         "family": "gen1recomp",
         "games": []
       },
-      "modID": "bills_pc_plus"
+      "modID": "bills_pc_plus",
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
+      }
     },
     {
       "id": "kanto-contests",
@@ -5280,7 +5426,10 @@
         "family": "gen1recomp",
         "games": []
       },
-      "modID": "kanto_contests"
+      "modID": "kanto_contests",
+      "requirements": {
+        "engineRange": ">=0.1.75 <2.0.0"
+      }
     },
     {
       "id": "expanded-species",
@@ -5319,7 +5468,8 @@
           "gold",
           "silver",
           "crystal"
-        ]
+        ],
+        "engineRange": ">=0.1.94 <2.0.0"
       }
     },
     {
@@ -5353,7 +5503,10 @@
         "family": "gen1recomp",
         "games": []
       },
-      "modID": "gen1_auto_continue"
+      "modID": "gen1_auto_continue",
+      "requirements": {
+        "engineRange": ">=0.0.0-dev <2.0.0"
+      }
     },
     {
       "id": "gen1autosave",
@@ -5386,7 +5539,10 @@
         "family": "gen1recomp",
         "games": []
       },
-      "modID": "gen1autosave"
+      "modID": "gen1autosave",
+      "requirements": {
+        "engineRange": ">=0.0.0-dev <1.0.0"
+      }
     },
     {
       "id": "gen1battleui",
@@ -5419,7 +5575,10 @@
         "family": "gen1recomp",
         "games": []
       },
-      "modID": "Gen1BattleUI"
+      "modID": "Gen1BattleUI",
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
+      }
     },
     {
       "id": "gen1dex",
@@ -5452,7 +5611,10 @@
         "family": "gen1recomp",
         "games": []
       },
-      "modID": "Gen1Dex"
+      "modID": "Gen1Dex",
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
+      }
     },
     {
       "id": "gen1modmenu",
@@ -5485,7 +5647,10 @@
         "family": "gen1recomp",
         "games": []
       },
-      "modID": "gen1_mod_menu"
+      "modID": "gen1_mod_menu",
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
+      }
     },
     {
       "id": "gen1party",
@@ -5518,7 +5683,10 @@
         "family": "gen1recomp",
         "games": []
       },
-      "modID": "Gen1Party"
+      "modID": "Gen1Party",
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
+      }
     },
     {
       "id": "gen1remember",
@@ -5557,7 +5725,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       }
     },
     {
@@ -5591,7 +5760,10 @@
         "family": "gen1recomp",
         "games": []
       },
-      "modID": "gen1_sound_qol"
+      "modID": "gen1_sound_qol",
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
+      }
     },
     {
       "id": "gen1sprint",
@@ -5624,7 +5796,10 @@
         "family": "gen1recomp",
         "games": []
       },
-      "modID": "gen1_sprint"
+      "modID": "gen1_sprint",
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
+      }
     },
     {
       "id": "gender-display",
@@ -5663,7 +5838,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       }
     },
     {
@@ -5703,7 +5879,8 @@
           "gold",
           "silver",
           "crystal"
-        ]
+        ],
+        "engineRange": ">=0.1.78 <2.0.0"
       }
     },
     {
@@ -5741,7 +5918,8 @@
       "requirements": {
         "games": [
           "gold"
-        ]
+        ],
+        "engineRange": ">=0.1.78 <2.0.0"
       }
     },
     {
@@ -5777,6 +5955,9 @@
         "games": []
       },
       "modID": "item_randomizer",
+      "requirements": {
+        "engineRange": ">=0.2.18 <2.0.0"
+      },
       "popularity": {
         "downloads": 84,
         "stars": 0,
@@ -5820,7 +6001,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.2.56 <2.0.0"
       }
     },
     {
@@ -5860,7 +6042,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       }
     },
     {
@@ -5894,7 +6077,10 @@
         "family": "gen1recomp",
         "games": []
       },
-      "modID": "pokegear_menu"
+      "modID": "pokegear_menu",
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
+      }
     },
     {
       "id": "randomized-gym-challenge",
@@ -5928,7 +6114,10 @@
         "family": "gen1recomp",
         "games": []
       },
-      "modID": "randomized_gym_challenge"
+      "modID": "randomized_gym_challenge",
+      "requirements": {
+        "engineRange": ">=0.2.18"
+      }
     },
     {
       "id": "shedinja",
@@ -5961,7 +6150,10 @@
         "family": "gen1recomp",
         "games": []
       },
-      "modID": "shedinja"
+      "modID": "shedinja",
+      "requirements": {
+        "engineRange": ">=0.2.18 <1.0.0"
+      }
     },
     {
       "id": "shedinja-expanded-bridge",
@@ -5999,7 +6191,8 @@
       "requirements": {
         "requires": [
           "shedinja"
-        ]
+        ],
+        "engineRange": ">=0.2.18 <1.0.0"
       }
     },
     {
@@ -6034,7 +6227,10 @@
         "family": "gen1recomp",
         "games": []
       },
-      "modID": "sound_effect_replacer"
+      "modID": "sound_effect_replacer",
+      "requirements": {
+        "engineRange": ">=0.2.18"
+      }
     },
     {
       "id": "starter-picker",
@@ -6069,6 +6265,9 @@
         "games": []
       },
       "modID": "starter_picker",
+      "requirements": {
+        "engineRange": ">=0.2.18"
+      },
       "popularity": {
         "downloads": 249,
         "stars": 0,
@@ -6106,7 +6305,10 @@
         "family": "gen1recomp",
         "games": []
       },
-      "modID": "modern_ui_suite"
+      "modID": "modern_ui_suite",
+      "requirements": {
+        "engineRange": ">=0.0.0-dev <1.0.0"
+      }
     },
     {
       "id": "st-spriteswapper",
@@ -6222,7 +6424,10 @@
         "family": "gen1recomp",
         "games": []
       },
-      "modID": "modern_start_menu_ui"
+      "modID": "modern_start_menu_ui",
+      "requirements": {
+        "engineRange": ">=0.0.0-dev <1.0.0"
+      }
     },
     {
       "id": "house-always-lose",
@@ -6335,7 +6540,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       }
     },
     {
@@ -6376,7 +6582,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       }
     },
     {
@@ -6423,7 +6630,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 39,
@@ -6468,7 +6676,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 594,
@@ -6513,7 +6722,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 92,
@@ -6562,7 +6772,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 147,
@@ -6611,7 +6822,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 168,
@@ -6656,7 +6868,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 168,
@@ -6701,7 +6914,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 996,
@@ -6746,7 +6960,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 338,
@@ -6837,7 +7052,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": "0.0.0-dev || >=0.1.69 <3.0.0"
       },
       "popularity": {
         "downloads": 64261,
@@ -6882,7 +7098,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 3490,
@@ -6921,6 +7138,9 @@
       "project": {
         "url": "https://github.com/TanukiTooks/Candy-Jar/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.1.33 <2.0.0"
       },
       "popularity": {
         "downloads": 337,
@@ -6972,7 +7192,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 552,
@@ -7011,6 +7232,9 @@
       "project": {
         "url": "https://github.com/MrKrisSatan/Leaf/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 4976,
@@ -7110,7 +7334,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 623,
@@ -7165,7 +7390,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 815,
@@ -7220,7 +7446,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 1770,
@@ -7265,7 +7492,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0"
       },
       "popularity": {
         "downloads": 108,
@@ -7310,7 +7538,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0"
       },
       "popularity": {
         "downloads": 1107,
@@ -7381,7 +7610,8 @@
       "requirements": {
         "permissions": [
           "filesystem"
-        ]
+        ],
+        "engineRange": "0.0.0-dev || >=0.1.69 <2.0.0"
       },
       "popularity": {
         "downloads": 5835,
@@ -7426,7 +7656,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev"
       },
       "popularity": {
         "downloads": 184,
@@ -7471,7 +7702,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 5256,
@@ -7510,6 +7742,9 @@
       "project": {
         "url": "https://github.com/ShaneMcGovernIE/exp_share/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 21925,
@@ -7552,6 +7787,9 @@
       "project": {
         "url": "https://github.com/shanehudson-gen1recomp-mods/free_fly/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0"
       },
       "popularity": {
         "downloads": 6948,
@@ -7596,7 +7834,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.37 <2.0.0"
       },
       "popularity": {
         "downloads": 883,
@@ -7641,7 +7880,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": "0.0.0-dev || >=0.1.51 <2.0.0"
       },
       "popularity": {
         "downloads": 31171,
@@ -7730,6 +7970,9 @@
         "url": "https://github.com/hdbreaker/gen1recomp-mod-intro_bypass/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "engineRange": ">=0.0.0-dev <1.0.0"
+      },
       "popularity": {
         "downloads": 195,
         "stars": 0,
@@ -7773,7 +8016,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 292,
@@ -7841,6 +8085,9 @@
         "url": "https://github.com/burgerslayer7/Kanto-gen1-dive/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
+      },
       "popularity": {
         "downloads": 325,
         "stars": 1,
@@ -7887,7 +8134,8 @@
         ],
         "requires": [
           "DRAMATIC_SHAPE"
-        ]
+        ],
+        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
       },
       "popularity": {
         "downloads": 1966,
@@ -8017,6 +8265,9 @@
         "url": "https://github.com/ShaneMcGovernIE/relearn_moves/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
+      },
       "popularity": {
         "downloads": 3382,
         "stars": 2,
@@ -8099,7 +8350,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 3707,
@@ -8138,6 +8390,9 @@
       "project": {
         "url": "https://github.com/TheRhysWyrill/instant_heal_pc_rest/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.1.37 <2.0.0"
       },
       "popularity": {
         "downloads": 1381,
@@ -8183,7 +8438,8 @@
           "blue",
           "yellow",
           "gold"
-        ]
+        ],
+        "engineRange": ">=0.1.78 <2.0.0"
       },
       "popularity": {
         "downloads": 4666,
@@ -8273,7 +8529,8 @@
       "requirements": {
         "permissions": [
           "compute"
-        ]
+        ],
+        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
       },
       "popularity": {
         "downloads": 14656,
@@ -8366,6 +8623,9 @@
       "project": {
         "url": "https://github.com/unxpected-uxp/pokemon-gen1-recomp-mod-qol/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 51538,
@@ -8471,7 +8731,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
       },
       "popularity": {
         "downloads": 449,
@@ -8566,7 +8827,8 @@
         ],
         "permissions": [
           "filesystem"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 115,
@@ -8609,7 +8871,8 @@
       "requirements": {
         "requires": [
           "DRAMALESS_SHAPE"
-        ]
+        ],
+        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
       },
       "popularity": {
         "downloads": 609,
@@ -8648,6 +8911,9 @@
       "project": {
         "url": "https://github.com/Nezara/silph-scope-network/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 311,
@@ -8720,7 +8986,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": "0.0.0-dev || >=0.1.76 <1.0.0"
       },
       "popularity": {
         "downloads": 187,
@@ -8765,7 +9032,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 8513,
@@ -8809,7 +9077,8 @@
       "requirements": {
         "permissions": [
           "filesystem"
-        ]
+        ],
+        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
       },
       "popularity": {
         "downloads": 6871,
@@ -8871,7 +9140,8 @@
         ],
         "permissions": [
           "filesystem"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 186,
@@ -8919,7 +9189,8 @@
         ],
         "requires": [
           "translation-fr"
-        ]
+        ],
+        "engineRange": ">=0.1.66 <1.0.0"
       },
       "popularity": {
         "downloads": 574,
@@ -8964,7 +9235,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev"
       },
       "popularity": {
         "downloads": 130,
@@ -9003,6 +9275,9 @@
       "project": {
         "url": "https://github.com/ShaneMcGovernIE/trainer_rematch/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": "0.0.0-dev || >=0.1.17 <1.0.0"
       },
       "popularity": {
         "downloads": 6789,
@@ -9085,7 +9360,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 14134,
@@ -9130,7 +9406,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 7170,
@@ -9169,6 +9446,9 @@
       "project": {
         "url": "https://github.com/ShaneMcGovernIE/useful-marts/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 1914,
@@ -9213,7 +9493,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 8744,
@@ -9258,7 +9539,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 4376,
@@ -9303,7 +9585,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 1451,
@@ -9393,6 +9676,9 @@
         "url": "https://github.com/shanehudson-gen1recomp-mods/wild_skies/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0"
+      },
       "popularity": {
         "downloads": 9741,
         "stars": 14,
@@ -9430,6 +9716,9 @@
       "project": {
         "url": "https://github.com/YoDrehDenSwagAuf/overworld-spawn-mod/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 64349,
@@ -9474,7 +9763,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 5749,
@@ -9520,7 +9810,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": "0.0.0-dev || >=0.1.86 <2.0.0"
       },
       "popularity": {
         "downloads": 20476,
@@ -9598,6 +9889,9 @@
         "url": "https://github.com/goofwear/gameshark/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "engineRange": ">=0.1.79 || =0.0.0-dev"
+      },
       "popularity": {
         "downloads": 3819,
         "stars": 13,
@@ -9635,6 +9929,9 @@
       "project": {
         "url": "https://github.com/VRM97/pokemon-bank/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.1.86-0 <2.0.0"
       },
       "popularity": {
         "downloads": 2474,
@@ -9679,7 +9976,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 860,
@@ -9724,7 +10022,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.0 <1.0.0"
       },
       "popularity": {
         "downloads": 660,
@@ -9770,7 +10069,8 @@
           "blue",
           "yellow",
           "gold"
-        ]
+        ],
+        "engineRange": ">=0.1.0 <2.0.0"
       },
       "popularity": {
         "downloads": 1050,
@@ -9809,6 +10109,9 @@
       "project": {
         "url": "https://github.com/distilledorion-sketch/crystal_animated_sprites_with_shiny_visuals/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.1.33 <2.0.0"
       },
       "popularity": {
         "downloads": 13387,
@@ -9910,7 +10213,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 105,
@@ -9968,7 +10272,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 730,
@@ -10058,7 +10363,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 83,
@@ -10097,6 +10403,9 @@
       "project": {
         "url": "https://github.com/castdrian/tloz-recomp-mania/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 151,
@@ -10145,7 +10454,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 210,
@@ -10184,6 +10494,9 @@
       "project": {
         "url": "https://github.com/sanjinpepic/gen1recomp-national-dex/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 315,
@@ -10228,7 +10541,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 19,
@@ -10325,7 +10639,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 559,
@@ -10370,7 +10685,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 312,
@@ -10415,7 +10731,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 8,
@@ -10460,7 +10777,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 5,
@@ -10505,7 +10823,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 44,
@@ -10550,7 +10869,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 355,
@@ -10721,6 +11041,9 @@
         "url": "https://github.com/juancdominici/wide-menus/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
+      },
       "popularity": {
         "downloads": 89,
         "stars": 0,
@@ -10764,7 +11087,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 31,
@@ -10809,7 +11133,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 3,
@@ -10854,7 +11179,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 109,
@@ -10943,7 +11269,8 @@
       "requirements": {
         "games": [
           "crystal"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 25,
@@ -11078,7 +11405,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 45,
@@ -11123,7 +11451,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.29"
       },
       "popularity": {
         "downloads": 176,
@@ -11166,7 +11495,8 @@
       "requirements": {
         "requires": [
           "pokegear_cards"
-        ]
+        ],
+        "engineRange": ">=0.1.84 <1.0.0"
       },
       "popularity": {
         "downloads": 4985,
@@ -11205,6 +11535,9 @@
       "project": {
         "url": "https://github.com/arsdaemonia-design/Gen1Recomp-better-battles/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 127,
@@ -11260,6 +11593,9 @@
         "url": "https://github.com/businessmachines02/anime-realism/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
+      },
       "popularity": {
         "downloads": 880,
         "stars": 4,
@@ -11304,7 +11640,8 @@
           "blue",
           "yellow",
           "gold"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <2.0.0"
       },
       "popularity": {
         "downloads": 38,
@@ -11344,6 +11681,9 @@
         "url": "https://github.com/cleverleviathan/Pallet-Chaos/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "engineRange": ">=0.0.0-dev <1.0.0"
+      },
       "popularity": {
         "downloads": 57,
         "stars": 0,
@@ -11382,6 +11722,9 @@
         "url": "https://github.com/Czajo/gen1recomp-autosave/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "engineRange": ">=0.0.0-dev <1.0.0"
+      },
       "popularity": {
         "downloads": 16,
         "stars": 0,
@@ -11419,6 +11762,9 @@
       "project": {
         "url": "https://github.com/DaniKH1/Gen-2-Save-Screen-Gen1Recomp/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 11,
@@ -11477,6 +11823,9 @@
         "url": "https://github.com/ddagent/gen1recomp-dex-pages/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
+      },
       "popularity": {
         "downloads": 143,
         "stars": 1,
@@ -11514,6 +11863,9 @@
       "project": {
         "url": "https://github.com/ddagent/gen1recomp-quick-save/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 91,
@@ -11591,6 +11943,9 @@
         "url": "https://github.com/FelizNavidad-D/Gen1-Recomp-Mods/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "engineRange": ">=0.0.0-dev"
+      },
       "popularity": {
         "downloads": 12864,
         "stars": 22,
@@ -11636,7 +11991,8 @@
           "yellow",
           "gold",
           "crystal"
-        ]
+        ],
+        "engineRange": ">=0.2.12 <1.0.0"
       },
       "popularity": {
         "downloads": 369,
@@ -11675,6 +12031,9 @@
       "project": {
         "url": "https://github.com/HighDrexler/Colosseum-Inspired-UI-Overhaul-V.1.0.0/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": "0.0.0-dev || >=0.2.11 <2.0.0"
       },
       "popularity": {
         "downloads": 1286,
@@ -11752,6 +12111,9 @@
         "url": "https://github.com/HubGit8/Gen1Recomp-Phase-Step/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "engineRange": ">=0.1.60 <0.2.0"
+      },
       "popularity": {
         "downloads": 56,
         "stars": 1,
@@ -11795,7 +12157,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 8,
@@ -11919,7 +12282,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0 <10.0.0"
       },
       "popularity": {
         "downloads": 1529,
@@ -11968,7 +12332,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 232,
@@ -12007,6 +12372,9 @@
       "project": {
         "url": "https://github.com/lakelssky/PocketMonstersPC/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.1.38 <2.0.0"
       },
       "popularity": {
         "downloads": 21,
@@ -12078,7 +12446,8 @@
         "games": [
           "gold",
           "silver"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 141,
@@ -12125,6 +12494,9 @@
         "url": "https://github.com/magalvao/itemfinder-plus/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
+      },
       "popularity": {
         "downloads": 395,
         "stars": 1,
@@ -12162,6 +12534,9 @@
       "project": {
         "url": "https://github.com/mjdenucci/fast-pokemon-center/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 25,
@@ -12204,7 +12579,8 @@
       "requirements": {
         "permissions": [
           "filesystem"
-        ]
+        ],
+        "engineRange": ">=0.2.56 <2.0.0"
       },
       "popularity": {
         "downloads": 545,
@@ -12243,6 +12619,9 @@
       "project": {
         "url": "https://github.com/MrKrisSatan/Weather-fx/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
       },
       "popularity": {
         "downloads": 5925,
@@ -12285,7 +12664,8 @@
       "requirements": {
         "requires": [
           "DRAMATIC_SHAPE"
-        ]
+        ],
+        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
       },
       "popularity": {
         "downloads": 439,
@@ -12324,6 +12704,9 @@
       "project": {
         "url": "https://github.com/randyadr/Gen2-Cheat-Menu/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 235,
@@ -12415,7 +12798,8 @@
         ],
         "permissions": [
           "compute"
-        ]
+        ],
+        "engineRange": ">=0.2.57"
       },
       "popularity": {
         "downloads": 7324,
@@ -12460,7 +12844,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 236,
@@ -12614,6 +12999,9 @@
         "url": "https://github.com/ShaneMcGovernIE/throw_ball_hotkey/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
+      },
       "popularity": {
         "downloads": 337,
         "stars": 1,
@@ -12655,7 +13043,8 @@
       "requirements": {
         "permissions": [
           "filesystem"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 44,
@@ -12694,6 +13083,9 @@
       "project": {
         "url": "https://github.com/swuff-star/KEP-Recomp-Port/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 128,
@@ -12736,7 +13128,8 @@
       "requirements": {
         "requires": [
           "Dynamic_Scaling"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 63,
@@ -12775,6 +13168,9 @@
       "project": {
         "url": "https://github.com/tectorifter/Gimmicks_Menu/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 98,
@@ -12855,6 +13251,9 @@
         "url": "https://github.com/thorkdev/gen1recomp-effective-markers/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "engineRange": ">=0.0.0-dev <1.0.0"
+      },
       "popularity": {
         "downloads": 106,
         "stars": 1,
@@ -12905,6 +13304,9 @@
       "project": {
         "url": "https://github.com/thorkdev/gen1recomp-happiness/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 78,
@@ -12957,6 +13359,9 @@
         "url": "https://github.com/thorkdev/gen1recomp-mystery-gift/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "engineRange": ">=0.0.0-dev <1.0.0"
+      },
       "popularity": {
         "downloads": 135,
         "stars": 0,
@@ -12994,6 +13399,9 @@
       "project": {
         "url": "https://github.com/Tooandorisu/Gen1-Recomp-Norwegian-Translate/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 2,
@@ -13033,6 +13441,9 @@
         "url": "https://github.com/Tophiero/Wild-DV-Display/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "engineRange": ">=0.1.37 <2.0.0"
+      },
       "popularity": {
         "downloads": 47,
         "stars": 0,
@@ -13070,6 +13481,9 @@
       "project": {
         "url": "https://github.com/ty-mcdk/custom-video-intro/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.1.86"
       },
       "popularity": {
         "downloads": 11,
@@ -13109,6 +13523,9 @@
         "url": "https://github.com/ty-mcdk/easy-custom-music/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "engineRange": ">=0.1.88"
+      },
       "popularity": {
         "downloads": 125,
         "stars": 0,
@@ -13146,6 +13563,9 @@
       "project": {
         "url": "https://github.com/weskestis/Classic-Ironmon-Kaizo/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 27,
@@ -13185,6 +13605,9 @@
         "url": "https://github.com/weskestis/Kaizo-Ultimate/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "engineRange": ">=0.2.18 <1.0.0"
+      },
       "popularity": {
         "downloads": 27,
         "stars": 0,
@@ -13222,6 +13645,9 @@
       "project": {
         "url": "https://github.com/weskestis/UniversalRandomizer/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.2.18 <1.0.0"
       },
       "popularity": {
         "downloads": 42,
@@ -13298,6 +13724,9 @@
       "project": {
         "url": "https://github.com/WizzStar/PKMN-G1R-Immersive-Bicycle-Mod/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
       },
       "popularity": {
         "downloads": 156,
@@ -13735,7 +14164,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       },
       "popularity": {
         "downloads": 155,
@@ -13774,6 +14204,9 @@
       "project": {
         "url": "https://github.com/randyadr/3D-Pokemon-Sprites/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": "0.0.0-dev || >=0.1.30 <2.0.0"
       },
       "popularity": {
         "downloads": 6080,
@@ -13818,7 +14251,8 @@
           "gold",
           "silver",
           "crystal"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       }
     },
     {
@@ -13857,7 +14291,8 @@
         "games": [
           "red",
           "crystal"
-        ]
+        ],
+        "engineRange": ">=0.2.24 <1.0.0"
       }
     },
     {
@@ -14022,7 +14457,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       }
     },
     {
@@ -14159,6 +14595,9 @@
       "project": {
         "url": "https://github.com/wild1walker/Gen151/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
       }
     },
     {
@@ -14192,6 +14631,9 @@
       "project": {
         "url": "https://github.com/wild1walker/Gen1Arena/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.1.37 <2.0.0"
       }
     },
     {
@@ -14248,6 +14690,9 @@
       "project": {
         "url": "https://github.com/wild1walker/Gen1BillsBox/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
       }
     },
     {
@@ -14281,6 +14726,9 @@
       "project": {
         "url": "https://github.com/wild1walker/Gen1Follower/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": "0.0.0-dev || >=0.1.86 <2.0.0"
       }
     },
     {
@@ -14314,6 +14762,9 @@
       "project": {
         "url": "https://github.com/wild1walker/Gen1MenuManager/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.0.0-dev <2.0.0"
       }
     },
     {
@@ -14347,6 +14798,9 @@
       "project": {
         "url": "https://github.com/wild1walker/Gen1ModernBag/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.0.0-0 <2.0.0"
       }
     },
     {
@@ -14380,6 +14834,9 @@
       "project": {
         "url": "https://github.com/wild1walker/Gen1WildQOL/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.2.57 <2.0.0"
       }
     },
     {
@@ -14413,6 +14870,9 @@
       "project": {
         "url": "https://github.com/wild1walker/Gen1WildUI/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.1.37 <2.0.0"
       }
     },
     {
@@ -14450,7 +14910,8 @@
       "requirements": {
         "games": [
           "crystal"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       }
     },
     {
@@ -14490,7 +14951,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       }
     },
     {
@@ -14530,7 +14992,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       }
     },
     {
@@ -14609,7 +15072,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.83"
       }
     },
     {
@@ -14649,7 +15113,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.83"
       }
     },
     {
@@ -14689,7 +15154,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.1.83"
       }
     },
     {
@@ -14729,7 +15195,8 @@
           "gold",
           "silver",
           "crystal"
-        ]
+        ],
+        "engineRange": ">=0.1.83"
       }
     },
     {
@@ -14767,7 +15234,8 @@
       "requirements": {
         "games": [
           "crystal"
-        ]
+        ],
+        "engineRange": ">=0.2.55 <1.0.0"
       }
     },
     {
@@ -14801,6 +15269,9 @@
       "project": {
         "url": "https://github.com/Stone696/nuzlocke/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.2.24 <2.0.0"
       }
     },
     {
@@ -14863,7 +15334,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
       }
     },
     {
@@ -14897,6 +15369,9 @@
       "project": {
         "url": "https://github.com/alamops/RBYRunForrest/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.1.86 <2.0.0"
       }
     },
     {
@@ -14936,7 +15411,8 @@
           "gold",
           "silver",
           "crystal"
-        ]
+        ],
+        "engineRange": ">=0.2.53 <2.0.0"
       }
     },
     {
@@ -15065,7 +15541,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       }
     },
     {
@@ -15099,6 +15576,9 @@
       "project": {
         "url": "https://github.com/DarkwarePX/Trainer-Skins/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.2.32"
       }
     },
     {
@@ -15138,7 +15618,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.2.56 <2.0.0"
       }
     },
     {
@@ -15222,7 +15703,8 @@
         ],
         "requires": [
           "DRAMATIC_SHAPE"
-        ]
+        ],
+        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
       }
     },
     {
@@ -15296,6 +15778,9 @@
       "project": {
         "url": "https://github.com/Roxas2712/translation-german-universal/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.2.22 <1.0.0"
       }
     },
     {
@@ -15335,7 +15820,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       }
     },
     {
@@ -15375,7 +15861,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": "0.0.0-dev || >=0.1.69 <3.0.0"
       }
     },
     {
@@ -15409,6 +15896,9 @@
       "project": {
         "url": "https://github.com/alamops/RBYVehicles/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.1.86 <2.0.0"
       }
     },
     {
@@ -15488,7 +15978,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       }
     },
     {
@@ -15534,7 +16025,8 @@
             "name": "Pokémon Stadium 2 (USA) ROM",
             "required": true
           }
-        ]
+        ],
+        "engineRange": ">=0.7.6 <1.0.0"
       }
     },
     {
@@ -15574,7 +16066,8 @@
           "gold",
           "silver",
           "crystal"
-        ]
+        ],
+        "engineRange": ">=0.7.6 <1.0.0"
       }
     },
     {
@@ -15654,7 +16147,8 @@
           "gold",
           "silver",
           "crystal"
-        ]
+        ],
+        "engineRange": ">=0.1.79 <1.0.0"
       }
     },
     {
@@ -15694,7 +16188,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       }
     },
     {
@@ -15740,7 +16235,8 @@
             "name": "Pokemon Crystal (English UE) ROM",
             "required": true
           }
-        ]
+        ],
+        "engineRange": ">=0.1.86 <1.0.0"
       }
     },
     {
@@ -15774,6 +16270,9 @@
       "project": {
         "url": "https://github.com/LucianoNeo/gen1recomp-mods/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.1.75 <10.0.0"
       }
     },
     {
@@ -15817,7 +16316,8 @@
         ],
         "permissions": [
           "compute"
-        ]
+        ],
+        "engineRange": ">=0.1.86 <1.0.0"
       }
     },
     {
@@ -15857,7 +16357,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       }
     },
     {
@@ -15897,7 +16398,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       }
     },
     {
@@ -15940,7 +16442,8 @@
         ],
         "permissions": [
           "filesystem"
-        ]
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
       }
     },
     {
@@ -15980,7 +16483,8 @@
           "red",
           "blue",
           "yellow"
-        ]
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
       }
     }
   ]
