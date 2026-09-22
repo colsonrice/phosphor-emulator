@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { buildManifest } from "../scripts/build-manifest.mjs";
 import { looksLikeAFileOrAHash } from "../scripts/enrich-catalog.mjs";
+import { satisfies } from "../scripts/lib/semver.mjs";
 
 const manifestURL = new URL("../public/v1/manifest.json", import.meta.url);
 
@@ -290,4 +291,19 @@ test("a declared engine range is published as one string, on installable entries
     assert.match(entry.requirements.engineRange, /^[\w\s.<>=^|+-]+$/,
       `${entry.id}: "${entry.requirements.engineRange}" is not a range`);
   }
+});
+
+test("no installable listing rules out the engine the catalog was gated against", async () => {
+  const { entries, engines } = await buildManifest();
+  const gate = Object.fromEntries(engines.map((e) => [e.id, e.catalogedAgainst]));
+  const refused = entries
+    .filter((entry) => entry.download && entry.requirements?.engineRange)
+    .filter((entry) => !satisfies(gate[entry.engine?.id], entry.requirements.engineRange))
+    .map((entry) => `${entry.id} needs ${entry.requirements.engineRange}`);
+  // The survey refuses such a row when it drafts one and the promoter refuses
+  // it when it promotes one. This is the check that stands when the engine
+  // moves under a row that was fine when it was written: the app would show
+  // it as NEEDS 3D ENGINE and block the install, which is honest and also a
+  // card nobody can use. Demote the row (drop its directSource) instead.
+  assert.deepEqual(refused, []);
 });

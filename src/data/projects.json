@@ -3482,19 +3482,7 @@
     "summary": "A Gen1Recomp mod that moves the player two spaces forward through blocked objects and doors.",
     "homepageUrl": "https://github.com/HubGit8/Gen1Recomp-Phase-Step",
     "releasesUrl": "https://github.com/HubGit8/Gen1Recomp-Phase-Step/releases",
-    "reviewStatus": "permission-needed",
-    "directSource": {
-      "permission": "none-direct-source",
-      "fileUrl": "https://github.com/HubGit8/Gen1Recomp-Phase-Step/releases/download/v1.0.0/phase_step_v1.0.0.zip",
-      "sha256": "d482bbeb8bd8f1fca56df81718e25ac6e00582aec24a921aca894209ad5b994a",
-      "fileSizeBytes": 4805,
-      "version": "1.0.0",
-      "releasedAt": "2026-08-03T05:25:00Z",
-      "manifestPath": "phase_step/manifest.json",
-      "modId": "phase_step",
-      "gameVersion": ">=0.1.60 <0.2.0",
-      "surveyedRelease": "v1.0.0"
-    }
+    "reviewStatus": "permission-needed"
   },
   {
     "id": "gen1recomp-portuguese-ui",
@@ -6452,19 +6440,7 @@
     "summary": "All in one mod for gen2recomp GEN 2",
     "homepageUrl": "https://github.com/shadowjackyl/S-J-s-AIO-Gen-2",
     "releasesUrl": "https://github.com/shadowjackyl/S-J-s-AIO-Gen-2/releases",
-    "reviewStatus": "permission-needed",
-    "directSource": {
-      "permission": "none-direct-source",
-      "fileUrl": "https://github.com/shadowjackyl/S-J-s-AIO-Gen-2/releases/download/v1.0.61-beta/SJ-AIO-Gen2-v1.0.61-beta-hotfix.zip",
-      "sha256": "4d0b28311f76fb91debc71c20f1f800088a4287a8ffd07c407b44457a5b30a8d",
-      "fileSizeBytes": 26539171,
-      "version": "1.0.61-beta",
-      "releasedAt": "2026-09-18T21:11:16Z",
-      "manifestPath": "manifest.json",
-      "modId": "GEN2_STADIUM_ULTIMATE_251",
-      "gameVersion": ">=0.7.6 <1.0.0",
-      "surveyedRelease": "v1.0.61-beta"
-    }
+    "reviewStatus": "permission-needed"
   },
   {
     "id": "gen2recomp-indigo97",
@@ -6483,19 +6459,7 @@
     "summary": "ROM-safe late-1990s anime-inspired true-colour player mod for Gen2Recomped",
     "homepageUrl": "https://github.com/n47h4ni3l/gen2recomp-indigo97",
     "releasesUrl": "https://github.com/n47h4ni3l/gen2recomp-indigo97/releases",
-    "reviewStatus": "permission-needed",
-    "directSource": {
-      "permission": "none-direct-source",
-      "fileUrl": "https://github.com/n47h4ni3l/gen2recomp-indigo97/releases/download/v1.5.0/indigo_97-1.5.0.zip",
-      "sha256": "2cc3e9e7f1de286a1efe04afe50992f6f6a5a4bf18d99eb70f5eb71478de686b",
-      "fileSizeBytes": 15406,
-      "version": "1.5.0",
-      "releasedAt": "2026-08-22T01:06:02Z",
-      "manifestPath": "manifest.json",
-      "modId": "indigo_97",
-      "gameVersion": ">=0.7.6 <1.0.0",
-      "surveyedRelease": "v1.5.0"
-    }
+    "reviewStatus": "permission-needed"
   },
   {
     "id": "gen-1-recomp-modern-types-moves",
