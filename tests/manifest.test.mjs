@@ -273,3 +273,21 @@ test("a hard dependency is published as bare mod ids, on installable entries onl
     }
   }
 });
+
+test("a declared engine range is published as one string, on installable entries only", async () => {
+  const { entries } = await buildManifest();
+  const installable = entries.filter((entry) => entry.download);
+  const declaring = entries.filter((entry) => entry.requirements?.engineRange !== undefined);
+  // Most of the corpus declares one. An empty loop would prove nothing.
+  assert.ok(declaring.length > installable.length / 2,
+    `expected most installable entries to declare a range, found ${declaring.length} of ${installable.length}`);
+  for (const entry of declaring) {
+    assert.ok(entry.download, `${entry.id}: a link-out cannot be read for a range`);
+    assert.equal(typeof entry.requirements.engineRange, "string", `${entry.id}: engine range type`);
+    assert.ok(entry.requirements.engineRange.trim(), `${entry.id}: an empty range`);
+    // The author's own comparator text, never prose: the app turns it into
+    // words, and prose typed here would be shown to a player in quotes.
+    assert.match(entry.requirements.engineRange, /^[\w\s.<>=^|+-]+$/,
+      `${entry.id}: "${entry.requirements.engineRange}" is not a range`);
+  }
+});
