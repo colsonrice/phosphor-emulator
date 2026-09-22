@@ -89,6 +89,7 @@ async function main() {
   const declaring = [];
   const depending = [];
   let changed = 0;
+  let ranged = 0;
 
   for (const row of rows) {
     const { manifest, archive, why } = await publishedManifest(row);
@@ -100,9 +101,14 @@ async function main() {
     // honour, and one that patches engine code never said so.
     const declaresNetwork = (manifest.permissions ?? []).includes("network");
     // `requirementsFrom` answers null for a mod that needs nothing at all.
-    const permissions = requirementsFrom(manifest, {
+    const derived = requirementsFrom(manifest, {
       usesNetwork: declaresNetwork ? await usesNetwork(archive) : null,
-    })?.permissions;
+    });
+    const permissions = derived?.permissions;
+    // The declared engine range, by the same rule as the full pass. Cleared
+    // as well as set, like imports: an author who drops the range from a
+    // later release must stop being quoted on it.
+    const engineRange = derived?.engineRange ?? null;
 
     const imports = importsFrom(manifest);
     const entry = (enrichment[row.id] ??= {});
@@ -126,9 +132,14 @@ async function main() {
     const beforePermissions = JSON.stringify(requirements.permissions ?? null);
     if (permissions) requirements.permissions = permissions;
     else delete requirements.permissions;
+    const beforeEngine = JSON.stringify(requirements.engineRange ?? null);
+    if (engineRange) requirements.engineRange = engineRange;
+    else delete requirements.engineRange;
+    if (engineRange) ranged += 1;
 
     if (before !== JSON.stringify(imports ?? null) || beforeRequires !== JSON.stringify(requires ?? null)
-        || beforePermissions !== JSON.stringify(permissions ?? null)) changed += 1;
+        || beforePermissions !== JSON.stringify(permissions ?? null)
+        || beforeEngine !== JSON.stringify(engineRange)) changed += 1;
     if (imports) declaring.push({ id: row.id, imports });
     if (requires) depending.push({ id: row.id, requires });
   }
@@ -141,6 +152,7 @@ async function main() {
 
   console.log(`installable rows read from their published bytes: ${rows.length - unread.length} of ${rows.length}`);
   console.log(`  declare an import : ${declaring.length}`);
+  console.log(`  declare a range   : ${ranged}`);
   console.log(`  rows changed      : ${changed}`);
   for (const { id, imports } of declaring) {
     const list = imports.map((i) => `${i.name}${i.required ? "" : " (optional)"}`).join(", ");

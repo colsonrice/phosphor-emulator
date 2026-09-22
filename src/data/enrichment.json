@@ -6,7 +6,8 @@
       ],
       "games": [
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.0 <2.0.0"
     },
     "popularity": {
       "downloads": 119,
@@ -21,7 +22,8 @@
         "BATTLE_ART_VOXEL_FORK",
         "DRAMALESS_SHAPE",
         "gender_mod"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     },
     "popularity": {
       "downloads": 283,
@@ -58,7 +60,8 @@
           "name": "Pokemon Stadium 2 (USA) ROM",
           "required": false
         }
-      ]
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
     },
     "popularity": {
       "downloads": 13503,
@@ -91,7 +94,8 @@
       "worksWith": [
         "custom_pokeballs",
         "snag_quest"
-      ]
+      ],
+      "engineRange": ">=0.1.38 <2.0.0"
     },
     "popularity": {
       "downloads": 1261,
@@ -118,6 +122,9 @@
       "downloads": 52,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "quick-map": {
@@ -125,6 +132,9 @@
       "downloads": 93,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "rename-character": {
@@ -132,6 +142,9 @@
       "downloads": 31,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "too-many-balls": {
@@ -142,7 +155,8 @@
       "worksWith": [
         "pokeball_colors",
         "custom_pokeballs"
-      ]
+      ],
+      "engineRange": ">=0.1.38 <2.0.0"
     },
     "popularity": {
       "downloads": 1190,
@@ -181,7 +195,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.50 <2.0.0"
     }
   },
   "shiny-pokemon": {
@@ -195,7 +210,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.37 <2.0.0"
     },
     "popularity": {
       "downloads": 12977,
@@ -208,6 +224,9 @@
       "downloads": 22073,
       "stars": 75,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "typed-move-colors": {
@@ -218,7 +237,8 @@
         "gen3_battle_ui",
         "BATTLE_ART_VOXEL_FORK",
         "potato_voxel"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     },
     "popularity": {
       "downloads": 1677,
@@ -238,7 +258,8 @@
         "crystal_animated_sprites_with_shiny_visuals",
         "unique_menu_icons",
         "Gold_Silver_Sprites"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     },
     "popularity": {
       "downloads": 2463,
@@ -251,6 +272,9 @@
       "downloads": 726,
       "stars": 5,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "gen1recomp-no-exp-challenge": {
@@ -271,7 +295,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.0 <2.0.0"
     }
   },
   "gen1recomp-auto-battle": {
@@ -285,7 +310,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.37 <2.0.0"
     }
   },
   "gen1recomp-bag-sort": {
@@ -299,7 +325,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.37 <2.0.0"
     }
   },
   "gen1recomp-battle-move-info": {
@@ -313,7 +340,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.37 <2.0.0"
     }
   },
   "gen1recomp-better-battle-ui": {
@@ -325,7 +353,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.37 <2.0.0"
     },
     "popularity": {
       "downloads": 2750,
@@ -354,7 +383,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.37 <2.0.0"
     }
   },
   "gen1recomp-blackjack-corner": {
@@ -373,7 +403,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     },
     "popularity": {
       "downloads": 2243,
@@ -408,7 +439,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     },
     "popularity": {
       "downloads": 436,
@@ -427,7 +459,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.37 <2.0.0"
     }
   },
   "gen1recomp-damage-numbers": {
@@ -441,7 +474,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.37 <2.0.0"
     }
   },
   "wills-mod": {
@@ -466,7 +500,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "gen1recomp-fakemons": {
@@ -480,7 +515,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.37 <2.0.0"
     }
   },
   "gen1recomp-gen3-boxes": {
@@ -488,6 +524,9 @@
       "downloads": 23767,
       "stars": 23,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "gen1recomp-gen3-dex": {
@@ -495,6 +534,9 @@
       "downloads": 1847,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "gen1recomp-groovy-palette-frames": {
@@ -502,6 +544,9 @@
       "downloads": 4129,
       "stars": 1,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "gen1recomp-heal-anywhere": {
@@ -520,7 +565,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.0 <2.0.0"
     }
   },
   "kanto-gear": {
@@ -528,6 +574,9 @@
       "downloads": 9030,
       "stars": 52,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": "0.0.0-dev || 0.1.94-kanto.22 || >=0.1.99 <2.0.0"
     }
   },
   "mew-under-the-truck": {
@@ -555,7 +604,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "gen1recomp-minimap": {
@@ -569,7 +619,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.37 <2.0.0"
     }
   },
   "gen1recomp-modern-dialog": {
@@ -591,7 +642,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.37 <2.0.0"
     }
   },
   "gen1recomp-modern-kanto": {
@@ -601,7 +653,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     },
     "popularity": {
       "downloads": 11710,
@@ -620,7 +673,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "gen1recomp-multi-save-slots": {
@@ -639,7 +693,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.0 <2.0.0"
     }
   },
   "gen1recomp-music-player": {
@@ -653,7 +708,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.37 <2.0.0"
     }
   },
   "pokemon-snag": {
@@ -663,7 +719,8 @@
         "SHINY_POKEMON",
         "pokeball_colors",
         "kanto_balls"
-      ]
+      ],
+      "engineRange": ">=0.1.38 <2.0.0"
     },
     "popularity": {
       "downloads": 660,
@@ -695,7 +752,8 @@
     "requirements": {
       "worksWith": [
         "pokegear_cards"
-      ]
+      ],
+      "engineRange": ">=0.1.33 <2.0.0"
     },
     "popularity": {
       "downloads": 671,
@@ -717,14 +775,16 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.37 <2.0.0"
     }
   },
   "gen1recomp-running-shoes": {
     "requirements": {
       "worksWith": [
         "DRAMATIC_SHAPE"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     },
     "popularity": {
       "downloads": 13757,
@@ -741,7 +801,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.80 <1.0.0"
     },
     "popularity": {
       "downloads": 239,
@@ -767,7 +828,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "gen1recomp-buttonmash": {
@@ -781,7 +843,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "voxel-ascendant": {
@@ -797,7 +860,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.90"
     },
     "popularity": {
       "downloads": 1079,
@@ -816,7 +880,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <2.0.0"
     }
   },
   "gen1recomp-minimal-cheats": {
@@ -832,7 +897,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.75 <2.0.0"
     },
     "popularity": {
       "downloads": 63,
@@ -857,7 +923,8 @@
         "blue",
         "yellow",
         "gold"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "battle-cinematics-stadium-camera": {
@@ -870,7 +937,8 @@
         "STADIUM_BATTLE_FX",
         "potato_voxel",
         "VOXEL_ASCENDANT"
-      ]
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
     },
     "popularity": {
       "downloads": 11387,
@@ -915,7 +983,8 @@
         "blue",
         "yellow",
         "gold"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "gen1recomp-infinite-repel": {
@@ -943,14 +1012,16 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.0 <2.0.0"
     }
   },
   "gen1recomp-modern-bag-ui": {
     "requirements": {
       "worksWith": [
         "modern_party_ui"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     },
     "popularity": {
       "downloads": 636,
@@ -969,7 +1040,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.0 <2.0.0"
     }
   },
   "gen1recomp-professor-oak-challenge": {
@@ -983,7 +1055,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.0 <2.0.0"
     }
   },
   "its-clefairy": {
@@ -991,6 +1064,9 @@
       "downloads": 43,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.1.86"
     }
   },
   "gen1recomp-terrain-minimap": {
@@ -1009,7 +1085,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "hiddenstats": {
@@ -1047,7 +1124,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.75 <2.0.0"
     },
     "popularity": {
       "downloads": 24,
@@ -1066,7 +1144,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "gen1recomp-lets-go-catch-throw": {
@@ -1081,7 +1160,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.75 <2.0.0"
     },
     "popularity": {
       "downloads": 28,
@@ -1097,7 +1177,8 @@
       "games": [
         "red",
         "blue"
-      ]
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.75 <2.0.0"
     },
     "popularity": {
       "downloads": 52,
@@ -1121,7 +1202,8 @@
         "BATTLE_ART_VOXEL_FORK",
         "DRAMALESS_SHAPE",
         "potato_voxel"
-      ]
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.75 <2.0.0"
     },
     "popularity": {
       "downloads": 60,
@@ -1135,7 +1217,8 @@
         "DRAMATIC_SHAPE",
         "POTATO_VOXEL",
         "VOXEL_ASCENDANT"
-      ]
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
     },
     "popularity": {
       "downloads": 398,
@@ -1148,6 +1231,9 @@
       "downloads": 969,
       "stars": 7,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.1.83"
     }
   },
   "premier-ball-bonus": {
@@ -1155,6 +1241,9 @@
       "downloads": 58,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.1.0 <2.0.0"
     }
   },
   "secret-base": {
@@ -1168,7 +1257,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.86"
     }
   },
   "project-celebi": {
@@ -1180,7 +1270,8 @@
         "jj_hm_field_unlock",
         "jj_auto_field_moves",
         "evolution_man_gold"
-      ]
+      ],
+      "engineRange": ">=0.1.78 <0.3.0"
     },
     "popularity": {
       "downloads": 144,
@@ -1202,7 +1293,8 @@
   },
   "move-type-fix": {
     "requirements": {
-      "affectsLink": true
+      "affectsLink": true,
+      "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0"
     },
     "popularity": {
       "downloads": 300,
@@ -1213,7 +1305,8 @@
   "species-rebalance": {
     "requirements": {
       "affectsLink": true,
-      "experimental": true
+      "experimental": true,
+      "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0"
     },
     "popularity": {
       "downloads": 43,
@@ -1226,13 +1319,17 @@
       "downloads": 587,
       "stars": 3,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0"
     }
   },
   "gym-leader-shuffle": {
     "requirements": {
       "conflicts": [
         "randomized_gym_challenge"
-      ]
+      ],
+      "engineRange": ">=0.2.18"
     },
     "popularity": {
       "downloads": 96,
@@ -1245,6 +1342,9 @@
       "downloads": 66,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "pokeball-colorfix": {
@@ -1252,6 +1352,9 @@
       "downloads": 615,
       "stars": 1,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "pokemove-colorfix": {
@@ -1259,6 +1362,9 @@
       "downloads": 402,
       "stars": 2,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "billsbackyard": {
@@ -1278,7 +1384,8 @@
         "snag_quest",
         "kanto_contests",
         "happiness"
-      ]
+      ],
+      "engineRange": ">=0.1.38 <2.0.0"
     },
     "popularity": {
       "downloads": 214,
@@ -1290,7 +1397,8 @@
     "requirements": {
       "permissions": [
         "steps"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     },
     "popularity": {
       "downloads": 2705,
@@ -1330,7 +1438,8 @@
       "conflicts": [
         "running_shoes",
         "exp_bar"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     },
     "popularity": {
       "downloads": 127,
@@ -1343,6 +1452,9 @@
       "downloads": 286,
       "stars": 1,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "pkmn-g1r-pokelog": {
@@ -1355,7 +1467,8 @@
       ],
       "worksWith": [
         "metadata_system"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     },
     "popularity": {
       "downloads": 40,
@@ -1368,6 +1481,9 @@
       "downloads": 377,
       "stars": 1,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "sweet-share": {
@@ -1375,6 +1491,9 @@
       "downloads": 1764,
       "stars": 2,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "gen1-recomp-hd-grass": {
@@ -1392,7 +1511,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.28 <2.0.0"
     },
     "popularity": {
       "downloads": 691,
@@ -1410,7 +1530,8 @@
       ],
       "worksWith": [
         "red_3d_player"
-      ]
+      ],
+      "engineRange": "0.0.0-dev || >0.1.77 <2.0.0"
     },
     "popularity": {
       "downloads": 6717,
@@ -1618,7 +1739,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "mute-low-hp-alarm": {
@@ -1632,7 +1754,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "fade-overlay-fix": {
@@ -1646,7 +1769,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "bag-stock-preview": {
@@ -1665,7 +1789,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "fishing-mini-game": {
@@ -1684,7 +1809,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "mew-glitch-mod": {
@@ -1698,7 +1824,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "oak-brief": {
@@ -1712,7 +1839,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "anytime-rename": {
@@ -1726,7 +1854,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "additional-story-healers": {
@@ -1754,7 +1883,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.69 <3.0.0"
     }
   },
   "bookers-heaven": {
@@ -1768,7 +1898,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "candy-jar": {
@@ -1779,6 +1910,9 @@
     },
     "icon": {
       "url": "https://raw.githubusercontent.com/TanukiTooks/Candy-Jar/main/LOGO.png"
+    },
+    "requirements": {
+      "engineRange": ">=0.1.33 <2.0.0"
     }
   },
   "gen1recomp-mod-cheat-engine": {
@@ -1797,7 +1931,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "leaf": {
@@ -1805,6 +1940,9 @@
       "downloads": 4976,
       "stars": 1,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "critical-capture": {
@@ -1843,7 +1981,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "pokemon-gelb-deutsch-mod": {
@@ -1868,7 +2007,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "pokemon-rot-deutsch-mod": {
@@ -1893,7 +2033,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "dev-hook-inspector": {
@@ -1907,7 +2048,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0"
     }
   },
   "double-battles": {
@@ -1921,7 +2063,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0"
     }
   },
   "dramaticshapevoxelmod-latest": {
@@ -1940,7 +2083,8 @@
     "requirements": {
       "permissions": [
         "filesystem"
-      ]
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.69 <2.0.0"
     }
   },
   "gen1recomp-dutch-generator": {
@@ -1954,7 +2098,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev"
     }
   },
   "gen-1-recomp-spanish": {
@@ -1968,7 +2113,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "exp-share": {
@@ -1976,6 +2122,9 @@
       "downloads": 21925,
       "stars": 17,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "free-fly": {
@@ -1988,7 +2137,10 @@
       {
         "url": "https://raw.githubusercontent.com/shanehudson-gen1recomp-mods/monorepo/main/.github/free_fly-demo.gif"
       }
-    ]
+    ],
+    "requirements": {
+      "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0"
+    }
   },
   "gen1recomp-gen2-dex": {
     "popularity": {
@@ -2001,7 +2153,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.37 <2.0.0"
     }
   },
   "gen1-modern-ui": {
@@ -2015,7 +2168,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.51 <2.0.0"
     }
   },
   "gen1recomp-voiceactingmod": {
@@ -2042,7 +2196,10 @@
       {
         "url": "https://raw.githubusercontent.com/hdbreaker/gen1recomp-mod-intro_bypass/main/screenshots/intro_bypass_menu.png"
       }
-    ]
+    ],
+    "requirements": {
+      "engineRange": ">=0.0.0-dev <1.0.0"
+    }
   },
   "jp-green-poketto-monsuta-midori": {
     "popularity": {
@@ -2055,7 +2212,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "kanto-companion-lite": {
@@ -2070,6 +2228,9 @@
       "downloads": 325,
       "stars": 1,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "kanto-dynamic-weather": {
@@ -2086,7 +2247,8 @@
       ],
       "requires": [
         "DRAMATIC_SHAPE"
-      ]
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
     }
   },
   "modern-type-framework": {
@@ -2122,6 +2284,9 @@
       "downloads": 3382,
       "stars": 2,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "gen1recomp-npc-bubbles": {
@@ -2152,7 +2317,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "instant-heal-pc-rest": {
@@ -2160,6 +2326,9 @@
       "downloads": 1381,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.1.37 <2.0.0"
     }
   },
   "nuzlocke": {
@@ -2174,7 +2343,8 @@
         "blue",
         "yellow",
         "gold"
-      ]
+      ],
+      "engineRange": ">=0.1.78 <2.0.0"
     }
   },
   "potato-voxel": {
@@ -2189,7 +2359,8 @@
     "requirements": {
       "permissions": [
         "compute"
-      ]
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
     }
   },
   "qol-toggles": {
@@ -2218,7 +2389,10 @@
       {
         "url": "https://raw.githubusercontent.com/unxpected-uxp/pokemon-gen1-recomp-mod-qol/main/images/qol_easy_interactions.gif"
       }
-    ]
+    ],
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
   },
   "pokemonrecomprandomizer": {
     "popularity": {
@@ -2262,7 +2436,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
     }
   },
   "rbymmomod": {
@@ -2306,7 +2481,8 @@
       ],
       "permissions": [
         "filesystem"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "recomp-rider": {
@@ -2318,7 +2494,8 @@
     "requirements": {
       "requires": [
         "DRAMALESS_SHAPE"
-      ]
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
     }
   },
   "silph-scope-network": {
@@ -2326,6 +2503,9 @@
       "downloads": 311,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "silphnet": {
@@ -2346,7 +2526,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.76 <1.0.0"
     }
   },
   "surround-audio": {
@@ -2360,7 +2541,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "terrarium": {
@@ -2372,7 +2554,8 @@
     "requirements": {
       "permissions": [
         "filesystem"
-      ]
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
     }
   },
   "traduccion-es": {
@@ -2403,7 +2586,8 @@
       ],
       "permissions": [
         "filesystem"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "trad-fr-extended": {
@@ -2420,7 +2604,8 @@
       ],
       "requires": [
         "translation-fr"
-      ]
+      ],
+      "engineRange": ">=0.1.66 <1.0.0"
     }
   },
   "pokemon-gen1-recomp-mod-frqc": {
@@ -2434,7 +2619,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev"
     }
   },
   "trainer-rematch": {
@@ -2442,6 +2628,9 @@
       "downloads": 6789,
       "stars": 5,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": "0.0.0-dev || >=0.1.17 <1.0.0"
     }
   },
   "unique-menu-icons": {
@@ -2462,7 +2651,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "useful-dex": {
@@ -2476,7 +2666,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "useful-marts": {
@@ -2484,6 +2675,9 @@
       "downloads": 1914,
       "stars": 1,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "useful-move-info": {
@@ -2497,7 +2691,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "versaovermelha": {
@@ -2511,7 +2706,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "whos-that-trainer": {
@@ -2525,7 +2721,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "gen1recomp-widescreen-battle-intro": {
@@ -2553,13 +2750,19 @@
       {
         "url": "https://raw.githubusercontent.com/shanehudson-gen1recomp-mods/monorepo/main/.github/wild_skies-demo.gif"
       }
-    ]
+    ],
+    "requirements": {
+      "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0"
+    }
   },
   "overworld-spawn-mod": {
     "popularity": {
       "downloads": 64349,
       "stars": 93,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "yellow-legacy-changes": {
@@ -2573,7 +2776,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "dramaless-shape": {
@@ -2587,7 +2791,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.86 <2.0.0"
     }
   },
   "gen-3-inspired-ui-overhaul-for-gen1recomp": {
@@ -2602,6 +2807,9 @@
       "downloads": 3819,
       "stars": 13,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.1.79 || =0.0.0-dev"
     }
   },
   "pokemon-bank": {
@@ -2609,6 +2817,9 @@
       "downloads": 2474,
       "stars": 9,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.1.86-0 <2.0.0"
     }
   },
   "gen1recomp-allgen-kaizo": {
@@ -2622,7 +2833,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "gen1recompmegaevolution": {
@@ -2636,7 +2848,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.0 <1.0.0"
     }
   },
   "airivials": {
@@ -2651,7 +2864,8 @@
         "blue",
         "yellow",
         "gold"
-      ]
+      ],
+      "engineRange": ">=0.1.0 <2.0.0"
     }
   },
   "crystal-animated-sprites-with-shiny-visuals": {
@@ -2659,6 +2873,9 @@
       "downloads": 13387,
       "stars": 60,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.1.33 <2.0.0"
     }
   },
   "more-text-speed-options-gen1recomp": {
@@ -2699,7 +2916,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "thorkdev-gen1recomp-running-shoes": {
@@ -2727,7 +2945,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "gen-3-inspired-ui-overhaul-for-gen1recomp-v1-1-w-updater": {
@@ -2756,7 +2975,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "tloz-recomp-mania": {
@@ -2764,6 +2984,9 @@
       "downloads": 151,
       "stars": 2,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "gen1recomp-battle-dex": {
@@ -2782,7 +3005,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "gen1recomp-national-dex": {
@@ -2790,6 +3014,9 @@
       "downloads": 315,
       "stars": 2,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "mods-gen1recomp": {
@@ -2803,7 +3030,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "gen1recomp-mods": {
@@ -2839,7 +3067,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "gen1-cheat-menu": {
@@ -2853,7 +3082,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "gen1recomp": {
@@ -2867,7 +3097,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "gen1recomp-polish": {
@@ -2881,7 +3112,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "gen1recomp-translation-jp-mod": {
@@ -2895,7 +3127,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "pkmn-g1r-gender-mod": {
@@ -2909,7 +3142,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "dynamax-4-recomp": {
@@ -2955,6 +3189,9 @@
       "downloads": 89,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "more-gymz": {
@@ -2968,7 +3205,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "gen1recomp-finnish-mod": {
@@ -2982,7 +3220,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "gen1recomp-italian": {
@@ -2996,7 +3235,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "evolve-in-battle": {
@@ -3023,7 +3263,8 @@
     "requirements": {
       "games": [
         "crystal"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "musicreplacementmod": {
@@ -3065,7 +3306,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "dvcolors-2-1-0-pkmn-gen1-recomp": {
@@ -3079,7 +3321,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.29"
     }
   },
   "kanto-reforged": {
@@ -3091,7 +3334,8 @@
     "requirements": {
       "requires": [
         "pokegear_cards"
-      ]
+      ],
+      "engineRange": ">=0.1.84 <1.0.0"
     }
   },
   "gen1recomp-better-battles": {
@@ -3099,6 +3343,9 @@
       "downloads": 127,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "anime-realism": {
@@ -3123,7 +3370,10 @@
       {
         "url": "https://github.com/user-attachments/assets/56d2ea5f-9469-493f-8d89-b78ed2815563"
       }
-    ]
+    ],
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
   },
   "what-the-heck": {
     "popularity": {
@@ -3137,7 +3387,8 @@
         "blue",
         "yellow",
         "gold"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <2.0.0"
     }
   },
   "pallet-chaos": {
@@ -3145,6 +3396,9 @@
       "downloads": 57,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "gen1recomp-autosave": {
@@ -3152,6 +3406,9 @@
       "downloads": 16,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "gen-2-save-screen-gen1recomp": {
@@ -3159,6 +3416,9 @@
       "downloads": 11,
       "stars": 1,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "gen1recomp-dex-pages": {
@@ -3186,13 +3446,19 @@
       {
         "url": "https://raw.githubusercontent.com/ddagent/gen1recomp-dex-pages/main/docs/page-6-tm-and-hm.png"
       }
-    ]
+    ],
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
   },
   "gen1recomp-quick-save": {
     "popularity": {
       "downloads": 91,
       "stars": 1,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "rbyrecomp-instant-load": {
@@ -3207,6 +3473,9 @@
       "downloads": 12864,
       "stars": 22,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-dev"
     }
   },
   "pokesurvive": {
@@ -3222,7 +3491,8 @@
         "yellow",
         "gold",
         "crystal"
-      ]
+      ],
+      "engineRange": ">=0.2.12 <1.0.0"
     }
   },
   "colosseum-inspired-ui-overhaul-v-1-0-0": {
@@ -3230,6 +3500,9 @@
       "downloads": 1286,
       "stars": 1,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": "0.0.0-dev || >=0.2.11 <2.0.0"
     }
   },
   "gen-3-inspired-ui-overhaul-for-gen1recomp-v2-0": {
@@ -3244,6 +3517,9 @@
       "downloads": 56,
       "stars": 1,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.1.60 <0.2.0"
     }
   },
   "gen1recomp-portuguese-ui": {
@@ -3257,7 +3533,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "gen1recompspaceworldsprites": {
@@ -3272,6 +3549,9 @@
       "downloads": 84,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.2.18 <2.0.0"
     }
   },
   "starter-picker": {
@@ -3279,6 +3559,9 @@
       "downloads": 249,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.2.18"
     }
   },
   "fair-battles": {
@@ -3302,7 +3585,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0 <10.0.0"
     }
   },
   "betterback": {
@@ -3321,7 +3605,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "pocketmonsterspc": {
@@ -3329,6 +3614,9 @@
       "downloads": 21,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.1.38 <2.0.0"
     }
   },
   "stadium-cries": {
@@ -3348,7 +3636,8 @@
       "games": [
         "gold",
         "silver"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "itemfinder-plus": {
@@ -3364,13 +3653,19 @@
       {
         "url": "https://raw.githubusercontent.com/magalvao/itemfinder-plus/main/dramatic-shape-demo.jpg"
       }
-    ]
+    ],
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
   },
   "fast-pokemon-center": {
     "popularity": {
       "downloads": 25,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "the-world": {
@@ -3382,7 +3677,8 @@
     "requirements": {
       "permissions": [
         "filesystem"
-      ]
+      ],
+      "engineRange": ">=0.2.56 <2.0.0"
     }
   },
   "weather-fx": {
@@ -3390,6 +3686,9 @@
       "downloads": 5925,
       "stars": 11,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
     }
   },
   "gen-1-3d-npc-s": {
@@ -3401,7 +3700,8 @@
     "requirements": {
       "requires": [
         "DRAMATIC_SHAPE"
-      ]
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
     }
   },
   "gen2-cheat-menu": {
@@ -3409,6 +3709,9 @@
       "downloads": 235,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "stadium-model-viewer-for-pokedex": {
@@ -3438,7 +3741,8 @@
       ],
       "permissions": [
         "compute"
-      ]
+      ],
+      "engineRange": ">=0.2.57"
     }
   },
   "pokemon-quick-select": {
@@ -3452,7 +3756,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "jp-anime-opening-title": {
@@ -3481,6 +3786,9 @@
       "downloads": 337,
       "stars": 1,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "gen1recompdeltas": {
@@ -3492,7 +3800,8 @@
     "requirements": {
       "permissions": [
         "filesystem"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "kep-recomp-port": {
@@ -3500,6 +3809,9 @@
       "downloads": 128,
       "stars": 2,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "dynamax-pokemon-league": {
@@ -3511,7 +3823,8 @@
     "requirements": {
       "requires": [
         "Dynamic_Scaling"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "gimmicks-menu": {
@@ -3519,6 +3832,9 @@
       "downloads": 98,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "gen-2-radomizer-plus": {
@@ -3547,7 +3863,10 @@
       {
         "url": "https://github.com/user-attachments/assets/65fbae8d-9637-4582-b1cb-e1526c26ac55"
       }
-    ]
+    ],
+    "requirements": {
+      "engineRange": ">=0.0.0-dev <1.0.0"
+    }
   },
   "gen1recomp-happiness": {
     "popularity": {
@@ -3568,7 +3887,10 @@
       {
         "url": "https://github.com/user-attachments/assets/d3b78e04-3c47-499f-8285-192353556107"
       }
-    ]
+    ],
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
   },
   "gen1recomp-mystery-gift": {
     "popularity": {
@@ -3589,13 +3911,19 @@
       {
         "url": "https://github.com/user-attachments/assets/af800495-f509-4330-8870-9be52fa9a0c6"
       }
-    ]
+    ],
+    "requirements": {
+      "engineRange": ">=0.0.0-dev <1.0.0"
+    }
   },
   "gen1-recomp-norwegian-translate": {
     "popularity": {
       "downloads": 2,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "wild-dv-display": {
@@ -3603,6 +3931,9 @@
       "downloads": 47,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.1.37 <2.0.0"
     }
   },
   "custom-video-intro": {
@@ -3610,6 +3941,9 @@
       "downloads": 11,
       "stars": 1,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.1.86"
     }
   },
   "easy-custom-music": {
@@ -3617,6 +3951,9 @@
       "downloads": 125,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.1.88"
     }
   },
   "classic-ironmon-kaizo": {
@@ -3624,6 +3961,9 @@
       "downloads": 27,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "kaizo-ultimate": {
@@ -3631,6 +3971,9 @@
       "downloads": 27,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.2.18 <1.0.0"
     }
   },
   "universalrandomizer": {
@@ -3638,6 +3981,9 @@
       "downloads": 42,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": ">=0.2.18 <1.0.0"
     }
   },
   "windwrecker-mew-under-the-truck": {
@@ -3655,6 +4001,9 @@
     },
     "icon": {
       "url": "https://raw.githubusercontent.com/WizzStar/PKMN-G1R-Immersive-Bicycle-Mod/main/logo.png"
+    },
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "gen1recomp-bag-pc-999": {
@@ -3749,7 +4098,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "3d-pokemon-sprites": {
@@ -3757,13 +4107,17 @@
       "downloads": 6080,
       "stars": 25,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "engineRange": "0.0.0-dev || >=0.1.30 <2.0.0"
     }
   },
   "gen9dex": {
     "requirements": {
       "requires": [
         "national_dex"
-      ]
+      ],
+      "engineRange": ">=0.1.45"
     }
   },
   "gen1recomp-modern-johto": {
@@ -3772,7 +4126,8 @@
         "gold",
         "silver",
         "crystal"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "gen1recomp-shiny-pokemon": {
@@ -3781,7 +4136,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.37 <2.0.0"
     }
   },
   "gen1recomp-bottomless-bag": {
@@ -3790,7 +4146,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.50 <2.0.0"
     }
   },
   "red-ptbr-gen1recomp": {
@@ -3808,7 +4165,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.33 <2.0.0"
     }
   },
   "gen1recomp-gen2-moves": {
@@ -3820,7 +4178,8 @@
       ],
       "requires": [
         "gen2_dex"
-      ]
+      ],
+      "engineRange": ">=0.1.37 <2.0.0"
     }
   },
   "gen1recomp-more-attacks": {
@@ -3832,7 +4191,8 @@
       ],
       "requires": [
         "gen2_moves_learnsets_251"
-      ]
+      ],
+      "engineRange": ">=0.1.37 <2.0.0"
     }
   },
   "useful-marts-gold": {
@@ -3922,7 +4282,8 @@
         "gold",
         "silver",
         "crystal"
-      ]
+      ],
+      "engineRange": ">=0.1.94 <2.0.0"
     }
   },
   "gen1remember": {
@@ -3931,7 +4292,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "gender-display": {
@@ -3940,7 +4302,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "gold-records": {
@@ -3949,14 +4312,16 @@
         "gold",
         "silver",
         "crystal"
-      ]
+      ],
+      "engineRange": ">=0.1.78 <2.0.0"
     }
   },
   "indigo-plateau-conference": {
     "requirements": {
       "games": [
         "gold"
-      ]
+      ],
+      "engineRange": ">=0.1.78 <2.0.0"
     }
   },
   "gen1recomp-mouse-adventure": {
@@ -3965,7 +4330,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.2.56 <2.0.0"
     }
   },
   "pokebag-plus": {
@@ -3974,7 +4340,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "st-spriteswapper": {
@@ -4013,7 +4380,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "gen1recomp-beginner-mods": {
@@ -4022,7 +4390,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "anglers-cove-aquarium": {
@@ -4031,7 +4400,8 @@
         "gold",
         "silver",
         "crystal"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "battle-factory-remix": {
@@ -4039,7 +4409,8 @@
       "games": [
         "red",
         "crystal"
-      ]
+      ],
+      "engineRange": ">=0.2.24 <1.0.0"
     }
   },
   "bcr": {
@@ -4065,7 +4436,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "fast-nurse-joy": {
@@ -4090,7 +4462,8 @@
     "requirements": {
       "games": [
         "crystal"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "infinite-tms": {
@@ -4099,7 +4472,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "level-match-mod": {
@@ -4108,7 +4482,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "mars-s-expanded-kanto": {
@@ -4125,7 +4500,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.83"
     }
   },
   "gen1recomp-music1-hgss": {
@@ -4134,7 +4510,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.83"
     }
   },
   "gen1recomp-music1-lgpe": {
@@ -4143,7 +4520,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.1.83"
     }
   },
   "gen1recomp-music2-hgss": {
@@ -4152,14 +4530,16 @@
         "gold",
         "silver",
         "crystal"
-      ]
+      ],
+      "engineRange": ">=0.1.83"
     }
   },
   "mutant-monster-lab": {
     "requirements": {
       "games": [
         "crystal"
-      ]
+      ],
+      "engineRange": ">=0.2.55 <1.0.0"
     }
   },
   "porygonal-overworld-characters": {
@@ -4168,7 +4548,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
     }
   },
   "safari-derby": {
@@ -4177,7 +4558,8 @@
         "gold",
         "silver",
         "crystal"
-      ]
+      ],
+      "engineRange": ">=0.2.53 <2.0.0"
     }
   },
   "gen1recomp-trainer-avatars": {
@@ -4186,7 +4568,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "vanilla": {
@@ -4195,7 +4578,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.2.56 <2.0.0"
     }
   },
   "nexhas28-gen1recomp-widescreen-battle-intro": {
@@ -4217,7 +4601,8 @@
       ],
       "requires": [
         "DRAMATIC_SHAPE"
-      ]
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
     }
   },
   "silver-sprites": {
@@ -4235,7 +4620,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "gen1recomp-nexus-ui": {
@@ -4244,7 +4630,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.69 <3.0.0"
     }
   },
   "max-bag-capacity-gen2": {
@@ -4262,7 +4649,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "s-j-s-aio-gen-2": {
@@ -4277,7 +4665,8 @@
           "name": "Pokémon Stadium 2 (USA) ROM",
           "required": true
         }
-      ]
+      ],
+      "engineRange": ">=0.7.6 <1.0.0"
     }
   },
   "gen2recomp-indigo97": {
@@ -4286,7 +4675,8 @@
         "gold",
         "silver",
         "crystal"
-      ]
+      ],
+      "engineRange": ">=0.7.6 <1.0.0"
     }
   },
   "gen-1-recomp-modern-types-moves": {
@@ -4304,7 +4694,8 @@
         "gold",
         "silver",
         "crystal"
-      ]
+      ],
+      "engineRange": ">=0.1.79 <1.0.0"
     }
   },
   "pokemon-anime-brawler": {
@@ -4313,14 +4704,16 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "shedinja-expanded-bridge": {
     "requirements": {
       "requires": [
         "shedinja"
-      ]
+      ],
+      "engineRange": ">=0.2.18 <1.0.0"
     }
   },
   "gen1recomp-mod-crystal-251": {
@@ -4335,7 +4728,8 @@
           "name": "Pokemon Crystal (English UE) ROM",
           "required": true
         }
-      ]
+      ],
+      "engineRange": ">=0.1.86 <1.0.0"
     }
   },
   "gen1recomp-mod-quality-of-life": {
@@ -4344,7 +4738,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "gen1recomp-mod-roaming-events": {
@@ -4353,7 +4748,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "gen1recomp-mod-shiny-indicators": {
@@ -4365,7 +4761,8 @@
       ],
       "permissions": [
         "filesystem"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "gen1recomp-italian-translation": {
@@ -4374,7 +4771,8 @@
         "red",
         "blue",
         "yellow"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "gen1recomp-mod-stadium2-importer": {
@@ -4387,7 +4785,183 @@
       ],
       "permissions": [
         "compute"
-      ]
+      ],
+      "engineRange": ">=0.1.86 <1.0.0"
+    }
+  },
+  "gen1recomp-modern-party-ui": {
+    "requirements": {
+      "engineRange": ">=0.0.0-dev <1.0.0"
+    }
+  },
+  "gen1recomp-typed-move-colors": {
+    "requirements": {
+      "engineRange": ">=0.0.0-dev <1.0.0"
+    }
+  },
+  "gen1recomp-battle-info-hud": {
+    "requirements": {
+      "engineRange": ">=0.0.0-dev <1.0.0"
+    }
+  },
+  "gen1recomp-modern-pokedex-ui": {
+    "requirements": {
+      "engineRange": ">=0.0.0-dev <1.0.0"
+    }
+  },
+  "gen1recomp-modern-pc-ui": {
+    "requirements": {
+      "engineRange": ">=0.0.0-dev <1.0.0"
+    }
+  },
+  "bills-pc-plus": {
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "kanto-contests": {
+    "requirements": {
+      "engineRange": ">=0.1.75 <2.0.0"
+    }
+  },
+  "gen1autocontinue": {
+    "requirements": {
+      "engineRange": ">=0.0.0-dev <2.0.0"
+    }
+  },
+  "gen1autosave": {
+    "requirements": {
+      "engineRange": ">=0.0.0-dev <1.0.0"
+    }
+  },
+  "gen1battleui": {
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "gen1dex": {
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "gen1modmenu": {
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "gen1party": {
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "gen1soundqol": {
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "gen1sprint": {
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "pokegear-menu": {
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "randomized-gym-challenge": {
+    "requirements": {
+      "engineRange": ">=0.2.18"
+    }
+  },
+  "shedinja": {
+    "requirements": {
+      "engineRange": ">=0.2.18 <1.0.0"
+    }
+  },
+  "sound-effect-replacer": {
+    "requirements": {
+      "engineRange": ">=0.2.18"
+    }
+  },
+  "gen1recomp-modern-ui-suite": {
+    "requirements": {
+      "engineRange": ">=0.0.0-dev <1.0.0"
+    }
+  },
+  "gen1recomp-modern-start-menu-ui": {
+    "requirements": {
+      "engineRange": ">=0.0.0-dev <1.0.0"
+    }
+  },
+  "gen151": {
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "gen1arena": {
+    "requirements": {
+      "engineRange": ">=0.1.37 <2.0.0"
+    }
+  },
+  "gen1billsbox": {
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "gen1follower": {
+    "requirements": {
+      "engineRange": "0.0.0-dev || >=0.1.86 <2.0.0"
+    }
+  },
+  "gen1menumanager": {
+    "requirements": {
+      "engineRange": ">=0.0.0-dev <2.0.0"
+    }
+  },
+  "gen1modernbag": {
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "gen1wildqol": {
+    "requirements": {
+      "engineRange": ">=0.2.57 <2.0.0"
+    }
+  },
+  "gen1wildui": {
+    "requirements": {
+      "engineRange": ">=0.1.37 <2.0.0"
+    }
+  },
+  "stone696-nuzlocke": {
+    "requirements": {
+      "engineRange": ">=0.2.24 <2.0.0"
+    }
+  },
+  "rbyrunforrest": {
+    "requirements": {
+      "engineRange": ">=0.1.86 <2.0.0"
+    }
+  },
+  "trainer-skins": {
+    "requirements": {
+      "engineRange": ">=0.2.32"
+    }
+  },
+  "translation-german-universal": {
+    "requirements": {
+      "engineRange": ">=0.2.22 <1.0.0"
+    }
+  },
+  "rbyvehicles": {
+    "requirements": {
+      "engineRange": ">=0.1.86 <2.0.0"
+    }
+  },
+  "lucianoneo-gen1recomp-mods": {
+    "requirements": {
+      "engineRange": ">=0.1.75 <10.0.0"
     }
   }
 }

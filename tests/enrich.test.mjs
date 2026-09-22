@@ -116,7 +116,7 @@ test("a real manifest from the catalog reads the way the survey counted it", () 
       dependencies: [], optional_dependencies: ["exp_share"], conflicts: [],
       permissions: ["engine_internals"], affects_link: false, experimental: false,
     }),
-    { worksWith: ["exp_share"], games: ["yellow"] },
+    { worksWith: ["exp_share"], games: ["yellow"], engineRange: ">=0.1.0 <2.0.0" },
   );
 });
 
