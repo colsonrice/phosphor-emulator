@@ -6596,7 +6596,8 @@
         "url": "https://github.com/harryw4444/green_sgb_palette_gen1recomp"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "ART"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -6649,7 +6650,8 @@
         "url": "https://github.com/harryw4444/mute_low_HP_alarm_gen1recomp"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "AUDIO"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -6695,7 +6697,9 @@
         "url": "https://github.com/harryw4444/fade_overlay_fix_gen1recomp"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI",
+        "ART"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -6741,7 +6745,9 @@
         "url": "https://github.com/harryw4444/bag_stock_preview_gen1recomp"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI",
+        "CONTENT"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -6791,7 +6797,8 @@
         "url": "https://github.com/harryw4444/fishing_mini_game_gen1recomp"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -6841,7 +6848,8 @@
         "url": "https://github.com/Chari69/mewmod"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -6887,7 +6895,8 @@
         "url": "https://github.com/Yukitty/gen1mod_oak_brief"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "QOL"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -6933,7 +6942,10 @@
         "url": "https://github.com/Roxas2712/pokemon-gen1-recomp-mod-anytime-rename"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "QOL",
+        "TRANSLATION",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -6979,7 +6991,8 @@
         "url": "https://github.com/ty-mcdk/additional-story-healers"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "CONTENT"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -7025,7 +7038,9 @@
       },
       "categories": [
         "PENDING",
-        "VOXEL"
+        "VOXEL",
+        "ART",
+        "QOL"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -7071,7 +7086,8 @@
         "url": "https://github.com/bryanthaboi/bookers_heaven"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "CONTENT"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -7117,7 +7133,9 @@
         "url": "https://github.com/TanukiTooks/Candy-Jar"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY",
+        "CONTENT"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -7161,7 +7179,9 @@
         "url": "https://github.com/hdbreaker/gen1recomp-mod-cheat_engine"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY",
+        "QOL"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -7211,7 +7231,8 @@
         "url": "https://github.com/MrKrisSatan/Leaf"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "ART"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -7297,7 +7318,8 @@
         "url": "https://github.com/Roxas2712/pokemon-blau-deutsch-mod"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "TRANSLATION"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -7353,7 +7375,8 @@
         "url": "https://github.com/Roxas2712/pokemon-gelb-deutsch-mod"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "TRANSLATION"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -7409,7 +7432,8 @@
         "url": "https://github.com/Roxas2712/pokemon-rot-deutsch-mod"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "TRANSLATION"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -7465,7 +7489,9 @@
         "url": "https://github.com/shanehudson-gen1recomp-mods/dev-hook-inspector"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI",
+        "CONTENT"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -7511,7 +7537,8 @@
         "url": "https://github.com/shanehudson-gen1recomp-mods/double_battles"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -7557,7 +7584,9 @@
         "url": "https://github.com/scottcandy34/DramaticShapeVoxelMod-latest"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "VOXEL",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -7585,7 +7614,10 @@
         "url": "https://github.com/burgerslayer7/dramatic-sky-ride"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "ART",
+        "GAMEPLAY",
+        "VOXEL"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -7629,7 +7661,8 @@
         "url": "https://github.com/BartInTheField/gen1recomp-dutch-generator"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "TRANSLATION"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -7675,7 +7708,8 @@
         "url": "https://github.com/Sebarosu/Gen-1-Recomp-Spanish"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "TRANSLATION"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -7721,7 +7755,9 @@
         "url": "https://github.com/ShaneMcGovernIE/exp_share"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -7762,7 +7798,8 @@
         "url": "https://github.com/shanehudson-gen1recomp-mods/free_fly"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "QOL"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -7807,7 +7844,10 @@
         "url": "https://github.com/eduardocalafell/gen1recomp-gen2-dex"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY",
+        "CONTENT",
+        "UI"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -7853,7 +7893,10 @@
         "url": "https://github.com/ArmstrongThomas/gen1-modern-ui"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI",
+        "CONTENT",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -7899,7 +7942,8 @@
         "url": "https://github.com/1-Camp0-1/Gen1recomp-VoiceActingMod"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "AUDIO"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -7944,7 +7988,10 @@
         "url": "https://github.com/hdbreaker/gen1recomp-mod-intro_bypass"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY",
+        "QOL",
+        "CONTENT"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -7989,7 +8036,8 @@
         "url": "https://github.com/bryanthaboi/JP-GREEN-Poketto-Monsuta-Midori"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "TRANSLATION"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -8035,7 +8083,9 @@
         "url": "https://github.com/redelpedron/Kanto-Companion-Lite"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "QOL",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -8153,7 +8203,8 @@
         "url": "https://github.com/MaybeGreg/modern_type_framework"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -8243,7 +8294,9 @@
         "url": "https://github.com/ShaneMcGovernIE/relearn_moves"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY",
+        "UI"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -8284,7 +8337,8 @@
         "url": "https://github.com/DarioMelo/Gen1Recomp-MusicMods"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "AUDIO"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -8307,7 +8361,10 @@
         "url": "https://github.com/ddagent/gen1recomp-npc-bubbles"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI",
+        "QOL",
+        "CONTENT"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -8369,7 +8426,8 @@
         "url": "https://github.com/TheRhysWyrill/instant_heal_pc_rest"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "CONTENT"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -8410,7 +8468,8 @@
         "url": "https://github.com/bryanthaboi/nuzlocke"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -8457,7 +8516,10 @@
         "url": "https://github.com/gamecorner-033/Gen1PC-OverworldEncounters"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY",
+        "UI",
+        "ART"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -8480,7 +8542,10 @@
         "url": "https://github.com/gamecorner-033/PokePCFollowers"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "VOXEL",
+        "ART",
+        "CONTENT"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -8551,7 +8616,9 @@
         "url": "https://github.com/ShaneMcGovernIE/qol_toggles"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "QOL",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -8589,7 +8656,8 @@
         "url": "https://github.com/unxpected-uxp/pokemon-gen1-recomp-mod-qol"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "QOL"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -8750,7 +8818,9 @@
         "url": "https://github.com/alamops/RBYMMOMod"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "QOL",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -8890,7 +8960,8 @@
         "url": "https://github.com/Nezara/silph-scope-network"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -8959,7 +9030,8 @@
         "url": "https://github.com/Yukitty/gen1mod-simple_girl"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "ART"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -9005,7 +9077,8 @@
         "url": "https://github.com/ShaneMcGovernIE/surround-audio"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "AUDIO"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -9096,7 +9169,8 @@
         "url": "https://github.com/jherediagu/traduccion_es"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "TRANSLATION"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -9159,7 +9233,9 @@
         "url": "https://github.com/antoniman31/trad-fr-extended"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "TRANSLATION",
+        "UI"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -9208,7 +9284,8 @@
         "url": "https://github.com/git-mrjoufflu/pokemon-gen1-recomp-mod-FRQC"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "TRANSLATION"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -9254,7 +9331,8 @@
         "url": "https://github.com/ShaneMcGovernIE/trainer_rematch"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -9295,7 +9373,8 @@
         "url": "https://github.com/menyas/unique-menu-icons"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -9333,7 +9412,10 @@
         "url": "https://github.com/ShaneMcGovernIE/useful-bag"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI",
+        "QOL",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -9379,7 +9461,10 @@
         "url": "https://github.com/ShaneMcGovernIE/useful_dex"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI",
+        "GAMEPLAY",
+        "CONTENT"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -9425,7 +9510,9 @@
         "url": "https://github.com/ShaneMcGovernIE/useful-marts"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI",
+        "CONTENT"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -9466,7 +9553,9 @@
         "url": "https://github.com/ShaneMcGovernIE/useful-move-info"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY",
+        "QOL"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -9512,7 +9601,8 @@
         "url": "https://github.com/bryanthaboi/versaovermelha"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "TRANSLATION"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -9558,7 +9648,9 @@
         "url": "https://github.com/MyFriendPKMN/whos-that-trainer"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "ART",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -9604,7 +9696,8 @@
         "url": "https://github.com/ShaneMcGovernIE/gen1recomp-widescreen-battle-intro"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -9650,7 +9743,8 @@
         "url": "https://github.com/shanehudson-gen1recomp-mods/wild_skies"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -9695,7 +9789,9 @@
         "url": "https://github.com/YoDrehDenSwagAuf/overworld-spawn-mod"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -9736,7 +9832,8 @@
         "url": "https://github.com/ShaneMcGovernIE/yellow_legacy_changes"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -9829,7 +9926,9 @@
         "url": "https://github.com/HighDrexler/Gen-3-inspired-UI-overhaul-for-Gen1Recomp"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -9908,7 +10007,8 @@
         "url": "https://github.com/VRM97/pokemon-bank"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -9949,7 +10049,9 @@
         "url": "https://github.com/AyeBathingApe/gen1recomp-allgen-kaizo"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY",
+        "CONTENT"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -9995,7 +10097,8 @@
         "url": "https://github.com/magatsu64/Gen1RecompMegaEvolution"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -10041,7 +10144,8 @@
         "url": "https://github.com/MrKrisSatan/AIRivials"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -10088,7 +10192,10 @@
         "url": "https://github.com/distilledorion-sketch/crystal_animated_sprites_with_shiny_visuals"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "ART",
+        "AUDIO",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -10167,7 +10274,9 @@
         "url": "https://github.com/thorkdev/gen1recomp-screen-effects"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI",
+        "ART"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -10291,7 +10400,9 @@
         "url": "https://github.com/HighDrexler/Gen-3-inspired-UI-overhaul-for-Gen1Recomp-V1.1-w-updater"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -10329,7 +10440,8 @@
         "url": "https://github.com/thorkdev/gen1recomp-radio"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -10423,7 +10535,9 @@
         "url": "https://github.com/ddagent/gen1recomp-battle-dex"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -10473,7 +10587,9 @@
         "url": "https://github.com/sanjinpepic/gen1recomp-national-dex"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI",
+        "CONTENT"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -10514,7 +10630,8 @@
         "url": "https://github.com/audris42/Mods-Gen1Recomp"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "TRANSLATION"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -10560,7 +10677,8 @@
         "url": "https://github.com/chrispanella/gen1recomp-mods"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -10605,7 +10723,8 @@
         "url": "https://github.com/TranswarpTechnologies/choose-your-hero-mod-gen1recomp"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "ART"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -10658,7 +10777,8 @@
         "url": "https://github.com/randyadr/Gen1-Cheat-Menu"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -10750,7 +10870,8 @@
         "url": "https://github.com/Czajo/gen1recomp-polish"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "TRANSLATION"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -10796,7 +10917,8 @@
         "url": "https://github.com/yyoossk/Gen1Recomp-translation-jp-mod"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "TRANSLATION"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -10974,7 +11096,8 @@
         "url": "https://github.com/tectorifter/Battle_Spees_Mod"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -11019,7 +11142,8 @@
         "url": "https://github.com/juancdominici/wide-menus"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -11106,7 +11230,8 @@
         "url": "https://github.com/eioo/gen1recomp-finnish-mod"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "TRANSLATION"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -11152,7 +11277,8 @@
         "url": "https://github.com/klokkett90/gen1recomp-italian"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "TRANSLATION"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -11198,7 +11324,8 @@
         "url": "https://github.com/ZyranCZ/Evolve-in-Battle"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -11244,7 +11371,8 @@
         "url": "https://github.com/LordSangreal/versaocristal-ptbr"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "TRANSLATION"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -11288,7 +11416,8 @@
         "url": "https://github.com/AlucardTheFirstHunter/MusicReplacementMod"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "AUDIO"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -11333,7 +11462,8 @@
         "url": "https://github.com/AlucardTheFirstHunter/CryReplacementMod"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -11424,7 +11554,8 @@
         "url": "https://github.com/oldtriplesix/DVColors-2.1.0-PKMN-Gen1-ReComp-"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "ART"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -11470,7 +11601,8 @@
         "url": "https://github.com/1Jamie/Kanto-Reforged"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "CONTENT"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -11514,7 +11646,8 @@
         "url": "https://github.com/arsdaemonia-design/Gen1Recomp-better-battles"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -11555,7 +11688,8 @@
         "url": "https://github.com/businessmachines02/anime-realism"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -11612,7 +11746,8 @@
         "url": "https://github.com/castdrian/what-the-heck"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "TRANSLATION"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -11700,7 +11835,8 @@
         "url": "https://github.com/Czajo/gen1recomp-autosave"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "QOL"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -11741,7 +11877,8 @@
         "url": "https://github.com/DaniKH1/Gen-2-Save-Screen-Gen1Recomp"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -11782,7 +11919,9 @@
         "url": "https://github.com/ddagent/gen1recomp-dex-pages"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY",
+        "UI"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -11842,7 +11981,9 @@
         "url": "https://github.com/ddagent/gen1recomp-quick-save"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "QOL",
+        "UI"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -11883,7 +12024,8 @@
         "url": "https://github.com/dumkaf/rbyrecomp-instant-load"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -11962,7 +12104,9 @@
         "url": "https://github.com/GawdMode/PokeSurvive"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY",
+        "CONTENT"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -12010,7 +12154,8 @@
         "url": "https://github.com/HighDrexler/Colosseum-Inspired-UI-Overhaul-V.1.0.0"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -12051,7 +12196,9 @@
         "url": "https://github.com/HighDrexler/Gen-3-inspired-UI-overhaul-for-Gen1Recomp-V2.0"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -12089,7 +12236,8 @@
         "url": "https://github.com/HubGit8/Gen1Recomp-Phase-Step"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -12117,7 +12265,9 @@
         "url": "https://github.com/hydhyro/gen1recomp_portuguese_ui"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "TRANSLATION",
+        "UI"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -12163,7 +12313,8 @@
         "url": "https://github.com/hydhyro/gen1recompSpaceWorldSprites"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "ART"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -12201,7 +12352,9 @@
         "url": "https://github.com/jrmsrs/fair-battles"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -12242,7 +12395,8 @@
         "url": "https://github.com/jtfresh90/Kanto-Life-Mod"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "CONTENT"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -12288,7 +12442,8 @@
         "url": "https://github.com/Kamon137/betterback"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -12338,7 +12493,8 @@
         "url": "https://github.com/lakelssky/PocketMonstersPC"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -12407,7 +12563,8 @@
         "url": "https://github.com/LordSangreal/versaodourada"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "TRANSLATION"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -12500,7 +12657,10 @@
         "url": "https://github.com/mjdenucci/fast-pokemon-center"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "ART",
+        "QOL",
+        "CONTENT"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -12626,7 +12786,8 @@
         "url": "https://github.com/randyadr/Gen-1-3D-NPC-s"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "CONTENT"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -12670,7 +12831,8 @@
         "url": "https://github.com/randyadr/Gen2-Cheat-Menu"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -12711,7 +12873,9 @@
         "url": "https://github.com/randyadr/Stadium-Model-Viewer-for-Pokedex"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI",
+        "ART"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -12754,7 +12918,9 @@
         "url": "https://github.com/Roxas2712/kanto-ascendant"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "CONTENT",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -12804,7 +12970,8 @@
         "url": "https://github.com/Roxas2712/pokemon-quick-select"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "QOL"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -12850,7 +13017,8 @@
         "url": "https://github.com/Sebarosu/JP-anime-opening-title"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -12926,7 +13094,8 @@
         "url": "https://github.com/ShaneMcGovernIE/tabbed_options"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -12964,7 +13133,9 @@
         "url": "https://github.com/ShaneMcGovernIE/throw_ball_hotkey"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -13049,7 +13220,8 @@
         "url": "https://github.com/swuff-star/KEP-Recomp-Port"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "CONTENT"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -13134,7 +13306,8 @@
         "url": "https://github.com/tectorifter/Gimmicks_Menu"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -13175,7 +13348,9 @@
         "url": "https://github.com/TheRealCrosss/Gen-2-Radomizer-Plus"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY",
+        "UI"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -13203,7 +13378,9 @@
         "url": "https://github.com/thorkdev/gen1recomp-effective-markers"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -13257,7 +13434,9 @@
         "url": "https://github.com/thorkdev/gen1recomp-happiness"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "AUDIO",
+        "CONTENT"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -13311,7 +13490,8 @@
         "url": "https://github.com/thorkdev/gen1recomp-mystery-gift"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -13365,7 +13545,8 @@
         "url": "https://github.com/Tooandorisu/Gen1-Recomp-Norwegian-Translate"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "TRANSLATION"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -13406,7 +13587,9 @@
         "url": "https://github.com/Tophiero/Wild-DV-Display"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY",
+        "UI"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -13488,7 +13671,8 @@
         "url": "https://github.com/ty-mcdk/easy-custom-music"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "AUDIO"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -13529,7 +13713,8 @@
         "url": "https://github.com/weskestis/Classic-Ironmon-Kaizo"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -13611,7 +13796,9 @@
         "url": "https://github.com/weskestis/UniversalRandomizer"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "AUDIO",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -13652,7 +13839,9 @@
         "url": "https://github.com/Windwrecker/Mew-Under-the-Truck"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY",
+        "CONTENT"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -13734,7 +13923,8 @@
         "url": "https://github.com/Zeikar-Ethereal/gen1recomp_bag_pc_999"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -13772,7 +13962,8 @@
         "url": "https://github.com/ZyranCZ/Can-Always-Escape"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -13810,7 +14001,9 @@
         "url": "https://github.com/ZyranCZ/Enemy-HP"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -13848,7 +14041,9 @@
         "url": "https://github.com/ZyranCZ/HELP-Story-Guide"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI",
+        "CONTENT"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -13896,7 +14091,8 @@
         "url": "https://github.com/ZyranCZ/Press-B-to-Escape-Wild-Encounters"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -13972,7 +14168,8 @@
         "url": "https://github.com/ZyranCZ/Special-Stat-Split"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -14048,7 +14245,9 @@
         "url": "https://github.com/ZyranCZ/Tap-to-Move"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY",
+        "CONTENT"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -14086,7 +14285,8 @@
         "url": "https://github.com/ZyranCZ/Trainers-Let-You-Choose-Lead-Pokemon"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -14124,7 +14324,8 @@
         "url": "https://github.com/hydhyro/gen1_pt-br_mod"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "TRANSLATION"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -14170,7 +14371,8 @@
         "url": "https://github.com/randyadr/3D-Pokemon-Sprites"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "ART"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -14211,7 +14413,8 @@
         "url": "https://github.com/GawdMode/anglers-cove-aquarium"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "QOL"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -14252,7 +14455,8 @@
         "url": "https://github.com/GawdMode/Battle-Factory-Remix"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -14292,7 +14496,10 @@
         "url": "https://github.com/tebwritescode/battlepad"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "QOL",
+        "GAMEPLAY",
+        "UI"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -14315,7 +14522,10 @@
         "url": "https://github.com/bryanthaboi/bcr"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY",
+        "CONTENT",
+        "AUDIO"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -14354,7 +14564,10 @@
         "url": "https://github.com/xkrisl/Character-Sprite-Selection"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY",
+        "UI",
+        "ART"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -14394,7 +14607,8 @@
         "url": "https://github.com/Roxas2712/pokemon-gold-deutsch-mod"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "TRANSLATION"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -14417,7 +14631,10 @@
         "url": "https://github.com/Nezara/gen1recomp-dialogue-portraits"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "ART",
+        "UI",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -14458,7 +14675,8 @@
         "url": "https://github.com/duderosier/fast-nurse-joy"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "QOL"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -14498,7 +14716,9 @@
         "url": "https://github.com/xkrisl/Fast-Pokemon-Center-Heal"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "ART",
+        "QOL"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -14538,7 +14758,8 @@
         "url": "https://github.com/Hazard15301/G1GPP"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "CONTENT"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -14561,7 +14782,8 @@
         "url": "https://github.com/wild1walker/Gen151"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -14597,7 +14819,9 @@
         "url": "https://github.com/wild1walker/Gen1Arena"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY",
+        "ART"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -14633,7 +14857,8 @@
         "url": "https://github.com/syybott/Gen1Better"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -14656,7 +14881,8 @@
         "url": "https://github.com/wild1walker/Gen1BillsBox"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -14692,7 +14918,9 @@
         "url": "https://github.com/wild1walker/Gen1Follower"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "VOXEL",
+        "UI"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -14728,7 +14956,9 @@
         "url": "https://github.com/wild1walker/Gen1MenuManager"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -14764,7 +14994,9 @@
         "url": "https://github.com/wild1walker/Gen1ModernBag"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI",
+        "QOL"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -14800,7 +15032,10 @@
         "url": "https://github.com/wild1walker/Gen1WildQOL"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "QOL",
+        "GAMEPLAY",
+        "AUDIO"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -14836,7 +15071,10 @@
         "url": "https://github.com/wild1walker/Gen1WildUI"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI",
+        "GAMEPLAY",
+        "ART"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -14872,7 +15110,8 @@
         "url": "https://github.com/LordSangreal/versaocristal"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "TRANSLATION"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -14911,7 +15150,8 @@
         "url": "https://github.com/bastinjul/infinite_tms"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "QOL"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -14952,7 +15192,8 @@
         "url": "https://github.com/MayoMan7/level_match_mod"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -15032,7 +15273,8 @@
         "url": "https://github.com/DarioMelo/Gen1Recomp-Music1-FRLG"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "AUDIO"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -15073,7 +15315,8 @@
         "url": "https://github.com/DarioMelo/Gen1Recomp-Music1-HGSS"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "AUDIO"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -15114,7 +15357,8 @@
         "url": "https://github.com/DarioMelo/Gen1Recomp-Music1-LGPE"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "AUDIO"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -15155,7 +15399,8 @@
         "url": "https://github.com/DarioMelo/Gen1Recomp-Music2-HGSS"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "AUDIO"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -15235,7 +15480,10 @@
         "url": "https://github.com/Stone696/nuzlocke"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY",
+        "QOL",
+        "CONTENT"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -15271,7 +15519,9 @@
         "url": "https://github.com/Nexhas28/PixelGen1_Font"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -15294,7 +15544,8 @@
         "url": "https://github.com/CurlyG004/porygonal-overworld-characters"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "ART"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -15335,7 +15586,9 @@
         "url": "https://github.com/alamops/RBYRunForrest"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "QOL",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -15412,7 +15665,8 @@
         "url": "https://github.com/GymLeaderMatt/Solo_Run_Modpack_Gen1_Recomp"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -15435,7 +15689,8 @@
         "url": "https://github.com/Tonedawg1/gen1recomp-simple-speed-indicator-"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -15468,7 +15723,9 @@
         "url": "https://github.com/Tonedawg1/gen1recomp-tm-hm-names"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -15501,7 +15758,10 @@
         "url": "https://github.com/RouteboundMods/gen1recomp-trainer-avatars"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "ART",
+        "QOL",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -15542,7 +15802,9 @@
         "url": "https://github.com/DarkwarePX/Trainer-Skins"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "ART",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -15578,7 +15840,10 @@
         "url": "https://github.com/GiveScottPot/Vanilla-"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "QOL",
+        "GAMEPLAY",
+        "CONTENT"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -15619,7 +15884,9 @@
         "url": "https://github.com/Nexhas28/gen1recomp-widescreen-battle-intro"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -15660,7 +15927,8 @@
         "url": "https://github.com/scottcandy34/VoxelVR"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "VOXEL"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -15704,7 +15972,8 @@
         "url": "https://github.com/OtaconRevengeance/silver_sprites"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "ART"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -15744,7 +16013,8 @@
         "url": "https://github.com/Roxas2712/translation-german-universal"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "TRANSLATION"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -15780,7 +16050,9 @@
         "url": "https://github.com/thorkdev/gen1recomp-evolution-man"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY",
+        "CONTENT"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -15821,7 +16093,8 @@
         "url": "https://github.com/THCrazy420/Gen1recomp-Nexus-UI"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -15898,7 +16171,9 @@
         "url": "https://github.com/hunter6571/max_bag_capacity_gen2"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI",
+        "QOL"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -15938,7 +16213,8 @@
         "url": "https://github.com/hunter6571/hm_anywhere_gen2"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "QOL"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -16002,7 +16278,8 @@
         "url": "https://github.com/n47h4ni3l/gen2recomp-indigo97"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "ART"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -16025,7 +16302,8 @@
         "url": "https://github.com/RonikBasnet/Gen-1-Recomp-Modern-Types-Moves"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -16065,7 +16343,8 @@
         "url": "https://github.com/Windwrecker/Gen1recomp-Perfect-Start"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -16106,7 +16385,8 @@
         "url": "https://github.com/GBurgardt/pokemon-anime-brawler"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -16147,7 +16427,9 @@
         "url": "https://github.com/Deftones565/gen1recomp-mod-crystal-251"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY",
+        "CONTENT"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -16194,7 +16476,9 @@
         "url": "https://github.com/LucianoNeo/gen1recomp-mods"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "ART",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -16230,7 +16514,9 @@
         "url": "https://github.com/Deftones565/gen1recomp-mod-stadium2-importer"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "VOXEL",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -16275,7 +16561,9 @@
         "url": "https://github.com/Deftones565/gen1recomp-mod-quality-of-life"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY",
+        "QOL"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -16316,7 +16604,9 @@
         "url": "https://github.com/Deftones565/gen1recomp-mod-roaming-events"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "GAMEPLAY",
+        "CONTENT"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -16357,7 +16647,9 @@
         "url": "https://github.com/Deftones565/gen1recomp-mod-shiny-indicators"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI",
+        "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -16401,7 +16693,8 @@
         "url": "https://github.com/Berniuz/Gen1Recomp-Italian-Translation"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "TRANSLATION"
       ],
       "target": "Gen1Recomp",
       "engine": {

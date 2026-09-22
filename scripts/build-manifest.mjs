@@ -17,6 +17,7 @@ import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { engineFacet, ENGINE_VERSIONS, GEN1 } from "./engine-family.mjs";
 import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { categorize } from "./lib/categorize.mjs";
 
 const RELEASES = new URL("../src/data/releases.json", import.meta.url);
 const PROJECTS = new URL("../src/data/projects.json", import.meta.url);
@@ -323,8 +324,27 @@ function entryForProject(project, errors) {
     // The author credit points at the project; the card's own link points at
     // the download. They are different questions and usually different pages.
     author: { name: project.creator, url: project.homepageUrl },
-    categories: direct?.modId && VOXEL_MODS.has(direct.modId)
-      ? ["PENDING", "VOXEL"] : ["PENDING"],
+    // PENDING first and always, then the kind of mod it actually is.
+    //
+    // **Additive rather than a replacement, deliberately.** PENDING is this
+    // listing's provenance — nobody has cleared it — and the app already
+    // recognises it and keeps it out of the taxonomy chip row, so leaving it
+    // in place means the paperwork stays recorded and stays invisible. What
+    // changes is that the row is no longer filed under NOTHING ELSE: until
+    // 22 Sep 2026 these carried PENDING alone, so all 214 installable tier-2
+    // mods vanished the moment a player tapped any chip, and the row of chips
+    // advertised 43 / 30 / 44 over a catalog of 379.
+    //
+    // Additive also means already-shipped copies of the app get the fix
+    // without an App Store release: a build that has never heard of this
+    // change reads the same PENDING it always did, and finds a real category
+    // beside it.
+    categories: [...new Set([
+      "PENDING",
+      ...(direct?.modId && VOXEL_MODS.has(direct.modId) ? ["VOXEL"] : []),
+      ...categorize({ title: project.title, tagline: project.summary,
+                      modId: direct?.modId ?? "" }),
+    ])],
     target: project.target,
     // Tier 2 needs `engine.id` for the app to install into one; a link-out
     // still names the family so the Workshop's engine filter works over it.

@@ -36,10 +36,40 @@ const INDEX_FEED = "https://bryanthaboi.github.io/gen1recomp-mod-index/data/inde
 
 /// Search terms for mods the official index has never heard of. The index is
 /// gen1recomp's, so every Gen 2 mod in existence is invisible to it.
+///
+/// **Overlap between these is the point, not waste.** Each one is a different
+/// guess at what a creator wrote in their description, and the sweep dedupes
+/// by repository, so a term that returns mostly-known repositories still earns
+/// its place if it returns one that no other term does.
 const SEARCHES = [
   "gen1recomp", "gen1recomp mod", "gen2recomp", "gen2recomped",
   "pokemon recomp mod", "topic:gen1recomp", "topic:gen2recomp",
+  // Added 22 Sep 2026. "gen1recomp++" is the name creators use for the
+  // modding fork and returns 398 repositories on its own; "recomp pokemon"
+  // catches descriptions that never write the engine's name as one word.
+  "gen1recomp++", "recomp pokemon", "topic:gen1recomp-mod",
+  "kanto recomp", "johto recomp", "love2d pokemon mod", "topic:pokemon-mod",
 ];
+
+/// Terms swept a second time across FORKS.
+///
+/// GitHub's search API hides forks unless asked, so the sweep above cannot see
+/// them at all — and a fork is how a creator who started from somebody else's
+/// mod publishes theirs. About nine in ten are bare engine clones, which is
+/// why this is a separate pass with its own filter rather than `fork:true` on
+/// the main one: the clones would crowd out the real results inside a single
+/// query's page limit.
+const FORK_SEARCHES = ["gen1recomp", "gen2recomped", "pokemon recomp"];
+
+/// Repository names that are a clone of an engine rather than a mod.
+///
+/// The heuristic is the NAME, because a fork that is a mod is a fork somebody
+/// renamed. It is deliberately loose in the direction of letting things
+/// through: everything it admits still has to survive the archive inspection
+/// below, so a wrong guess here costs a download, while a wrong guess the
+/// other way loses a mod silently. That is the trade every guard in this
+/// pipeline has got backwards at least once.
+const ENGINE_CLONE_NAMES = /^(gen1recomp|gen2recomp|gen2recomped|gen3recomp)([-_. ]?(pp|plus|\+\+))?$/i;
 
 /// Licences under which a creator has already granted redistribution. This is
 /// the same bar the catalog's existing rows use — `permission: "open-license"`
@@ -111,6 +141,56 @@ async function ghJSON(path, jq) {
   }
 }
 
+/// GitHub's search API, read to the end rather than to the end of page one.
+///
+/// **This is the bug that made the catalog look complete.** The sweep asked
+/// for `per_page=100` and stopped, so a term matching 491 repositories
+/// contributed 100 and the other 391 were invisible — not refused, not
+/// reported, just never asked about. Across the seven original terms that was
+/// 514 reachable repositories seen as 215, and 276 of them had never reached
+/// the catalog in any form. A player searching for one of those mods got an
+/// empty list, which is the same wrong answer as a mod being refused, with
+/// none of the evidence.
+///
+/// Two things this must never do quietly. It must not stop early on an error,
+/// because a short list is indistinguishable from a small result set and that
+/// is exactly how the original bug hid; and it must not exceed the search
+/// API's rate limit, which is 30 requests per minute and roughly a third of
+/// what a full sweep now asks for.
+const SEARCH_PAGE_LIMIT = 10;          // GitHub serves at most 1000 results.
+const SEARCH_REQUESTS_PER_MINUTE = 30;
+const SEARCH_INTERVAL_MS = Math.ceil(60_000 / SEARCH_REQUESTS_PER_MINUTE) + 100;
+
+let lastSearchAt = 0;
+async function pacedSearch(path, jq) {
+  const wait = lastSearchAt + SEARCH_INTERVAL_MS - Date.now();
+  if (wait > 0) await new Promise((resolve) => setTimeout(resolve, wait));
+  lastSearchAt = Date.now();
+  return gh(path, jq);
+}
+
+async function searchAllPages(query, jq) {
+  const found = [];
+  for (let page = 1; page <= SEARCH_PAGE_LIMIT; page += 1) {
+    let text;
+    try {
+      text = await pacedSearch(
+        `search/repositories?q=${encodeURIComponent(query)}&per_page=100&page=${page}`, jq);
+    } catch (error) {
+      // Loudly. A sweep that swallows this returns a short list that looks
+      // exactly like a complete one.
+      throw new Error(
+        `search for ${JSON.stringify(query)} failed on page ${page}: ${error.message}\n` +
+        "  The repository list from this run would be incomplete, and an incomplete\n" +
+        "  list silently removes mods from the catalog. Re-run when it recovers.");
+    }
+    const names = text.split("\n").filter(Boolean);
+    found.push(...names);
+    if (names.length < 100) break;
+  }
+  return found;
+}
+
 /// Every repository worth asking about, from both directions.
 async function gatherRepos() {
   const repos = new Map();
@@ -131,14 +211,49 @@ async function gatherRepos() {
   console.log(`  official index: ${repos.size} mods`);
 
   for (const q of SEARCHES) {
-    // A --jq filter yielding bare names prints them newline-separated rather
-    // than as a JSON array, so this reads the text rather than parsing it.
-    const names = (await gh(`search/repositories?q=${encodeURIComponent(q)}&per_page=100`,
-      ".items[] | select(.fork == false and .archived == false) | .full_name")
-      .catch(() => "")).split("\n").filter(Boolean);
+    const names = await searchAllPages(q, ".items[] | select(.fork == false) | .full_name");
     for (const name of names) if (!repos.has(name)) repos.set(name, { indexed: null });
   }
   console.log(`  after search sweep: ${repos.size} repositories`);
+
+  // Forks, which the sweep above cannot see. Two filters, because a fork is
+  // one of three things and only the third is worth a download.
+  const renamed = [];
+  for (const q of FORK_SEARCHES) {
+    const names = await searchAllPages(`fork:only ${q}`, ".items[] | .full_name");
+    for (const name of names) {
+      // 1. A bare engine clone. Nine in ten of them.
+      if (ENGINE_CLONE_NAMES.test(name.split("/")[1] ?? "")) continue;
+      if (repos.has(name)) continue;
+      renamed.push(name);
+    }
+  }
+
+  // 2. A personal copy of a mod that is ALREADY being surveyed. Renaming is
+  // not enough to tell these apart -- `katalyste/g1rec-shiny-p` is a rename
+  // of `masterwebx/gen1recomp-shiny-pokemon` -- and publishing both would put
+  // two listings of one mod on the shelf under different names, which is the
+  // catalog telling the player something untrue about how much exists.
+  //
+  // The parent answers it exactly. A fork of the ENGINE is somebody starting
+  // a new mod from the engine (Stone696/nuzlocke), and that is a real find; a
+  // fork of a mod already in the set is a copy of a listing we already have.
+  // One core-API request each, at 5000 an hour against a few hundred forks.
+  let forkCandidates = 0;
+  for (const name of renamed) {
+    // `gh` and not `ghJSON`: the jq yields a BARE `owner/repo`, which is not
+    // JSON, so ghJSON would throw, swallow it and answer null for every fork
+    // — leaving this filter looking like it ran and skipping nothing.
+    const parent = (await gh(`repos/${name}`, ".parent.full_name // empty")
+      .catch(() => "")).trim();
+    if (parent && repos.has(parent)
+        && !ENGINE_CLONE_NAMES.test(parent.split("/")[1] ?? "")) continue;
+    repos.set(name, { indexed: null });
+    forkCandidates += 1;
+  }
+  console.log(`  after fork sweep: ${repos.size} repositories `
+              + `(+${forkCandidates} of ${renamed.length} renamed forks; `
+              + `${renamed.length - forkCandidates} were copies of a mod already surveyed)`);
   return repos;
 }
 
