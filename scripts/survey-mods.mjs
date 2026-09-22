@@ -28,6 +28,7 @@ import { promisify } from "node:util";
 import { auditTargets, engineFacet, ENGINE_VERSIONS } from "./engine-family.mjs";
 import { importsFrom } from "./enrich-catalog.mjs";
 import { EXCLUDED } from "./lib/excluded.mjs";
+import { satisfies } from "./lib/semver.mjs";
 
 const run = promisify(execFile);
 
@@ -431,42 +432,6 @@ async function surveyRepo(name, hint) {
 /// Update these when the app takes an engine bump. A stale value here does not
 /// fail loudly: it publishes mods whose own manifest rules them out, and the
 /// player gets a card that installs, switches on, and never loads.
-
-/// Enough semver to read a `game_version` range.
-///
-/// Ranges in the wild look like ">=0.1.37 <2.0.0", "0.0.0-dev || >=0.1.99 <2.0.0"
-/// and "0.1.94-kanto.22". Prerelease tags are compared on their numeric core:
-/// the engine's own tags are build markers, not the ordering npm assumes, and
-/// treating "0.0.0-0" as lower than every release would exclude everything.
-function parseVersion(text) {
-  const [core] = String(text).trim().split("-");
-  const [major = 0, minor = 0, patch = 0] = core.split(".").map((n) => parseInt(n, 10) || 0);
-  return [major, minor, patch];
-}
-
-function compareVersions(a, b) {
-  const x = parseVersion(a), y = parseVersion(b);
-  for (let i = 0; i < 3; i += 1) if (x[i] !== y[i]) return x[i] < y[i] ? -1 : 1;
-  return 0;
-}
-
-function satisfies(version, range) {
-  if (!range || !String(range).trim()) return true;
-  return String(range).split("||").some((clause) =>
-    clause.trim().split(/\s+/).filter(Boolean).every((comparator) => {
-      const m = comparator.match(/^(>=|<=|>|<|=)?(.+)$/);
-      if (!m) return false;
-      const [, op = "=", target] = m;
-      const c = compareVersions(version, target);
-      switch (op) {
-        case ">=": return c >= 0;
-        case "<=": return c <= 0;
-        case ">": return c > 0;
-        case "<": return c < 0;
-        default: return c === 0;
-      }
-    }));
-}
 
 /// The app's five shelves, plus the two this survey added.
 ///

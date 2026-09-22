@@ -389,7 +389,11 @@ function enrich(entry, table) {
   if (!enriched) return entry;
   return {
     ...entry,
-    ...(enriched.requirements ? { requirements: enriched.requirements } : {}),
+    // Requirements describe the bytes a row pins, so only a row with a
+    // download carries them: a listing demoted to index-only keeps its
+    // enrichment on disk, and publishing its imports or its engine range
+    // would describe a file nobody can install from here.
+    ...(enriched.requirements && entry.download ? { requirements: enriched.requirements } : {}),
     ...(enriched.popularity ? { popularity: enriched.popularity } : {}),
     // The mod's own logo, where its author has adopted the Logo.PNG
     // convention. `screenshots` stays whatever the row declared: a logo is not

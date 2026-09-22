@@ -36,8 +36,10 @@ import { readFile, writeFile } from "node:fs/promises";
 
 import { fileURLToPath } from "node:url";
 
+import { ENGINE_VERSIONS } from "./engine-family.mjs";
 import { usesNetwork } from "./enrich-catalog.mjs";
 import { EXCLUDED } from "./lib/excluded.mjs";
+import { satisfies } from "./lib/semver.mjs";
 
 const CACHE = new URL("../survey/cache/", import.meta.url);
 
@@ -123,6 +125,17 @@ for (const p of rows) {
   if (roms.length) { refused.push([p.id, `archive carries a ROM (${roms[0]})`]); continue; }
 
   if (await needsNetwork(s)) { refuse(p, "uses the network, which the sandbox denies", { finding: true, surveyed: s }); continue; }
+
+  // The same gate the survey applies when it drafts a row, which this
+  // promoter skipped: a mod whose manifest rules out the engine we ship is a
+  // card that installs and never loads. Checked against the engine the row's
+  // own channels name, because the two engines version independently.
+  const range = s.contents?.manifest?.game_version;
+  const shipped = (p.compatibility ?? []).map((channel) => ENGINE_VERSIONS[channel]).filter(Boolean);
+  if (range && shipped.length && !shipped.some((version) => satisfies(version, range))) {
+    refuse(p, `needs engine ${range}, and we ship ${shipped.join(" / ")}`, { finding: true, surveyed: s });
+    continue;
+  }
 
   const r = s.release ?? {}, c = s.contents ?? {};
   const need = { fileUrl: r.fileUrl, sha256: r.sha256, fileSizeBytes: r.fileSizeBytes,
