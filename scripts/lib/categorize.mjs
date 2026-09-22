@@ -44,13 +44,14 @@ const RULES = [
   ["AUDIO", [
     /\bmusic\b/, /\bsound(s|track)?\b/, /\baudio\b/, /\bsfx\b/, /\bvoice[- ]?(line|over)?s?\b/,
     /\bsongs?\b/, /\bost\b/, /\bsirens?\b/, /\bjingles?\b/, /\bbgm\b/, /\bbeeps?\b/,
-    /\bmutes?\b/, /\bducking\b/, /\btracks?\b/,
+    /\bmutes?\b/, /\bducking\b/, /\btracks?\b/, /\bcr(y|ies)\b/, /\bvolume\b/,
   ]],
   ["UI", [
     /\bui\b/, /\bhud\b/, /\bmenus?\b/, /\binterfaces?\b/, /\bscreens?\b/, /\blayouts?\b/,
     /\bfonts?\b/, /\btext ?box(es)?\b/, /\boverlays?\b/, /\bicons?\b/, /\bdex\b/, /\bcursors?\b/, /\bpockets?\b/, /\bbag\b/,
     /\blogs?\b/, /\bjournals?\b/, /\bphone ?book\b/, /\bagenda\b/, /\bzoom\b/,
     /\bgrid\b/, /\bstorage\b/, /\bwraps? around\b/, /\bslots?\b/, /\btells? you\b/,
+    /\bcards?\b/, /\bpokegear\b/, /\bpok(e|é)dex\b/, /\bselectors?\b/, /\bpickers?\b/,
     // Showing the player something they could not see. A mod whose whole job
     // is to display information is UI even when the information is about
     // battle: Damage Numbers and Minimap were both derived as nothing before
@@ -80,6 +81,8 @@ const RULES = [
     /\bquick ?saves?\b/, /\bauto ?saves?\b/, /\bsave ?states?\b/, /\bremembers?\b/,
     /\bstraight to\b/, /\bboots? (straight|to)\b/, /\bwithout spending\b/,
     /\binfinite\b/, /\bfree\b/, /\bbonus\b/, /\bmore room\b/, /\boptional\b/,
+    /\bclock\b/, /\btime\b/, /\bdate\b/, /\bfly\b/, /\bwarp\b/, /\bteleport\b/,
+    /\bautomatic\b/, /\blets? you (choose|pick|set)\b/, /\bhm slaves?\b/,
   ]],
   ["GAMEPLAY", [
     /\bbattles?\b/, /\bcatch(ing|able)?\b/, /\bencounters?\b/, /\bexperience\b/, /\bexp\b/,
@@ -97,6 +100,7 @@ const RULES = [
     /\bcontests?\b/, /\btournaments?\b/, /\bcircuits?\b/, /\branks?\b/,
     /\bmarts?\b/, /\bshops?\b/, /\bgame corner\b/, /\bunderground\b/,
     /\bbeneath\b/, /\bstirs?\b/, /\bsomething finally\b/,
+    /\bdistricts?\b/, /\blobb(y|ies)\b/, /\bliving\b/, /\bcit(y|ies)\b/,
   ]],
 ];
 

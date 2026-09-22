@@ -7273,7 +7273,8 @@
         "url": "https://github.com/ShaneMcGovernIE/critical_capture"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "UI"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -7845,9 +7846,9 @@
       },
       "categories": [
         "PENDING",
+        "UI",
         "GAMEPLAY",
-        "CONTENT",
-        "UI"
+        "CONTENT"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -7943,7 +7944,8 @@
       },
       "categories": [
         "PENDING",
-        "AUDIO"
+        "AUDIO",
+        "CONTENT"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -8759,7 +8761,8 @@
         "url": "https://github.com/Razor1993-Real/FlyingOverhaul"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "QOL"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -11463,7 +11466,9 @@
       },
       "categories": [
         "PENDING",
-        "UI"
+        "AUDIO",
+        "UI",
+        "QOL"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -11878,7 +11883,8 @@
       },
       "categories": [
         "PENDING",
-        "UI"
+        "UI",
+        "QOL"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -12535,7 +12541,8 @@
         "url": "https://github.com/Lockerz102/Stadium-Cries"
       },
       "categories": [
-        "PENDING"
+        "PENDING",
+        "AUDIO"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -14286,6 +14293,7 @@
       },
       "categories": [
         "PENDING",
+        "QOL",
         "GAMEPLAY"
       ],
       "target": "Gen1Recomp",
@@ -14565,8 +14573,8 @@
       },
       "categories": [
         "PENDING",
-        "GAMEPLAY",
         "UI",
+        "GAMEPLAY",
         "ART"
       ],
       "target": "Gen1Recomp",
@@ -14919,8 +14927,8 @@
       },
       "categories": [
         "PENDING",
-        "VOXEL",
-        "UI"
+        "UI",
+        "VOXEL"
       ],
       "target": "Gen1Recomp",
       "engine": {
@@ -16386,7 +16394,8 @@
       },
       "categories": [
         "PENDING",
-        "GAMEPLAY"
+        "GAMEPLAY",
+        "QOL"
       ],
       "target": "Gen1Recomp",
       "engine": {
