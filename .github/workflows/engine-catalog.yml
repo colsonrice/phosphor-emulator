@@ -166,20 +166,10 @@ jobs:
 
           total=$(wc -l < pending.txt | tr -d ' ')
           echo "Catalog is missing $total release(s) newer than what it holds."
-          if [ "$total" -gt "$MAX_PER_RUN" ]; then
-            echo "::notice::Building the oldest $MAX_PER_RUN of $total this run. Deferred to the next run:"
-            tail -n +"$((MAX_PER_RUN + 1))" pending.txt | cut -f1 | sed 's/^/::notice::  /'
-            head -n "$MAX_PER_RUN" pending.txt > pending.trimmed && mv pending.trimmed pending.txt
-          fi
-          echo "count=$(wc -l < pending.txt | tr -d ' ')" >> "$GITHUB_OUTPUT"
-
-      # AFTER the poll, deliberately. The no-op path is the common one at
-      # hourly, and it needs only `node` and `gh`, both already on the runner.
-      # Installing first spent a dependency install on ~720 runs a month that
-      # find nothing.
-      - name: Install dependencies
-        if: steps.poll.outputs.count != '0'
-        run: npm ci
+          # NOT capped here. MAX_PER_RUN applies to what gets BUILT, and which
+          # of these can be built is the next step's question -- see its header
+          # for why capping the pending list instead can wedge the stream.
+          echo "count=$total" >> "$GITHUB_OUTPUT"
 
       - name: Clone gen1recomp
         if: steps.poll.outputs.count != '0'
@@ -190,15 +180,121 @@ jobs:
           cp engine/port_overlay.sh work/Scripts/port_overlay.sh
           chmod +x work/Scripts/port_overlay.sh
           cp engine/GEN1RECOMP_SHA work/LoveCore/GEN1RECOMP_SHA
+          # port_overlay.sh refuses any commit whose LICENSE.MD is not listed
+          # here by sha256. gen1recomp relicensed at v0.2.62 from MIT to GPLv3
+          # with Section 7 additional terms, and BOIS CLUB GAMES cleared that
+          # text for Phosphor on Sep 22 2026; without this file the checker
+          # answers PORT_VERDICT=licence for every release from v0.2.62 on and
+          # this workflow publishes nothing, which is what it did.
+          cp engine/GEN1RECOMP_LICENCE_CLEARED work/LoveCore/GEN1RECOMP_LICENCE_CLEARED
           cp -R engine/overlay work/LoveCore/gen1recomp-overlay
           chmod +x engine/build_payload.sh
 
-      # One loop, oldest first, because ordinals are `max + 1` and must follow
-      # release order. A drifted release STOPS the run rather than being
-      # skipped: skipping it would hand a later release the lower ordinal and
-      # put the catalog permanently out of order.
-      - name: Build and publish each missing release
+      # WHICH OF THOSE THIS OVERLAY CAN BUILD -- asked before anything is
+      # capped, cloned into a payload, or published.
+      #
+      # TWO DIFFERENT FAILURES WEAR THE SAME VERDICT. `port_overlay.sh
+      # --check` answers `drifted` for any release the overlay does not merge
+      # onto cleanly, and until now every one of those stopped the run and
+      # opened a drift issue. But the overlay is ported against exactly ONE
+      # upstream commit -- engine/GEN1RECOMP_SHA, written by the app repo's
+      # Scripts/sync_overlay_mirror.sh -- and that splits `drifted` in two:
+      #
+      #   * A release AFTER that commit that will not port is real drift.
+      #     Upstream has moved past the overlay, somebody has to re-port it,
+      #     and the run must stop rather than skip ahead: ordinals are
+      #     `max + 1` and have to follow release order. Unchanged below.
+      #   * A release BEFORE it is not drift at all. The overlay already knows
+      #     everything up to its base, so an older release failing means only
+      #     that the overlay was never written for it. At the 0.3.2 port that
+      #     is concrete: overlay/main.lua requires `src.import.LauncherWindow`,
+      #     and upstream has no file by that name before v0.3.0. Publishing it
+      #     anyway would put a preview on the download page that dies on its
+      #     first require. So it is skipped BY NAME, and never published.
+      #
+      # Skipping only ever moves forward, so release order is preserved among
+      # the entries that do get published.
+      #
+      # WHY THIS RUNS BEFORE MAX_PER_RUN. The cap takes the OLDEST pending
+      # releases. With nine unbuildable releases sitting in front of two good
+      # ones, a capped run took five unbuildable ones, published nothing, and
+      # the next hourly run recomputed the same nine and took the same five --
+      # forever, with `catalogedAgainst` frozen and a drift issue recommented
+      # on the hour. The cap has to apply to what will be BUILT, which is what
+      # its own comment always said it was.
+      - name: Select what this overlay can publish
         if: steps.poll.outputs.count != '0'
+        id: select
+        run: |
+          set -euo pipefail
+          base=$(tr -d '[:space:]' < engine/GEN1RECOMP_SHA)
+          # Fail loudly rather than treat every release as drift: if the base
+          # is not upstream history, the mirror is wrong and no verdict below
+          # would mean anything.
+          git -C work/LoveCore/.gen1recomp-pin cat-file -e "$base^{commit}" 2>/dev/null \
+            || { echo "::error::engine/GEN1RECOMP_SHA ($base) is not a commit in $UPSTREAM_REPO."; exit 1; }
+
+          : > publishable.txt
+          : > skipped.txt
+          while IFS=$'\t' read -r tag sha; do
+            [ -n "$tag" ] || continue
+            set +e
+            bash work/Scripts/port_overlay.sh --check "$sha" > port.txt 2>&1
+            set -e
+            verdict=$(grep '^PORT_VERDICT=' port.txt | cut -d= -f2 || echo drifted)
+
+            if [ "$verdict" = "clean" ]; then
+              printf '%s\t%s\n' "$tag" "$sha" >> publishable.txt
+              continue
+            fi
+
+            # Older than the base the overlay was ported against? Then this is
+            # out of scope, not drift. `$sha != $base` matters: an overlay that
+            # will not port onto its OWN base is a real problem, and falls
+            # through to the drift path below where it belongs.
+            if [ "$sha" != "$base" ] && \
+               git -C work/LoveCore/.gen1recomp-pin merge-base --is-ancestor "$sha" "$base" 2>/dev/null; then
+              printf '%s\t%s\n' "$tag" "$sha" >> skipped.txt
+              echo "::notice::$tag predates ${base:0:10}, the commit this overlay is ported against. Skipped: the overlay was never written for it, and building it would publish a preview that cannot run."
+              continue
+            fi
+
+            files=$(grep '^PORT_CONFLICT_FILES=' port.txt | cut -d= -f2- || true)
+            echo "DRIFTED=$tag" >> "$GITHUB_OUTPUT"
+            echo "DRIFT_FILES=${files:-unknown}" >> "$GITHUB_OUTPUT"
+            echo "::warning::$tag does not port cleanly. Stopping here so ordinals stay in release order."
+            break
+          done < pending.txt
+
+          buildable=$(wc -l < publishable.txt | tr -d ' ')
+          if [ "$buildable" -gt "$MAX_PER_RUN" ]; then
+            echo "::notice::Building the oldest $MAX_PER_RUN of $buildable this run. Deferred to the next run:"
+            tail -n +"$((MAX_PER_RUN + 1))" publishable.txt | cut -f1 | sed 's/^/::notice::  /'
+            head -n "$MAX_PER_RUN" publishable.txt > publishable.trimmed
+            mv publishable.trimmed publishable.txt
+          fi
+          echo "count=$(wc -l < publishable.txt | tr -d ' ')" >> "$GITHUB_OUTPUT"
+          {
+            echo "### gen1recomp catch-up"
+            echo "Overlay ported against \`$base\`."
+            echo "- to build: $(wc -l < publishable.txt | tr -d ' ') -- $(cut -f1 publishable.txt | tr '\n' ' ')"
+            echo "- skipped as out of scope: $(wc -l < skipped.txt | tr -d ' ') -- $(cut -f1 skipped.txt | tr '\n' ' ')"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      # AFTER the selection, deliberately. The no-op path is the common one at
+      # hourly, and everything above needs only `node`, `git` and `gh`, all
+      # already on the runner. Installing first spent a dependency install on
+      # ~720 runs a month that find nothing -- and now also on the runs that
+      # find only releases this overlay cannot build.
+      - name: Install dependencies
+        if: steps.select.outputs.count != '0'
+        run: npm ci
+
+      # One loop, oldest first, because ordinals are `max + 1` and must follow
+      # release order. Every row here already came back `clean` from the step
+      # above, which is the single place that verdict is read.
+      - name: Build and publish each selected release
+        if: steps.select.outputs.count != '0'
         id: publish
         env:
           GH_TOKEN: ${{ github.token }}
@@ -208,19 +304,6 @@ jobs:
           while IFS=$'\t' read -r tag sha; do
             version="${tag#v}"
             echo "::group::$tag ($sha)"
-
-            set +e
-            bash work/Scripts/port_overlay.sh --check "$sha" > port.txt 2>&1
-            set -e
-            verdict=$(grep '^PORT_VERDICT=' port.txt | cut -d= -f2 || echo drifted)
-            if [ "$verdict" != "clean" ]; then
-              files=$(grep '^PORT_CONFLICT_FILES=' port.txt | cut -d= -f2- || true)
-              echo "::endgroup::"
-              echo "DRIFTED=$tag" >> "$GITHUB_OUTPUT"
-              echo "DRIFT_FILES=${files:-unknown}" >> "$GITHUB_OUTPUT"
-              echo "::warning::$tag does not port cleanly. Stopping here so ordinals stay in release order."
-              break
-            fi
 
             rm -rf src out && mkdir -p src out
             git -C work/LoveCore/.gen1recomp-pin archive "$sha" | tar -x -C src
@@ -254,7 +337,7 @@ jobs:
               --games "$games" --overlay-stamp "${{ steps.overlay.outputs.stamp }}"
             published=$((published + 1))
             echo "::endgroup::"
-          done < pending.txt
+          done < publishable.txt
           echo "published=$published" >> "$GITHUB_OUTPUT"
           if [ "$published" -gt 0 ]; then
             # The mod manifest derives its compatibility version from engines.json.
@@ -269,15 +352,15 @@ jobs:
       # notification. The title carries the file set, so a NEW set of files
       # drifting does open a new issue, which is the case that needs a look.
       - name: Surface the drift
-        if: steps.publish.outputs.DRIFTED != ''
+        if: steps.select.outputs.DRIFTED != ''
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          files="${{ steps.publish.outputs.DRIFT_FILES }}"
+          files="${{ steps.select.outputs.DRIFT_FILES }}"
           title="Overlay is behind upstream: ${files:-unknown files}"
           body=$(cat <<EOF
-          \`${{ steps.publish.outputs.DRIFTED }}\` does not port cleanly, so it and
+          \`${{ steps.select.outputs.DRIFTED }}\` does not port cleanly, so it and
           everything after it were not published. Ordinals must follow release
           order, so the run stops at the first release it cannot build rather
           than skipping ahead.
@@ -302,7 +385,7 @@ jobs:
           existing=$(gh issue list --state open --search "in:title \"$title\"" \
             --json number,title --jq ".[] | select(.title == \"$title\") | .number" | head -1)
           if [ -n "$existing" ]; then
-            gh issue comment "$existing" --body "Still drifted as of \`${{ steps.publish.outputs.DRIFTED }}\`."
+            gh issue comment "$existing" --body "Still drifted as of \`${{ steps.select.outputs.DRIFTED }}\`."
           else
             gh issue create --title "$title" --body "$body" --label overlay-drift \
               || gh issue create --title "$title" --body "$body"
@@ -321,5 +404,22 @@ jobs:
           git config user.name "phosphor-engine-bot"
           git config user.email "noreply@phosphoremulator.com"
           git add public/v1/engines.json public/v1/manifest.json
-          git commit -m "feat(engines): publish ${{ steps.publish.outputs.published }} gen1recomp release(s) as previews"
+          # Any release skipped as out of scope is named in the commit body.
+          # A run log ages out; this is the only durable record of why the
+          # catalog's versions jump, and a gap nobody wrote down reads later
+          # as a bug in the publisher.
+          # Written to a file rather than built as a shell string: the body is
+          # multi-line, and a multi-line string inside this block scalar
+          # de-indents below `run: |` and stops the YAML parsing.
+          printf '%s\n' \
+            "feat(engines): publish ${{ steps.publish.outputs.published }} gen1recomp release(s) as previews" \
+            > commit-msg.txt
+          if [ -s skipped.txt ]; then
+            printf '\n%s\n%s\n%s\n' \
+              "Skipped as out of scope, not published: $(cut -f1 skipped.txt | tr '\n' ' ')" \
+              "These predate the commit the overlay is ported against, so the" \
+              "overlay was never written for them. See the Select step." \
+              >> commit-msg.txt
+          fi
+          git commit -F commit-msg.txt
           git push
