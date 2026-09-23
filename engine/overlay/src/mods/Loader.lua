@@ -25,6 +25,7 @@ local Gen2ClipSpaceShim = require("src.mods.Gen2ClipSpaceShim")
 local Gen2PipelineRows = require("src.mods.Gen2PipelineRows")
 local Gen2TouchUIShim = require("src.mods.Gen2TouchUIShim")
 local Gen2WildAlertFix = require("src.mods.Gen2WildAlertFix")
+local Gen1FieldFxFlip = require("src.mods.Gen1FieldFxFlip")
 local Gen3Compat = require("src.mods.Gen3Compat")
 local ModRenderGuard = require("src.mods.ModRenderGuard")
 local ModShaderReport = require("src.mods.ModShaderReport")
@@ -44,6 +45,11 @@ pcall(ModRenderGuard.install)
 -- Phosphor: a mod shader that will not compile on Metal is otherwise silent.
 -- Observation only; failures are re-raised unchanged.
 pcall(ModShaderReport.install)
+-- Phosphor: Gen 1 presents a mod's world canvas mirrored on LOVE 12, so the
+-- engine's own field effects have to go into it mirrored too, or the trainer
+-- "!" and its five siblings reach the player upside down.
+-- See src/mods/Gen1FieldFxFlip.lua.
+pcall(Gen1FieldFxFlip.install)
 
 local Loader = {}
 Loader.__index = Loader
