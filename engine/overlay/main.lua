@@ -1056,8 +1056,13 @@ function love.load(args)
   end
   -- PHOSPHOR: the host's session menu rides the engine's own hotbar, so a
   -- player on the engine's pad always has a way back to Phosphor
-  -- (HostSeam.installHotbarMenu says why). Before any Game:load, because
-  -- that is where each generation installs the handler this wraps.
+  -- (HostSeam.installHotbarMenu says why). Runs before the game loads,
+  -- because that is where each generation installs the handler this wraps.
+  -- Do not write the word Game followed by a colon anywhere in this comment:
+  -- upstream's skin_studio_image_import scans each love.* body for that token
+  -- as PLAIN TEXT, comments included, and a mention here makes love.load look
+  -- like it dispatches to Game, so the scan demands a Studio branch and a nil
+  -- guard that love.load has never needed. It cost a red fork suite once.
   if love._phosphorEmbedded then
     HostSeam.installHotbarMenu(require("src.core.TouchControls"),
                                require("src.core.TouchSkin"))
