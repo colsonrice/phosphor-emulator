@@ -121,6 +121,9 @@ do
     -- resolving this file to anyone's side wholesale.)
     if not (love._phosphorEmbedded)
         and love.window and love.window.isOpen and love.window.isOpen() and love.graphics and love.graphics.isActive() then
+      -- Ensure no Canvas is left bound (errors during Display.present).
+      pcall(function() love.graphics.setCanvas() end)
+      pcall(function() love.graphics.origin() end)
       local fullMsg = tostring(msg) .. "\n\n" .. tostring(debug.traceback()) .. "\n\n[Hold START + SELECT for 5s to Force Quit]"
       return function()
         love.event.pump()
@@ -675,10 +678,15 @@ function closeSkinStudio()
 end
 
 local function makeLauncher(launcherOpts)
+  require("src.import.LauncherWindow").activate()
   local RomImporter = require("src.import.RomImporter")
   local forceImport = os.getenv("POKEPORT_FORCE_IMPORT") == "1"
   return RomImporter.new(function(version, cartId, opts)
+    require("src.import.LauncherWindow").observe(0)
+    require("src.import.LauncherWindow").flush()
     Importer = nil
+    local onBoot = launcherOpts and launcherOpts.onBoot
+    if onBoot and onBoot(version, cartId, opts) then return end
     bootGame(version, cartId, opts)
   end, {
     launcher = true,
@@ -803,8 +811,12 @@ function bootGame(version, cartId, opts)
   -- connections) and the Gen 2 screens instead of src/core/Game.lua's Gen 1
   -- wiring.
   local arena = opts.arena
-  local loadOpts = { arena = arena, cartId = cartId }
-  if GameVersion.generation() == 2 then
+  local loadOpts = { arena = arena, cartId = cartId, onExit = opts.onExit }
+  if GameVersion.generation() == 3 then
+    Game = require("src.core.Game3").new()
+    Game.returnToLauncher = function(o) pendingLauncherReturn = o or {} end
+    Game:load(loadOpts)
+  elseif GameVersion.generation() == 2 then
     Game = require("src.core.Game2").new()
     if arena then
       Game.returnToLauncher = function(o) pendingLauncherReturn = o or {} end
@@ -855,8 +867,35 @@ local function showLauncher(version)
   end
 end
 
+local function wantsModUpdate(request)
+  if type(request) ~= "table" then return false end
+  if type(request.tasks) == "table" and request.tasks.mods ~= nil then
+    return request.tasks.mods == true
+  end
+  return request.updateMods == true
+end
+
+local function autoUpdateMods(request, tab)
+  if not wantsModUpdate(request) then return end
+  if Importer and Importer.autoUpdateAll then
+    Importer:autoUpdateAll(function() end, { tab = tab })
+  end
+end
+
+local deferredLaunchRequest
+
+local function launcherBusy()
+  return Importer ~= nil and (Importer._updateAll ~= nil
+    or Importer._modInstall ~= nil or Importer._cartInstall ~= nil
+    or Importer._autoUpdateAll ~= nil)
+end
+
 local function startLaunchRequest(request)
   if type(request) ~= "table" then return false end
+  if launcherBusy() then
+    deferredLaunchRequest = request
+    return true
+  end
 
   local version = request.game
   if request.launcher or not version then
@@ -865,6 +904,7 @@ local function startLaunchRequest(request)
     else
       showLauncher(version)
     end
+    autoUpdateMods(request, not version and "mods" or nil)
     return true
   end
 
@@ -880,6 +920,7 @@ local function startLaunchRequest(request)
     end)
     if not ok or type(cart) ~= "table" or cart.base ~= version then
       showLauncher(version)
+      autoUpdateMods(request)
       return true
     end
     cartId = request.cart
@@ -887,6 +928,7 @@ local function startLaunchRequest(request)
 
   if not RomImporter.isReady(version) then
     showLauncher(version)
+    autoUpdateMods(request)
     return true
   end
 
@@ -918,6 +960,30 @@ local function startLaunchRequest(request)
   -- sync stage needs a LINKED SyncEngine, which a Phosphor session never
   -- has). So this is a guard on a branch nothing takes yet, placed before the
   -- first player links one. Standalone gen1recomp is unaffected.
+  --
+  -- 0.3.x added bootAfterMods, an automatic mod-update pass that runs through
+  -- upstream's LAUNCHER (makeLauncher, then LauncherWindow to pump it). It is
+  -- kept for the standalone app and skipped when embedded: Phosphor settles mod
+  -- updates itself before it ever asks for a boot (RecompModUpdate), and it must
+  -- not open upstream's launcher inside a host that draws its own UI. Same rule
+  -- as Prelaunch, one line lower.
+  local function bootAfterMods()
+    if not wantsModUpdate(request) then return bootShortcut() end
+    Importer = makeLauncher({ initialTab = "mods",
+      onBoot = function(v, c, opts)
+        if v ~= version or c ~= cartId or opts ~= nil then return false end
+        bootShortcut()
+        return true
+      end })
+    Importer:autoUpdateAll(function(result)
+      if not (result.ok or result.cancelled or result.skipped) then return end
+      require("src.import.LauncherWindow").observe(0)
+      require("src.import.LauncherWindow").flush()
+      Importer = nil
+      bootShortcut()
+    end)
+  end
+
   if not love._phosphorEmbedded then
     Prelaunch = require("src.core.Prelaunch").new({
       version = version,
@@ -929,11 +995,13 @@ local function startLaunchRequest(request)
           showLauncher(version)
           return
         end
-        bootShortcut()
+        bootAfterMods()
       end,
     })
   end
-  if not Prelaunch then bootShortcut() end
+  if not Prelaunch then
+    if love._phosphorEmbedded then bootShortcut() else bootAfterMods() end
+  end
   return true
 end
 
@@ -1169,6 +1237,10 @@ function love.load(args)
   -- goes to its own service owner, src/core/Game2.lua -- docs/gold-phase1.md).
   -- Edit on a save row opens the bundled editor on that slot (openEditor).
   Importer = makeLauncher()
+  if not relaunched then
+    autoUpdateMods(resolvedLaunch,
+      not resolvedLaunch.game and "mods" or nil)
+  end
 end
 
 function love.update(dt)
@@ -1186,6 +1258,11 @@ function love.update(dt)
   if Studio then return Studio.update(dt) end
   local launchURI = LaunchOptions.pollURI()
   if launchURI then love.handlers.intent_uri(launchURI) end
+  if deferredLaunchRequest and not launcherBusy() then
+    local request = deferredLaunchRequest
+    deferredLaunchRequest = nil
+    startLaunchRequest(request)
+  end
   if Prelaunch then return Prelaunch:update(dt) end
   local client = onlineClientModule()
   if client then pcall(client.update, dt) end
@@ -1196,6 +1273,13 @@ function love.update(dt)
     return
   end
   if Importer then
+    -- PHOSPHOR OVERLAY. 0.3.x pumps upstream's launcher window from here.
+    -- Phosphor draws the import UI itself and never shows that window, so the
+    -- pump is skipped when embedded: same rule as Prelaunch and the error
+    -- screen. Standalone gen1recomp keeps upstream's behaviour exactly.
+    if not love._phosphorEmbedded then
+      require("src.import.LauncherWindow").observe(dt)
+    end
     Importer:update(dt)
     if hostImportActive then
       require("src.core.HostSeam").pumpImportStatus(Importer)
@@ -1560,6 +1644,8 @@ function love.handlers.audiosuspend()
   if ChipAudio then pcall(ChipAudio.setSuspended, true) end
   local Sound = package.loaded["src.core.Sound"]
   if Sound then pcall(Sound.onDeviceReset) end
+  local Game3Audio = package.loaded["src.core.game3.audio"]
+  if Game3Audio then pcall(Game3Audio.setSuspended, true) end
 end
 
 function love.handlers.audioreset()
@@ -1572,6 +1658,11 @@ function love.handlers.audioreset()
   if Music then pcall(Music.onDeviceReset) end
   local Sound = package.loaded["src.core.Sound"]
   if Sound then pcall(Sound.onDeviceReset) end
+  local Game3Audio = package.loaded["src.core.game3.audio"]
+  if Game3Audio then
+    pcall(Game3Audio.setSuspended, false)
+    pcall(Game3Audio.rebuildPlayback)
+  end
 end
 
 function love.handlers.intent_game(version)
@@ -1804,6 +1895,10 @@ local function shutdownWorkers()
 end
 
 function love.quit()
+  if Importer then
+    require("src.import.LauncherWindow").observe(0)
+    require("src.import.LauncherWindow").flush()
+  end
   if editorMode and EditorApp.quit then
     -- true blocks the quit (unsaved-changes prompt).  A quit that proceeds
     -- must fall through to the worker shutdowns below instead of returning:

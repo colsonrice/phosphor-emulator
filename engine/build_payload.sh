@@ -129,10 +129,30 @@ unzip -p "$OUT" src/core/Version.lua \
 # source the app reads at runtime, rather than from a list maintained here.
 # The app needs them to decide whether a download row can run a given
 # cartridge, and it cannot open a `.love` it has not downloaded yet.
-GAMES="$(unzip -p "$OUT" src/core/GameVersion.lua \
-  | grep -oE '^[[:space:]]*(red|blue|yellow|gold|silver|crystal)[[:space:]]*=' \
-  | tr -d ' =' | sort -u | tr '\n' ' ')"
+#
+# THAT SENTENCE USED TO BE FALSE. This matched `(red|blue|yellow|gold|silver|
+# crystal)`, which is a list maintained here wearing the words of one that is
+# not: it enumerated the six games that existed the day it was written, so
+# upstream adding a seventh dropped it silently. It did: firered landed at
+# v0.2.65 and leafgreen at v0.3.0, and a 0.3.2 payload that runs both would
+# have been published declaring the same six, leaving every Gen 3 cartridge
+# looking unsupported by the engine that supports it. Nothing wrong ever
+# shipped only because nothing shipped at all -- the publisher had been
+# stopped since v0.2.61.
+#
+# Now it reads the keys of the VERSIONS table, and then reads the same set a
+# SECOND way, out of each entry's own `id`. Two derivations that must agree,
+# because the failure mode of one is silence: a reformat upstream that moves
+# the indentation would quietly return fewer games, and fewer games is not a
+# shape anything downstream can tell from a smaller engine. Disagreement stops
+# the build instead. Verified equal at every release from v0.1.75 to v0.3.2.
+GV="$(unzip -p "$OUT" src/core/GameVersion.lua)"
+GAMES="$(printf '%s\n' "$GV" | grep -oE '^  [a-z][a-z0-9_]* = [{]' \
+  | tr -d ' ={' | sort -u | tr '\n' ' ')"
+GAME_IDS="$(printf '%s\n' "$GV" | grep -oE 'id = "[a-z][a-z0-9_]*"' \
+  | sed 's/^id = "//; s/"$//' | sort -u | tr '\n' ' ')"
 [ -n "$GAMES" ] || fail "payload declares no games: that is not a usable engine"
+[ "$GAMES" = "$GAME_IDS" ] || fail "src/core/GameVersion.lua does not read the same two ways: its VERSIONS keys are '$GAMES' and its entry ids are '$GAME_IDS'. Upstream has changed the shape of that table, so neither reading can be trusted -- read it and update this extraction before publishing an engine whose declared games are a guess."
 
 # GNU on the CI runner, BSD on a Mac. Portable because this script is the one
 # honest way to reproduce a published payload locally, and a build recipe you

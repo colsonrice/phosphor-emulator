@@ -208,4 +208,66 @@ function PointerBridge.new(opts)
   return bridge
 end
 
+-- PHOSPHOR: put this bridge in front of upstream's LegacyCompat.
+--
+-- Until September 2026 the bridge WAS the compat object, alone, and
+-- LegacyCompat was never built: every legacy call except a pointer assignment
+-- was refused. That was a decision about risk, and what it cost was counted
+-- later against the published catalog: of 217 installable mods, six died at
+-- load on "love.filesystem is not available to mods" and the catalog was
+-- refusing eight more for assigning a love callback. Every one of them works
+-- on every other host of this engine, because every other host builds
+-- LegacyCompat. "Works everywhere its author tested and dies on a phone" is
+-- the worst failure a mod can have, and it was ours alone.
+--
+-- LegacyCompat grants nothing real. Its filesystem is virtual: reads see the
+-- mod's own packaged files and its own overlay, writes land under
+-- mod_compat/<id>/ with every segment sanitised, `load` compiles through
+-- Sandbox.compile (so bytecode is still refused and the chunk is born in the
+-- mod's environment), io is a buffer over the same overlay, os.execute and
+-- io.popen refuse, the clipboard and openURL are stubs. tests/
+-- mod_sandbox_tests.lua drives the escapes through it.
+--
+-- What stays Phosphor's is the pointer names. LegacyCompat would let
+-- love.mousemoved land on the real love table "the way it did before the
+-- sandbox", and on iOS the overlay's own love.mousemoved is what dispatches
+-- the virtual pad, so that one assignment takes away the only input a phone
+-- has. Those names go to the bridge first and never reach LegacyCompat.
+-- Event names the host owns. `quit` is LegacyCompat's own refusal; the two
+-- intents are how Phosphor tells the engine to switch games mid-session, and
+-- a mod pushing one would do that to a player who asked for nothing.
+local HOST_EVENTS = { quit = true, intent_game = true, intent_uri = true }
+
+function PointerBridge.compose(legacy, bridge)
+  -- Two places where upstream's stand-ins forward to something real that
+  -- this build does not hand to mods. Both fail closed.
+  --
+  -- love.system: upstream forwards tlsOpen/tlsSend/... from its own native
+  -- build, which is a socket by another name. Phosphor gives mod code no
+  -- outbound network, permission or not, so the forward is removed and an
+  -- unknown member answers nil like any other.
+  if legacy.love.system then setmetatable(legacy.love.system, nil) end
+  local event = legacy.love.event
+  if event then
+    local push = event.push
+    event.push = function(name, ...)
+      if HOST_EVENTS[name] then return false end
+      return push(name, ...)
+    end
+  end
+
+  local legacyAssign = legacy.assign
+  function legacy.assign(key, value)
+    if TRANSLATED[key] then return bridge.assign(key, value) end
+    return legacyAssign(key, value)
+  end
+  -- reads of the pointer names keep answering with the bridge's inert
+  -- function, so `local old = love.mousemoved` cannot capture the engine's
+  -- handler and re-enter it (the loop a device found; see the tests)
+  setmetatable(legacy.love, {
+    __index = function(_, key) return bridge.love[key] end,
+  })
+  return legacy
+end
+
 return PointerBridge

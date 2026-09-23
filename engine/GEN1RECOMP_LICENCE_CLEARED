@@ -1,0 +1,40 @@
+# gen1recomp LICENCES this project has read and cleared to ship.
+#
+# Three places refuse a pin whose LICENSE.MD they do not recognise:
+# Scripts/fetch_gen1recomp.sh (check_pin_licence), Scripts/port_overlay.sh,
+# and Scripts/check_upstream_pins.sh. Until Sep 22 2026 all three hard-coded
+# "MIT or nothing", because gen1recomp relicensed at v0.2.62 to GPLv3 with
+# Section 7 additional terms, and Phosphor ships a MODIFIED build (the pin
+# plus LoveCore/gen1recomp-overlay) inside a closed App Store binary, which
+# those terms do not allow on their own.
+#
+# BOIS CLUB GAMES, LLC gave Colson permission on Sep 22 2026 to keep shipping
+# that modified build and to keep taking upstream's updates, so the GPLv3
+# terms below are cleared. Two obligations did NOT go away:
+#
+#   * Term 1 attribution. The credit line has to be visible in the README and
+#     in-app credits, and inside whatever launcher starts the game, which for
+#     Phosphor means its own UI, not upstream's launcher.
+#   * Term 2 is why the overlay touches src/import/LauncherSettings.lua at
+#     all. Phosphor patches one unsandboxed mod options_schema load there.
+#     Upstream has not fixed it as of v0.2.69; the plan is to send that fix
+#     upstream so the overlay can stop carrying a launcher file.
+#
+# Each line below is the sha256 of a LICENSE.MD that has been READ, hashed as
+#
+#     git -C LoveCore/.gen1recomp-pin show <sha>:LICENSE.MD | shasum -a 256
+#
+# A licence whose hash is NOT listed here still fails the build, and that is
+# the point: upstream relicensed once with no warning and can do it again, so
+# the next change is a decision to make deliberately rather than something to
+# discover from an App Store build. Never add a line without reading the
+# licence text it names, and never add one to make a build go green.
+
+# MIT. v0.2.61 and everything before it. The grant on those releases was not
+# revoked by the relicensing, so they stay shippable regardless.
+2253f15767efc6fe89cbd89b4611940bf3e715797a6fb13469204c219fabe2c6	MIT (v0.2.61 and earlier)
+
+# GPLv3 plus the Section 7 additional terms, byte-identical in every release
+# from v0.2.62 through v0.2.69. Cleared by BOIS CLUB GAMES' permission of
+# Sep 22 2026. See CLAUDE.md, "gen1recomp relicensed".
+d68d38ba4b07c34122d669f219e5c52db45d46f9825378b19bea3f50b1e4cc19	GPLv3 + Section 7 (v0.2.62 onward), cleared Sep 22 2026

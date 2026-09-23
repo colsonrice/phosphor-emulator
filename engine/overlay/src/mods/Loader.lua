@@ -25,6 +25,7 @@ local Gen2ClipSpaceShim = require("src.mods.Gen2ClipSpaceShim")
 local Gen2PipelineRows = require("src.mods.Gen2PipelineRows")
 local Gen2TouchUIShim = require("src.mods.Gen2TouchUIShim")
 local Gen2WildAlertFix = require("src.mods.Gen2WildAlertFix")
+local Gen3Compat = require("src.mods.Gen3Compat")
 local ModRenderGuard = require("src.mods.ModRenderGuard")
 local ModShaderReport = require("src.mods.ModShaderReport")
 local Hooks = require("src.mods.Hooks")
@@ -34,6 +35,7 @@ local Runtime = require("src.mods.Runtime")
 local Steps = require("src.mods.Steps")
 local Net = require("src.mods.Net")
 local Job = require("src.mods.Job")
+local LoadOrder = require("src.mods.LoadOrder")
 
 -- Phosphor: a rendering mod costs you a frame, never your session. Installed
 -- at Loader load, which is before any mod entry chunk runs, and idempotent.
@@ -136,16 +138,33 @@ local GEN1_ONLY_MODULES = {
   ["src.ui.OptionsMenu"] = true,
 }
 
-local function crossGenerationDenial(name, generation)
-  if type(name) ~= "string" or generation ~= 1 then return nil end
-  if not (name:find("^src%.[%w_]+%.gen2%.") or name == "src.core.Game2") then
-    return nil
+local function moduleGeneration(name)
+  if name:find("^src%.[%w_]+%.gen2%.") or name == "src.core.Game2" then
+    return 2
   end
-  return ("%s is a Gen 2 engine module and this is a Gen 1 game; the structs "
+  if name:find("^src%.[%w_]+%.game3%.") or name == "src.core.Game3" then
+    return 3
+  end
+  return nil
+end
+
+local function crossGenerationDenial(name, generation)
+  if type(name) ~= "string" then return nil end
+  local owner = moduleGeneration(name)
+  if owner == nil or owner == generation then return nil end
+  if owner == 2 and generation ~= 1 and generation ~= 3 then return nil end
+  if owner == 3 and generation ~= 1 and generation ~= 2 then return nil end
+  return ("%s is a Gen %d engine module and this is a Gen %d game; the structs "
     .. "it reads and writes are not this game's, so anything it stores lands "
     .. "on the save in the wrong shape. Take the game from mod.game and the "
-    .. "world from mod.world, which resolve per generation"):format(name)
+    .. "world from mod.world, which resolve per generation")
+    :format(name, owner, generation)
 end
+
+local COMPAT = {
+  [2] = { module = Gen2Compat, file = "src/mods/Gen2Compat.lua", tag = "gen2" },
+  [3] = { module = Gen3Compat, file = "src/mods/Gen3Compat.lua", tag = "gen3" },
+}
 
 -- the src.* modules the mod surface points authors at: another mod's
 -- exports carry a version string that wants range-checking before use, and
@@ -191,15 +210,17 @@ local function scanRequire(name)
   -- A Gen 1-only module on a Gold boot is not a permissions question, it is a
   -- dead patch: reported once, attributed, and onto the boot error feed the
   -- manager shows the player rather than a dev-only log line.
+  local compat = COMPAT[devShim.generation]
   if devShim.generation ~= 1 and GEN1_ONLY_MODULES[name]
-      and not Gen2Compat.serves(name) then
-    local key = modId .. "|gen2|" .. name
+      and not (compat and compat.module.serves(name)) then
+    local key = modId .. "|" .. (compat and compat.tag or "gen?") .. "|" .. name
     if not devShim.warned[key] then
       devShim.warned[key] = true
-      local message = ("%s: requires %s, which a Gen 2 game never runs and "
-        .. "src/mods/Gen2Compat.lua has no adapter for; take the game from "
+      local message = ("%s: requires %s, which a Gen %s game never runs and "
+        .. "%s has no adapter for; take the game from "
         .. "the game.ready payload and mod.world")
-        :format(modId, name)
+        :format(modId, name, tostring(devShim.generation),
+          compat and compat.file or "no compat layer")
       local errors = devShim.errors
       if errors then errors[#errors + 1] = message end
       Logger.error("%s", message)
@@ -231,6 +252,7 @@ end
 
 function Loader.endSession()
   devShim.generation = nil
+  devShim.version = nil
   devShim.errors = nil
 end
 
@@ -258,18 +280,19 @@ function Loader:_installDevShim()
         if denial then error(("[%s] %s"):format(id or "mod", denial), 0) end
       end
       if devShim.dev or devShim.generation ~= 1 then scanRequire(name) end
-      -- The Gen 1 name a mod asked for, answered by the Gen 2 arm behind it.
+      -- The Gen 1 name a mod asked for, answered by this generation's compat arm.
       -- Engine code keeps the real module: src/render/PaletteFX.lua:776
       -- requires src.core.Game on both generations and means it.
-      if devShim.generation == 2 and Gen2Compat.serves(name)
+      local compat = COMPAT[devShim.generation]
+      if compat and compat.module.serves(name)
           and (owner or callerIsMod(3)) then
-        local adapter = Gen2Compat.resolve(name, Runtime.currentMod)
+        local adapter = compat.module.resolve(name, Runtime.currentMod)
         if adapter then
-          local key = "adapter|" .. name
+          local key = "adapter|" .. compat.tag .. "|" .. name
           if not devShim.warned[key] then
             devShim.warned[key] = true
-            Logger.info("gen2 facade: %s -> %s", name,
-              tostring(Gen2Compat.ADAPTERS[name]))
+            Logger.info("%s facade: %s -> %s", compat.tag, name,
+              tostring(compat.module.ADAPTERS[name]))
           end
           return adapter
         end
@@ -311,8 +334,10 @@ function Loader.new(opts)
     -- builds a loader, and a run never changes generation underneath one.
     -- opts.generation is the test seam.
     generation = (opts and opts.generation) or GameVersion.generation(),
+    version = (opts and opts.version) or nil,
   }, Loader)
   assert(self.fs, "Loader.new requires opts.fs when love is unavailable")
+  if not self.version then self.version = self:_targetVersion() end
   -- Schemas.shapeFor, not the catalog spec: a registry whose Gen 2 records are
   -- shaped differently (a species' specialAttack/specialDefense, an encounter
   -- table keyed by kind, a trainer CLASS hanging off .classes) carries its Gen
@@ -356,11 +381,14 @@ function Loader:_loadState()
     Runtime.safeMode = false
     self.gen2Forced = {}
     self.modOptions = {}
+    self.playerSaved, self.playerRank, self.playerFloor = nil, {}, 1
     return
   end
   local options = SaveData.loadOptions(self.fs)
   self.safeMode = SaveData.isSafeMode(options)
   Runtime.safeMode = self.safeMode
+  self.playerSaved = SaveData.modOrder(options)
+  self.playerRank, self.playerFloor = LoadOrder.rank(self.playerSaved)
   local scope = self:_enableScope()
   local ids = {}
   for id in pairs(options.mods or {}) do ids[id] = true end
@@ -820,6 +848,12 @@ function Loader:_cartRank(id)
   return report.rank[id] or report.floor
 end
 
+function Loader:_playerRank(id)
+  local rank = self.playerRank
+  if not rank then return 1 end
+  return rank[id] or self.playerFloor or 1
+end
+
 -- ------- validate and resolve
 
 -- a failed mod keeps the user's enable flag (the manager still shows it as
@@ -846,7 +880,7 @@ end
 -- the Data path a registry merges into for THIS boot's generation, or nil
 -- when it has no home here (Schemas.GEN2)
 function Loader:_target(name, spec)
-  return Schemas.targetFor(name, spec, self.generation)
+  return Schemas.targetFor(name, spec, self.generation, self.version)
 end
 
 -- Which games a mod runs on is opt-in per manifest (`games`, and the legacy
@@ -931,6 +965,17 @@ function Loader:_validate()
         if not valid then
           reason = "required import invalid: " .. import.name
             .. " (" .. tostring(importErr) .. ")"
+          break
+        end
+      end
+    end
+    if not reason and #(manifest.required_assets or {}) > 0 then
+      local Importers = engineRequire("src.import.Importers")
+      for _, spec in ipairs(Importers and manifest.required_assets or {}) do
+        local pack, packErr = Importers.resolve(spec, self.fs)
+        if not pack then
+          reason = "required asset pack unavailable: " .. tostring(packErr)
+            .. " -- import it from the launcher's IMPORTERS tab"
           break
         end
       end
@@ -1093,6 +1138,14 @@ function Loader:_order()
   local targetVersion = self:_targetVersion()
   local generation = self.generation
   local pending, indegree, dependents = {}, {}, {}
+  if self.playerSaved and #self.playerSaved > 0 then
+    local entries = {}
+    for id, mod in pairs(self.mods) do
+      entries[#entries + 1] = { id = id, priority = mod.manifest and mod.manifest.priority }
+    end
+    self.playerRank, self.playerFloor =
+      LoadOrder.rank(LoadOrder.materialize(self.playerSaved, entries))
+  end
   for _, id in ipairs(orderedIds(self.mods, isActive)) do
     pending[id], indegree[id] = true, 0
   end
@@ -1125,9 +1178,11 @@ function Loader:_order()
           best = id
         else
           local ra, rb = self:_cartRank(id), self:_cartRank(best)
+          local ua, ub = self:_playerRank(id), self:_playerRank(best)
           local pa, pb = self.mods[id].manifest.priority,
             self.mods[best].manifest.priority
-          if ra < rb or (ra == rb and (pa < pb or (pa == pb and id < best))) then
+          if ra < rb or (ra == rb and (ua < ub or (ua == ub
+              and (pa < pb or (pa == pb and id < best))))) then
             best = id
           end
         end
@@ -1222,7 +1277,7 @@ function Loader:_contentApi(mod, registry, deprecation)
   -- 2-only registries (held_items, phone_contacts, decorations, apricorns,
   -- landmarks, radio_channels), so a Red boot rejecting a write to
   -- `decorations` must not claim it has "no Gen 2 target".
-  local gated = Schemas.gatedFor(registry.name, loader.generation)
+  local gated = Schemas.gatedFor(registry.name, loader.generation, loader.version)
   local toldGated = false
   local function dropped()
     if not gated then return false end
@@ -1322,6 +1377,23 @@ function Loader:releaseModInput(modId)
   end
 end
 
+local GEN3_API = {
+  firered = { battle = "src.battle.game3.BattleAPI", world = "src.world.game3.WorldAPI" },
+  leafgreen = { battle = "src.battle.game3.BattleAPI", world = "src.world.game3.WorldAPI" },
+}
+local GEN3_API_DEFAULT = GEN3_API.firered
+
+function Loader.apiModule(kind, generation, version)
+  if generation == 3 then
+    local row = type(version) == "string" and GEN3_API[version] or nil
+    return (row and row[kind]) or GEN3_API_DEFAULT[kind]
+  end
+  if generation == 2 then
+    return kind == "battle" and "src.battle.gen2.BattleAPI" or "src.world.gen2.WorldAPI"
+  end
+  return kind == "battle" and "src.battle.BattleAPI" or "src.world.WorldAPI"
+end
+
 function Loader:_api(mod)
   local loader = self
   local modId = mod.manifest.id
@@ -1330,6 +1402,8 @@ function Loader:_api(mod)
   local Checkpoint = engineRequire("src.core.Checkpoint")
   local ImportAccess = engineRequire("src.mods.ImportAccess")
   local importApi, installCache = ImportAccess.new(mod.manifest, loader.fs)
+  local AssetPacks = engineRequire("src.mods.AssetPacks")
+  local packApi = AssetPacks and AssetPacks.new(mod.manifest, loader.fs)
   local api = {
     id = modId,
     version = mod.manifest.version,
@@ -1338,6 +1412,7 @@ function Loader:_api(mod)
     -- entry chunk can decide whether to register developer-only diagnostics
     -- without receiving the process environment or the loader itself.
     developer = loader.dev == true,
+    generation = loader.generation,
     -- a deep copy: what a mod does to its own view never reaches the loader
     manifest = Merge.deepCopy(mod.manifest),
     datasets = {
@@ -1545,6 +1620,7 @@ function Loader:_api(mod)
     -- Read-only bounded access to this mod's manifest-declared, launcher-validated
     -- imports. No host path is exposed; large sources are read in bounded ranges.
     imports = importApi,
+    packs = packApi,
     -- Installation-scoped generated data, independent from Pokémon save slots.
     -- This is where ROM-derived caches belong; mod.storage remains playthrough-scoped.
     cache = installCache,
@@ -1712,8 +1788,8 @@ function Loader:_api(mod)
     local game = loader:_game()
     if key == "battle" then
       if battle then return battle end
-      local module = game and engineRequire(loader.generation == 2
-        and "src.battle.gen2.BattleAPI" or "src.battle.BattleAPI")
+      local module = game and engineRequire(Loader.apiModule(
+        "battle", loader.generation, loader.version))
       if not module then return nil end
       battle = module.new(game)
       return battle
@@ -1723,8 +1799,8 @@ function Loader:_api(mod)
     -- one facade name, one arm per generation: Gold's world is not a stack
     -- state and its flags are a bitfield, so the resolution differs even
     -- where the method set does not (src/world/gen2/WorldAPI.lua)
-    local module = game and engineRequire(loader.generation == 2
-      and "src.world.gen2.WorldAPI" or "src.world.WorldAPI")
+    local module = game and engineRequire(Loader.apiModule(
+      "world", loader.generation, loader.version))
     if not module then return nil end
     world = module.new(game, modId)
     return world
@@ -1753,32 +1829,44 @@ function Loader:_modEnv(mod)
   local id = mod.manifest.id
   local env = self.modEnv[id]
   if not env then
-    -- PHOSPHOR: upstream builds a LegacyCompat here and passes it as
-    -- `compat`, which reroutes io/os/love for mods written before the
-    -- sandbox. We still do NOT construct one. It is a new escape surface on
-    -- a boundary that has already had two live escapes, and 956 lines of
-    -- io/os/filesystem stand-ins is not a proportionate price for the one
-    -- thing real mods actually asked for.
+    -- PHOSPHOR: upstream's LegacyCompat, with Phosphor's PointerBridge in
+    -- front of it for the pointer names.
     --
-    -- What we DO pass is `PointerBridge`, which implements the same shape
-    -- with every field inert except `assign`, and turns a legacy pointer
-    -- assignment into an `input.pointer` subscription owned by the mod.
-    -- It grants no new capability: `Hooks:wrap` has no name allow-list, so
-    -- a mod can already subscribe to `input.pointer` itself. What it adds is
-    -- that the OLD SPELLING now reaches the same place -- and reaches it
-    -- through `Game:pointerEvent`, which never sees a pointer the virtual
-    -- d-pad claimed, so a translated mod cannot swallow a d-pad drag the way
-    -- one owning `love.mousemoved` outright could.
-    env = Sandbox.envFor({
-      modId = id, permissions = mod.manifest.permissionSet,
-      compat = PointerBridge.new({
+    -- This build used to pass the bridge ALONE and never construct a
+    -- LegacyCompat, on the argument that 956 lines of io/os/filesystem
+    -- stand-ins were a new surface on a boundary that had already had two
+    -- live escapes. The argument was about risk and the bill arrived as
+    -- refused mods: run against the published catalog, six of 217 installable
+    -- mods died at load on "love.filesystem is not available to mods", and
+    -- the catalog was holding back eight more for assigning a love callback.
+    -- All of them load on every other host of this engine, because every
+    -- other host builds this object. See PointerBridge.compose for what the
+    -- layer can and cannot reach, and tests/mod_sandbox_tests.lua for the
+    -- escapes driven through it.
+    --
+    -- The bridge still owns the pointer names. `Hooks:wrap` has no name
+    -- allow-list, so it grants nothing a mod could not already do; what it
+    -- adds is that the OLD SPELLING reaches `input.pointer` through
+    -- `Game:pointerEvent`, which never sees a pointer the virtual d-pad
+    -- claimed, where LegacyCompat would put the handler on the real love
+    -- table and take the pad away.
+    local loader = self
+    local compat = PointerBridge.compose(
+      LegacyCompat.new({
+        modId = id, modPath = mod.path, fs = self.fs,
+        game = function() return loader:_game() end,
+      }),
+      PointerBridge.new({
         modId = id,
         hooks = self.hooks,
         log = function(who, name)
           Logger.info('[%s] love.%s is translated to input.pointer; prefer '
             .. 'mod.hooks:wrap("input.pointer", ...)', who, name)
         end,
-      }),
+      }))
+    env = Sandbox.envFor({
+      modId = id, permissions = mod.manifest.permissionSet,
+      compat = compat,
       -- PHOSPHOR (7): where this mod's OWN submodules are read from, so
       -- require("mods.<id>.lib.x") loads through Sandbox.loadFile with this
       -- environment instead of being refused. Scoped to this mod's folder,
@@ -1906,6 +1994,7 @@ end
 function Loader:_validateScripts()
   local registry = self.content.map_scripts
   if not registry or next(registry.ops) == nil then return end
+  if registry.spec.semantics ~= "compose" then return end
   local MapScripts = engineRequire("src.script.MapScripts")
   if not MapScripts then return end
   local commands = self.content.commands
@@ -1986,6 +2075,7 @@ function Loader:load(data, opts)
   self.arenaCartId = mode == "cartOnly" and opts.cartId or nil
   self.arenaSealBroken = opts.sealBroken == true
   self.baseData = data
+  if self.generation == 3 then Schemas.bindGen3(data, self.version) end
   -- every registry folds against the pristine view of its Data target;
   -- resolution is lazy so optional namespaces may appear later
   for name, registry in pairs(self.content) do
@@ -2070,11 +2160,13 @@ function Loader:load(data, opts)
   -- two: a harness that builds a Gen 1 loader after a Gen 2 one must not keep
   -- reporting against the old generation or the old error feed.
   devShim.generation = self.generation
+  devShim.version = self.version
   devShim.errors = self.errors
   -- The Gen 1 Game facade proxies THIS loader's live game, and reads it on
   -- every touch: a mod captures the facade at file scope, before Game2 has a
   -- save or a world (src/mods/Gen2Compat.lua).
   Gen2Compat.bind(function() return self:_game() end)
+  Gen3Compat.bind(function() return self:_game() end)
   -- Any boot with mods on it needs the gate, because require("io") is how a
   -- mod would walk out of Sandbox.envFor.  Dev mode adds the permissions
   -- tripwire on top, and a Gold boot the Gen 1-only require report -- the
