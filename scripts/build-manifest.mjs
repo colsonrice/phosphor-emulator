@@ -17,6 +17,8 @@ import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { engineFacet, ENGINE_VERSIONS, GEN1 } from "./engine-family.mjs";
 import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { categorize } from "./lib/categorize.mjs";
+import { ONLINE_UNAVAILABLE } from "./lib/excluded.mjs";
 
 const RELEASES = new URL("../src/data/releases.json", import.meta.url);
 const PROJECTS = new URL("../src/data/projects.json", import.meta.url);
@@ -237,6 +239,13 @@ function entriesForRelease(release, errors) {
       license: release.licenseText
         ? { spdx: release.license, text: release.licenseText }
         : { spdx: release.license },
+      // What the creator actually granted, which is a different question from
+      // what the archive contains. See `grant` below on the tier-2 path: the
+      // app has carried a Grant enum and a paragraph of copy for each case
+      // since it shipped, and NOTHING HAS EVER SET IT -- 507 of 507 entries
+      // published `grant: undefined`, so the branch that explains an
+      // unlicensed mod to a player has never once rendered.
+      permission: grantFor(release.permission),
       categories: categoriesFor(release.topic, release.modId),
       target: release.target,
       screenshots: [],
@@ -276,6 +285,29 @@ function entriesForRelease(release, errors) {
 ///     never on a curated shelf that would imply review
 ///   - `license` is absent, because there is no licence to name
 ///   - a rom-hack is never promoted: a hack that is not a patch is a cartridge
+/// This repository's `permission` vocabulary, in the app's.
+///
+/// **Published under the key `permission`, which is what the app reads**, even
+/// though the Swift property is called `grant`: `DiscoverCatalog.CodingKeys`
+/// says "the manifest's word for `grant`, named for the question the site asks
+/// (what permits this?) rather than for the answer". Emitting `grant` instead
+/// publishes a field nothing decodes, which is the same dead branch this was
+/// written to fix.
+///
+/// The vocabularies overlap but are not identical -- this repo's
+/// `none-direct-source` is the app's `no-objection` -- so the mapping is
+/// explicit. An unknown permission publishes nothing rather than guessing:
+/// the app's paragraphs are specific, and a wrong one is worse than none.
+function grantFor(permission) {
+  switch (permission) {
+    case "open-license": return "open-license";
+    case "license-permits": return "license-permits";
+    case "author-approved": return "author-approved";
+    case "none-direct-source": return "no-objection";
+    default: return undefined;
+  }
+}
+
 function entryForProject(project, errors) {
   const label = project.id;
   const direct = project.directSource ?? null;
@@ -323,8 +355,32 @@ function entryForProject(project, errors) {
     // The author credit points at the project; the card's own link points at
     // the download. They are different questions and usually different pages.
     author: { name: project.creator, url: project.homepageUrl },
-    categories: direct?.modId && VOXEL_MODS.has(direct.modId)
-      ? ["PENDING", "VOXEL"] : ["PENDING"],
+    // PENDING first and always, then the kind of mod it actually is.
+    //
+    // **Additive rather than a replacement, deliberately.** PENDING is this
+    // listing's provenance — nobody has cleared it — and the app already
+    // recognises it and keeps it out of the taxonomy chip row, so leaving it
+    // in place means the paperwork stays recorded and stays invisible. What
+    // changes is that the row is no longer filed under NOTHING ELSE: until
+    // 22 Sep 2026 these carried PENDING alone, so all 214 installable tier-2
+    // mods vanished the moment a player tapped any chip, and the row of chips
+    // advertised 43 / 30 / 44 over a catalog of 379.
+    //
+    // Additive also means already-shipped copies of the app get the fix
+    // without an App Store release: a build that has never heard of this
+    // change reads the same PENDING it always did, and finds a real category
+    // beside it.
+    // Tier 2 is exactly the enum's `no-objection`: "no licence, and no refusal
+    // either". This is what lights up the detail screen's paragraph saying the
+    // author published no licence, that Phosphor lists it because nothing in
+    // it says not to, and that it comes down if they ask.
+    permission: grantFor(direct?.permission ?? "none-direct-source"),
+    categories: [...new Set([
+      "PENDING",
+      ...(direct?.modId && VOXEL_MODS.has(direct.modId) ? ["VOXEL"] : []),
+      ...categorize({ title: project.title, tagline: project.summary,
+                      modId: direct?.modId ?? "" }),
+    ])],
     target: project.target,
     // Tier 2 needs `engine.id` for the app to install into one; a link-out
     // still names the family so the Workshop's engine filter works over it.
@@ -384,6 +440,20 @@ async function enrichment() {
 /// engines becomes `id@engine` twice, and both halves are the same archive and
 /// the same repository, so both carry the same requirements and the same
 /// download count.
+/// Marks a listing whose network half cannot work here but which plays
+/// without it. See `ONLINE_UNAVAILABLE`.
+///
+/// Merged into `requirements` rather than published beside it, because the app
+/// already reads exactly one block for "things to tell the player before they
+/// install", and a second one would be a second place to forget.
+function onlineUnavailableFor(entry, enriched) {
+  const repo = /github\.com\/([^/#?]+\/[^/#?]+)/.exec(entry.author?.url ?? "")?.[1];
+  const wanted = (repo ?? "").toLowerCase().replace(/\.git$/, "");
+  const known = Object.keys(ONLINE_UNAVAILABLE).some((name) => name.toLowerCase() === wanted);
+  if (!known) return {};
+  return { requirements: { ...(enriched.requirements ?? {}), onlineUnavailable: true } };
+}
+
 function enrich(entry, table) {
   const enriched = table[entry.id] ?? table[entry.id.split("@")[0]];
   if (!enriched) return entry;
@@ -394,6 +464,7 @@ function enrich(entry, table) {
     // enrichment on disk, and publishing its imports or its engine range
     // would describe a file nobody can install from here.
     ...(enriched.requirements && entry.download ? { requirements: enriched.requirements } : {}),
+    ...(entry.download ? onlineUnavailableFor(entry, enriched) : {}),
     ...(enriched.popularity ? { popularity: enriched.popularity } : {}),
     // The mod's own logo, where its author has adopted the Logo.PNG
     // convention. `screenshots` stays whatever the row declared: a logo is not

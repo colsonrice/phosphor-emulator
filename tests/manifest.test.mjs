@@ -4,6 +4,7 @@ import { readFile } from "node:fs/promises";
 import { buildManifest } from "../scripts/build-manifest.mjs";
 import { looksLikeAFileOrAHash } from "../scripts/enrich-catalog.mjs";
 import { satisfies } from "../scripts/lib/semver.mjs";
+import { categorize } from "../scripts/lib/categorize.mjs";
 
 const manifestURL = new URL("../public/v1/manifest.json", import.meta.url);
 
@@ -41,16 +42,36 @@ test("any indexed entry offers a link, and a tier-2 install is verifiable", asyn
   for (const entry of indexed) {
     assert.match(entry.project.url, /^https:\/\//, `${entry.id}: project url`);
     assert.ok(entry.project.status, `${entry.id}: review status`);
-    // A pending row belongs on PENDING and on no CURATED shelf: filing one
-    // under Gameplay or Interface would say Phosphor picked it, and nobody
-    // reviewed it. VOXEL is allowed beside PENDING because it is a derived
-    // FACT, not an editorial one -- the mod's own archive calls
-    // `render_pipelines:register("voxel")`, and hiding the voxel family from
-    // the voxel filter to protect a wording rule would serve nobody.
+    // A pending row belongs on PENDING, and its other shelves must be DERIVED
+    // rather than editorial: a category somebody chose says Phosphor picked
+    // this mod, and nobody reviewed it.
+    //
+    // **This rule used to be "no other shelf at all", and that was too strong
+    // by exactly one word.** It protected against `editorial`, but it was
+    // written as `curated`, and so it also forbade a category that is simply
+    // a fact about the mod's own description. The cost was not theoretical:
+    // 214 installable mods carried PENDING and nothing else, so every chip in
+    // the app excluded them and a catalog of 379 advertised 43 Gameplay, 30
+    // QOL, 44 Interface. Kanto Ascendant was one of them.
+    //
+    // The exception VOXEL already had is the whole argument, and it
+    // generalises: the mod's archive calling
+    // `render_pipelines:register("voxel")` is a fact, and so is its own
+    // tagline saying "a complete Brazilian Portuguese translation". Neither
+    // is Phosphor's opinion. What keeps the promise is that the review state
+    // is still carried and still shown -- `project.status` on every row here,
+    // which the app prints as "Available from the creator".
+    //
+    // So the assertion is no longer about WHICH shelves, but about WHERE they
+    // came from: re-derive them from the entry's own published words and
+    // require the same answer. A hand-filed category cannot survive that.
     const CURATED = ["GAMEPLAY", "QOL", "UI", "ART", "CONTENT", "AUDIO"];
     assert.ok(entry.categories.includes("PENDING"), `${entry.id}: shelf`);
-    assert.deepEqual(entry.categories.filter((c) => CURATED.includes(c)), [],
-      `${entry.id}: a pending listing must not sit on a curated shelf`);
+    const derived = categorize({ title: entry.name, tagline: entry.tagline ?? "",
+                                 modId: entry.modID ?? "" });
+    assert.deepEqual(entry.categories.filter((c) => CURATED.includes(c)),
+                     derived.filter((c) => CURATED.includes(c)),
+      `${entry.id}: a pending listing's shelves must be derived from its own words, not chosen`);
 
     if (!entry.download) continue;
 
@@ -306,4 +327,33 @@ test("no installable listing rules out the engine the catalog was gated against"
   // it as NEEDS 3D ENGINE and block the install, which is honest and also a
   // card nobody can use. Demote the row (drop its directSource) instead.
   assert.deepEqual(refused, []);
+});
+// The app has carried `DiscoverCatalog.Grant` and a paragraph of copy per case
+// since it shipped, and until 22 Sep 2026 nothing published the field: all 507
+// entries said `grant: undefined`, so the branch explaining an unlicensed mod
+// to the player -- that the author published no licence, that Phosphor lists
+// it because nothing in it says not to, that it comes down if they ask -- had
+// never rendered once. A flag nothing sets is a branch nothing takes.
+test("every entry says what its creator granted, under the key the app reads", async () => {
+  const { entries } = await buildManifest();
+  const DECODABLE = new Set(["open-license", "license-permits", "author-approved", "no-objection"]);
+
+  for (const entry of entries) {
+    assert.ok(entry.permission, `${entry.id}: no permission`);
+    assert.ok(DECODABLE.has(entry.permission),
+      `${entry.id}: grant "${entry.permission}" is not a DiscoverCatalog.Grant case`);
+
+    // The two spellings of the same fact must agree. A tier-2 row is exactly
+    // "no licence, and no refusal either"; a row carrying a licence is not.
+    if (entry.project && entry.download) {
+      assert.equal(entry.permission, "no-objection",
+        `${entry.id}: a direct-from-source install is no-objection by definition`);
+      assert.equal(entry.license, undefined,
+        `${entry.id}: no-objection means there is no licence to name`);
+    }
+    if (entry.license) {
+      assert.notEqual(entry.permission, "no-objection",
+        `${entry.id}: it carries a licence, so something was granted`);
+    }
+  }
 });

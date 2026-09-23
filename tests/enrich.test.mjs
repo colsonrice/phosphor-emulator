@@ -310,7 +310,11 @@ test("an optional mod.fetch is not a mod that needs the network", async () => {
   assert.equal(sourceUsesNetwork('local socket = require("socket")'), true);
   assert.equal(sourceUsesNetwork("local http = require 'socket.http'"), true);
   assert.equal(sourceUsesNetwork("host = enet.host_create()"), true);
-  assert.equal(sourceUsesNetwork("local t = socket.gettime()"), true);
+  // `socket.gettime` used to be pinned here as TRUE. It was an example of
+  // "this is a call, not the word", which was the fix being made at the time,
+  // and the example chosen happens to be one of LuaSocket's two functions
+  // that open nothing. It cost Kanto Battle Royale a month in the link-outs.
+  // The clock cases now live in their own test below.
   // Kanto Ascendant, hidden_evolution_red_path.lua:147. Dialogue, not a socket.
   assert.equal(sourceUsesNetwork(
     'TEXT={"A basalt weight rests firmly in its socket. Its ember-line points deeper."}'), false);
@@ -332,4 +336,34 @@ test("the declared engine range is published verbatim, and only when declared", 
   );
   assert.equal(requirementsFrom({ game_version: "", games: ["all"] }), null);
   assert.equal(requirementsFrom({ game_version: 3, games: ["all"] }), null);
+});
+
+// This pattern has been wrong in both directions, so both are pinned here.
+//
+// It began as `\bsocket\s*\.`, which matched Kanto Ascendant's ENGLISH ("a
+// basalt weight rests firmly in its socket") and held one of the largest mods
+// in the field out as "uses the network". Requiring a CALL fixed that and
+// broke the other side: `socket.gettime` is a clock, and it was the only
+// socket reference in Kanto Battle Royale -- twice, inside a `now()` helper
+// that prefers love.timer and falls back to os.clock -- which kept a
+// finished, MIT-licensed, playable mod out of the catalog.
+test("a clock is not a connection, and prose is not a call", async () => {
+  const { sourceUsesNetwork } = await import("../scripts/enrich-catalog.mjs");
+  for (const source of [
+    'local ok, socket = pcall(require, "socket"); if ok then return socket.gettime() end',
+    "socket.sleep(0.1)",
+    "A basalt weight rests firmly in its socket. Its ember-line points deeper.",
+    "-- the relay is at its room ceiling, and SOLO VS BOTS still works",
+  ]) {
+    assert.equal(sourceUsesNetwork(source), false, source.slice(0, 48));
+  }
+
+  for (const source of [
+    "local c = socket.connect(host, port)",
+    "local s = socket.tcp()",
+    'local http = require("socket.http")',
+    "local peer = enet.host_create()",
+  ]) {
+    assert.equal(sourceUsesNetwork(source), true, source.slice(0, 48));
+  }
 });

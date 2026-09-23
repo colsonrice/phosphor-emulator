@@ -124,7 +124,12 @@
       "asOf": "2026-08-22"
     },
     "requirements": {
-      "engineRange": ">=0.0.0-0 <2.0.0"
+      "engineRange": ">=0.0.0-0 <2.0.0",
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
     }
   },
   "quick-map": {
@@ -134,7 +139,12 @@
       "asOf": "2026-08-22"
     },
     "requirements": {
-      "engineRange": ">=0.0.0-0 <2.0.0"
+      "engineRange": ">=0.0.0-0 <2.0.0",
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
     }
   },
   "rename-character": {
@@ -144,7 +154,12 @@
       "asOf": "2026-08-22"
     },
     "requirements": {
-      "engineRange": ">=0.0.0-0 <2.0.0"
+      "engineRange": ">=0.0.0-0 <2.0.0",
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
     }
   },
   "too-many-balls": {
@@ -1243,7 +1258,12 @@
       "asOf": "2026-08-22"
     },
     "requirements": {
-      "engineRange": ">=0.1.0 <2.0.0"
+      "engineRange": ">=0.1.0 <2.0.0",
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
     }
   },
   "secret-base": {
@@ -1344,7 +1364,12 @@
       "asOf": "2026-08-22"
     },
     "requirements": {
-      "engineRange": ">=0.0.0-0 <2.0.0"
+      "engineRange": ">=0.0.0-0 <2.0.0",
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
     }
   },
   "pokeball-colorfix": {
@@ -1483,7 +1508,12 @@
       "asOf": "2026-08-22"
     },
     "requirements": {
-      "engineRange": ">=0.0.0-0 <2.0.0"
+      "engineRange": ">=0.0.0-0 <2.0.0",
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
     }
   },
   "sweet-share": {
@@ -2198,7 +2228,12 @@
       }
     ],
     "requirements": {
-      "engineRange": ">=0.0.0-dev <1.0.0"
+      "engineRange": ">=0.0.0-dev <1.0.0",
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
     }
   },
   "jp-green-poketto-monsuta-midori": {
@@ -3345,7 +3380,12 @@
       "asOf": "2026-08-22"
     },
     "requirements": {
-      "engineRange": ">=0.0.0-dev <1.0.0"
+      "engineRange": ">=0.0.0-dev <1.0.0",
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
     }
   },
   "anime-realism": {
@@ -3408,7 +3448,12 @@
       "asOf": "2026-08-22"
     },
     "requirements": {
-      "engineRange": ">=0.0.0-dev <1.0.0"
+      "engineRange": ">=0.0.0-dev <1.0.0",
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
     }
   },
   "gen-2-save-screen-gen1recomp": {
@@ -3418,7 +3463,12 @@
       "asOf": "2026-08-22"
     },
     "requirements": {
-      "engineRange": ">=0.0.0-0 <2.0.0"
+      "engineRange": ">=0.0.0-0 <2.0.0",
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
     }
   },
   "gen1recomp-dex-pages": {
@@ -3448,7 +3498,12 @@
       }
     ],
     "requirements": {
-      "engineRange": ">=0.0.0-0 <2.0.0"
+      "engineRange": ">=0.0.0-0 <2.0.0",
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
     }
   },
   "gen1recomp-quick-save": {
@@ -3458,7 +3513,12 @@
       "asOf": "2026-08-22"
     },
     "requirements": {
-      "engineRange": ">=0.0.0-0 <2.0.0"
+      "engineRange": ">=0.0.0-0 <2.0.0",
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
     }
   },
   "rbyrecomp-instant-load": {
@@ -3519,7 +3579,12 @@
       "asOf": "2026-08-22"
     },
     "requirements": {
-      "engineRange": ">=0.1.60 <0.2.0"
+      "engineRange": ">=0.1.60 <0.2.0",
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
     }
   },
   "gen1recomp-portuguese-ui": {
@@ -3542,6 +3607,13 @@
       "downloads": 71,
       "stars": 1,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
     }
   },
   "item-randomizer": {
@@ -3581,11 +3653,6 @@
       "asOf": "2026-08-22"
     },
     "requirements": {
-      "games": [
-        "red",
-        "blue",
-        "yellow"
-      ],
       "engineRange": ">=0.0.0 <10.0.0"
     }
   },
@@ -3655,7 +3722,12 @@
       }
     ],
     "requirements": {
-      "engineRange": ">=0.0.0-0 <2.0.0"
+      "engineRange": ">=0.0.0-0 <2.0.0",
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
     }
   },
   "fast-pokemon-center": {
@@ -3665,7 +3737,12 @@
       "asOf": "2026-08-22"
     },
     "requirements": {
-      "engineRange": ">=0.0.0-0 <2.0.0"
+      "engineRange": ">=0.0.0-0 <2.0.0",
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
     }
   },
   "the-world": {
@@ -3772,6 +3849,13 @@
       "downloads": 88,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
     }
   },
   "tabbed-options": {
@@ -3801,7 +3885,12 @@
       "permissions": [
         "filesystem"
       ],
-      "engineRange": ">=0.0.0-dev <1.0.0"
+      "engineRange": ">=0.0.0-dev <1.0.0",
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
     }
   },
   "kep-recomp-port": {
@@ -3865,7 +3954,12 @@
       }
     ],
     "requirements": {
-      "engineRange": ">=0.0.0-dev <1.0.0"
+      "engineRange": ">=0.0.0-dev <1.0.0",
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
     }
   },
   "gen1recomp-happiness": {
@@ -3889,7 +3983,12 @@
       }
     ],
     "requirements": {
-      "engineRange": ">=0.0.0-0 <2.0.0"
+      "engineRange": ">=0.0.0-0 <2.0.0",
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
     }
   },
   "gen1recomp-mystery-gift": {
@@ -3913,7 +4012,12 @@
       }
     ],
     "requirements": {
-      "engineRange": ">=0.0.0-dev <1.0.0"
+      "engineRange": ">=0.0.0-dev <1.0.0",
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
     }
   },
   "gen1-recomp-norwegian-translate": {
@@ -3923,7 +4027,12 @@
       "asOf": "2026-08-22"
     },
     "requirements": {
-      "engineRange": ">=0.0.0-0 <2.0.0"
+      "engineRange": ">=0.0.0-0 <2.0.0",
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
     }
   },
   "wild-dv-display": {
@@ -3933,7 +4042,12 @@
       "asOf": "2026-08-22"
     },
     "requirements": {
-      "engineRange": ">=0.1.37 <2.0.0"
+      "engineRange": ">=0.1.37 <2.0.0",
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
     }
   },
   "custom-video-intro": {
@@ -3943,7 +4057,12 @@
       "asOf": "2026-08-22"
     },
     "requirements": {
-      "engineRange": ">=0.1.86"
+      "engineRange": ">=0.1.86",
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
     }
   },
   "easy-custom-music": {
@@ -3991,6 +4110,13 @@
       "downloads": 748,
       "stars": 4,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
     }
   },
   "pkmn-g1r-immersive-bicycle-mod": {
@@ -4011,6 +4137,13 @@
       "downloads": 34,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
     }
   },
   "can-always-escape": {
@@ -4962,6 +5095,1213 @@
   "lucianoneo-gen1recomp-mods": {
     "requirements": {
       "engineRange": ">=0.1.75 <10.0.0"
+    }
+  },
+  "gen1recomp-silvershadow-touchpad": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.1.75 <2.0.0"
+    }
+  },
+  "party-presets-gen1recomp": {
+    "requirements": {
+      "games": [
+        "yellow"
+      ],
+      "engineRange": ">=0.1.0 <2.0.0"
+    }
+  },
+  "gen1recomp-ghost-trainers": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "gen1recomp-kanto-dex-atlas": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.75 <2.0.0"
+    }
+  },
+  "gen1recomp-auto-shiny-hunt": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.69 <2.0.0"
+    }
+  },
+  "gen1recomp-gen4-platinum-sprites": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "gen1recomp-scotts-sprite-hub": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.1.88 <2.0.0"
+    }
+  },
+  "pokemon-yellow-super-rod-fix-gen1recomp": {
+    "requirements": {
+      "games": [
+        "yellow"
+      ]
+    }
+  },
+  "summon": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "moves-manager": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "catch-helper": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "move-inspector": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "reusable-machines": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "hm-anywhere": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "mew-mirage": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.1.38 <2.0.0"
+    }
+  },
+  "item-shortcut": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "quest-system": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.1.38 <2.0.0"
+    }
+  },
+  "area-dexnav": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "legendary-grass-and-flowers": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.28 <2.0.0"
+    }
+  },
+  "the-abandoned-cabin": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "requires": [
+        "quest_system"
+      ],
+      "engineRange": ">=0.1.38 <2.0.0"
+    }
+  },
+  "guaranteed-catch": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "the-empty-throne": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "requires": [
+        "quest_system"
+      ],
+      "engineRange": ">=0.1.38 <2.0.0"
+    }
+  },
+  "the-black-flower": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "requires": [
+        "quest_system"
+      ],
+      "engineRange": ">=0.1.38 <2.0.0"
+    }
+  },
+  "whispers-beneath-cerulean": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "requires": [
+        "quest_system"
+      ],
+      "engineRange": ">=0.1.38 <2.0.0"
+    }
+  },
+  "modern-bag": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "pokedex-plus": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "the-sixth-bell": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "requires": [
+        "quest_system"
+      ],
+      "engineRange": ">=0.1.38 <2.0.0"
+    }
+  },
+  "dv-ev-editor": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "trade-evolution-fix": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "the-stolen-fossil": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "requires": [
+        "quest_system"
+      ],
+      "engineRange": ">=0.1.38 <2.0.0"
+    }
+  },
+  "exp-share-modes": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "rocket-gym-ambushes": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "team-rocket-returns": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.1.38 <2.0.0"
+    }
+  },
+  "new-game-plus": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.1.38 <2.0.0"
+    }
+  },
+  "repel-reuse-prompt": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.1.38 <2.0.0"
+    }
+  },
+  "ashes-of-cinnabar": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "requires": [
+        "quest_system"
+      ],
+      "engineRange": ">=0.1.38 <2.0.0"
+    }
+  },
+  "eevee-three-stones": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.1.38 <2.0.0"
+    }
+  },
+  "echoes-beyond-the-fog": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "requires": [
+        "quest_system"
+      ],
+      "engineRange": ">=0.1.38 <2.0.0"
+    }
+  },
+  "poachers-in-the-safari-zone": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "requires": [
+        "quest_system"
+      ],
+      "engineRange": ">=0.1.38 <2.0.0"
+    }
+  },
+  "raichu-unlock": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "2xgb-gen1recomp": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "advanced-box-system": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "all-pokemon-catchable-251-mod-crystal": {
+    "requirements": {
+      "games": [
+        "crystal"
+      ]
+    }
+  },
+  "bag-item-generator-pokemon-gold-gen2": {
+    "requirements": {
+      "games": [
+        "gold",
+        "silver",
+        "crystal"
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "better-options-menu-gen1recomp": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "celadon-living-district": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.0.0-dev <2.0.0"
+    }
+  },
+  "cry-manager-gen1recomp-mod": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.2.56 <0.3.0"
+    }
+  },
+  "crystal-onix": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "requires": [
+        "quest_system"
+      ]
+    }
+  },
+  "firered-johto-hoenn": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "free-master-ball": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "free-rare-candy": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "gen1-bag-pockets": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.1.84 <1.0.0"
+    }
+  },
+  "gen1-better-sprites": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "imports": [
+        {
+          "name": "Pokemon Gold Version",
+          "required": false
+        },
+        {
+          "name": "Pokemon Silver Version",
+          "required": false
+        },
+        {
+          "name": "Pokemon Crystal Version (Rev A)",
+          "required": false
+        }
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "gen1-field-actions": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "gen1bettermenus": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.1.99 <2.0.0"
+    }
+  },
+  "gen1coop": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "gen1recomp-adaptive-trainers": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.2.25 <1.0.0"
+    }
+  },
+  "gen1recomp-battle-art-kanto": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.69 <2.0.0"
+    }
+  },
+  "gen1recomp-centered-camera": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "gen1recomp-cj": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.1.77"
+    }
+  },
+  "gen1recomp-digimon": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue"
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
+    }
+  },
+  "gen1recomp-exp-multiplier": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "gen1recomp-exp-share": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.1.0 <2.0.0"
+    }
+  },
+  "gen1recomp-firered-fx": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "gen1recomp-mega-evolution": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "requires": [
+        "gen2_dex"
+      ],
+      "engineRange": ">=0.1.37 <2.0.0"
+    }
+  },
+  "gen1recomp-menu-hotkeys": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "gen1recomp-mod-better-info": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
+    }
+  },
+  "gen1recomp-mod-enhanced-music": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "permissions": [
+        "filesystem"
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "gen1recomp-mod-heal-rotate": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "gen1recomp-mod-immersive-field-moves": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
+    }
+  },
+  "gen1recomp-modernbag": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.0.0-dev <2.0.0"
+    }
+  },
+  "gen1recomp-move-deleter": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
+    }
+  },
+  "gen1recomp-no-bike-music": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.1.90"
+    }
+  },
+  "gen1recomp-pokerus": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.0.0-dev <2.0.0"
+    }
+  },
+  "gen1recomp-radial-menu": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "gen1recomp-unique-fly-surf-sprites": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "gen1recomp-vanillaplus": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
+    }
+  },
+  "gen1recomp-zonedisplay": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.0.0-dev <2.0.0"
+    }
+  },
+  "gold-next-encounter-spawner": {
+    "requirements": {
+      "games": [
+        "gold",
+        "silver",
+        "crystal"
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "gold-ost": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "green-sprites": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "hyrulechosenone-gen1recomp-auto-battle": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "johto-life-mod": {
+    "requirements": {
+      "games": [
+        "gold",
+        "silver",
+        "crystal"
+      ],
+      "engineRange": ">=0.0.0 <10.0.0"
+    }
+  },
+  "kanto-achievements": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.1.38 <2.0.0"
+    }
+  },
+  "kanto-coastal-ferry": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "lachie123456-stadium-cries": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "legendary-3d-npcs": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "requires": [
+        "BATTLE_ART_VOXEL_FORK"
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
+    }
+  },
+  "legendary-battle-cinematics-compat": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "requires": [
+        "BATTLE_ART_VOXEL_FORK"
+      ],
+      "engineRange": ">=0.2.60"
+    }
+  },
+  "legendary-casino-slots": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.2.60"
+    }
+  },
+  "modern-battle-ui": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.51 <2.0.0"
+    }
+  },
+  "modern-ui-icon-fix": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "requires": [
+        "gen1_modern_ui"
+      ]
+    }
+  },
+  "new-icons": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "new-item-icons": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.1.51 <2.0.0"
+    }
+  },
+  "new-sprites": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "nickname-changer": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.1.75 <2.0.0"
+    }
+  },
+  "palworld-crafting": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
+    }
+  },
+  "performance-monitor": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.1.51 <2.0.0"
+    }
+  },
+  "pokedex-sprites-hgss": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "pokegear-cards": {
+    "requirements": {
+      "games": [
+        "gold",
+        "silver",
+        "crystal"
+      ],
+      "engineRange": ">=0.1.84 <1.0.0"
+    }
+  },
+  "pokemon-gold-universal-fly": {
+    "requirements": {
+      "games": [
+        "gold",
+        "silver",
+        "crystal"
+      ],
+      "engineRange": ">=0.0.0-dev <2.0.0"
+    }
+  },
+  "pokemon-hellfire-red-gen1recomp": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
+    }
+  },
+  "pokemon-silver-deutsch-mod": {
+    "requirements": {
+      "games": [
+        "silver"
+      ],
+      "engineRange": ">=0.2.19 <1.0.0"
+    }
+  },
+  "red-gen-2-5": {
+    "requirements": {
+      "games": [
+        "gold",
+        "silver"
+      ],
+      "permissions": [
+        "filesystem"
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
+    }
+  },
+  "red-retranslated": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "seto-battle-ui": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ]
+    }
+  },
+  "shanehudson-gen1recomp-mods": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0"
+    }
+  },
+  "traduccion-gen1recomp-firered-es": {
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
+    }
+  },
+  "traduccion-gen1recomp-pokemon-espa-ol": {
+    "requirements": {
+      "games": [
+        "gold",
+        "silver",
+        "crystal"
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
+    }
+  },
+  "project-highlander-a-modern-ui-suite-fork": {
+    "requirements": {
+      "engineRange": ">=0.0.0-dev <1.0.0"
+    }
+  },
+  "pkmn-g1r-g2r-holdtoscrollui-mod": {
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <3.0.0"
+    }
+  },
+  "kanto-companion": {
+    "requirements": {
+      "engineRange": ">=0.1.83"
+    }
+  },
+  "faff0x-summon": {
+    "requirements": {
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "notquiteog-free-fly": {
+    "requirements": {
+      "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0"
+    }
+  },
+  "colosseum-overhaul-v1-0-for-gen1recomp": {
+    "requirements": {
+      "imports": [
+        {
+          "name": "Pokemon Colosseum (USA) Disc",
+          "required": true
+        }
+      ],
+      "engineRange": "0.0.0-dev || >=0.2.11 <2.0.0"
+    }
+  },
+  "gen1recomp-battle-forms": {
+    "requirements": {
+      "requires": [
+        "national_dex"
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
+    }
+  },
+  "gen1recomp-poke-rave": {
+    "requirements": {
+      "permissions": [
+        "filesystem"
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
+    }
+  },
+  "gen1recomp-weatherfx-simulator": {
+    "requirements": {
+      "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
+    }
+  },
+  "hardcore-nuzlocke": {
+    "requirements": {
+      "engineRange": ">=0.1.99 <1.0.0"
+    }
+  },
+  "myqualityoflife": {
+    "requirements": {
+      "engineRange": ">=0.1.86 <2.0.0"
+    }
+  },
+  "pmd-sky-sprites": {
+    "requirements": {
+      "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0"
+    }
+  },
+  "pokered-ptbr": {
+    "requirements": {
+      "engineRange": ">=0.0.0-dev <1.0.0"
+    }
+  },
+  "right-stick-move": {
+    "requirements": {
+      "engineRange": ">=0.1.84 <1.0.0"
+    }
+  },
+  "tactical-combat-overhaul-gen1recomp": {
+    "requirements": {
+      "engineRange": ">=0.1.89"
+    }
+  },
+  "ultron": {
+    "requirements": {
+      "permissions": [
+        "filesystem"
+      ],
+      "engineRange": ">=0.2.55 <2.0.0"
+    }
+  },
+  "kanto-battle-royale": {
+    "requirements": {
+      "engineRange": ">=0.2.26 <2.0.0"
     }
   }
 }
