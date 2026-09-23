@@ -1480,19 +1480,7 @@
     "summary": "Native FireRed encounter mod for Gen1Recomp: Johto and Hoenn wild Pokemon matched to Crystal/Emerald progression.",
     "homepageUrl": "https://github.com/brewstercm/FireRed-Johto-Hoenn",
     "releasesUrl": "https://github.com/brewstercm/FireRed-Johto-Hoenn/releases",
-    "reviewStatus": "permission-needed",
-    "directSource": {
-      "permission": "none-direct-source",
-      "fileUrl": "https://github.com/brewstercm/FireRed-Johto-Hoenn/releases/download/v1.1.2/firered_johto_hoenn_encounters-1.1.2.zip",
-      "sha256": "587fd9a3b248dfe4274afb7523ef5973b9b44e127b1564fe67009267679a1f5c",
-      "fileSizeBytes": 15559,
-      "version": "1.1.2",
-      "releasedAt": "2026-09-22T20:58:27Z",
-      "manifestPath": "manifest.json",
-      "modId": "firered_johto_hoenn_encounters",
-      "gameVersion": ">=0.2.73 <1.0.0",
-      "surveyedRelease": "v1.1.2"
-    }
+    "reviewStatus": "permission-needed"
   },
   {
     "id": "fishing-mini-game",
@@ -3058,19 +3046,7 @@
     "summary": "FireRed battle & item FX for Gen1Recomp.",
     "homepageUrl": "https://github.com/Dix01/gen1recomp-FireRed-FX",
     "releasesUrl": "https://github.com/Dix01/gen1recomp-FireRed-FX/releases",
-    "reviewStatus": "permission-needed",
-    "directSource": {
-      "permission": "none-direct-source",
-      "fileUrl": "https://github.com/Dix01/gen1recomp-FireRed-FX/releases/download/v0.3.3/firered_move_fx-0.3.3.zip",
-      "sha256": "de94cc4bbcc301269e94945d9d876a0627d66ef5f536659103b7739e6644f138",
-      "fileSizeBytes": 6951373,
-      "version": "0.3.3",
-      "releasedAt": "2026-08-14T23:08:59Z",
-      "manifestPath": "manifest.json",
-      "modId": "firered_move_fx",
-      "gameVersion": ">=0.1.29 <0.2.0",
-      "surveyedRelease": "v0.3.3"
-    }
+    "reviewStatus": "permission-needed"
   },
   {
     "id": "gen1recomp-gen2-dex",
