@@ -15,9 +15,27 @@ been asked. Phosphor links their own release asset and fetches it on the
 player's behalf, exactly as the player's browser would if they clicked through,
 with the hash pinned so what arrives is what was reviewed. These are marked
 `permission: "none-direct-source"`, keep `reviewStatus: "permission-needed"`,
-stay on the "From their creators" shelf rather than a curated one, and always
-show a link to the project itself. Phosphor does not describe them as reviewed,
-approved, or endorsed, because they are none of those things.
+keep the "From their creators" shelf, and always show a link to the project
+itself. Phosphor does not describe them as reviewed, approved, or endorsed,
+because they are none of those things.
+
+**A kind is not an endorsement** (Sep 22 2026). These used to carry the
+`PENDING` shelf and NOTHING ELSE, which meant they were absent from every
+taxonomy chip in the app: 233 of 379 entries, 214 of them installable, so
+tapping Gameplay or Interface silently hid three fifths of the catalog and the
+chip row advertised 43 Gameplay over 379 rows. A player who had been told a
+mod's name was shown an empty list.
+
+`scripts/lib/categorize.mjs` now derives a kind from the listing's own words,
+and `PENDING` stays beside it rather than being replaced. The distinction that
+matters is the one the manifest tests enforce: a derived fact is not an
+editorial one. VOXEL was already granted this exception for being read out of
+the mod's own archive, and a tagline that says "a complete Brazilian
+Portuguese translation" is a fact about the mod in exactly the same way. What
+must never happen is a tier 2 row being FILED by hand onto a shelf, and
+`tests/manifest.test.mjs` re-derives every one of them from its published
+words and requires the same answer, which a hand-filed category cannot
+survive.
 
 **What decides a tier 2 listing is what the archive does, never what licence
 it carries** (Sep 19 2026). Phosphor is free, the community asks for its mods

@@ -328,3 +328,32 @@ test("no installable listing rules out the engine the catalog was gated against"
   // card nobody can use. Demote the row (drop its directSource) instead.
   assert.deepEqual(refused, []);
 });
+// The app has carried `DiscoverCatalog.Grant` and a paragraph of copy per case
+// since it shipped, and until 22 Sep 2026 nothing published the field: all 507
+// entries said `grant: undefined`, so the branch explaining an unlicensed mod
+// to the player -- that the author published no licence, that Phosphor lists
+// it because nothing in it says not to, that it comes down if they ask -- had
+// never rendered once. A flag nothing sets is a branch nothing takes.
+test("every entry says what its creator granted, under the key the app reads", async () => {
+  const { entries } = await buildManifest();
+  const DECODABLE = new Set(["open-license", "license-permits", "author-approved", "no-objection"]);
+
+  for (const entry of entries) {
+    assert.ok(entry.permission, `${entry.id}: no permission`);
+    assert.ok(DECODABLE.has(entry.permission),
+      `${entry.id}: grant "${entry.permission}" is not a DiscoverCatalog.Grant case`);
+
+    // The two spellings of the same fact must agree. A tier-2 row is exactly
+    // "no licence, and no refusal either"; a row carrying a licence is not.
+    if (entry.project && entry.download) {
+      assert.equal(entry.permission, "no-objection",
+        `${entry.id}: a direct-from-source install is no-objection by definition`);
+      assert.equal(entry.license, undefined,
+        `${entry.id}: no-objection means there is no licence to name`);
+    }
+    if (entry.license) {
+      assert.notEqual(entry.permission, "no-objection",
+        `${entry.id}: it carries a licence, so something was granted`);
+    }
+  }
+});

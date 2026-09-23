@@ -21,6 +21,8 @@ export const EXCLUDED = {
     "an online multiplayer layer; it opens raw sockets from main.lua, which the sandbox denies, so it would install and fail to load",
   "tebwritescode/gen1mmo":
     "a shared public world with chat, carrying the same 4.7.1 duties",
+  "Neburb/pokebox-sync-gen1recomp":
+    "a sync client for PokéBox: it requires src.net.Fetch, which this build denies by subtree, so every request answers \"HTTP request pool unavailable\" and the mod installs and does nothing. It is also save custody on somebody else's server, which is the same reason savesync is here. Its own manifest declares `network` honestly; the catalog was stripping that declaration because the detector only looks for third-party transports, and the app's refusal keys on exactly that field",
   "tebwritescode/savesync":
     "uploads the player's save to a public server; save custody is the app's own responsibility and not a thing to hand off in a listing",
   "mresnick67/Gen1ReComp-Pokewalker":

@@ -6701,19 +6701,7 @@
     "summary": "Synchronises Pokémon with PokéBox over authenticated HTTPS; Crystal support is experimental.",
     "homepageUrl": "https://github.com/Neburb/pokebox-sync-gen1recomp",
     "releasesUrl": "https://github.com/Neburb/pokebox-sync-gen1recomp/releases",
-    "reviewStatus": "permission-needed",
-    "directSource": {
-      "permission": "none-direct-source",
-      "fileUrl": "https://github.com/Neburb/pokebox-sync-gen1recomp/releases/download/v0.8.17/pokebox_sync-0.8.17.zip",
-      "sha256": "2903bce2a5772f708a8b4650011c32d1a04e68b9cdb1be623bf495165aaae156",
-      "fileSizeBytes": 240160,
-      "version": "0.8.17",
-      "releasedAt": "2026-09-22T22:57:37Z",
-      "manifestPath": "manifest.json",
-      "modId": "pokebox_sync",
-      "gameVersion": null,
-      "surveyedRelease": "v0.8.17"
-    }
+    "reviewStatus": "permission-needed"
   },
   {
     "id": "pokedex-sprites-hgss",

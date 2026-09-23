@@ -238,6 +238,13 @@ function entriesForRelease(release, errors) {
       license: release.licenseText
         ? { spdx: release.license, text: release.licenseText }
         : { spdx: release.license },
+      // What the creator actually granted, which is a different question from
+      // what the archive contains. See `grant` below on the tier-2 path: the
+      // app has carried a Grant enum and a paragraph of copy for each case
+      // since it shipped, and NOTHING HAS EVER SET IT -- 507 of 507 entries
+      // published `grant: undefined`, so the branch that explains an
+      // unlicensed mod to a player has never once rendered.
+      permission: grantFor(release.permission),
       categories: categoriesFor(release.topic, release.modId),
       target: release.target,
       screenshots: [],
@@ -277,6 +284,29 @@ function entriesForRelease(release, errors) {
 ///     never on a curated shelf that would imply review
 ///   - `license` is absent, because there is no licence to name
 ///   - a rom-hack is never promoted: a hack that is not a patch is a cartridge
+/// This repository's `permission` vocabulary, in the app's.
+///
+/// **Published under the key `permission`, which is what the app reads**, even
+/// though the Swift property is called `grant`: `DiscoverCatalog.CodingKeys`
+/// says "the manifest's word for `grant`, named for the question the site asks
+/// (what permits this?) rather than for the answer". Emitting `grant` instead
+/// publishes a field nothing decodes, which is the same dead branch this was
+/// written to fix.
+///
+/// The vocabularies overlap but are not identical -- this repo's
+/// `none-direct-source` is the app's `no-objection` -- so the mapping is
+/// explicit. An unknown permission publishes nothing rather than guessing:
+/// the app's paragraphs are specific, and a wrong one is worse than none.
+function grantFor(permission) {
+  switch (permission) {
+    case "open-license": return "open-license";
+    case "license-permits": return "license-permits";
+    case "author-approved": return "author-approved";
+    case "none-direct-source": return "no-objection";
+    default: return undefined;
+  }
+}
+
 function entryForProject(project, errors) {
   const label = project.id;
   const direct = project.directSource ?? null;
@@ -339,6 +369,11 @@ function entryForProject(project, errors) {
     // without an App Store release: a build that has never heard of this
     // change reads the same PENDING it always did, and finds a real category
     // beside it.
+    // Tier 2 is exactly the enum's `no-objection`: "no licence, and no refusal
+    // either". This is what lights up the detail screen's paragraph saying the
+    // author published no licence, that Phosphor lists it because nothing in
+    // it says not to, and that it comes down if they ask.
+    permission: grantFor(direct?.permission ?? "none-direct-source"),
     categories: [...new Set([
       "PENDING",
       ...(direct?.modId && VOXEL_MODS.has(direct.modId) ? ["VOXEL"] : []),
