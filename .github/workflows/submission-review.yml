@@ -16,10 +16,34 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # **Not the title.** The only submission this repository has ever received
+  # was titled "Kanto Battle Royale", because the person replaced the
+  # template's "[Release] " prefix with the name of their mod -- which is the
+  # obvious thing to do with a field called Title. This job skipped, so no
+  # assignee was set and no receipt was posted; it skipped again on their
+  # follow-up comment asking what else was needed, and the submission sat for
+  # a month looking, from the outside, like it had been ignored.
+  #
+  # They did not use the template at all, so there was no label either. The
+  # only thing actually present was the CONTENT: field names from the form,
+  # filled in correctly. So that is what this looks at now, with the title and
+  # label kept as the cheap signals they are.
   notify-reviewer:
-    if: github.event_name == 'issues' && startsWith(github.event.issue.title, '[Release]')
+    if: >-
+      github.event_name == 'issues' &&
+      github.event.issue.user.type != 'Bot' &&
+      (startsWith(github.event.issue.title, '[Release]') ||
+       contains(github.event.issue.labels.*.name, 'release-submission') ||
+       contains(github.event.issue.body, 'Phosphor Index submission') ||
+       (contains(github.event.issue.body, 'Project title') &&
+        contains(github.event.issue.body, 'Permission type')))
     runs-on: ubuntu-latest
     steps:
+      - name: Label it as a submission
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: gh issue edit "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --add-label "release-submission" || true
       - name: Assign the repository owner
         env:
           GH_TOKEN: ${{ github.token }}
@@ -35,10 +59,16 @@ jobs:
           --body "Submission received. The repository owner has been notified. After review, they can reply here—or reply to the GitHub notification email—with \`/approve\` or \`/deny reason\`."
 
   review-command:
+    # Same widening as above: an owner typing /approve on a submission must
+    # not be ignored because the submitter renamed the issue.
     if: >-
       github.event_name == 'issue_comment' &&
       !github.event.issue.pull_request &&
-      startsWith(github.event.issue.title, '[Release]') &&
+      (startsWith(github.event.issue.title, '[Release]') ||
+       contains(github.event.issue.labels.*.name, 'release-submission') ||
+       contains(github.event.issue.body, 'Phosphor Index submission') ||
+       (contains(github.event.issue.body, 'Project title') &&
+        contains(github.event.issue.body, 'Permission type'))) &&
       contains(fromJSON('["OWNER", "MEMBER", "COLLABORATOR"]'), github.event.comment.author_association)
     runs-on: ubuntu-latest
     steps:

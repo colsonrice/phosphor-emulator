@@ -8,12 +8,88 @@ const catalogPath = new URL("../src/data/releases.json", import.meta.url);
 const maxArchiveBytes = 50 * 1024 * 1024;
 const forbiddenExtensions = [".gb", ".gbc", ".gba", ".nds", ".3ds", ".cia"];
 
+/// The fields this form asks for, and the names a person actually types.
+///
+/// **Why aliases exist at all.** The only public submission this repository
+/// has ever received, #1 on 27 Aug 2026, was written BY HAND: the creator
+/// copied the shape of the form into a plain issue rather than opening the
+/// template, one `Label: value` per line, with their own wording -- "Creator /
+/// team" for "Creator or team", "Summary" for "Release summary", "Project
+/// homepage" for "Canonical project page". Every value was right. It parsed to
+/// nothing, and nobody was told.
+///
+/// A parser that only accepts the exact labels of the exact template is a
+/// parser that works for the people who did not need help. The canonical name
+/// on the left is what the rest of this file asks for; everything on the right
+/// is a spelling somebody plausibly types for it.
+const FIELD_ALIASES = {
+  "Project title": ["project", "title", "mod name", "name"],
+  "Version": ["release version"],
+  "Creator or team": ["creator", "creator / team", "creator/team", "author", "team", "by"],
+  "Primary category": ["category"],
+  "Compatible catalog channels": ["compatible channels", "channels", "compatibility"],
+  "Target game or recomp runtime": ["target game / recomp", "target game", "target", "recomp", "runtime"],
+  "Release summary": ["summary", "description"],
+  "Release date": ["release date (yyyy-mm-dd)", "date"],
+  "Canonical project page": ["project homepage", "homepage", "project page", "project url", "repository"],
+  "Exact release-file URL": ["release file url", "release-file url", "file url", "download url", "release url"],
+  "Public redistribution-permission URL": [
+    "public redistribution permission url", "permission url", "redistribution permission url",
+    "permission evidence url",
+  ],
+  "Permission type": ["permission"],
+  "License or approval name": ["license / approval name", "license/approval name", "license", "licence", "approval name"],
+  "SHA-256": ["sha256", "sha-256 of the release file", "checksum"],
+  "Contains a commercial ROM": ["contains a rom", "contains rom", "includes a rom"],
+  "Optional image source and permission URL": ["image source", "image url", "optional image source"],
+  "Notes": ["note", "anything else"],
+};
+
+/// Lowercased, stripped to letters and digits, so punctuation and spacing
+/// stop mattering: "Creator / team", "creator/team" and "Creator Or Team" are
+/// one key. Deliberately NOT fuzzy beyond that -- an unrecognised label is
+/// ignored rather than guessed at, which is what keeps an ordinary bug report
+/// ("Steps: open the workshop") from parsing as a submission.
+const normalise = (label) => label.toLowerCase().replace(/[^a-z0-9]+/g, "");
+
+const CANONICAL_BY_KEY = (() => {
+  const byKey = {};
+  for (const [canonical, aliases] of Object.entries(FIELD_ALIASES)) {
+    byKey[normalise(canonical)] = canonical;
+    for (const alias of aliases) byKey[normalise(alias)] = canonical;
+  }
+  return byKey;
+})();
+
 export function parseIssueForm(body) {
   const fields = {};
+  // `known` is the difference between the two shapes, and it is the whole
+  // safety of the looser one. A `### Label` heading is unambiguously a field,
+  // so it is kept whatever it is called -- the template can grow a question
+  // without this file hearing about it. A `Label: value` line is ambiguous
+  // prose, so it counts only when the label is one this form actually asks
+  // for; otherwise "Steps: open the workshop" in a bug report is a
+  // submission.
+  const set = (label, raw, { known }) => {
+    const canonical = CANONICAL_BY_KEY[normalise(label)] ?? (known ? null : label.trim());
+    if (!canonical) return;
+    const value = raw.trim();
+    // First writing wins, so the template's headings beat a stray line further
+    // down that happens to normalise to the same field.
+    if (fields[canonical] !== undefined) return;
+    fields[canonical] = value === "_No response_" ? "" : value;
+  };
+
+  // The template's shape first: `### Label`, a blank line, then the value.
   const headingPattern = /^### (.+)\n\n([\s\S]*?)(?=\n\n### |$)/gm;
-  for (const match of body.matchAll(headingPattern)) {
-    const value = match[2].trim();
-    fields[match[1].trim()] = value === "_No response_" ? "" : value;
+  for (const match of body.matchAll(headingPattern)) set(match[1], match[2], { known: false });
+
+  // Then one field per line, which is what a person writes unaided. The value
+  // keeps every colon after the first, because a URL is mostly colons.
+  for (const line of body.split("\n")) {
+    const at = line.indexOf(":");
+    if (at <= 0) continue;
+    set(line.slice(0, at).replace(/^[-*#\s]+/, ""), line.slice(at + 1), { known: true });
   }
   return fields;
 }
