@@ -22528,6 +22528,46 @@
         "stars": 6,
         "asOf": "2026-08-22"
       }
+    },
+    {
+      "id": "kanto-battle-royale",
+      "kind": "luaMod",
+      "name": "Kanto Battle Royale",
+      "tagline": "Last trainer standing, in Kanto. A battle royale mod for gen1recomp: real-time presence, forced face-to-face battles, bots, and a fog that closes on the Town Map.",
+      "author": {
+        "name": "campavao",
+        "url": "https://github.com/campavao/kanto-battle-royale"
+      },
+      "permission": "no-objection",
+      "categories": [
+        "PENDING",
+        "GAMEPLAY",
+        "QOL"
+      ],
+      "target": "Gen1Recomp",
+      "engine": {
+        "id": "gen1recomp",
+        "family": "gen1recomp",
+        "games": []
+      },
+      "screenshots": [],
+      "version": "0.53.0",
+      "releasedAt": "2026-09-19T19:02:55Z",
+      "modID": "battle_royale",
+      "download": {
+        "url": "https://github.com/campavao/kanto-battle-royale/releases/download/v0.53.0/battle_royale-v0.53.0.zip",
+        "sizeBytes": 371640,
+        "sha256": "ab5349a72eb9531996d56fb1f40978e1b26df23cbabe60c80bfc5a37e8a39f6e",
+        "manifestPath": "manifest.json"
+      },
+      "project": {
+        "url": "https://github.com/campavao/kanto-battle-royale/releases",
+        "status": "permission-needed"
+      },
+      "requirements": {
+        "engineRange": ">=0.2.26 <2.0.0",
+        "onlineUnavailable": true
+      }
     }
   ]
 }

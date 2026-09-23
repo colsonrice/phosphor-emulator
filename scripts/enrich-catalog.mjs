@@ -269,7 +269,19 @@ const NETWORK_USE = [
   // Kanto Ascendant's "A basalt weight rests firmly in its socket. Its
   // ember-line points deeper." read as a mod opening a socket, and held one of
   // the largest mods in the field back as "uses the network".
-  /\bsocket\s*\.\s*[A-Za-z_]+\s*\(/,
+  // **A clock is not a connection.** `gettime` and `sleep` are LuaSocket's two
+  // pure utilities: they open nothing, and they are the reason a mod requires
+  // `socket` without ever using the wire. Kanto Battle Royale's ONLY socket
+  // reference, twice, is a `now()` helper that tries `love.timer.getTime`,
+  // falls back to `socket.gettime`, and falls back again to `os.clock` -- and
+  // that one word held a finished, MIT-licensed, playable mod out of the
+  // catalog for a month.
+  //
+  // This pattern has now been wrong in both directions. It began as
+  // `\bsocket\s*\.`, which matched Kanto Ascendant's ENGLISH ("rests firmly
+  // in its socket"); requiring a call fixed that and broke this. Third time:
+  // it must be a call, and not one of the two that only read a clock.
+  /\bsocket\s*\.\s*(?!gettime\b|sleep\b)[A-Za-z_]+\s*\(/,
   /\benet\s*\.\s*[A-Za-z_]+\s*\(/,
 ];
 const NEVER_LOADED = /(^|\/)(tests?|tools?|specs?|examples?|docs?|benchmarks?)\//i;

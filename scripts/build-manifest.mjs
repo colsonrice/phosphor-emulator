@@ -18,6 +18,7 @@ import { engineFacet, ENGINE_VERSIONS, GEN1 } from "./engine-family.mjs";
 import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { categorize } from "./lib/categorize.mjs";
+import { ONLINE_UNAVAILABLE } from "./lib/excluded.mjs";
 
 const RELEASES = new URL("../src/data/releases.json", import.meta.url);
 const PROJECTS = new URL("../src/data/projects.json", import.meta.url);
@@ -439,6 +440,20 @@ async function enrichment() {
 /// engines becomes `id@engine` twice, and both halves are the same archive and
 /// the same repository, so both carry the same requirements and the same
 /// download count.
+/// Marks a listing whose network half cannot work here but which plays
+/// without it. See `ONLINE_UNAVAILABLE`.
+///
+/// Merged into `requirements` rather than published beside it, because the app
+/// already reads exactly one block for "things to tell the player before they
+/// install", and a second one would be a second place to forget.
+function onlineUnavailableFor(entry, enriched) {
+  const repo = /github\.com\/([^/#?]+\/[^/#?]+)/.exec(entry.author?.url ?? "")?.[1];
+  const wanted = (repo ?? "").toLowerCase().replace(/\.git$/, "");
+  const known = Object.keys(ONLINE_UNAVAILABLE).some((name) => name.toLowerCase() === wanted);
+  if (!known) return {};
+  return { requirements: { ...(enriched.requirements ?? {}), onlineUnavailable: true } };
+}
+
 function enrich(entry, table) {
   const enriched = table[entry.id] ?? table[entry.id.split("@")[0]];
   if (!enriched) return entry;
@@ -449,6 +464,7 @@ function enrich(entry, table) {
     // enrichment on disk, and publishing its imports or its engine range
     // would describe a file nobody can install from here.
     ...(enriched.requirements && entry.download ? { requirements: enriched.requirements } : {}),
+    ...(entry.download ? onlineUnavailableFor(entry, enriched) : {}),
     ...(enriched.popularity ? { popularity: enriched.popularity } : {}),
     // The mod's own logo, where its author has adopted the Logo.PNG
     // convention. `screenshots` stays whatever the row declared: a logo is not
