@@ -4,7 +4,7 @@
   "engines": [
     {
       "id": "gen1recomp",
-      "catalogedAgainst": "0.3.3"
+      "catalogedAgainst": "0.3.5"
     }
   ],
   "sections": [
