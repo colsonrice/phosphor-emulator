@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
-import { buildManifest } from "../scripts/build-manifest.mjs";
+import { buildManifest, demoteRowsTheEngineMovedPast } from "../scripts/build-manifest.mjs";
 import { looksLikeAFileOrAHash } from "../scripts/enrich-catalog.mjs";
 import { satisfies } from "../scripts/lib/semver.mjs";
 import { categorize } from "../scripts/lib/categorize.mjs";
@@ -66,6 +66,14 @@ test("any indexed entry offers a link, and a tier-2 install is verifiable", asyn
     // came from: re-derive them from the entry's own published words and
     // require the same answer. A hand-filed category cannot survive that.
     const CURATED = ["GAMEPLAY", "QOL", "UI", "ART", "CONTENT", "AUDIO"];
+    // PENDING means nobody has cleared this listing, which is what every row
+    // here used to be. `engine-moved-on` is the one that is not: a cleared,
+    // licensed row that build-manifest stopped offering because the catalogued
+    // engine outran the range its own manifest declares. Shelving that under
+    // PENDING would say Phosphor never reviewed it, which is false, and it
+    // would stay false after the creator supports the new engine and the row
+    // becomes installable again on its own.
+    if (entry.project.status === "engine-moved-on") continue;
     assert.ok(entry.categories.includes("PENDING"), `${entry.id}: shelf`);
     const derived = categorize({ title: entry.name, tagline: entry.tagline ?? "",
                                  modId: entry.modID ?? "" });
@@ -215,7 +223,17 @@ test("the published catalog is mods, installable or linked, and never a ROM hack
   // row with no download would still be pretending, so that stays refused.
   for (const entry of indexed) {
     assert.ok(/^https:\/\//.test(entry.project.url), `${entry.id}: link must be HTTPS`);
-    assert.equal(entry.license, undefined, `${entry.id}: a pending listing claims no licence`);
+    // The licence rule is about PERMISSION NOBODY GRANTED, which is why it is
+    // written against pending rows. An `engine-moved-on` row is the opposite
+    // case: its creator granted a licence, the catalog carried it, and the
+    // only thing that changed is that the engine moved past the range the
+    // mod's own manifest declares. Dropping its licence on the way out would
+    // publish an untruth to make a rule about a different situation hold.
+    if (entry.project.status !== "engine-moved-on") {
+      assert.equal(entry.license, undefined, `${entry.id}: a pending listing claims no licence`);
+    }
+    // No exception here, and none wanted: a version describes bytes this
+    // catalog is not offering, whichever reason it is not offering them for.
     if (!entry.download) {
       assert.equal(entry.version, undefined,
         `${entry.id}: a link-out with no file has no version to state`);
@@ -356,4 +374,83 @@ test("every entry says what its creator granted, under the key the app reads", a
         `${entry.id}: it carries a licence, so something was granted`);
     }
   }
+});
+
+// The engine moves on its own schedule and a mod's `game_version` is a claim
+// about which engines it runs on, so a bump can carry the catalog past a row
+// that was installable the day before. These exercise the derivation directly
+// rather than through buildManifest: the checked-in engines.json satisfies
+// every published range, which is the state we want and also the state in
+// which this code never runs.
+const ENGINES = [{ id: "gen1recomp", catalogedAgainst: "0.3.2" }];
+const row = (over) => ({
+  id: "a-mod", name: "A Mod", categories: ["QOL"],
+  author: { name: "someone", url: "https://github.com/someone/a-mod" },
+  engine: { id: "gen1recomp" }, version: "1.0.0", releasedAt: "2026-09-01",
+  modID: "a_mod", license: { spdx: "MIT" }, permission: "open-license",
+  download: { url: "https://example.com/a.zip", sha256: "ab", sizeBytes: 1 },
+  requirements: { engineRange: ">=0.2.0 <0.3.0" },
+  ...over,
+});
+
+test("a row the catalogued engine has outrun stops being an install", () => {
+  const errors = [];
+  const { entries, demoted } = demoteRowsTheEngineMovedPast([row()], ENGINES, errors);
+  assert.deepEqual(errors, []);
+  assert.equal(demoted.length, 1);
+  const [entry] = entries;
+  // Everything describing the bytes goes.
+  for (const gone of ["download", "requirements", "version", "releasedAt", "modID"]) {
+    assert.equal(entry[gone], undefined, `${gone} describes a file no longer offered`);
+  }
+  // Everything describing the work stays, licence included: the creator
+  // granted it and an engine bump does not take it back.
+  assert.deepEqual(entry.license, { spdx: "MIT" });
+  assert.equal(entry.permission, "open-license");
+  assert.deepEqual(entry.categories, ["QOL"]);
+  // And the card still does something when tapped.
+  assert.deepEqual(entry.project,
+    { url: "https://github.com/someone/a-mod", status: "engine-moved-on" });
+});
+
+test("a row the catalogued engine satisfies is left exactly alone", () => {
+  const errors = [];
+  const inRange = row({ requirements: { engineRange: ">=0.2.0 <1.0.0" } });
+  const { entries, demoted } = demoteRowsTheEngineMovedPast([inRange], ENGINES, errors);
+  assert.deepEqual(demoted, []);
+  assert.deepEqual(errors, []);
+  assert.deepEqual(entries[0], inRange);
+});
+
+test("no gate and no declared range are both left alone, and are not the same as failing one", () => {
+  const errors = [];
+  // A row whose engine this catalog does not gate: nothing to compare against.
+  const other = row({ engine: { id: "some-other-engine" } });
+  // A row that declares no range at all claims nothing to contradict.
+  const silent = row({ requirements: { imports: ["x"] } });
+  const { entries, demoted } = demoteRowsTheEngineMovedPast([other, silent], ENGINES, errors);
+  assert.deepEqual(demoted, []);
+  assert.deepEqual(errors, []);
+  assert.ok(entries.every((entry) => entry.download), "neither loses its install");
+});
+
+test("a row with nothing to link to is an error, never a card that does nothing", () => {
+  const errors = [];
+  const { demoted } = demoteRowsTheEngineMovedPast(
+    [row({ author: { name: "someone" } })], ENGINES, errors);
+  assert.deepEqual(demoted, []);
+  assert.equal(errors.length, 1);
+  assert.match(errors[0], /no HTTPS\s+link to fall back to/);
+});
+
+test("a tier-2 row keeps the link and the review status it already had", () => {
+  const errors = [];
+  const tier2 = row({
+    license: undefined, permission: "no-objection", categories: ["PENDING", "QOL"],
+    project: { url: "https://github.com/someone/a-mod/releases", status: "permission-needed" },
+  });
+  const { entries, demoted } = demoteRowsTheEngineMovedPast([tier2], ENGINES, errors);
+  assert.equal(demoted.length, 1);
+  assert.deepEqual(entries[0].project,
+    { url: "https://github.com/someone/a-mod/releases", status: "permission-needed" });
 });
