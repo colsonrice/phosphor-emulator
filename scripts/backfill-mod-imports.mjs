@@ -44,8 +44,14 @@ export function cacheNameFor(row) {
   if (!row.directSource) return `published__${row.id}__${row.fileName}`;
   // Anchored, and the asset is the LAST path segment: a tag may itself hold a
   // slash, and a host that merely contains "github.com" is not GitHub.
-  const m = /^https:\/\/github\.com\/([^/]+)\/([^/]+)\/releases\/download\/.+\/([^/?#]+)(?:[?#].*)?$/
-    .exec(row.directSource.fileUrl ?? "");
+  const url = row.directSource.fileUrl ?? "";
+  const m =
+    /^https:\/\/github\.com\/([^/]+)\/([^/]+)\/releases\/download\/.+\/([^/?#]+)(?:[?#].*)?$/.exec(url)
+    // An archive committed to the tree rather than released, pinned to a
+    // commit. Without this form every mod of a suite published that way reads
+    // as "no release asset URL", and a Gen 3 mod that needs a ROM from the
+    // player would be published saying it needs nothing.
+    ?? /^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/[^/]+\/([^/?#]+)(?:[?#].*)?$/.exec(url);
   if (!m) return null;
   try {
     return `${m[1]}__${m[2]}__${decodeURIComponent(m[3])}`;

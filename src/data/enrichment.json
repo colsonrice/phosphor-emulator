@@ -3279,15 +3279,7 @@
       "asOf": "2026-08-22"
     },
     "requirements": {
-      "engineRange": ">=0.1.79 || =0.0.0-dev",
-      "games": [
-        "red",
-        "blue",
-        "yellow",
-        "gold",
-        "silver",
-        "crystal"
-      ]
+      "engineRange": ">=0.1.79 || =0.0.0-dev"
     }
   },
   "pokemon-bank": {
@@ -6690,9 +6682,8 @@
   "firered-johto-hoenn": {
     "requirements": {
       "games": [
-        "red",
-        "blue",
-        "yellow"
+        "firered",
+        "leafgreen"
       ]
     }
   },
@@ -7278,9 +7269,7 @@
   "traduccion-gen1recomp-firered-es": {
     "requirements": {
       "games": [
-        "red",
-        "blue",
-        "yellow"
+        "firered"
       ],
       "engineRange": ">=0.0.0-dev <1.0.0"
     }
@@ -7478,15 +7467,7 @@
   },
   "right-stick-move": {
     "requirements": {
-      "engineRange": ">=0.1.84 <1.0.0",
-      "games": [
-        "red",
-        "blue",
-        "yellow",
-        "gold",
-        "silver",
-        "crystal"
-      ]
+      "engineRange": ">=0.1.84 <1.0.0"
     }
   },
   "tactical-combat-overhaul-gen1recomp": {
@@ -7636,6 +7617,167 @@
         "gold",
         "silver",
         "crystal"
+      ]
+    }
+  },
+  "gen3recomp-advanced-box-system-gen3": {
+    "requirements": {
+      "games": [
+        "firered"
+      ]
+    }
+  },
+  "gen3recomp-all-tm-shop-gen3": {
+    "requirements": {
+      "games": [
+        "firered"
+      ]
+    }
+  },
+  "gen3recomp-area-dexnav-gen3": {
+    "requirements": {
+      "games": [
+        "firered"
+      ]
+    }
+  },
+  "gen3recomp-disable-help-lr-gen3": {
+    "requirements": {
+      "games": [
+        "firered"
+      ]
+    }
+  },
+  "gen3recomp-dv-ev-editor-gen3": {
+    "requirements": {
+      "games": [
+        "firered"
+      ]
+    }
+  },
+  "gen3recomp-pokemonmod-gen3-exp-share-modes": {
+    "requirements": {
+      "games": [
+        "firered"
+      ]
+    }
+  },
+  "gen3recomp-pokemonmod-gen3-free-master-rare-evolution-repel": {
+    "requirements": {
+      "games": [
+        "firered"
+      ]
+    }
+  },
+  "gen3recomp-hm-anywhere-gen3": {
+    "requirements": {
+      "games": [
+        "firered"
+      ]
+    }
+  },
+  "gen3recomp-pokemonmod-gen3-item-shortcut": {
+    "requirements": {
+      "games": [
+        "firered"
+      ]
+    }
+  },
+  "gen3recomp-pokemonmod-gen3-modern-bag": {
+    "requirements": {
+      "games": [
+        "firered"
+      ]
+    }
+  },
+  "gen3recomp-modern-battle-ui-gen3-firered": {
+    "requirements": {
+      "games": [
+        "firered"
+      ]
+    }
+  },
+  "gen3recomp-gen3-modern-ui": {
+    "requirements": {
+      "games": [
+        "firered"
+      ]
+    }
+  },
+  "gen3recomp-pokemonmod-gen3-move-learn-stats": {
+    "requirements": {
+      "games": [
+        "firered"
+      ]
+    }
+  },
+  "gen3recomp-moves-manager-gen3": {
+    "requirements": {
+      "games": [
+        "firered"
+      ]
+    }
+  },
+  "gen3recomp-pokemonmod-gen3-nickname-changer": {
+    "requirements": {
+      "games": [
+        "firered"
+      ]
+    }
+  },
+  "gen3recomp-pokemonmod-gen3-performance-monitor": {
+    "requirements": {
+      "games": [
+        "firered"
+      ]
+    }
+  },
+  "gen3recomp-pokecenter-max-happiness-gen3": {
+    "requirements": {
+      "games": [
+        "firered"
+      ]
+    }
+  },
+  "gen3recomp-pokemonmod-gen3-pokedex-plus": {
+    "requirements": {
+      "games": [
+        "firered"
+      ]
+    }
+  },
+  "gen3recomp-pokemonmod-gen3-repel-reuse-prompt": {
+    "requirements": {
+      "games": [
+        "firered"
+      ]
+    }
+  },
+  "gen3recomp-reusable-machines-gen3": {
+    "requirements": {
+      "games": [
+        "firered"
+      ]
+    }
+  },
+  "gen3recomp-pokemonmod-gen3-stable-menu-navigation": {
+    "requirements": {
+      "games": [
+        "firered"
+      ]
+    }
+  },
+  "gen3recomp-pokemonmod-gen3-summon": {
+    "requirements": {
+      "games": [
+        "firered"
+      ]
+    }
+  },
+  "gen3recomp-pokemonmod-gen3-trade-evolution-fix": {
+    "requirements": {
+      "games": [
+        "firered"
       ]
     }
   }

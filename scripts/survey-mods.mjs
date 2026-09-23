@@ -49,6 +49,14 @@ const SEARCHES = [
   // catches descriptions that never write the engine's name as one word.
   "gen1recomp++", "recomp pokemon", "topic:gen1recomp-mod",
   "kanto recomp", "johto recomp", "love2d pokemon mod", "topic:pokemon-mod",
+  // Added 23 Sep 2026, the day LeafGreen shipped. Every term above says
+  // "gen1" or "gen2" or a Game Boy region, and the engine now runs Gen 3: a
+  // creator writing Gen 3 mods has no reason to type any of them. FAFF0x had
+  // published 23 working FireRed mods at `FAFF0x/gen3recomp` — no
+  // description, no topics, so nothing but the NAME was searchable, and the
+  // one word in it was the one word this list did not have.
+  "gen3recomp", "gen3 recomp", "firered recomp", "leafgreen recomp",
+  "firered mod gen1recomp", "topic:gen3recomp",
 ];
 
 /// Terms swept a second time across FORKS.
@@ -422,8 +430,10 @@ async function inspect(path) {
 /// Everything that would stop this being offered as a one-tap install.
 function refusals({ release, asset, contents }) {
   const out = [];
-  if (!release) out.push("no release");
-  else if (!asset) out.push("no .zip in the latest release");
+  // A tree archive answers the question a release would have answered, so it
+  // is not missing anything: `asset` is set and `release` is null on purpose.
+  if (!release && !asset) out.push("no release, and no archive committed to the tree");
+  else if (release && !asset) out.push("no .zip in the latest release");
   if (!contents) return out.length ? out : ["archive could not be fetched"];
   if (contents.error) out.push(contents.error);
   if (contents.buriedManifest) {
@@ -442,10 +452,53 @@ function refusals({ release, asset, contents }) {
   return out;
 }
 
+/// How many archives one repository may contribute. A creator who publishes a
+/// suite this way is the case being served; a repository with hundreds of zips
+/// in it is something else, and downloading all of them is not a survey.
+const MAX_TREE_ARCHIVES = 60;
+
+/// Archives a creator committed to their repository instead of releasing.
+///
+/// **Not every mod is published through GitHub Releases, and the ones that are
+/// not were invisible.** `FAFF0x/gen3recomp` carries 23 FireRed mods as zips
+/// at the root of its default branch: no releases, no tags, and the official
+/// index does not carry Gen 3 at all. The survey asked `releases/latest`,
+/// found nothing, and wrote "no release" — a true sentence about the wrong
+/// question.
+///
+/// **Pinned to the commit, never the branch.** A `.../main/mod.zip` URL serves
+/// whatever that file becomes, so the SHA-256 the catalog publishes would stop
+/// matching the moment the creator updates, and every install would refuse
+/// (safely, and for no reason a player could act on). The commit form is
+/// immutable: the bytes behind it are the bytes somebody looked at, which is
+/// the whole of what CATALOG_POLICY means by pinning a hash. Phosphor still
+/// hosts nothing — this is the creator's own file on the creator's own
+/// hosting, exactly as tier 2 describes.
+async function treeArchives(name, branch) {
+  const head = (await gh(`repos/${name}/commits/${branch ?? "HEAD"}`, ".sha").catch(() => "")).trim();
+  if (!head) return [];
+  const tree = await ghJSON(`repos/${name}/git/trees/${head}`,
+    "[.tree[] | select(.type == \"blob\") | {path, size}]");
+  return (tree ?? [])
+    // Root level only. A zip deeper in a tree is far more often a test
+    // fixture, a vendored dependency or an artefact than a published mod, and
+    // the flat path also keeps `cacheName` a filename rather than a path.
+    .filter((entry) => /^[^/]+\.zip$/i.test(entry.path))
+    .slice(0, MAX_TREE_ARCHIVES)
+    .map((entry) => ({
+      name: entry.path,
+      // Not `archive.zip` from a link: the file itself, at a commit.
+      url: `https://raw.githubusercontent.com/${name}/${head}/${entry.path}`,
+      size: entry.size,
+      commit: head,
+    }));
+}
+
 async function surveyRepo(name, hint) {
   const meta = await ghJSON(`repos/${name}`,
-    "{full_name, license:(.license.spdx_id // null), pushed_at, stars:.stargazers_count, description, homepage, html_url}");
-  if (!meta) return null;
+    "{full_name, license:(.license.spdx_id // null), pushed_at, stars:.stargazers_count, "
+    + "description, homepage, html_url, default_branch}");
+  if (!meta) return [];
 
   // The licence file as GitHub itself resolves it. Guessing "/blob/HEAD/LICENSE"
   // is wrong often enough to matter — LICENSE.md, COPYING, a licence in a
@@ -467,21 +520,39 @@ async function surveyRepo(name, hint) {
   // ordering is the same silent loss as page-one pagination, one mod at a
   // time.
   const assets = release?.assets ?? [];
-  const asset = assets.find((a) => /\.zip$/i.test(a.name))
+  const released = assets.find((a) => /\.zip$/i.test(a.name))
     ?? assets.find((a) => /\.tar\.gz$/i.test(a.name))
     ?? null;
 
-  let contents = null;
-  let sha256 = null;
-  let bytes = null;
-  if (asset && asset.size <= MAX_TOTAL_UNCOMPRESSED) {
-    bytes = await fetchAsset(name, asset);
-    if (bytes) {
-      sha256 = createHash("sha256").update(bytes).digest("hex");
-      contents = await inspect(new URL(cacheName(name, asset.name), CACHE).pathname);
-    }
-  }
+  // A creator publishes one way or the other, and a release is the one a
+  // version and a date can be read from, so it wins wherever there is one.
+  // The tree is only asked about when a release answered nothing.
+  const candidates = released
+    ? [released]
+    : (await treeArchives(name, meta.default_branch).catch(() => []));
 
+  // A repository with no archive at all is still a result: it is a link-out,
+  // or a repository that is not a mod, and both are things the report says.
+  const archives = candidates.length ? candidates : [null];
+
+  const rows = [];
+  for (const asset of archives) {
+    let contents = null;
+    let sha256 = null;
+    let bytes = null;
+    if (asset && asset.size <= MAX_TOTAL_UNCOMPRESSED) {
+      bytes = await fetchAsset(name, asset);
+      if (bytes) {
+        sha256 = createHash("sha256").update(bytes).digest("hex");
+        contents = await inspect(new URL(cacheName(name, asset.name), CACHE).pathname);
+      }
+    }
+    rows.push(rowFor({ name, hint, meta, license, release, asset, contents, sha256 }));
+  }
+  return rows;
+}
+
+function rowFor({ name, hint, meta, license, release, asset, contents, sha256 }) {
   const blocking = refusals({ release, asset, contents });
   const licensed = PERMISSIVE.has(meta.license);
 
@@ -501,11 +572,21 @@ async function surveyRepo(name, hint) {
     pushedAt: meta.pushed_at,
     description: meta.description,
     homepage: meta.html_url,
-    releasesPage: `${meta.html_url}/releases`,
-    release: release && asset
-      ? { tag: release.tag, publishedAt: release.published,
+    // A repository that publishes no releases has an empty releases page, and
+    // sending a player there is worse than sending them to the front page.
+    releasesPage: release ? `${meta.html_url}/releases` : meta.html_url,
+    release: asset
+      ? { tag: release?.tag ?? null,
+          // A committed archive carries no release date. The repository's own
+          // last push is the nearest true thing, and it is a date somebody can
+          // check rather than today's date standing in for one.
+          publishedAt: release?.published ?? meta.pushed_at,
           fileName: asset.name, fileUrl: asset.url,
-          fileSizeBytes: asset.size, sha256 }
+          fileSizeBytes: asset.size, sha256,
+          // Said plainly, so the report can be read without parsing the URL to
+          // learn whether these bytes are pinned to a tag or to a commit.
+          source: release ? "release" : "tree",
+          ...(asset.commit ? { commit: asset.commit } : {}) }
       : null,
     contents: contents && !contents.error
       ? { modId: contents.manifest?.id ?? null,
@@ -672,6 +753,22 @@ const humanSize = (bytes) => bytes >= 1024 * 1024
 /// human to read it. What is mechanical here — the hash, the byte count, the
 /// mod id, the licence evidence — is exactly what a human is worst at copying
 /// by hand, and what CATALOG_POLICY requires to be exact.
+const slug = (text) =>
+  String(text).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
+/// How a listing is recognised again on a later survey: the repository, and
+/// the mod inside it where the archive names one.
+const listingKey = (repo, modId) =>
+  `${String(repo).toLowerCase()}#${String(modId).toLowerCase()}`;
+
+/// Whether this repository contributed more than one surveyed archive.
+///
+/// Only then does the mod id belong in the listing's id. A repository that
+/// publishes one mod keeps the id the catalog already uses for it, so a
+/// re-survey does not rename every existing row and orphan its enrichment.
+const oneOfMany = (row, results) =>
+  results.filter((other) => other.repo === row.repo && other.contents?.modId).length > 1;
+
 function draftRows(results) {
   const rows = [];
   const skipped = [];
@@ -702,7 +799,14 @@ function draftRows(results) {
       continue;
     }
     rows.push({
-      id: r.repo.split("/")[1].toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""),
+      // The repository names the listing, EXCEPT where one repository
+      // publishes several mods: 23 rows all called `gen3recomp` would be one
+      // id taken 23 times, and the row that won would be whichever was written
+      // last. The mod's own id is what tells them apart, and it is also what
+      // apply-survey.mjs matches a later release against.
+      id: slug(r.contents.modId && oneOfMany(r, results)
+        ? `${r.repo.split("/")[1]}-${r.contents.modId}`
+        : r.repo.split("/")[1]),
       title: manifest.name ?? r.indexEntry?.title ?? r.repo.split("/")[1],
       creator: manifest.author ?? r.indexEntry?.author ?? r.repo.split("/")[0],
       version: r.contents.modVersion ?? "",
@@ -776,7 +880,12 @@ function draftProjects(results, alreadyListed, takenIds) {
     // would be a dead end dressed as a discovery.
     const verifiedRealMod = Boolean(r.contents?.modId) && r.blocking.length === 0;
     if (!r.inOfficialIndex && !verifiedRealMod) continue;
-    if (alreadyListed.has(r.repo.toLowerCase())) continue;
+    // A mod the catalog already carries. Asked of the mod where the archive
+    // names one, so a suite's other mods are not mistaken for this one.
+    const known = r.contents?.modId
+      ? alreadyListed.has(listingKey(r.repo, r.contents.modId))
+      : alreadyListed.has(r.repo.toLowerCase());
+    if (known) continue;
     if (EXCLUDED[r.repo]) continue;
 
     const manifest = r.contents?.manifest ?? {};
@@ -793,10 +902,14 @@ function draftProjects(results, alreadyListed, takenIds) {
     // to thorkdev/gen1recomp-running-shoes collided with the published
     // MadeinTaly mod of that name, which are different mods. The owner
     // disambiguates, and only where it has to, so existing ids stay stable.
-    const slug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+    //
+    // One repository publishing several mods is the other way ids collide,
+    // and the owner cannot separate those — 23 mods from FAFF0x/gen3recomp
+    // all wanted `gen3recomp` and then all wanted `faff0x-gen3recomp`. The
+    // mod's own id is the only thing that tells them apart.
     const [owner, name] = r.repo.split("/");
-    let id = slug(name);
-    if (takenIds.has(id)) id = `${slug(owner)}-${slug(name)}`;
+    let id = slug(oneOfMany(r, results) ? `${name}-${r.contents.modId}` : name);
+    if (takenIds.has(id)) id = `${slug(owner)}-${id}`;
     takenIds.add(id);
 
     rows.push({
@@ -810,6 +923,11 @@ function draftProjects(results, alreadyListed, takenIds) {
       engine: engineFacet({ target: targetFor(channels), channels, label: r.repo }),
       summary,
       homepageUrl: r.homepage,
+      // Which mod inside the repository this row is. One repository can
+      // publish a suite, and then the homepage no longer identifies a listing:
+      // this is what stops the second mod being read as a duplicate of the
+      // first, here and in promote-direct-source.mjs.
+      ...(r.contents?.modId ? { modId: r.contents.modId } : {}),
       ...(r.release ? { releasesUrl: r.releasesPage } : {}),
       // Nothing has been asked of these creators and nothing has been granted.
       // The other two statuses would both claim a conversation that has not
@@ -857,8 +975,10 @@ async function main() {
     if (n >= LIMIT) break;
     n += 1;
     process.stdout.write(`  [${n}/${Math.min(repos.size, LIMIT)}] ${name}\r`);
-    const row = await surveyRepo(name, hint).catch(() => null);
-    if (row) results.push(row);
+    // One repository can publish a whole suite as committed archives, so this
+    // is a list: 23 FireRed mods arrive from `FAFF0x/gen3recomp` alone.
+    const rows = await surveyRepo(name, hint).catch(() => []);
+    results.push(...rows);
   }
   console.log("\n");
 
@@ -894,17 +1014,30 @@ async function main() {
     console.log(`  needs a file from the player  ${r.repo} — ${list}`);
   }
 
+  // What is already listed, by repository AND by the mod inside it.
+  //
+  // The repository alone was enough while a repository meant a mod. It stopped
+  // being enough with a suite: once one of FAFF0x/gen3recomp's 23 mods was
+  // listed, the repository counted as covered and the other 22 — and every mod
+  // added to it later — would be dropped from the drafts as already known.
+  // Recording the mod id too keeps each one its own answer.
   const listed = new Set();
   for (const file of ["../src/data/releases.json", "../src/data/projects.json"]) {
     const existing = JSON.parse(await readFile(new URL(file, import.meta.url), "utf8"));
     for (const row of existing) {
       const url = String(row.homepageUrl ?? "");
-      if (url.startsWith("https://github.com/")) {
-        listed.add(url.replace("https://github.com/", "").toLowerCase());
-      }
+      if (!url.startsWith("https://github.com/")) continue;
+      const repo = url.replace("https://github.com/", "").toLowerCase();
+      listed.add(repo);
+      const modId = row.modId ?? row.directSource?.modId;
+      if (modId) listed.add(listingKey(repo, modId));
     }
   }
-  for (const row of rows) listed.add(row.homepageUrl.replace("https://github.com/", "").toLowerCase());
+  for (const row of rows) {
+    const repo = row.homepageUrl.replace("https://github.com/", "").toLowerCase();
+    listed.add(repo);
+    if (row.modId) listed.add(listingKey(repo, row.modId));
+  }
 
   // Every id already spoken for, so a new listing cannot quietly take one.
   const takenIds = new Set();
