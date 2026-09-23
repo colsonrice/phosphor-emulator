@@ -4,7 +4,7 @@
   "engines": [
     {
       "id": "gen1recomp",
-      "catalogedAgainst": "0.2.61"
+      "catalogedAgainst": "0.3.2"
     }
   ],
   "sections": [
@@ -3527,8 +3527,6 @@
         "name": "debatesmith",
         "url": "https://github.com/Debatesmith/Project-Celebi"
       },
-      "version": "0.2.2",
-      "releasedAt": "2026-08-20",
       "license": {
         "spdx": "MIT",
         "text": "MIT License\n\nCopyright (c) 2026 Debatesmith\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
@@ -3543,33 +3541,19 @@
           "url": "https://raw.githubusercontent.com/Debatesmith/Project-Celebi/main/docs/images/victory-road-gate.png"
         }
       ],
-      "download": {
-        "url": "https://github.com/Debatesmith/Project-Celebi/releases/download/v0.2.02-Hotfix/ProjectCelebi-v0.2.02.zip",
-        "sizeBytes": 74910,
-        "sha256": "bf8e7095a93a5efb9f2c684af9d130cfb32b14cc6757d5dde531158f31d0f74b",
-        "manifestPath": "project_celebi/manifest.json"
-      },
       "engine": {
         "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
-      "modID": "legacy_bridge",
-      "requirements": {
-        "permissions": [
-          "filesystem"
-        ],
-        "conflicts": [
-          "jj_hm_field_unlock",
-          "jj_auto_field_moves",
-          "evolution_man_gold"
-        ],
-        "engineRange": ">=0.1.78 <0.3.0"
-      },
       "popularity": {
         "downloads": 144,
         "stars": 1,
         "asOf": "2026-08-22"
+      },
+      "project": {
+        "url": "https://github.com/Debatesmith/Project-Celebi",
+        "status": "engine-moved-on"
       }
     },
     {
@@ -9849,26 +9833,9 @@
         "games": []
       },
       "screenshots": [],
-      "version": "0.2.1",
-      "releasedAt": "2026-09-07T17:15:31Z",
-      "modID": "cry_manager",
-      "download": {
-        "url": "https://github.com/Leoocast/cry-manager-gen1recomp-mod/releases/download/0.2.1/cry_manager-0.2.1.zip",
-        "sizeBytes": 30165,
-        "sha256": "373cfd9d16cee670bf78960f4eee70a55802a71e703dbeab520016a64664a0bd",
-        "manifestPath": "manifest.json"
-      },
       "project": {
         "url": "https://github.com/Leoocast/cry-manager-gen1recomp-mod/releases",
         "status": "permission-needed"
-      },
-      "requirements": {
-        "games": [
-          "red",
-          "blue",
-          "yellow"
-        ],
-        "engineRange": ">=0.2.56 <0.3.0"
       }
     },
     {
