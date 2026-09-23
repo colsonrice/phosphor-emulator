@@ -15,6 +15,7 @@
 
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { engineFacet, ENGINE_VERSIONS, GEN1 } from "./engine-family.mjs";
+import { CARTRIDGES } from "./enrich-catalog.mjs";
 import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { categorize } from "./lib/categorize.mjs";
@@ -619,8 +620,13 @@ export async function buildManifest({ onDemote } = {}) {
   if (demotionErrors.length) fail(demotionErrors);
   if (demoted.length && onDemote) onDemote(demoted);
 
-  return { schemaVersion: 1, generated, engines, sections: SECTIONS, categories: CATEGORIES,
-           entries: offered };
+  // The vocabulary every `requirements.games` line is written against. A row
+  // with no games line covers every one of THESE, and the app reads it that
+  // way rather than as "every game the app runs": without it, the day the app
+  // learned FireRed every silent row in a six-cartridge catalog would have
+  // claimed it. No schemaVersion bump, for the same reason as `engines`.
+  return { schemaVersion: 1, generated, engines, games: CARTRIDGES, sections: SECTIONS,
+           categories: CATEGORIES, entries: offered };
 }
 
 const serialise = (manifest) => JSON.stringify(manifest, null, 2) + "\n";

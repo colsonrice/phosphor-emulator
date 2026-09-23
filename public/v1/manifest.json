@@ -7,6 +7,16 @@
       "catalogedAgainst": "0.3.5"
     }
   ],
+  "games": [
+    "red",
+    "blue",
+    "yellow",
+    "gold",
+    "silver",
+    "crystal",
+    "firered",
+    "leafgreen"
+  ],
   "sections": [
     {
       "id": "luaMods",
@@ -167,7 +177,12 @@
           "DRAMALESS_SHAPE",
           "gender_mod"
         ],
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 283,
@@ -306,7 +321,15 @@
           "custom_pokeballs",
           "snag_quest"
         ],
-        "engineRange": ">=0.1.38 <2.0.0"
+        "engineRange": ">=0.1.38 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 1261,
@@ -565,7 +588,15 @@
           "pokeball_colors",
           "custom_pokeballs"
         ],
-        "engineRange": ">=0.1.38 <2.0.0"
+        "engineRange": ">=0.1.38 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 1190,
@@ -706,7 +737,12 @@
       },
       "modID": "all_pokemon_catchable_151_mod",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 22073,
@@ -755,7 +791,12 @@
           "BATTLE_ART_VOXEL_FORK",
           "potato_voxel"
         ],
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 1677,
@@ -808,7 +849,12 @@
           "unique_menu_icons",
           "Gold_Silver_Sprites"
         ],
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 2463,
@@ -850,7 +896,15 @@
       },
       "modID": "dex_radar",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 726,
@@ -1552,7 +1606,15 @@
       },
       "modID": "gen3_box",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 23767,
@@ -1594,7 +1656,15 @@
       },
       "modID": "gen3_dex",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 1847,
@@ -1636,7 +1706,15 @@
       },
       "modID": "groovy_palette",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 4129,
@@ -1730,7 +1808,15 @@
       },
       "modID": "kanto_gear",
       "requirements": {
-        "engineRange": "0.0.0-dev || 0.1.94-kanto.22 || >=0.1.99 <2.0.0"
+        "engineRange": "0.0.0-dev || 0.1.94-kanto.22 || >=0.1.99 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 9030,
@@ -2153,7 +2239,15 @@
           "pokeball_colors",
           "kanto_balls"
         ],
-        "engineRange": ">=0.1.38 <2.0.0"
+        "engineRange": ">=0.1.38 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 660,
@@ -2199,7 +2293,15 @@
         "worksWith": [
           "pokegear_cards"
         ],
-        "engineRange": ">=0.1.33 <2.0.0"
+        "engineRange": ">=0.1.33 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 671,
@@ -2294,7 +2396,15 @@
         "worksWith": [
           "DRAMATIC_SHAPE"
         ],
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 13757,
@@ -2385,6 +2495,16 @@
         "games": []
       },
       "modID": "shiny_starters_gifts",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
+      },
       "popularity": {
         "downloads": 1201,
         "stars": 0,
@@ -2822,7 +2942,12 @@
         "worksWith": [
           "modern_party_ui"
         ],
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 636,
@@ -2958,7 +3083,15 @@
       },
       "modID": "its-clefairy",
       "requirements": {
-        "engineRange": ">=0.1.86"
+        "engineRange": ">=0.1.86",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 43,
@@ -3324,7 +3457,12 @@
           "DRAMALESS_SHAPE",
           "potato_voxel"
         ],
-        "engineRange": "0.0.0-dev || >=0.1.75 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.75 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 60,
@@ -3372,7 +3510,12 @@
           "POTATO_VOXEL",
           "VOXEL_ASCENDANT"
         ],
-        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 398,
@@ -3415,7 +3558,15 @@
       },
       "modID": "kanto_companion",
       "requirements": {
-        "engineRange": ">=0.1.83"
+        "engineRange": ">=0.1.83",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 969,
@@ -3589,6 +3740,16 @@
         "games": []
       },
       "modID": "trainer_talk",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
+      },
       "popularity": {
         "downloads": 362,
         "stars": 3,
@@ -3630,7 +3791,12 @@
       "modID": "move_type_fixes",
       "requirements": {
         "affectsLink": true,
-        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 300,
@@ -3674,7 +3840,12 @@
       "requirements": {
         "affectsLink": true,
         "experimental": true,
-        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 43,
@@ -3716,7 +3887,12 @@
       },
       "modID": "stronger_trainers",
       "requirements": {
-        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 587,
@@ -3761,7 +3937,15 @@
         "conflicts": [
           "randomized_gym_challenge"
         ],
-        "engineRange": ">=0.2.18"
+        "engineRange": ">=0.2.18",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 96,
@@ -3850,7 +4034,12 @@
       },
       "modID": "pokeball-colorfix",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 615,
@@ -3892,7 +4081,12 @@
       },
       "modID": "pokemove-colorfix",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 402,
@@ -3940,7 +4134,15 @@
           "kanto_contests",
           "happiness"
         ],
-        "engineRange": ">=0.1.38 <2.0.0"
+        "engineRange": ">=0.1.38 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 214,
@@ -3986,7 +4188,15 @@
         "permissions": [
           "steps"
         ],
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 2705,
@@ -4046,6 +4256,13 @@
         "games": []
       },
       "modID": "custom-player-sprite-switcher",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 1264,
         "stars": 5,
@@ -4090,7 +4307,12 @@
           "running_shoes",
           "exp_bar"
         ],
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 127,
@@ -4132,7 +4354,12 @@
       },
       "modID": "hold_to_scroll_ui",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 286,
@@ -4183,7 +4410,12 @@
         "worksWith": [
           "metadata_system"
         ],
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 40,
@@ -4272,7 +4504,15 @@
       },
       "modID": "sweet_share",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 1764,
@@ -4381,7 +4621,12 @@
         "worksWith": [
           "red_3d_player"
         ],
-        "engineRange": "0.0.0-dev || >0.1.77 <2.0.0"
+        "engineRange": "0.0.0-dev || >0.1.77 <2.0.0",
+        "games": [
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 6717,
@@ -4427,7 +4672,12 @@
         "requires": [
           "national_dex"
         ],
-        "engineRange": ">=0.1.45"
+        "engineRange": ">=0.1.45",
+        "games": [
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -4590,7 +4840,12 @@
       },
       "modID": "modern_party_ui",
       "requirements": {
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       }
     },
     {
@@ -4627,7 +4882,12 @@
       },
       "modID": "typed_move_colors",
       "requirements": {
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       }
     },
     {
@@ -4706,7 +4966,12 @@
       },
       "modID": "battle_info_hud",
       "requirements": {
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       }
     },
     {
@@ -4743,7 +5008,12 @@
       },
       "modID": "modern_pokedex_ui",
       "requirements": {
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       }
     },
     {
@@ -4780,7 +5050,12 @@
       },
       "modID": "modern_pc_ui",
       "requirements": {
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       }
     },
     {
@@ -4988,7 +5263,17 @@
         "family": "gen1recomp",
         "games": []
       },
-      "modID": "mobile_pc"
+      "modID": "mobile_pc",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
+      }
     },
     {
       "id": "one-exp-line",
@@ -5352,7 +5637,15 @@
       },
       "modID": "bills_pc_plus",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -5389,7 +5682,15 @@
       },
       "modID": "kanto_contests",
       "requirements": {
-        "engineRange": ">=0.1.75 <2.0.0"
+        "engineRange": ">=0.1.75 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -5468,7 +5769,15 @@
       },
       "modID": "gen1_auto_continue",
       "requirements": {
-        "engineRange": ">=0.0.0-dev <2.0.0"
+        "engineRange": ">=0.0.0-dev <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -5542,7 +5851,15 @@
       },
       "modID": "Gen1BattleUI",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -5579,7 +5896,15 @@
       },
       "modID": "Gen1Dex",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -5653,7 +5978,15 @@
       },
       "modID": "Gen1Party",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -5931,7 +6264,15 @@
       },
       "modID": "item_randomizer",
       "requirements": {
-        "engineRange": ">=0.2.18 <2.0.0"
+        "engineRange": ">=0.2.18 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 84,
@@ -6057,7 +6398,15 @@
       },
       "modID": "pokegear_menu",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -6095,7 +6444,15 @@
       },
       "modID": "randomized_gym_challenge",
       "requirements": {
-        "engineRange": ">=0.2.18"
+        "engineRange": ">=0.2.18",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -6132,7 +6489,15 @@
       },
       "modID": "shedinja",
       "requirements": {
-        "engineRange": ">=0.2.18 <1.0.0"
+        "engineRange": ">=0.2.18 <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -6173,7 +6538,15 @@
         "requires": [
           "shedinja"
         ],
-        "engineRange": ">=0.2.18 <1.0.0"
+        "engineRange": ">=0.2.18 <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -6211,7 +6584,15 @@
       },
       "modID": "sound_effect_replacer",
       "requirements": {
-        "engineRange": ">=0.2.18"
+        "engineRange": ">=0.2.18",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -6249,7 +6630,15 @@
       },
       "modID": "starter_picker",
       "requirements": {
-        "engineRange": ">=0.2.18"
+        "engineRange": ">=0.2.18",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 249,
@@ -6291,7 +6680,15 @@
       },
       "modID": "modern_ui_suite",
       "requirements": {
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -6413,7 +6810,15 @@
       },
       "modID": "modern_start_menu_ui",
       "requirements": {
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -6490,7 +6895,17 @@
         "family": "gen1recomp",
         "games": []
       },
-      "modID": "pokemon_anime_cries"
+      "modID": "pokemon_anime_cries",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
+      }
     },
     {
       "id": "battlica-gen1recomp-terrain-minimap",
@@ -7625,7 +8040,17 @@
         "family": "gen1recomp",
         "games": []
       },
-      "modID": "custom-player-sprites"
+      "modID": "custom-player-sprites",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
+      }
     },
     {
       "id": "modern-bag",
@@ -8261,7 +8686,15 @@
       },
       "modID": "project_highlander",
       "requirements": {
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -8343,7 +8776,15 @@
       },
       "modID": "hold_to_scroll_ui",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <3.0.0"
+        "engineRange": ">=0.0.0-0 <3.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -8381,7 +8822,15 @@
       },
       "modID": "kanto_companion",
       "requirements": {
-        "engineRange": ">=0.1.83"
+        "engineRange": ">=0.1.83",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -8418,7 +8867,15 @@
       },
       "modID": "summon",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -8497,7 +8954,15 @@
       },
       "modID": "free_fly",
       "requirements": {
-        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -8577,7 +9042,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": "0.0.0-dev || >=0.1.30 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.30 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 6080,
@@ -8858,7 +9331,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 880,
@@ -8948,6 +9429,16 @@
       "project": {
         "url": "https://github.com/ZyranCZ/autofire/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 250,
@@ -9438,6 +9929,16 @@
         "url": "https://github.com/ZyranCZ/Can-Always-Escape/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
+      },
       "popularity": {
         "downloads": 68,
         "stars": 1,
@@ -9480,7 +9981,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.1.33 <2.0.0"
+        "engineRange": ">=0.1.33 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 337,
@@ -9668,7 +10177,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 27,
@@ -9711,7 +10228,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": "0.0.0-dev || >=0.2.11 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.2.11 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 1286,
@@ -9761,7 +10286,15 @@
             "required": true
           }
         ],
-        "engineRange": "0.0.0-dev || >=0.2.11 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.2.11 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -9924,7 +10457,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.1.33 <2.0.0"
+        "engineRange": ">=0.1.33 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 13387,
@@ -10209,7 +10750,15 @@
         "permissions": [
           "filesystem"
         ],
-        "engineRange": "0.0.0-dev || >=0.1.69 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.69 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 5835,
@@ -10414,7 +10963,15 @@
         "requires": [
           "Dynamic_Scaling"
         ],
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 63,
@@ -10457,7 +11014,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.1.88"
+        "engineRange": ">=0.1.88",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 125,
@@ -10499,6 +11064,16 @@
       "project": {
         "url": "https://github.com/ZyranCZ/Enemy-HP/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 560,
@@ -10590,7 +11165,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 21925,
@@ -10681,6 +11264,16 @@
       "project": {
         "url": "https://github.com/jrmsrs/fair-battles/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 141,
@@ -11003,7 +11596,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 6948,
@@ -11180,7 +11781,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.1.79 || =0.0.0-dev"
+        "engineRange": ">=0.1.79 || =0.0.0-dev",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 3819,
@@ -11226,7 +11835,15 @@
         "requires": [
           "DRAMATIC_SHAPE"
         ],
-        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 439,
@@ -11439,6 +12056,16 @@
         "url": "https://github.com/HighDrexler/Gen-3-inspired-UI-overhaul-for-Gen1Recomp/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
+      },
       "popularity": {
         "downloads": 573,
         "stars": 9,
@@ -11480,6 +12107,16 @@
         "url": "https://github.com/HighDrexler/Gen-3-inspired-UI-overhaul-for-Gen1Recomp-V1.1-w-updater/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
+      },
       "popularity": {
         "downloads": 2900,
         "stars": 6,
@@ -11520,6 +12157,16 @@
       "project": {
         "url": "https://github.com/HighDrexler/Gen-3-inspired-UI-overhaul-for-Gen1Recomp-V2.0/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 316,
@@ -11848,7 +12495,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-dev"
+        "engineRange": ">=0.0.0-dev",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 12864,
@@ -11939,7 +12594,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -11978,7 +12641,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.1.37 <2.0.0"
+        "engineRange": ">=0.1.37 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -12059,7 +12730,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -12123,7 +12802,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": "0.0.0-dev || >=0.1.86 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.86 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -12162,7 +12849,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-dev <2.0.0"
+        "engineRange": ">=0.0.0-dev <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -12249,7 +12944,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -12650,7 +13353,15 @@
         "requires": [
           "national_dex"
         ],
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -13400,6 +14111,16 @@
       "project": {
         "url": "https://github.com/ojsaucer/gen1recomp-hotkey-suite/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -14099,7 +14820,15 @@
         "permissions": [
           "compute"
         ],
-        "engineRange": ">=0.1.86 <1.0.0"
+        "engineRange": ">=0.1.86 <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -14531,7 +15260,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 315,
@@ -14801,7 +15538,15 @@
         "permissions": [
           "filesystem"
         ],
-        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -15191,6 +15936,16 @@
       "project": {
         "url": "https://github.com/Tonedawg1/gen1recomp-simple-speed-indicator-/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -15227,6 +15982,16 @@
       "project": {
         "url": "https://github.com/Tonedawg1/gen1recomp-tm-hm-names/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -15490,7 +16255,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -15531,8 +16304,7 @@
         "games": [
           "red",
           "blue",
-          "yellow",
-          "crystal"
+          "yellow"
         ]
       },
       "popularity": {
@@ -15767,7 +16539,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.2.57 <2.0.0"
+        "engineRange": ">=0.2.57 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -15807,7 +16587,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.1.37 <2.0.0"
+        "engineRange": ">=0.1.37 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -15845,7 +16633,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 235,
@@ -15913,7 +16709,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 98,
@@ -16141,7 +16945,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.1.99 <1.0.0"
+        "engineRange": ">=0.1.99 <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -16188,6 +17000,16 @@
       "project": {
         "url": "https://github.com/ZyranCZ/HELP-Story-Guide/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 284,
@@ -16358,7 +17180,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.1.37 <2.0.0"
+        "engineRange": ">=0.1.37 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 1381,
@@ -16497,6 +17327,16 @@
         "url": "https://github.com/Sebarosu/JP-anime-opening-title/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
+      },
       "popularity": {
         "downloads": 46,
         "stars": 0,
@@ -16585,7 +17425,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.2.18 <1.0.0"
+        "engineRange": ">=0.2.18 <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 27,
@@ -16680,7 +17528,15 @@
         "permissions": [
           "compute"
         ],
-        "engineRange": ">=0.2.57"
+        "engineRange": ">=0.2.57",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 7324,
@@ -16845,7 +17701,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 325,
@@ -16888,7 +17752,12 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0 <10.0.0"
+        "engineRange": ">=0.0.0 <10.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 1529,
@@ -16934,7 +17803,15 @@
         "requires": [
           "pokegear_cards"
         ],
-        "engineRange": ">=0.1.84 <1.0.0"
+        "engineRange": ">=0.1.84 <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 4985,
@@ -16977,7 +17854,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 128,
@@ -17062,7 +17947,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 4976,
@@ -17290,7 +18183,12 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.1.75 <10.0.0"
+        "engineRange": ">=0.1.75 <10.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       }
     },
     {
@@ -17548,6 +18446,16 @@
       "project": {
         "url": "https://github.com/rogazrok/modern-field-moves/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -17993,7 +18901,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.1.86 <2.0.0"
+        "engineRange": ">=0.1.86 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -18342,7 +19258,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 64349,
@@ -18384,7 +19308,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 57,
@@ -18583,7 +19515,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 156,
@@ -18629,7 +19569,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -18667,7 +19615,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.1.38 <2.0.0"
+        "engineRange": ">=0.1.38 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 21,
@@ -18865,7 +19821,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.1.86-0 <2.0.0"
+        "engineRange": ">=0.1.86-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 2474,
@@ -19085,7 +20049,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 51538,
@@ -19464,7 +20436,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -19599,7 +20579,15 @@
         "permissions": [
           "compute"
         ],
-        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 14656,
@@ -19644,6 +20632,16 @@
         "url": "https://github.com/ZyranCZ/Press-B-to-Escape-Wild-Encounters/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
+      },
       "popularity": {
         "downloads": 145,
         "stars": 1,
@@ -19682,6 +20680,16 @@
       "project": {
         "url": "https://github.com/ZyranCZ/Professor-Oak-DV-STAT-Evaluation/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 111,
@@ -19723,6 +20731,16 @@
       "project": {
         "url": "https://github.com/ShaneMcGovernIE/qol_toggles/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 13578,
@@ -19814,6 +20832,16 @@
         "url": "https://github.com/dumkaf/rbyrecomp-instant-load/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
+      },
       "popularity": {
         "downloads": 9,
         "stars": 0,
@@ -19856,7 +20884,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.1.86 <2.0.0"
+        "engineRange": ">=0.1.86 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -19893,7 +20929,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.1.86 <2.0.0"
+        "engineRange": ">=0.1.86 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -19983,7 +21027,15 @@
         "requires": [
           "DRAMALESS_SHAPE"
         ],
-        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 609,
@@ -20114,7 +21166,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 3382,
@@ -20157,7 +21217,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.1.84 <1.0.0"
+        "engineRange": ">=0.1.84 <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -20304,6 +21372,16 @@
       "project": {
         "url": "https://github.com/BrazilKing/SGB-GBC-borders/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -20384,7 +21462,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 311,
@@ -20522,6 +21608,16 @@
         "url": "https://github.com/ZyranCZ/Special-Stat-Split/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
+      },
       "popularity": {
         "downloads": 763,
         "stars": 1,
@@ -20596,6 +21692,14 @@
       "requirements": {
         "requires": [
           "STADIUM_OVERWORLD_MODELS"
+        ],
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
         ]
       },
       "popularity": {
@@ -20636,6 +21740,16 @@
       "project": {
         "url": "https://github.com/ZyranCZ/Fairy-Steel-Dark-and-Typing-Charts/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 572,
@@ -20680,7 +21794,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.2.24 <2.0.0"
+        "engineRange": ">=0.2.24 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -20765,6 +21887,16 @@
         "url": "https://github.com/ShaneMcGovernIE/tabbed_options/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
+      },
       "popularity": {
         "downloads": 101,
         "stars": 0,
@@ -20806,7 +21938,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.1.89"
+        "engineRange": ">=0.1.89",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -20843,6 +21983,16 @@
       "project": {
         "url": "https://github.com/ZyranCZ/Tap-to-Move/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 409,
@@ -20888,7 +22038,15 @@
         "permissions": [
           "filesystem"
         ],
-        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 6871,
@@ -20980,7 +22138,15 @@
         "permissions": [
           "filesystem"
         ],
-        "engineRange": ">=0.2.56 <2.0.0"
+        "engineRange": ">=0.2.56 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 545,
@@ -21084,7 +22250,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 337,
@@ -21126,7 +22300,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 151,
@@ -21373,7 +22555,12 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": "0.0.0-dev || >=0.1.17 <1.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.17 <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 6789,
@@ -21417,7 +22604,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.2.32"
+        "engineRange": ">=0.2.32",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -21454,6 +22649,16 @@
       "project": {
         "url": "https://github.com/ZyranCZ/Trainers-Let-You-Choose-Lead-Pokemon/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 731,
@@ -21496,7 +22701,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.2.22 <1.0.0"
+        "engineRange": ">=0.2.22 <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -21537,7 +22750,15 @@
         "permissions": [
           "filesystem"
         ],
-        "engineRange": ">=0.2.55 <2.0.0"
+        "engineRange": ">=0.2.55 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -21573,6 +22794,16 @@
       "project": {
         "url": "https://github.com/menyas/unique-menu-icons/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 12690,
@@ -21616,7 +22847,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.2.18 <1.0.0"
+        "engineRange": ">=0.2.18 <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 42,
@@ -21760,7 +22999,12 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 1914,
@@ -22155,7 +23399,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 5925,
@@ -22296,7 +23548,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 89,
@@ -22392,7 +23652,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 9741,
@@ -22533,6 +23801,14 @@
       },
       "requirements": {
         "engineRange": ">=0.2.26 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ],
         "onlineUnavailable": true
       }
     }
