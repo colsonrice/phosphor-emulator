@@ -305,15 +305,25 @@ jobs:
             version="${tag#v}"
             echo "::group::$tag ($sha)"
 
-            rm -rf src out && mkdir -p src out
-            git -C work/LoveCore/.gen1recomp-pin archive "$sha" | tar -x -C src
-            bash engine/build_payload.sh "$PWD/src" "$PWD/engine/overlay" "$version" \
-              "$PWD/out/payload.love" | tee build.txt
+            # UNDER work/, WHICH IS GITIGNORED SCRATCH. This used to extract
+            # upstream into `src/` and write to `out/` at the repo root, and
+            # `rm -rf src` is this repository's OWN source tree: it deleted
+            # src/data/releases.json, projects.json and enrichment.json, the
+            # three files build-manifest.mjs reads. That went unnoticed for a
+            # month because the two never ran together -- the build-manifest
+            # call landed on Sep 17 2026 and the publisher was already stopped
+            # by the licence gate from Sep 18, so the first run to reach both
+            # was the first to publish since. Nothing under work/ can collide
+            # with a tracked path, which is the property that matters here.
+            rm -rf work/src work/out && mkdir -p work/src work/out
+            git -C work/LoveCore/.gen1recomp-pin archive "$sha" | tar -x -C work/src
+            bash engine/build_payload.sh "$PWD/work/src" "$PWD/engine/overlay" "$version" \
+              "$PWD/work/out/payload.love" | tee build.txt
             bsha=$(grep '^BUILD_SHA256=' build.txt | cut -d= -f2)
             bytes=$(grep '^BUILD_BYTES=' build.txt | cut -d= -f2)
             games=$(grep '^BUILD_GAMES=' build.txt | cut -d= -f2-)
             id="$ENGINE_ID-${bsha:0:12}"
-            mv out/payload.love "out/$id.love"
+            mv work/out/payload.love "work/out/$id.love"
             date=$(git -C work/LoveCore/.gen1recomp-pin show -s --format=%cI "$sha")
 
             # The tag names the ENGINE and its own release number, never a
@@ -328,7 +338,7 @@ jobs:
           gen1recomp is by BOIS CLUB GAMES: https://github.com/$UPSTREAM_REPO
           Phosphor packages and publishes this build. It is not an official build of gen1recomp and is not endorsed by its authors."
             fi
-            gh release upload "$rtag" "out/$id.love" --clobber
+            gh release upload "$rtag" "work/out/$id.love" --clobber
 
             node scripts/publish-engine.mjs \
               --engine "$ENGINE_ID" --engine-version "$version" --upstream "$sha" \
@@ -340,6 +350,14 @@ jobs:
           done < publishable.txt
           echo "published=$published" >> "$GITHUB_OUTPUT"
           if [ "$published" -gt 0 ]; then
+            # Nothing above may touch a tracked file. The build loop works in
+            # gitignored scratch, and this says so out loud rather than
+            # trusting it: build-manifest.mjs reads src/data, so a loop that
+            # clobbers the checkout produces either a crash or, worse, a
+            # manifest built from files that are not the repository's.
+            dirty="$(git status --porcelain -- src scripts public/v1/manifest.json)"
+            [ -z "$dirty" ] || { echo "::error::the build loop modified tracked files:"; \
+              printf '%s\n' "$dirty" | sed 's/^/::error::  /'; exit 1; }
             # The mod manifest derives its compatibility version from engines.json.
             # Commit both together or the Pages consistency check blocks deployment.
             node scripts/build-manifest.mjs
