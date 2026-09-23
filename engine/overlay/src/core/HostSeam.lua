@@ -678,6 +678,8 @@ function HostSeam.installHotbarMenu(TouchControls, TouchSkin, fs)
   if type(TouchControls) ~= "table" or type(TouchSkin) ~= "table" then return false end
   if TouchControls._phosphorHotbarMenu then return false end
   TouchControls._phosphorHotbarMenu = true
+  -- A previous session's report must not decide this one's fallback.
+  removeFile(fs, "hotbar.json")
 
   TouchSkin.HOTKEYS = TouchSkin.HOTKEYS or {}
   TouchSkin.HOTKEYS[HostSeam.MENU_HOTKEY] = HostSeam.MENU_HOTKEY
@@ -706,6 +708,29 @@ function HostSeam.installHotbarMenu(TouchControls, TouchSkin, fs)
       end
       if inner then return inner(action, pressed) end
     end)
+  end
+
+  -- Whether the hotbar, and so MENU, can be reached at all: the pad is on
+  -- for this platform, the touch-controls option is on, the hotbar option is
+  -- on, and no touch skin has replaced the pad (skins draw no hotbar). The
+  -- host draws nothing of its own while this is true (Colson, Sep 23 2026:
+  -- "just use gen1recomp's menu when we use his overlay"), and a small
+  -- button of its own only while it is false, because a session with no way
+  -- out is the one thing this whole seam exists to prevent. Reported from
+  -- draw, once per change, so the file is written a handful of times per
+  -- session and never per frame. A pad hiding the overlay is not "off": one
+  -- touch brings the pad back, MENU with it, and that is the engine's own
+  -- rule for its own controls.
+  local lastReported = nil
+  local baseDraw = TouchControls.draw
+  function TouchControls:draw(...)
+    local shown = self.active == true and self.enabled ~= false
+      and self:hotbarShown() == true
+    if shown ~= lastReported then
+      lastReported = shown
+      writeJson(fs, "hotbar.json", { shown = shown })
+    end
+    return baseDraw(self, ...)
   end
   return true
 end

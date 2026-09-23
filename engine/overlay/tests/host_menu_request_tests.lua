@@ -29,7 +29,9 @@ local function fakeModules()
     HOTKEYS = { menu_toggle = "menu" },
     newControl = function(spec) return { spec = spec, hotkeys = { spec } } end,
   }
-  local TouchControls = { handler = nil }
+  local TouchControls = { handler = nil, active = true, hotbarEnabled = true, drawn = 0 }
+  function TouchControls:hotbarShown() return self.hotbarEnabled ~= false end
+  function TouchControls:draw() self.drawn = self.drawn + 1 end
   function TouchControls:hotbarItems()
     if self.hotbarControls then return self.hotbarControls end
     self.hotbarControls = {
@@ -86,6 +88,32 @@ local okNil = pcall(TC.handler, "soft_reset", true)
 check(okNil and #seen == 1, "a nil handler is tolerated, as the engine's setter tolerates it")
 
 check(HostSeam.installHotbarMenu(nil, TS, fs) == false, "no modules, no install")
+
+-- ------- the hotbar report, so the host knows when MENU cannot be reached
+
+local TC3, TS3 = fakeModules()
+fs = fakeFs()
+fs._files["host/hotbar.json"] = '{"shown":false}'
+HostSeam.installHotbarMenu(TC3, TS3, fs)
+check(fs._files["host/hotbar.json"] == nil, "install forgets a previous session's report")
+TC3:draw()
+check(TC3.drawn == 1, "the engine's own draw still runs")
+check(fs._files["host/hotbar.json"] == '{"shown":true}', "the first draw reports the hotbar shown")
+fs._files["host/hotbar.json"] = "sentinel"
+TC3:draw(); TC3:draw()
+check(fs._files["host/hotbar.json"] == "sentinel", "an unchanged state is not rewritten per frame")
+TC3.hotbarEnabled = false
+TC3:draw()
+check(fs._files["host/hotbar.json"] == '{"shown":false}', "the hotbar switched off is reported once")
+TC3.hotbarEnabled = true
+TC3.enabled = false
+TC3:draw()
+fs._files["host/hotbar.json"] = "sentinel2"
+TC3:draw()
+check(fs._files["host/hotbar.json"] == "sentinel2", "touch controls off: still off, so nothing new is written")
+TC3.enabled = nil
+TC3:draw()
+check(fs._files["host/hotbar.json"] == '{"shown":true}', "back on is reported again")
 
 -- ------- the real parser
 
