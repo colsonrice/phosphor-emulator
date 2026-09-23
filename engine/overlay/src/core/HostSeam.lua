@@ -636,6 +636,105 @@ function HostSeam.writeCommandResult(tbl, fs)
   return writeJson(fs, "command_result.json", tbl)
 end
 
+-- ----------------------------------------------------------- session menu
+
+-- The host's session menu, reached from the engine's OWN hotbar (the "..."
+-- button in the top-trailing corner).
+--
+-- Under Phosphor's "Mod's Own" control style the engine draws its whole
+-- touch UI and Phosphor adds one floating menu button beneath that "...".
+-- That button fades to nothing after six idle seconds, and nothing a player
+-- does on the engine's pad restarts its clock, so a few seconds into every
+-- session the only way back to Phosphor was an invisible corner nobody knew
+-- to tap. Reported on LeafGreen, Sep 23 2026: "no way to exit the game".
+-- The hotbar never fades and is where a player reaches anyway, so the menu
+-- lives there too: one MENU cell, the same word Phosphor's own deck uses.
+--
+-- game -> host: host/menu_request.json { seq }. The host consumes it and
+-- presents the same sheet its own button would. `seq` is monotonic so a
+-- host that reads late still sees one press as one request.
+local menuRequestSeq = 0
+
+HostSeam.MENU_HOTKEY = "phosphor_menu"
+HostSeam.MENU_LABEL = "MENU"
+
+function HostSeam.requestMenu(fs)
+  menuRequestSeq = menuRequestSeq + 1
+  return writeJson(fs, "menu_request.json", { seq = menuRequestSeq })
+end
+
+-- Put the MENU cell in the hotbar and route its press to the host.
+--
+-- Three touches on the touch modules, none of them a file the overlay has
+-- to carry: the hotkey NAME is registered (TouchSkin.newControl parses a
+-- spec through TouchSkin.HOTKEYS and drops anything it does not know as
+-- decoration), the item list gains the cell after the engine's own six, and
+-- the handler every generation installs from its load() is wrapped so the
+-- press never reaches the game as an unknown action. Idempotent, and pure
+-- over the modules it is handed so the suite drives it with stand-ins.
+-- Embedded hosts call this; standalone keeps the hotbar it shipped, because
+-- there is no host to open a menu in.
+function HostSeam.installHotbarMenu(TouchControls, TouchSkin, fs)
+  if type(TouchControls) ~= "table" or type(TouchSkin) ~= "table" then return false end
+  if TouchControls._phosphorHotbarMenu then return false end
+  TouchControls._phosphorHotbarMenu = true
+  -- A previous session's report must not decide this one's fallback.
+  removeFile(fs, "hotbar.json")
+
+  TouchSkin.HOTKEYS = TouchSkin.HOTKEYS or {}
+  TouchSkin.HOTKEYS[HostSeam.MENU_HOTKEY] = HostSeam.MENU_HOTKEY
+
+  local baseItems = TouchControls.hotbarItems
+  function TouchControls:hotbarItems()
+    local items = baseItems(self)
+    -- The engine caches the list per init() and hands back the same table,
+    -- so the mark on it is what keeps one cell one cell.
+    if type(items) == "table" and not items._phosphorMenu then
+      local ctl = TouchSkin.newControl(HostSeam.MENU_HOTKEY, 0, 0, 0, 0, "rect")
+      ctl.label = HostSeam.MENU_LABEL
+      items[#items + 1] = ctl
+      items._phosphorMenu = true
+    end
+    return items
+  end
+
+  local baseSetHandler = TouchControls.setHotkeyHandler
+  function TouchControls:setHotkeyHandler(fn)
+    local inner = type(fn) == "function" and fn or nil
+    baseSetHandler(self, function(action, pressed)
+      if action == HostSeam.MENU_HOTKEY then
+        if pressed then HostSeam.requestMenu(fs) end
+        return
+      end
+      if inner then return inner(action, pressed) end
+    end)
+  end
+
+  -- Whether the hotbar, and so MENU, can be reached at all: the pad is on
+  -- for this platform, the touch-controls option is on, the hotbar option is
+  -- on, and no touch skin has replaced the pad (skins draw no hotbar). The
+  -- host draws nothing of its own while this is true (Colson, Sep 23 2026:
+  -- "just use gen1recomp's menu when we use his overlay"), and a small
+  -- button of its own only while it is false, because a session with no way
+  -- out is the one thing this whole seam exists to prevent. Reported from
+  -- draw, once per change, so the file is written a handful of times per
+  -- session and never per frame. A pad hiding the overlay is not "off": one
+  -- touch brings the pad back, MENU with it, and that is the engine's own
+  -- rule for its own controls.
+  local lastReported = nil
+  local baseDraw = TouchControls.draw
+  function TouchControls:draw(...)
+    local shown = self.active == true and self.enabled ~= false
+      and self:hotbarShown() == true
+    if shown ~= lastReported then
+      lastReported = shown
+      writeJson(fs, "hotbar.json", { shown = shown })
+    end
+    return baseDraw(self, ...)
+  end
+  return true
+end
+
 -- ------------------------------------------------------------------- mods
 
 -- Merge host enable/disable intents into the flags the mod loader reads, then

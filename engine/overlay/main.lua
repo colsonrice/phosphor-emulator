@@ -597,7 +597,12 @@ local function pollHostCommands(dt)
     -- and out mid-session needs to hand the touch pad back the same way,
     -- without making the player relaunch the game to get it.
     local ok, err = pcall(function()
-      local opts = Game.save and Game.save.options
+      -- Gen 1 and Gen 2 keep options inside the save table; Game3 loads the
+      -- same shared options file into `Game.options` and has no
+      -- `save.options` at all, so without the second read every style
+      -- switch during a FireRed or LeafGreen session reported "options not
+      -- loaded yet" and left the engine's pad wherever it was.
+      local opts = (Game.save and Game.save.options) or Game.options
       if not opts then error("options not loaded yet", 0) end
       local tc = opts.touchControls
       if type(tc) ~= "table" then
@@ -1006,6 +1011,10 @@ local function startLaunchRequest(request)
 end
 
 function love.load(args)
+  if os.getenv("POKEPORT_BACKGROUND") == "1" and love.audio then
+    love.audio.setVolume(0)
+    love.audio.setVolume = function() end
+  end
   -- Before anything can shell out (update check, mod index, ROM picker),
   -- claim one hidden console on Windows so those children inherit it instead
   -- of each flashing their own cmd.exe window (#606).  No-op elsewhere.
@@ -1044,6 +1053,19 @@ function love.load(args)
   -- error handler, not fall through into a second application's launcher.
   if love._phosphorEmbedded and (not hostLaunch or hostLaunch.autoplay == false) then
     error("Phosphor could not prepare this game. Return to the library and try again.")
+  end
+  -- PHOSPHOR: the host's session menu rides the engine's own hotbar, so a
+  -- player on the engine's pad always has a way back to Phosphor
+  -- (HostSeam.installHotbarMenu says why). Runs before the game loads,
+  -- because that is where each generation installs the handler this wraps.
+  -- Do not write the word Game followed by a colon anywhere in this comment:
+  -- upstream's skin_studio_image_import scans each love.* body for that token
+  -- as PLAIN TEXT, comments included, and a mention here makes love.load look
+  -- like it dispatches to Game, so the scan demands a Studio branch and a nil
+  -- guard that love.load has never needed. It cost a red fork suite once.
+  if love._phosphorEmbedded then
+    HostSeam.installHotbarMenu(require("src.core.TouchControls"),
+                               require("src.core.TouchSkin"))
   end
 
   local savePath
