@@ -456,80 +456,46 @@ function onlineUnavailableFor(entry, enriched) {
   return { requirements: { ...(enriched.requirements ?? {}), onlineUnavailable: true } };
 }
 
-/// Takes the install off a row the catalogued engine has moved past.
+/// Rows whose declared engine range the catalogued engine has moved past.
 ///
-/// A mod's `game_version` is a claim about which engines it runs on, and the
-/// engine under it moves on its own schedule. When a bump carries the catalog
-/// past a row's upper bound, that row's install button becomes a button that
-/// installs something which cannot load. The app already refuses it -- it
-/// computes the same fit itself and says NEEDS 3D ENGINE -- so the button is
-/// not dangerous, it is just a lie the catalog is telling.
+/// **Reported, never acted on.** This used to take the install off such a
+/// row, on the reasoning that offering one is a lie the catalog tells. Colson
+/// settled it the other way on 23 Sep 2026: "stop doing the published mod
+/// gate then, why do we need it? sounds like it's just causing hurdles, we
+/// should accept all mods", and "make sure we aren't gated by anything and we
+/// can try mods that are newer than the gate."
 ///
-/// DERIVED, NOT WRITTEN DOWN, for the same reason ENGINE_VERSIONS is. The
-/// alternative is a human noticing and hand-demoting the row, which is how
-/// three rows were handled on 22 Sep 2026, and it fails in both directions:
-/// nobody demotes the fourth, and nobody remembers to PROMOTE any of them
-/// when the creator ships support for the new engine. Derived, the row comes
-/// back by itself the moment its range covers the engine again, and no
-/// listing has to be edited to say something its manifest already says.
+/// The reasoning that survives the reversal is that the gate was never the
+/// thing keeping anybody safe. A mod outside its range does not damage
+/// anything: the app computes the same fit from `requirements.engineRange`,
+/// which is still published on every row, and says so on the button. What the
+/// gate actually did was hide mods whose authors had moved FASTER than this
+/// catalog's own engine pin — which, for an engine shipping several releases
+/// a day, is most of the interesting ones, and every one of them a mod
+/// somebody could have tried.
 ///
-/// This is not a judgement about the mod. The row keeps its creator, its
-/// licence, its summary and its link, and it keeps being a listing somebody
-/// can find and go install from the source. What it loses is the claim that
-/// Phosphor can hand it to you, which is the one part that stopped being
-/// true. `requirements` goes with the download because requirements describe
-/// the bytes a row pins, which is the rule enrich() already follows.
+/// What is NOT relaxed is anything measured about the bytes: an archive that
+/// carries a ROM, blows the installer's ceilings, hides its manifest or
+/// writes to the love table is still refused, in the survey and in
+/// promote-direct-source.mjs. Those are facts about the file. An engine range
+/// is a claim about a version that changes twice a week.
 ///
-/// Announced by the caller rather than swallowed: a row dropping off the
-/// installable shelf is worth a line in the build output, and usually worth
-/// telling the creator that the engine has moved.
-export function demoteRowsTheEngineMovedPast(entries, engines, errors) {
+/// Still announced by the caller, because knowing which rows are ahead of the
+/// pin is worth a line in the build output — it is usually the shape of a
+/// catalog that needs its engine bumped, not of a mod that needs delisting.
+export function rowsBeyondTheCataloguedEngine(entries, engines) {
   const gate = Object.fromEntries(engines.map((e) => [e.id, e.catalogedAgainst]));
-  const demoted = [];
-  const kept = entries.map((entry) => {
+  const beyond = [];
+  for (const entry of entries) {
     const range = entry.requirements?.engineRange;
-    if (!entry.download || !range) return entry;
+    if (!entry.download || !range) continue;
     const against = gate[entry.engine?.id];
     // No gate for this engine means nothing to compare against, which is not
-    // the same as a row that fails the comparison. Leave it alone.
-    if (!against || satisfies(against, range)) return entry;
-
-    // A card with neither an install nor a link does nothing when tapped. A
-    // tier-2 row already carries `project`, because the link to the person
-    // whose work it is was always the point. A tier-1 row never needed one --
-    // it was always installable -- so demoting it has to supply the link, and
-    // `author.url` is the same homepage its listing was written from.
-    const url = entry.project?.url ?? entry.author?.url;
-    if (!/^https:\/\//.test(url ?? "")) {
-      errors.push(`${entry.id}: the catalogued engine has moved past ${range},`
-        + " so this row cannot be offered as an install, and it has no HTTPS"
-        + " link to fall back to. Give it a homepageUrl before publishing.");
-      return entry;
-    }
-
-    demoted.push(`${entry.id} needs ${range}, catalogued against ${against}`);
-    // Everything that describes THE BYTES goes with the download: the
-    // version, when they were cut, the mod id inside them, and the
-    // requirements for installing them. Stating a version for a file this
-    // catalog no longer offers is the same pretending the link-out rule
-    // already forbids. What stays is what describes the WORK -- its name,
-    // author, summary, categories and its licence, which is a fact about
-    // permission and does not expire because an engine moved.
-    const rest = { ...entry };
-    for (const key of ["download", "requirements", "version", "releasedAt", "modID"]) {
-      delete rest[key];
-    }
-    return {
-      ...rest,
-      // `engine-moved-on` is not a stage of the permission queue, and says so.
-      // Safe on builds that predate it: DiscoverCatalog carries `status` as a
-      // plain string for diagnostics and prints "Available from the creator"
-      // for every value, which DiscoverIndexedListingTests pins with a status
-      // no build has heard of. A player sees the same card either way.
-      project: entry.project ?? { url, status: "engine-moved-on" },
-    };
-  });
-  return { entries: kept, demoted };
+    // the same as a row that fails the comparison.
+    if (!against || satisfies(against, range)) continue;
+    beyond.push(`${entry.id} needs ${range}, catalogued against ${against}`);
+  }
+  return beyond;
 }
 
 function enrich(entry, table) {
@@ -557,11 +523,13 @@ function enrich(entry, table) {
   };
 }
 
-/// `onDemote` is how the caller hears about rows the engine has moved past.
-/// A callback rather than a field on the manifest: the manifest is committed
-/// and diffed byte for byte by --check, so anything added to it is published,
-/// and this is a note for whoever ran the build, not for the app.
-export async function buildManifest({ onDemote } = {}) {
+/// `onBeyondEngine` is how the caller hears about rows whose declared engine
+/// range is ahead of the catalogued engine. They are still published and
+/// still installable; this is a note for whoever ran the build, not for the
+/// app, which is why it is a callback and not a field on the manifest: the
+/// manifest is committed and diffed byte for byte by --check, so anything
+/// added to it is published.
+export async function buildManifest({ onBeyondEngine } = {}) {
   const releases = JSON.parse(await readFile(RELEASES, "utf8"));
   const projects = JSON.parse(await readFile(PROJECTS, "utf8"));
   const enriched = await enrichment();
@@ -612,13 +580,12 @@ export async function buildManifest({ onDemote } = {}) {
     .filter(([channel]) => ENGINE_IDS[channel])
     .map(([channel, version]) => ({ id: ENGINE_IDS[channel], catalogedAgainst: version }));
 
-  // After `engines`, because the gate it compares against is built there, and
-  // after enrich(), because `requirements.engineRange` arrives with it.
-  const demotionErrors = [];
-  const { entries: offered, demoted } =
-    demoteRowsTheEngineMovedPast(entries, engines, demotionErrors);
-  if (demotionErrors.length) fail(demotionErrors);
-  if (demoted.length && onDemote) onDemote(demoted);
+  // After `engines`, because the version it compares against is built there,
+  // and after enrich(), because `requirements.engineRange` arrives with it.
+  // Reported, never acted on: see `rowsBeyondTheCataloguedEngine`.
+  const offered = entries;
+  const beyond = rowsBeyondTheCataloguedEngine(entries, engines);
+  if (beyond.length && onBeyondEngine) onBeyondEngine(beyond);
 
   // The vocabulary every `requirements.games` line is written against. A row
   // with no games line covers every one of THESE, and the app reads it that
@@ -632,8 +599,8 @@ export async function buildManifest({ onDemote } = {}) {
 const serialise = (manifest) => JSON.stringify(manifest, null, 2) + "\n";
 
 async function main() {
-  const demotions = [];
-  const manifest = await buildManifest({ onDemote: (rows) => demotions.push(...rows) });
+  const beyondEngine = [];
+  const manifest = await buildManifest({ onBeyondEngine: (rows) => beyondEngine.push(...rows) });
   const body = serialise(manifest);
   const check = process.argv.includes("--check");
 
@@ -661,10 +628,11 @@ async function main() {
     `(${installable} installable, ${manifest.entries.length - installable} indexed); ` +
     `mods ${byKind("luaMod")}, rom hacks ${byKind("romPatch")}`,
   );
-  if (demotions.length) {
-    console.log(`\nindexed rather than installable, the engine has moved past them (${demotions.length}):`);
-    for (const row of demotions) console.log(`   ${row}`);
-    console.log("   each comes back on its own when its range covers the catalogued engine.");
+  if (beyondEngine.length) {
+    console.log(`\npublished, and ahead of the catalogued engine (${beyondEngine.length}):`);
+    for (const row of beyondEngine) console.log(`   ${row}`);
+    console.log("   offered anyway, and the app labels the fit from requirements.engineRange.");
+    console.log("   a long list here usually means this catalog's engine pin is behind.");
   }
 }
 

@@ -782,21 +782,25 @@ function draftRows(results) {
       skipped.push({ repo: r.repo, why: `category ${own} has no shelf — add it to TOPICS_BY_CATEGORY or TOPIC_OVERRIDES` });
       continue;
     }
-    // A mod that rules out the engine we ship is not a listing, it is a card
-    // that installs and never loads. Checked per channel, because the two
-    // engines version independently.
-    const channels = channelsFor(manifest)
-      // An engine we still ship, and one whose version the mod accepts. The
-      // first half used to be implicit in the table having a key for every
-      // channel `channelsFor` can return; it no longer does, and an undefined
-      // version reaching `satisfies` is not a filter, it is a coin toss.
-      .filter((channel) => ENGINE_VERSIONS[channel])
-      .filter((channel) => satisfies(ENGINE_VERSIONS[channel], manifest.game_version));
+    // The engines this mod is FOR. An engine Phosphor no longer ships is not
+    // a shelf, so that half still filters; the half that asked whether the
+    // mod accepts the version we ship does not, since 23 Sep 2026.
+    //
+    // It used to skip a mod whose `game_version` ruled out our engine, on the
+    // reasoning that such a row is a card which installs and never loads.
+    // Colson's call was to drop it: "make sure we aren't gated by anything and
+    // we can try mods that are newer than the gate." For an engine shipping
+    // several releases a day, that gate mostly caught authors who had moved
+    // faster than this catalog's pin, and silently. The range is still
+    // published on the row and the app labels the fit from it.
+    const channels = channelsFor(manifest).filter((channel) => ENGINE_VERSIONS[channel]);
     if (channels.length === 0) {
       skipped.push({ repo: r.repo,
-        why: `needs engine ${manifest.game_version}, and we ship `
-          + Object.entries(ENGINE_VERSIONS).map(([k, v]) => `${k} ${v}`).join(" / ") });
+        why: `targets no engine Phosphor ships (${Object.keys(ENGINE_VERSIONS).join(", ") || "none"})` });
       continue;
+    }
+    if (!satisfies(ENGINE_VERSIONS[channels[0]], manifest.game_version)) {
+      console.log(`  ahead of our engine, drafted anyway  ${r.repo} — needs ${manifest.game_version}`);
     }
     rows.push({
       // The repository names the listing, EXCEPT where one repository

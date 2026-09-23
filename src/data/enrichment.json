@@ -27,7 +27,10 @@
       "games": [
         "red",
         "blue",
-        "yellow"
+        "yellow",
+        "gold",
+        "silver",
+        "crystal"
       ]
     },
     "popularity": {
@@ -283,7 +286,10 @@
       "games": [
         "red",
         "blue",
-        "yellow"
+        "yellow",
+        "gold",
+        "silver",
+        "crystal"
       ]
     },
     "popularity": {
@@ -309,7 +315,10 @@
       "games": [
         "red",
         "blue",
-        "yellow"
+        "yellow",
+        "gold",
+        "silver",
+        "crystal"
       ]
     },
     "popularity": {
@@ -1158,7 +1167,10 @@
       "games": [
         "red",
         "blue",
-        "yellow"
+        "yellow",
+        "gold",
+        "silver",
+        "crystal"
       ]
     },
     "popularity": {
@@ -5084,6 +5096,9 @@
       ],
       "engineRange": ">=0.1.45",
       "games": [
+        "red",
+        "blue",
+        "yellow",
         "gold",
         "silver",
         "crystal"
@@ -5781,7 +5796,10 @@
       "games": [
         "red",
         "blue",
-        "yellow"
+        "yellow",
+        "gold",
+        "silver",
+        "crystal"
       ]
     }
   },
@@ -5791,7 +5809,10 @@
       "games": [
         "red",
         "blue",
-        "yellow"
+        "yellow",
+        "gold",
+        "silver",
+        "crystal"
       ]
     }
   },
@@ -5801,7 +5822,10 @@
       "games": [
         "red",
         "blue",
-        "yellow"
+        "yellow",
+        "gold",
+        "silver",
+        "crystal"
       ]
     }
   },
@@ -5811,7 +5835,10 @@
       "games": [
         "red",
         "blue",
-        "yellow"
+        "yellow",
+        "gold",
+        "silver",
+        "crystal"
       ]
     }
   },
@@ -5821,7 +5848,10 @@
       "games": [
         "red",
         "blue",
-        "yellow"
+        "yellow",
+        "gold",
+        "silver",
+        "crystal"
       ]
     }
   },
@@ -6684,7 +6714,8 @@
       "games": [
         "firered",
         "leafgreen"
-      ]
+      ],
+      "engineRange": ">=0.2.73 <1.0.0"
     }
   },
   "free-master-ball": {
@@ -7624,161 +7655,192 @@
     "requirements": {
       "games": [
         "firered"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "gen3recomp-all-tm-shop-gen3": {
     "requirements": {
       "games": [
         "firered"
-      ]
+      ],
+      "engineRange": "0.0.0-dev || >=0.2.48 <2.0.0"
     }
   },
   "gen3recomp-area-dexnav-gen3": {
     "requirements": {
       "games": [
         "firered"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "gen3recomp-disable-help-lr-gen3": {
     "requirements": {
       "games": [
         "firered"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "gen3recomp-dv-ev-editor-gen3": {
     "requirements": {
       "games": [
         "firered"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "gen3recomp-pokemonmod-gen3-exp-share-modes": {
     "requirements": {
       "games": [
         "firered"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "gen3recomp-pokemonmod-gen3-free-master-rare-evolution-repel": {
     "requirements": {
       "games": [
         "firered"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "gen3recomp-hm-anywhere-gen3": {
     "requirements": {
       "games": [
         "firered"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "gen3recomp-pokemonmod-gen3-item-shortcut": {
     "requirements": {
       "games": [
         "firered"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "gen3recomp-pokemonmod-gen3-modern-bag": {
     "requirements": {
       "games": [
         "firered"
-      ]
+      ],
+      "engineRange": "0.0.0-dev || >=0.2.48 <2.0.0"
     }
   },
   "gen3recomp-modern-battle-ui-gen3-firered": {
     "requirements": {
       "games": [
         "firered"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "gen3recomp-gen3-modern-ui": {
     "requirements": {
       "games": [
         "firered"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "gen3recomp-pokemonmod-gen3-move-learn-stats": {
     "requirements": {
       "games": [
         "firered"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "gen3recomp-moves-manager-gen3": {
     "requirements": {
       "games": [
         "firered"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "gen3recomp-pokemonmod-gen3-nickname-changer": {
     "requirements": {
       "games": [
         "firered"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "gen3recomp-pokemonmod-gen3-performance-monitor": {
     "requirements": {
       "games": [
         "firered"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "gen3recomp-pokecenter-max-happiness-gen3": {
     "requirements": {
       "games": [
         "firered"
-      ]
+      ],
+      "engineRange": "0.0.0-dev || >=0.2.48 <2.0.0"
     }
   },
   "gen3recomp-pokemonmod-gen3-pokedex-plus": {
     "requirements": {
       "games": [
         "firered"
-      ]
+      ],
+      "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
   "gen3recomp-pokemonmod-gen3-repel-reuse-prompt": {
     "requirements": {
       "games": [
         "firered"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "gen3recomp-reusable-machines-gen3": {
     "requirements": {
       "games": [
         "firered"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "gen3recomp-pokemonmod-gen3-stable-menu-navigation": {
     "requirements": {
       "games": [
         "firered"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "gen3recomp-pokemonmod-gen3-summon": {
     "requirements": {
       "games": [
         "firered"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <1.0.0"
     }
   },
   "gen3recomp-pokemonmod-gen3-trade-evolution-fix": {
     "requirements": {
       "games": [
         "firered"
-      ]
+      ],
+      "engineRange": ">=0.0.0-dev <2.0.0"
+    }
+  },
+  "notquiteog-dramatic-sky-ride": {
+    "requirements": {
+      "permissions": [
+        "filesystem"
+      ],
+      "engineRange": "0.0.0-dev || >=0.1.69 <2.0.0"
     }
   }
 }

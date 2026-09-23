@@ -36,11 +36,9 @@ import { readFile, writeFile } from "node:fs/promises";
 
 import { fileURLToPath } from "node:url";
 
-import { ENGINE_VERSIONS } from "./engine-family.mjs";
 import { usesNetwork } from "./enrich-catalog.mjs";
 import { EXCLUDED } from "./lib/excluded.mjs";
 import { repoOf } from "./lib/repo-url.mjs";
-import { satisfies } from "./lib/semver.mjs";
 
 const CACHE = new URL("../survey/cache/", import.meta.url);
 
@@ -158,16 +156,17 @@ for (const p of rows) {
 
   if (await needsNetwork(s)) { refuse(p, "uses the network, which the sandbox denies", { finding: true, surveyed: s }); continue; }
 
-  // The same gate the survey applies when it drafts a row, which this
-  // promoter skipped: a mod whose manifest rules out the engine we ship is a
-  // card that installs and never loads. Checked against the engine the row's
-  // own channels name, because the two engines version independently.
-  const range = s.contents?.manifest?.game_version;
-  const shipped = (p.compatibility ?? []).map((channel) => ENGINE_VERSIONS[channel]).filter(Boolean);
-  if (range && shipped.length && !shipped.some((version) => satisfies(version, range))) {
-    refuse(p, `needs engine ${range}, and we ship ${shipped.join(" / ")}`, { finding: true, surveyed: s });
-    continue;
-  }
+  // No engine-range gate here, since 23 Sep 2026. This used to refuse a row
+  // whose manifest ruled out the engine we ship, and to DEMOTE one that
+  // already had an install, which meant an engine bump could quietly take
+  // working listings off the shelf. Colson's call was to stop gating on it
+  // and let players try a mod that is ahead of the pin; the range is
+  // published on the row and the app labels the fit from it.
+  //
+  // Everything measured about the archive above still refuses: a ROM inside
+  // it, the installer's ceilings, a buried manifest, a write to the love
+  // table, the network. Those are facts about the bytes. See
+  // `rowsBeyondTheCataloguedEngine` in build-manifest.mjs.
 
   const r = s.release ?? {}, c = s.contents ?? {};
   const need = { fileUrl: r.fileUrl, sha256: r.sha256, fileSizeBytes: r.fileSizeBytes,
