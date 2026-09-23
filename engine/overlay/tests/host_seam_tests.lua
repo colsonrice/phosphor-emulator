@@ -261,6 +261,28 @@ check(state.mods[1].enabled == false and state.mods[1].state == "disabled",
 check(state.mods[2].id == "BROKEN" and state.mods[2].state == "failed",
   "failed mod keeps its enabled-but-broken state")
 
+-- The loader keeps two fields: `failure` for a mod it could not load, and
+-- `skipReason` for one it deliberately left out. Only the first used to be
+-- written, so every "not for this game" row reached the host with no words
+-- and the pane printed a guess where the engine had a sentence.
+do
+  local skipFs = fakeFs()
+  local skipping = { mods = {
+    SKIPPED = { enabled = true, failed = true, state = "wrong_generation",
+                skipReason = "For Yellow, not Red", manifest = { version = "1.0" } },
+    FAILED = { enabled = true, failed = true, state = "failed",
+               failure = "main.lua:1: boom", skipReason = "not this one",
+               manifest = { version = "1.0" } },
+  } }
+  check(HostSeam.writeModState(skipping, skipFs) == true, "state write with a skip succeeds")
+  local skipState = Json.decode(skipFs._files["host/state.json"])
+  check(skipState.mods[2].id == "SKIPPED"
+          and skipState.mods[2].failure == "For Yellow, not Red",
+    "a skipped mod's reason reaches the host")
+  check(skipState.mods[1].failure == "main.lua:1: boom",
+    "a real failure still wins over a skip reason")
+end
+
 -- Two enabled mods can each register a world pipeline, and the engine draws
 -- exactly one of them: Pipelines.worldPipeline takes the FIRST eligible in
 -- priority order and applyOptions pins every other to 0. Neither mod fails,

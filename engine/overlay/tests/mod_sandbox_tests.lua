@@ -52,7 +52,24 @@ check(Sandbox.available(), "this host can confine mods (setfenv present)")
 check(env.ffi == nil, "no ffi: a mod cannot call arbitrary C")
 check(env.package == nil, "no package: no loadlib, no preload tampering")
 check(env.io == nil, "no io: no popen, no host filesystem")
-check(env.debug == nil, "no debug: no getinfo/sethook introspection")
+-- PHOSPHOR: `debug` is a one-member table now, not nil. Ten published mods
+-- hand debug.traceback to xpcall, and an index of nil was what they got for
+-- trying to report an error. The property was never "no table called debug",
+-- it is "no introspection", and that is what is pinned.
+check(type(env.debug) == "table" and type(env.debug.traceback) == "function",
+  "debug.traceback exists: it returns a string, and mods pass it to xpcall")
+do
+  local members = 0
+  for _ in pairs(env.debug) do members = members + 1 end
+  eq(members, 1, "and traceback is the ONLY member of debug")
+end
+check(env.debug.getinfo == nil and env.debug.sethook == nil
+        and env.debug.getupvalue == nil and env.debug.setupvalue == nil
+        and env.debug.getregistry == nil and env.debug.getfenv == nil
+        and env.debug.setfenv == nil and env.debug.getmetatable == nil,
+  "no debug introspection: upvalues and the registry are where the real "
+  .. "globals live")
+check(env.debug ~= debug, "and it is not the real debug table")
 check(env.dofile == nil and env.loadfile == nil, "no dofile/loadfile")
 check(env.setfenv == nil and env.getfenv == nil,
   "no setfenv/getfenv: a mod cannot swap its own environment back out")
@@ -60,7 +77,23 @@ check(env.setfenv == nil and env.getfenv == nil,
 -- primitive, it retunes the ENGINE's collector ("setpause"/"setstepmul") and
 -- a "step" from a frame handler is a hitch the player reads as the emulator
 -- being slow.
-check(env.collectgarbage == nil, "no collectgarbage")
+--
+-- Narrowed, not removed, as of September 2026: three published mods call it
+-- and "absent" reached them as `attempt to call a nil value`. What the rule
+-- above was protecting is the TUNING half, and that is what is pinned.
+check(type(env.collectgarbage) == "function" and env.collectgarbage ~= collectgarbage,
+  "collectgarbage exists, and is not the real one")
+check(type(env.collectgarbage("count")) == "number", "count answers")
+do
+  local pause = collectgarbage("setpause", 200)
+  collectgarbage("setpause", pause)
+  eq(env.collectgarbage("setpause", 1), 0, "setpause answers 0 ...")
+  local after = collectgarbage("setpause", pause)
+  eq(after, pause, "... and did NOT retune the engine's collector")
+  eq(env.collectgarbage("stop"), 0, "stop does nothing")
+  eq(env.collectgarbage("setstepmul", 1), 0, "setstepmul does nothing")
+  collectgarbage("restart")
+end
 check(type(env.require) == "function",
   "require EXISTS: real mods build on the engine (103 such calls in the "
   .. "bundled voxel mod), so removing it breaks the ecosystem it protects")
@@ -649,8 +682,68 @@ return function(mod)
   mod.exports.assetsEscape = attempt(function() return mod.assets:path("../../x.png") end)
   mod.exports.readOwn = mod:read("data/note.txt")
   mod.exports.confined = {
-    ffiAbsent = (ffi == nil), ioAbsent = (io == nil),
-    packageAbsent = (package == nil), gcAbsent = (collectgarbage == nil),
+    ffiAbsent = (ffi == nil),
+    -- io and package are LegacyCompat's stand-ins now, so the property is
+    -- no longer "nil", it is "not the real one and cannot reach out"
+    ioHasNoRealOpen = (io ~= nil and io.popen() == nil),
+    packageIsInert = (package ~= nil and package.loadlib == nil
+                        and next(package.loaded) == nil),
+  }
+  -- every spelling of "read the player's save" through the legacy surface
+  local function readVia(fn) local ok, v = pcall(fn) return ok and v or nil end
+  mod.exports.legacyReads = {
+    lfsPlain = readVia(function() return (love.filesystem.read("secret.txt")) end),
+    lfsClimb = readVia(function() return (love.filesystem.read("../../secret.txt")) end),
+    lfsAbsolute = readVia(function() return (love.filesystem.read("/secret.txt")) end),
+    lfsOtherMod = readVia(function() return (love.filesystem.read("mods/other/private.txt")) end),
+    lfsViaOwnPrefix = readVia(function()
+      return (love.filesystem.read("mods/probe/../../secret.txt")) end),
+    ioPlain = readVia(function() local f = io.open("secret.txt", "r") return f and f:read("*a") end),
+    ioClimb = readVia(function() local f = io.open("../../secret.txt", "r") return f and f:read("*a") end),
+    requiredLfs = readVia(function() return (require("love.filesystem").read("secret.txt")) end),
+    loadfileClimb = readVia(function() return (loadfile("../../secret.txt")) end),
+    listRoot = readVia(function() return #love.filesystem.getDirectoryItems("") end),
+  }
+  mod.exports.legacyOwnRead = love.filesystem.read("mods/probe/data/note.txt")
+  mod.exports.legacyOwnReadRelative = love.filesystem.read("data/note.txt")
+  -- ...and every spelling of "overwrite it"
+  love.filesystem.write("secret.txt", "OVERWRITTEN")
+  love.filesystem.write("../../secret.txt", "OVERWRITTEN")
+  love.filesystem.write("mods/other/private.txt", "OVERWRITTEN")
+  do local f = io.open("/secret.txt", "w") if f then f:write("OVERWRITTEN") f:close() end end
+  mod.exports.legacyReadBack = love.filesystem.read("secret.txt")
+  os.remove("secret.txt")
+  os.rename("../../secret.txt", "gone.txt")
+  -- bytecode through the legacy loaders
+  love.filesystem.write("evil.luac", string.dump(function() return "ran" end))
+  mod.exports.legacyBytecode = {
+    viaLoad = attempt(function() return assert(love.filesystem.load("evil.luac"))() end),
+    viaLoadfile = attempt(function() return assert(loadfile("evil.luac"))() end),
+    viaDofile = attempt(function() return dofile("evil.luac") end),
+  }
+  -- a chunk loaded the legacy way is born in THIS environment
+  love.filesystem.write("plain.lua", "return { io = io, ffi = ffi, real = (getfenv ~= nil) }")
+  mod.exports.legacyChunk = love.filesystem.load("plain.lua")()
+  mod.exports.legacyRefusals = {
+    execute = os.execute("true"), exit = os.exit(0),
+    popen = io.popen("true"), quit = love.event.quit(),
+    pushQuit = love.event.push("quit"),
+    pushIntent = love.event.push("intent_uri", "gen1recomp://launch?game=gold"),
+    openURL = love.system.openURL("https://example.test"),
+    clipboard = love.system.getClipboardText(),
+    tls = love.system.tlsOpen,
+    mount = love.filesystem.mount("/", "everything"),
+    saveDir = love.filesystem.getSaveDirectory(),
+    home = os.getenv("HOME"), path = os.getenv("PATH"),
+  }
+  -- callbacks: an ordinary one lands, the engine's own two do not, and a
+  -- pointer name goes to the bridge rather than the real table
+  love.keypressed = function() return "mod" end
+  mod.exports.legacyAssign = {
+    run = attempt(function() love.run = function() end end),
+    errorhandler = attempt(function() love.errorhandler = function() end end),
+    module = attempt(function() love.graphics = {} end),
+    pointer = attempt(function() love.mousemoved = function() end end),
   }
   mod.exports.requireLove = attempt(function() return require("love") end)
   mod.exports.requireSocket = attempt(function() return require("socket") end)
@@ -663,6 +756,7 @@ end
 do
   local files = {
     ["secret.txt"] = "THE PLAYER'S SAVE",
+    ["mods/other/private.txt"] = "ANOTHER MOD'S FILE",
     ["mods/probe/manifest.json"] = manifest("probe"),
     ["mods/probe/main.lua"] = PROBE_MOD,
     ["mods/probe/payload.lua"] =
@@ -674,10 +768,24 @@ do
     "the fixture filesystem really does resolve '..', so a refusal below is "
     .. "SafePath's doing and not the harness getting lucky")
 
+  -- The stub has neither of these, and "nil because the stub never had it"
+  -- would pass with the hardening deleted. Give the host both, the way
+  -- upstream's native build has them, so the checks below can fail.
+  local pushed = {}
+  local hadSystem, hadEvent = _G.love.system, _G.love.event
+  _G.love.system = setmetatable({ tlsOpen = function() return "A SOCKET" end },
+    { __index = hadSystem })
+  _G.love.event = setmetatable({
+    push = function(name) pushed[#pushed + 1] = name return true end,
+  }, { __index = hadEvent })
+
   local loader = Loader.new({ fs = fs, generation = 1 })
   check(loader:load({}) == true,
     "the probe mod loads: " .. tostring(loader.errors[1]))
+  _G.love.system, _G.love.event = hadSystem, hadEvent
   local out = loader.exports.probe or {}
+  eq(table.concat(pushed, ","), "",
+    "neither quit nor the host's launch intent reached the real love.event")
 
   check(out.readEscape and out.readEscape.escaped == false
           and out.readEscape.message:find("must stay inside", 1, true),
@@ -691,9 +799,76 @@ do
     "mod.assets:path refuses a climb")
   eq(out.readOwn, "own file", "and the mod's own files still read")
 
-  check(out.confined and out.confined.ffiAbsent and out.confined.ioAbsent
-          and out.confined.packageAbsent and out.confined.gcAbsent,
+  check(out.confined and out.confined.ffiAbsent and out.confined.ioHasNoRealOpen
+          and out.confined.packageIsInert,
     "the entry chunk that published these exports really was confined")
+
+  -- ------- PHOSPHOR: the legacy surface (upstream's LegacyCompat), driven
+  -- from inside a real mod through the real Loader. It exists so mods written
+  -- before the sandbox keep working; these are the things it must not become.
+  local reads = out.legacyReads or {}
+  for _, spelling in ipairs({ "lfsPlain", "lfsClimb", "lfsAbsolute", "lfsOtherMod",
+                              "lfsViaOwnPrefix", "ioPlain", "ioClimb",
+                              "requiredLfs", "loadfileClimb" }) do
+    check(reads[spelling] == nil,
+      "the legacy filesystem cannot read outside the mod (" .. spelling .. "): "
+      .. tostring(reads[spelling]))
+  end
+  eq(out.legacyOwnRead, "own file", "it DOES read the mod's own files, by full path")
+  eq(out.legacyOwnReadRelative, "own file", "and relative to the mod, as mods spell it")
+  eq(files["secret.txt"], "THE PLAYER'S SAVE",
+    "no legacy write, remove or rename touched the player's file")
+  eq(files["mods/other/private.txt"], "ANOTHER MOD'S FILE",
+    "nor another mod's")
+  eq(out.legacyReadBack, "OVERWRITTEN",
+    "the mod reads back what it wrote: its writes landed in its own overlay")
+  do
+    local outside = {}
+    for path in pairs(files) do
+      if path ~= "secret.txt" and path:sub(1, 5) ~= "mods/"
+          and path:sub(1, #"mod_compat/probe/") ~= "mod_compat/probe/"
+          and not path:find("options", 1, true) and not path:find("mod_state", 1, true) then
+        outside[#outside + 1] = path
+      end
+    end
+    table.sort(outside)
+    eq(table.concat(outside, ", "), "",
+      "every legacy write landed under mod_compat/probe/ and nowhere else")
+  end
+  for how, result in pairs(out.legacyBytecode or {}) do
+    check(result.escaped == false, "bytecode is refused through the legacy loader " .. how)
+  end
+  check(next(out.legacyBytecode or {}) ~= nil, "the bytecode probes ran")
+  local chunk = out.legacyChunk or {}
+  check(chunk.ffi == nil and chunk.real == false and chunk.io ~= io,
+    "a chunk loaded through love.filesystem.load is born inside the sandbox")
+  local refused = out.legacyRefusals or {}
+  check(not refused.execute and not refused.exit and refused.popen == nil,
+    "os.execute, os.exit and io.popen do nothing")
+  check(not refused.quit and not refused.pushQuit,
+    "a mod cannot quit the game, by either spelling")
+  check(refused.pushIntent == false,
+    "nor push the host's launch intent and switch games on the player")
+  check(not refused.openURL and refused.clipboard == "",
+    "openURL and the clipboard are stubs")
+  check(refused.tls == nil, "upstream's TLS forward is removed: no network by another name")
+  check(refused.mount == false, "mount is refused")
+  eq(refused.saveDir, "/pokeport/probe", "the save directory is a virtual path")
+  eq(refused.home, "/pokeport/probe", "HOME is the same virtual path")
+  eq(refused.path, nil, "and the real environment is hidden")
+  local assign = out.legacyAssign or {}
+  check(type(rawget(_G.love, "keypressed")) == "function"
+          and _G.love.keypressed() == "mod",
+    "an ordinary callback assignment lands, as it does on every other host")
+  _G.love.keypressed = nil
+  check(assign.run and assign.run.escaped == false
+          and assign.errorhandler and assign.errorhandler.escaped == false,
+    "love.run and love.errorhandler stay the engine's")
+  check(assign.module and assign.module.escaped == false,
+    "a module table cannot be replaced")
+  check(assign.pointer and assign.pointer.escaped ~= false
+          and rawget(_G.love, "mousemoved") == nil,
+    "a pointer name is accepted and STILL never reaches the real love table")
   eq(_G.PHOSPHOR_SANDBOX_ESCAPE, nil,
     "a mod's `_G.X = ...` never reaches the engine's globals")
 
@@ -711,8 +886,11 @@ do
     "a mod CAN require its own second file: "
     .. tostring(out.requireOwnFile and out.requireOwnFile.message))
   local payload = out.requireOwnFile and out.requireOwnFile.value
-  check(type(payload) == "table" and payload.io == nil and payload.package == nil
-          and payload.ffi == nil,
+  -- io and package are the stand-ins now; "inside the sandbox" means it got
+  -- THOSE, not the real tables, and still no ffi.
+  check(type(payload) == "table" and payload.ffi == nil
+          and payload.io ~= io and payload.package ~= package
+          and type(payload.io) == "table" and payload.io.popen() == nil,
     "and that file is born INSIDE the sandbox, not against the real globals")
   eq(type(payload) == "table" and payload.name or nil, "mods.probe.payload",
     "and receives its module name, the way require does")

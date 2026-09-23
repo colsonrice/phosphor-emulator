@@ -437,6 +437,15 @@ local function copy(source)
   return out
 end
 
+-- See baseGlobals. "count", "collect" and "step" are what mods call; the
+-- rest tune the collector the whole engine shares.
+local GC_ALLOWED = { count = true, collect = true, step = true }
+local function sandboxedCollectGarbage(opt, arg)
+  if opt == nil then opt = "collect" end
+  if not GC_ALLOWED[opt] then return 0 end
+  return collectgarbage(opt, arg)
+end
+
 local function baseGlobals()
   local safeOs = {}
   for key in pairs(SAFE_OS) do safeOs[key] = os[key] end
@@ -446,11 +455,25 @@ local function baseGlobals()
     tonumber = tonumber, tostring = tostring, type = type, unpack = unpack,
     rawequal = rawequal, rawget = rawget, rawset = rawset, rawlen = rawlen,
     setmetatable = setmetatable, getmetatable = getmetatable,
-    -- PHOSPHOR (5): collectgarbage is upstream's, and it is not a compute
-    -- primitive -- collectgarbage("setpause"/"setstepmul") retunes the
-    -- ENGINE's collector from inside a mod, and "count"/"step" from a frame
-    -- handler is a hitch a player reads as the emulator being slow.  Nothing
-    -- a mod legitimately does needs it.
+    -- PHOSPHOR (5): collectgarbage, narrowed rather than removed.
+    --
+    -- It used to be absent, on the reasoning that "nothing a mod legitimately
+    -- does needs it". Three published mods call it, StadiumBattleFX among
+    -- them, and absent means `attempt to call a nil value` from inside
+    -- whichever callback got there first. What was worth keeping from the
+    -- old rule is the half about TUNING: "stop", "setpause" and "setstepmul"
+    -- retune the ENGINE's collector from inside a mod, and no mod in the
+    -- catalog asks for them. Those answer 0 and do nothing.
+    collectgarbage = sandboxedCollectGarbage,
+    -- PHOSPHOR: debug.traceback and nothing else. Ten published mods hand it
+    -- to xpcall, and with `debug` nil that is an index of nil in the one
+    -- place a mod was trying to report an error politely. It returns a
+    -- string. getupvalue/setupvalue/getinfo stay absent, here as upstream:
+    -- they reach the engine's upvalues, which is where the real globals are.
+    -- Every mod surveyed guards the member it wants (`debug and
+    -- debug.getupvalue`), so a table holding only traceback turns no guard
+    -- into a crash.
+    debug = { traceback = debug and debug.traceback or nil },
     _VERSION = _VERSION,
     coroutine = copy(coroutine), math = copy(math), string = copy(string),
     table = copy(table), bit = copy(bit), jit = jit, os = safeOs,
@@ -608,11 +631,22 @@ local function sandboxedRequire(modId, permissionSet, selfModules, env, compat)
     if type(name) == "string" then name = (name:gsub("/", ".")) end
     local relative = selfModules and selfModuleRelative(name, modId)
     if relative then
+      local path = SafePath.join(selfModules.path, relative, "mod module")
+      -- PHOSPHOR: Lua's other half of the convention. package.path is
+      -- "?.lua;?/init.lua" on every host a mod is written on, so
+      -- require("mods.<id>.lib") naming a FOLDER with an init.lua in it is
+      -- ordinary, and resolving only "lib.lua" refused it with "cannot load".
+      -- Same segments, same SafePath, same loadFile: nothing new is reachable.
+      local modFs = selfModules.fs
+      if modFs.getInfo and not modFs.getInfo(path) then
+        local asFolder = relative:gsub("%.lua$", "/init.lua")
+        local initPath = SafePath.join(selfModules.path, asFolder, "mod module")
+        if modFs.getInfo(initPath) then relative, path = asFolder, initPath end
+      end
       if loaded[relative] ~= nil then return loaded[relative] end
       if loading[relative] then
         error(("[%s] circular require of %s"):format(modId, name), 2)
       end
-      local path = SafePath.join(selfModules.path, relative, "mod module")
       -- Sandbox.loadFile is the whole point: it rejects bytecode and binds
       -- THIS environment, so a submodule is exactly as confined as the entry
       -- chunk.  The real require is never involved.
@@ -631,10 +665,10 @@ local function sandboxedRequire(modId, permissionSet, selfModules, env, compat)
     -- The compat stand-in answers next, so a legacy require("io") gets the
     -- rerouted table instead of the denial below (src/mods/LegacyCompat.lua).
     --
-    -- PHOSPHOR: `compat` is nil in this build -- Loader does not construct one
-    -- yet -- so this is inert. It is kept here, in upstream's position
-    -- relative to the denial checks, so wiring compat later is a change in
-    -- Loader rather than another re-port of this function.
+    -- PHOSPHOR: live as of September 2026. Loader:_modEnv builds upstream's
+    -- LegacyCompat behind PointerBridge (see PointerBridge.compose), so a
+    -- legacy require("io") or require("love.filesystem") gets the confined
+    -- stand-in here instead of the denial below.
     --
     -- It sits BELOW the canonicalisation above on purpose. A substitute chosen
     -- from an un-canonicalised name would hand back a rerouted module for a

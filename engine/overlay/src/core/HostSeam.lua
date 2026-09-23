@@ -784,7 +784,16 @@ function HostSeam.writeModState(loader, fs, data)
           state = tostring(mod.state or (mod.failed and "failed") or "loaded"),
           -- WHY it failed, so the host can show a reason instead of an
           -- unexplained "broken" chip the player can do nothing with.
-          failure = mod.failure and tostring(mod.failure) or nil,
+          --
+          -- `skipReason` as well as `failure`. The loader keeps two fields:
+          -- a mod it could not load gets `failure`, a mod it deliberately
+          -- left out (wrong generation, a dependency that does not run here)
+          -- gets `skipReason`, and only the first was being written. So every
+          -- "not for this game" row reached the host with no words at all and
+          -- the pane printed a guess, where the engine had a sentence naming
+          -- the game. The `state` beside it already says which kind it is.
+          failure = (mod.failure or mod.skipReason)
+            and tostring(mod.failure or mod.skipReason) or nil,
           -- Loaded, but outside the engine range its author declared, because
           -- the player accepted that. Reported so a row can say "running
           -- unverified" rather than a plain green "loaded" that hides the
