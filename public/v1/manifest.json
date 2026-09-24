@@ -7,6 +7,16 @@
       "catalogedAgainst": "0.3.6"
     }
   ],
+  "games": [
+    "red",
+    "blue",
+    "yellow",
+    "gold",
+    "silver",
+    "crystal",
+    "firered",
+    "leafgreen"
+  ],
   "sections": [
     {
       "id": "luaMods",
@@ -167,7 +177,15 @@
           "DRAMALESS_SHAPE",
           "gender_mod"
         ],
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 283,
@@ -306,7 +324,15 @@
           "custom_pokeballs",
           "snag_quest"
         ],
-        "engineRange": ">=0.1.38 <2.0.0"
+        "engineRange": ">=0.1.38 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 1261,
@@ -565,7 +591,15 @@
           "pokeball_colors",
           "custom_pokeballs"
         ],
-        "engineRange": ">=0.1.38 <2.0.0"
+        "engineRange": ">=0.1.38 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 1190,
@@ -706,7 +740,12 @@
       },
       "modID": "all_pokemon_catchable_151_mod",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 22073,
@@ -755,7 +794,15 @@
           "BATTLE_ART_VOXEL_FORK",
           "potato_voxel"
         ],
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 1677,
@@ -808,7 +855,15 @@
           "unique_menu_icons",
           "Gold_Silver_Sprites"
         ],
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 2463,
@@ -850,7 +905,15 @@
       },
       "modID": "dex_radar",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 726,
@@ -1552,7 +1615,15 @@
       },
       "modID": "gen3_box",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 23767,
@@ -1594,7 +1665,15 @@
       },
       "modID": "gen3_dex",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 1847,
@@ -1636,7 +1715,15 @@
       },
       "modID": "groovy_palette",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 4129,
@@ -1730,7 +1817,15 @@
       },
       "modID": "kanto_gear",
       "requirements": {
-        "engineRange": "0.0.0-dev || 0.1.94-kanto.22 || >=0.1.99 <2.0.0"
+        "engineRange": "0.0.0-dev || 0.1.94-kanto.22 || >=0.1.99 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 9030,
@@ -2153,7 +2248,15 @@
           "pokeball_colors",
           "kanto_balls"
         ],
-        "engineRange": ">=0.1.38 <2.0.0"
+        "engineRange": ">=0.1.38 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 660,
@@ -2199,7 +2302,15 @@
         "worksWith": [
           "pokegear_cards"
         ],
-        "engineRange": ">=0.1.33 <2.0.0"
+        "engineRange": ">=0.1.33 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 671,
@@ -2294,7 +2405,15 @@
         "worksWith": [
           "DRAMATIC_SHAPE"
         ],
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 13757,
@@ -2385,6 +2504,16 @@
         "games": []
       },
       "modID": "shiny_starters_gifts",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
+      },
       "popularity": {
         "downloads": 1201,
         "stars": 0,
@@ -2822,7 +2951,15 @@
         "worksWith": [
           "modern_party_ui"
         ],
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 636,
@@ -2958,7 +3095,15 @@
       },
       "modID": "its-clefairy",
       "requirements": {
-        "engineRange": ">=0.1.86"
+        "engineRange": ">=0.1.86",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 43,
@@ -3324,7 +3469,12 @@
           "DRAMALESS_SHAPE",
           "potato_voxel"
         ],
-        "engineRange": "0.0.0-dev || >=0.1.75 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.75 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 60,
@@ -3372,7 +3522,12 @@
           "POTATO_VOXEL",
           "VOXEL_ASCENDANT"
         ],
-        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 398,
@@ -3415,7 +3570,15 @@
       },
       "modID": "kanto_companion",
       "requirements": {
-        "engineRange": ">=0.1.83"
+        "engineRange": ">=0.1.83",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 969,
@@ -3527,6 +3690,8 @@
         "name": "debatesmith",
         "url": "https://github.com/Debatesmith/Project-Celebi"
       },
+      "version": "0.2.2",
+      "releasedAt": "2026-08-20",
       "license": {
         "spdx": "MIT",
         "text": "MIT License\n\nCopyright (c) 2026 Debatesmith\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
@@ -3541,19 +3706,36 @@
           "url": "https://raw.githubusercontent.com/Debatesmith/Project-Celebi/main/docs/images/victory-road-gate.png"
         }
       ],
+      "download": {
+        "url": "https://github.com/Debatesmith/Project-Celebi/releases/download/v0.2.02-Hotfix/ProjectCelebi-v0.2.02.zip",
+        "sizeBytes": 74910,
+        "sha256": "bf8e7095a93a5efb9f2c684af9d130cfb32b14cc6757d5dde531158f31d0f74b",
+        "manifestPath": "project_celebi/manifest.json"
+      },
       "engine": {
         "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
+      "modID": "legacy_bridge",
+      "requirements": {
+        "permissions": [
+          "filesystem"
+        ],
+        "conflicts": [
+          "jj_hm_field_unlock",
+          "jj_auto_field_moves",
+          "evolution_man_gold"
+        ],
+        "engineRange": ">=0.1.78 <0.3.0",
+        "games": [
+          "gold"
+        ]
+      },
       "popularity": {
         "downloads": 144,
         "stars": 1,
         "asOf": "2026-08-22"
-      },
-      "project": {
-        "url": "https://github.com/Debatesmith/Project-Celebi",
-        "status": "engine-moved-on"
       }
     },
     {
@@ -3589,6 +3771,16 @@
         "games": []
       },
       "modID": "trainer_talk",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
+      },
       "popularity": {
         "downloads": 362,
         "stars": 3,
@@ -3630,7 +3822,12 @@
       "modID": "move_type_fixes",
       "requirements": {
         "affectsLink": true,
-        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 300,
@@ -3674,7 +3871,12 @@
       "requirements": {
         "affectsLink": true,
         "experimental": true,
-        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 43,
@@ -3716,7 +3918,12 @@
       },
       "modID": "stronger_trainers",
       "requirements": {
-        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 587,
@@ -3761,7 +3968,15 @@
         "conflicts": [
           "randomized_gym_challenge"
         ],
-        "engineRange": ">=0.2.18"
+        "engineRange": ">=0.2.18",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 96,
@@ -3850,7 +4065,12 @@
       },
       "modID": "pokeball-colorfix",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 615,
@@ -3892,7 +4112,12 @@
       },
       "modID": "pokemove-colorfix",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 402,
@@ -3940,7 +4165,15 @@
           "kanto_contests",
           "happiness"
         ],
-        "engineRange": ">=0.1.38 <2.0.0"
+        "engineRange": ">=0.1.38 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 214,
@@ -3986,7 +4219,15 @@
         "permissions": [
           "steps"
         ],
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 2705,
@@ -4046,6 +4287,13 @@
         "games": []
       },
       "modID": "custom-player-sprite-switcher",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 1264,
         "stars": 5,
@@ -4090,7 +4338,12 @@
           "running_shoes",
           "exp_bar"
         ],
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 127,
@@ -4132,7 +4385,12 @@
       },
       "modID": "hold_to_scroll_ui",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 286,
@@ -4183,7 +4441,12 @@
         "worksWith": [
           "metadata_system"
         ],
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 40,
@@ -4272,7 +4535,15 @@
       },
       "modID": "sweet_share",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 1764,
@@ -4381,7 +4652,12 @@
         "worksWith": [
           "red_3d_player"
         ],
-        "engineRange": "0.0.0-dev || >0.1.77 <2.0.0"
+        "engineRange": "0.0.0-dev || >0.1.77 <2.0.0",
+        "games": [
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 6717,
@@ -4427,7 +4703,15 @@
         "requires": [
           "national_dex"
         ],
-        "engineRange": ">=0.1.45"
+        "engineRange": ">=0.1.45",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -4590,7 +4874,15 @@
       },
       "modID": "modern_party_ui",
       "requirements": {
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -4627,7 +4919,15 @@
       },
       "modID": "typed_move_colors",
       "requirements": {
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -4706,7 +5006,15 @@
       },
       "modID": "battle_info_hud",
       "requirements": {
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -4743,7 +5051,15 @@
       },
       "modID": "modern_pokedex_ui",
       "requirements": {
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -4780,7 +5096,15 @@
       },
       "modID": "modern_pc_ui",
       "requirements": {
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -4988,7 +5312,17 @@
         "family": "gen1recomp",
         "games": []
       },
-      "modID": "mobile_pc"
+      "modID": "mobile_pc",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
+      }
     },
     {
       "id": "one-exp-line",
@@ -5352,7 +5686,15 @@
       },
       "modID": "bills_pc_plus",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -5389,7 +5731,15 @@
       },
       "modID": "kanto_contests",
       "requirements": {
-        "engineRange": ">=0.1.75 <2.0.0"
+        "engineRange": ">=0.1.75 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -5468,7 +5818,15 @@
       },
       "modID": "gen1_auto_continue",
       "requirements": {
-        "engineRange": ">=0.0.0-dev <2.0.0"
+        "engineRange": ">=0.0.0-dev <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -5542,7 +5900,15 @@
       },
       "modID": "Gen1BattleUI",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -5579,7 +5945,15 @@
       },
       "modID": "Gen1Dex",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -5653,7 +6027,15 @@
       },
       "modID": "Gen1Party",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -5931,7 +6313,15 @@
       },
       "modID": "item_randomizer",
       "requirements": {
-        "engineRange": ">=0.2.18 <2.0.0"
+        "engineRange": ">=0.2.18 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 84,
@@ -6057,7 +6447,15 @@
       },
       "modID": "pokegear_menu",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -6095,7 +6493,15 @@
       },
       "modID": "randomized_gym_challenge",
       "requirements": {
-        "engineRange": ">=0.2.18"
+        "engineRange": ">=0.2.18",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -6132,7 +6538,15 @@
       },
       "modID": "shedinja",
       "requirements": {
-        "engineRange": ">=0.2.18 <1.0.0"
+        "engineRange": ">=0.2.18 <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -6173,7 +6587,15 @@
         "requires": [
           "shedinja"
         ],
-        "engineRange": ">=0.2.18 <1.0.0"
+        "engineRange": ">=0.2.18 <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -6211,7 +6633,15 @@
       },
       "modID": "sound_effect_replacer",
       "requirements": {
-        "engineRange": ">=0.2.18"
+        "engineRange": ">=0.2.18",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -6249,7 +6679,15 @@
       },
       "modID": "starter_picker",
       "requirements": {
-        "engineRange": ">=0.2.18"
+        "engineRange": ">=0.2.18",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 249,
@@ -6291,7 +6729,15 @@
       },
       "modID": "modern_ui_suite",
       "requirements": {
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -6413,7 +6859,15 @@
       },
       "modID": "modern_start_menu_ui",
       "requirements": {
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -6490,7 +6944,17 @@
         "family": "gen1recomp",
         "games": []
       },
-      "modID": "pokemon_anime_cries"
+      "modID": "pokemon_anime_cries",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
+      }
     },
     {
       "id": "battlica-gen1recomp-terrain-minimap",
@@ -7625,7 +8089,17 @@
         "family": "gen1recomp",
         "games": []
       },
-      "modID": "custom-player-sprites"
+      "modID": "custom-player-sprites",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
+      }
     },
     {
       "id": "modern-bag",
@@ -8261,7 +8735,15 @@
       },
       "modID": "project_highlander",
       "requirements": {
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -8343,7 +8825,15 @@
       },
       "modID": "hold_to_scroll_ui",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <3.0.0"
+        "engineRange": ">=0.0.0-0 <3.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -8381,7 +8871,15 @@
       },
       "modID": "kanto_companion",
       "requirements": {
-        "engineRange": ">=0.1.83"
+        "engineRange": ">=0.1.83",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -8418,7 +8916,15 @@
       },
       "modID": "summon",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -8497,7 +9003,15 @@
       },
       "modID": "free_fly",
       "requirements": {
-        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -8577,7 +9091,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": "0.0.0-dev || >=0.1.30 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.30 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 6080,
@@ -8858,7 +9380,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 880,
@@ -8948,6 +9478,16 @@
       "project": {
         "url": "https://github.com/ZyranCZ/autofire/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 250,
@@ -9438,6 +9978,16 @@
         "url": "https://github.com/ZyranCZ/Can-Always-Escape/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
+      },
       "popularity": {
         "downloads": 68,
         "stars": 1,
@@ -9480,7 +10030,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.1.33 <2.0.0"
+        "engineRange": ">=0.1.33 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 337,
@@ -9668,7 +10226,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 27,
@@ -9711,7 +10277,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": "0.0.0-dev || >=0.2.11 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.2.11 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 1286,
@@ -9761,7 +10335,15 @@
             "required": true
           }
         ],
-        "engineRange": "0.0.0-dev || >=0.2.11 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.2.11 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -9833,9 +10415,26 @@
         "games": []
       },
       "screenshots": [],
+      "version": "0.2.1",
+      "releasedAt": "2026-09-07T17:15:31Z",
+      "modID": "cry_manager",
+      "download": {
+        "url": "https://github.com/Leoocast/cry-manager-gen1recomp-mod/releases/download/0.2.1/cry_manager-0.2.1.zip",
+        "sizeBytes": 30165,
+        "sha256": "373cfd9d16cee670bf78960f4eee70a55802a71e703dbeab520016a64664a0bd",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/Leoocast/cry-manager-gen1recomp-mod/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ],
+        "engineRange": ">=0.2.56 <0.3.0"
       }
     },
     {
@@ -9924,7 +10523,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.1.33 <2.0.0"
+        "engineRange": ">=0.1.33 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 13387,
@@ -10209,7 +10816,15 @@
         "permissions": [
           "filesystem"
         ],
-        "engineRange": "0.0.0-dev || >=0.1.69 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.69 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 5835,
@@ -10414,7 +11029,15 @@
         "requires": [
           "Dynamic_Scaling"
         ],
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 63,
@@ -10457,7 +11080,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.1.88"
+        "engineRange": ">=0.1.88",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 125,
@@ -10499,6 +11130,16 @@
       "project": {
         "url": "https://github.com/ZyranCZ/Enemy-HP/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 560,
@@ -10590,7 +11231,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 21925,
@@ -10681,6 +11330,16 @@
       "project": {
         "url": "https://github.com/jrmsrs/fair-battles/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 141,
@@ -10842,13 +11501,30 @@
       ],
       "target": "Gen1Recomp",
       "engine": {
+        "id": "gen1recomp",
         "family": "gen1recomp",
         "games": []
       },
       "screenshots": [],
+      "version": "1.1.2",
+      "releasedAt": "2026-09-22T20:58:27Z",
+      "modID": "firered_johto_hoenn_encounters",
+      "download": {
+        "url": "https://github.com/brewstercm/FireRed-Johto-Hoenn/releases/download/v1.1.2/firered_johto_hoenn_encounters-1.1.2.zip",
+        "sizeBytes": 15559,
+        "sha256": "587fd9a3b248dfe4274afb7523ef5973b9b44e127b1564fe67009267679a1f5c",
+        "manifestPath": "manifest.json"
+      },
       "project": {
         "url": "https://github.com/brewstercm/FireRed-Johto-Hoenn/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "firered",
+          "leafgreen"
+        ],
+        "engineRange": ">=0.2.73 <1.0.0"
       }
     },
     {
@@ -11003,7 +11679,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 6948,
@@ -11166,13 +11850,13 @@
         "games": []
       },
       "screenshots": [],
-      "version": "0.9.2",
-      "releasedAt": "2026-09-22T02:28:00Z",
+      "version": "0.9.11",
+      "releasedAt": "2026-09-22T23:28:33Z",
       "modID": "GameShark",
       "download": {
-        "url": "https://github.com/goofwear/gameshark/releases/download/0.9.2/GameShark-0.9.2.zip",
-        "sizeBytes": 51947,
-        "sha256": "3c7683f0da666aba110168a3eccf460ae49d73a4bf625a5a92a6dc374e945850",
+        "url": "https://github.com/goofwear/gameshark/releases/download/0.9.11/GameShark-0.9.11.zip",
+        "sizeBytes": 83816,
+        "sha256": "1d93ce1b5a98d89f71921ba7cc1185689573cdb7f4c6a31918f454520a3ba40e",
         "manifestPath": "GameShark/manifest.json"
       },
       "project": {
@@ -11226,7 +11910,15 @@
         "requires": [
           "DRAMATIC_SHAPE"
         ],
-        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 439,
@@ -11439,6 +12131,16 @@
         "url": "https://github.com/HighDrexler/Gen-3-inspired-UI-overhaul-for-Gen1Recomp/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
+      },
       "popularity": {
         "downloads": 573,
         "stars": 9,
@@ -11480,6 +12182,16 @@
         "url": "https://github.com/HighDrexler/Gen-3-inspired-UI-overhaul-for-Gen1Recomp-V1.1-w-updater/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
+      },
       "popularity": {
         "downloads": 2900,
         "stars": 6,
@@ -11520,6 +12232,16 @@
       "project": {
         "url": "https://github.com/HighDrexler/Gen-3-inspired-UI-overhaul-for-Gen1Recomp-V2.0/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 316,
@@ -11848,7 +12570,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-dev"
+        "engineRange": ">=0.0.0-dev",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 12864,
@@ -11939,7 +12669,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -11978,7 +12716,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.1.37 <2.0.0"
+        "engineRange": ">=0.1.37 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -12059,7 +12805,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -12123,7 +12877,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": "0.0.0-dev || >=0.1.86 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.86 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -12162,7 +12924,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-dev <2.0.0"
+        "engineRange": ">=0.0.0-dev <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -12249,7 +13019,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -12650,7 +13428,15 @@
         "requires": [
           "national_dex"
         ],
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -13400,6 +14186,16 @@
       "project": {
         "url": "https://github.com/ojsaucer/gen1recomp-hotkey-suite/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -14099,7 +14895,15 @@
         "permissions": [
           "compute"
         ],
-        "engineRange": ">=0.1.86 <1.0.0"
+        "engineRange": ">=0.1.86 <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -14531,7 +15335,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 315,
@@ -14801,7 +15613,15 @@
         "permissions": [
           "filesystem"
         ],
-        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -15191,6 +16011,16 @@
       "project": {
         "url": "https://github.com/Tonedawg1/gen1recomp-simple-speed-indicator-/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -15227,6 +16057,16 @@
       "project": {
         "url": "https://github.com/Tonedawg1/gen1recomp-tm-hm-names/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -15490,7 +16330,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -15531,8 +16379,7 @@
         "games": [
           "red",
           "blue",
-          "yellow",
-          "crystal"
+          "yellow"
         ]
       },
       "popularity": {
@@ -15767,7 +16614,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.2.57 <2.0.0"
+        "engineRange": ">=0.2.57 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -15807,7 +16662,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.1.37 <2.0.0"
+        "engineRange": ">=0.1.37 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -15845,7 +16708,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 235,
@@ -15913,7 +16784,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 98,
@@ -16141,7 +17020,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.1.99 <1.0.0"
+        "engineRange": ">=0.1.99 <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -16188,6 +17075,16 @@
       "project": {
         "url": "https://github.com/ZyranCZ/HELP-Story-Guide/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 284,
@@ -16358,7 +17255,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.1.37 <2.0.0"
+        "engineRange": ">=0.1.37 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 1381,
@@ -16497,6 +17402,16 @@
         "url": "https://github.com/Sebarosu/JP-anime-opening-title/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
+      },
       "popularity": {
         "downloads": 46,
         "stars": 0,
@@ -16585,7 +17500,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.2.18 <1.0.0"
+        "engineRange": ">=0.2.18 <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 27,
@@ -16680,7 +17603,15 @@
         "permissions": [
           "compute"
         ],
-        "engineRange": ">=0.2.57"
+        "engineRange": ">=0.2.57",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 7324,
@@ -16845,7 +17776,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 325,
@@ -16888,7 +17827,12 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0 <10.0.0"
+        "engineRange": ">=0.0.0 <10.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 1529,
@@ -16934,7 +17878,15 @@
         "requires": [
           "pokegear_cards"
         ],
-        "engineRange": ">=0.1.84 <1.0.0"
+        "engineRange": ">=0.1.84 <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 4985,
@@ -16977,7 +17929,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 128,
@@ -17062,7 +18022,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 4976,
@@ -17290,7 +18258,12 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.1.75 <10.0.0"
+        "engineRange": ">=0.1.75 <10.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       }
     },
     {
@@ -17548,6 +18521,16 @@
       "project": {
         "url": "https://github.com/rogazrok/modern-field-moves/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -17993,7 +18976,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.1.86 <2.0.0"
+        "engineRange": ">=0.1.86 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -18342,7 +19333,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 64349,
@@ -18384,7 +19383,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 57,
@@ -18583,7 +19590,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 156,
@@ -18629,7 +19644,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -18667,7 +19690,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.1.38 <2.0.0"
+        "engineRange": ">=0.1.38 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 21,
@@ -18865,7 +19896,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.1.86-0 <2.0.0"
+        "engineRange": ">=0.1.86-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 2474,
@@ -19085,7 +20124,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 51538,
@@ -19464,7 +20511,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -19599,7 +20654,15 @@
         "permissions": [
           "compute"
         ],
-        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 14656,
@@ -19644,6 +20707,16 @@
         "url": "https://github.com/ZyranCZ/Press-B-to-Escape-Wild-Encounters/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
+      },
       "popularity": {
         "downloads": 145,
         "stars": 1,
@@ -19682,6 +20755,16 @@
       "project": {
         "url": "https://github.com/ZyranCZ/Professor-Oak-DV-STAT-Evaluation/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 111,
@@ -19723,6 +20806,16 @@
       "project": {
         "url": "https://github.com/ShaneMcGovernIE/qol_toggles/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 13578,
@@ -19814,6 +20907,16 @@
         "url": "https://github.com/dumkaf/rbyrecomp-instant-load/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
+      },
       "popularity": {
         "downloads": 9,
         "stars": 0,
@@ -19856,7 +20959,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.1.86 <2.0.0"
+        "engineRange": ">=0.1.86 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -19893,7 +21004,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.1.86 <2.0.0"
+        "engineRange": ">=0.1.86 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -19983,7 +21102,15 @@
         "requires": [
           "DRAMALESS_SHAPE"
         ],
-        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 609,
@@ -20114,7 +21241,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 3382,
@@ -20304,6 +21439,16 @@
       "project": {
         "url": "https://github.com/BrazilKing/SGB-GBC-borders/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -20384,7 +21529,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 311,
@@ -20522,6 +21675,16 @@
         "url": "https://github.com/ZyranCZ/Special-Stat-Split/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
+      },
       "popularity": {
         "downloads": 763,
         "stars": 1,
@@ -20596,6 +21759,14 @@
       "requirements": {
         "requires": [
           "STADIUM_OVERWORLD_MODELS"
+        ],
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
         ]
       },
       "popularity": {
@@ -20636,6 +21807,16 @@
       "project": {
         "url": "https://github.com/ZyranCZ/Fairy-Steel-Dark-and-Typing-Charts/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 572,
@@ -20680,7 +21861,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.2.24 <2.0.0"
+        "engineRange": ">=0.2.24 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -20765,6 +21954,16 @@
         "url": "https://github.com/ShaneMcGovernIE/tabbed_options/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
+      },
       "popularity": {
         "downloads": 101,
         "stars": 0,
@@ -20806,7 +22005,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.1.89"
+        "engineRange": ">=0.1.89",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -20843,6 +22050,16 @@
       "project": {
         "url": "https://github.com/ZyranCZ/Tap-to-Move/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 409,
@@ -20888,7 +22105,15 @@
         "permissions": [
           "filesystem"
         ],
-        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 6871,
@@ -20980,7 +22205,15 @@
         "permissions": [
           "filesystem"
         ],
-        "engineRange": ">=0.2.56 <2.0.0"
+        "engineRange": ">=0.2.56 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 545,
@@ -21084,7 +22317,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 337,
@@ -21126,7 +22367,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 151,
@@ -21287,9 +22536,7 @@
       },
       "requirements": {
         "games": [
-          "red",
-          "blue",
-          "yellow"
+          "firered"
         ],
         "engineRange": ">=0.0.0-dev <1.0.0"
       }
@@ -21373,7 +22620,12 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": "0.0.0-dev || >=0.1.17 <1.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.17 <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 6789,
@@ -21417,7 +22669,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.2.32"
+        "engineRange": ">=0.2.32",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -21454,6 +22714,16 @@
       "project": {
         "url": "https://github.com/ZyranCZ/Trainers-Let-You-Choose-Lead-Pokemon/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 731,
@@ -21496,7 +22766,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.2.22 <1.0.0"
+        "engineRange": ">=0.2.22 <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -21537,7 +22815,15 @@
         "permissions": [
           "filesystem"
         ],
-        "engineRange": ">=0.2.55 <2.0.0"
+        "engineRange": ">=0.2.55 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -21573,6 +22859,16 @@
       "project": {
         "url": "https://github.com/menyas/unique-menu-icons/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 12690,
@@ -21616,7 +22912,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.2.18 <1.0.0"
+        "engineRange": ">=0.2.18 <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 42,
@@ -21760,7 +23064,12 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 1914,
@@ -22155,7 +23464,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.37 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 5925,
@@ -22296,7 +23613,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 89,
@@ -22392,7 +23717,15 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 9741,
@@ -22533,7 +23866,1020 @@
       },
       "requirements": {
         "engineRange": ">=0.2.26 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ],
         "onlineUnavailable": true
+      }
+    },
+    {
+      "id": "gen3recomp-advanced-box-system-gen3",
+      "kind": "luaMod",
+      "name": "Advanced Box System Gen 3",
+      "tagline": "FireRed-only Advanced Box System integrated with the native PC flow. Choose Withdraw, Deposit, Move/Swap or Move Items, then use the advanced PARTY/BOX/detail layout while preserving native FireRed storage semantics.",
+      "author": {
+        "name": "FAFF0x",
+        "url": "https://github.com/FAFF0x/gen3recomp"
+      },
+      "permission": "no-objection",
+      "categories": [
+        "PENDING",
+        "UI",
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp",
+      "engine": {
+        "id": "gen1recomp",
+        "family": "gen1recomp",
+        "games": []
+      },
+      "screenshots": [],
+      "version": "1.2.0",
+      "releasedAt": "2026-09-21T08:09:11Z",
+      "modID": "advanced_box_system_gen3",
+      "download": {
+        "url": "https://raw.githubusercontent.com/FAFF0x/gen3recomp/530582cee176774fdc654eabb9cf9d3e4f14a320/advanced_box_system_gen3_v1.2.0.zip",
+        "sizeBytes": 14963,
+        "sha256": "b3e3ec0c9d71324cffc051b7203b125a0f866d08fe635a076df7dc5e86579938",
+        "manifestPath": "manifest.json"
+      },
+      "project": {
+        "url": "https://github.com/FAFF0x/gen3recomp",
+        "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "firered"
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
+      }
+    },
+    {
+      "id": "gen3recomp-all-tm-shop-gen3",
+      "kind": "luaMod",
+      "name": "Universal Free TM/HM Shop Gen 3",
+      "tagline": "FireRed-only free TM/HM shop with a dedicated Modern UI-style catalogue, readable move details, type/category icons and filters. TM01-TM50 and HM01-HM08 are free.",
+      "author": {
+        "name": "FAFF0x",
+        "url": "https://github.com/FAFF0x/gen3recomp"
+      },
+      "permission": "no-objection",
+      "categories": [
+        "PENDING",
+        "UI",
+        "QOL",
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp",
+      "engine": {
+        "id": "gen1recomp",
+        "family": "gen1recomp",
+        "games": []
+      },
+      "screenshots": [],
+      "version": "1.1.4",
+      "releasedAt": "2026-09-21T08:09:11Z",
+      "modID": "all_tm_shop_gen3",
+      "download": {
+        "url": "https://raw.githubusercontent.com/FAFF0x/gen3recomp/530582cee176774fdc654eabb9cf9d3e4f14a320/all_tm_shop_gen3_v1.1.4.zip",
+        "sizeBytes": 13346,
+        "sha256": "062ee52f2ea273e45aa82e315bd93e17232caf649fcdec1d6f5d16aeb4e8eaad",
+        "manifestPath": "manifest.json"
+      },
+      "project": {
+        "url": "https://github.com/FAFF0x/gen3recomp",
+        "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "firered"
+        ],
+        "engineRange": "0.0.0-dev || >=0.2.48 <2.0.0"
+      }
+    },
+    {
+      "id": "gen3recomp-area-dexnav-gen3",
+      "kind": "luaMod",
+      "name": "Area DexNav Gen 3",
+      "tagline": "Press SELECT in the FireRed overworld to immediately encounter an uncaught Pokemon from the current area's real FireRed LAND/WATER encounter table. Separate Gen3 package and namespace prevent import collisions with the Gen2 port.",
+      "author": {
+        "name": "FAFF0x",
+        "url": "https://github.com/FAFF0x/gen3recomp"
+      },
+      "permission": "no-objection",
+      "categories": [
+        "PENDING",
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp",
+      "engine": {
+        "id": "gen1recomp",
+        "family": "gen1recomp",
+        "games": []
+      },
+      "screenshots": [],
+      "version": "1.0.1",
+      "releasedAt": "2026-09-21T08:09:11Z",
+      "modID": "area_dexnav_gen3",
+      "download": {
+        "url": "https://raw.githubusercontent.com/FAFF0x/gen3recomp/530582cee176774fdc654eabb9cf9d3e4f14a320/area_dexnav_gen3_v1.0.1.zip",
+        "sizeBytes": 7566,
+        "sha256": "40448607da8fc02b6532e1457bb600f81d8ebfc6ac31a6ee672c9ee3c0ecce05",
+        "manifestPath": "manifest.json"
+      },
+      "project": {
+        "url": "https://github.com/FAFF0x/gen3recomp",
+        "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "firered"
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
+      }
+    },
+    {
+      "id": "gen3recomp-disable-help-lr-gen3",
+      "kind": "luaMod",
+      "name": "Disable L/R Help Gen 3",
+      "tagline": "FireRed-only QoL mod that permanently disables the L/R Help screen trigger while preserving L/R input for boxes, menus and other mods.",
+      "author": {
+        "name": "FAFF0x",
+        "url": "https://github.com/FAFF0x/gen3recomp"
+      },
+      "permission": "no-objection",
+      "categories": [
+        "PENDING",
+        "UI",
+        "QOL"
+      ],
+      "target": "Gen1Recomp",
+      "engine": {
+        "id": "gen1recomp",
+        "family": "gen1recomp",
+        "games": []
+      },
+      "screenshots": [],
+      "version": "1.0.0",
+      "releasedAt": "2026-09-21T08:09:11Z",
+      "modID": "disable_help_lr_gen3",
+      "download": {
+        "url": "https://raw.githubusercontent.com/FAFF0x/gen3recomp/530582cee176774fdc654eabb9cf9d3e4f14a320/disable_help_lr_gen3_v1.0.0.zip",
+        "sizeBytes": 3912,
+        "sha256": "6f6b08d64d9d3b0bd002b8069fa1c7340a928ffa9cecfbc5ec2f96edaf5d824a",
+        "manifestPath": "manifest.json"
+      },
+      "project": {
+        "url": "https://github.com/FAFF0x/gen3recomp",
+        "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "firered"
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
+      }
+    },
+    {
+      "id": "gen3recomp-dv-ev-editor-gen3",
+      "kind": "luaMod",
+      "name": "DV EV Editor Gen 3",
+      "tagline": "FireRed-only Gen 3 IV/EV editor. Adds IV/EV to the field party action menu, edits all six IVs and EVs, recalculates stats immediately, and supports START to maximize all values.",
+      "author": {
+        "name": "FAFF0x",
+        "url": "https://github.com/FAFF0x/gen3recomp"
+      },
+      "permission": "no-objection",
+      "categories": [
+        "PENDING",
+        "UI"
+      ],
+      "target": "Gen1Recomp",
+      "engine": {
+        "id": "gen1recomp",
+        "family": "gen1recomp",
+        "games": []
+      },
+      "screenshots": [],
+      "version": "2.0.2",
+      "releasedAt": "2026-09-21T08:09:11Z",
+      "modID": "dv_ev_editor_gen3",
+      "download": {
+        "url": "https://raw.githubusercontent.com/FAFF0x/gen3recomp/530582cee176774fdc654eabb9cf9d3e4f14a320/dv_ev_editor_gen3_v2.0.2.zip",
+        "sizeBytes": 8828,
+        "sha256": "a43550c7e274f1dfe3fe5b07045f4960497c00b34bd10c42187e5733e43661c9",
+        "manifestPath": "manifest.json"
+      },
+      "project": {
+        "url": "https://github.com/FAFF0x/gen3recomp",
+        "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "firered"
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
+      }
+    },
+    {
+      "id": "gen3recomp-pokemonmod-gen3-exp-share-modes",
+      "kind": "luaMod",
+      "name": "EXP Share Modes - Gen 3",
+      "tagline": "FireRed-only EXP distribution modes with an in-game START > OPTION > BATTLE OPTIONS selector for OFF, CLASSIC, or MODERN sharing. Uses the native Game3 experience pipeline and a unique Gen3 identity.",
+      "author": {
+        "name": "FAFF0x",
+        "url": "https://github.com/FAFF0x/gen3recomp"
+      },
+      "permission": "no-objection",
+      "categories": [
+        "PENDING",
+        "GAMEPLAY",
+        "UI"
+      ],
+      "target": "Gen1Recomp",
+      "engine": {
+        "id": "gen1recomp",
+        "family": "gen1recomp",
+        "games": []
+      },
+      "screenshots": [],
+      "version": "1.0.2",
+      "releasedAt": "2026-09-21T08:09:11Z",
+      "modID": "pokemonmod_gen3_exp_share_modes",
+      "download": {
+        "url": "https://raw.githubusercontent.com/FAFF0x/gen3recomp/530582cee176774fdc654eabb9cf9d3e4f14a320/exp_share_modes_gen3_v1.0.2.zip",
+        "sizeBytes": 8709,
+        "sha256": "327aa5489a1e5349500e2e890f41e45501f6d901ae43ca507d40b54f535fd7dd",
+        "manifestPath": "manifest.json"
+      },
+      "project": {
+        "url": "https://github.com/FAFF0x/gen3recomp",
+        "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "firered"
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
+      }
+    },
+    {
+      "id": "gen3recomp-pokemonmod-gen3-free-master-rare-evolution-repel",
+      "kind": "luaMod",
+      "name": "Free Master/Rare + Evolution + Max Repel - Gen 3",
+      "tagline": "FireRed-only combined shop mod: free Master Ball, Rare Candy and Max Repel in normal Poke Marts plus a dedicated free Evolution Shop. Uses the native Game3 ShopMenu and coexistence-safe wrappers.",
+      "author": {
+        "name": "FAFF0x",
+        "url": "https://github.com/FAFF0x/gen3recomp"
+      },
+      "permission": "no-objection",
+      "categories": [
+        "PENDING",
+        "CONTENT",
+        "QOL",
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp",
+      "engine": {
+        "id": "gen1recomp",
+        "family": "gen1recomp",
+        "games": []
+      },
+      "screenshots": [],
+      "version": "1.0.4",
+      "releasedAt": "2026-09-21T08:09:11Z",
+      "modID": "pokemonmod_gen3_free_master_rare_evolution_repel",
+      "download": {
+        "url": "https://raw.githubusercontent.com/FAFF0x/gen3recomp/530582cee176774fdc654eabb9cf9d3e4f14a320/free_master_rare_evolution_repel_gen3_v1.0.4.zip",
+        "sizeBytes": 6806,
+        "sha256": "ea25d34a881254029bec5200d16528f4e707ce0b94ca1d2c17c65a2d7614f391",
+        "manifestPath": "manifest.json"
+      },
+      "project": {
+        "url": "https://github.com/FAFF0x/gen3recomp",
+        "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "firered"
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
+      }
+    },
+    {
+      "id": "gen3recomp-hm-anywhere-gen3",
+      "kind": "luaMod",
+      "name": "HM & Field TM Anywhere - Gen 3",
+      "tagline": "Use owned FireRed HMs and supported field TMs without teaching them. v2.1.3 bridges the HM/TM submenus to the native Game3 option surface so Modern UI renders them while preserving the working field-move logic.",
+      "author": {
+        "name": "FAFF0x",
+        "url": "https://github.com/FAFF0x/gen3recomp"
+      },
+      "permission": "no-objection",
+      "categories": [
+        "PENDING",
+        "UI",
+        "QOL",
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp",
+      "engine": {
+        "id": "gen1recomp",
+        "family": "gen1recomp",
+        "games": []
+      },
+      "screenshots": [],
+      "version": "2.1.3",
+      "releasedAt": "2026-09-21T08:09:11Z",
+      "modID": "hm_anywhere_gen3",
+      "download": {
+        "url": "https://raw.githubusercontent.com/FAFF0x/gen3recomp/530582cee176774fdc654eabb9cf9d3e4f14a320/hm_anywhere_gen3_v2.1.3.zip",
+        "sizeBytes": 10508,
+        "sha256": "89df5cb78d682f695d92d53e1e1cdf39776e0e6898dbad5021822735b041faa5",
+        "manifestPath": "manifest.json"
+      },
+      "project": {
+        "url": "https://github.com/FAFF0x/gen3recomp",
+        "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "firered"
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
+      }
+    },
+    {
+      "id": "gen3recomp-pokemonmod-gen3-item-shortcut",
+      "kind": "luaMod",
+      "name": "Item Shortcut - Gen 3 (Pokemon MOD)",
+      "tagline": "FireRed-only Item Shortcut with five BAG shortcuts, one FAST item, raw hotkeys, Start-menu access, and a high-resolution Modern UI-style presenter.",
+      "author": {
+        "name": "FAFF0x",
+        "url": "https://github.com/FAFF0x/gen3recomp"
+      },
+      "permission": "no-objection",
+      "categories": [
+        "PENDING",
+        "UI",
+        "QOL"
+      ],
+      "target": "Gen1Recomp",
+      "engine": {
+        "id": "gen1recomp",
+        "family": "gen1recomp",
+        "games": []
+      },
+      "screenshots": [],
+      "version": "1.0.4",
+      "releasedAt": "2026-09-21T08:09:11Z",
+      "modID": "pokemonmod_gen3_item_shortcut",
+      "download": {
+        "url": "https://raw.githubusercontent.com/FAFF0x/gen3recomp/530582cee176774fdc654eabb9cf9d3e4f14a320/item_shortcut_gen3_v1.0.4.zip",
+        "sizeBytes": 18529,
+        "sha256": "669c6a552d9b728187024583b6ced0fe0c5237cd7f0055a62c9b83a33b96f187",
+        "manifestPath": "manifest.json"
+      },
+      "project": {
+        "url": "https://github.com/FAFF0x/gen3recomp",
+        "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "firered"
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
+      }
+    },
+    {
+      "id": "gen3recomp-pokemonmod-gen3-modern-bag",
+      "kind": "luaMod",
+      "name": "Modern Bag - Gen 3 (Pokemon MOD)",
+      "tagline": "Pokemon MOD FireRed-only Modern Bag with Favorites, eight logical categories, persistent pins, search, redesigned two-pane TM/HM catalogue, live move details, visual filters/sorting, Y/I move information and expanded Game3 inventory capacity.",
+      "author": {
+        "name": "FAFF0x",
+        "url": "https://github.com/FAFF0x/gen3recomp"
+      },
+      "permission": "no-objection",
+      "categories": [
+        "PENDING",
+        "UI",
+        "ART",
+        "QOL"
+      ],
+      "target": "Gen1Recomp",
+      "engine": {
+        "id": "gen1recomp",
+        "family": "gen1recomp",
+        "games": []
+      },
+      "screenshots": [],
+      "version": "1.0.3",
+      "releasedAt": "2026-09-21T08:09:11Z",
+      "modID": "pokemonmod_gen3_modern_bag",
+      "download": {
+        "url": "https://raw.githubusercontent.com/FAFF0x/gen3recomp/530582cee176774fdc654eabb9cf9d3e4f14a320/modern_bag_gen3_v1.0.3.zip",
+        "sizeBytes": 22708,
+        "sha256": "26b53a6197a31ec601084750da3660319d6c971da31afcb1c3cd3854bb29ed26",
+        "manifestPath": "manifest.json"
+      },
+      "project": {
+        "url": "https://github.com/FAFF0x/gen3recomp",
+        "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "firered"
+        ],
+        "engineRange": "0.0.0-dev || >=0.2.48 <2.0.0"
+      }
+    },
+    {
+      "id": "gen3recomp-modern-battle-ui-gen3-firered",
+      "kind": "luaMod",
+      "name": "MODERN BATTLE UI - GEN 3 (FIRERED)",
+      "tagline": "Modern FireRed battle HUD with readable high-resolution typography, per-move effectiveness, live EXP, caught status, concise move explanations, and a SELECT full move-info panel.",
+      "author": {
+        "name": "FAFF0x",
+        "url": "https://github.com/FAFF0x/gen3recomp"
+      },
+      "permission": "no-objection",
+      "categories": [
+        "PENDING",
+        "GAMEPLAY",
+        "UI"
+      ],
+      "target": "Gen1Recomp",
+      "engine": {
+        "id": "gen1recomp",
+        "family": "gen1recomp",
+        "games": []
+      },
+      "screenshots": [],
+      "version": "1.3.0",
+      "releasedAt": "2026-09-21T08:09:11Z",
+      "modID": "modern_battle_ui_gen3_firered",
+      "download": {
+        "url": "https://raw.githubusercontent.com/FAFF0x/gen3recomp/530582cee176774fdc654eabb9cf9d3e4f14a320/modern_battle_ui_gen3_v1.3.0.zip",
+        "sizeBytes": 25473,
+        "sha256": "e57cef73e2310cab4c537aff789bbeb3524e57dfddb9ddc3d2afc30012ad50a2",
+        "manifestPath": "manifest.json"
+      },
+      "project": {
+        "url": "https://github.com/FAFF0x/gen3recomp",
+        "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "firered"
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
+      }
+    },
+    {
+      "id": "gen3recomp-gen3-modern-ui",
+      "kind": "luaMod",
+      "name": "Gen3 Modern UI Enhanced",
+      "tagline": "Modern functional UI overhaul for Pokemon Recomp Gen 3 / FireRed. v1.0.19 adds icon-led navigation, type-aware party cards, a richer Bag, subtle animations, and a redesigned Trainer Card while preserving native FireRed menu logic.",
+      "author": {
+        "name": "FAFF0x",
+        "url": "https://github.com/FAFF0x/gen3recomp"
+      },
+      "permission": "no-objection",
+      "categories": [
+        "PENDING",
+        "UI",
+        "ART",
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp",
+      "engine": {
+        "id": "gen1recomp",
+        "family": "gen1recomp",
+        "games": []
+      },
+      "screenshots": [],
+      "version": "1.0.19",
+      "releasedAt": "2026-09-21T08:09:11Z",
+      "modID": "gen3_modern_ui",
+      "download": {
+        "url": "https://raw.githubusercontent.com/FAFF0x/gen3recomp/530582cee176774fdc654eabb9cf9d3e4f14a320/modern_ui_gen3_v1.0.19.zip",
+        "sizeBytes": 26588,
+        "sha256": "de7ce067f09cc32227ad423c66959eb12985ceb26a19897dea68a1fddf3beba4",
+        "manifestPath": "manifest.json"
+      },
+      "project": {
+        "url": "https://github.com/FAFF0x/gen3recomp",
+        "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "firered"
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
+      }
+    },
+    {
+      "id": "gen3recomp-pokemonmod-gen3-move-learn-stats",
+      "kind": "luaMod",
+      "name": "Move Learn Stats - Gen 3 (Pokemon MOD)",
+      "tagline": "FireRed-only move-learning comparison overlay for Gen 3. Shows the selected move versus the move being learned while preserving native FireRed learn/forget logic and Modern UI compatibility.",
+      "author": {
+        "name": "FAFF0x",
+        "url": "https://github.com/FAFF0x/gen3recomp"
+      },
+      "permission": "no-objection",
+      "categories": [
+        "PENDING",
+        "UI",
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp",
+      "engine": {
+        "id": "gen1recomp",
+        "family": "gen1recomp",
+        "games": []
+      },
+      "screenshots": [],
+      "version": "2.0.1",
+      "releasedAt": "2026-09-21T08:09:11Z",
+      "modID": "pokemonmod_gen3_move_learn_stats",
+      "download": {
+        "url": "https://raw.githubusercontent.com/FAFF0x/gen3recomp/530582cee176774fdc654eabb9cf9d3e4f14a320/move_learn_stats_gen3_v2.0.1.zip",
+        "sizeBytes": 8050,
+        "sha256": "1afe4014740e1f44c7deb68bd9caec16e86f21915aa62fd5c08124a77277a92f",
+        "manifestPath": "manifest.json"
+      },
+      "project": {
+        "url": "https://github.com/FAFF0x/gen3recomp",
+        "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "firered"
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
+      }
+    },
+    {
+      "id": "gen3recomp-moves-manager-gen3",
+      "kind": "luaMod",
+      "name": "Moves Manager - Gen 3",
+      "tagline": "FireRed-only Moves Manager: inspect move details, remember previously learned moves, restore forgotten moves and safely reorder move slots from the Party menu.",
+      "author": {
+        "name": "FAFF0x",
+        "url": "https://github.com/FAFF0x/gen3recomp"
+      },
+      "permission": "no-objection",
+      "categories": [
+        "PENDING",
+        "UI",
+        "QOL",
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp",
+      "engine": {
+        "id": "gen1recomp",
+        "family": "gen1recomp",
+        "games": []
+      },
+      "screenshots": [],
+      "version": "2.0.1",
+      "releasedAt": "2026-09-21T08:09:11Z",
+      "modID": "moves_manager_gen3",
+      "download": {
+        "url": "https://raw.githubusercontent.com/FAFF0x/gen3recomp/530582cee176774fdc654eabb9cf9d3e4f14a320/moves_manager_gen3_v2.0.1.zip",
+        "sizeBytes": 12718,
+        "sha256": "c593c61c4da5d25e81d38cf641a215e5e882585ec6a4a730864fda5a2b9686f8",
+        "manifestPath": "manifest.json"
+      },
+      "project": {
+        "url": "https://github.com/FAFF0x/gen3recomp",
+        "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "firered"
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
+      }
+    },
+    {
+      "id": "gen3recomp-pokemonmod-gen3-nickname-changer",
+      "kind": "luaMod",
+      "name": "Nickname Changer - Gen 3",
+      "tagline": "FireRed-only nickname changer. Adds RENAME to the field Pokemon action menu and uses the native Gen 3 naming screen.",
+      "author": {
+        "name": "FAFF0x",
+        "url": "https://github.com/FAFF0x/gen3recomp"
+      },
+      "permission": "no-objection",
+      "categories": [
+        "PENDING",
+        "UI",
+        "QOL"
+      ],
+      "target": "Gen1Recomp",
+      "engine": {
+        "id": "gen1recomp",
+        "family": "gen1recomp",
+        "games": []
+      },
+      "screenshots": [],
+      "version": "1.1.2",
+      "releasedAt": "2026-09-21T08:09:11Z",
+      "modID": "pokemonmod_gen3_nickname_changer",
+      "download": {
+        "url": "https://raw.githubusercontent.com/FAFF0x/gen3recomp/530582cee176774fdc654eabb9cf9d3e4f14a320/nickname_changer_gen3_v1.1.2.zip",
+        "sizeBytes": 7437,
+        "sha256": "e87322e4e195a58174c8b6df7e99a42b8cd40697f14b5b3487a50a48f5b089b0",
+        "manifestPath": "pokemonmod_gen3_nickname_changer/manifest.json"
+      },
+      "project": {
+        "url": "https://github.com/FAFF0x/gen3recomp",
+        "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "firered"
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
+      }
+    },
+    {
+      "id": "gen3recomp-pokemonmod-gen3-performance-monitor",
+      "kind": "luaMod",
+      "name": "Performance Monitor - Gen 3",
+      "tagline": "FireRed-only FPS, frame-time, renderer and per-mod performance profiler with sandbox-safe diagnostic export.",
+      "author": {
+        "name": "FAFF0x",
+        "url": "https://github.com/FAFF0x/gen3recomp"
+      },
+      "permission": "no-objection",
+      "categories": [
+        "PENDING",
+        "ART",
+        "QOL"
+      ],
+      "target": "Gen1Recomp",
+      "engine": {
+        "id": "gen1recomp",
+        "family": "gen1recomp",
+        "games": []
+      },
+      "screenshots": [],
+      "version": "1.0.1",
+      "releasedAt": "2026-09-21T08:09:11Z",
+      "modID": "pokemonmod_gen3_performance_monitor",
+      "download": {
+        "url": "https://raw.githubusercontent.com/FAFF0x/gen3recomp/530582cee176774fdc654eabb9cf9d3e4f14a320/performance_monitor_gen3_v1.0.1.zip",
+        "sizeBytes": 20631,
+        "sha256": "e3916191acc5baf26c19d41d2eb670fad87c564cc63d3055b5d3d44737f86c89",
+        "manifestPath": "pokemonmod_gen3_performance_monitor/manifest.json"
+      },
+      "project": {
+        "url": "https://github.com/FAFF0x/gen3recomp",
+        "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "firered"
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
+      }
+    },
+    {
+      "id": "gen3recomp-pokecenter-max-happiness-gen3",
+      "kind": "luaMod",
+      "name": "Pokecenter Max Happiness Gen 3",
+      "tagline": "FireRed-only Gen 3 port. Healing at a Pokemon Center automatically sets every non-Egg party Pokemon to maximum friendship (255).",
+      "author": {
+        "name": "FAFF0x",
+        "url": "https://github.com/FAFF0x/gen3recomp"
+      },
+      "permission": "no-objection",
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "engine": {
+        "id": "gen1recomp",
+        "family": "gen1recomp",
+        "games": []
+      },
+      "screenshots": [],
+      "version": "1.0.3",
+      "releasedAt": "2026-09-21T08:09:11Z",
+      "modID": "pokecenter_max_happiness_gen3",
+      "download": {
+        "url": "https://raw.githubusercontent.com/FAFF0x/gen3recomp/530582cee176774fdc654eabb9cf9d3e4f14a320/pokecenter_max_happiness_gen3_v1.0.3.zip",
+        "sizeBytes": 3836,
+        "sha256": "2cc94e7d80718dc2af80232ea39c740d5fa04a8e35572268e1f131e714cfe453",
+        "manifestPath": "manifest.json"
+      },
+      "project": {
+        "url": "https://github.com/FAFF0x/gen3recomp",
+        "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "firered"
+        ],
+        "engineRange": "0.0.0-dev || >=0.2.48 <2.0.0"
+      }
+    },
+    {
+      "id": "gen3recomp-pokemonmod-gen3-pokedex-plus",
+      "kind": "luaMod",
+      "name": "Pokédex Plus - Gen 3",
+      "tagline": "FireRed-only Pokédex Plus with Modern UI, rebuilt Search & Filter Lab, cached research data, and Trade Evolution Fix-aware evolution requirements.",
+      "author": {
+        "name": "FAFF0x",
+        "url": "https://github.com/FAFF0x/gen3recomp"
+      },
+      "permission": "no-objection",
+      "categories": [
+        "PENDING",
+        "UI",
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp",
+      "engine": {
+        "id": "gen1recomp",
+        "family": "gen1recomp",
+        "games": []
+      },
+      "screenshots": [],
+      "version": "1.0.8",
+      "releasedAt": "2026-09-21T08:09:11Z",
+      "modID": "pokemonmod_gen3_pokedex_plus",
+      "download": {
+        "url": "https://raw.githubusercontent.com/FAFF0x/gen3recomp/530582cee176774fdc654eabb9cf9d3e4f14a320/pokedex_plus_gen3_v1.0.8.zip",
+        "sizeBytes": 17862,
+        "sha256": "2e127faafe5d679849011913eda49755cb8a6ac0f329c328bff04ce5bcb67bf0",
+        "manifestPath": "manifest.json"
+      },
+      "project": {
+        "url": "https://github.com/FAFF0x/gen3recomp",
+        "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "firered"
+        ],
+        "engineRange": ">=0.0.0-0 <2.0.0"
+      }
+    },
+    {
+      "id": "gen3recomp-pokemonmod-gen3-repel-reuse-prompt",
+      "kind": "luaMod",
+      "name": "Repel Reuse Prompt - Gen 3",
+      "tagline": "FireRed / Gen 3 only: asks whether to use another Repel when the current Repel wears off.",
+      "author": {
+        "name": "FAFF0x",
+        "url": "https://github.com/FAFF0x/gen3recomp"
+      },
+      "permission": "no-objection",
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "engine": {
+        "id": "gen1recomp",
+        "family": "gen1recomp",
+        "games": []
+      },
+      "screenshots": [],
+      "version": "1.0.2",
+      "releasedAt": "2026-09-21T08:09:11Z",
+      "modID": "pokemonmod_gen3_repel_reuse_prompt",
+      "download": {
+        "url": "https://raw.githubusercontent.com/FAFF0x/gen3recomp/530582cee176774fdc654eabb9cf9d3e4f14a320/repel_reuse_prompt_gen3_v1.0.2.zip",
+        "sizeBytes": 4864,
+        "sha256": "caf0d2fd7eba6d98ccb6cba83adbce6539e2145624b7c08cc0c9400121d57f41",
+        "manifestPath": "manifest.json"
+      },
+      "project": {
+        "url": "https://github.com/FAFF0x/gen3recomp",
+        "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "firered"
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
+      }
+    },
+    {
+      "id": "gen3recomp-reusable-machines-gen3",
+      "kind": "luaMod",
+      "name": "Reusable Machines - Gen 3",
+      "tagline": "FireRed-only port of Reusable Machines. TM01-TM50 remain after successful teaching, while HM moves can be replaced during the normal move-learning flow. Uses native Game3 TM Case and UI, with immediate CAN LEARN / LEARNED / NOT ABLE compatibility badges on the Party screen.",
+      "author": {
+        "name": "FAFF0x",
+        "url": "https://github.com/FAFF0x/gen3recomp"
+      },
+      "permission": "no-objection",
+      "categories": [
+        "PENDING",
+        "UI",
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp",
+      "engine": {
+        "id": "gen1recomp",
+        "family": "gen1recomp",
+        "games": []
+      },
+      "screenshots": [],
+      "version": "2.0.2",
+      "releasedAt": "2026-09-21T08:09:11Z",
+      "modID": "reusable_machines_gen3",
+      "download": {
+        "url": "https://raw.githubusercontent.com/FAFF0x/gen3recomp/530582cee176774fdc654eabb9cf9d3e4f14a320/reusable_machines_gen3_v2.0.2.zip",
+        "sizeBytes": 9454,
+        "sha256": "00db06305f5f9cca6941a0919d42be53e333d47e5798be1a68c0c40dafc21a44",
+        "manifestPath": "manifest.json"
+      },
+      "project": {
+        "url": "https://github.com/FAFF0x/gen3recomp",
+        "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "firered"
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
+      }
+    },
+    {
+      "id": "gen3recomp-pokemonmod-gen3-stable-menu-navigation",
+      "kind": "luaMod",
+      "name": "Stable Menu Navigation - Gen 3",
+      "tagline": "Keeps FireRed held directional menu navigation at a stable real-time speed even when GAME SPEED is increased.",
+      "author": {
+        "name": "FAFF0x",
+        "url": "https://github.com/FAFF0x/gen3recomp"
+      },
+      "permission": "no-objection",
+      "categories": [
+        "PENDING",
+        "UI",
+        "QOL"
+      ],
+      "target": "Gen1Recomp",
+      "engine": {
+        "id": "gen1recomp",
+        "family": "gen1recomp",
+        "games": []
+      },
+      "screenshots": [],
+      "version": "1.0.2",
+      "releasedAt": "2026-09-21T08:09:11Z",
+      "modID": "pokemonmod_gen3_stable_menu_navigation",
+      "download": {
+        "url": "https://raw.githubusercontent.com/FAFF0x/gen3recomp/530582cee176774fdc654eabb9cf9d3e4f14a320/stable_menu_navigation_gen3_v1.0.2.zip",
+        "sizeBytes": 5196,
+        "sha256": "85db9f5954571bda0e097f97864b26b285f1c9f2980c07b68d4c35308be44c78",
+        "manifestPath": "manifest.json"
+      },
+      "project": {
+        "url": "https://github.com/FAFF0x/gen3recomp",
+        "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "firered"
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
+      }
+    },
+    {
+      "id": "gen3recomp-pokemonmod-gen3-summon",
+      "kind": "luaMod",
+      "name": "Summon - Gen 3",
+      "tagline": "FireRed-only SUMMON menu with a high-resolution Modern UI presenter: enter a National Pokedex number to begin a normal Gen 3 wild encounter.",
+      "author": {
+        "name": "FAFF0x",
+        "url": "https://github.com/FAFF0x/gen3recomp"
+      },
+      "permission": "no-objection",
+      "categories": [
+        "PENDING",
+        "UI",
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp",
+      "engine": {
+        "id": "gen1recomp",
+        "family": "gen1recomp",
+        "games": []
+      },
+      "screenshots": [],
+      "version": "1.0.3",
+      "releasedAt": "2026-09-21T08:09:11Z",
+      "modID": "pokemonmod_gen3_summon",
+      "download": {
+        "url": "https://raw.githubusercontent.com/FAFF0x/gen3recomp/530582cee176774fdc654eabb9cf9d3e4f14a320/summon_gen3_v1.0.3.zip",
+        "sizeBytes": 9376,
+        "sha256": "9cc8b73400e7659f0b526f1d9164a86c2d633dead65ef725b34a72202eef9b6e",
+        "manifestPath": "pokemonmod_gen3_summon/manifest.json"
+      },
+      "project": {
+        "url": "https://github.com/FAFF0x/gen3recomp",
+        "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "firered"
+        ],
+        "engineRange": ">=0.0.0-dev <1.0.0"
+      }
+    },
+    {
+      "id": "gen3recomp-pokemonmod-gen3-trade-evolution-fix",
+      "kind": "luaMod",
+      "name": "Trade Evolution Fix - Gen 3",
+      "tagline": "FireRed-only: replaces all twelve vanilla trade evolutions with solo level-up paths while preserving held-item requirements where applicable.",
+      "author": {
+        "name": "FAFF0x",
+        "url": "https://github.com/FAFF0x/gen3recomp"
+      },
+      "permission": "no-objection",
+      "categories": [
+        "PENDING",
+        "GAMEPLAY"
+      ],
+      "target": "Gen1Recomp",
+      "engine": {
+        "id": "gen1recomp",
+        "family": "gen1recomp",
+        "games": []
+      },
+      "screenshots": [],
+      "version": "1.2.1",
+      "releasedAt": "2026-09-21T08:09:11Z",
+      "modID": "pokemonmod_gen3_trade_evolution_fix",
+      "download": {
+        "url": "https://raw.githubusercontent.com/FAFF0x/gen3recomp/530582cee176774fdc654eabb9cf9d3e4f14a320/trade_evolution_fix_gen3_v1.2.1.zip",
+        "sizeBytes": 5574,
+        "sha256": "543dca57374cc99f7a035faec83b801664f550347fb7aadf3016130a9650f510",
+        "manifestPath": "manifest.json"
+      },
+      "project": {
+        "url": "https://github.com/FAFF0x/gen3recomp",
+        "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "firered"
+        ],
+        "engineRange": ">=0.0.0-dev <2.0.0"
+      }
+    },
+    {
+      "id": "notquiteog-dramatic-sky-ride",
+      "kind": "luaMod",
+      "name": "Dramatic Sky Ride",
+      "tagline": "Dramatic Sky Ride fork for the JohtoDioramaCart: the Crystal rider crash fix, Gen 1 unchanged",
+      "author": {
+        "name": "notquiteog",
+        "url": "https://github.com/notquiteog/dramatic-sky-ride"
+      },
+      "permission": "no-objection",
+      "categories": [
+        "PENDING"
+      ],
+      "target": "Gen1Recomp",
+      "engine": {
+        "id": "gen1recomp",
+        "family": "gen1recomp",
+        "games": []
+      },
+      "screenshots": [],
+      "version": "0.4.0",
+      "releasedAt": "2026-09-23T04:45:01Z",
+      "modID": "DRAMATIC_SKY_RIDE",
+      "download": {
+        "url": "https://github.com/notquiteog/dramatic-sky-ride/releases/download/v0.4.0/DRAMATIC_SKY_RIDE-0.4.0.zip",
+        "sizeBytes": 4980385,
+        "sha256": "64230e609c83b82ea53a3e03f06d4e0ad2400c66018c9553a464d344af9edc07",
+        "manifestPath": "manifest.json"
+      },
+      "project": {
+        "url": "https://github.com/notquiteog/dramatic-sky-ride/releases",
+        "status": "permission-needed"
+      },
+      "requirements": {
+        "permissions": [
+          "filesystem"
+        ],
+        "engineRange": "0.0.0-dev || >=0.1.69 <2.0.0"
       }
     }
   ]

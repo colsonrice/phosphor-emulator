@@ -44,8 +44,14 @@ export function cacheNameFor(row) {
   if (!row.directSource) return `published__${row.id}__${row.fileName}`;
   // Anchored, and the asset is the LAST path segment: a tag may itself hold a
   // slash, and a host that merely contains "github.com" is not GitHub.
-  const m = /^https:\/\/github\.com\/([^/]+)\/([^/]+)\/releases\/download\/.+\/([^/?#]+)(?:[?#].*)?$/
-    .exec(row.directSource.fileUrl ?? "");
+  const url = row.directSource.fileUrl ?? "";
+  const m =
+    /^https:\/\/github\.com\/([^/]+)\/([^/]+)\/releases\/download\/.+\/([^/?#]+)(?:[?#].*)?$/.exec(url)
+    // An archive committed to the tree rather than released, pinned to a
+    // commit. Without this form every mod of a suite published that way reads
+    // as "no release asset URL", and a Gen 3 mod that needs a ROM from the
+    // player would be published saying it needs nothing.
+    ?? /^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/[^/]+\/([^/?#]+)(?:[?#].*)?$/.exec(url);
   if (!m) return null;
   try {
     return `${m[1]}__${m[2]}__${decodeURIComponent(m[3])}`;
@@ -162,19 +168,36 @@ async function main() {
   console.log(`  need another mod  : ${depending.length}`);
   for (const { id, requires } of depending) console.log(`    ${id} — ${requires.join(", ")}`);
 
-  if (unread.length) {
-    console.error(`\n${unread.length} row(s) could not be read, so nothing was written:\n`);
-    for (const line of unread) console.error(`  - ${line}`);
-    console.error("\n  run: node scripts/verify-releases.mjs   (tier 1 rows)");
-    console.error("       node scripts/survey-mods.mjs       (tier 2 rows)");
-    process.exit(1);
-  }
-
+  // An incomplete run still SAVES what it derived, and still exits non-zero.
+  //
+  // It used to exit before the write, so a single unreadable archive threw the
+  // whole pass away. That reads as caution and was not: a hash-pinned catalog
+  // where creators re-cut releases never has a fully warm cache, so the pass
+  // effectively never wrote, and 24 Gen 3 rows were published with no
+  // `requirements.engineRange` at all by a --write run that printed
+  // "rows changed: 25" and saved nothing.
+  //
+  // Writing is safe because every mutation above is already evidence-based:
+  // a row whose archive could not be read `continue`s before `enrichment` is
+  // touched, so it keeps exactly what it had. Nothing here can clear a field
+  // on the strength of a missing file — the same rule promote-direct-source
+  // states as "absence of evidence never takes a working listing down".
+  //
+  // The non-zero exit stays, because an incomplete pass must never be mistaken
+  // for a complete one by a script or a person reading only the summary.
   if (write) {
     await writeFile(ENRICHMENT, JSON.stringify(enrichment, null, 2) + "\n");
     console.log("\nwrote src/data/enrichment.json");
   } else {
     console.log("\n(dry run, pass --write to save)");
+  }
+
+  if (unread.length) {
+    console.error(`\n${unread.length} row(s) could not be read and were left exactly as they were:\n`);
+    for (const line of unread) console.error(`  - ${line}`);
+    console.error("\n  run: node scripts/verify-releases.mjs   (tier 1 rows)");
+    console.error("       node scripts/survey-mods.mjs       (tier 2 rows)");
+    process.exitCode = 1;
   }
 }
 

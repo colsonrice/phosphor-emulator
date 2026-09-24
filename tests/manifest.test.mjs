@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
-import { buildManifest, demoteRowsTheEngineMovedPast } from "../scripts/build-manifest.mjs";
+import { buildManifest, rowsBeyondTheCataloguedEngine } from "../scripts/build-manifest.mjs";
 import { looksLikeAFileOrAHash } from "../scripts/enrich-catalog.mjs";
 import { satisfies } from "../scripts/lib/semver.mjs";
 import { categorize } from "../scripts/lib/categorize.mjs";
@@ -332,19 +332,27 @@ test("a declared engine range is published as one string, on installable entries
   }
 });
 
-test("no installable listing rules out the engine the catalog was gated against", async () => {
+/// The inverse of the assertion that used to stand here.
+///
+/// It required that NO installable listing rule out the catalogued engine,
+/// and three scripts enforced it. Colson removed the gate on 23 Sep 2026 —
+/// "we should accept all mods", "we can try mods that are newer than the
+/// gate" — so a row ahead of the pin is now a listing like any other, and the
+/// thing worth pinning is that it keeps what the app needs to be honest about
+/// it: an install to try, and the range to label the try with.
+test("a listing ahead of the catalogued engine is published, with its range intact", async () => {
   const { entries, engines } = await buildManifest();
   const gate = Object.fromEntries(engines.map((e) => [e.id, e.catalogedAgainst]));
-  const refused = entries
+  const ahead = entries
     .filter((entry) => entry.download && entry.requirements?.engineRange)
-    .filter((entry) => !satisfies(gate[entry.engine?.id], entry.requirements.engineRange))
-    .map((entry) => `${entry.id} needs ${entry.requirements.engineRange}`);
-  // The survey refuses such a row when it drafts one and the promoter refuses
-  // it when it promotes one. This is the check that stands when the engine
-  // moves under a row that was fine when it was written: the app would show
-  // it as NEEDS 3D ENGINE and block the install, which is honest and also a
-  // card nobody can use. Demote the row (drop its directSource) instead.
-  assert.deepEqual(refused, []);
+    .filter((entry) => !satisfies(gate[entry.engine?.id], entry.requirements.engineRange));
+  for (const entry of ahead) {
+    assert.ok(entry.download?.url, `${entry.id} lost its install to a gate that no longer exists`);
+    assert.ok(entry.requirements.engineRange,
+              `${entry.id} is ahead of the pin and does not say so`);
+  }
+  // Whatever the count, the reporter and the manifest have to agree about it.
+  assert.deepEqual(rowsBeyondTheCataloguedEngine(entries, engines).length, ahead.length);
 });
 // The app has carried `DiscoverCatalog.Grant` and a paragraph of copy per case
 // since it shipped, and until 22 Sep 2026 nothing published the field: all 507
@@ -393,64 +401,39 @@ const row = (over) => ({
   ...over,
 });
 
-test("a row the catalogued engine has outrun stops being an install", () => {
-  const errors = [];
-  const { entries, demoted } = demoteRowsTheEngineMovedPast([row()], ENGINES, errors);
-  assert.deepEqual(errors, []);
-  assert.equal(demoted.length, 1);
-  const [entry] = entries;
-  // Everything describing the bytes goes.
-  for (const gone of ["download", "requirements", "version", "releasedAt", "modID"]) {
-    assert.equal(entry[gone], undefined, `${gone} describes a file no longer offered`);
-  }
-  // Everything describing the work stays, licence included: the creator
-  // granted it and an engine bump does not take it back.
-  assert.deepEqual(entry.license, { spdx: "MIT" });
-  assert.equal(entry.permission, "open-license");
-  assert.deepEqual(entry.categories, ["QOL"]);
-  // And the card still does something when tapped.
-  assert.deepEqual(entry.project,
-    { url: "https://github.com/someone/a-mod", status: "engine-moved-on" });
+/// The gate was REMOVED on 23 Sep 2026, so what used to be demotion is now a
+/// line in the build output. These tests hold the reporter to the same
+/// precision the demoter had: it has to name exactly the rows that are ahead,
+/// because that list is the only signal left that this catalog's engine pin
+/// is behind the field.
+test("a row the catalogued engine has outrun is still an install, and is named", () => {
+  const entry = row();
+  const beyond = rowsBeyondTheCataloguedEngine([entry], ENGINES);
+  assert.equal(beyond.length, 1);
+  assert.match(beyond[0], /a-mod needs >=0\.2\.0 <0\.3\.0, catalogued against 0\.3\.2/);
+  // And nothing was taken off it. The app computes the same fit from the
+  // range this row still publishes, and labels the button; the catalog's job
+  // here is to say what the mod claims, not to decide for the player.
+  assert.ok(entry.download, "the install stays");
+  assert.deepEqual(entry.requirements, { engineRange: ">=0.2.0 <0.3.0" },
+                   "the range stays, because the app needs it to label the try");
 });
 
-test("a row the catalogued engine satisfies is left exactly alone", () => {
-  const errors = [];
+test("a row the catalogued engine satisfies is not named at all", () => {
   const inRange = row({ requirements: { engineRange: ">=0.2.0 <1.0.0" } });
-  const { entries, demoted } = demoteRowsTheEngineMovedPast([inRange], ENGINES, errors);
-  assert.deepEqual(demoted, []);
-  assert.deepEqual(errors, []);
-  assert.deepEqual(entries[0], inRange);
+  assert.deepEqual(rowsBeyondTheCataloguedEngine([inRange], ENGINES), []);
 });
 
-test("no gate and no declared range are both left alone, and are not the same as failing one", () => {
-  const errors = [];
+test("no gate and no declared range are both silent, and are not the same as failing one", () => {
   // A row whose engine this catalog does not gate: nothing to compare against.
   const other = row({ engine: { id: "some-other-engine" } });
   // A row that declares no range at all claims nothing to contradict.
   const silent = row({ requirements: { imports: ["x"] } });
-  const { entries, demoted } = demoteRowsTheEngineMovedPast([other, silent], ENGINES, errors);
-  assert.deepEqual(demoted, []);
-  assert.deepEqual(errors, []);
-  assert.ok(entries.every((entry) => entry.download), "neither loses its install");
+  assert.deepEqual(rowsBeyondTheCataloguedEngine([other, silent], ENGINES), []);
 });
 
-test("a row with nothing to link to is an error, never a card that does nothing", () => {
-  const errors = [];
-  const { demoted } = demoteRowsTheEngineMovedPast(
-    [row({ author: { name: "someone" } })], ENGINES, errors);
-  assert.deepEqual(demoted, []);
-  assert.equal(errors.length, 1);
-  assert.match(errors[0], /no HTTPS\s+link to fall back to/);
-});
-
-test("a tier-2 row keeps the link and the review status it already had", () => {
-  const errors = [];
-  const tier2 = row({
-    license: undefined, permission: "no-objection", categories: ["PENDING", "QOL"],
-    project: { url: "https://github.com/someone/a-mod/releases", status: "permission-needed" },
-  });
-  const { entries, demoted } = demoteRowsTheEngineMovedPast([tier2], ENGINES, errors);
-  assert.equal(demoted.length, 1);
-  assert.deepEqual(entries[0].project,
-    { url: "https://github.com/someone/a-mod/releases", status: "permission-needed" });
+test("a row with no install is not reported, whatever its range says", () => {
+  const linkOut = row({ download: undefined });
+  assert.deepEqual(rowsBeyondTheCataloguedEngine([linkOut], ENGINES), [],
+                   "there is no install to be ahead of anything");
 });

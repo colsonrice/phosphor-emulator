@@ -35,12 +35,26 @@ import { entryNames, readEntry, readManifest } from "./lib/archive.mjs";
 /// Keep it in step with the engine's GameVersion.ORDER.
 const GEN1_CARTRIDGES = ["red", "blue", "yellow"];
 const GEN2_CARTRIDGES = ["gold", "silver", "crystal"];
-const CARTRIDGES = [...GEN1_CARTRIDGES, ...GEN2_CARTRIDGES];
+/// FireRed since gen1recomp v0.2.69, LeafGreen since v0.3.2. They were missing
+/// from this list for the first two weeks the engine ran them, and the cost
+/// was not "no games line": a manifest declaring `games: ["firered"]` matched
+/// nothing here, fell through to the legacy rule below, and was PUBLISHED as
+/// Red/Blue/Yellow. The Spanish FireRed translation went live that way.
+export const GEN3_CARTRIDGES = ["firered", "leafgreen"];
+/// Every cartridge the games lines are written against, in the engine's own
+/// release order (GameVersion.ORDER). Published on the manifest as its
+/// top-level `games`, because a silent `requirements.games` means "every one
+/// of THESE", and the app has to know how long the list was when the
+/// publisher stayed silent: an older manifest's silence must not read as
+/// FireRed the day the app learns FireRed exists.
+export const CARTRIDGES = [...GEN1_CARTRIDGES, ...GEN2_CARTRIDGES, ...GEN3_CARTRIDGES];
 
 /// Which cartridges a manifest actually covers, by the ENGINE's own rule
 /// (src/mods/ModTargets.lua). An explicit `games` list wins, expanding "all"
-/// and "genN"; otherwise the legacy flag decides, and `gen2compat` is what
-/// upgrades a mod from Gen 1 only to every game.
+/// and "genN"; otherwise the legacy flag decides: Gen 1, widened to Gen 2 by
+/// `gen2compat`, and NEVER Gen 3, exactly as `ModTargets.legacy` reads it. A
+/// mod reaches FireRed or LeafGreen only by naming them, a generation, or
+/// "all".
 ///
 /// This has to match the loader exactly, because the loader is what refuses
 /// the mod at boot: `Loader:_skip(mod, "wrong_generation", "not marked
@@ -55,11 +69,12 @@ export function cartridgesFor(manifest) {
       if (key === "all") CARTRIDGES.forEach((c) => out.add(c));
       else if (key === "gen1") GEN1_CARTRIDGES.forEach((c) => out.add(c));
       else if (key === "gen2") GEN2_CARTRIDGES.forEach((c) => out.add(c));
+      else if (key === "gen3") GEN3_CARTRIDGES.forEach((c) => out.add(c));
       else if (CARTRIDGES.includes(key)) out.add(key);
     }
     if (out.size) return CARTRIDGES.filter((c) => out.has(c));
   }
-  return manifest.gen2compat ? [...CARTRIDGES] : [...GEN1_CARTRIDGES];
+  return manifest.gen2compat ? [...GEN1_CARTRIDGES, ...GEN2_CARTRIDGES] : [...GEN1_CARTRIDGES];
 }
 
 /// Declared by every mod that declares any permission at all. Not a
@@ -203,7 +218,9 @@ export function requirementsFrom(manifest, { usesNetwork = null } = {}) {
 
   // Published whenever the mod does NOT cover every cartridge. "For Red, Blue
   // and Yellow only." is the line the app draws from this, and for a Gen 1 mod
-  // being installed against Crystal it is the whole warning.
+  // being installed against Crystal it is the whole warning. Since the list
+  // reached eight, every legacy mod carries one: a mod that says nothing
+  // covers Gen 1 (or Gen 1 and 2), never the GBA games, and the line says so.
   const covers = cartridgesFor(manifest);
   if (covers.length < CARTRIDGES.length) out.games = covers;
 
@@ -236,13 +253,13 @@ export function popularityFrom(repo, releases, asOf) {
 const RELEASES = new URL("../src/data/releases.json", import.meta.url);
 const PROJECTS = new URL("../src/data/projects.json", import.meta.url);
 const OUTPUT = new URL("../src/data/enrichment.json", import.meta.url);
-const CACHE = new URL("../survey/cache/", import.meta.url);
+export const CACHE = new URL("../survey/cache/", import.meta.url);
 
 /// The filename `verify-releases.mjs` writes into `survey/cache/`. Kept
 /// identical on purpose: this pass reads the very bytes that were hashed
 /// against the catalog, so requirements cannot describe a different file than
 /// the one the catalog ships.
-const cacheNameFor = (release) => `published__${release.id}__${release.fileName}`;
+export const cacheNameFor = (release) => `published__${release.id}__${release.fileName}`;
 
 /// Whether the mod's Lua actually reaches for a network module.
 ///

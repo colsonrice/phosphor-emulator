@@ -75,10 +75,20 @@ test("games are published whenever a mod does not cover every cartridge", () => 
   // single most important thing a Crystal owner can be told before installing.
   // The rule follows the engine's own src/mods/ModTargets.lua.
 
-  // Still constants: these cover every cartridge.
-  assert.equal(requirementsFrom({ games: ["gen1", "gen2"] }), null);
+  // Since the engine reached eight (FireRed, LeafGreen), only "all" covers
+  // every cartridge. The Game Boy pairs that used to be constants are lines
+  // now, and they have to be: a mod that says "gen1, gen2" or `gen2compat`
+  // does NOT run on FireRed, and a silent line would claim it did the day
+  // the app learned FireRed exists. See ModTargets.legacy, which never
+  // reaches Gen 3.
   assert.equal(requirementsFrom({ games: ["all"] }), null);
-  assert.equal(requirementsFrom({ gen2compat: true }), null);
+  assert.deepEqual(requirementsFrom({ games: ["gen1", "gen2"] }),
+                   { games: ["red", "blue", "yellow", "gold", "silver", "crystal"] });
+  assert.deepEqual(requirementsFrom({ gen2compat: true }),
+                   { games: ["red", "blue", "yellow", "gold", "silver", "crystal"] });
+  assert.deepEqual(requirementsFrom({ games: ["firered"] }), { games: ["firered"] });
+  assert.deepEqual(requirementsFrom({ games: ["gen1", "gen3"] }),
+                   { games: ["red", "blue", "yellow", "firered", "leafgreen"] });
 
   // Gen 1 only, which is most of the catalog and the whole point of this line.
   assert.deepEqual(requirementsFrom({ games: ["gen1"] }), { games: ["red", "blue", "yellow"] });

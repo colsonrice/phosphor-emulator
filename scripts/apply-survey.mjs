@@ -30,6 +30,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 
 import { EXCLUDED } from "./lib/excluded.mjs";
+import { repoOf } from "./lib/repo-url.mjs";
 
 const RELEASES = new URL("../src/data/releases.json", import.meta.url);
 const PROJECTS = new URL("../src/data/projects.json", import.meta.url);
@@ -41,9 +42,6 @@ const DRAFT_RELEASES = draft("releases");
 const DRAFT_PROJECTS = draft("projects");
 const write = process.argv.includes("--write");
 
-const repoOf = (url) =>
-  (url ?? "").match(/^https:\/\/github\.com\/([^/#?]+\/[^/#?]+)/)?.[1]?.toLowerCase()
-    .replace(/\.git$/, "") ?? null;
 const excluded = new Set(Object.keys(EXCLUDED).map((k) => k.toLowerCase()));
 
 /// The fields a new release moves. Everything else on a row is somebody's
@@ -124,7 +122,16 @@ async function main() {
   for (const draft of draftProjects) {
     const repo = repoOf(draft.homepageUrl);
     if (excluded.has(repo)) { skipped.push([draft.id, "held out for what it does"]); continue; }
-    if ([...releases.map((r) => repoOf(r.fileUrl)), ...projects.map((p) => repoOf(p.homepageUrl))].includes(repo)) continue;
+    // Already carried, asked of the MOD and not only the repository.
+    //
+    // The repository alone was the question while a repository meant a mod.
+    // Against a suite it answered "yes" as soon as the first of its mods was
+    // pushed, and the remaining 22 of FAFF0x/gen3recomp's Gen 3 mods were
+    // dropped silently as duplicates of a listing that was not them.
+    const carries = (rowRepo, rowModId) =>
+      rowRepo === repo && (!draft.modId || !rowModId || rowModId === draft.modId);
+    if (releases.some((r) => carries(repoOf(r.fileUrl), r.modId))
+        || projects.some((p) => carries(repoOf(p.homepageUrl), p.modId ?? p.directSource?.modId))) continue;
     const row = { ...draft };
     if (takenIds.has(row.id)) row.id = `${repo.split("/")[0].replace(/[^a-z0-9]+/g, "-")}-${row.id}`;
     takenIds.add(row.id);
