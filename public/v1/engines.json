@@ -2,6 +2,75 @@
   "note": "Builds of gen1recomp (https://github.com/bryanthaboi/gen1recomp) by BOIS CLUB GAMES, packaged and published by Phosphor. Phosphor is not an official build of gen1recomp and is not endorsed by its authors.",
   "entries": [
     {
+      "id": "gen1recomp-619aad95bdcb",
+      "engineID": "gen1recomp",
+      "engineVersion": "0.3.14",
+      "upstream": "591bf4d6d605b15a0f2990efa8e024aece3c54b5",
+      "snapshotDate": "2026-09-24T17:05:11-04:00",
+      "sha256": "619aad95bdcb6c57652464de8b836e9579a7f2aeef8cfc553e161ca45f74ab43",
+      "bytes": 24154869,
+      "url": "https://github.com/colsonrice/phosphor-emulator/releases/download/gen1recomp-0.3.14/gen1recomp-619aad95bdcb.love",
+      "shippedIn": null,
+      "games": [
+        "blue",
+        "crystal",
+        "firered",
+        "gold",
+        "leafgreen",
+        "red",
+        "silver",
+        "yellow"
+      ],
+      "overlay": "5589d500c4dd4137c63ac37faafb5698e82a25240f5b864a098ffd6f380e4342",
+      "ordinal": 51
+    },
+    {
+      "id": "gen1recomp-6b6f45eb01f2",
+      "engineID": "gen1recomp",
+      "engineVersion": "0.3.13",
+      "upstream": "98e21f359753eb35015a2fd06e737a99a0d5c395",
+      "snapshotDate": "2026-09-24T16:36:49-04:00",
+      "sha256": "6b6f45eb01f25a4a88e27dac45b609cbc31e40fc8cb4ac4c9d08a8c20c93d711",
+      "bytes": 24154846,
+      "url": "https://github.com/colsonrice/phosphor-emulator/releases/download/gen1recomp-0.3.13/gen1recomp-6b6f45eb01f2.love",
+      "shippedIn": null,
+      "games": [
+        "blue",
+        "crystal",
+        "firered",
+        "gold",
+        "leafgreen",
+        "red",
+        "silver",
+        "yellow"
+      ],
+      "overlay": "5589d500c4dd4137c63ac37faafb5698e82a25240f5b864a098ffd6f380e4342",
+      "ordinal": 50
+    },
+    {
+      "id": "gen1recomp-95dd419ea6b7",
+      "engineID": "gen1recomp",
+      "engineVersion": "0.3.12",
+      "upstream": "da707a49a72d384149ef9db09ca7a18a02796b69",
+      "snapshotDate": "2026-09-24T16:09:22-04:00",
+      "sha256": "95dd419ea6b7cd9f02697c7cc05f5b90f1389f441963798f3ab0226b279ae56b",
+      "bytes": 24154698,
+      "url": "https://github.com/colsonrice/phosphor-emulator/releases/download/gen1recomp-0.3.12/gen1recomp-95dd419ea6b7.love",
+      "shippedIn": null,
+      "games": [
+        "blue",
+        "crystal",
+        "firered",
+        "gold",
+        "leafgreen",
+        "red",
+        "silver",
+        "yellow"
+      ],
+      "overlay": "5589d500c4dd4137c63ac37faafb5698e82a25240f5b864a098ffd6f380e4342",
+      "ordinal": 49
+    },
+    {
       "id": "gen1recomp-df340123cd98",
       "engineID": "gen1recomp",
       "engineVersion": "0.3.11",
