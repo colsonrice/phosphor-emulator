@@ -408,7 +408,7 @@ export function LibraryApp() {
       <footer>
         <a className="brand footer-brand" href="./"><span className="brand-glyph" aria-hidden="true">P<span>_</span></span><span className="brand-name">phosphor<span>_</span></span></a>
         <p>A clean home for ROM hack patches and recomp mods that are okay to share. Not affiliated with Nintendo, The Pokémon Company, or project creators.</p>
-        <div><a href="#standards">Catalog policy</a><a href="#submit">Contribute</a><a href="#top">Back to top ↑</a></div>
+        <div><a href="#standards">Catalog policy</a><a href="#submit">Contribute</a><a href="privacy.html">Privacy</a><a href="licenses.html">Licenses</a><a href="#top">Back to top ↑</a></div>
       </footer>
     </div>
   );

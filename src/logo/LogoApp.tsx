@@ -227,6 +227,8 @@ export function LogoApp() {
           <a href={appStoreUrl}>App Store</a>
           <a href="/">Home</a>
           <a href="library.html">Mod library</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="licenses.html">Licenses</a>
         </div>
       </footer>
     </div>

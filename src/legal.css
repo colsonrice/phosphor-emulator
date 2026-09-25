@@ -1,0 +1,130 @@
+/* Shared "document" layout for text-heavy pages (Privacy Policy, Licenses).
+   Reuses the palette, fonts, header and footer rules from home.css; this
+   file only adds the reading column and its typography. */
+
+.legal-main {
+  width: min(760px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 64px 0 120px;
+  position: relative;
+  z-index: 2;
+}
+
+.legal-kicker { margin: 0 0 18px; }
+
+.legal-main h1 {
+  margin: 0 0 40px;
+  font-size: clamp(2.3rem, 5vw, 3.4rem);
+  line-height: 1.05;
+  letter-spacing: -.03em;
+  font-weight: 750;
+  color: var(--ink);
+}
+
+.legal-main h2 {
+  margin: 2.4em 0 .75em;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  line-height: 1.3;
+  letter-spacing: -.01em;
+  color: var(--green-hot);
+  font-weight: 700;
+}
+
+.legal-main h2:first-of-type { margin-top: 0; }
+
+.legal-main p {
+  margin: 0 0 1.3em;
+  max-width: 66ch;
+  color: #cfe6df;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.legal-main ul {
+  margin: 0 0 1.3em;
+  padding-left: 1.2em;
+  max-width: 66ch;
+  color: #cfe6df;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.legal-main li { margin: 0 0 .6em; }
+.legal-main li:last-child { margin-bottom: 0; }
+
+.legal-main a {
+  color: var(--green-hot);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: rgba(138, 255, 220, .45);
+  word-break: break-word;
+}
+.legal-main a:hover { color: var(--ink); }
+
+.legal-foot-note {
+  margin-top: 2.6em;
+  padding-top: 1.5em;
+  border-top: 1px solid var(--line);
+  color: var(--dim);
+  font: 400 11px/1.6 var(--mono);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+/* Licenses list */
+.license-entry {
+  padding: 26px 0;
+  border-top: 1px solid var(--line);
+}
+.license-entry:first-of-type { border-top: none; padding-top: 0; }
+
+.license-entry h2 {
+  margin: 0 0 14px;
+  font-size: 1.2rem;
+}
+.license-entry h2 small {
+  margin-left: 9px;
+  color: var(--dim);
+  font: 500 12px/1 var(--mono);
+  letter-spacing: .02em;
+}
+
+.license-fields {
+  margin: 0 0 14px;
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 7px 14px;
+}
+.license-fields dt {
+  margin: 0;
+  color: var(--dim);
+  font: 500 10px/1.7 var(--mono);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.license-fields dd {
+  margin: 0;
+  color: #cfe6df;
+  font-size: .95rem;
+  line-height: 1.6;
+}
+
+.license-entry p {
+  margin: 0 0 8px;
+  max-width: 66ch;
+  color: #cfe6df;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+.license-entry p:last-child { margin-bottom: 0; }
+
+@media (max-width: 760px) {
+  .legal-main { padding: 44px 0 90px; }
+}
+
+@media (max-width: 500px) {
+  .legal-main h1 { margin-bottom: 28px; }
+  .legal-main p, .legal-main ul, .license-entry p { font-size: 1rem; }
+  .license-fields { grid-template-columns: 1fr; gap: 2px 0; }
+  .license-fields dd { margin-bottom: 8px; }
+}

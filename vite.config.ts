@@ -43,6 +43,8 @@ export default defineConfig({
         home: resolve(import.meta.dirname, "index.html"),
         library: resolve(import.meta.dirname, "library.html"),
         logo: resolve(import.meta.dirname, "logo.html"),
+        privacy: resolve(import.meta.dirname, "privacy.html"),
+        licenses: resolve(import.meta.dirname, "licenses.html"),
       },
     },
   },
