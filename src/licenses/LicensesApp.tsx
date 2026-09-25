@@ -84,11 +84,18 @@ const entries: Entry[] = [
 function EntryBody({ entry }: { entry: Entry }) {
   if (entry.id === "gen1recomp") {
     return (
-      <p>
-        The engine behind Gen1Recomp. Phosphor includes it with written permission from BOIS
-        CLUB GAMES. Phosphor&apos;s changes to it are published at{" "}
-        <a href={overlayUrl}>{overlayUrl}</a>.
-      </p>
+      <>
+        <p>
+          The engine behind Gen1Recomp. Phosphor includes it with written permission from BOIS
+          CLUB GAMES. Phosphor&apos;s changes to it are published at{" "}
+          <a href={overlayUrl}>{overlayUrl}</a>.
+        </p>
+        <p>
+          <a href={entry.upstream}>
+            Based on the Pokemon Gen 1 Recompilation Project by BOIS CLUB GAMES, LLC (https://github.com/bryanthaboi/gen1recomp)
+          </a>
+        </p>
+      </>
     );
   }
   if (entry.text) return <p>{entry.text}</p>;
