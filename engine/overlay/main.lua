@@ -355,12 +355,28 @@ local hostImportActive = false
 -- Throttle for the host's runtime command poll (save/load/speed from the
 -- embedding app's chrome). 0.25s keeps it a directory stat, not a hot path.
 local hostCommandTimer = 0
+-- PHOSPHOR: the host's MENU button opens the engine's hotbar through a file
+-- of its own (HostSeam.pollHotbarRequest), polled twenty times a second
+-- rather than four: it answers a finger on a button, and a quarter second of
+-- nothing reads as a tap that missed. Still one stat per poll.
+local hostHotbarTimer = 0
 
 -- The game's own START -> SAVE never passes through the host; this is how
 -- it still gets its picture (spec §3.6). See HostSeam.newSlotWatcher.
 local slotWatcher = nil
 
 local function pollHostCommands(dt)
+  hostHotbarTimer = hostHotbarTimer + dt
+  if hostHotbarTimer >= 0.05 then
+    hostHotbarTimer = 0
+    -- No game, no bar: the request stays on disk and the host, seeing it
+    -- untaken, opens its own sheet instead.
+    if Game then
+      pcall(function()
+        require("src.core.HostSeam").pollHotbarRequest(require("src.core.TouchControls"))
+      end)
+    end
+  end
   hostCommandTimer = hostCommandTimer + dt
   if hostCommandTimer < 0.25 then return end
   hostCommandTimer = 0

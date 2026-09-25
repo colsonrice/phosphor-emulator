@@ -638,61 +638,326 @@ end
 
 -- ----------------------------------------------------------- session menu
 
--- The host's session menu, reached from the engine's OWN hotbar (the "..."
--- button in the top-trailing corner).
+-- The host's way out, reached from the engine's OWN hotbar: the strip of
+-- SAVE LOAD SPEED COLOR TILT ZOOM cells the pad's "..." toggle drops.
 --
 -- Under Phosphor's "Mod's Own" control style the engine draws its whole
--- touch UI and Phosphor adds one floating menu button beneath that "...".
--- That button fades to nothing after six idle seconds, and nothing a player
--- does on the engine's pad restarts its clock, so a few seconds into every
--- session the only way back to Phosphor was an invisible corner nobody knew
--- to tap. Reported on LeafGreen, Sep 23 2026: "no way to exit the game".
--- The hotbar never fades and is where a player reaches anyway, so the menu
--- lives there too: one MENU cell, the same word Phosphor's own deck uses.
+-- touch UI and Phosphor used to add one floating menu button beneath that
+-- "...". That button faded to nothing after six idle seconds, and nothing a
+-- player does on the engine's pad restarted its clock, so a few seconds into
+-- every session the only way back to Phosphor was an invisible corner nobody
+-- knew to tap. Reported on LeafGreen, Sep 23 2026: "no way to exit the game".
+-- The hotbar never fades and is where a player reaches anyway, so the way
+-- out lives there too, as two cells after the engine's own:
 --
--- game -> host: host/menu_request.json { seq }. The host consumes it and
--- presents the same sheet its own button would. `seq` is monotonic so a
--- host that reads late still sees one press as one request.
+--   EXIT  back to the host's library, through the host's own exit, which
+--         saves and carries the save across first (a LOVE quit would skip
+--         all of that).
+--   MORE  the host's session sheet: the saves list, the control style,
+--         skins, restart, 2D mode.
+--
+-- MORE is last because the last cell sits right under the "..." toggle, and
+-- a tap meant for the toggle that lands a little low should open a menu, not
+-- leave the game. Neither is called MENU: under Phosphor's own controls MENU
+-- is the host's button that OPENS this bar (Colson, Sep 24 2026: "calling it
+-- menu, and then having a menu button is bad ia").
+--
+-- game -> host: host/menu_request.json { seq, action = "menu" | "exit" }.
+-- The host consumes it and does what its own sheet would. `seq` is monotonic
+-- so a host that reads late still sees one press as one request. A host that
+-- predates `action` reads every request as the menu, which is the safe way
+-- to misread one.
 local menuRequestSeq = 0
 
 HostSeam.MENU_HOTKEY = "phosphor_menu"
-HostSeam.MENU_LABEL = "MENU"
+HostSeam.MENU_LABEL = "MORE"
+HostSeam.EXIT_HOTKEY = "phosphor_exit"
+HostSeam.EXIT_LABEL = "EXIT"
 
-function HostSeam.requestMenu(fs)
+function HostSeam.requestMenu(fs, action)
   menuRequestSeq = menuRequestSeq + 1
-  return writeJson(fs, "menu_request.json", { seq = menuRequestSeq })
+  return writeJson(fs, "menu_request.json",
+                   { seq = menuRequestSeq, action = action or "menu" })
 end
 
--- Put the MENU cell in the hotbar and route its press to the host.
+-- ------------------------------------------------ the bar, opened by the host
 --
--- Three touches on the touch modules, none of them a file the overlay has
--- to carry: the hotkey NAME is registered (TouchSkin.newControl parses a
--- spec through TouchSkin.HOTKEYS and drops anything it does not know as
--- decoration), the item list gains the cell after the engine's own six, and
--- the handler every generation installs from its load() is wrapped so the
--- press never reaches the game as an unknown action. Idempotent, and pure
--- over the modules it is handed so the suite drives it with stand-ins.
--- Embedded hosts call this; standalone keeps the hotbar it shipped, because
--- there is no host to open a menu in.
-function HostSeam.installHotbarMenu(TouchControls, TouchSkin, fs)
+-- Under Phosphor's OWN control style ("Overlay") the engine's pad is switched
+-- off (launch.touchControls = false), and the "..." toggle goes with it, so
+-- the bar above could not be reached at all: Phosphor's MENU opened a sheet
+-- of its own with Save, Load and Speed but no COLOR, TILT or ZOOM. Colson,
+-- Sep 24 2026, asked for the engine's bar from that MENU instead. So the
+-- host opens the SAME bar, with the pad still off, hung under the host's
+-- button rather than under a toggle that is not on screen.
+--
+-- host -> game: host/hotbar_request.json { op = "toggle" | "close" |
+--   "anchor", anchor = { x, y } }, consumed on read. `anchor` is where the
+--   bar hangs, as fractions of the window: centred on x, top edge at y. The
+--   host picks a y below everything its own window claims, so no tap on the
+--   bar lands on the host instead of here. "anchor" only moves it, for a
+--   MENU that moved.
+-- game -> host: host/hotbar.json carries `hostStrip`, true while the engine
+--   takes those requests. A payload older than this never writes it, and one
+--   whose bar failed to draw writes false: either way the host's MENU opens
+--   the host's own sheet, so it can never become a button that does nothing.
+--
+-- The pad draws its strip only from inside its own draw, after its d-pad and
+-- buttons and only while it is visible, so the painting here is this file's,
+-- copied from the strip branch of TouchControls:draw (same fills, alphas and
+-- label shadow), and the geometry is TouchControls:hotbarStrip's, centred on
+-- the anchor. The CELLS are never copied: they come from hotbarItems(), so a
+-- cell upstream adds turns up here on its own, and a press does what the
+-- pad's own press does: the cell's keys through love.keypressed, its hotkeys
+-- through the pad's handler.
+
+-- Where the bar hangs when a request names no anchor: top centre.
+local DEFAULT_ANCHOR = { x = 0.5, y = 0.12 }
+
+local function clamp01(v)
+  if v < 0 then return 0 end
+  if v > 1 then return 1 end
+  return v
+end
+
+-- The host bar's state lives on the pad module it belongs to, one per
+-- TouchControls, so the suite's stand-ins never share it.
+local function hostBar(tc)
+  local bar = rawget(tc, "_phosphorBar")
+  if not bar then
+    bar = { open = false, touches = {} }
+    tc._phosphorBar = bar
+  end
+  return bar
+end
+
+-- One press or release of a bar cell, the way the pad's own enterControl /
+-- exitControl fire a hotbar cell: keys through love.keypressed /
+-- love.keyreleased (the engine's F1 / F2 / 1..4 ladder), hotkeys through the
+-- pad's handler, and the pad's own buzz on the press.
+local function fireBarCell(tc, bar, ctl, down)
+  local env = bar.env or {}
+  for _, key in ipairs(ctl.keys or {}) do
+    if env.key then env.key(key, down) end
+  end
+  for _, action in ipairs(ctl.hotkeys or {}) do
+    local handler = tc.hotkeyHandler
+    if type(handler) == "function" then pcall(handler, action, down) end
+  end
+  if down and type(tc.buzz) == "function" then pcall(tc.buzz, tc.haptics) end
+end
+
+-- Close the bar and let go of anything held on it. The held set is swapped
+-- out before it is released, because releasing a hotkey cell can land back
+-- here (MORE and EXIT close the bar from inside the handler).
+local function closeBar(tc)
+  local bar = hostBar(tc)
+  bar.open = false
+  bar.cells = nil
+  local held = bar.touches
+  bar.touches = {}
+  for _, ctl in pairs(held) do fireBarCell(tc, bar, ctl, false) end
+end
+
+-- Whether the pad has its own strip on screen. The host's then never draws:
+-- the player switched to the engine's own controls under an open bar, and
+-- one bar is the most there should ever be.
+local function padShowsOwnHotbar(tc)
+  return type(tc.visible) == "function" and tc:visible() == true
+    and type(tc.hotbarShown) == "function" and tc:hotbarShown() == true
+end
+
+-- Where the host bar's cells go. TouchControls:hotbarStrip's arithmetic cell
+-- for cell, except that the bar is centred on the anchor instead of ending
+-- under the "..." toggle, and kept below the safe rect's top as well as above
+-- its bottom. `cellH` is the pad's own cell height and `labelWidth` measures
+-- in the pad's own font; `safe` is { x, y, w, h }.
+function HostSeam.hotbarLayout(items, cellH, labelWidth, safe, anchorX, anchorY)
+  local cells = {}
+  local n = type(items) == "table" and #items or 0
+  if n == 0 or type(cellH) ~= "number" or cellH <= 0 then return cells end
+  local pad = cellH * 0.14
+  local cw = cellH * 1.9
+  for _, ctl in ipairs(items) do
+    cw = math.max(cw, labelWidth(tostring(ctl.label or "")) + pad * 3)
+  end
+  local total = math.min(safe.w - pad * 2, cw * n)
+  cw = total / n
+  local x0 = math.max(safe.x + pad,
+                      math.min(anchorX - total / 2, safe.x + safe.w - pad - total))
+  local y0 = math.max(safe.y, math.min(anchorY, safe.y + safe.h - cellH))
+  for i, ctl in ipairs(items) do
+    cells[i] = { ctl = ctl, label = ctl.label, h = cellH,
+                 x = x0 + (i - 1) * cw, y = y0, w = cw - pad }
+  end
+  return cells
+end
+
+-- Whether the host has the bar open right now.
+function HostSeam.hotbarOpenedByHost(TouchControls)
+  if type(TouchControls) ~= "table" then return false end
+  local bar = rawget(TouchControls, "_phosphorBar")
+  return bar ~= nil and bar.open == true
+end
+
+-- The cells the host bar drew last frame: the touch path hit-tests these, so
+-- a press lands on exactly what is on screen.
+function HostSeam.hotbarCells(TouchControls)
+  if type(TouchControls) ~= "table" then return nil end
+  local bar = rawget(TouchControls, "_phosphorBar")
+  if not (bar and bar.open) then return nil end
+  return bar.cells
+end
+
+-- Apply the host's request, if there is one. Returns whether the bar is open
+-- after it, or nil when there was nothing to apply. A pad the seam was never
+-- installed on is left alone, request and all.
+function HostSeam.pollHotbarRequest(TouchControls, fs)
+  if type(TouchControls) ~= "table" or not rawget(TouchControls, "_phosphorHotbarMenu") then
+    return nil
+  end
+  local req = consumeJson(fs, "hotbar_request.json")
+  if type(req) ~= "table" then return nil end
+  local bar = hostBar(TouchControls)
+  local a = req.anchor
+  if type(a) == "table" and type(a.x) == "number" and type(a.y) == "number"
+     and a.x == a.x and a.y == a.y then
+    bar.anchor = { x = clamp01(a.x), y = clamp01(a.y) }
+  end
+  -- MENU moved (the phone turned, and the engine never resets its pad for
+  -- that): re-hang the bar, open or closed, without toggling it.
+  if req.op == "anchor" then return bar.open end
+  if req.op ~= "close" and not bar.open and not bar.broken then
+    bar.open = true
+  else
+    closeBar(TouchControls)
+  end
+  return bar.open
+end
+
+local function paintBar(bar, g, font)
+  local cells = bar.cells
+  local first, last = cells[1], cells[#cells]
+  if not (first and last) then return end
+  local held = {}
+  for _, ctl in pairs(bar.touches) do held[ctl] = true end
+  g.setFont(font)
+  local pad = first.h * 0.14
+  g.setColor(0.15, 0.15, 0.15, 0.55)
+  g.rectangle("fill", first.x - pad, first.y - pad,
+              last.x + last.w - first.x + pad * 2, first.h + pad * 2, first.h * 0.3)
+  for _, cell in ipairs(cells) do
+    local down = held[cell.ctl] == true
+    g.setColor(0.3, 0.3, 0.3, down and 0.85 or 0.6)
+    g.rectangle("fill", cell.x, cell.y, cell.w, cell.h, cell.h * 0.25)
+    local label = tostring(cell.label or "")
+    local tw = font:getWidth(label)
+    local ty = cell.y + (cell.h - font:getHeight()) * 0.5
+    g.setColor(0, 0, 0, 0.6)
+    g.print(label, cell.x + (cell.w - tw) * 0.5 + 1, ty + 1)
+    g.setColor(1, 1, 1, down and 0.95 or 0.85)
+    g.print(label, cell.x + (cell.w - tw) * 0.5, ty)
+  end
+end
+
+-- Lay out and paint the host bar, last thing in the frame like the pad
+-- itself. Any failure closes the bar AND withdraws it (`broken`), which the
+-- next report tells the host: a bar that cannot draw must hand MENU back to
+-- the host's own sheet rather than leave a button that opens nothing.
+local function drawHostBar(tc)
+  local bar = hostBar(tc)
+  if not bar.open then bar.cells = nil return end
+  if tc.preview or padShowsOwnHotbar(tc) then closeBar(tc) return end
+  local env = bar.env or {}
+  local g = env.graphics
+  if not g then return end
+  local pushed = false
+  local ok, err = pcall(function()
+    local L = tc:layout()
+    local zone = L and L.hotbar
+    local font = tc.labelFont
+    if not (zone and type(zone.w) == "number" and font) then
+      error("the pad has no layout to size the bar from", 0)
+    end
+    local ox, oy, sw, sh = env.windowRect()
+    local ww, wh = env.fullDimensions()
+    local anchor = bar.anchor or DEFAULT_ANCHOR
+    bar.cells = HostSeam.hotbarLayout(tc:hotbarItems(), zone.w * 0.95,
+      function(label) return font:getWidth(label) end,
+      { x = ox, y = oy, w = sw, h = sh }, anchor.x * ww, anchor.y * wh)
+    g.push("all")
+    pushed = true
+    g.origin()
+    paintBar(bar, g, font)
+    g.pop()
+    pushed = false
+  end)
+  if not ok then
+    if pushed then pcall(g.pop) end
+    bar.broken = true
+    closeBar(tc)
+    print("[phosphor] host hotbar withdrawn: " .. tostring(err))
+  end
+end
+
+-- What the bar's cells and draw need from the running engine, looked up the
+-- way the pad itself looks them up; the suite hands in stand-ins.
+local function barEnv(deps)
+  deps = deps or {}
+  return {
+    graphics = deps.graphics or (love and love.graphics),
+    windowRect = deps.windowRect or function()
+      return require("src.core.SafeArea").windowRect()
+    end,
+    fullDimensions = deps.fullDimensions or function()
+      return require("src.render.GameViewport").fullDimensions()
+    end,
+    -- TouchControls' own pressKey, looked up per press as it does it.
+    key = deps.key or function(key, down)
+      local fn = love and (down and love.keypressed or love.keyreleased)
+      if type(fn) == "function" then pcall(fn, key, key, false) end
+    end,
+  }
+end
+
+-- Put EXIT and MORE in the hotbar, route their presses to the host, and let
+-- the host open the bar itself.
+--
+-- All of it is wrapping, on the touch modules, and none of it is a file the
+-- overlay has to carry: the hotkey NAMES are registered (TouchSkin.newControl
+-- parses a spec through TouchSkin.HOTKEYS and drops anything it does not know
+-- as decoration), the item list gains the two cells after the engine's own
+-- six, the handler every generation installs from its load() is wrapped so a
+-- press never reaches the game as an unknown action, and draw / touches /
+-- reset / init are wrapped for the host-opened bar. Idempotent, and pure over
+-- the modules it is handed so the suites drive it with stand-ins. Embedded
+-- hosts call this; standalone keeps the hotbar it shipped, because there is
+-- no host to go back to.
+function HostSeam.installHotbarMenu(TouchControls, TouchSkin, fs, deps)
   if type(TouchControls) ~= "table" or type(TouchSkin) ~= "table" then return false end
   if TouchControls._phosphorHotbarMenu then return false end
   TouchControls._phosphorHotbarMenu = true
-  -- A previous session's report must not decide this one's fallback.
+  -- A previous session's report must not decide this one's fallback, and a
+  -- request it left behind must not open this one's bar.
   removeFile(fs, "hotbar.json")
+  removeFile(fs, "hotbar_request.json")
+  hostBar(TouchControls).env = barEnv(deps)
 
   TouchSkin.HOTKEYS = TouchSkin.HOTKEYS or {}
   TouchSkin.HOTKEYS[HostSeam.MENU_HOTKEY] = HostSeam.MENU_HOTKEY
+  TouchSkin.HOTKEYS[HostSeam.EXIT_HOTKEY] = HostSeam.EXIT_HOTKEY
 
   local baseItems = TouchControls.hotbarItems
   function TouchControls:hotbarItems()
     local items = baseItems(self)
     -- The engine caches the list per init() and hands back the same table,
-    -- so the mark on it is what keeps one cell one cell.
+    -- so the mark on it is what keeps two cells two cells.
     if type(items) == "table" and not items._phosphorMenu then
-      local ctl = TouchSkin.newControl(HostSeam.MENU_HOTKEY, 0, 0, 0, 0, "rect")
-      ctl.label = HostSeam.MENU_LABEL
-      items[#items + 1] = ctl
+      for _, cell in ipairs({ { HostSeam.EXIT_HOTKEY, HostSeam.EXIT_LABEL },
+                              { HostSeam.MENU_HOTKEY, HostSeam.MENU_LABEL } }) do
+        local ctl = TouchSkin.newControl(cell[1], 0, 0, 0, 0, "rect")
+        ctl.label = cell[2]
+        items[#items + 1] = ctl
+      end
       items._phosphorMenu = true
     end
     return items
@@ -701,36 +966,105 @@ function HostSeam.installHotbarMenu(TouchControls, TouchSkin, fs)
   local baseSetHandler = TouchControls.setHotkeyHandler
   function TouchControls:setHotkeyHandler(fn)
     local inner = type(fn) == "function" and fn or nil
+    local pad = self
     baseSetHandler(self, function(action, pressed)
-      if action == HostSeam.MENU_HOTKEY then
-        if pressed then HostSeam.requestMenu(fs) end
+      if action == HostSeam.MENU_HOTKEY or action == HostSeam.EXIT_HOTKEY then
+        if pressed then
+          HostSeam.requestMenu(fs, action == HostSeam.EXIT_HOTKEY and "exit" or "menu")
+          -- Fold the bar away, whichever one this was: the sheet should close
+          -- onto the game, not onto a bar the player has finished with.
+          pad.hotbarOpen = false
+          closeBar(pad)
+        end
         return
       end
       if inner then return inner(action, pressed) end
     end)
   end
 
-  -- Whether the hotbar, and so MENU, can be reached at all: the pad is on
-  -- for this platform, the touch-controls option is on, the hotbar option is
-  -- on, and no touch skin has replaced the pad (skins draw no hotbar). The
-  -- host draws nothing of its own while this is true (Colson, Sep 23 2026:
-  -- "just use gen1recomp's menu when we use his overlay"), and a small
-  -- button of its own only while it is false, because a session with no way
-  -- out is the one thing this whole seam exists to prevent. Reported from
-  -- draw, once per change, so the file is written a handful of times per
-  -- session and never per frame. A pad hiding the overlay is not "off": one
-  -- touch brings the pad back, MENU with it, and that is the engine's own
-  -- rule for its own controls.
-  local lastReported = nil
+  -- What the host can reach, reported from draw once per change, so the file
+  -- is written a handful of times per session and never per frame.
+  --
+  -- `shown`: the hotbar, and so EXIT and MORE, can be reached on the pad's
+  -- own controls: the pad is on for this platform, the touch-controls option
+  -- is on, the hotbar option is on, and no touch skin has replaced the pad
+  -- (skins draw no hotbar). Under "Mod's Own" the host draws nothing of its
+  -- own while this is true (Colson, Sep 23 2026: "just use gen1recomp's menu
+  -- when we use his overlay"), and a small button only while it is false,
+  -- because a session with no way out is the one thing this seam exists to
+  -- prevent. A pad hiding the overlay is not "off": one touch brings the pad
+  -- back, and the cells with it, which is the engine's own rule.
+  --
+  -- `hostStrip`: the host may open the bar itself (above). False only once
+  -- a draw of it has failed.
+  local lastShown, lastOffered = nil, nil
   local baseDraw = TouchControls.draw
   function TouchControls:draw(...)
     local shown = self.active == true and self.enabled ~= false
       and self:hotbarShown() == true
-    if shown ~= lastReported then
-      lastReported = shown
-      writeJson(fs, "hotbar.json", { shown = shown })
+    local offered = not hostBar(self).broken
+    if shown ~= lastShown or offered ~= lastOffered then
+      lastShown, lastOffered = shown, offered
+      writeJson(fs, "hotbar.json", { shown = shown, hostStrip = offered })
     end
-    return baseDraw(self, ...)
+    baseDraw(self, ...)
+    drawHostBar(self)
+  end
+
+  -- The pad keeps first refusal on every touch (#807), and the open bar is
+  -- the pad's, so it goes first of all: a press on a cell is captured here
+  -- and never reaches the pad or the game, and any other press goes on
+  -- exactly as it did.
+  local basePressed = TouchControls.touchpressed
+  function TouchControls:touchpressed(id, x, y, ...)
+    local bar = hostBar(self)
+    if bar.open and bar.cells and not self.preview then
+      for _, cell in ipairs(bar.cells) do
+        if x >= cell.x and x <= cell.x + cell.w
+           and y >= cell.y and y <= cell.y + cell.h then
+          bar.touches[id] = cell.ctl
+          fireBarCell(self, bar, cell.ctl, true)
+          return true
+        end
+      end
+    end
+    if basePressed then return basePressed(self, id, x, y, ...) end
+  end
+
+  local baseMoved = TouchControls.touchmoved
+  function TouchControls:touchmoved(id, ...)
+    -- A captured finger holds its cell wherever it wanders, like the pad's
+    -- own hotbar cells do.
+    if hostBar(self).touches[id] then return end
+    if baseMoved then return baseMoved(self, id, ...) end
+  end
+
+  local baseReleased = TouchControls.touchreleased
+  function TouchControls:touchreleased(id, ...)
+    local bar = hostBar(self)
+    local ctl = bar.touches[id]
+    if ctl then
+      bar.touches[id] = nil
+      fireBarCell(self, bar, ctl, false)
+      return
+    end
+    if baseReleased then return baseReleased(self, id, ...) end
+  end
+
+  -- LOVE has no touchcancelled; the engine resets the pad on focus and
+  -- visibility loss instead, which closes the pad's own strip. The host's
+  -- closes with it, letting go of anything held.
+  local baseReset = TouchControls.reset
+  function TouchControls:reset(...)
+    closeBar(self)
+    if baseReset then return baseReset(self, ...) end
+  end
+
+  -- A new game starts with the bar closed, as it starts with the pad's.
+  local baseInit = TouchControls.init
+  function TouchControls:init(...)
+    closeBar(self)
+    if baseInit then return baseInit(self, ...) end
   end
   return true
 end
