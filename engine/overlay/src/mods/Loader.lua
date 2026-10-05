@@ -172,6 +172,15 @@ local COMPAT = {
   [3] = { module = Gen3Compat, file = "src/mods/Gen3Compat.lua", tag = "gen3" },
 }
 
+local function compatFor(generation, version)
+  local compat = COMPAT[generation]
+  if compat and type(compat.module.appliesTo) == "function"
+      and not compat.module.appliesTo(version) then
+    return nil
+  end
+  return compat
+end
+
 -- the src.* modules the mod surface points authors at: another mod's
 -- exports carry a version string that wants range-checking before use, and
 -- ChipAsm is the authoring path for chip music and sfx
@@ -216,7 +225,7 @@ local function scanRequire(name)
   -- A Gen 1-only module on a Gold boot is not a permissions question, it is a
   -- dead patch: reported once, attributed, and onto the boot error feed the
   -- manager shows the player rather than a dev-only log line.
-  local compat = COMPAT[devShim.generation]
+  local compat = compatFor(devShim.generation, devShim.version)
   if devShim.generation ~= 1 and GEN1_ONLY_MODULES[name]
       and not (compat and compat.module.serves(name)) then
     local key = modId .. "|" .. (compat and compat.tag or "gen?") .. "|" .. name
@@ -270,6 +279,13 @@ function Loader:_installDevShim()
   if devShim.installed then return end
   devShim.installed = true
   local delegate = require
+  -- The stock require answers an already-loaded module straight out of
+  -- package.loaded, so once every check below has passed the shim can do the
+  -- same without the pcall.  Only when delegating to the stock C function:
+  -- a Lua wrapper in between may want to see every call.
+  local delegateIsStock = delegate == rawRequire
+    and type(delegate) == "function"
+    and (debug.getinfo(delegate, "S") or {}).what == "C"
   _G.require = function(name, ...)
     -- only the mod's own call is the mod's doing; whatever that module
     -- requires in turn is the engine wiring itself up
@@ -279,17 +295,20 @@ function Loader:_installDevShim()
       -- doing it is the hole this closes, and any future path that runs mod
       -- code without a sandbox env still lands here.
       local owner = Runtime.currentMod or Runtime.modRequire
-      if owner or callerIsMod(3) then
+      if owner then
         local id = type(owner) == "string" and owner or nil
         local denial = Sandbox.moduleDenial(name, devShim.permissions[id])
           or (id and crossGenerationDenial(name, devShim.generation))
         if denial then error(("[%s] %s"):format(id or "mod", denial), 0) end
+      else
+        local denial = Sandbox.moduleDenial(name, nil)
+        if denial and callerIsMod(3) then error(("[mod] %s"):format(denial), 0) end
       end
       if devShim.dev or devShim.generation ~= 1 then scanRequire(name) end
       -- The Gen 1 name a mod asked for, answered by this generation's compat arm.
       -- Engine code keeps the real module: src/render/PaletteFX.lua:776
       -- requires src.core.Game on both generations and means it.
-      local compat = COMPAT[devShim.generation]
+      local compat = compatFor(devShim.generation, devShim.version)
       if compat and compat.module.serves(name)
           and (owner or callerIsMod(3)) then
         local adapter = compat.module.resolve(name, Runtime.currentMod)
@@ -303,6 +322,12 @@ function Loader:_installDevShim()
           return adapter
         end
       end
+    end
+    if delegateIsStock then
+      -- a userdata here may be require's own "loading" sentinel, whose
+      -- loop error the stock path has to raise
+      local loaded = package.loaded[name]
+      if loaded and type(loaded) ~= "userdata" then return loaded end
     end
     devShim.depth = devShim.depth + 1
     local ok, result = pcall(delegate, name, ...)
@@ -1387,11 +1412,14 @@ local GEN3_API = {
   firered = { battle = "src.battle.game3.BattleAPI", world = "src.world.game3.WorldAPI" },
   leafgreen = { battle = "src.battle.game3.BattleAPI", world = "src.world.game3.WorldAPI" },
 }
+local GEN3_API_BY_ENGINE = { game3 = GEN3_API.firered }
 local GEN3_API_DEFAULT = GEN3_API.firered
 
 function Loader.apiModule(kind, generation, version)
   if generation == 3 then
-    local row = type(version) == "string" and GEN3_API[version] or nil
+    local row = type(version) == "string"
+      and (GEN3_API[version] or (GameVersion.VERSIONS[version]
+        and GEN3_API_BY_ENGINE[GameVersion.engine(version)])) or nil
     return (row and row[kind]) or GEN3_API_DEFAULT[kind]
   end
   if generation == 2 then

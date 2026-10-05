@@ -22,10 +22,6 @@ local SaveSerializer = require("src.core.SaveSerializer")
 
 local SaveFileIO = {}
 
--- The cartridge image an imported Gen 2 slot came from, kept BESIDE the slot
--- rather than inside it: export needs the regions the codec does not model,
--- and 32 KB of binary in the serialized table is 40 KB of Lua source reparsed
--- on every save and load.
 local function valid_slot_id(id)
   id = tostring(id)
   return id:match("^slot%d+$") ~= nil or id == "save"
@@ -41,6 +37,10 @@ local function cartFs()
   return portable or (love and love.filesystem)
 end
 
+-- PHOSPHOR: upstream dropped writeCart at v0.3.5x when it folded a Gen 2/3
+-- cart into the slot (migrateLegacyCart). Phosphor's host still refreshes the
+-- active slot's sidecar with every export (main.lua's save handler, through
+-- SaveFileIO.writeCart below), for EVERY generation, so the local stays.
 local function writeCart(version, slotId, bytes)
   local fs = cartFs()
   if not (fs and fs.write and bytes) then return end
@@ -89,9 +89,38 @@ function SaveFileIO.dropStaleCart(version, slotId, save)
   end
   local bytes = readCart(version, slotId)
   if not bytes then return false end
-  local Gen3Save = require("src.save_convert.Gen3Save")
+  local Gen3Save = require("src.save_convert.Gen3Save").forVersion(version)
   if Gen3Save.templateBelongs(Gen3Save.ownerOf(bytes), save) then return false end
   return removeCart(version, slotId)
+end
+
+function SaveFileIO.migrateLegacyCart(version, slotId, save)
+  if type(save) ~= "table" then return nil end
+  local bytes = readCart(version, slotId)
+  if not bytes then return nil end
+  local generation = GameVersion.VERSIONS[version] and GameVersion.generation(version)
+  local gen3 = generation == 3
+  if not (gen3 or generation == 2) then return nil end
+  local folded = false
+  if gen3 then
+    local Gen3Save = require("src.save_convert.Gen3Save").forVersion(version)
+    if not Gen3Save.slotTemplate(save) then
+      local cart = Gen3Save.decode(bytes)
+      if cart and Gen3Save.templateBelongs(cart, save) then
+        Gen3Save.stampImport(save, bytes, cart, version)
+        folded = true
+      end
+    end
+  elseif type(save.rawImport) ~= "string" then
+    save.rawImport = bytes
+    folded = true
+  end
+  if folded then
+    local ok = SaveData.writeSlot(version, slotId, save)
+    if not ok then return nil end
+  end
+  removeCart(version, slotId)
+  return folded and "folded" or "dropped"
 end
 
 local SAVE_SIZE = SaveConvert.SAVE_SIZE
@@ -200,7 +229,6 @@ local function importGen3Cart(bytes, version)
     return false, "could not write the imported save: " .. tostring(writeErr)
   end
   SaveData.setActiveSlot(version, slotId)
-  writeCart(version, slotId, bytes)
   return true, slotId, note and { note = note } or nil
 end
 
@@ -251,13 +279,15 @@ function SaveFileIO.importToSlot(source, version, force, extras)
        and not SaveConvert.isGen2Cart(version) then
       return false, nil, { needsConfirm = true, size = #bytes }
     end
-    bytes = #bytes > SAVE_SIZE and bytes:sub(1, SAVE_SIZE)
-      or (bytes .. string.rep("\0", SAVE_SIZE - #bytes))
+    if not SaveConvert.isGen2Cart(version) then
+      bytes = #bytes > SAVE_SIZE and bytes:sub(1, SAVE_SIZE)
+        or (bytes .. string.rep("\0", SAVE_SIZE - #bytes))
+    end
   end
   -- 3rd arg: the crosswalk has to come from THIS game's ROM cache.  The
   -- launcher imports before the cache is mounted on the un-prefixed paths, so
   -- SaveConvert cannot find the generated tables by itself here (#420).
-  local save, convertErr = SaveConvert.importSav(bytes, version, version)
+  local save, convertErr, note = SaveConvert.importSav(bytes, version, version)
   if not save then return false, convertErr end
   -- The bag and PC a Game Boy cartridge had no room for, when the host staged
   -- a sidecar beside this save. Stamped over the NORMALIZED bytes -- the same
@@ -280,8 +310,7 @@ function SaveFileIO.importToSlot(source, version, force, extras)
     return false, "could not write the imported save: " .. tostring(writeErr)
   end
   SaveData.setActiveSlot(version, slotId)
-  if SaveConvert.isGen2Cart(version) then writeCart(version, slotId, bytes) end
-  return true, slotId
+  return true, slotId, note and { note = note } or nil
 end
 
 -- exportActiveSlot(version) -> ok, pathOrErr
@@ -302,10 +331,15 @@ function SaveFileIO.exportActiveSlot(version)
     local minted, id = pcall(SaveData.slotPlaythroughId, version, activeSlot, save)
     if minted and type(id) == "string" then save.meta.playthroughId = id end
   end
+  if activeSlot then SaveFileIO.migrateLegacyCart(version, slotId, save) end
   SaveFileIO.dropStaleCart(version, slotId, save)
-  -- The map-header cache must be derived for the save's position or vanilla
-  -- Continue runs a stale script pointer in the wrong bank. picked_rom.gb
-  -- until the importer consumes it; baseroms/baserom.gb is the durable copy.
+  -- PHOSPHOR: the host-staged cart (readCart) stays the FALLBACK template for a
+  -- slot with no rawImport of its own (a New Game started in 3D); upstream
+  -- folds a Gen 2/3 cart into the slot in migrateLegacyCart above and passes
+  -- nothing here. The map-header cache must be derived for the save's
+  -- position or vanilla Continue runs a stale script pointer in the wrong
+  -- bank. picked_rom.gb until the importer consumes it; baseroms/baserom.gb
+  -- is the durable copy.
   local rom = nil
   if love and love.filesystem and love.filesystem.read then
     rom = love.filesystem.read("picked_rom.gb")
@@ -314,6 +348,7 @@ function SaveFileIO.exportActiveSlot(version)
   local bytes, exportErr = SaveConvert.exportSav(save, version,
                                                  readCart(version, slotId), rom)
   if not bytes then return false, exportErr end
+  local exportNote = type(exportErr) == "string" and exportErr ~= "" and exportErr or nil
   -- Portable mode is the same seam SaveData's own persistFs uses: when
   -- portable.txt marks the install every persistent write leaves the OS save
   -- directory for the game folder, and an export is no exception.  Writing
@@ -337,11 +372,11 @@ function SaveFileIO.exportActiveSlot(version)
   local portableBase = SaveData.portableBaseDir()
   if portableBase then
     local sep = package.config:sub(1, 1)
-    return true, portableBase .. sep .. rel:gsub("/", sep)
+    return true, portableBase .. sep .. rel:gsub("/", sep), exportNote
   end
   local base = fs.getSaveDirectory and fs.getSaveDirectory() or ""
-  if base ~= "" then return true, base .. "/" .. rel end
-  return true, rel
+  if base ~= "" then return true, base .. "/" .. rel, exportNote end
+  return true, rel, exportNote
 end
 
 -- Copy the original serialized source rather than decoding and re-encoding it.

@@ -117,54 +117,26 @@ end
 
 -- Mirror about the BOUND canvas, never about ctx.height: a mod with a render
 -- scale (potato_voxel ships 100/75/50/33%) draws into a smaller target and
--- lets the engine scale it up, so ctx.height is the playfield's and would put
--- every effect off by the difference.
+-- lets the engine scale it up. LOVE hands back the canvas when one target is
+-- bound and a table of them when several are.
 local function boundCanvasHeight()
-  local G = love and love.graphics
-  if not (G and G.getCanvas) then return nil end
-  local ok, bound = pcall(G.getCanvas)
-  if not ok or bound == nil then return nil end
-  -- LOVE hands back the canvas itself when one target is bound, and a TABLE of
-  -- them when several are; in LOVE 12 an entry in that table can itself be a
-  -- table carrying the canvas plus a face or layer. Asked as "can this tell me
-  -- its height", not as "is this userdata", so the unwrapping is driven by what
-  -- the value can do rather than by a type name that differs between LOVE's
-  -- backends and any harness.
-  local function isTarget(value)
-    return value ~= nil and pcall(function() return value.getHeight end)
-      and value.getHeight ~= nil
-  end
-  if not isTarget(bound) and type(bound) == "table" then
-    local first = bound[1]
-    if not isTarget(first) and type(first) == "table" then
-      first = first.canvas or first[1]
-    end
-    bound = first
-  end
-  if not isTarget(bound) then return nil end
-  local okHeight, height = pcall(function() return bound:getHeight() end)
-  if not okHeight then return nil end
-  height = tonumber(height)
-  if not (height and height > 0) then return nil end
-  return height
+  local bound = love.graphics.getCanvas()
+  if bound and not bound.getHeight then bound = bound[1] end      -- several bound
+  if bound and not bound.getHeight then bound = bound.canvas end  -- one face of one
+  return bound and bound.getHeight and bound:getHeight()
 end
 
 -- Exposed for the suite: the whole correction, given the height to mirror
 -- about. Kept separate from the canvas lookup so the math can be driven
--- without a real render target.
+-- without a real render target. Unprotected push/pop, like the engine's own
+-- `at` a line below it: Pipelines.guardRender fences the whole pass.
 function Gen1FieldFxFlip.mirrorAbout(height, body)
   local G = love.graphics
   G.push()
-  local ok, err = pcall(function()
-    G.translate(0, height)
-    G.scale(1, -1)
-    body()
-  end)
-  -- The transform is restored whatever happened, then the failure is handed
-  -- on unchanged: Pipelines.guardRender is what decides a throwing pipeline's
-  -- fate, and swallowing here would hide a mod fault from it.
+  G.translate(0, height)
+  G.scale(1, -1)
+  body()
   G.pop()
-  if not ok then error(err, 0) end
 end
 
 local function mirrored(drawFx)

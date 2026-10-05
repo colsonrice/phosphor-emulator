@@ -17,7 +17,7 @@
 package.path = "./?.lua;./?/init.lua;" .. package.path
 
 local S = require("tests.harness").suite("host launch quit")
-local check = S.check
+local check, eq = S.check, S.eq
 
 local f = assert(io.open("main.lua", "r"))
 local src = f:read("*a")
@@ -80,7 +80,6 @@ local body = src:match("local function shutdownWorkers%(%)(.-)\nend\n")
 check(body and body:find("SessionLifecycle.endProcess()", 1, true) ~= nil,
       "shutdownWorkers still reaches SessionLifecycle.endProcess")
 for _, worker in ipairs({
-  { file = "src/core/ChipAudio.lua", name = "ChipAudio" },
   { file = "src/update/Check.lua", name = "Check" },
   { file = "src/net/Fetch.lua", name = "Fetch" },
 }) do
@@ -89,6 +88,21 @@ for _, worker in ipairs({
   wf:close()
   check(wsrc:find("registerProcessShutdown(" .. worker.name .. ".shutdown)", 1, true) ~= nil,
         worker.file .. " still registers its shutdown with SessionLifecycle")
+end
+
+-- Since 0.3.38 ChipAudio is shut down through package.loaded, so it need
+-- not import SessionLifecycle on the audio hot path. Exercise the actual
+-- endProcess entry point, including an absent audio module.
+do
+  local lifecycle = require("src.core.SessionLifecycle")
+  local original = package.loaded["src.core.ChipAudio"]
+  local calls = 0
+  package.loaded["src.core.ChipAudio"] = { shutdown = function() calls = calls + 1 end }
+  lifecycle.endProcess()
+  eq(calls, 1, "endProcess shuts down a loaded ChipAudio worker exactly once")
+  package.loaded["src.core.ChipAudio"] = nil
+  check(pcall(lifecycle.endProcess), "endProcess also works before audio was loaded")
+  package.loaded["src.core.ChipAudio"] = original
 end
 
 S.finish()

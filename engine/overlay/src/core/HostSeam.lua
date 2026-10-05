@@ -636,6 +636,135 @@ function HostSeam.writeCommandResult(tbl, fs)
   return writeJson(fs, "command_result.json", tbl)
 end
 
+-- Where the running game keeps its options. Gen 1 and Gen 2 keep them inside
+-- the save table; Game3 loads the same shared options file onto the game
+-- itself and has no `save.options` at all.
+function HostSeam.hostOptions(game)
+  if type(game) ~= "table" then return nil end
+  local save = game.save
+  return (type(save) == "table" and save.options) or game.options or nil
+end
+
+-- The option keys a generation's speed lives in. Gen 1 and Gen 3 read a key
+-- per activity (speedOverworld, speedBattle, speedMenu; RFC 0007), named by
+-- GameSpeed so nothing here hand-spells them. Game2 still reads `speed`.
+local function hostSpeedKeys(generation)
+  if generation == 2 then return { "speed" } end
+  local GameSpeed = require("src.core.GameSpeed")
+  local keys = {}
+  for _, category in ipairs(GameSpeed.CATEGORIES) do
+    keys[#keys + 1] = GameSpeed.optionKey(category)
+  end
+  return keys
+end
+
+local function runningGeneration(generation)
+  if generation ~= nil then return generation end
+  return require("src.core.GameVersion").generation()
+end
+
+-- The host's speed control: one number for the whole game.
+--
+-- Upstream split `speed` into a key per activity and drops `speed` when
+-- options load, so writing `speed` alone, as the host's command used to, set
+-- nothing a Gen 1 or Gen 3 game reads. Each generation gets the keys IT
+-- reads and no others: a key a game does not read is one that goes stale the
+-- first time the player changes the speed inside the game.
+-- Returns the level set: the engine's nearest to what was asked for.
+-- `generation` is the running game's unless a test says otherwise.
+function HostSeam.applyHostSpeed(opts, value, generation)
+  local level = require("src.core.GameSpeed").clamp(value)
+  for _, key in ipairs(hostSpeedKeys(runningGeneration(generation))) do
+    opts[key] = level
+  end
+  return level
+end
+
+-- Persist the running game's options the way THAT game persists them.
+--
+-- Each generation keeps its options somewhere else and has its own writer,
+-- `writeOptions`: Game hands its save to SaveData.saveLiveOptions, Game3
+-- writes its shared table with SaveData.saveOptions, and Game2 writes its
+-- own block under `gold` through gen2/Save.saveOptions, a read-modify-write
+-- that leaves the other generations' keys alone.
+--
+-- The host's commands used to call SaveData.saveOptions on whatever table
+-- they had found. On Gold, Silver and Crystal that table is the `gold`
+-- block, and writing it flat did two wrong things at once: the block on disk
+-- never changed, so the next boot forgot the setting, and Gold's values
+-- landed in the keys Red and FireRed read (a text speed of "MID" where they
+-- keep a number). Asking the game to write its own options is the whole fix.
+function HostSeam.persistHostOptions(game, opts, deps)
+  if type(game) == "table" and type(game.writeOptions) == "function" then
+    game:writeOptions()
+    return
+  end
+  -- A game object older than `writeOptions`: the flat write is what it had.
+  local SaveData = (deps and deps.SaveData) or require("src.core.SaveData")
+  SaveData.saveOptions(opts)
+end
+
+-- The whole of the host's `speed` command: find the options, set the speed,
+-- and have the game write them. Raises "options not loaded yet" for a game
+-- that has none, which the command reports.
+function HostSeam.setHostSpeed(game, value, deps)
+  local opts = HostSeam.hostOptions(game)
+  if not opts then error("options not loaded yet", 0) end
+  local level = HostSeam.applyHostSpeed(opts, value, deps and deps.generation)
+  HostSeam.persistHostOptions(game, opts, deps)
+  return level
+end
+
+-- The speed the running game is at, as the host's control would name it, or
+-- nil when it cannot be said. For a game with a key per activity it is the
+-- overworld's, the one a player would call "the speed".
+--
+-- The host's dial keeps one number for every game, and the engine keeps two:
+-- the shared keys Gen 1 and Gen 3 read, and Gold's own. So the number the
+-- host remembers is often not the speed the game it just booted is running
+-- at, and the boot report says which it is (writeModState).
+function HostSeam.hostSpeedLevel(game, generation)
+  local opts = HostSeam.hostOptions(game)
+  if type(opts) ~= "table" then return nil end
+  local level = tonumber(opts[hostSpeedKeys(runningGeneration(generation))[1]])
+  if not level or level < 1 then return nil end
+  return level
+end
+
+-- game -> host: host/speed.json, the speed the running game is at, written
+-- when it CHANGES.
+--
+-- The host's control sets the speed. It is not the only thing that does: the
+-- engine's own bar has a SPEED cell, a gamepad's shoulders step the speed on
+-- a Game Boy game, and the options menu has all three activity speeds. A
+-- host that only ever knew what it last sent showed 2x on its dial while the
+-- game ran at 3x, one tap on the engine's bar later (Oct 5 2026, the first
+-- time the dial was on screen for the whole session). So the game says what
+-- its speed is whenever that stops being what it last said.
+--
+-- The level last told to the host, by the boot report or by this. Module
+-- state, as the hotbar's is: one game runs at a time.
+local reportedSpeed = nil
+
+-- Called from the host command poll, four times a second. One table lookup
+-- when nothing has changed; a write only when something has. Returns whether
+-- it wrote.
+function HostSeam.reportSpeedIfChanged(game, fs, generation)
+  local ok, level = pcall(HostSeam.hostSpeedLevel, game, generation)
+  if not ok or not level or level == reportedSpeed then return false end
+  if not writeJson(fs, "speed.json", { level = level }) then return false end
+  reportedSpeed = level
+  return true
+end
+
+-- A boot starts the telling over. The boot report carries the speed the game
+-- booted at (writeModState), so that is what the host already knows, and a
+-- file left by the last session says nothing about this one.
+local function speedReportedAtBoot(fs, level)
+  reportedSpeed = level
+  removeFile(fs, "speed.json")
+end
+
 -- ----------------------------------------------------------- session menu
 
 -- The host's way out, reached from the engine's OWN hotbar: the strip of
@@ -1203,7 +1332,7 @@ end
 -- the ModLoader instance (Game.mods) and `data` the merged content table
 -- (Game.data); tolerant of partial shapes so a future loader change degrades
 -- to fewer fields, never a crash.
-function HostSeam.writeModState(loader, fs, data)
+function HostSeam.writeModState(loader, fs, data, game)
   local mods = {}
   local list = loader and loader.mods
   if type(list) == "table" then
@@ -1274,7 +1403,25 @@ function HostSeam.writeModState(loader, fs, data)
   end
   table.sort(mods, function(a, b) return a.id < b.id end)
   local Version = require("src.core.Version")
-  return writeJson(fs, "state.json", { engine = Version.engine, mods = mods })
+  -- `hostSpeed`: this payload's `speed` command reaches every generation
+  -- (HostSeam.applyHostSpeed). A payload from before that fix does not say
+  -- so, and the host offers its speed control only to one that does: a dial
+  -- that silently does nothing is worse than no dial.
+  --
+  -- `speedLevel`: what this game booted at, when its options are loaded by
+  -- now, so the dial opens on the truth rather than on whatever the last
+  -- game was left at. Absent is "cannot say", and the host keeps its own.
+  --
+  -- Changes after boot arrive in host/speed.json (reportSpeedIfChanged),
+  -- which starts over here: a game whose options were not loaded yet reports
+  -- nothing now and its first speed.json a moment later.
+  local okLevel, level = pcall(HostSeam.hostSpeedLevel, game)
+  local bootLevel = okLevel and level or nil
+  speedReportedAtBoot(fs, bootLevel)
+  return writeJson(fs, "state.json", {
+    engine = Version.engine, mods = mods, hostSpeed = true,
+    speedLevel = bootLevel,
+  })
 end
 
 -- ----------------------------------------------------------------- import

@@ -1169,6 +1169,21 @@ do
   _G.love.mousemoved = savedMouseMoved
 end
 
+-- 0.3.38 memoizes module verdicts. Alternating permission sets and
+-- evicting the bounded cache must never turn a denied capability into one
+-- a mod can acquire, in either LÖVE module spelling.
+do
+  local Sandbox = require("src.mods.Sandbox")
+  for round = 1, 2 do
+    for _, name in ipairs({ "love", "love.filesystem", "love/filesystem", "io", "socket.http", "socket/http" }) do
+      check(Sandbox.moduleDenial(name) ~= nil, "cached denial: " .. name)
+      check(Sandbox.moduleDenial(name, { network = true }) ~= nil, "permission cannot bypass cached denial: " .. name)
+    end
+    eq(Sandbox.moduleDenial("src.core.Game"), nil, "engine modules remain allowed")
+    for n = 1, 4100 do Sandbox.moduleDenial("cache_probe_" .. round .. "_" .. n) end
+  end
+end
+
 -- run_tests.lua dofiles this suite into a shared process, so anything global
 -- goes back the way it was found or the next suite pays for it.
 Runtime.events, Runtime.hooks = savedEvents, savedHooks

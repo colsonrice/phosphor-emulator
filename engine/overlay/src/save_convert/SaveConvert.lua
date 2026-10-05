@@ -69,9 +69,19 @@ end
 -- caller meant before Gen 2 had a codec.
 function SaveConvert.mainChecksumValid(bytes, gameVersion)
   if isGen3(gameVersion) then return nil end
-  if SaveConvert.looksLikeGen3Flash(bytes) then return nil, SaveConvert.GEN3_FLASH_MISMATCH end
+  if SaveConvert.looksLikeGen3Flash(bytes) then
+    local _, name = Gen3Save.sniffMessage(bytes)
+    if name and name ~= "FireRed/LeafGreen" then
+      local article = name:match("^[AEIOU]") and "an" or "a"
+      return nil, ("That is %s %s (Game Boy Advance) save, not a save for this game."):format(article, name)
+    end
+    return nil, SaveConvert.GEN3_FLASH_MISMATCH
+  end
   local L = gameVersion and Gen2Save.layoutFor(gameVersion)
   if L then return Gen2Save.checksumValid(bytes, L) end
+  if GenSave.looksLikeJapaneseSave(bytes) then
+    return nil, "Japanese Gen 1 cartridge saves are not supported"
+  end
   return GenSave.mainChecksumValid(bytes)
 end
 
@@ -94,13 +104,17 @@ local DATA_MODULES = {
   -- rebuild the current map's engine state on export (#889)
   tilesets   = { "data.generated.tilesets",         "data/generated/tilesets.lua" },
   audio      = { "data.generated.audio",            "data/generated/audio.lua" },
+  encounters = { "data.generated.encounters",       "data/generated/encounters.lua" },
   charmap    = { "src.save_convert.data.charmap",   "src/save_convert/data/charmap.lua" },
   eventFlags = { "src.save_convert.data.event_flags", "src/save_convert/data/event_flags.lua" },
   toggleObjects = { "src.save_convert.data.toggle_objects", "src/save_convert/data/toggle_objects.lua" },
   hiddenItems = { "src.save_convert.data.hidden_items", "src/save_convert/data/hidden_items.lua" },
+  tradeFlags = { "src.save_convert.data.trade_flags", "src/save_convert/data/trade_flags.lua" },
+  field      = { "data.generated.field",            "data/generated/field.lua" },
+  trainerHeaders = { "data.generated.trainer_headers", "data/generated/trainer_headers.lua" },
 }
 
-local OPTIONAL_MODULES = { tilesets = true, audio = true }
+local OPTIONAL_MODULES = { tilesets = true, audio = true, field = true, trainerHeaders = true }
 
 -- Yellow renumbers wEventFlags bits: pokeyellow's constants/event_constants.asm
 -- inserts events pokered does not have (the Jessie & James fights, catch
@@ -116,6 +130,14 @@ local YELLOW_EVENT_FLAGS = {
 local YELLOW_HIDDEN_ITEMS = {
   "src.save_convert.data.hidden_items_yellow",
   "src/save_convert/data/hidden_items_yellow.lua",
+}
+local YELLOW_TOGGLE_OBJECTS = {
+  "src.save_convert.data.toggle_objects_yellow",
+  "src/save_convert/data/toggle_objects_yellow.lua",
+}
+local YELLOW_TRADE_FLAGS = {
+  "src.save_convert.data.trade_flags_yellow",
+  "src/save_convert/data/trade_flags_yellow.lua",
 }
 
 local function loadTable(requirePath, filePath)
@@ -177,17 +199,55 @@ end
 -- 1's charmap, event flags and hidden items, none of which a Gen 2 cache has
 -- or a Gen 2 save uses.
 local gen2Data = {}
+local gen2Stub
+local GEN2_TABLES = { "pokemon", "moves", "items", "maps" }
+local GEN2_OPTIONAL_TABLES = { "scripts", "sprites", "constants" }
+
+function SaveConvert.invalidateGen2Data(gameVersion)
+  gen2Data[gameVersion or "*"] = nil
+end
+
+function SaveConvert.setGen2DataStub(stub)
+  gen2Stub = stub
+  gen2Data = {}
+end
+
+function SaveConvert.gen2DataFromDir(dir)
+  local out = {}
+  for _, name in ipairs(GEN2_TABLES) do
+    local chunk = loadfile(dir .. "/data/generated/" .. name .. ".lua")
+    local ok, mod = pcall(chunk or error)
+    if not (ok and type(mod) == "table") then return nil end
+    out[name] = mod
+  end
+  for _, name in ipairs(GEN2_OPTIONAL_TABLES) do
+    local chunk = loadfile(dir .. "/data/generated/" .. name .. ".lua")
+    local ok, mod = pcall(chunk or error)
+    if ok and type(mod) == "table" then out[name] = mod end
+  end
+  return out
+end
+
 local function ensureGen2Data(gameVersion)
+  if gen2Stub then return gen2Stub end
   local key = gameVersion or "*"
   if gen2Data[key] == nil then
     local out = {}
-    for _, name in ipairs({ "pokemon", "moves", "items", "maps" }) do
+    for _, name in ipairs(GEN2_TABLES) do
       out[name] = loadCacheTable(gameVersion, "data/generated/" .. name .. ".lua")
-        or (loadTable("data.generated." .. name, "data/generated/" .. name .. ".lua"))
+      if not out[name] then return nil end
+    end
+    for _, name in ipairs(GEN2_OPTIONAL_TABLES) do
+      out[name] = loadCacheTable(gameVersion, "data/generated/" .. name .. ".lua")
     end
     gen2Data[key] = out
   end
   return gen2Data[key]
+end
+
+local function gen2CacheMissing(gameVersion)
+  local label = tostring(gameVersion):sub(1, 1):upper() .. tostring(gameVersion):sub(2)
+  return Gen2Save.MSG.cache:format(label, label)
 end
 
 -- Crosswalk sets keyed by the game whose cache they came from ("*" for the
@@ -195,6 +255,33 @@ end
 -- never be handed the previous import's data (#420).
 local crosswalks = {}   -- [key] = { pokemon=, moves=, items=, maps=, eventFlags= }
 local charmapReady
+local gen1Stubs = {}
+
+function SaveConvert.setGen1DataStub(stub, gameVersion)
+  if stub == nil and gameVersion == nil then gen1Stubs = {}
+  else gen1Stubs[gameVersion or "red"] = stub end
+  crosswalks = {}
+end
+
+function SaveConvert.gen1DataFromDir(dir)
+  local out = {}
+  for name, spec in pairs(DATA_MODULES) do
+    if spec[2]:match("^data/generated/") then
+      local chunk = loadfile(dir .. "/" .. spec[2])
+      local ok, mod = pcall(chunk or error)
+      if ok and type(mod) == "table" then out[name] = mod
+      elseif not OPTIONAL_MODULES[name] then return nil end
+    end
+  end
+  return out
+end
+
+local function gen1CacheMissing(gameVersion, path)
+  local info = require("src.core.GameVersion").VERSIONS[gameVersion]
+  local label = info and info.label or tostring(gameVersion)
+  return ("The %s ROM cache is missing or unreadable (%s). Import the %s ROM before converting its saves.")
+    :format(label, path, label)
+end
 
 local function ensureData(gameVersion)
   local key = gameVersion or "*"
@@ -206,14 +293,21 @@ local function ensureData(gameVersion)
           spec = YELLOW_EVENT_FLAGS -- Yellow's bit numbering differs (#838)
         elseif name == "hiddenItems" and gameVersion == "yellow" then
           spec = YELLOW_HIDDEN_ITEMS
+        elseif name == "toggleObjects" and gameVersion == "yellow" then
+          spec = YELLOW_TOGGLE_OBJECTS
+        elseif name == "tradeFlags" and gameVersion == "yellow" then
+          spec = YELLOW_TRADE_FLAGS
         end
-        local mod = loadCacheTable(gameVersion, spec[2])
-        if not mod then
-          local e
+        local mod, e
+        if gameVersion and spec[2]:match("^data/generated/") then
+          local stub = gen1Stubs[gameVersion]
+          if stub then mod = stub[name]
+          else mod = loadCacheTable(gameVersion, spec[2]) end
+          if not mod and not OPTIONAL_MODULES[name] then
+            return nil, gen1CacheMissing(gameVersion, spec[2])
+          end
+        else
           mod, e = loadTable(spec[1], spec[2])
-          -- tilesets/audio only sharpen the export (MapContext); a cache
-          -- without them still imports and exports, just without the
-          -- rebuilt map window, so they must not fail the whole load
           if not mod and not OPTIONAL_MODULES[name] then return nil, e end
         end
         data[name] = mod
@@ -253,14 +347,6 @@ local function defaultsSave()
     defeatedTrainers = {},
     repelSteps = 0,
     modData = {},
-    options = {
-      textSpeed = 3, animations = true, battleStyle = "shift",
-      battleLayout = "og",
-      ruleset = "gen1_faithful", musicVol = 7, sfxVol = 7, pikaVol = 7,
-      musicFilter = 0,
-      speed = 1, colors = "gbc", tilt = 0,
-      videoMode = "windowed", mods = {},
-    },
   }
 end
 
@@ -273,7 +359,7 @@ local function mergeDefaults(decoded, version)
   decoded.warnings = nil
   local save = defaultsSave()
   for k, v in pairs(decoded) do save[k] = v end
-  save.lastHeal = { map = save.player.map, x = save.player.x, y = save.player.y }
+  save.lastHeal = save.lastHeal or { map = save.player.map, x = save.player.x, y = save.player.y }
   save.lastOutdoor = save.lastOutdoor or { id = save.player.map }
   if version ~= nil then
     save.meta = save.meta or {}
@@ -282,6 +368,22 @@ local function mergeDefaults(decoded, version)
   return save
 end
 SaveConvert.mergeDefaults = mergeDefaults
+
+local function warningNote(warnings)
+  if type(warnings) ~= "table" then return nil end
+  local parts = {}
+  for _, w in ipairs(warnings) do
+    local text = tostring(w):gsub("%s+$", "")
+    if text ~= "" then
+      text = text:sub(1, 1):upper() .. text:sub(2)
+      if not text:find("[%.!?]$") then text = text .. "." end
+      parts[#parts + 1] = text
+    end
+  end
+  if #parts == 0 then return nil end
+  return table.concat(parts, " ")
+end
+SaveConvert.warningNote = warningNote
 
 -- ------------------------------------------------------------------
 -- Public API
@@ -336,25 +438,40 @@ end
 -- SaveSerializer.encode for a slot file. gameVersion ("red"/"blue"/"yellow")
 -- names the game the save is being imported for, which is what selects the
 -- crosswalk tables; omit it to take whatever `require` resolves. On any
--- failure returns nil + a message (never raises).
+-- failure returns nil + a message (never raises). A third result carries a
+-- sentence about anything the importer had to work around (backup copy used,
+-- stale active box), nil when nothing was wrong.
 function SaveConvert.importSav(bytes, version, gameVersion)
   if type(bytes) ~= "string" then
     return nil, "expected raw save bytes as a string"
   end
   local supported, unsupportedWhy = SaveConvert.importSupported(gameVersion)
   if not supported then return nil, unsupportedWhy end
-  if isGen3(gameVersion) then return Gen3Save.importPort(bytes, gameVersion) end
+  if isGen3(gameVersion) then
+    local codec = Gen3Save.forVersion(gameVersion)
+    local save, err, note = codec.importPort(bytes, gameVersion)
+    if save and codec.port and codec.port.finishImport then
+      codec.port.finishImport(save, { national = SaveConvert.gen3CacheTable(gameVersion, "pokemon/national.lua") })
+    end
+    return save, err, note
+  end
   -- Gen 2 is a different SRAM entirely: different bank map, different party
   -- struct, its own check values. Gen2Save owns it, and it needs no crosswalk
   -- tables because it decodes ids the engine already speaks.
   if Gen2Save.layoutFor(gameVersion) then
-    local decoded, gen2Err = Gen2Save.decode(bytes, gameVersion,
-                                             ensureGen2Data(gameVersion))
+    local g2data = ensureGen2Data(gameVersion)
+    local decoded, gen2Err = Gen2Save.decode(bytes, gameVersion, g2data or {})
+    if not g2data then return nil, gen2Err or gen2CacheMissing(gameVersion) end
     if not decoded then return nil, gen2Err end
-    return Gen2Save.mergeDefaults(decoded, gameVersion)
+    local note = warningNote(decoded.warnings)
+    decoded.warnings = nil
+    return Gen2Save.mergeDefaults(decoded, gameVersion), nil, note
   end
   if #bytes ~= GenSave.SAVE_SIZE then
     return nil, ("save must be %d bytes, got %d"):format(GenSave.SAVE_SIZE, #bytes)
+  end
+  if GenSave.looksLikeJapaneseSave(bytes) then
+    return nil, "Japanese Gen 1 cartridge saves are not supported"
   end
   local data, derr = ensureData(gameVersion)
   if not data then return nil, derr end
@@ -372,7 +489,8 @@ function SaveConvert.importSav(bytes, version, gameVersion)
     end
   end
 
-  return mergeDefaults(decoded, version)
+  local note = warningNote(decoded.warnings)
+  return mergeDefaults(decoded, version), nil, note
 end
 
 -- File offsets of each version's MapHeaderPointers / MapHeaderBanks tables,
@@ -393,9 +511,32 @@ local MAP_HEADER_TABLES = {
 MAP_HEADER_TABLES.blue = MAP_HEADER_TABLES.red
 
 local GBA_ROOT = "data/generated/gba/"
+local gen3CacheDirs = {}
+
+function SaveConvert.setGen3CacheDir(gameVersion, dir)
+  gen3CacheDirs[gameVersion] = dir
+end
+
+local function readBytes(path)
+  local f = io.open(path, "rb")
+  if not f then return nil end
+  local bytes = f:read("*a")
+  f:close()
+  return bytes
+end
+
+local function cacheEdition(meta)
+  if type(meta) ~= "string" then return nil end
+  local edition = meta:match('"version_id"%s*:%s*"([^"]+)"')
+    or meta:match('"version"%s*:%s*"([^"]+)"')
+    or meta:match('"import_id"%s*:%s*"([^"]+)"')
+  return edition and (edition:match("^firered") or edition:match("^leafgreen") or edition:match("^emerald") or edition:match("^ruby") or edition:match("^sapphire"))
+end
 
 local function gen3CacheBytes(gameVersion, rel)
   local path = GBA_ROOT .. rel
+  local dir = gen3CacheDirs[gameVersion]
+  if dir then return readBytes(dir .. "/" .. path) end
   if gameVersion and love and love.filesystem then
     local okc, CacheFs = pcall(require, "src.import.CacheFs")
     local info = require("src.core.GameVersion").VERSIONS[gameVersion]
@@ -409,6 +550,11 @@ local function gen3CacheBytes(gameVersion, rel)
   end
   local okd, Dataset = pcall(require, "src.core.game3.dataset")
   local cache = okd and Dataset.cache and Dataset.cache()
+  if gameVersion then
+    if require("src.core.GameVersion").get() ~= gameVersion then return nil end
+    local meta = cache and cache:read(GBA_ROOT .. "meta.json")
+    if cacheEdition(meta) ~= gameVersion then return nil end
+  end
   local bytes = cache and cache:read(path)
   return type(bytes) == "string" and bytes or nil
 end
@@ -421,8 +567,10 @@ local function gen3CacheTable(gameVersion, rel)
   return ok and type(t) == "table" and t or nil
 end
 
+SaveConvert.gen3CacheTable = gen3CacheTable
+
 local function gen3ExportOpts(gameVersion, cartImage)
-  local L3 = require("src.save_convert.Gen3Layout")
+  local L3 = require("src.save_convert.Gen3Layout").forVersion(gameVersion)
   local national = gen3CacheTable(gameVersion, "pokemon/national.lua")
   local names = gen3CacheTable(gameVersion, "pokemon/names.lua")
   local fly = gen3CacheTable(gameVersion, "region_map/fly_destinations.lua")
@@ -431,7 +579,8 @@ local function gen3ExportOpts(gameVersion, cartImage)
   local opts = {
     template = cartImage,
     version = gameVersion,
-    metGame = gameVersion == "leafgreen" and L3.VERSION_LEAF_GREEN or L3.VERSION_FIRE_RED,
+    metGame = require("src.core.GameVersion").gameCode(gameVersion)
+      or (gameVersion == "leafgreen" and L3.VERSION_LEAF_GREEN or L3.VERSION_FIRE_RED),
     itemId = function(id)
       return tonumber(id) or (okI and ItemsData.toNumericId(id)) or nil
     end,
@@ -472,7 +621,7 @@ local function gen3ExportOpts(gameVersion, cartImage)
       end
       for _, dest in pairs(dests) do
         if type(dest) == "table" and dest.healLocation == id then
-          return Gen3Save.cartWarp({ map = dest.map, warpId = -1, x = dest.x, y = dest.y })
+          return Gen3Save.forVersion(gameVersion).cartWarp({ map = dest.map, warpId = -1, x = dest.x, y = dest.y })
         end
       end
       return nil
@@ -488,34 +637,37 @@ end
 -- are zero-filled. gameVersion selects the crosswalk tables exactly as in
 -- importSav. `cartImage` is the cartridge the save came from, which Gen 2
 -- writes into wholesale and Gen 1 uses to back its unmodeled regions.
--- `romBytes` (the staged base cartridge) lets GenSave derive the map-header
--- cache for the modeled position -- without it those bytes come from the
--- template, which the vanilla game TRUSTS on Continue and which is only
--- correct when the template was saved on the very same map (the
+-- PHOSPHOR: `romBytes` (the staged base cartridge) lets GenSave derive the
+-- map-header cache for the modeled position -- without it those bytes come
+-- from the template, which the vanilla game TRUSTS on Continue and which is
+-- only correct when the template was saved on the very same map (the
 -- outdoor-Cerulean rst38 crash of Aug 2026). On failure returns nil + a
 -- message (never raises).
-function SaveConvert.exportSav(saveTable, gameVersion, cartImage, romBytes)
+local function exportRaw(saveTable, gameVersion, cartImage, romBytes)
   if type(saveTable) ~= "table" then
     return nil, "expected a save table"
   end
   local supported, unsupportedWhy = SaveConvert.exportSupported(gameVersion)
   if not supported then return nil, unsupportedWhy end
   if isGen3(gameVersion) then
-    local ok, bytes, err = pcall(Gen3Save.exportPort, saveTable, gen3ExportOpts(gameVersion, cartImage))
+    local ok, bytes, err = pcall(Gen3Save.forVersion(gameVersion).exportPort, saveTable, gen3ExportOpts(gameVersion, cartImage))
     if not ok then return nil, "encode failed: " .. tostring(bytes) end
     return bytes, err
   end
   -- Gen 2 has its own SRAM and its own codec, and needs no Gen 1 crosswalks.
   if Gen2Save.layoutFor(gameVersion) then
-    return Gen2Save.encode(saveTable, gameVersion, cartImage,
-                           ensureGen2Data(gameVersion))
+    local g2data = ensureGen2Data(gameVersion)
+    if not g2data then return nil, gen2CacheMissing(gameVersion) end
+    local ok, bytes, err = pcall(Gen2Save.encode, saveTable, gameVersion, cartImage, g2data)
+    if not ok then return nil, "encode failed: " .. tostring(bytes) end
+    return bytes, err
   end
   local data, derr = ensureData(gameVersion)
   if not data then return nil, derr end
-  -- Which bytes back the unmodeled regions. The slot's own rawImport wins --
-  -- it is this playthrough's lineage. The host-staged library .sav is the
-  -- FALLBACK, for saves that never imported anything (a New Game started in
-  -- 3D has no rawImport): without it those regions are zero-filled, and the
+  -- PHOSPHOR: which bytes back the unmodeled regions. The slot's own rawImport
+  -- wins -- it is this playthrough's lineage. The host-staged library .sav is
+  -- the FALLBACK, for saves that never imported anything (a New Game started
+  -- in 3D has no rawImport): without it those regions are zero-filled, and the
   -- vanilla game crashes on Continue reading them -- the checksum validates,
   -- the engine's own importer accepts it, and the real cartridge dies on the
   -- zeroed sprite buffers and map cache. Anything not exactly SAVE_SIZE is
@@ -536,6 +688,25 @@ function SaveConvert.exportSav(saveTable, gameVersion, cartImage, romBytes)
   local ok, bytes = pcall(GenSave.encode, saveTable, data, template, rom)
   if not ok then return nil, "encode failed: " .. tostring(bytes) end
   return bytes
+end
+
+-- PHOSPHOR: the fourth argument is the staged base ROM, threaded to exportRaw.
+function SaveConvert.exportSav(saveTable, gameVersion, cartImage, romBytes)
+  local bytes, err = exportRaw(saveTable, gameVersion, cartImage, romBytes)
+  if not bytes then return nil, err end
+  local Compat = require("src.save_convert.Compat")
+  local source = cartImage or saveTable.rawImport
+  if source == nil and type(saveTable.modData) == "table" then source = saveTable.modData.cartImage end
+  local ok, why, report = Compat.gate(bytes, gameVersion or "red", type(source) == "string" and source or nil)
+  if not ok then return nil, why end
+  local notes = {}
+  if type(err) == "string" and err ~= "" then notes[#notes + 1] = err end
+  for _, w in ipairs(report.warnings) do
+    if not (type(err) == "string" and (err:find(w.rule, 1, true) or err:find(w.msg, 1, true))) then
+      notes[#notes + 1] = ("[%s] %s"):format(w.rule, w.msg)
+    end
+  end
+  return bytes, warningNote(notes)
 end
 
 return SaveConvert

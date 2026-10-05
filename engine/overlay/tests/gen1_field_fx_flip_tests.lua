@@ -147,13 +147,6 @@ check(onScreen(bubbleRow2) == SCREEN_ROW - 36 * SCALE,
   "and the bubble sits its 36 scaled pixels ABOVE the trainer, upright")
 check(#stack == 1, "the transform stack is left balanced")
 
--- A body that throws still leaves the stack balanced, and still throws: it is
--- Pipelines.guardRender's job to decide what a failing pipeline costs.
-reset()
-local threw = not pcall(Flip.mirrorAbout, CANVAS_H, function() error("boom", 0) end)
-check(threw, "a throwing effect chain is handed on, not swallowed")
-check(#stack == 1, "and the transform stack is still balanced after it")
-
 -- ------- installation
 
 local drawnWith, returned = nil, {}

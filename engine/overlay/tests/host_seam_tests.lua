@@ -253,6 +253,9 @@ check(HostSeam.writeModState(loader, fs) == true, "state write succeeds")
 local state = Json.decode(fs._files["host/state.json"])
 check(type(state.engine) == "string" and #state.engine > 0,
   "state carries the engine version")
+-- The host offers its speed control only to a payload that says its `speed`
+-- command reaches every generation (tests/host_speed_tests.lua).
+check(state.hostSpeed == true, "state says the host's speed command works")
 check(#state.mods == 3, "all mods listed")
 check(state.mods[1].id == "ALPHA" and state.mods[3].id == "ZED",
   "mods sorted by id")
@@ -336,6 +339,21 @@ check(HostSeam.writeModState(nil, fs) == true,
   "nil loader still writes an empty, valid snapshot")
 check(#Json.decode(fs._files["host/state.json"]).mods == 0,
   "empty snapshot has zero mods")
+check(Json.decode(fs._files["host/state.json"]).hostSpeed == true,
+  "and still says the speed command works: it is a fact about the payload, not the mods")
+check(Json.decode(fs._files["host/state.json"]).speedLevel == nil,
+  "with no game in hand there is no speed to report")
+
+-- The speed the game booted at, so the host's dial opens on the truth. The
+-- suite runs as a Gen 1 game, which keeps its speed in the activity keys.
+fs = fakeFs()
+HostSeam.writeModState(nil, fs, nil, { save = { options = { speedOverworld = 4 } } })
+check(Json.decode(fs._files["host/state.json"]).speedLevel == 4,
+  "the boot report carries the speed the game's options hold")
+fs = fakeFs()
+HostSeam.writeModState(nil, fs, nil, { save = {} })
+check(Json.decode(fs._files["host/state.json"]).speedLevel == nil,
+  "a game whose options have not loaded yet reports no speed, and no error")
 
 -- A manifest the validator refused never becomes a mod, so it is absent from
 -- loader.mods entirely. Reported anyway: a host that lists installs from disk

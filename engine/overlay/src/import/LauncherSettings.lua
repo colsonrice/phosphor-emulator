@@ -146,6 +146,19 @@ local function addTouchRows(rows, add, opts, hooks)
   end
 end
 
+local function addOrientationRow(add, opts)
+  local okOr, Orientation = pcall(require, "src.core.Orientation")
+  if okOr and (Orientation.isAndroid() or Orientation.isIOS()) then
+    add(Strings("ORIENTATION"),
+      function() return Strings(Orientation.modeLabel(opts.orientation)) end,
+      function(dir)
+        opts.orientation = Orientation.cycle(opts.orientation, dir)
+        Orientation.apply(opts.orientation)
+        return true
+      end)
+  end
+end
+
 local function coreRows(opts, hooks)
   local rows = {}
   local function add(label, value, step)
@@ -295,21 +308,7 @@ local function coreRows(opts, hooks)
       end)
   end
 
-  -- ORIENTATION (#592, #1638): mobile only.  Unlike the other launcher rows
-  -- this one live-applies: the window exists here too, and rotating under
-  -- the player's finger is the only feedback that reads.
-  do
-    local okOr, Orientation = pcall(require, "src.core.Orientation")
-    if okOr and (Orientation.isAndroid() or Orientation.isIOS()) then
-      add(Strings("ORIENTATION"),
-        function() return Strings(Orientation.modeLabel(opts.orientation)) end,
-        function(dir)
-          opts.orientation = Orientation.cycle(opts.orientation, dir)
-          Orientation.apply(opts.orientation)
-          return true
-        end)
-    end
-  end
+  addOrientationRow(add, opts)
 
   local okFr, FaithfulRes = pcall(require, "src.core.FaithfulRes")
   if okFr then
@@ -344,8 +343,6 @@ local function coreRows(opts, hooks)
 
   local okSpd, GameSpeed = pcall(require, "src.core.GameSpeed")
   if okSpd then
-    -- Per-category (RFC 0007): overworld/battle/menu each cycle their own
-    -- multiplier, mirroring OptionsMenu.lua's three rows.
     add(Strings("OVERWORLD SPEED"),
       function() return GameSpeed.levelLabel(opts.speedOverworld) end,
       function(dir)
@@ -761,6 +758,7 @@ local function gen2Rows(opts, hooks, shared)
     end)
 
   addTouchRows(rows, add, shared, hooks)
+  addOrientationRow(add, shared)
 
   return rows
 end
@@ -807,6 +805,36 @@ function LauncherSettings.open(hooks, version)
           opts.reduceMotion = not (opts.reduceMotion == true)
           local okT, Transition = pcall(require, "src.ui.kit.Transition")
           if okT then Transition.reduceMotion = opts.reduceMotion end
+          return true
+        end,
+      },
+      {
+        label = Strings("Splash Video"),
+        value = function()
+          return opts.splashVideo == false and Strings("OFF") or Strings("ON")
+        end,
+        step = function()
+          opts.splashVideo = opts.splashVideo == false
+          return true
+        end,
+      },
+      {
+        label = Strings("Theme Video BG"),
+        value = function()
+          return opts.themeVideoBg == false and Strings("OFF") or Strings("ON")
+        end,
+        step = function()
+          opts.themeVideoBg = opts.themeVideoBg == false
+          return true
+        end,
+      },
+      {
+        label = Strings("Splash Sound"),
+        value = function()
+          return opts.splashMute == true and Strings("OFF") or Strings("ON")
+        end,
+        step = function()
+          opts.splashMute = not (opts.splashMute == true)
           return true
         end,
       },

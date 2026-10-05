@@ -8,35 +8,14 @@
 --     opens the editor on that slot's file, and restores the launcher when
 --     the editor's Close button is pressed (openEditor / closeEditor below)
 
-if POKEPORT_DISPLAY_COMPANION then
-  return require("src.render.DesktopCompanion").install(
-    POKEPORT_DISPLAY_COMPANION)
-end
-
-local editorMode = os.getenv("POKEPORT_EDITOR") == "1" or POKEPORT_EDITOR_MODE == true
-
 local SwitchDiagnostics = require("src.debug.SwitchDiagnostics")
-local LaunchOptions = require("src.core.LaunchOptions")
-local NxDisplay = require("src.core.NxDisplay")
-local PlatformHooks = require("src.core.PlatformHooks")
-local HostDisplay = require("src.core.HostDisplay")
-local GameViewport = require("src.render.GameViewport")
-
-local function applySavedOrientation()
-  local ok, savedOptions = pcall(function()
-    return require("src.core.SaveData").loadOptions()
-  end)
-  if not ok or type(savedOptions) ~= "table" then savedOptions = {} end
-  pcall(function()
-    require("src.core.Orientation").applyOptions(savedOptions)
-  end)
-end
 
 -- Global emergency quit: holding Start + Select for 5 seconds forcefully terminates LOVE.
 local emergencyQuitTimer = 0
--- getJoysticks() allocates a fresh table every call; this runs once (twice)
--- per frame, so cache the list and refresh it once a second instead.  The 5s
--- hold requirement makes a 1s hotplug delay irrelevant.
+-- getJoysticks() allocates a fresh table every call; this runs once per
+-- frame (from love.run, before love.update), so cache the list and refresh
+-- it once a second instead.  The 5s hold requirement makes a 1s hotplug
+-- delay irrelevant.
 local cachedJoysticks = nil
 local joystickCacheAge = 1
 
@@ -91,17 +70,27 @@ local function checkEmergencyQuit(dt)
   end
 end
 
--- Lua errors: persist a redacted trace in the save dir and surface a hint.
+-- Install before the rest of the engine loads so startup failures also get
+-- the crash report when the game's regular renderer is unavailable.
 do
   local defaultErrorHandler = love.errorhandler or love.errhand
   function love.errorhandler(msg)
-    local ok, hint = pcall(SwitchDiagnostics.logLuaError, msg)
-    if ok and hint and type(msg) == "string" then
-      msg = msg .. "\n\n" .. hint
+    local traceback = debug.traceback()
+    if os.getenv("POKEPORT_DRIVER") then
+      io.stdout:write("LUA ERROR: " .. tostring(msg) .. "\n" .. traceback .. "\n")
+      io.stdout:flush()
+      os.exit(3)
+    end
+    local ok, hint, source, report = pcall(SwitchDiagnostics.logLuaError, msg, traceback)
+    local nativeMsg = tostring(msg)
+    if ok then
+      if source then nativeMsg = source .. "\n\n" .. nativeMsg end
+      if hint then nativeMsg = nativeMsg .. "\n\n" .. hint end
     end
 
-    -- PHOSPHOR OVERLAY. 0.2.27 added the screen below, and it must not run
-    -- when this LOVE is embedded in a host app.
+    -- PHOSPHOR OVERLAY. No error SCREEN may run when this LOVE is embedded
+    -- in a host app, whichever screen upstream ships (0.2.27's, and since
+    -- v0.3.37 src/debug/CrashScreen).
     --
     -- An error screen is a FRAME LOOP: love.errorhandler returns a per-frame
     -- function and boot.lua installs it as the new `func`, so the boot
@@ -112,46 +101,162 @@ do
     -- ("if Silver crashes once, no other games will work") and the host's own
     -- handler is the fix: it records the message and returns NOTHING, so
     -- boot.lua retires the loop and the coroutine finishes cleanly.
+    -- CrashScreen would also call love.window.setMode(800, 600) when no
+    -- window is ready, which is never this process's call to make.
     --
-    -- Falling through to defaultErrorHandler below IS that host handler when
-    -- embedded, so the whole port is this one condition. (Dropped once
-    -- already: the 0.2.32 take re-ported this file from a base that predated
-    -- the condition, and the merge that landed it took that port whole. The
-    -- host sets _phosphorEmbedded in LoveHost.mm; grep for it before
-    -- resolving this file to anyone's side wholesale.)
-    if not (love._phosphorEmbedded)
-        and love.window and love.window.isOpen and love.window.isOpen() and love.graphics and love.graphics.isActive() then
-      -- Ensure no Canvas is left bound (errors during Display.present).
-      pcall(function() love.graphics.setCanvas() end)
-      pcall(function() love.graphics.origin() end)
-      local fullMsg = tostring(msg) .. "\n\n" .. tostring(debug.traceback()) .. "\n\n[Hold START + SELECT for 5s to Force Quit]"
-      return function()
-        love.event.pump()
-        for e, a in love.event.poll() do
-          if e == "quit" or (e == "keypressed" and a == "escape") then
-            return 1
-          elseif e == "gamepadpressed" and (a == "start" or a == "back") then
-            return 1
+    -- defaultErrorHandler IS that host handler when embedded. An early
+    -- return rather than a condition around upstream's block, so the block
+    -- below stays byte-identical to upstream and the next port merges it
+    -- clean. (Dropped once already: the 0.2.32 take re-ported this file from
+    -- a base that predated the condition, and the merge that landed it took
+    -- that port whole. The host sets _phosphorEmbedded in LoveHost.mm; grep
+    -- for it before resolving this file to anyone's side wholesale.)
+    if love._phosphorEmbedded then
+      if defaultErrorHandler then
+        return defaultErrorHandler(nativeMsg)
+      end
+      return
+    end
+
+    local okScreen, CrashScreen = pcall(require, "src.debug.CrashScreen")
+    if okScreen and report then
+      local summaryOk, summary = pcall(CrashScreen.fallbackText, report)
+      if summaryOk then nativeMsg = summary end
+      if love.window and love.graphics and love.event then
+        local function ready()
+          local openOk, open = pcall(love.window.isOpen)
+          local activeOk, active = pcall(love.graphics.isActive)
+          return openOk and open and activeOk and active
+        end
+        local variant
+        if ready() then
+          variant = "red"
+        elseif love.window.setMode then
+          -- Match LÖVE's native fallback: open a usable window after a
+          -- startup failure, using the same plain-language layout.
+          local modeOk, opened = pcall(love.window.setMode, 800, 600)
+          if modeOk and opened and ready() then variant = "blue" end
+        end
+        if variant then
+          local prepared, screen = pcall(CrashScreen.new, report, variant)
+          if prepared and screen then
+            local fallbackLoop
+            return function()
+              if fallbackLoop then return fallbackLoop() end
+              local drawn, result = pcall(function()
+                love.event.pump()
+                for e, a, b, c, d, touchMouse in love.event.poll() do
+                  if e == "quit" or (e == "keypressed" and a == "escape") then
+                    return 1
+                  elseif e == "gamepadpressed" and (b == "start" or b == "back") then
+                    return 1
+                  elseif e == "mousepressed" and c == 1 and not d
+                      and CrashScreen.hitClose(screen, a, b) then
+                    return 1
+                  elseif e == "touchpressed" and CrashScreen.hitClose(screen, b, c) then
+                    return 1
+                  elseif e == "mousepressed" and c == 1 and not d then
+                    CrashScreen.pointerPressed(screen, "mouse", a, b)
+                  elseif e == "mousereleased" and c == 1 and not d then
+                    CrashScreen.pointerReleased(screen, "mouse")
+                  elseif e == "mousemoved" and not touchMouse then
+                    CrashScreen.pointerMoved(screen, "mouse", a, b)
+                  elseif e == "touchpressed" then
+                    CrashScreen.pointerPressed(screen, a, b, c)
+                  elseif e == "touchmoved" then
+                    CrashScreen.pointerMoved(screen, a, b, c)
+                  elseif e == "touchreleased" then
+                    CrashScreen.pointerReleased(screen, a)
+                  elseif e == "wheelmoved" then
+                    CrashScreen.scroll(screen, -b * 3 * (screen.lineHeight or 16))
+                  elseif e == "keypressed" and (a == "up" or a == "down") then
+                    CrashScreen.scroll(screen,
+                      (a == "down" and 1 or -1) * (screen.lineHeight or 16))
+                  elseif e == "keypressed" and (a == "pageup" or a == "pagedown") then
+                    CrashScreen.scroll(screen, (a == "pagedown" and 1 or -1)
+                      * ((screen.detailArea and screen.detailArea.h) or 64))
+                  elseif e == "keypressed" and (a == "home" or a == "end") then
+                    CrashScreen.scrollTo(screen, a == "end")
+                  elseif e == "gamepadpressed" and (b == "dpup" or b == "dpdown") then
+                    CrashScreen.scroll(screen,
+                      (b == "dpdown" and 1 or -1) * 3 * (screen.lineHeight or 16))
+                  elseif e == "keypressed" and a == "c" and screen.canCopy
+                      and love.keyboard.isDown("lctrl", "rctrl") then
+                    local copyOk, copied = pcall(love.system.setClipboardText,
+                      report.logPath)
+                    if copyOk and copied ~= false then screen.copied = true end
+                  end
+                end
+                checkEmergencyQuit(0.016)
+                CrashScreen.draw(screen)
+                love.graphics.present()
+                if love.timer then love.timer.sleep(0.016) end
+              end)
+              if drawn then return result end
+              if defaultErrorHandler then
+                local fallbackOk, loop = pcall(defaultErrorHandler, nativeMsg)
+                if fallbackOk and type(loop) == "function" then
+                  fallbackLoop = loop
+                  return fallbackLoop()
+                end
+              end
+              return 1
+            end
           end
         end
-        checkEmergencyQuit(0.016)
-        love.graphics.origin()
-        love.graphics.clear(0.10, 0.10, 0.12)
-        love.graphics.setColor(1, 0.4, 0.4, 1)
-        love.graphics.printf(fullMsg, 20, 20, love.graphics.getWidth() - 40)
-        love.graphics.present()
-        love.timer.sleep(0.016)
       end
     end
 
     if defaultErrorHandler then
-      return defaultErrorHandler(msg)
+      return defaultErrorHandler(nativeMsg)
     end
   end
   love.errhand = love.errorhandler
 end
 
+if POKEPORT_DISPLAY_COMPANION then
+  return require("src.render.DesktopCompanion").install(
+    POKEPORT_DISPLAY_COMPANION)
+end
+
+local editorMode = os.getenv("POKEPORT_EDITOR") == "1" or POKEPORT_EDITOR_MODE == true
+
+local PadHints = require("src.core.PadHints")
+-- PHOSPHOR OVERLAY. v0.3.37 drops every gamepad and joystick event, and
+-- zeroes every axis, while PadHints.windowMinimized() says the window is
+-- minimized or hidden (main.lua's pad callbacks and src/core/Input.lua's pad
+-- poll). Embedded, EVERY button a player presses arrives that way: the host's
+-- controller deck and any physical pad are forwarded into an SDL virtual
+-- gamepad (RecompDeckOverlay -> LoveVirtualPad), from a UIWindow drawn above
+-- SDL's. A window flag that reads minimized for one moment too long would
+-- leave the 3D session with no controls at all, and the gate buys nothing
+-- here: the host stops forwarding the moment the app leaves the foreground.
+-- One override on the shared module table covers all six call sites.
+if love._phosphorEmbedded then
+  PadHints.windowMinimized = function() return false end
+end
+local LaunchOptions = require("src.core.LaunchOptions")
+local NxDisplay = require("src.core.NxDisplay")
+local PlatformHooks = require("src.core.PlatformHooks")
+local HostDisplay = require("src.core.HostDisplay")
+local GameViewport = require("src.render.GameViewport")
+
+local function applySavedOrientation()
+  local ok, savedOptions = pcall(function()
+    return require("src.core.SaveData").loadOptions()
+  end)
+  if not ok or type(savedOptions) ~= "table" then savedOptions = {} end
+  pcall(function()
+    require("src.core.Orientation").applyOptions(savedOptions)
+  end)
+end
+
 local Game, EditorApp, Importer, TouchEditor, Studio, Prelaunch
+local launcherSplash
+
+local function splashBlocksInput()
+  return launcherSplash ~= nil and launcherSplash:blocksInput()
+end
 
 -- #887: quit-to-launcher state, shared by love.load and love.quit (both need
 -- it, so it is declared here rather than next to love.quit).
@@ -200,7 +305,8 @@ local mouseTouch = os.getenv("POKEPORT_TOUCH") == "1"
 -- Game.speedOverride / the GAME SPEED option instead.
 local function scriptedIterations()
   if not (autopilot or driverCo) then return 1 end
-  return math.max(1, math.floor(require("src.core.GameSpeed").clamp(speedOverride)))
+  local speed = Game and Game.driverSpeed or speedOverride
+  return math.max(1, math.floor(require("src.core.GameSpeed").clamp(speed)))
 end
 
 -- ------------------------------------------------------------ save editor
@@ -388,6 +494,10 @@ local function pollHostCommands(dt)
     local version = GameVersion.get()
     local changed = slotWatcher.check(version, SaveData.activeSlot(version))
     if changed then HostSeam.requestSlotPicture(version, changed) end
+    -- PHOSPHOR: tell the host when the speed is no longer what it was last
+    -- told, so its dial follows the engine's own SPEED cell, a gamepad's
+    -- shoulders and the options menu. See HostSeam.reportSpeedIfChanged.
+    pcall(HostSeam.reportSpeedIfChanged, Game)
   end
   local cmd = HostSeam.pollCommand()
   if not (cmd and Game) then return end
@@ -598,14 +708,14 @@ local function pollHostCommands(dt)
     HostSeam.setViewportBottomInset(cmd.value)
 
   elseif cmd.cmd == "speed" and type(cmd.value) == "number" then
-    -- The options row's own semantics: options.speed is read live every
-    -- frame (Game reads it through GameSpeed.clamp), so setting + saving
-    -- takes effect immediately and survives the next boot.
-    local opts = Game.save and Game.save.options
-    if opts then
-      opts.speed = require("src.core.GameSpeed").clamp(cmd.value)
-      require("src.core.SaveData").saveOptions(opts)
-    end
+    -- The options rows' own semantics: the speed keys are read live every
+    -- frame, so setting and saving takes effect immediately and survives the
+    -- next boot. WHICH keys, and where the options live, is the part that
+    -- moved under this command: see HostSeam.applyHostSpeed. It reports,
+    -- like every other command, so the host is not left guessing whether a
+    -- game that had not loaded its options yet took the change.
+    local ok, err = pcall(function() HostSeam.setHostSpeed(Game, cmd.value) end)
+    report(ok, err)
 
   elseif cmd.cmd == "touchcontrols" and type(cmd.value) == "number" then
     -- launch.touchControls says the same thing, but it is read once at boot
@@ -626,7 +736,10 @@ local function pollHostCommands(dt)
         opts.touchControls = tc
       end
       tc.enabled = cmd.value ~= 0
-      require("src.core.SaveData").saveOptions(opts)
+      -- Written the way this game writes its options, not flat: on a Gen 2
+      -- game `opts` is Gold's own block, and a flat write put its values in
+      -- the keys Red and FireRed read. See HostSeam.persistHostOptions.
+      HostSeam.persistHostOptions(Game, opts)
       -- Same call the launcher's editor makes after a save: without it the
       -- option is stored but the live pad keeps its old state.
       if Game.touchControls and Game.touchControls.applyOptions then
@@ -871,7 +984,8 @@ function bootGame(version, cartId, opts)
   -- Game.data as well as the loader: the merged content table is where the
   -- render_pipeline records and their `_owners` live, and it is what lets the
   -- report say which of two world-drawing mods is the one being drawn.
-  require("src.core.HostSeam").writeModState(Game.mods, nil, Game.data)
+  -- And the game itself, for the speed it booted at (its options).
+  require("src.core.HostSeam").writeModState(Game.mods, nil, Game.data, Game)
   local driverPath = os.getenv("POKEPORT_DRIVER")
   if driverPath then
     local fn = assert(loadfile(driverPath))()
@@ -908,7 +1022,7 @@ end
 local deferredLaunchRequest
 
 local function launcherBusy()
-  return Importer ~= nil and (Importer._updateAll ~= nil
+  return launcherSplash ~= nil or Importer ~= nil and (Importer._updateAll ~= nil
     or Importer._modInstall ~= nil or Importer._cartInstall ~= nil
     or Importer._autoUpdateAll ~= nil)
 end
@@ -1168,7 +1282,8 @@ function love.load(args)
       if importPath then Importer:startPath(importPath) end
       return
     end
-    bootGame(scriptedVersion, nil, scriptedOpts)
+    local scriptedCart = os.getenv("POKEPORT_CART")
+    bootGame(scriptedVersion, scriptedCart ~= "" and scriptedCart or nil, scriptedOpts)
     return
   end
 
@@ -1278,17 +1393,29 @@ function love.load(args)
   -- Edit on a save row opens the bundled editor on that slot (openEditor).
   Importer = makeLauncher()
   if not relaunched then
+    launcherSplash = require("src.import.LauncherSplash").new()
     autoUpdateMods(resolvedLaunch,
       not resolvedLaunch.game and "mods" or nil)
   end
 end
 
 function love.update(dt)
-  checkEmergencyQuit(dt)
+  -- checkEmergencyQuit runs from love.run each frame; calling it here too
+  -- would double-count dt and fire the 5s hold after 2.5s.
   HostDisplay.update(dt)
   SwitchDiagnostics.maybeFlush(false)
   -- NX only (no-op elsewhere): follow dock/undock without waiting for SDL.
   NxDisplay.sync()
+  if launcherSplash then
+    if not launcherSplash.inputResumed and not launcherSplash:blocksInput() then
+      launcherSplash.inputResumed = true
+      if Importer and Importer.resumeAfterOverlay then Importer:resumeAfterOverlay() end
+    end
+    if launcherSplash:update(dt) then
+      launcherSplash:release()
+      launcherSplash = nil
+    end
+  end
   if editorMode then return EditorApp.update(dt) end
   if TouchEditor then return TouchEditor.update(dt) end
   -- Upstream's desktop skin studio, ahead of the importer exactly as it is
@@ -1319,9 +1446,12 @@ function love.update(dt)
     -- Phosphor draws the import UI itself and never shows that window, so the
     -- pump is skipped when embedded: same rule as Prelaunch and the error
     -- screen. Standalone gen1recomp keeps upstream's behaviour exactly.
+    -- v0.3.37's splash gate is taken as upstream wrote it; embedded, no splash
+    -- is ever built, so it reads false.
     if not love._phosphorEmbedded then
       require("src.import.LauncherWindow").observe(dt)
     end
+    Importer._inputBlocked = splashBlocksInput()
     Importer:update(dt)
     if hostImportActive then
       require("src.core.HostSeam").pumpImportStatus(Importer)
@@ -1365,7 +1495,9 @@ function love.update(dt)
     return
   end
   if driverCo then
-    for _ = 1, iterations do
+    local i = 0
+    while i < iterations do
+      i = i + 1
       local ok, err = coroutine.resume(driverCo, Game)
       if not ok then
         print("driver error: " .. tostring(err))
@@ -1377,6 +1509,7 @@ function love.update(dt)
         return
       end
       Game:update(1 / 60)
+      iterations = math.min(iterations, scriptedIterations())
     end
     return
   end
@@ -1437,6 +1570,7 @@ function love.draw()
     GameViewport.reset()
     HostDisplay.beginFrame("launcher", Importer)
     local result = Importer:draw()
+    if launcherSplash then launcherSplash:draw() end
     HostDisplay.endFrame("launcher", Importer)
     return result
   end
@@ -1468,6 +1602,7 @@ function love.draw()
 end
 
 function love.keypressed(key, scancode, isrepeat)
+  if splashBlocksInput() then return end
   if editorMode then return EditorApp.keypressed(key) end
   if TouchEditor then return TouchEditor.keypressed(key) end
   if Studio then return Studio.keypressed(key) end
@@ -1478,6 +1613,7 @@ function love.keypressed(key, scancode, isrepeat)
 end
 
 function love.keyreleased(key)
+  if splashBlocksInput() then return end
   if editorMode or TouchEditor or Studio then return end
   if Importer then return end
   if not Game then return end
@@ -1485,7 +1621,9 @@ function love.keyreleased(key)
 end
 
 function love.gamepadpressed(joystick, button)
+  if splashBlocksInput() then return end
   SwitchDiagnostics.onJoystickEvent("gamepadpressed", joystick, button)
+  if PadHints.windowMinimized() then return end
   if editorMode then
     if EditorApp and EditorApp.gamepadpressed then
       return EditorApp.gamepadpressed(joystick, button)
@@ -1506,6 +1644,7 @@ function love.gamepadpressed(joystick, button)
 end
 
 function love.gamepadreleased(joystick, button)
+  if splashBlocksInput() then return end
   SwitchDiagnostics.onJoystickEvent("gamepadreleased", joystick, button)
   if editorMode then
     if EditorApp and EditorApp.gamepadreleased then
@@ -1526,7 +1665,9 @@ function love.gamepadreleased(joystick, button)
 end
 
 function love.gamepadaxis(joystick, axis, value)
+  if splashBlocksInput() then return end
   SwitchDiagnostics.onJoystickEvent("gamepadaxis", joystick, axis, { value = value })
+  if PadHints.windowMinimized() then value = 0 end
   if editorMode then
     if EditorApp and EditorApp.gamepadaxis then
       return EditorApp.gamepadaxis(joystick, axis, value)
@@ -1546,7 +1687,9 @@ function love.gamepadaxis(joystick, axis, value)
 end
 
 function love.joystickpressed(joystick, button)
+  if splashBlocksInput() then return end
   SwitchDiagnostics.onJoystickEvent("joystickpressed", joystick, button)
+  if PadHints.windowMinimized() then return end
   if editorMode then
     if EditorApp and EditorApp.joystickpressed then
       return EditorApp.joystickpressed(joystick, button)
@@ -1566,6 +1709,7 @@ function love.joystickpressed(joystick, button)
 end
 
 function love.joystickreleased(joystick, button)
+  if splashBlocksInput() then return end
   SwitchDiagnostics.onJoystickEvent("joystickreleased", joystick, button)
   if editorMode then
     if EditorApp and EditorApp.joystickreleased then
@@ -1586,7 +1730,9 @@ function love.joystickreleased(joystick, button)
 end
 
 function love.joystickaxis(joystick, axis, value)
+  if splashBlocksInput() then return end
   SwitchDiagnostics.onJoystickEvent("joystickaxis", joystick, axis, { value = value })
+  if PadHints.windowMinimized() then value = 0 end
   if editorMode then
     if EditorApp and EditorApp.joystickaxis then
       return EditorApp.joystickaxis(joystick, axis, value)
@@ -1606,7 +1752,9 @@ function love.joystickaxis(joystick, axis, value)
 end
 
 function love.joystickhat(joystick, hat, direction)
+  if splashBlocksInput() then return end
   SwitchDiagnostics.onJoystickEvent("joystickhat", joystick, hat, { direction = direction })
+  if PadHints.windowMinimized() then direction = "c" end
   if editorMode then
     if EditorApp and EditorApp.joystickhat then
       return EditorApp.joystickhat(joystick, hat, direction)
@@ -1625,8 +1773,20 @@ function love.joystickhat(joystick, hat, direction)
   Game:joystickhat(joystick, hat, direction)
 end
 
+-- The joystick lists cached for polling (checkEmergencyQuit's, Input's
+-- pollPads) are only refreshed on a count change or a timer otherwise, which
+-- a controller swapped for another can slip past.
+local function noteJoysticksChanged()
+  cachedJoysticks = nil
+  local input = Game and Game.input
+  if type(input) == "table" and input.joysticksChanged then
+    input:joysticksChanged()
+  end
+end
+
 function love.joystickadded(joystick)
   SwitchDiagnostics.onJoystickEvent("joystickadded", joystick)
+  noteJoysticksChanged()
   if editorMode or TouchEditor or Studio then return end
   if Importer then return end
   if not Game then return end
@@ -1635,6 +1795,7 @@ end
 
 function love.joystickremoved(joystick)
   SwitchDiagnostics.onJoystickEvent("joystickremoved", joystick)
+  noteJoysticksChanged()
   if editorMode or TouchEditor or Studio then return end
   if Importer then return end
   if not Game then return end
@@ -1645,6 +1806,7 @@ end
 -- direction's key-up can be delivered to the OS instead of the game while
 -- unfocused, so reset input on either transition rather than trust it.
 function love.focus(f)
+  SwitchDiagnostics.onFocus(f)
   if editorMode or TouchEditor then return end
   if Studio then
     if Studio.focus then Studio.focus(f) end
@@ -1722,14 +1884,9 @@ function love.handlers.intent_uri(uri)
 end
 
 function love.touchpressed(id, x, y, dx, dy, pressure)
+  if splashBlocksInput() then return end
   if editorMode then
-    -- iOS synthesizes mousepressed for the primary touch; forwarding here
-    -- would double-fire.  Android / NX need the explicit touch → click path
-    -- (love-nx does not synthesize mouse for the editor the way desktop does).
-    if love.system.getOS() == "iOS" then return end
-    if EditorApp and EditorApp.mousepressed then
-      return EditorApp.mousepressed(x, y, 1)
-    end
+    if EditorApp and EditorApp.touchpressed then return EditorApp.touchpressed(id,x,y) end
     return
   end
   if TouchEditor then
@@ -1751,7 +1908,8 @@ function love.touchpressed(id, x, y, dx, dy, pressure)
 end
 
 function love.touchmoved(id, x, y, dx, dy, pressure)
-  if editorMode then return end
+  if splashBlocksInput() then return end
+  if editorMode then return EditorApp.touchmoved(id,x,y) end
   if TouchEditor then
     if love.system.getOS() == "iOS" then return end
     return TouchEditor.touchmoved(id, x, y)
@@ -1765,7 +1923,8 @@ function love.touchmoved(id, x, y, dx, dy, pressure)
 end
 
 function love.touchreleased(id, x, y, dx, dy, pressure)
-  if editorMode then return end
+  if splashBlocksInput() then return end
+  if editorMode then return EditorApp.touchreleased(id,x,y) end
   if TouchEditor then
     if love.system.getOS() == "iOS" then return end
     return TouchEditor.touchreleased(id, x, y)
@@ -1779,6 +1938,7 @@ function love.touchreleased(id, x, y, dx, dy, pressure)
 end
 
 function love.wheelmoved(x, y)
+  if splashBlocksInput() then return end
   if editorMode then
     if EditorApp.wheelmoved then return EditorApp.wheelmoved(x, y) end
     return
@@ -1816,6 +1976,7 @@ if love.system and love.system.getOS() == "Linux"
 end
 
 function love.mousepressed(x, y, button, istouch)
+  if splashBlocksInput() then return end
   if not istouch then eventMouseX, eventMouseY = x, y end
   if TouchEditor then
     -- Android primary touch already arrived via love.touchpressed; a second
@@ -1845,9 +2006,9 @@ function love.mousepressed(x, y, button, istouch)
     return Importer:mousepressed(x, y, button)
   end
   if editorMode and EditorApp.mousepressed then
-    -- Same Android double-fire guard: touchpressed already clicked for the
-    -- save editor; a synthesized mouse press must not fire again.
-    if istouch and love.system.getOS() == "Android" then return end
+    -- The editor owns the real touch lifecycle on Android and iOS.
+    -- Discard its synthetic mouse twin to avoid a second activation.
+    if istouch then return end
     return EditorApp.mousepressed(x, y, button)
   end
   if mouseTouch then
@@ -1863,6 +2024,7 @@ function love.mousepressed(x, y, button, istouch)
 end
 
 function love.mousereleased(x, y, button, istouch)
+  if splashBlocksInput() then return end
   if TouchEditor then
     if love.system.getOS() == "Android" then return end
     return TouchEditor.mousereleased(x, y, button)
@@ -1883,6 +2045,7 @@ function love.mousereleased(x, y, button, istouch)
 end
 
 function love.mousemoved(x, y, dx, dy, istouch)
+  if splashBlocksInput() then return end
   if not istouch then eventMouseX, eventMouseY = x, y end
   if TouchEditor then
     if love.system.getOS() == "Android" then return end
@@ -1901,6 +2064,7 @@ function love.mousemoved(x, y, dx, dy, istouch)
 end
 
 function love.textinput(text)
+  if splashBlocksInput() then return end
   if TouchEditor then return end
   if Studio then return Studio.textinput(text) end
   if Importer then return Importer:textinput(text) end
@@ -1937,6 +2101,11 @@ local function shutdownWorkers()
 end
 
 function love.quit()
+  if launcherSplash then launcherSplash:release(); launcherSplash = nil end
+  if Importer and Importer._themeVideo then
+    pcall(Importer._themeVideo.release, Importer._themeVideo)
+    Importer._themeVideo = nil
+  end
   if Importer then
     require("src.import.LauncherWindow").observe(0)
     require("src.import.LauncherWindow").flush()
@@ -2025,6 +2194,7 @@ function love.quit()
 end
 
 function love.filedropped(file)
+  if splashBlocksInput() then return end
   local filename = file and file.getFilename and file:getFilename()
   if LaunchOptions.isLaunchURI(filename) then
     local request = LaunchOptions.parseURI(filename)

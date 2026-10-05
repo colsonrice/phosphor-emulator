@@ -117,12 +117,12 @@ local function head(name)
   return (name:match("^([^%.%/]+)")) or name
 end
 
--- nil when the require is allowed, else the message to fail it with.
--- permissionSet is still accepted (Loader's dev-mode backstop passes it, and
--- src.link.* below reads it) even though the network arm no longer consults
--- it.
-function Sandbox.moduleDenial(name, permissionSet)
-  if type(name) ~= "string" then return nil end
+-- Cache only permission-independent verdicts. Phosphor still denies raw
+-- networking even when a manifest requests network; linkDenial checks the
+-- engine link permission separately on every call.
+local verdicts, verdictCount = {}, 0
+local VERDICT_MAX = 4096
+local function verdictFor(name)
   local root = head(name)
   local reason = DENIED[root]
   if reason then
@@ -142,7 +142,19 @@ function Sandbox.moduleDenial(name, permissionSet)
     return ("%s is not available to mods: this build gives mod code no "
       .. "outbound network access"):format(name)
   end
-  return nil
+  return false
+end
+
+function Sandbox.moduleDenial(name, permissionSet)
+  if type(name) ~= "string" then return nil end
+  local verdict = verdicts[name]
+  if verdict == nil then
+    verdict = verdictFor(name)
+    if verdictCount >= VERDICT_MAX then verdicts, verdictCount = {}, 0 end
+    verdicts[name] = verdict
+    verdictCount = verdictCount + 1
+  end
+  return verdict or nil
 end
 
 -- PHOSPHOR (8): the engine's own link stack is the one place a mod could
