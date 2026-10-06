@@ -38,3 +38,11 @@
 # from v0.2.62 through v0.2.69. Cleared by BOIS CLUB GAMES' permission of
 # Sep 22 2026. See CLAUDE.md, "gen1recomp relicensed".
 d68d38ba4b07c34122d669f219e5c52db45d46f9825378b19bea3f50b1e4cc19	GPLv3 + Section 7 (v0.2.62 onward), cleared Sep 22 2026
+
+# GPLv3 plus the Section 7 additional terms, plus a "PortMaster distribution
+# permission" section added at v0.3.56 (commit fce5f086, Oct 6 2026): an
+# exception letting the proprietary launcher be distributed through
+# PortMaster, "all other terms remain unchanged". Read in full by diff
+# against the text above on Oct 6 2026; it takes nothing from the Sep 22 2026
+# permission. Colson chose to take v0.3.56 the same day.
+b369ce45656b3d87453541816fac6982b13e09ea0734ab9cfe61cf3faf5e95ed	GPLv3 + Section 7 + PortMaster exception (v0.3.56 onward), read and taken Oct 6 2026

@@ -373,6 +373,12 @@ local function openEditor(version, slotId)
     Importer.saveNotice[version] = { ok = false, text = text }
   end
   local SaveData = require("src.core.SaveData")
+  local recovered, recoveryError, recoveryNotice = require("src.box.Transaction").recover(SaveData.persistenceFs())
+  if not recovered then refuse(recoveryError); return end
+  if recoveryNotice then
+    require("src.core.Logger").warn("%s", recoveryNotice)
+    if Importer and Importer._boxState then Importer._boxState.notice = recoveryNotice end
+  end
   local path = SaveData.slotDiskPath(version, slotId)
   if not path then
     refuse("Could not resolve that save slot on disk.")
@@ -896,6 +902,15 @@ function bootGame(version, cartId, opts)
   opts = opts or {}
   if require("src.core.RequireGuard").repair() then
     print("boot: restored love.filesystem searcher (see #2001)")
+  end
+  local recovered, recoveryError, recoveryNotice = require("src.box.Transaction").recover(
+    require("src.core.SaveData").persistenceFs())
+  if recoveryNotice then require("src.core.Logger").warn("%s", recoveryNotice) end
+  if not recovered then
+    Importer = makeLauncher({ initialTab = "box" })
+    Importer._boxState = nil
+    require("src.import.BoxPanel").refresh(Importer).notice = recoveryError
+    return
   end
   pcall(function()
     require("src.online.Trade").hostIsLive = function() return true end
@@ -1844,6 +1859,8 @@ end
 love.handlers = love.handlers or {}
 
 function love.handlers.audiosuspend()
+  local BoxCry = package.loaded["src.box.Cry"]
+  if BoxCry then pcall(BoxCry.setSuspended, true) end
   local ChipAudio = package.loaded["src.core.ChipAudio"]
   if ChipAudio then pcall(ChipAudio.setSuspended, true) end
   local Sound = package.loaded["src.core.Sound"]
@@ -1853,6 +1870,8 @@ function love.handlers.audiosuspend()
 end
 
 function love.handlers.audioreset()
+  local BoxCry = package.loaded["src.box.Cry"]
+  if BoxCry then pcall(BoxCry.setSuspended, false) end
   local ChipAudio = package.loaded["src.core.ChipAudio"]
   if ChipAudio then
     pcall(ChipAudio.setSuspended, false)
@@ -2001,9 +2020,7 @@ function love.mousepressed(x, y, button, istouch)
     -- stacked two SAF pickers (#553). Clicks are polled inside FlexLove from
     -- love.touch / mouse.isDown, so dropping the synthesized istouch press is
     -- safe. A real mouse (DeX, Chromebook, USB) still reaches mousepressed.
-    if istouch and (love.system.getOS() == "Android"
-        or love.system.getOS() == "iOS") then return end
-    return Importer:mousepressed(x, y, button)
+    return Importer:mousepressed(x, y, button, istouch)
   end
   if editorMode and EditorApp.mousepressed then
     -- The editor owns the real touch lifecycle on Android and iOS.
@@ -2033,7 +2050,7 @@ function love.mousereleased(x, y, button, istouch)
     if istouch and (love.system.getOS() == "Android" or love.system.getOS() == "iOS") then return end
     return Studio.mousereleased(x, y, button)
   end
-  if Importer then return end
+  if Importer then return Importer:mousereleased(x, y, button, istouch) end
   if editorMode and EditorApp.mousereleased then
     return EditorApp.mousereleased(x, y, button)
   end
@@ -2055,7 +2072,8 @@ function love.mousemoved(x, y, dx, dy, istouch)
     if istouch and (love.system.getOS() == "Android" or love.system.getOS() == "iOS") then return end
     return Studio.mousemoved(x, y)
   end
-  if editorMode or Importer then return end
+  if Importer then return Importer:mousemoved(x, y, dx, dy, istouch) end
+  if editorMode then return end
   if mouseTouch then
     if Game and love.mouse.isDown(1) then Game:touchmoved("mouse", x, y) end
     return
