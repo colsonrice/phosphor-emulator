@@ -89,7 +89,12 @@ fi
 ENTRIES="$(unzip -Z1 "$OUT")"
 
 for required in src/update/Boot.lua tools/save-editor/App.lua src/core/GameVersion.lua; do
-  printf '%s\n' "$ENTRIES" | grep -Fxq "$required" \
+  # A here-string, not `printf | grep -q`: grep -q exits on its first match,
+  # and once the listing outgrew the pipe buffer (0.3.52, Ruby and Sapphire)
+  # printf was still writing when it did, took EPIPE, and `pipefail` called a
+  # payload that HAD the file "missing". It passed for a year while listings
+  # were small. Same trap this file warns about above, one layer down.
+  grep -Fxq "$required" <<<"$ENTRIES" \
     || fail "payload is missing $required"
 done
 # EVERY manifest GameVersion.lua names, checked individually.
@@ -104,7 +109,7 @@ done
 # until a Gen 2 game was opened.
 # shellcheck disable=SC2086
 for manifest in $MANIFESTS; do
-  printf '%s\n' "$ENTRIES" | grep -Fxq "$manifest" \
+  grep -Fxq "$manifest" <<<"$ENTRIES" \
     || fail "payload is missing $manifest, which src/core/GameVersion.lua requires"
 done
 
