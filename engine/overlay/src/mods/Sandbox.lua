@@ -246,12 +246,32 @@ end
 -- engine tests require src.core.HostShell at file scope from outside src/, and
 -- moduleDenial answers for those callers too.
 local HOST_ESCAPE = {
+  -- Added in 0.3.85: direct native process and filesystem entry points.
+  ["src.core.WinApi"] = "native process creation and pipes",
+  ["src.online.union.Avatars"] = "a caller-supplied filesystem reader",
+  ["src.online.xgen.Datasets"] = "a caller-supplied filesystem reader",
   ["src.core.HostShell"] = "io.popen, os.execute and the curl transport",
   ["src.core.IssueReport"] = "io.popen and love.system.openURL",
   -- Arrived in 0.2.32 as a launcher file picker. It shells out twice
   -- (`test -d`, `ls -1ap`) with a path interpolated, so requiring it hands a
   -- mod io.popen with an argument it controls.
   ["src.ui.kit.FileBrowser"] = "io.popen with a caller-supplied path",
+  -- PHOSPHOR (12), Oct 22 2026, at 0.3.95.  Found by requiring, from a mod's
+  -- env, every engine module whose source touches io, os, ffi or a thread,
+  -- rather than by reading for names: 104 resolve.  Most only read their own
+  -- assets.  These take a command, a path, a library or a loader from their
+  -- caller.  None is required by any mod known to this repo.
+  ["src.core.HostPicker"] = "a caller-supplied command list, run through io.popen on a worker thread",
+  ["src.core.FilePicker"] = "native file pickers run through io.popen",
+  ["src.render.WindowsDpi"] = "an FFI entry point (SDL2)",
+  ["src.import.RomImporter"] = "the launcher's native pickers (io.popen) and cache writes",
+  ["src.mods.LauncherMods"] = "the launcher's mod manager, which writes and removes other mods",
+  ["src.mods.ModUpdate"] = "the removal of installed mods",
+  -- Both trust the loader their caller passes in: the permission check is
+  -- the Loader's, before it calls them, so a mod calling one directly brings
+  -- its own loader and skips it.  mod.fetch and mod.jobs stay as they are.
+  ["src.mods.Net"] = "the HTTP job pool, without the network permission check",
+  ["src.mods.Job"] = "the background worker pool, without its permission check",
 }
 
 -- Ordered, not a hash: the message a mod author reads must not depend on
@@ -259,6 +279,13 @@ local HOST_ESCAPE = {
 local HOST_ESCAPE_TREES = {
   { "src.net", "the launcher's HTTP stack" },
   { "src.sync", "the save-sync client, which takes an arbitrary base URL" },
+  -- PHOSPHOR (12).  Downloads, replaces files and runs os.execute.
+  { "src.update", "the self-updater" },
+  -- PHOSPHOR (12).  The Gen 3 ROM extractor: io.open at paths its caller
+  -- gives it (file_io.makeCache writes anywhere the app can), os.execute with
+  -- an unescaped directory, and cli_extract, which is a command-line entry
+  -- point that calls os.exit when it is required.
+  { "src.import.gba", "the Gen 3 ROM extractor's raw file access and shell" },
 }
 
 local function hostEscapeDenial(name)
@@ -747,6 +774,15 @@ function Sandbox.loadFile(fs, path, env)
   local source = fs.read and fs.read(path)
   if not source then return nil, "unable to read " .. path end
   return Sandbox.compile(source, "@" .. path, env)
+end
+
+function Sandbox.evalData(source, chunkname)
+  if type(source) ~= "string" or source == "" then return nil end
+  local chunk = Sandbox.compile(source, chunkname, {})
+  if not chunk then return nil end
+  local ok, result = pcall(chunk)
+  if ok and type(result) == "table" then return result end
+  return nil
 end
 
 Sandbox.safePath = SafePath.safe

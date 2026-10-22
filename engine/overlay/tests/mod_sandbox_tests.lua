@@ -341,7 +341,8 @@ end
 -- platform happens to be missing the tool" is not a sandbox.
 do
   local quiet = Sandbox.envFor({ modId = "QUIET_MOD", permissions = {} })
-  for _, name in ipairs({ "src.core.HostShell", "src.ui.kit.FileBrowser", "src.net.Fetch",
+  for _, name in ipairs({ "src.core.WinApi", "src.online.union.Avatars", "src.online.xgen.Datasets",
+    "src.core.HostShell", "src.ui.kit.FileBrowser", "src.net.Fetch",
                           "src.net.fetch_worker", "src.sync.SyncClient",
                           "src.sync.SyncTransport", "src.sync.SyncEngine",
                           "src.core.IssueReport" }) do
@@ -363,6 +364,42 @@ do
   local Fetch = require("src.net.Fetch")
   check(type(Fetch.download) == "function" and type(Fetch.request) == "function",
     "Fetch still fetches at this pin -- same re-read if it stops")
+end
+
+-- PHOSPHOR (12).  The modules found at 0.3.95 by requiring every engine file
+-- that touches io, os, ffi or a thread from a mod's env.  Each takes a
+-- command, a path, a library or a loader from its caller.
+do
+  local quiet = Sandbox.envFor({ modId = "QUIET_MOD", permissions = {} })
+  for _, name in ipairs({ "src.core.HostPicker", "src.core.FilePicker",
+                          "src.render.WindowsDpi", "src.import.RomImporter",
+                          "src.mods.LauncherMods", "src.mods.ModUpdate",
+                          "src.mods.Net", "src.mods.Job",
+                          "src.update.Boot", "src.update.Check",
+                          "src.import.gba.file_io", "src.import.gba.cli_extract",
+                          "src.import.gba.map_sections_extract",
+                          "src/import/gba/file_io" }) do
+    local ok, err = pcall(quiet.require, name)
+    check(not ok and tostring(err):find("not available to mods", 1, true) ~= nil,
+      name .. " is refused to mods by name, before it loads: " .. tostring(err))
+  end
+  -- Even a mod granted network gets no shortcut past the Loader: mod.fetch is
+  -- the door, and it checks the permission before it calls Net.
+  local networked = Sandbox.envFor({ modId = "NET_MOD", permissions = { network = true } })
+  check(not pcall(networked.require, "src.mods.Net"),
+    "src.mods.Net is refused even to a mod with the network permission")
+  -- Engine code still reaches them: the Gen 3 importer requires its own
+  -- extractors, and the denial is the mod env's alone.
+  eq(Sandbox.moduleDenial("src.import.gba.file_io", {}), nil,
+    "moduleDenial stays out of it, so the importer still loads its extractors")
+  -- The properties, not the names.
+  local HostPicker = require("src.core.HostPicker")
+  check(type(HostPicker.start) == "function",
+    "HostPicker.start still exists at this pin -- if it is gone, re-read "
+    .. "whether the denial above is still the right shape")
+  local FileIO = require("src.import.gba.file_io")
+  check(type(FileIO.makeCache) == "function",
+    "gba file_io still hands out a writer at this pin -- same re-read if it stops")
 end
 
 -- the engine's own code stays reachable: a sandbox that breaks every mod

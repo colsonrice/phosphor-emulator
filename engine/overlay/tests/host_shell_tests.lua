@@ -13,6 +13,7 @@ for _, name in ipairs({ 'Importer', 'EditorApp', 'TouchEditor', 'Studio', 'Prela
   love.draw()
   assert(not rendered and cleared, name .. ' must never draw over Phosphor')
 end
+FrameProfiler = { draw = function() end }
 local rendered = false
 love = { _phosphorEmbedded = true, graphics = { clear = function() error('game hidden') end } }
 assert(loadstring('local Game = ...; ' .. draw))({ draw = function() rendered = true end })

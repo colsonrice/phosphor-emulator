@@ -31,54 +31,31 @@ check(bootFromHost and bootFromHost:find("launchedIntoGame = true", 1, true) ~= 
       "bootFromHost sets launchedIntoGame: Phosphor's library IS the launcher, "
       .. "so a close must exit rather than restart into the Lua one")
 
--- The condition it feeds is the thing that must stay wired to it, and the
--- WAY it is wired is the overlay's own divergence: upstream ORs a platform
--- term in (`isAndroid`, widened to `inProcessReturn` at 0.2.27), and on
--- Phosphor's host that term is at best inert and at worst sends every exit
--- to gen1recomp's Lua launcher with the quit aborted and onExit never
--- firing (the two-minute-exit device report of Aug 27 2026). The overlay
--- drops the platform term from the OUTER condition and keeps upstream's
--- widened INNER branch. Both halves are pinned, because both halves have
--- regressed for real: the 0.2.32 take re-ported main.lua from a base that
--- predated the term-drop, and this suite was itself pinned to a stale
--- spelling and running red where nobody looked.
--- The `and (` prefix distinguishes the code from the comment that names the
--- rejected spelling right above it.
-check(src:find("and (inProcessReturn or not launchedIntoGame)", 1, true) == nil,
-      "the outer quit condition must NOT take upstream's platform term")
+-- Upstream 0.3.85 owns restart teardown through endProcessOnce. Embedded
+-- sessions must exit before reaching either native restart or Lua launcher.
+local returnBody = src:match("local function returnToLauncher%(opts%)(.-)\nend\n")
+check(returnBody and returnBody:find("if love._phosphorEmbedded then return love.event.quit() end", 1, true),
+      "embedded return exits to Phosphor before restart")
+check(src:find("and (mobile or not launchedIntoGame)", 1, true) == nil,
+      "mobile must not force host sessions into the launcher")
 check(src:find("and not launchedIntoGame", 1, true) ~= nil,
-      "the quit condition still reads launchedIntoGame")
-check(src:find("if inProcessReturn then", 1, true) ~= nil,
-      "the inner branch keeps upstream's widened in-process return")
-
--- ---- 2. the worker shutdowns run on EVERY quit path
-
+      "host-launched session bypasses the launcher")
 local quit = src:match("\nfunction love%.quit%(%)(.-)\nend\n")
-check(quit ~= nil, "love.quit is still there to assert about")
-local restartBranch = quit and quit:match("if wouldReturnToLauncher then(.-)\n  end")
-check(restartBranch ~= nil, "the restart branch is still there to assert about")
-check(restartBranch and restartBranch:find("shutdownWorkers()", 1, true) ~= nil,
-      "the restart branch shuts the workers down before restarting: a parked "
-      .. "love.thread holds the filesystem module open across the restart")
-
-local _, shutdownCalls = quit:gsub("shutdownWorkers%(%)", "")
-check(shutdownCalls >= 2, "both quit paths shut the workers down (found "
-      .. shutdownCalls .. ")")
-
--- One definition, so the two call sites cannot drift apart.
-local _, defs = src:gsub("local function shutdownWorkers%(%)", "")
-check(defs == 1, "exactly one shutdownWorkers definition (found " .. defs .. ")")
-
--- The shutdowns themselves are still the #339 set. Since the 0.2.32 port
--- they run through upstream's SessionLifecycle: each worker registers its
--- own shutdown at module load, and endProcess runs the registered set. So
--- the pin moves with them: shutdownWorkers must still reach endProcess,
--- and each worker file must still register — a worker that quietly drops
--- its registration is exactly the #339 regression, and main.lua can no
--- longer see it.
-local body = src:match("local function shutdownWorkers%(%)(.-)\nend\n")
-check(body and body:find("SessionLifecycle.endProcess()", 1, true) ~= nil,
-      "shutdownWorkers still reaches SessionLifecycle.endProcess")
+check(quit and quit:find("endProcessOnce()", 1, true), "actual quit shuts workers down")
+check(returnBody and returnBody:find("endProcessOnce()", 1, true), "standalone restart shuts workers down")
+local body = src:match("local function endProcessOnce%(%)(.-)\nend\n")
+check(body and body:find('require("src.core.SessionLifecycle").endProcess()', 1, true),
+      "shutdown still reaches SessionLifecycle")
+-- Execute the actual helper to prove repeated quit paths do not repeat teardown.
+local calls = 0
+local shutdown = assert(loadstring("local processEnded = false; return function()" .. body .. "\nend"))
+setfenv(shutdown, setmetatable({ require = function(name)
+  if name == "src.core.SessionLifecycle" then return { endProcess = function() calls = calls + 1 end } end
+  return { shutdown = function() end }
+end }, { __index = _G }))
+local once = shutdown()
+once(); once()
+eq(calls, 1, "process teardown runs once")
 for _, worker in ipairs({
   { file = "src/update/Check.lua", name = "Check" },
   { file = "src/net/Fetch.lua", name = "Fetch" },
