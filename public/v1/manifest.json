@@ -4,7 +4,7 @@
   "engines": [
     {
       "id": "gen1recomp",
-      "catalogedAgainst": "0.3.95"
+      "catalogedAgainst": "0.3.96"
     }
   ],
   "games": [
