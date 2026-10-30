@@ -2,6 +2,32 @@
   "note": "Builds of gen1recomp (https://github.com/bryanthaboi/gen1recomp) by BOIS CLUB GAMES, packaged and published by Phosphor. Phosphor is not an official build of gen1recomp and is not endorsed by its authors.",
   "entries": [
     {
+      "id": "gen1recomp-0301bf783d63",
+      "engineID": "gen1recomp",
+      "engineVersion": "0.3.98",
+      "upstream": "4312fb64c927b8892091075f159f09d7a211d4b5",
+      "snapshotDate": "2026-10-29T18:11:26-04:00",
+      "sha256": "0301bf783d63963894d714cc2c4772af34fedd11b5f070de90ac74b7fa0d65bf",
+      "bytes": 43006151,
+      "url": "https://github.com/colsonrice/phosphor-emulator/releases/download/gen1recomp-0.3.98/gen1recomp-0301bf783d63.love",
+      "shippedIn": null,
+      "games": [
+        "blue",
+        "crystal",
+        "emerald",
+        "firered",
+        "gold",
+        "leafgreen",
+        "red",
+        "ruby",
+        "sapphire",
+        "silver",
+        "yellow"
+      ],
+      "overlay": "c20985eff60fe03584ae0010f765ba1650745f445d922d77dbc538d0c819d3a8",
+      "ordinal": 90
+    },
+    {
       "id": "gen1recomp-1ee15db6e163",
       "engineID": "gen1recomp",
       "engineVersion": "0.3.97",
