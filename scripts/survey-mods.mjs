@@ -87,6 +87,20 @@ const FORK_SEARCHES = ["gen1recomp", "gen2recomped", "pokemon recomp"];
 /// pipeline has got backwards at least once.
 const ENGINE_CLONE_NAMES = /^(gen1recomp|gen2recomp|gen2recomped|gen3recomp)([-_. ]?(pp|plus|\+\+))?$/i;
 
+/// The engines themselves, by repository. A fork of one of THESE is somebody
+/// starting a new mod from the engine and is worth a look; a fork of any other
+/// surveyed repository is a copy of something already being surveyed.
+///
+/// By repository and not by NAME, which is what this used to ask: a parent
+/// named like the engine was taken for the engine. `FAFF0x/gen1recomp` is a
+/// suite of 45 mods that happens to carry the engine's name, and on Nov 19
+/// 2026 four forks of it (Manurocker95, vegerot, AbdurRauf-01, goofwear) were
+/// each kept as a new source of 43 "new" mods: 172 drafted listings that were
+/// copies of 43, most of them byte for byte.
+const ENGINE_REPOS = new Set([
+  "bryanthaboi/gen1recomp", "underdecoded/gen2recomped",
+]);
+
 /// Licences under which a creator has already granted redistribution. This is
 /// the same bar the catalog's existing rows use — `permission: "open-license"`
 /// with the LICENSE file as the evidence. Anything else, including GitHub's
@@ -266,8 +280,7 @@ async function gatherRepos() {
     // — leaving this filter looking like it ran and skipping nothing.
     const parent = (await gh(`repos/${name}`, ".parent.full_name // empty")
       .catch(() => "")).trim();
-    if (parent && repos.has(parent)
-        && !ENGINE_CLONE_NAMES.test(parent.split("/")[1] ?? "")) continue;
+    if (parent && repos.has(parent) && !ENGINE_REPOS.has(parent.toLowerCase())) continue;
     repos.set(name, { indexed: null });
     forkCandidates += 1;
   }
@@ -705,7 +718,21 @@ const TOPICS_BY_CATEGORY = {
   // missing category is not a reason to refuse a working mod. UNCATEGORIZED
   // is the fallback `topicFor` reaches when a manifest says nothing.
   "SPRITE PACK": "ART", SPRITE_PACK: "ART", SPRITEPACK: "ART",
+  // Added Nov 19 2026, from the categories that held working mods back.
+  "SPRITE SWAPPER": "ART", BATTLE: "GAMEPLAY", "QUALITY OF LIFE": "QOL",
+  // "OTHER" says what the mod is not; it lands where an uncategorised mod does.
+  OTHER: "QOL",
 };
+
+/// One category as a shelf, whatever its author's case and separators:
+/// "quality-of-life", "Quality of life" and "QUALITY_OF_LIFE" are one idea.
+/// Seven licensed, working mods were held back on Nov 19 2026 for spelling
+/// a category this table already had, or one a word away from it.
+function shelfFor(category) {
+  const key = String(category ?? "").trim().toUpperCase();
+  return TOPICS_BY_CATEGORY[key] ?? TOPICS_BY_CATEGORY[key.replace(/[-_\s]+/g, " ")]
+    ?? TOPICS_BY_CATEGORY[key.replace(/[-\s]+/g, "_")] ?? null;
+}
 
 /// Where a mod with no category of its own lands.
 ///
@@ -732,11 +759,17 @@ function topicFor(result) {
   const override = TOPIC_OVERRIDES[result.repo];
   if (override) return override;
   for (const category of result.indexEntry?.categories ?? []) {
-    const topic = TOPICS_BY_CATEGORY[String(category).toUpperCase()];
+    const topic = shelfFor(category);
     if (topic) return topic;
   }
-  const own = String(result.contents?.manifest?.category ?? "").toUpperCase();
-  if (TOPICS_BY_CATEGORY[own]) return TOPICS_BY_CATEGORY[own];
+  const raw = result.contents?.manifest?.category;
+  const own = String(raw ?? "").toUpperCase();
+  // A list, or a comma-separated string, names several: the first that has a
+  // shelf decides ("GRAPHICS, GAMEPLAY" is ART).
+  for (const part of (Array.isArray(raw) ? raw : own.split(","))) {
+    const topic = shelfFor(part);
+    if (topic) return topic;
+  }
   // A manifest that names no category at all still describes a working mod.
   // Refusing it was the old behaviour; see TOPIC_WHEN_UNCATEGORIZED.
   if (!own) return TOPIC_WHEN_UNCATEGORIZED;
