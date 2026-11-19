@@ -1,5 +1,5 @@
-// Fills `requirements.imports` and `requirements.requires` into
-// src/data/enrichment.json.
+// Fills `requirements.imports`, `requirements.requires` and
+// `requirements.games` into src/data/enrichment.json.
 //
 // Why this exists: a gen1recomp mod can declare the ROMs it is built from
 // (`required_imports` / `optional_imports` in its manifest.json), and the
@@ -25,12 +25,12 @@
 //
 // Usage: node scripts/backfill-mod-imports.mjs [--write]
 
-import { createHash } from "node:crypto";
 import { readFile, writeFile } from "node:fs/promises";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
 import { importsFrom, requiresFrom, requirementsFrom, usesNetwork } from "./enrich-catalog.mjs";
 import { readManifest } from "./lib/archive.mjs";
+import { readPinned } from "./lib/cache.mjs";
 
 const RELEASES = new URL("../src/data/releases.json", import.meta.url);
 const PROJECTS = new URL("../src/data/projects.json", import.meta.url);
@@ -64,21 +64,20 @@ export function cacheNameFor(row) {
 async function publishedManifest(row) {
   const name = cacheNameFor(row);
   if (!name) return { why: "no release asset URL to find its archive by" };
-  const file = new URL(encodeURIComponent(name), CACHE);
-  let bytes;
-  try {
-    bytes = await readFile(file);
-  } catch {
-    return { why: `${name} is not cached` };
-  }
   const pinned = row.directSource?.sha256 ?? row.sha256;
-  if (createHash("sha256").update(bytes).digest("hex") !== pinned) {
-    return { why: `${name} is cached but is not the release the catalog pins` };
+  // The plain name, or the copy parked beside it when an older release of the
+  // same name was cached first (scripts/lib/cache.mjs). Either way the bytes
+  // have to hash to the pin before anything is read out of them.
+  // Not a URL's `pathname`: that is still percent-encoded, and `unzip` would
+  // be handed a name with %20 in it for any asset whose author used a space.
+  const found = await readPinned(fileURLToPath(CACHE), name, pinned);
+  if (!found) {
+    const plain = await readFile(new URL(encodeURIComponent(name), CACHE)).catch(() => null);
+    return { why: plain ? `${name} is cached but is not the release the catalog pins`
+                        : `${name} is not cached` };
   }
-  // Not `file.pathname`: that is still percent-encoded, and `unzip` would be
-  // handed a name with %20 in it for any asset whose author used a space.
-  const manifest = await readManifest(fileURLToPath(file));
-  return manifest ? { manifest, archive: fileURLToPath(file) }
+  const manifest = await readManifest(found.path);
+  return manifest ? { manifest, archive: found.path }
                   : { why: `${name} has no readable manifest.json` };
 }
 
@@ -143,9 +142,21 @@ async function main() {
     else delete requirements.engineRange;
     if (engineRange) ranged += 1;
 
+    // Which games, from the same bytes and by the same rule (cartridgesFor,
+    // inside requirementsFrom). This is the one reader that has PROVED it is
+    // looking at the pinned release, and it used to leave the line to
+    // backfill-mod-games, which reads the survey's copy of the LATEST release
+    // (not the pinned one) and skipped any row whose archive it could not
+    // find. Nine installable rows were published with no games line at all
+    // on Nov 19 2026, and the app read each as covering every cartridge.
+    const games = derived?.games ?? null;
+    const beforeGames = JSON.stringify(requirements.games ?? null);
+    if (games) requirements.games = games;
+
     if (before !== JSON.stringify(imports ?? null) || beforeRequires !== JSON.stringify(requires ?? null)
         || beforePermissions !== JSON.stringify(permissions ?? null)
-        || beforeEngine !== JSON.stringify(engineRange)) changed += 1;
+        || beforeEngine !== JSON.stringify(engineRange)
+        || beforeGames !== JSON.stringify(requirements.games ?? null)) changed += 1;
     if (imports) declaring.push({ id: row.id, imports });
     if (requires) depending.push({ id: row.id, requires });
   }

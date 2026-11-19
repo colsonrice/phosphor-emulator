@@ -15,7 +15,10 @@
     "silver",
     "crystal",
     "firered",
-    "leafgreen"
+    "leafgreen",
+    "ruby",
+    "sapphire",
+    "emerald"
   ],
   "sections": [
     {
@@ -954,6 +957,21 @@
         "games": []
       },
       "modID": "no_exp_challenge",
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal",
+          "firered",
+          "leafgreen",
+          "ruby",
+          "sapphire",
+          "emerald"
+        ]
+      },
       "popularity": {
         "downloads": 235,
         "stars": 0,
@@ -5863,7 +5881,20 @@
       },
       "modID": "gen1autosave",
       "requirements": {
-        "engineRange": ">=0.0.0-dev <1.0.0"
+        "engineRange": ">=0.0.0-dev <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal",
+          "firered",
+          "leafgreen",
+          "ruby",
+          "sapphire",
+          "emerald"
+        ]
       }
     },
     {
@@ -5990,7 +6021,20 @@
       },
       "modID": "gen1_mod_menu",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal",
+          "firered",
+          "leafgreen",
+          "ruby",
+          "sapphire",
+          "emerald"
+        ]
       }
     },
     {
@@ -6114,7 +6158,20 @@
       },
       "modID": "gen1_sound_qol",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal",
+          "firered",
+          "leafgreen",
+          "ruby",
+          "sapphire",
+          "emerald"
+        ]
       }
     },
     {
@@ -6151,7 +6208,20 @@
       },
       "modID": "gen1_sprint",
       "requirements": {
-        "engineRange": ">=0.0.0-0 <2.0.0"
+        "engineRange": ">=0.0.0-0 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal",
+          "firered",
+          "leafgreen",
+          "ruby",
+          "sapphire",
+          "emerald"
+        ]
       }
     },
     {
@@ -9095,10 +9165,7 @@
         "games": [
           "red",
           "blue",
-          "yellow",
-          "gold",
-          "silver",
-          "crystal"
+          "yellow"
         ]
       },
       "popularity": {
@@ -9235,7 +9302,9 @@
           "red",
           "blue",
           "yellow",
-          "gold"
+          "gold",
+          "silver",
+          "crystal"
         ],
         "engineRange": ">=0.1.0 <2.0.0"
       },
@@ -9384,10 +9453,7 @@
         "games": [
           "red",
           "blue",
-          "yellow",
-          "gold",
-          "silver",
-          "crystal"
+          "yellow"
         ]
       },
       "popularity": {
@@ -9636,6 +9702,16 @@
         "url": "https://github.com/EnterPlayerOne/Battle-Cinematics-Stadium-Camera",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
+      },
       "popularity": {
         "downloads": 11387,
         "stars": 15,
@@ -9756,6 +9832,16 @@
       "project": {
         "url": "https://github.com/tebwritescode/battlepad/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -9983,9 +10069,7 @@
           "red",
           "blue",
           "yellow",
-          "gold",
-          "silver",
-          "crystal"
+          "gold"
         ]
       },
       "popularity": {
@@ -10230,10 +10314,7 @@
         "games": [
           "red",
           "blue",
-          "yellow",
-          "gold",
-          "silver",
-          "crystal"
+          "yellow"
         ]
       },
       "popularity": {
@@ -10858,6 +10939,13 @@
         "url": "https://github.com/absol89/DramaticShapeVoxelMod/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 64261,
         "stars": 168,
@@ -11033,10 +11121,7 @@
         "games": [
           "red",
           "blue",
-          "yellow",
-          "gold",
-          "silver",
-          "crystal"
+          "yellow"
         ]
       },
       "popularity": {
@@ -11864,7 +11949,20 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.1.79 || =0.0.0-dev"
+        "engineRange": ">=0.1.79 || =0.0.0-dev",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal",
+          "firered",
+          "leafgreen",
+          "ruby",
+          "sapphire",
+          "emerald"
+        ]
       },
       "popularity": {
         "downloads": 3819,
@@ -11914,10 +12012,7 @@
         "games": [
           "red",
           "blue",
-          "yellow",
-          "gold",
-          "silver",
-          "crystal"
+          "yellow"
         ]
       },
       "popularity": {
@@ -12574,10 +12669,7 @@
         "games": [
           "red",
           "blue",
-          "yellow",
-          "gold",
-          "silver",
-          "crystal"
+          "yellow"
         ]
       },
       "popularity": {
@@ -12839,6 +12931,13 @@
       "project": {
         "url": "https://github.com/git-mrjoufflu/gen1coop/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       }
     },
     {
@@ -12931,7 +13030,12 @@
           "yellow",
           "gold",
           "silver",
-          "crystal"
+          "crystal",
+          "firered",
+          "leafgreen",
+          "ruby",
+          "sapphire",
+          "emerald"
         ]
       }
     },
@@ -14038,6 +14142,13 @@
       "project": {
         "url": "https://github.com/Dix01/gen1recomp-FireRed-FX/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       }
     },
     {
@@ -15570,6 +15681,13 @@
         "url": "https://github.com/HubGit8/Gen1Recomp-Phase-Step/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
+      },
       "popularity": {
         "downloads": 56,
         "stars": 1,
@@ -16019,7 +16137,12 @@
           "yellow",
           "gold",
           "silver",
-          "crystal"
+          "crystal",
+          "firered",
+          "leafgreen",
+          "ruby",
+          "sapphire",
+          "emerald"
         ]
       }
     },
@@ -16379,7 +16502,8 @@
         "games": [
           "red",
           "blue",
-          "yellow"
+          "yellow",
+          "crystal"
         ]
       },
       "popularity": {
@@ -16710,12 +16834,7 @@
       "requirements": {
         "engineRange": ">=0.0.0-0 <2.0.0",
         "games": [
-          "red",
-          "blue",
-          "yellow",
-          "gold",
-          "silver",
-          "crystal"
+          "gold"
         ]
       },
       "popularity": {
@@ -16747,6 +16866,13 @@
       "project": {
         "url": "https://github.com/n47h4ni3l/gen2recomp-indigo97/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "gold",
+          "silver",
+          "crystal"
+        ]
       }
     },
     {
@@ -16788,10 +16914,7 @@
         "games": [
           "red",
           "blue",
-          "yellow",
-          "gold",
-          "silver",
-          "crystal"
+          "yellow"
         ]
       },
       "popularity": {
@@ -17081,9 +17204,7 @@
           "red",
           "blue",
           "yellow",
-          "gold",
-          "silver",
-          "crystal"
+          "gold"
         ]
       },
       "popularity": {
@@ -17406,10 +17527,7 @@
         "games": [
           "red",
           "blue",
-          "yellow",
-          "gold",
-          "silver",
-          "crystal"
+          "yellow"
         ]
       },
       "popularity": {
@@ -17686,6 +17804,16 @@
         "url": "https://github.com/redelpedron/Kanto-Companion-Lite/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
+      },
       "popularity": {
         "downloads": 1675,
         "stars": 0,
@@ -17780,10 +17908,7 @@
         "games": [
           "red",
           "blue",
-          "yellow",
-          "gold",
-          "silver",
-          "crystal"
+          "yellow"
         ]
       },
       "popularity": {
@@ -17831,7 +17956,11 @@
         "games": [
           "red",
           "blue",
-          "yellow"
+          "yellow",
+          "gold",
+          "silver",
+          "crystal",
+          "firered"
         ]
       },
       "popularity": {
@@ -17933,10 +18062,7 @@
         "games": [
           "red",
           "blue",
-          "yellow",
-          "gold",
-          "silver",
-          "crystal"
+          "yellow"
         ]
       },
       "popularity": {
@@ -18262,7 +18388,10 @@
         "games": [
           "red",
           "blue",
-          "yellow"
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
         ]
       }
     },
@@ -18799,6 +18928,21 @@
         "url": "https://github.com/DaniKH1/More-Text-Speed-Options-Gen1Recomp/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal",
+          "firered",
+          "leafgreen",
+          "ruby",
+          "sapphire",
+          "emerald"
+        ]
+      },
       "popularity": {
         "downloads": 85,
         "stars": 3,
@@ -19239,7 +19383,9 @@
           "red",
           "blue",
           "yellow",
-          "gold"
+          "gold",
+          "silver",
+          "crystal"
         ],
         "engineRange": ">=0.1.78 <2.0.0"
       },
@@ -19387,10 +19533,7 @@
         "games": [
           "red",
           "blue",
-          "yellow",
-          "gold",
-          "silver",
-          "crystal"
+          "yellow"
         ]
       },
       "popularity": {
@@ -19594,10 +19737,7 @@
         "games": [
           "red",
           "blue",
-          "yellow",
-          "gold",
-          "silver",
-          "crystal"
+          "yellow"
         ]
       },
       "popularity": {
@@ -19694,10 +19834,7 @@
         "games": [
           "red",
           "blue",
-          "yellow",
-          "gold",
-          "silver",
-          "crystal"
+          "yellow"
         ]
       },
       "popularity": {
@@ -20761,9 +20898,7 @@
           "red",
           "blue",
           "yellow",
-          "gold",
-          "silver",
-          "crystal"
+          "gold"
         ]
       },
       "popularity": {
@@ -20866,6 +21001,16 @@
       "project": {
         "url": "https://github.com/alamops/RBYMMOMod/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
       },
       "popularity": {
         "downloads": 4717,
@@ -21155,7 +21300,8 @@
       "requirements": {
         "games": [
           "gold",
-          "silver"
+          "silver",
+          "crystal"
         ],
         "permissions": [
           "filesystem"
@@ -21292,7 +21438,20 @@
         "status": "permission-needed"
       },
       "requirements": {
-        "engineRange": ">=0.1.84 <1.0.0"
+        "engineRange": ">=0.1.84 <1.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal",
+          "firered",
+          "leafgreen",
+          "ruby",
+          "sapphire",
+          "emerald"
+        ]
       }
     },
     {
@@ -21317,6 +21476,13 @@
       "project": {
         "url": "https://github.com/shadowjackyl/S-J-s-AIO-Gen-2/releases",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       }
     },
     {
@@ -21568,6 +21734,16 @@
         "url": "https://github.com/AshJamB/SilphNet/releases",
         "status": "permission-needed"
       },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
+        ]
+      },
       "popularity": {
         "downloads": 309,
         "stars": 5,
@@ -21680,9 +21856,7 @@
           "red",
           "blue",
           "yellow",
-          "gold",
-          "silver",
-          "crystal"
+          "gold"
         ]
       },
       "popularity": {
@@ -21763,10 +21937,7 @@
         "games": [
           "red",
           "blue",
-          "yellow",
-          "gold",
-          "silver",
-          "crystal"
+          "yellow"
         ]
       },
       "popularity": {
@@ -21958,10 +22129,7 @@
         "games": [
           "red",
           "blue",
-          "yellow",
-          "gold",
-          "silver",
-          "crystal"
+          "yellow"
         ]
       },
       "popularity": {
@@ -22056,9 +22224,7 @@
           "red",
           "blue",
           "yellow",
-          "gold",
-          "silver",
-          "crystal"
+          "gold"
         ]
       },
       "popularity": {
@@ -22321,10 +22487,7 @@
         "games": [
           "red",
           "blue",
-          "yellow",
-          "gold",
-          "silver",
-          "crystal"
+          "yellow"
         ]
       },
       "popularity": {
@@ -22624,7 +22787,10 @@
         "games": [
           "red",
           "blue",
-          "yellow"
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
         ]
       },
       "popularity": {
@@ -22773,7 +22939,12 @@
           "yellow",
           "gold",
           "silver",
-          "crystal"
+          "crystal",
+          "firered",
+          "leafgreen",
+          "ruby",
+          "sapphire",
+          "emerald"
         ]
       }
     },
@@ -23068,7 +23239,10 @@
         "games": [
           "red",
           "blue",
-          "yellow"
+          "yellow",
+          "gold",
+          "silver",
+          "crystal"
         ]
       },
       "popularity": {
@@ -23377,6 +23551,13 @@
       "project": {
         "url": "https://github.com/Roxas2712/voxel-ascendant",
         "status": "permission-needed"
+      },
+      "requirements": {
+        "games": [
+          "red",
+          "blue",
+          "yellow"
+        ]
       },
       "popularity": {
         "downloads": 1079,
@@ -23869,10 +24050,7 @@
         "games": [
           "red",
           "blue",
-          "yellow",
-          "gold",
-          "silver",
-          "crystal"
+          "yellow"
         ],
         "onlineUnavailable": true
       }
@@ -24879,7 +25057,20 @@
         "permissions": [
           "filesystem"
         ],
-        "engineRange": "0.0.0-dev || >=0.1.69 <2.0.0"
+        "engineRange": "0.0.0-dev || >=0.1.69 <2.0.0",
+        "games": [
+          "red",
+          "blue",
+          "yellow",
+          "gold",
+          "silver",
+          "crystal",
+          "firered",
+          "leafgreen",
+          "ruby",
+          "sapphire",
+          "emerald"
+        ]
       }
     }
   ]

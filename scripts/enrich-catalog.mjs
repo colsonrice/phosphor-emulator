@@ -35,46 +35,79 @@ import { entryNames, readEntry, readManifest } from "./lib/archive.mjs";
 /// Keep it in step with the engine's GameVersion.ORDER.
 const GEN1_CARTRIDGES = ["red", "blue", "yellow"];
 const GEN2_CARTRIDGES = ["gold", "silver", "crystal"];
-/// FireRed since gen1recomp v0.2.69, LeafGreen since v0.3.2. They were missing
-/// from this list for the first two weeks the engine ran them, and the cost
-/// was not "no games line": a manifest declaring `games: ["firered"]` matched
-/// nothing here, fell through to the legacy rule below, and was PUBLISHED as
-/// Red/Blue/Yellow. The Spanish FireRed translation went live that way.
-export const GEN3_CARTRIDGES = ["firered", "leafgreen"];
+/// FireRed since gen1recomp v0.2.69, LeafGreen since v0.3.2, Ruby and Sapphire
+/// since v0.3.52, and Emerald beside them. Each was missing from this list for
+/// weeks after the engine ran it, and the cost was never just "no games line":
+/// a manifest declaring `games: ["firered"]` matched nothing here, fell
+/// through to the legacy rule below, and was PUBLISHED as Red/Blue/Yellow. The
+/// Spanish FireRed translation went live that way, and on Nov 19 2026 an
+/// Emerald-only mod would have done the same.
+///
+/// The ENGINE's order, which is not the games' release order: Ruby and
+/// Sapphire come before Emerald, and all three after LeafGreen
+/// (src/core/GameVersion.lua, `GameVersion.ORDER`, at v0.4.8).
+export const GEN3_CARTRIDGES = ["firered", "leafgreen", "ruby", "sapphire", "emerald"];
 /// Every cartridge the games lines are written against, in the engine's own
-/// release order (GameVersion.ORDER). Published on the manifest as its
-/// top-level `games`, because a silent `requirements.games` means "every one
-/// of THESE", and the app has to know how long the list was when the
-/// publisher stayed silent: an older manifest's silence must not read as
-/// FireRed the day the app learns FireRed exists.
+/// order (GameVersion.ORDER). Published on the manifest as its top-level
+/// `games`, because the app reads a row's games against THIS list, and an
+/// older manifest's list must not read as Hoenn the day the app learns Hoenn
+/// exists.
 export const CARTRIDGES = [...GEN1_CARTRIDGES, ...GEN2_CARTRIDGES, ...GEN3_CARTRIDGES];
 
+/// The engine's layout families, which a manifest may name as one token
+/// (`ModTargets.familyVersions`): "frlg" is FireRed and LeafGreen, "rse" is
+/// Ruby, Sapphire and Emerald. The Game Boy games carry no layout, so there is
+/// no family token for them.
+const FAMILIES = {
+  frlg: ["firered", "leafgreen"],
+  rse: ["ruby", "sapphire", "emerald"],
+};
+
+const GENERATIONS = { 1: GEN1_CARTRIDGES, 2: GEN2_CARTRIDGES, 3: GEN3_CARTRIDGES };
+
+/// One manifest token, as `ModTargets.expand` reads it: "all", a version id, a
+/// generation ("gen3", and "gen 3", which the engine's pattern allows), or a
+/// layout family. `null` for a token that names nothing the engine knows.
+export function expandToken(raw) {
+  if (typeof raw !== "string") return null;
+  const key = raw.toLowerCase().trim();
+  if (key === "all") return CARTRIDGES;
+  if (CARTRIDGES.includes(key)) return [key];
+  const gen = /^gen\s*(\d+)$/.exec(key);
+  if (gen && GENERATIONS[Number(gen[1])]) return GENERATIONS[Number(gen[1])];
+  return FAMILIES[key] ?? null;
+}
+
 /// Which cartridges a manifest actually covers, by the ENGINE's own rule
-/// (src/mods/ModTargets.lua). An explicit `games` list wins, expanding "all"
-/// and "genN"; otherwise the legacy flag decides: Gen 1, widened to Gen 2 by
-/// `gen2compat`, and NEVER Gen 3, exactly as `ModTargets.legacy` reads it. A
-/// mod reaches FireRed or LeafGreen only by naming them, a generation, or
-/// "all".
+/// (`Manifest.validate` and src/mods/ModTargets.lua, v0.4.8):
+///
+///   - an explicit `games` list is expanded token by token (see expandToken);
+///     tokens that name nothing are dropped
+///   - a list that names nothing at all, or no list, falls back to the legacy
+///     flag: Gen 1, widened to Gen 2 by `gen2compat`, and NEVER Gen 3, exactly
+///     as `ModTargets.legacy` reads it
+///   - `gen2compat: true` beside an explicit list still ADDS Gen 2. The engine
+///     keeps the flag as "its Gen 2 spelling", so no shipped manifest loses a
+///     game it already ran on, and this used to drop it: `{games: ["red"],
+///     gen2compat: true}` was published as Red alone while it loads on Crystal
 ///
 /// This has to match the loader exactly, because the loader is what refuses
 /// the mod at boot: `Loader:_skip(mod, "wrong_generation", "not marked
 /// gen2compat; this is a Gen 2 game")`. A catalog that disagrees would promise
 /// an install the engine then silently declines.
 export function cartridgesFor(manifest) {
-  const declared = manifest.games;
-  if (Array.isArray(declared) && declared.length) {
-    const out = new Set();
-    for (const raw of declared) {
-      const key = String(raw).toLowerCase().trim();
-      if (key === "all") CARTRIDGES.forEach((c) => out.add(c));
-      else if (key === "gen1") GEN1_CARTRIDGES.forEach((c) => out.add(c));
-      else if (key === "gen2") GEN2_CARTRIDGES.forEach((c) => out.add(c));
-      else if (key === "gen3") GEN3_CARTRIDGES.forEach((c) => out.add(c));
-      else if (CARTRIDGES.includes(key)) out.add(key);
-    }
-    if (out.size) return CARTRIDGES.filter((c) => out.has(c));
+  const declared = manifest?.games;
+  const out = new Set();
+  if (Array.isArray(declared)) {
+    for (const raw of declared) for (const id of expandToken(raw) ?? []) out.add(id);
   }
-  return manifest.gen2compat ? [...GEN1_CARTRIDGES, ...GEN2_CARTRIDGES] : [...GEN1_CARTRIDGES];
+  if (out.size === 0) {
+    GEN1_CARTRIDGES.forEach((c) => out.add(c));
+    if (manifest?.gen2compat === true) GEN2_CARTRIDGES.forEach((c) => out.add(c));
+  } else if (manifest?.gen2compat === true) {
+    GEN2_CARTRIDGES.forEach((c) => out.add(c));
+  }
+  return CARTRIDGES.filter((c) => out.has(c));
 }
 
 /// Declared by every mod that declares any permission at all. Not a
@@ -232,13 +265,21 @@ export function requirementsFrom(manifest, { usesNetwork = null } = {}) {
   const imports = importsFrom(manifest);
   if (imports) out.imports = imports;
 
-  // Published whenever the mod does NOT cover every cartridge. "For Red, Blue
-  // and Yellow only." is the line the app draws from this, and for a Gen 1 mod
-  // being installed against Crystal it is the whole warning. Since the list
-  // reached eight, every legacy mod carries one: a mod that says nothing
-  // covers Gen 1 (or Gen 1 and 2), never the GBA games, and the line says so.
-  const covers = cartridgesFor(manifest);
-  if (covers.length < CARTRIDGES.length) out.games = covers;
+  // ALWAYS published, including for a mod that covers every cartridge.
+  //
+  // It used to be published only when a mod did NOT cover the whole list,
+  // which made silence mean "every one", and silence is the one answer a
+  // reader cannot check: a row the backfill never reached said the same thing
+  // as a row that really covers everything. On Nov 19 2026 nine installable
+  // rows were silent and were read as Gen 1 mods wrongly filed under
+  // FireRed. Opening the bytes settled it the other way: all nine declare
+  // `games: ["all"]` (GameShark spells it gen1+gen2+gen3), the engine loads
+  // them on every cartridge, and FireRed was right. Nobody could tell that
+  // from the catalog, which is the defect. Silence also meant
+  // "every cartridge THIS catalog knew", so every vocabulary bump turned every
+  // silent row into a claim about a game nobody had checked. An explicit list
+  // is a fact about the manifest and stays one when the vocabulary grows.
+  out.games = cartridgesFor(manifest);
 
   return Object.keys(out).length ? out : null;
 }

@@ -332,6 +332,37 @@ test("a declared engine range is published as one string, on installable entries
   }
 });
 
+/// Silence is not an answer anybody can check. The app reads a missing games
+/// line as "every cartridge in the manifest's `games`", which is also what a
+/// row the backfill never reached says. On Nov 19 2026 nine installable rows
+/// were silent and looked like Gen 1 mods misfiled under FireRed; their bytes
+/// say `games: ["all"]`, so FireRed was right, and finding that out took
+/// opening nine archives. Every installable row says which games it is for.
+test("no installable entry ships without a games line, and every line is in the vocabulary", async () => {
+  const { entries, games } = await buildManifest();
+  const silent = entries.filter((entry) => entry.download && !entry.requirements?.games?.length)
+    .map((entry) => entry.id);
+  assert.deepEqual(silent, [],
+    "installable entries with no requirements.games -- run node scripts/backfill-mod-imports.mjs --write");
+  for (const entry of entries.filter((e) => e.requirements?.games)) {
+    const line = entry.requirements.games;
+    assert.ok(line.length > 0, `${entry.id}: an empty games line says "no game"`);
+    for (const game of line) assert.ok(games.includes(game), `${entry.id}: ${game} is not in the manifest's games`);
+    // The engine's order, and each once: the app compares lines as lists.
+    assert.deepEqual(line, games.filter((game) => line.includes(game)), `${entry.id}: games out of order or repeated`);
+  }
+});
+
+/// A link-out pins no bytes, so it may say which games the mod is for and
+/// nothing else: an import, a range or a permission would describe a file
+/// nobody can install from here.
+test("a link-out carries a games line and no other requirement", async () => {
+  const { entries } = await buildManifest();
+  for (const entry of entries.filter((e) => !e.download && e.requirements)) {
+    assert.deepEqual(Object.keys(entry.requirements), ["games"], `${entry.id}: link-out requirements`);
+  }
+});
+
 /// The inverse of the assertion that used to stand here.
 ///
 /// It required that NO installable listing rule out the catalogued engine,

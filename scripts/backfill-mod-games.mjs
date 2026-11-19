@@ -68,7 +68,9 @@ for (const row of rows) {
   // A tier-2 row's archive is cached under the survey's own name for it
   // (promote-direct-source.mjs `needsNetwork` spells it the same way).
   if ((!manifest || typeof manifest !== "object") && survey?.repo && survey?.release?.fileName) {
-    const name = `${survey.repo.replace("/", "__")}__${survey.release.fileName}`;
+    // Where the survey actually left them: parked beside an older release of
+    // the same name when one was there (scripts/lib/cache.mjs).
+    const name = survey.release.cacheFile ?? `${survey.repo.replace("/", "__")}__${survey.release.fileName}`;
     manifest = await readManifest(new URL(encodeURIComponent(name), CACHE).pathname).catch(() => null);
   }
   if (!manifest || typeof manifest !== "object") {
@@ -92,17 +94,12 @@ for (const row of rows) {
   const entry = (enrichment[row.id] ??= {});
   const req = (entry.requirements ??= {});
 
-  if (covers.length === CARTRIDGES.length) {
-    // Covers everything: a games line here would be noise, and stale data
-    // claiming a restriction that no longer exists is worse than none. The
-    // length is the vocabulary's, not a number: "six" was written in here
-    // while the engine ran six, and when it reached eight every gen2compat
-    // mod would have kept passing as "everything", FireRed included.
-    if (req.games) { delete req.games; filled += 1; }
-    counts[`all ${CARTRIDGES.length}`] = (counts[`all ${CARTRIDGES.length}`] ?? 0) + 1;
-    continue;
-  }
-  const key = covers.join("/");
+  // A mod that covers everything gets the whole list, written out. This used
+  // to DELETE the line, so silence meant "every cartridge this catalog
+  // knows": a meaning that changed under every row each time the engine
+  // learned a game, and the same thing a row nobody had read said. Since
+  // Nov 19 2026 every installable row carries a line and a test holds it.
+  const key = covers.length === CARTRIDGES.length ? `all ${CARTRIDGES.length}` : covers.join("/");
   counts[key] = (counts[key] ?? 0) + 1;
   if (JSON.stringify(req.games) === JSON.stringify(covers)) { already += 1; continue; }
   req.games = covers;

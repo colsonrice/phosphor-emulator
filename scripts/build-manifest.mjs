@@ -507,7 +507,18 @@ function enrich(entry, table) {
     // download carries them: a listing demoted to index-only keeps its
     // enrichment on disk, and publishing its imports or its engine range
     // would describe a file nobody can install from here.
-    ...(enriched.requirements && entry.download ? { requirements: enriched.requirements } : {}),
+    //
+    // **Except which games it is for.** That is a fact about the MOD rather
+    // than about a file, and the app reads its absence as "every cartridge in
+    // `games`": every link-out was filed under every game chip, so a Gen 1
+    // translation with no release sat in Browse under FireRed. A link-out
+    // carries the line when one was read from its creator's own manifest
+    // (backfill-mod-games, from the survey's copy of the latest release), and
+    // that line alone.
+    ...(entry.download
+      ? (enriched.requirements ? { requirements: enriched.requirements } : {})
+      : (enriched.requirements?.games?.length
+        ? { requirements: { games: enriched.requirements.games } } : {})),
     ...(entry.download ? onlineUnavailableFor(entry, enriched) : {}),
     ...(enriched.popularity ? { popularity: enriched.popularity } : {}),
     // The mod's own logo, where its author has adopted the Logo.PNG
@@ -592,6 +603,8 @@ export async function buildManifest({ onBeyondEngine } = {}) {
   // way rather than as "every game the app runs": without it, the day the app
   // learned FireRed every silent row in a six-cartridge catalog would have
   // claimed it. No schemaVersion bump, for the same reason as `engines`.
+  // Since Nov 19 2026 no installable row is silent (tests/manifest.test.mjs),
+  // so this list matters for link-outs nobody could read and for the chips.
   return { schemaVersion: 1, generated, engines, games: CARTRIDGES, sections: SECTIONS,
            categories: CATEGORIES, entries: offered };
 }

@@ -17,10 +17,12 @@ A row pins one release and nothing moves it when the creator ships another.
 `node scripts/refresh-releases.mjs` asks every installable row's repo for its
 latest release, downloads the new `.zip`, and runs the survey's own checks
 over it (imported from `survey-mods.mjs`, not copied), plus the ones only a
-refresh can get wrong: the `modId` must be the one the row pins, the release
-must not rule out the engine Phosphor ships, a tier 1 repo must still be under
-the licence its listing names, and it must not have started needing the
-network or a mod the catalog does not carry.
+refresh can get wrong: the `modId` must be the one the row pins, a tier 1 repo
+must still be under the licence its listing names, and it must not have
+started needing the network or a mod the catalog does not carry. A release
+whose `game_version` is ahead of the engine Phosphor ships is NOT held back
+(the catalog stopped gating on the engine pin on Sep 23 2026); the run says
+which refreshed rows are ahead, and the app labels the fit.
 
 It is a dry run until you pass `--write`, and **a row whose new archive fails
 anything keeps its old pin**: it is reported with the reason and not touched.
@@ -36,6 +38,15 @@ node scripts/backfill-mod-imports.mjs --write
 npm run build:manifest
 npm test && npm run check:catalog && npm run lint
 ```
+
+`verify-releases.mjs` checks tier 2 installs as well as tier 1 (it read
+`releases.json` only until Nov 19 2026), and leaves each row's pinned bytes in
+`survey/cache/`, which is where the imports backfill reads them from.
+`survey/cache/` is keyed `owner__repo__asset` with no tag, so a file there is
+only trusted when it hashes to what the row pins or matches the size and
+digest GitHub lists for the asset; new bytes that collide with an older file
+of the same name are parked beside it as `incoming__<sha256 prefix>__<name>`
+(`scripts/lib/cache.mjs`).
 
 The refreshed bytes are ones no person has opened. Read the diff before it is
 published: the report marks a release ten times the size of the one it
@@ -91,6 +102,22 @@ them down:
     it reads each manifest out of the cached archive only after that archive
     hashes to what the row publishes, and writes nothing if any installable
     row cannot be read that way.
+
+  - **`requirements.games` is on every installable row, always.** The
+    cartridges the mod's own manifest covers, by the engine's rule
+    (`cartridgesFor`, which mirrors `ModTargets.lua` and `Manifest.validate`:
+    version ids, `genN`, the layout families `frlg` and `rse`, `all`, and
+    `gen2compat` adding Gen 2), in the engine's `GameVersion.ORDER`. It used to
+    be omitted for a mod that covered everything, and the app reads silence
+    as "every cartridge in the manifest's top-level `games`", so a row nobody
+    had read said the same as a row that runs everywhere (nine were silent on
+    Nov 19 2026; each turned out to declare `all`). `backfill-mod-imports.mjs`
+    writes it from the pinned bytes and `tests/manifest.test.mjs` fails on a
+    silent installable row. A link-out carries this line and no other
+    requirement, when the survey read its creator's manifest. When gen1recomp
+    learns a game, add it to `CARTRIDGES` in `enrich-catalog.mjs` in the
+    engine's order and rebuild: the app reads the vocabulary from the
+    manifest and needs no release for it.
 
   - **`requirements.requires` is bare mod ids**, from the manifest's hard
     `dependencies`, with any version range cut off. The engine blocks a mod

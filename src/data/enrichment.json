@@ -350,6 +350,21 @@
       "downloads": 235,
       "stars": 0,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow",
+        "gold",
+        "silver",
+        "crystal",
+        "firered",
+        "leafgreen",
+        "ruby",
+        "sapphire",
+        "emerald"
+      ]
     }
   },
   "gen1recomp-access-pc-anywhere": {
@@ -2577,10 +2592,7 @@
       "games": [
         "red",
         "blue",
-        "yellow",
-        "gold",
-        "silver",
-        "crystal"
+        "yellow"
       ]
     }
   },
@@ -2709,7 +2721,9 @@
         "red",
         "blue",
         "yellow",
-        "gold"
+        "gold",
+        "silver",
+        "crystal"
       ],
       "engineRange": ">=0.1.78 <2.0.0"
     }
@@ -3071,7 +3085,10 @@
       "games": [
         "red",
         "blue",
-        "yellow"
+        "yellow",
+        "gold",
+        "silver",
+        "crystal"
       ]
     }
   },
@@ -3133,7 +3150,10 @@
       "games": [
         "red",
         "blue",
-        "yellow"
+        "yellow",
+        "gold",
+        "silver",
+        "crystal"
       ]
     }
   },
@@ -3192,7 +3212,8 @@
       "games": [
         "red",
         "blue",
-        "yellow"
+        "yellow",
+        "crystal"
       ]
     }
   },
@@ -3291,7 +3312,20 @@
       "asOf": "2026-08-22"
     },
     "requirements": {
-      "engineRange": ">=0.1.79 || =0.0.0-dev"
+      "engineRange": ">=0.1.79 || =0.0.0-dev",
+      "games": [
+        "red",
+        "blue",
+        "yellow",
+        "gold",
+        "silver",
+        "crystal",
+        "firered",
+        "leafgreen",
+        "ruby",
+        "sapphire",
+        "emerald"
+      ]
     }
   },
   "pokemon-bank": {
@@ -3353,7 +3387,9 @@
         "red",
         "blue",
         "yellow",
-        "gold"
+        "gold",
+        "silver",
+        "crystal"
       ],
       "engineRange": ">=0.1.0 <2.0.0"
     }
@@ -3381,6 +3417,21 @@
       "downloads": 85,
       "stars": 3,
       "asOf": "2026-08-22"
+    },
+    "requirements": {
+      "games": [
+        "red",
+        "blue",
+        "yellow",
+        "gold",
+        "silver",
+        "crystal",
+        "firered",
+        "leafgreen",
+        "ruby",
+        "sapphire",
+        "emerald"
+      ]
     }
   },
   "gen1recomp-screen-effects": {
@@ -3931,10 +3982,7 @@
       "games": [
         "red",
         "blue",
-        "yellow",
-        "gold",
-        "silver",
-        "crystal"
+        "yellow"
       ]
     }
   },
@@ -3965,10 +4013,7 @@
       "games": [
         "red",
         "blue",
-        "yellow",
-        "gold",
-        "silver",
-        "crystal"
+        "yellow"
       ]
     }
   },
@@ -4080,10 +4125,7 @@
       "games": [
         "red",
         "blue",
-        "yellow",
-        "gold",
-        "silver",
-        "crystal"
+        "yellow"
       ]
     }
   },
@@ -4250,7 +4292,11 @@
       "games": [
         "red",
         "blue",
-        "yellow"
+        "yellow",
+        "gold",
+        "silver",
+        "crystal",
+        "firered"
       ]
     }
   },
@@ -4285,10 +4331,7 @@
       "games": [
         "red",
         "blue",
-        "yellow",
-        "gold",
-        "silver",
-        "crystal"
+        "yellow"
       ]
     }
   },
@@ -4404,10 +4447,7 @@
       "games": [
         "red",
         "blue",
-        "yellow",
-        "gold",
-        "silver",
-        "crystal"
+        "yellow"
       ]
     }
   },
@@ -4420,12 +4460,7 @@
     "requirements": {
       "engineRange": ">=0.0.0-0 <2.0.0",
       "games": [
-        "red",
-        "blue",
-        "yellow",
-        "gold",
-        "silver",
-        "crystal"
+        "gold"
       ]
     }
   },
@@ -4442,10 +4477,7 @@
       "games": [
         "red",
         "blue",
-        "yellow",
-        "gold",
-        "silver",
-        "crystal"
+        "yellow"
       ]
     }
   },
@@ -4501,10 +4533,7 @@
       "games": [
         "red",
         "blue",
-        "yellow",
-        "gold",
-        "silver",
-        "crystal"
+        "yellow"
       ]
     }
   },
@@ -4532,10 +4561,7 @@
       "games": [
         "red",
         "blue",
-        "yellow",
-        "gold",
-        "silver",
-        "crystal"
+        "yellow"
       ]
     }
   },
@@ -4550,10 +4576,7 @@
       "games": [
         "red",
         "blue",
-        "yellow",
-        "gold",
-        "silver",
-        "crystal"
+        "yellow"
       ]
     }
   },
@@ -4586,10 +4609,7 @@
       "games": [
         "red",
         "blue",
-        "yellow",
-        "gold",
-        "silver",
-        "crystal"
+        "yellow"
       ]
     }
   },
@@ -4607,10 +4627,7 @@
       "games": [
         "red",
         "blue",
-        "yellow",
-        "gold",
-        "silver",
-        "crystal"
+        "yellow"
       ]
     }
   },
@@ -4625,10 +4642,7 @@
       "games": [
         "red",
         "blue",
-        "yellow",
-        "gold",
-        "silver",
-        "crystal"
+        "yellow"
       ]
     }
   },
@@ -4800,10 +4814,7 @@
       "games": [
         "red",
         "blue",
-        "yellow",
-        "gold",
-        "silver",
-        "crystal"
+        "yellow"
       ]
     }
   },
@@ -4871,10 +4882,7 @@
       "games": [
         "red",
         "blue",
-        "yellow",
-        "gold",
-        "silver",
-        "crystal"
+        "yellow"
       ]
     }
   },
@@ -4903,9 +4911,7 @@
         "red",
         "blue",
         "yellow",
-        "gold",
-        "silver",
-        "crystal"
+        "gold"
       ]
     }
   },
@@ -4948,9 +4954,7 @@
         "red",
         "blue",
         "yellow",
-        "gold",
-        "silver",
-        "crystal"
+        "gold"
       ]
     }
   },
@@ -4982,9 +4986,7 @@
         "red",
         "blue",
         "yellow",
-        "gold",
-        "silver",
-        "crystal"
+        "gold"
       ]
     }
   },
@@ -4999,9 +5001,7 @@
         "red",
         "blue",
         "yellow",
-        "gold",
-        "silver",
-        "crystal"
+        "gold"
       ]
     }
   },
@@ -5033,9 +5033,7 @@
         "red",
         "blue",
         "yellow",
-        "gold",
-        "silver",
-        "crystal"
+        "gold"
       ]
     }
   },
@@ -5082,10 +5080,7 @@
       "games": [
         "red",
         "blue",
-        "yellow",
-        "gold",
-        "silver",
-        "crystal"
+        "yellow"
       ]
     }
   },
@@ -5896,7 +5891,20 @@
   },
   "gen1autosave": {
     "requirements": {
-      "engineRange": ">=0.0.0-dev <1.0.0"
+      "engineRange": ">=0.0.0-dev <1.0.0",
+      "games": [
+        "red",
+        "blue",
+        "yellow",
+        "gold",
+        "silver",
+        "crystal",
+        "firered",
+        "leafgreen",
+        "ruby",
+        "sapphire",
+        "emerald"
+      ]
     }
   },
   "gen1battleui": {
@@ -5927,7 +5935,20 @@
   },
   "gen1modmenu": {
     "requirements": {
-      "engineRange": ">=0.0.0-0 <2.0.0"
+      "engineRange": ">=0.0.0-0 <2.0.0",
+      "games": [
+        "red",
+        "blue",
+        "yellow",
+        "gold",
+        "silver",
+        "crystal",
+        "firered",
+        "leafgreen",
+        "ruby",
+        "sapphire",
+        "emerald"
+      ]
     }
   },
   "gen1party": {
@@ -5945,12 +5966,38 @@
   },
   "gen1soundqol": {
     "requirements": {
-      "engineRange": ">=0.0.0-0 <2.0.0"
+      "engineRange": ">=0.0.0-0 <2.0.0",
+      "games": [
+        "red",
+        "blue",
+        "yellow",
+        "gold",
+        "silver",
+        "crystal",
+        "firered",
+        "leafgreen",
+        "ruby",
+        "sapphire",
+        "emerald"
+      ]
     }
   },
   "gen1sprint": {
     "requirements": {
-      "engineRange": ">=0.0.0-0 <2.0.0"
+      "engineRange": ">=0.0.0-0 <2.0.0",
+      "games": [
+        "red",
+        "blue",
+        "yellow",
+        "gold",
+        "silver",
+        "crystal",
+        "firered",
+        "leafgreen",
+        "ruby",
+        "sapphire",
+        "emerald"
+      ]
     }
   },
   "pokegear-menu": {
@@ -6092,7 +6139,12 @@
         "yellow",
         "gold",
         "silver",
-        "crystal"
+        "crystal",
+        "firered",
+        "leafgreen",
+        "ruby",
+        "sapphire",
+        "emerald"
       ]
     }
   },
@@ -6183,7 +6235,12 @@
         "yellow",
         "gold",
         "silver",
-        "crystal"
+        "crystal",
+        "firered",
+        "leafgreen",
+        "ruby",
+        "sapphire",
+        "emerald"
       ]
     }
   },
@@ -6206,7 +6263,10 @@
       "games": [
         "red",
         "blue",
-        "yellow"
+        "yellow",
+        "gold",
+        "silver",
+        "crystal"
       ]
     }
   },
@@ -7261,7 +7321,8 @@
     "requirements": {
       "games": [
         "gold",
-        "silver"
+        "silver",
+        "crystal"
       ],
       "permissions": [
         "filesystem"
@@ -7498,7 +7559,20 @@
   },
   "right-stick-move": {
     "requirements": {
-      "engineRange": ">=0.1.84 <1.0.0"
+      "engineRange": ">=0.1.84 <1.0.0",
+      "games": [
+        "red",
+        "blue",
+        "yellow",
+        "gold",
+        "silver",
+        "crystal",
+        "firered",
+        "leafgreen",
+        "ruby",
+        "sapphire",
+        "emerald"
+      ]
     }
   },
   "tactical-combat-overhaul-gen1recomp": {
@@ -7536,10 +7610,7 @@
       "games": [
         "red",
         "blue",
-        "yellow",
-        "gold",
-        "silver",
-        "crystal"
+        "yellow"
       ]
     }
   },
@@ -7611,7 +7682,12 @@
         "yellow",
         "gold",
         "silver",
-        "crystal"
+        "crystal",
+        "firered",
+        "leafgreen",
+        "ruby",
+        "sapphire",
+        "emerald"
       ]
     }
   },
@@ -7840,7 +7916,20 @@
       "permissions": [
         "filesystem"
       ],
-      "engineRange": "0.0.0-dev || >=0.1.69 <2.0.0"
+      "engineRange": "0.0.0-dev || >=0.1.69 <2.0.0",
+      "games": [
+        "red",
+        "blue",
+        "yellow",
+        "gold",
+        "silver",
+        "crystal",
+        "firered",
+        "leafgreen",
+        "ruby",
+        "sapphire",
+        "emerald"
+      ]
     }
   }
 }
