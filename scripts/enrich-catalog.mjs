@@ -20,7 +20,9 @@
 //   GITHUB_TOKEN=$(gh auth token) node scripts/enrich-catalog.mjs
 
 import { readFile, writeFile } from "node:fs/promises";
+import { fileURLToPath } from "node:url";
 import { entryNames, readEntry, readManifest } from "./lib/archive.mjs";
+import { readPinned } from "./lib/cache.mjs";
 
 /// Every cartridge this app ships an engine for, by generation.
 ///
@@ -523,8 +525,13 @@ async function main() {
   for (const release of releases) {
     const entry = {};
 
-    const archive = new URL(cacheNameFor(release), CACHE).pathname;
-    const manifest = await readManifest(archive);
+    // Only bytes that hash to the pin: the cache name carries no tag, so a
+    // row moved to a newer release of the same filename can find its OLD
+    // bytes there, and requirements read from them would describe a file the
+    // catalog no longer ships (scripts/lib/cache.mjs).
+    const pinned = await readPinned(fileURLToPath(CACHE), cacheNameFor(release), release.sha256);
+    const archive = pinned?.path ?? null;
+    const manifest = archive ? await readManifest(archive) : null;
     if (manifest) {
       manifestsRead += 1;
       const declaresNetwork = (manifest.permissions ?? []).includes("network");
