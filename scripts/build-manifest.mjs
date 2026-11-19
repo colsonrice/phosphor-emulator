@@ -20,6 +20,7 @@ import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { categorize } from "./lib/categorize.mjs";
 import { ONLINE_UNAVAILABLE } from "./lib/excluded.mjs";
+import { retiredEngineTarget } from "./lib/retired-engine.mjs";
 import { satisfies } from "./lib/semver.mjs";
 
 const RELEASES = new URL("../src/data/releases.json", import.meta.url);
@@ -556,6 +557,20 @@ export async function buildManifest({ onBeyondEngine } = {}) {
   // An entry whose kind has no section would be fetched and then never shown.
   ].filter((entry) => publishedKinds.has(entry.kind))
     .map((entry) => enrich(entry, enriched));
+
+  // A Gen2Recomped mod published as a gen1recomp one. RETIRED_ENGINES above
+  // only sees a row that names the retired engine in `compatibility`, and the
+  // survey files everything under gen1recomp, so three went live on Nov 19
+  // 2026 needing engine >=0.7.6 (scripts/lib/retired-engine.mjs). Judged on
+  // what the entry says about itself and the range it publishes, so only an
+  // installable row can be judged; the survey keeps link-outs out.
+  for (const entry of entries) {
+    const why = retiredEngineTarget({
+      text: [entry.id, entry.name, entry.tagline, entry.description, entry.modID, entry.author?.url].join(" "),
+      range: entry.requirements?.engineRange,
+    });
+    if (why) errors.push(`${entry.id}: ${why}. ${RETIRED_ENGINES.gen2recomp}.`);
+  }
 
   const ids = entries.map((entry) => entry.id);
   for (const id of new Set(ids.filter((id, i) => ids.indexOf(id) !== i))) {

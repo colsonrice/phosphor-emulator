@@ -30,6 +30,7 @@ import { auditTargets, engineFacet, ENGINE_VERSIONS } from "./engine-family.mjs"
 import { findCachedAsset, isTheAsset, nameForNewBytes } from "./lib/cache.mjs";
 import { importsFrom } from "./enrich-catalog.mjs";
 import { EXCLUDED } from "./lib/excluded.mjs";
+import { retiredEngineTarget } from "./lib/retired-engine.mjs";
 import { satisfies } from "./lib/semver.mjs";
 
 const run = promisify(execFile);
@@ -599,6 +600,16 @@ async function surveyRepo(name, hint) {
 
 function rowFor({ name, hint, meta, license, release, asset, contents, sha256, cacheFile = null }) {
   const blocking = refusals({ release, asset, contents });
+  // A Gen2Recomped mod arrives claiming gen1recomp (there is one channel), so
+  // it is recognised by what it says about itself, the listing's words as
+  // well as the manifest's: S&J's AIO names the engine only in its repo
+  // description. See scripts/lib/retired-engine.mjs.
+  const manifest = contents?.manifest && !contents.manifest.unreadable ? contents.manifest : null;
+  const retired = manifest && retiredEngineTarget({
+    text: [name, meta.description, hint.indexed?.summary, manifest.id, manifest.name, manifest.description].join(" "),
+    range: manifest.game_version,
+  });
+  if (retired) blocking.push(retired);
   const licensed = PERMISSIVE.has(meta.license);
 
   return {
@@ -953,6 +964,9 @@ function draftProjects(results, alreadyListed, takenIds) {
     // would be a dead end dressed as a discovery.
     const verifiedRealMod = Boolean(r.contents?.modId) && r.blocking.length === 0;
     if (!r.inOfficialIndex && !verifiedRealMod) continue;
+    // Not even as a link-out: it sends a player to a mod for an engine
+    // Phosphor does not ship (build-manifest's RETIRED_ENGINES says why).
+    if (r.blocking.some((reason) => reason.startsWith("built for Gen2Recomped"))) continue;
     // A mod the catalog already carries. Asked of the mod where the archive
     // names one, so a suite's other mods are not mistaken for this one.
     const known = r.contents?.modId

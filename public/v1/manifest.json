@@ -17880,54 +17880,6 @@
       }
     },
     {
-      "id": "gen2recomp-indigo97",
-      "kind": "luaMod",
-      "name": "INDIGO//97",
-      "tagline": "ROM-safe late-1990s anime-inspired true-colour player mod for Gen2Recomped",
-      "author": {
-        "name": "n47h4ni3l",
-        "url": "https://github.com/n47h4ni3l/gen2recomp-indigo97"
-      },
-      "permission": "no-objection",
-      "categories": [
-        "PENDING",
-        "ART"
-      ],
-      "target": "Gen1Recomp",
-      "engine": {
-        "id": "gen1recomp",
-        "family": "gen1recomp",
-        "games": []
-      },
-      "screenshots": [],
-      "version": "1.5.0",
-      "releasedAt": "2026-08-22T01:06:02Z",
-      "modID": "indigo_97",
-      "download": {
-        "url": "https://github.com/n47h4ni3l/gen2recomp-indigo97/releases/download/v1.5.0/indigo_97-1.5.0.zip",
-        "sizeBytes": 15406,
-        "sha256": "2cc3e9e7f1de286a1efe04afe50992f6f6a5a4bf18d99eb70f5eb71478de686b",
-        "manifestPath": "manifest.json"
-      },
-      "project": {
-        "url": "https://github.com/n47h4ni3l/gen2recomp-indigo97/releases",
-        "status": "permission-needed"
-      },
-      "requirements": {
-        "games": [
-          "gold",
-          "silver",
-          "crystal"
-        ],
-        "engineRange": ">=0.7.6 <1.0.0"
-      },
-      "popularity": {
-        "downloads": 34,
-        "stars": 0,
-        "asOf": "2026-11-19"
-      }
-    },
-    {
       "id": "gimmicks-menu",
       "kind": "luaMod",
       "name": "Gimmick Menu Ring",
@@ -21830,59 +21782,6 @@
       },
       "popularity": {
         "downloads": 78,
-        "stars": 0,
-        "asOf": "2026-11-19"
-      }
-    },
-    {
-      "id": "s-j-s-aio-gen-2",
-      "kind": "luaMod",
-      "name": "S&J's AIO for Gen 2",
-      "tagline": "All in one mod for gen2recomp GEN 2",
-      "author": {
-        "name": "shadowjackyl",
-        "url": "https://github.com/shadowjackyl/S-J-s-AIO-Gen-2"
-      },
-      "permission": "no-objection",
-      "categories": [
-        "PENDING"
-      ],
-      "target": "Gen1Recomp",
-      "engine": {
-        "id": "gen1recomp",
-        "family": "gen1recomp",
-        "games": []
-      },
-      "screenshots": [],
-      "version": "1.0.61-beta",
-      "releasedAt": "2026-09-18T21:11:16Z",
-      "modID": "GEN2_STADIUM_ULTIMATE_251",
-      "download": {
-        "url": "https://github.com/shadowjackyl/S-J-s-AIO-Gen-2/releases/download/v1.0.61-beta/SJ-AIO-Gen2-v1.0.61-beta-hotfix.zip",
-        "sizeBytes": 26539171,
-        "sha256": "4d0b28311f76fb91debc71c20f1f800088a4287a8ffd07c407b44457a5b30a8d",
-        "manifestPath": "manifest.json"
-      },
-      "project": {
-        "url": "https://github.com/shadowjackyl/S-J-s-AIO-Gen-2/releases",
-        "status": "permission-needed"
-      },
-      "requirements": {
-        "games": [
-          "red",
-          "blue",
-          "yellow"
-        ],
-        "imports": [
-          {
-            "name": "Pokémon Stadium 2 (USA) ROM",
-            "required": true
-          }
-        ],
-        "engineRange": ">=0.7.6 <1.0.0"
-      },
-      "popularity": {
-        "downloads": 190,
         "stars": 0,
         "asOf": "2026-11-19"
       }
@@ -31361,54 +31260,6 @@
           "BATTLE_ART_VOXEL_GEN2"
         ],
         "engineRange": "0.0.0-dev || >=0.2.20 <3.0.0"
-      }
-    },
-    {
-      "id": "kantolife-gen2recomped",
-      "kind": "luaMod",
-      "name": "Kanto Life for Gen2Recomped",
-      "tagline": "Kanto Life ambient-NPC mod ported for Gen2Recomped — Gens 1-4 (Red/Blue/Yellow, Gold/Silver/Crystal, FireRed/LeafGreen/Emerald, Platinum experimental), 5th-interaction events in every generation",
-      "author": {
-        "name": "jtfresh90",
-        "url": "https://github.com/jtfresh90/kantolife-gen2recomped"
-      },
-      "permission": "no-objection",
-      "categories": [
-        "PENDING",
-        "CONTENT"
-      ],
-      "target": "Gen1Recomp",
-      "engine": {
-        "id": "gen1recomp",
-        "family": "gen1recomp",
-        "games": []
-      },
-      "screenshots": [],
-      "version": "1.0.0",
-      "releasedAt": "2026-10-16T20:17:57Z",
-      "modID": "kantolife_gen2recomped",
-      "download": {
-        "url": "https://github.com/jtfresh90/kantolife-gen2recomped/releases/download/v1.0.0/kantolife-gen2recomped-1.0.0.zip",
-        "sizeBytes": 214911,
-        "sha256": "3539328f378264759379a046f2482b05d76609976bc322e92ac4c9f92c209797",
-        "manifestPath": "manifest.json"
-      },
-      "project": {
-        "url": "https://github.com/jtfresh90/kantolife-gen2recomped/releases",
-        "status": "permission-needed"
-      },
-      "requirements": {
-        "games": [
-          "red",
-          "blue",
-          "yellow"
-        ],
-        "engineRange": ">=0.7.6 <2.0.0"
-      },
-      "popularity": {
-        "downloads": 4,
-        "stars": 0,
-        "asOf": "2026-11-19"
       }
     },
     {

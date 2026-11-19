@@ -6931,21 +6931,6 @@
       "engineRange": ">=0.0.0-0 <2.0.0"
     }
   },
-  "gen2recomp-indigo97": {
-    "popularity": {
-      "downloads": 34,
-      "stars": 0,
-      "asOf": "2026-11-19"
-    },
-    "requirements": {
-      "games": [
-        "gold",
-        "silver",
-        "crystal"
-      ],
-      "engineRange": ">=0.7.6 <1.0.0"
-    }
-  },
   "gimmicks-menu": {
     "popularity": {
       "downloads": 130,
@@ -8493,27 +8478,6 @@
         "emerald"
       ],
       "engineRange": ">=0.1.84 <1.0.0"
-    }
-  },
-  "s-j-s-aio-gen-2": {
-    "popularity": {
-      "downloads": 190,
-      "stars": 0,
-      "asOf": "2026-11-19"
-    },
-    "requirements": {
-      "games": [
-        "red",
-        "blue",
-        "yellow"
-      ],
-      "imports": [
-        {
-          "name": "Pokémon Stadium 2 (USA) ROM",
-          "required": true
-        }
-      ],
-      "engineRange": ">=0.7.6 <1.0.0"
     }
   },
   "safari-derby": {
@@ -11195,21 +11159,6 @@
         "emerald"
       ],
       "engineRange": ">=0.0.0-0 <2.0.0"
-    }
-  },
-  "kantolife-gen2recomped": {
-    "popularity": {
-      "downloads": 4,
-      "stars": 0,
-      "asOf": "2026-11-19"
-    },
-    "requirements": {
-      "games": [
-        "red",
-        "blue",
-        "yellow"
-      ],
-      "engineRange": ">=0.7.6 <2.0.0"
     }
   },
   "firered-companion": {

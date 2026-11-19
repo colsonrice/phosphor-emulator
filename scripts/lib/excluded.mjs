@@ -25,6 +25,16 @@ export const EXCLUDED = {
     "online FireRed/LeafGreen trades through a WebSocket to celio.gblink.io; raw TCP sockets, which the sandbox denies, so it would install and do nothing",
   "AlfonsPistoletti/gen1recomp-mod-second-screen-companion":
     "a second screen served over the local network; it opens sockets, which the sandbox denies, so the screen it exists for never appears",
+  // Gen2Recomped mods, the engine Phosphor removed in 3.8 over its licence.
+  // Each needs engine >=0.7.6, which is that engine's version line; listed
+  // here by repository so they stay out after gen1recomp itself reaches a
+  // 0.7 (scripts/lib/retired-engine.mjs catches the next one).
+  "jtfresh90/kantolife-gen2recomped":
+    "Kanto Life ported for Gen2Recomped, an engine Phosphor no longer ships; it needs engine >=0.7.6 and would install and never load",
+  "n47h4ni3l/gen2recomp-indigo97":
+    "a player mod for Gen2Recomped, an engine Phosphor no longer ships; it needs engine >=0.7.6 and would install and never load",
+  "shadowjackyl/S-J-s-AIO-Gen-2":
+    "an all-in-one mod for Gen2Recomped, an engine Phosphor no longer ships; it needs engine >=0.7.6 and would install and never load",
   "tebwritescode/gen1mmo":
     "a shared public world with chat, carrying the same 4.7.1 duties",
   "Neburb/pokebox-sync-gen1recomp":
