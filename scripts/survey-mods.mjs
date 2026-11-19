@@ -23,9 +23,11 @@ import { createHash } from "node:crypto";
 import { mkdir, readFile, writeFile, readdir, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
+import { fileURLToPath } from "node:url";
 import { promisify } from "node:util";
 
 import { auditTargets, engineFacet, ENGINE_VERSIONS } from "./engine-family.mjs";
+import { findCachedAsset, isTheAsset, nameForNewBytes } from "./lib/cache.mjs";
 import { importsFrom } from "./enrich-catalog.mjs";
 import { EXCLUDED } from "./lib/excluded.mjs";
 import { satisfies } from "./lib/semver.mjs";
@@ -57,6 +59,12 @@ const SEARCHES = [
   // one word in it was the one word this list did not have.
   "gen3recomp", "gen3 recomp", "firered recomp", "leafgreen recomp",
   "firered mod gen1recomp", "topic:gen3recomp",
+  // Added 19 Nov 2026. The engine has run Ruby and Sapphire since v0.3.52
+  // and Emerald alongside them, and the catalog had not been swept since
+  // September: every term above names Kanto, Johto or FireRed, and a creator
+  // writing for Hoenn has no reason to type any of them.
+  "emerald recomp", "ruby recomp", "sapphire recomp", "hoenn recomp",
+  "emerald gen1recomp", "gen3 mod gen1recomp",
 ];
 
 /// Terms swept a second time across FORKS.
@@ -93,7 +101,11 @@ export const PERMISSIVE = new Set([
 /// failure to avoid, and a survey that quietly used a stale number would hide
 /// exactly that. The swiftc install harness is the authority; this is the cheap
 /// filter that runs first.
-const MAX_ENTRY_COUNT = 50_000;
+///
+/// 300_000 since the app's e48729d49 (Sep 17 2026). This said 50_000 for two
+/// months after that, which is the other direction of the same mistake: a
+/// ceiling stricter than the installer refuses mods that install perfectly.
+export const MAX_ENTRY_COUNT = 300_000;
 /// Mirrors RecompModLibrary.maxManifestDepth. See the note at its use.
 const MAX_MANIFEST_DEPTH = 1;
 export const MAX_TOTAL_UNCOMPRESSED = 512 * 1024 * 1024;
@@ -269,20 +281,36 @@ function cacheName(repo, asset) {
   return `${repo.replace("/", "__")}__${asset}`;
 }
 
+/// The asset's bytes, and the cache file they sit in.
+///
+/// **A cache hit has to BE the asset.** The name carries no tag, and most
+/// authors upload the same filename for every release, so this used to read
+/// whatever an earlier run had left at the name and hash it beside the NEW
+/// release's URL. The promoter then published that pair: a URL serving one
+/// file and the digest of another, which the app refuses on every install.
+/// A hit now has to match the size and digest GitHub lists (see
+/// scripts/lib/cache.mjs), and anything else is downloaded again.
+///
+/// New bytes never overwrite different bytes at the same name, because those
+/// may be what a held-back row still pins and the imports backfill reads. They
+/// are parked beside them under a content-addressed name, and the report
+/// carries `cacheFile` so nothing downstream has to guess which.
 async function fetchAsset(repo, asset) {
   await mkdir(CACHE, { recursive: true });
+  const dir = fileURLToPath(CACHE);
   const name = cacheName(repo, asset.name);
-  const file = new URL(name, CACHE);
-  try {
-    return await readFile(file);
-  } catch {
-    if (OFFLINE) return null;
-  }
+  const hit = await findCachedAsset(dir, name, asset);
+  if (hit) return { bytes: hit.bytes, file: hit.path, cacheFile: hit.name };
+  if (OFFLINE) return null;
   const response = await fetch(asset.url, { redirect: "follow" });
   if (!response.ok) return null;
   const bytes = Buffer.from(await response.arrayBuffer());
-  await writeFile(file, bytes);
-  return bytes;
+  // What was served has to be what GitHub described, or the hash published
+  // next to this URL describes a download nobody will get.
+  if (!isTheAsset(bytes, asset)) return null;
+  const cacheFile = await nameForNewBytes(dir, name, bytes);
+  await writeFile(join(dir, cacheFile), bytes);
+  return { bytes, file: join(dir, cacheFile), cacheFile };
 }
 
 
@@ -478,7 +506,7 @@ async function treeArchives(name, branch) {
   const head = (await gh(`repos/${name}/commits/${branch ?? "HEAD"}`, ".sha").catch(() => "")).trim();
   if (!head) return [];
   const tree = await ghJSON(`repos/${name}/git/trees/${head}`,
-    "[.tree[] | select(.type == \"blob\") | {path, size}]");
+    "[.tree[] | select(.type == \"blob\") | {path, size, sha}]");
   return (tree ?? [])
     // Root level only. A zip deeper in a tree is far more often a test
     // fixture, a vendored dependency or an artefact than a published mod, and
@@ -490,6 +518,9 @@ async function treeArchives(name, branch) {
       // Not `archive.zip` from a link: the file itself, at a commit.
       url: `https://raw.githubusercontent.com/${name}/${head}/${entry.path}`,
       size: entry.size,
+      // Git's blob hash of the file, which is how a cached copy is told apart
+      // from an older commit's file of the same name.
+      gitSha: entry.sha,
       commit: head,
     }));
 }
@@ -508,7 +539,7 @@ async function surveyRepo(name, hint) {
     "{url:.html_url, spdx:.license.spdx_id, text:.content}");
 
   const release = await ghJSON(`repos/${name}/releases/latest`,
-    "{tag:.tag_name, published:.published_at, body:.body, assets:[.assets[]|{name:.name, url:.browser_download_url, size:.size}]}");
+    "{tag:.tag_name, published:.published_at, body:.body, assets:[.assets[]|{name:.name, url:.browser_download_url, size:.size, digest:(.digest // null)}]}");
 
   // **A zip beats a tarball, whatever order GitHub lists them in.**
   //
@@ -539,20 +570,21 @@ async function surveyRepo(name, hint) {
   for (const asset of archives) {
     let contents = null;
     let sha256 = null;
-    let bytes = null;
+    let cacheFile = null;
     if (asset && asset.size <= MAX_TOTAL_UNCOMPRESSED) {
-      bytes = await fetchAsset(name, asset);
-      if (bytes) {
-        sha256 = createHash("sha256").update(bytes).digest("hex");
-        contents = await inspect(new URL(cacheName(name, asset.name), CACHE).pathname);
+      const fetched = await fetchAsset(name, asset);
+      if (fetched) {
+        sha256 = createHash("sha256").update(fetched.bytes).digest("hex");
+        cacheFile = fetched.cacheFile;
+        contents = await inspect(fetched.file);
       }
     }
-    rows.push(rowFor({ name, hint, meta, license, release, asset, contents, sha256 }));
+    rows.push(rowFor({ name, hint, meta, license, release, asset, contents, sha256, cacheFile }));
   }
   return rows;
 }
 
-function rowFor({ name, hint, meta, license, release, asset, contents, sha256 }) {
+function rowFor({ name, hint, meta, license, release, asset, contents, sha256, cacheFile = null }) {
   const blocking = refusals({ release, asset, contents });
   const licensed = PERMISSIVE.has(meta.license);
 
@@ -583,6 +615,10 @@ function rowFor({ name, hint, meta, license, release, asset, contents, sha256 })
           publishedAt: release?.published ?? meta.pushed_at,
           fileName: asset.name, fileUrl: asset.url,
           fileSizeBytes: asset.size, sha256,
+          // The file under survey/cache/ these bytes were read from. Usually
+          // `owner__repo__asset`; parked beside it when an older release of
+          // the same name is still there (scripts/lib/cache.mjs).
+          ...(cacheFile ? { cacheFile } : {}),
           // Said plainly, so the report can be read without parsing the URL to
           // learn whether these bytes are pinned to a tag or to a commit.
           source: release ? "release" : "tree",

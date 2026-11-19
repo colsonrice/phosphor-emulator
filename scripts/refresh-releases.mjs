@@ -42,6 +42,7 @@ import { fileURLToPath } from "node:url";
 import { cacheNameFor } from "./backfill-mod-imports.mjs";
 import { ENGINE_VERSIONS } from "./engine-family.mjs";
 import { requirementsFrom, requiresFrom, usesNetwork } from "./enrich-catalog.mjs";
+import { readPinned } from "./lib/cache.mjs";
 import { satisfies } from "./lib/semver.mjs";
 import {
   gh, humanSize, inspect, refusals, MAX_TOTAL_UNCOMPRESSED, PERMISSIVE,
@@ -125,7 +126,7 @@ export function sameRelease(pin, release, asset) {
 /// refresh to swap a listing that works for one that does not, or for a claim
 /// the catalog makes to stop being true without anybody having typed anything.
 export function changeReasons({
-  pin, manifest, engineVersion, license, pinnedLicense,
+  pin, manifest, license, pinnedLicense,
   needsNetwork, catalogModIds, pinnedRequires,
 }) {
   const out = [];
@@ -134,10 +135,15 @@ export function changeReasons({
     out.push(`declares modId ${manifest.id} where the catalog pins ${pin.modId} — install(expectingID:) would refuse the update`);
   }
 
-  // A card that installs, switches on, and never loads.
-  if (!satisfies(engineVersion, manifest?.game_version)) {
-    out.push(`needs engine ${manifest.game_version}, and Phosphor ships ${engineVersion}`);
-  }
+  // No engine-range check, since 23 Sep 2026, and that is the catalog's rule
+  // and not an oversight here: a mod whose `game_version` is ahead of the
+  // engine Phosphor ships is still published, and the app labels the fit from
+  // `requirements.engineRange` (see `rowsBeyondTheCataloguedEngine` in
+  // build-manifest.mjs, Colson: "make sure we aren't gated by anything and we
+  // can try mods that are newer than the gate"). This script was written four
+  // days before that call, and holding a row at its old release for being
+  // ahead of the pin was the same gate under another name. `main` still
+  // prints which refreshed rows are ahead.
 
   // Tier 1 says "open licence" on the listing, about the repo, in the present
   // tense. gen1recomp itself went from MIT to GPLv3 between two patch releases,
@@ -364,10 +370,10 @@ async function evaluate(row, context) {
   // What the PINNED release does, for the two checks where that changes the
   // answer. Read only from bytes that still hash to the pin; anything else is
   // "unknown", which is treated as "did not".
-  const pinnedName = cacheNameFor(row);
-  const pinnedPath = pinnedName ? join(CACHE, pinnedName) : null;
-  const pinnedBytes = pinnedPath ? await readOrNull(pinnedPath) : null;
-  const pinnedIsCached = Boolean(pinnedBytes) && sha256(pinnedBytes) === pin.sha256;
+  // Plain or parked (scripts/lib/cache.mjs): only bytes that hash to the pin.
+  const pinned = await readPinned(CACHE, cacheNameFor(row), pin.sha256);
+  const pinnedPath = pinned?.path ?? null;
+  const pinnedIsCached = Boolean(pinned);
 
   // The survey's love-table scan is noisy by design and every hit was read by
   // a person. If the pinned release trips it too, somebody already read that
@@ -492,8 +498,11 @@ async function main() {
   console.log(`refreshed (${of("refreshed").length})`);
   for (const r of of("refreshed")) {
     const grew = r.fresh.fileSizeBytes / r.pin.fileSizeBytes;
+    const ahead = r.fresh.gameVersion && !satisfies(engineVersion, r.fresh.gameVersion);
     console.log(line(r, `${r.pin.version} → ${r.fresh.version}  (${r.pin.tag} → ${r.to})  `
       + `${humanSize(r.pin.fileSizeBytes)} → ${humanSize(r.fresh.fileSizeBytes)}`
+      // Published anyway (see changeReasons); said so the run shows it.
+      + `${ahead ? `  (needs engine ${r.fresh.gameVersion}, ahead of ${engineVersion})` : ""}`
       // Not a reason to refuse, and exactly what a reviewer wants pointed at.
       + `${grew >= 10 ? "  ** ten times the size it was **" : ""}`
       + `${r.fresh.version === r.pin.version ? "  ** new bytes under the same version **" : ""}`));

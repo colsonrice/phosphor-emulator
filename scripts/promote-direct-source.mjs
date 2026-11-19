@@ -51,7 +51,9 @@ const CACHE = new URL("../survey/cache/", import.meta.url);
 /// avoid is the install button.
 async function needsNetwork(s) {
   if (!(s.contents?.manifest?.permissions ?? []).includes("network")) return false;
-  const name = `${s.repo.replace("/", "__")}__${s.release.fileName}`;
+  // The file the survey read, which is parked beside an older release of the
+  // same name when one was cached (scripts/lib/cache.mjs).
+  const name = s.release.cacheFile ?? `${s.repo.replace("/", "__")}__${s.release.fileName}`;
   try {
     return await usesNetwork(fileURLToPath(new URL(encodeURIComponent(name), CACHE)));
   } catch {

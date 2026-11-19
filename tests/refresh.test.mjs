@@ -151,11 +151,13 @@ test("a changed modId holds the row back", () => {
   assert.match(reasons[0], /declares modId gen3_dex_v2 where the catalog pins gen3_dex/);
 });
 
-test("a release that rules out the shipped engine holds the row back", () => {
-  const reasons = changeReasons({ ...passing,
-    manifest: { ...passing.manifest, game_version: ">=0.2.62 <2.0.0" } });
-  assert.deepEqual(reasons, ["needs engine >=0.2.62 <2.0.0, and Phosphor ships 0.2.61"]);
-  // No range at all rules nothing out.
+/// The catalog stopped gating on the engine pin on Sep 23 2026: a mod ahead
+/// of the shipped engine is published, and the app labels the fit from
+/// `requirements.engineRange`. A refresh that held the row at its old release
+/// for the same reason was that gate under another name.
+test("a release ahead of the shipped engine still moves the row forward", () => {
+  assert.deepEqual(changeReasons({ ...passing,
+    manifest: { ...passing.manifest, game_version: ">=0.2.62 <2.0.0" } }), []);
   assert.deepEqual(changeReasons({ ...passing, manifest: { id: "gen3_dex" } }), []);
 });
 
