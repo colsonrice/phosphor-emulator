@@ -402,7 +402,21 @@ async function gh(path, token) {
   const response = await fetch(`https://api.github.com${path}`, {
     headers: { authorization: `Bearer ${token}`, accept: "application/vnd.github+json" },
   });
-  if (response.status === 404 || response.status === 403) return null;
+  // A 403 is two different things. A blocked repository is a fact about the
+  // repo and reads as absent, like a 404. A RATE LIMIT is a fact about this
+  // run, and reading it as absent would publish "unmeasured" for every row
+  // after the budget ran out: the exact partial pass requireToken exists to
+  // refuse. GitHub marks the second with x-ratelimit-remaining: 0, or with
+  // retry-after for its secondary limit.
+  if (response.status === 403 || response.status === 429) {
+    if (response.status === 429 || response.headers.get("x-ratelimit-remaining") === "0"
+        || response.headers.get("retry-after")) {
+      throw new Error(`${path}: GitHub rate limit reached, refusing to write a partial pass `
+        + `(resets ${new Date(Number(response.headers.get("x-ratelimit-reset")) * 1000).toISOString()})`);
+    }
+    return null;
+  }
+  if (response.status === 404) return null;
   if (!response.ok) throw new Error(`${path} answered ${response.status}`);
   return response.json();
 }
