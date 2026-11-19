@@ -84,6 +84,19 @@ async function main() {
     const cached = await readPinned(dir, pin.cacheName, pin.sha256);
     let bytes = cached?.bytes ?? null;
     let path = cached?.path ?? null;
+    // A cached copy proves what the file WAS. Whether a player can still get
+    // it is a question for the server, asked every run: this used to skip it
+    // for anything cached, so on Nov 19 2026 a run reported every pin
+    // matching while sixteen of them answered 404 (their repositories had
+    // been deleted). A HEAD request costs no download.
+    if (bytes) {
+      const head = await fetch(pin.fileUrl, { method: "HEAD", redirect: "follow" })
+        .catch((error) => ({ ok: false, status: error.message }));
+      if (!head.ok) {
+        problems.push(`${pin.id} (tier ${pin.tier}): ${pin.fileUrl} answered ${head.status}`);
+        continue;
+      }
+    }
     if (!bytes) {
       const response = await fetch(pin.fileUrl, { redirect: "follow" }).catch((error) => ({ ok: false, status: error.message }));
       if (!response.ok) {
