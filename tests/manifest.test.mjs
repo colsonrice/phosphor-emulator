@@ -353,6 +353,18 @@ test("no installable entry ships without a games line, and every line is in the 
   }
 });
 
+/// The app refuses to install anything whose requirements say it needs the
+/// network, because the sandbox denies sockets: such a row is a button that
+/// says no. A mod that needs the network is excluded (scripts/lib/excluded.mjs)
+/// or stays a link-out; one that plays without its network half is marked
+/// `onlineUnavailable` and has had the declaration read against its code.
+test("no installable entry needs the network", async () => {
+  const { entries } = await buildManifest();
+  const needing = entries.filter((e) => e.download && e.requirements?.permissions?.includes("network"))
+    .map((e) => e.id);
+  assert.deepEqual(needing, [], "installable entries that need the network: exclude them, or leave them link-outs");
+});
+
 /// A link-out pins no bytes, so it may say which games the mod is for and
 /// nothing else: an import, a range or a permission would describe a file
 /// nobody can install from here.

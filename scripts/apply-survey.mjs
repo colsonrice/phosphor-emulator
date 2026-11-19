@@ -12,9 +12,11 @@
 // what it measured (`blocking`), and scripts/lib/excluded.mjs holds the mods
 // kept out for what they do. This only moves rows.
 //
-//   tier 1 update   a listed release row whose repo + mod id has a newer
-//                   drafted release: version, date, file, size and hash move;
-//                   the hand-written title, summary, topic and images stay
+//   tier 1 update   REPORTED, not applied. A listed row moves only through
+//                   scripts/refresh-releases.mjs, which asks of a new
+//                   release what the survey does not: whether it started
+//                   using the network, changed its mod id, its licence, or
+//                   gained a dependency nothing carries
 //   tier 1 new      a drafted release for a repo with no release row. Its
 //                   project row, if it had one, goes: a mod is on one shelf
 //   tier 2 new      a drafted project row; promote-direct-source.mjs gives it
@@ -22,6 +24,7 @@
 //
 // Usage: node scripts/apply-survey.mjs [--write]
 // Then:  node scripts/promote-direct-source.mjs --write
+//        node scripts/refresh-releases.mjs --write
 //        node scripts/verify-releases.mjs --fill
 //        node scripts/backfill-mod-games.mjs --write
 //        node scripts/backfill-mod-imports.mjs --write
@@ -44,9 +47,6 @@ const write = process.argv.includes("--write");
 
 const excluded = new Set(Object.keys(EXCLUDED).map((k) => k.toLowerCase()));
 
-/// The fields a new release moves. Everything else on a row is somebody's
-/// sentence, and a release is not a reason to lose it.
-const MOVES = ["version", "releaseDate", "fileUrl", "fileName", "fileSize", "fileSizeBytes", "sha256"];
 
 /// A draft's tagline is a placeholder ("TODO tagline"), and its description is
 /// the creator's own. The first whole sentence of that is the honest tagline:
@@ -86,13 +86,15 @@ async function main() {
     // row a release belongs to. Fan-out rows share both and all move together.
     const rows = releases.filter((row) => repoOf(row.fileUrl) === repo && row.modId === draft.modId);
     if (rows.length) {
+      // Said, never done here. This used to move the pin, with none of the
+      // checks refresh-releases runs on a new release, and on Nov 19 2026 it
+      // would have moved Kanto Gear from 3.2.10 to 4.6.5: the release that
+      // opens a UDP socket for a phone companion page, which the sandbox
+      // denies and the app refuses to install. Two scripts moving pins under
+      // two different rules is how a guard gets walked around.
       for (const row of rows) {
         if (row.sha256 === draft.sha256) continue;
-        updated.push([row.id, `${row.version} -> ${draft.version}`]);
-        for (const key of MOVES) row[key] = draft[key];
-        // The manifest can move between releases; verify-releases --fill
-        // reads it back out of the new bytes rather than trusting the old one.
-        delete row.manifestPath;
+        updated.push([row.id, `${row.version} -> ${draft.version}, left for refresh-releases`]);
       }
       continue;
     }
@@ -143,7 +145,7 @@ async function main() {
     console.log(`${title}: ${rows.length}`);
     for (const [id, note] of rows) console.log(`   ${id} — ${note}`);
   };
-  say("listed releases moved to a newer release", updated);
+  say("listed releases behind their creator (refresh-releases moves them)", updated);
   say("new licensed mods (tier 1)", added);
   say("  of which were link-outs before", moved);
   say("new mods to list from their creators (tier 2 after promotion)", listed);

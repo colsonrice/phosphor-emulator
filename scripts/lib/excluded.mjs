@@ -19,6 +19,12 @@ export const EXCLUDED = {
     "an online multiplayer layer; it opens raw sockets from main.lua, which the sandbox denies, so it would install and fail to load",
   "notquiteog/gen1online-plus":
     "a fork of Gen1Online: rooms of up to 128 players with overworld presence, chat and trading over UDP and a relay, carrying the same 4.7.1 duties as Gen1Online, over sockets the sandbox refuses",
+  "mleo2003/gen1recomp-gblink":
+    "online trades with real Game Boys and emulators through a WebSocket to pokemon.gblink.io; it opens raw TCP sockets, which the sandbox denies, so it would install and do nothing",
+  "mleo2003/gen1recomp-celio":
+    "online FireRed/LeafGreen trades through a WebSocket to celio.gblink.io; raw TCP sockets, which the sandbox denies, so it would install and do nothing",
+  "AlfonsPistoletti/gen1recomp-mod-second-screen-companion":
+    "a second screen served over the local network; it opens sockets, which the sandbox denies, so the screen it exists for never appears",
   "tebwritescode/gen1mmo":
     "a shared public world with chat, carrying the same 4.7.1 duties",
   "Neburb/pokebox-sync-gen1recomp":

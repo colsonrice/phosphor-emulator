@@ -171,6 +171,17 @@ for (const p of rows) {
   // `rowsBeyondTheCataloguedEngine` in build-manifest.mjs.
 
   const r = s.release ?? {}, c = s.contents ?? {};
+  // A row that already installs keeps the mod id it installs under. The
+  // survey is matched by repository when the row's own id finds nothing, so
+  // an author who renamed their mod's id reaches this point with the NEW one,
+  // and re-pinning would hand players an update the app refuses
+  // (install(expectingID:)). refresh-releases holds such a row with that
+  // reason; this holds it too, rather than walk around it.
+  if (p.directSource?.modId && c.modId && c.modId !== p.directSource.modId) {
+    held.push([p.id, `stays at ${p.directSource.version}; the latest archive declares mod id ${c.modId}, not ${p.directSource.modId}`]);
+    refused.push([p.id, "mod id changed"]);
+    continue;
+  }
   const need = { fileUrl: r.fileUrl, sha256: r.sha256, fileSizeBytes: r.fileSizeBytes,
                  modId: c.modId, modVersion: c.modVersion };
   const gap = Object.entries(need).filter(([, v]) => !v).map(([k]) => k);
