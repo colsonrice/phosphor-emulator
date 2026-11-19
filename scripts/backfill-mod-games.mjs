@@ -73,14 +73,25 @@ for (const row of rows) {
     const name = survey.release.cacheFile ?? `${survey.repo.replace("/", "__")}__${survey.release.fileName}`;
     manifest = await readManifest(new URL(encodeURIComponent(name), CACHE).pathname).catch(() => null);
   }
+  const installable = Boolean(row.fileUrl || row.fileName || row.directSource?.fileUrl);
+  // A LINK-OUT whose archive nobody could read (no release, or one the
+  // survey refused) may still be in the official index, which publishes the
+  // `games` it read from the creator's own manifest. Only where it names
+  // games: the index carries no `gen2compat`, so an entry without `games` is
+  // not evidence of "Gen 1 only", and the legacy rule must not be run on it.
+  // Never for an installable row, which is read from its pinned bytes by
+  // backfill-mod-imports.
+  if ((!manifest || typeof manifest !== "object") && !installable
+      && Array.isArray(survey?.indexEntry?.games) && survey.indexEntry.games.length) {
+    manifest = { games: survey.indexEntry.games };
+  }
   if (!manifest || typeof manifest !== "object") {
     unknown += 1;
     // An installable row nothing here can read keeps whatever enrich wrote,
     // and enrich wrote it against the six-cartridge list: a SILENT games line
-    // there meant "all six". Left silent it would now mean "all eight", which
-    // is a FireRed claim nobody read. Say the six, which is what its silence
-    // said; a mod that really declares "all" comes right on the next enrich.
-    const installable = Boolean(row.fileUrl || row.fileName || row.directSource?.fileUrl);
+    // there meant "all six". Left silent it would now mean every cartridge in
+    // the vocabulary, a GBA claim nobody read. Say the six, which is what its
+    // silence said; backfill-mod-imports replaces it from the pinned bytes.
     const req = enrichment[row.id]?.requirements;
     if (installable && !(req?.games)) {
       const entry = (enrichment[row.id] ??= {});

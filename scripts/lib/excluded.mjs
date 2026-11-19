@@ -17,6 +17,8 @@ export const EXCLUDED = {
     "accounts with passwords, friends by Trainer ID and online trading; Phosphor cannot moderate someone else's server, and the sockets it needs are refused here",
   "UNDERdecoded/Gen2Recomp---Online":
     "an online multiplayer layer; it opens raw sockets from main.lua, which the sandbox denies, so it would install and fail to load",
+  "notquiteog/gen1online-plus":
+    "a fork of Gen1Online: rooms of up to 128 players with overworld presence, chat and trading over UDP and a relay, carrying the same 4.7.1 duties as Gen1Online, over sockets the sandbox refuses",
   "tebwritescode/gen1mmo":
     "a shared public world with chat, carrying the same 4.7.1 duties",
   "Neburb/pokebox-sync-gen1recomp":
