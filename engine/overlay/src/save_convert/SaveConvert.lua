@@ -213,6 +213,10 @@ function SaveConvert.setGen2DataStub(stub)
   gen2Data = {}
 end
 
+function SaveConvert.gen2Constants(gameVersion)
+  return loadCacheTable(gameVersion, "data/generated/constants.lua")
+end
+
 function SaveConvert.gen2DataFromDir(dir)
   local out = {}
   for _, name in ipairs(GEN2_TABLES) do
@@ -614,7 +618,24 @@ local function gen3ExportOpts(gameVersion, cartImage)
   end
   local whiteout = heal and (heal.whiteout or heal.heal_locations)
   local dests = fly and fly.fly_destinations
-  if type(whiteout) == "table" and type(dests) == "table" then
+  if heal and heal.model == "heal_row" and type(whiteout) == "table" then
+    opts.healWarp = function(respawnMap, x, y)
+      x, y = tonumber(x), tonumber(y)
+      local row, hits = nil, 0
+      for i = 1, table.maxn(whiteout) do
+        local loc = whiteout[i]
+        if type(loc) == "table" and loc.map == respawnMap then
+          if loc.x == x and loc.y == y then row, hits = loc, 1 break end
+          row, hits = row or loc, hits + 1
+        end
+      end
+      if hits > 1 and x == nil then return nil end
+      row = row or whiteout[L3.HEAL_LOCATION_PALLET_TOWN]
+      if type(row) ~= "table" then return nil end
+      -- src/overworld.c:670
+      return Gen3Save.forVersion(gameVersion).cartWarp({ map = row.map, warpId = -1, x = row.x, y = row.y })
+    end
+  elseif type(whiteout) == "table" and type(dests) == "table" then
     opts.healWarp = function(respawnMap)
       local id = L3.HEAL_LOCATION_PALLET_TOWN
       for i, loc in pairs(whiteout) do
@@ -741,9 +762,12 @@ local function exportRaw(saveTable, gameVersion, cartImage, romBytes)
     rom = { bytes = romBytes, pointers = tables.pointers, banks = tables.banks,
             tilesets = tables.tilesets, songs = tables.songs, wild = tables.wild }
   end
-  local ok, bytes = pcall(GenSave.encode, saveTable, data, template, rom)
+  -- GenSave.encode now also refuses a template whose main checksum fails
+  -- (upstream's templateIntact) and says so in `note`; that check runs on
+  -- whichever template was chosen above.
+  local ok, bytes, note = pcall(GenSave.encode, saveTable, data, template, rom)
   if not ok then return nil, "encode failed: " .. tostring(bytes) end
-  return bytes
+  return bytes, note
 end
 
 -- PHOSPHOR: the fourth argument is the staged base ROM, threaded to exportRaw.

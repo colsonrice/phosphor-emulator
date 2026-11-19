@@ -593,7 +593,8 @@ end
 -- deliberately written beside options.lua so every platform's native shell
 -- can use the same filesystem contract.
 function Loader:_writeOptionSchemas()
-  if not self.fs.write then return end
+  local fs = SaveData.persistenceFs(self.fs)
+  if not (fs and fs.write) then return end
 
   local mods = {}
   for id, mod in pairs(self.mods) do
@@ -622,7 +623,7 @@ function Loader:_writeOptionSchemas()
   -- snapshot when the current boot has no schemas so disabled/failed mods do
   -- not leave stale native settings rows behind.
   if next(mods) == nil
-      and not (self.fs.getInfo and self.fs.getInfo(OPTION_SCHEMAS_FILENAME)) then
+      and not (fs.getInfo and fs.getInfo(OPTION_SCHEMAS_FILENAME)) then
     return
   end
 
@@ -634,7 +635,7 @@ function Loader:_writeOptionSchemas()
     Logger.warn("mod option schema export: failed to encode: %s", tostring(encoded))
     return
   end
-  local written, err = self.fs.write(OPTION_SCHEMAS_FILENAME, encoded)
+  local written, err = fs.write(OPTION_SCHEMAS_FILENAME, encoded)
   if not written then
     Logger.warn("mod option schema export: failed to write: %s", tostring(err))
   end
@@ -1375,6 +1376,16 @@ function Loader:_contentApi(mod, registry, deprecation)
     if apiLevel >= 2 then error(err, 0) end
     Logger.warn("[%s] %s", modId, err)
   end
+  local function prepare(id, value, mode)
+    if loader.generation == 2 then
+      if registry.name == "marts" then return Schemas.gen2MartValue(id, value) end
+      if registry.name == "fly_points" then
+        return Schemas.gen2FlyPointValue(registry, id, value, loader.baseData)
+      end
+      return Schemas.gen2Index(registry, id, value, loader.baseData, mode)
+    end
+    return value
+  end
   -- A registry with no home in this generation (Schemas.routing) takes the
   -- write and drops it.  Reported once per mod per registry, into the same feed
   -- the manager shows, because a mod that declared gen2compat and then wrote
@@ -1405,6 +1416,7 @@ function Loader:_contentApi(mod, registry, deprecation)
     register = function(_, id, value)
       note()
       if dropped() then return nil end
+      value = prepare(id, value)
       validate("register", id, value)
       loader:_journal(registry.name)
       return registry:register(id, value, modId)
@@ -1412,6 +1424,7 @@ function Loader:_contentApi(mod, registry, deprecation)
     override = function(_, id, value)
       note()
       if dropped() then return nil end
+      value = prepare(id, value)
       validate("override", id, value)
       loader:_journal(registry.name)
       return registry:override(id, value, modId)
@@ -1419,13 +1432,18 @@ function Loader:_contentApi(mod, registry, deprecation)
     patch = function(_, id, partial)
       note()
       if dropped() then return nil end
+      partial = prepare(id, partial, "patch")
       validate("patch", id, partial)
       loader:_journal(registry.name)
+      if loader.generation == 2 and registry.name == "marts" then
+        return registry:override(id, partial, modId)
+      end
       return registry:patch(id, partial, modId)
     end,
     remove = function(_, id)
       note()
       if dropped() then return nil end
+      if loader.generation == 2 and registry.name == "marts" then prepare(id, Merge.DELETE) end
       loader:_journal(registry.name)
       return registry:remove(id, modId)
     end,
@@ -2095,7 +2113,7 @@ function Loader:_loadMod(mod)
   -- Phosphor: a Gen 2 voxel world renders upside down on LOVE 12 unless the
   -- mod normalises clip space itself. Must run BEFORE the entry chunk, which
   -- is when the mod reads its lib files through api:read. Self-cancelling, and
-  -- a no-op for every other mod -- see src/mods/Gen2ClipSpaceShim.lua.
+  -- a no-op for every mod it does not name -- see src/mods/Gen2ClipSpaceShim.lua.
   pcall(Gen2ClipSpaceShim.consider, self, mod, api)
   -- Phosphor: the Gold wild-alert crash (emote table with no `left`), which
   -- is randyadr/Gen2-3D-Sprites#6 sitting unmerged upstream.
